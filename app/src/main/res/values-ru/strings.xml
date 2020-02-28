@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Cube Guide</string>
+    <string name="header_3x3x3">3x3x3 - Метод CFOP</string>
+    <string name="header_2x2x2">2x2x2 - Метод EG</string>
+    <string name="f2l_header">F2L - Первые два слоя</string>
+    <string name="coll_header">COLL - Перестановка углов и OLL</string>
+    <string name="cll_header">CLL - Перестановка углов и OLL</string>
+    <string name="header_3x3x3_oh">3x3x3 - Одной рукой</string>
+    <string name="header_3x3x3_pro">3x3x3 - Продвинутые методы</string>
+    <string name="oh_oll_header">OH OLL - OLL Одной рукой</string>
+    <string name="oh_pll_header">OH PLL - PLL Одной рукой</string>
+    <string name="olc_header">OLC - Ориентация последнего угла</string>
+    <string name="ole_header">OLE - Ориентация последнего ребра</string>
+    <string name="oll_header">OLL - Ориентация последнего слоя</string>
+    <string name="pll_header">PLL - Перестановка последнего слоя</string>
+    <string name="oh_coll_header">OH COLL - COLL Одной рукой</string>
+</resources>
