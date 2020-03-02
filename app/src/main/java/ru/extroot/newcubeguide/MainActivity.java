@@ -42,26 +42,32 @@ public class MainActivity extends AppCompatActivity {
         OH_OLL  - 7
         OH_PLL  - 8
         OH_COLL - 14
-    2x2x2:
+    2x2x2 EG:
         CLL     - 9
-        TODO: EG1, EG2, ORTEGA
+        EG1     - 15
+        EG2     - 16
+        LEG1    - 17
+        TODO: ORTEGA
      */
     private Toolbar toolbar;
 
-    private static final int F2L_ID    = 1;
-    private static final int PLL_ID    = 2;
-    private static final int OLL_ID    = 3;
-    private static final int VHF2L_ID  = 4;
-    private static final int OPF2L_ID  = 5;
-    private static final int COLL_ID   = 6;
-    private static final int OH_OLL_ID = 7;
-    private static final int OH_PLL_ID = 8;
-    private static final int CLL_ID    = 9;
-    private static final int OLE_ID    = 10;
-    private static final int OLC_ID    = 11;
-    private static final int WV_ID     = 12;
-    private static final int SV_ID     = 13;
-    private static final int OH_COLL_ID     = 14;
+    private static final int F2L_ID     = 1;
+    private static final int PLL_ID     = 2;
+    private static final int OLL_ID     = 3;
+    private static final int VHF2L_ID   = 4;
+    private static final int OPF2L_ID   = 5;
+    private static final int COLL_ID    = 6;
+    private static final int OH_OLL_ID  = 7;
+    private static final int OH_PLL_ID  = 8;
+    private static final int CLL_ID     = 9;
+    private static final int OLE_ID     = 10;
+    private static final int OLC_ID     = 11;
+    private static final int WV_ID      = 12;
+    private static final int SV_ID      = 13;
+    private static final int OH_COLL_ID = 14;
+    private static final int EG1_ID     = 15;
+    private static final int EG2_ID     = 16;
+    private static final int LEG1_ID    = 17;
 
     private int mode = 1;
     public int picLen = 250;
@@ -185,7 +191,22 @@ public class MainActivity extends AppCompatActivity {
                                                 .withName(getResources().getString(R.string.cll_header))
                                                 .withLevel(2)
                                                 .withIconTintingEnabled(true)
-                                                .withIdentifier(CLL_ID))
+                                                .withIdentifier(CLL_ID),
+                                        new SecondaryDrawerItem()
+                                                .withName(getResources().getString(R.string.eg1_header))
+                                                .withLevel(2)
+                                                .withIconTintingEnabled(true)
+                                                .withIdentifier(EG1_ID),
+                                        new SecondaryDrawerItem()
+                                                .withName(getResources().getString(R.string.eg2_header))
+                                                .withLevel(2)
+                                                .withIconTintingEnabled(true)
+                                                .withIdentifier(EG2_ID),
+                                        new SecondaryDrawerItem()
+                                                .withName(getResources().getString(R.string.leg1_header))
+                                                .withLevel(2)
+                                                .withIconTintingEnabled(true)
+                                                .withIdentifier(LEG1_ID))
                 )
                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
                     @Override
@@ -208,6 +229,9 @@ public class MainActivity extends AppCompatActivity {
                             case WV_ID:      count = 51; modeName = "wv";      break;
                             case SV_ID:      count = 25; modeName = "sv";      break;
                             case OH_COLL_ID: count = 39; modeName = "oh_coll"; break;
+                            case EG1_ID:     count = 39; modeName = "eg1";     break;
+                            case EG2_ID:     count = 39; modeName = "eg2";     break;
+                            case LEG1_ID:    count = 39; modeName = "leg1";     break;
                         }
                         draw(modeName, count);
                         return false;
@@ -226,6 +250,10 @@ public class MainActivity extends AppCompatActivity {
             case "oh_oll":  picName = "oll";  break;
             case "oh_pll":  picName = "pll";  break;
             case "oh_coll": picName = "coll"; break;
+            case "eg1":
+            case "leg1":
+            case "eg2":
+                picName = "cll";  break;
         }
 
 

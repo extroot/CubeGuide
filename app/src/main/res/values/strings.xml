@@ -8,6 +8,9 @@
     <string name="oll_header">OLL - Orientation of the Last Layer</string>
     <string name="pll_header">PLL - Permutation of the Last Layer</string>
     <string name="cll_header">CLL - Corners Last Layer</string>
+    <string name="eg1_header" translatable="false">EG1 - </string>
+    <string name="eg2_header" translatable="false">EG2 - </string>
+    <string name="leg1_header" translatable="false">LEG1 - </string>
     <string name="oh_oll_header">OH OLL - One Hand OLL</string>
     <string name="oh_pll_header">OH PLL - One Hand PLL</string>
     <string name="vh_header" translatable="false">VHF2L - Vandenbergh-Harris F2L</string>
@@ -1997,4 +2000,374 @@
         <item>(U\') F R\' F\' R U\' R U\' R\' U R\' F R F\'</item>
         <item>(U) x\' U\' R2 U L\' U R\' U\' R U\' R</item>
     </string-array>
+    
+    <string-array name="eg1">
+        <item>(U\') F\' L U2 F2 R U\' x\'</item>
+        <item>z\' R\' U\' R U2 x\' U2 R U\'</item>
+        <item></item>
+        <item>R U R\' F2 U F R U R\' </item>
+        <item>(U2) F R2 U\' R2 F U\' F2 U\' R</item>
+        <item></item>
+        <item>(U\') R\' F R U2 R U\' R2 F2 R F\'</item>
+        <item>(U2) F R\' F\' R U R\' F\' R2 U R\'</item>
+        <item></item>
+        <item>F\' U R U\' R\' U F R U R\'</item>
+        <item>(U) F\' R\' F R2 U R\' U\' F R\' F\' R</item>
+        <item>(U2) F U\' R U2 R\' F2 R\' F R</item>
+        <item>(U) R U\' R\' U R U\' R\' U F R U\' R\'</item>
+        <item>(U) R U\' R\' U R U\' R\' U\' R\' F\' R F</item>
+        <item></item>
+        <item>R\' F R2 U\' R\' U L F\' L\' F</item>
+        <item></item>
+        <item></item>
+        <item>(U\') B U\' R2 F2 U\' F</item>
+        <item>(U) R\' F R2 U R\' F\' U\' R U\' R\'</item>
+        <item></item>
+        <item>(U) R U\' R\' F\' U\' F2 R U\' R\'</item>
+        <item>R U\' F2 R U2 R U\' F</item>
+        <item></item>
+        <item>F\' R U R\' U\' R U R2\' F\' R</item>
+        <item>(U\') R U\' R\' U2 R\' F R2 U2 R\' F</item>
+        <item></item>
+        <item>R U\' R\' F\' U\' R U R\' U\' F</item>
+        <item></item>
+        <item></item>
+        <item>(U\') R U R\' F\' U\' R U R\' U\' R U R\'</item>
+        <item>(U) F\' R\' F R U R U R\' U\' R U R\'</item>
+        <item></item>
+        <item>(U2) R U\' R2 F R U\' R\' F R F\'</item>
+        <item></item>
+        <item></item>
+        <item>(U2) R2 B2 R\' U R\' U\' R U2 R U\' R2</item>
+        <item>(U2) F2 R U R\' U2 R U R\' U\' F</item>
+        <item>(U) F U\' R\' F R U\' F2 R U R\'</item>
+        <item>(U\') R\' F R2 U\' R2 F R</item>
+        <item></item>
+        <item></item>
+        <item>(U\') F R\' F U\' F2 R U R</item>
+        <item></item>
+        <item></item>
+        <item>(U\') R U\' R\' U R U\' R\' F R U\' R\'</item>
+        <item>(U\') F\' R U R\' U\' R U R\' F\' R U R\'</item>
+        <item>(U\') L\' U L U\' L\' U L F\' L\' U L</item>
+        <item>(U) F U\' R U2 R\' F\' R U R\' F\'</item>
+        <item>R U\' R2 F R U R U\' R\' U\' R\' F R F\'</item>
+        <item></item>
+        <item>(U\') R\' F R F\' R\' F R2 U R\' U\' R U\' R\'</item>
+        <item>F R U\' R\' F R U2 R\' U F\'</item>
+        <item>(U\') R\' F R F\' U\' R U\' R\' U R\' F R2 U\' R\'</item>
+        <item>R U’ R2’ F R2 U R’ U’ R U’ R’</item>
+        <item>R U R\' U R U R2 F R2 U\' R\'</item>
+        <item></item>
+        <item>(U2) x U\' R\' U R U\' F R U R U\'  </item>
+        <item>F R U\' R\' F U\' F\' R\' F\' R </item>
+        <item></item>
+        <item>(U) F\' U2 R U2 R\' U2 F</item>
+        <item>R U\' R\' U\' R U\' R\' U2 R U\' R\' F R U\' R\'</item>
+        <item>(U\') R U\' R2 F2 R F\' U R U R\'</item>
+        <item>(U2) R\' F R F\' R\' F R2 U\' R\'</item>
+        <item></item>
+        <item></item>
+        <item>(U2) R\' F R F\' U R U\' R\' F R U\' R\'</item>
+        <item>(U\') R U\' R\' U R U\' R\' U R\' F\' R F</item>
+        <item>(U\') R U\' R\' U R U\' R\' U\' F R U\' R\'</item>
+        <item>(U\') R\' F R2 U\' R\' U y\' R U R\'</item>
+        <item></item>
+        <item></item>
+        <item>R U\' R\' U R U\' R2 F\' R F</item>
+        <item>(U) F R U\' R\' F\' R U R\' F\' R U R\'</item>
+        <item>(U) R U R\' F\' R U2 R\' U2 R U R\'</item>
+        <item>(U2) (F R\' F\' R) U2 R U\' R2 F\' R2 U R\'</item>
+        <item>x R\' U\' R U\' R\' U\' R U\' R\' U2 R</item>
+        <item>(U2) R\' F R F\' R\' F R U R U2 R\'</item>
+        <item>R\' U R2 U\' R2 U\' F R2 U\' R\'</item>
+        <item></item>
+        <item></item>
+        <item>R\' F R2 U R\' F\' R U2 R\'</item>
+        <item>(U) L\' U2 L F\' R\' F R2 U R\' </item>
+        <item></item>
+        <item>(U) L\' U L y\' R U2 R U\' R2</item>
+        <item>(U2) F\' R\' F R U\' R U R\' U\' R U R\'</item>
+        <item>(U) R U R\' F\' R U R\' U\' F R\' F\' R</item>
+        <item>(U) R\' U2\' F R U2 R U\' R2 F</item>
+        <item> (U\') F\' U2 F\' R U2 R\' U\' F</item>
+        <item>R U\' R\' y\' R\' U2 R\' U R2</item>
+        <item>(U2) R2 U R U\' R2 F R U2 R\' F</item>
+        <item>(U\') F2 U\' R2 U\' R\' U R\' F R2</item>
+        <item>L\' U L U2 R\' F2 R F\' L\' U L</item>
+        <item>(U) F\' R\' F R2 U R\' U\' R U R\'</item>
+        <item>(U\') R U\' R\' F R U\' R\' F R U R\' F\'</item>
+        <item></item>
+        <item>(U2) R U\' R2 F R U R U2 R\'</item>
+        <item>L\' U L2 F\' L\' U\' L\' U2 L</item>
+        <item></item>
+        <item>R2 B2 U\' R\' U\' R U\' R\' U R\'</item>
+        <item>(U\') R U\' R\' F\' U\' x U R\' U\' R U x\'</item>
+        <item>(U2) R U R\' F\' R U2 R\' U y R\' F R</item>
+        <item>(U2) R U R2 x U\' R U R\' U\' R</item>
+        <item>R\' F\' R2 U R\' F\' R U R\'</item>
+        <item></item>
+        <item>(U\') R U\' R\' U2 F R U2 R\' F</item>
+        <item>(U\') L\' U L U2 F\' L\' U2 L F\'</item>
+        <item>R U R\' F R U R\' F U\' R U\' R\'</item>
+        <item>R\' F R2 U\' R2 U\' F U R</item>
+        <item>(U) R U R\' F R U\' R\' U\' R U\' R\' F </item>
+        <item>R\' F R2 U\' R\' F R U R\' F\'</item>
+        <item>F\' U R U\' R2 F2 R U\' F</item>
+        <item></item>
+        <item></item>
+        <item>R\' U\' R\' F2 U F\' R F\'</item>
+        <item>(U) R\' F R F\' U2 F R U2 R\' F</item>
+        <item>U\') R\' F2 R F\' R\' U\' F2 R F\' U R</item>
+        <item>R U R\' F\' R U R\' U\' R U R\' U\'</item>
+        <item></item>
+        <item></item>
+    </string-array>
+    
+    <string-array name="eg2">
+        <item>(U\') F U\' R2 U\' R\' U2 R U\' R2 F\'</item>
+        <item></item>
+        <item></item>
+        <item>R U R\' U R U2 R B2 R2</item>
+        <item>(U\') R\' U2 R U R\' U R\' F2 R2</item>
+        <item></item>
+        <item>R U\' R\' F2 R2 F\' L\' U\' L</item>
+        <item> (U2) x’ R U’ R’ U L’ U’ R’ F2 R2</item>
+        <item></item>
+        <item>(U) F R2 F\' R2 F\' R U\' R</item>
+        <item></item>
+        <item></item>
+        <item>F\' R\' U R\' U2 F R\' U R\' </item>
+        <item>(U2) R’ F R’ F2 R U R U R’ U R</item>
+        <item></item>
+        <item>R2 B2 R\' U\' L\' U  R\' U\' L</item>
+        <item></item>
+        <item></item>
+        <item>x U\' R2 F R2 F\' U R\' U2 R\' U x\'</item>
+        <item>(U2) R\' U2’ R2 U\' R\' U R\' F R F R2</item>
+        <item></item>
+        <item>R\' U\' R U\' R\' U2 R\' F2 R2</item>
+        <item>(U\') R U2 R\' U\' R U\' R B2 R2</item>
+        <item></item>
+        <item>(U2) L\' U L F\' R U R B2 R2</item>
+        <item> (U\') F\' U\' R\' U R\' U2 F R2</item>
+        <item></item>
+        <item>(U\') R\' U R\' F R2 F R2 F\'</item>
+        <item></item>
+        <item></item>
+        <item>R’ U’ R U’ R’ U’ R’ F2 R F’ R</item>
+        <item>R2 B2 R2 F\' R U R\' U2 R\' F2 R</item>
+        <item>(U2) F R F\' U R2 F\' R U\' R</item>
+        <item>(U2) R2 F2 R F R F\' R U R\'</item>
+        <item>R2 F2 R U L U\' R U L\' </item>
+        <item></item>
+        <item>F U\' R U2 R U\' R\' U R\' F\'</item>
+        <item>(U\') R U\' R2 U\' F2 R\' U2 R\' F</item>
+        <item></item>
+        <item>R\' U2 R2 U\' R\' F2 R2 F\'</item>
+        <item>(U\') F R2 F2 R U\' R2 U2 R\'</item>
+        <item></item>
+        <item>(U2) R\' F\' U R\' F R2 U2’ R\' U R</item>
+        <item>(U\') F U\' R2 F\' R2 F\' R U2 R</item>
+        <item></item>
+        <item>(U) R\' F U\' R U R\' F2 U2 R</item>
+        <item>(U\') R U\' R\' U R2 F2 U R U\' R2</item>
+        <item></item>
+        <item> (U) R’ U’ R’ F2 R2 U R’ F2 R</item>
+        <item>(U\') R\' F\' R\' F2 R2 U R\' U2 R</item>
+        <item>(U\') R U2 R F2 R2\' U\' R U\' R\'</item>
+        <item>(U) R\' U2 R U\' R2 F2 R F R</item>
+        <item>(U\') R U R F2 R2 U\' R U2 R\'</item>
+        <item></item>
+        <item>F U\' R U2 R U\' R\' U2 R\' U\' F\'</item>
+        <item></item>
+        <item></item>
+        <item>(U2) F U R U\' R\' F R2 F2</item>
+        <item>F R U R\' U\' F R2 F2</item>
+        <item>R\' U\' F R\' F\' R U R\' F2 R2</item>
+        <item>(U) R U R\' U\' R B2 R\' U R U\' R\'</item>
+        <item>(U\') R\' U\' R U R\' F2 R U\' R\' U R</item>
+        <item>(U) R\' F\' U\' R U2 R\' U F R</item>
+        <item>R2 F2 R U R U2 R2 F R F\' R</item>
+        <item></item>
+        <item></item>
+        <item>(U\') R U\' R\' U2 L U L\' U2 R U\' R\'</item>
+        <item>(U\') R2 B2 R\' U R\' U\' R\' F R F\'</item>
+        <item></item>
+        <item>(U\') L\' U L U2 R\' U\' R U2 L\' U L</item>
+        <item>(U\') R2 B2 R2 F R F\' R U R\' U\' R\'</item>
+        <item>(U\') R2 F2 R F\' R U L F\' L\' F</item>
+        <item>R2 B2 R2 F R\' F\' R U R U\' R\'</item>
+        <item>R\' U\' R\' F\' R U\' R U\' R\' F R</item>
+        <item></item>
+        <item>(U) F2 R2\' F R U R\' U\' R\' F R</item>
+        <item>(U\') R2 B2 R2 F\' R U R\' U\' R\' F R</item>
+        <item></item>
+        <item>R\' U\' F2 R U2 R\' U2 F R</item>
+        <item>(U) R2 F2 R U R\' U2 R U\' R\' U R U\' R2</item>
+        <item>(U) R\' U R\' U2 R U\' R\' U R U\' B2 R2</item>
+        <item>(U2) R\' U\' R U R\' F\' R U R\' U\' R\' F\' R2</item>
+        <item>(U2) R\' F2 R F\' R\' F2 R2 U\' R B2 R2</item>
+        <item>R U2 R2 F R F\' R U2 R B2 R2</item>
+        <item>F R\' F\' R U R U\' R B2 R2</item>
+        <item></item>
+        <item></item>
+        <item>(U) F\' R U R\' U\' R\' F R\' F2 R2</item>
+        <item></item>
+        <item></item>
+        <item>F R F\' R U R\' U\' R B2 R2\'</item>
+        <item>(U2) L\' U\' L U L F\' L\' F R2 F2 R2</item>
+        <item></item>
+        <item>(U2) F R\' U2 R\' U\' R U2 F\'</item>
+        <item>R U R\' U\' R\' F R F\' R2 B2 R2</item>
+        <item></item>
+        <item>(U) R\' U R\' F R2 U2\' R\' U\' R</item>
+        <item>(U2) R\' U R\' F U\' R U R2</item>
+        <item></item>
+        <item>(U) F2 R2 F U\' R\' F R F</item>
+        <item>(U\') R2 B2 R2 F R U R\' U\' F\'</item>
+        <item></item>
+        <item>(U2) R’ F2 R U’ R’ U R’ F R U’ R</item>
+        <item>(U\') R U\' R\' U2 R\' F U R\' U\' F R2</item>
+        <item></item>
+        <item>(U2) R\' U2 R\' F2 R F2 R </item>
+        <item></item>
+        <item></item>
+        <item>(U) R2 F U2 F2 R2 F\' R2</item>
+        <item></item>
+        <item></item>
+        <item>R2 U2 R U2 B2 R2</item>
+        <item></item>
+        <item></item>
+        <item>R\' U\' R U2 R2 F\' R U\' F R</item>
+        <item>R U\' R2 U\' F U\' F U\' R2 F R</item>
+        <item></item>
+        <item>(U2) R U\' R\' F U2 R2 F\' R F\' R</item>
+        <item>R U2 B2 R\' U R U\' B R\'</item>
+        <item></item>
+    </string-array>
+    
+    <string-array name="leg1">
+        <item>(U2) R\' F R2 F\' R2 U2 R</item>
+        <item></item>
+        <item></item>
+        <item>(U2) R\' U F\' R2 F\' U2 R F\'</item>
+        <item>(U\') R U R2\' F\' U F2 R2 F\'</item>
+        <item></item>
+        <item>(U2) F R\' F\' R2 U2 R U\' R2</item>
+        <item></item>
+        <item></item>
+        <item>(U) R2 U\' R2\' F\' R U2 R\' U2 R\' F</item>
+        <item>(U\') R2 F\' U\' R U\' R U\' R2 F2</item>
+        <item></item>
+        <item>(U2) F2 R F\' U R\' F U\' R2</item>
+        <item></item>
+        <item></item>
+        <item>(U\') R U2 R U\' R2 F R2 F\'</item>
+        <item></item>
+        <item></item>
+        <item>(U2) L U\' R2 U R2 B2 R\'</item>
+        <item>(U2) R F\' R2 U2 F\' R</item>
+        <item></item>
+        <item>(U) R2 U R2 U\' R U2 R\' U\' R U R\'</item>
+        <item>(U\') F\' U F2 R2 F\' R2 U\' R\'</item>
+        <item></item>
+        <item>(U\') F R2 F\' R2 U R\' U2 R\'</item>
+        <item></item>
+        <item></item>
+        <item>(U\') F\' R U2 R U2\' R\' F R2 U R2\'</item>
+        <item></item>
+        <item></item>
+        <item>F\' U R\' U\' R U F2 R2 F\' R\'</item>
+        <item>R\' F\' U R\' U R F2 R F\'</item>
+        <item></item>
+        <item>(U2) R2 U R\' U2 R2 F R F\'</item>
+        <item></item>
+        <item></item>
+        <item>(U2) F R F\' R\' F R2 F\' R\' U2 R</item>
+        <item>(U\') R F R\' F\' U R U\' R2 F R F\'</item>
+        <item></item>
+        <item>(U\') R U R\' U\' R U2 R U\' R2</item>
+        <item>(U\') R2 U R\' U2 R\' U R U\' R\'</item>
+        <item></item>
+        <item>(U2) R F\' U R\' F2 U R F</item>
+        <item></item>
+        <item></item>
+        <item>(U\') R2 U R\' F R F\' U R\'</item>
+        <item></item>
+        <item></item>
+        <item>R U\' F R2 F\' R\' F R F\' R\'</item>
+        <item>(U) R U\' R\' F R F\' R2\' U2 R</item>
+        <item></item>
+        <item>(U) R U R\' U R2 U\' R2 F R2 F\'</item>
+        <item></item>
+        <item></item>
+        <item>(U\') R2 U\' R\' U\' R U\' R\' U R\'</item>
+        <item>R\' U R\' U\' R U\' R\' U\' R2</item>
+        <item></item>
+        <item>(U2) R2 U R2 F\' R2 F\' R2 F R2</item>
+        <item>(U) R\' F R2 F\' U2\' R U\' R U\' R\'</item>
+        <item></item>
+        <item>(U) R U R\' F R2 F\' R U\' R\'</item>
+        <item></item>
+        <item></item>
+        <item>(U\') F\' U\' F R2 U\' R\' U R U\' R\'</item>
+        <item>(U2) R\' F R F\' U2 R2\' U\' R U2 R</item>
+        <item></item>
+        <item>(U\') R2 U R\' U2 R\' F\' U\' F</item>
+        <item></item>
+        <item></item>
+        <item>(U) R2 U\' R U2 R F R F\'</item>
+        <item>R\' U F R2 F\' R U2 R</item>
+        <item></item>
+        <item>R2 U R\' U\' F R2 F\' U R\'</item>
+        <item></item>
+        <item></item>
+        <item>(U2) R U\' R\' U\' R2 U\' R2 F R F\'</item>
+        <item>(U\') R\' F2 R2 F\' R U2 R B2</item>
+        <item></item>
+        <item>R\' U R\' U R2 U\' R U2 R\'</item>
+        <item>R U\' R\' y U\' R U R2 F\' R</item>
+        <item></item>
+        <item>(U\') R\' U R\' U\' R U L\' U R2 U\' L</item>
+        <item></item>
+        <item></item>
+        <item>F\' U F R U2 R U\' R2\'</item>
+        <item></item>
+        <item></item>
+        <item>(U2) R\' U2\' R\' F R2 F\' U\' R</item>
+        <item>(U\') F R\' F\' R\' U2 R\' U R2</item>
+        <item>R U\' R\' y U\' R U R2 F\' R</item>
+        <item>(U) R U R\' U\' F\' R\' U2 R U\' F</item>
+        <item>(U2) R\' U R\' U\' R\' F U2 R2 B</item>
+        <item></item>
+        <item>(U) R U\' F R2 F\' U R U\' R2</item>
+        <item>(U) F\' R2 U R F\' R\' U R\' F\'</item>
+        <item></item>
+        <item>F\' R\' U2 R U\' F2 R F\'</item>
+        <item></item>
+        <item></item>
+        <item>F R F\' R\' F R2 F\' U R\' U R</item>
+        <item>x R U2 R\' U2 L U2 R U\' R2 F2</item>
+        <item></item>
+        <item>(U2) F2 R2 F R2 U R2 U\' F2 R</item>
+        <item>(U2) R\' U2 R\' U\' R U R\' F R\' F\'</item>
+        <item></item>
+        <item>(U\') R\' F R2 F\' R\' U2 F R F\'</item>
+        <item></item>
+        <item></item>
+        <item>R F2 R F\' R\' F U\' F</item>
+        <item>F R\' F R\' U\' R F2 R</item>
+        <item>R\' F\' U F R F\' U\' F2 R F\'</item>
+        <item>R2 U\' R U\' R\' U R\' U\' R U\' R2</item>
+        <item></item>
+        <item></item>
+        <item>F\' R\' U\' F2 R U\' F R\'</item>
+        <item>R2 B2 R U R\' F\' R U R\' U\' R U R\'</item>
+        <item></item>
+        <item>R U2 R U\' F R F\' R</item>
+        <item></item>
+        <item></item>
+    </string-array>
+    
 </resources>
