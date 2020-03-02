@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.Gravity;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
@@ -38,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
         OLC     - 11
         WV      - 12
         SV      - 13
+        VLS     - 18  TODO: VLS titles
+        MV      - 19
     3x3x3 OH:
         OH_OLL  - 7
         OH_PLL  - 8
@@ -68,6 +71,8 @@ public class MainActivity extends AppCompatActivity {
     private static final int EG1_ID     = 15;
     private static final int EG2_ID     = 16;
     private static final int LEG1_ID    = 17;
+    private static final int VLS_ID     = 18;
+    private static final int MV_ID      = 19;
 
     private int mode = 1;
     public int picLen = 250;
@@ -181,7 +186,19 @@ public class MainActivity extends AppCompatActivity {
                                                 .withLevel(2)
                                                 .withTextColor(R.color.colorBlack)
                                                 .withIconTintingEnabled(true)
-                                                .withIdentifier(SV_ID)),
+                                                .withIdentifier(SV_ID),
+                                        new SecondaryDrawerItem()
+                                                .withName(getResources().getString(R.string.vls_header))
+                                                .withLevel(2)
+                                                .withTextColor(R.color.colorBlack)
+                                                .withIconTintingEnabled(true)
+                                                .withIdentifier(VLS_ID),
+                                        new SecondaryDrawerItem()
+                                                .withName(getResources().getString(R.string.mw_header))
+                                                .withLevel(2)
+                                                .withTextColor(R.color.colorBlack)
+                                                .withIconTintingEnabled(true)
+                                                .withIdentifier(MV_ID)),
                         new ExpandableDrawerItem()
                                 .withName(getResources().getString(R.string.header_2x2x2))
                                 .withSelectable(false)
@@ -231,7 +248,9 @@ public class MainActivity extends AppCompatActivity {
                             case OH_COLL_ID: count = 39; modeName = "oh_coll"; break;
                             case EG1_ID:     count = 39; modeName = "eg1";     break;
                             case EG2_ID:     count = 39; modeName = "eg2";     break;
-                            case LEG1_ID:    count = 39; modeName = "leg1";     break;
+                            case LEG1_ID:    count = 39; modeName = "leg1";    break;
+                            case VLS_ID:     count = 26; modeName = "vls";     break;
+                            case MV_ID:      count = 17; modeName = "mw";      break;
                         }
                         draw(modeName, count);
                         return false;
@@ -275,6 +294,12 @@ public class MainActivity extends AppCompatActivity {
             LinearLayout line = new LinearLayout(this);
             line.setOrientation(LinearLayout.HORIZONTAL);
             line.setPadding(20, 30, 0, 0);
+            line.setGravity(Gravity.CENTER_VERTICAL);
+            LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams
+                    (LinearLayout.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+            // установка layout_gravity
+            layoutParams.gravity = Gravity.CENTER_VERTICAL;
+            line.setLayoutParams(layoutParams);
 
             ImageView image = new ImageView(this);
             String name = picName + i;
@@ -284,13 +309,14 @@ public class MainActivity extends AppCompatActivity {
             LinearLayout algLayout = new LinearLayout(this);
             algLayout.setOrientation(LinearLayout.VERTICAL);
             algLayout.setPadding(20,0,0,0);
-            algLayout.setGravity(Gravity.CENTER);
             for (int n = 0; n < 3; n++) {
-                TextView text = new TextView(this);
-                text.setText(algoritms[j + n]);
-                text.setTextColor(getResources().getColor(R.color.colorBlack));
-                text.setTextSize(textSize);
-                algLayout.addView(text);
+                if (!algoritms[j + n].equals("")){
+                    TextView text = new TextView(this);
+                    text.setText(algoritms[j + n]);
+                    text.setTextColor(getResources().getColor(R.color.colorBlack));
+                    text.setTextSize(textSize);
+                    algLayout.addView(text);
+                }
             }
 
             if ((picName.equals("oll") || picName.equals("pll") || picName.equals("coll") || picName.equals("ole") || picName.equals("cll")) && !titles[i].equals("0")) {
