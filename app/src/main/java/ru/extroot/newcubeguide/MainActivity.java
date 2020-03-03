@@ -94,9 +94,12 @@ public class MainActivity extends AppCompatActivity {
             picLen = 150;
             textSize = 14;
         }
+
+
         if ((getResources().getConfiguration().locale.getLanguage()).equals("ru")) {
             locale = "ru_";
         }
+
         DrawerBuilder drawerBuilder = new DrawerBuilder()
                 .withActivity(this)
                 .withDelayOnDrawerClose(-1)
