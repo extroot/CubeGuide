@@ -1,8 +1,11 @@
 package ru.extroot.newcubeguide;
 
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -40,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         WV      - 12
         SV      - 13
         VLS     - 18  TODO: VLS titles
-        MV      - 19
+        MW      - 19
     3x3x3 OH:
         OH_OLL  - 7
         OH_PLL  - 8
@@ -50,6 +53,9 @@ public class MainActivity extends AppCompatActivity {
         EG1     - 15
         EG2     - 16
         LEG1    - 17
+    TEST:
+        PLL     - 101
+        OLL     - 102
         TODO: ORTEGA
      */
     private Toolbar toolbar;
@@ -72,12 +78,10 @@ public class MainActivity extends AppCompatActivity {
     private static final int EG2_ID     = 16;
     private static final int LEG1_ID    = 17;
     private static final int VLS_ID     = 18;
-    private static final int MV_ID      = 19;
+    private static final int MW_ID      = 19;
 
-    private int mode = 1;
-    public int picLen = 250;
-    public int textSize = 16;
-    public String locale = "en_";
+    private int picLen = 250;
+    private int textSize = 16;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -93,11 +97,6 @@ public class MainActivity extends AppCompatActivity {
         if (displaymetrics.widthPixels < 1000) {
             picLen = 150;
             textSize = 14;
-        }
-
-
-        if ((getResources().getConfiguration().locale.getLanguage()).equals("ru")) {
-            locale = "ru_";
         }
 
         DrawerBuilder drawerBuilder = new DrawerBuilder()
@@ -201,7 +200,7 @@ public class MainActivity extends AppCompatActivity {
                                                 .withLevel(2)
                                                 .withTextColor(R.color.colorBlack)
                                                 .withIconTintingEnabled(true)
-                                                .withIdentifier(MV_ID)),
+                                                .withIdentifier(MW_ID)),
                         new ExpandableDrawerItem()
                                 .withName(getResources().getString(R.string.header_2x2x2))
                                 .withSelectable(false)
@@ -213,17 +212,17 @@ public class MainActivity extends AppCompatActivity {
                                                 .withIconTintingEnabled(true)
                                                 .withIdentifier(CLL_ID),
                                         new SecondaryDrawerItem()
-                                                .withName(getResources().getString(R.string.eg1_header))
+                                                .withName(getResources().getString(R.string.eg1__header))
                                                 .withLevel(2)
                                                 .withIconTintingEnabled(true)
                                                 .withIdentifier(EG1_ID),
                                         new SecondaryDrawerItem()
-                                                .withName(getResources().getString(R.string.eg2_header))
+                                                .withName(getResources().getString(R.string.eg2__header))
                                                 .withLevel(2)
                                                 .withIconTintingEnabled(true)
                                                 .withIdentifier(EG2_ID),
                                         new SecondaryDrawerItem()
-                                                .withName(getResources().getString(R.string.leg1_header))
+                                                .withName(getResources().getString(R.string.leg1__header))
                                                 .withLevel(2)
                                                 .withIconTintingEnabled(true)
                                                 .withIdentifier(LEG1_ID))
@@ -231,31 +230,7 @@ public class MainActivity extends AppCompatActivity {
                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
                     @Override
                     public boolean onItemClick(View view, int position, @NotNull IDrawerItem drawerItem) {
-                        mode = (int) drawerItem.getIdentifier();
-                        int count = 40;
-                        String modeName = "f2l";
-                        switch (mode) {
-                            case F2L_ID:                                       break;
-                            case OLL_ID:     count = 57; modeName = "oll";     break;
-                            case PLL_ID:     count = 21; modeName = "pll";     break;
-                            case VHF2L_ID:   count = 31; modeName = "vh";      break;
-                            case OPF2L_ID:   count = 28; modeName = "op";      break;
-                            case COLL_ID:    count = 39; modeName = "coll";    break;
-                            case OH_OLL_ID:  count = 57; modeName = "oh_oll";  break;
-                            case OH_PLL_ID:  count = 21; modeName = "oh_pll";  break;
-                            case CLL_ID:     count = 39; modeName = "cll";     break;
-                            case OLE_ID:     count = 25; modeName = "ole";     break;
-                            case OLC_ID:     count = 26; modeName = "olc";     break;
-                            case WV_ID:      count = 51; modeName = "wv";      break;
-                            case SV_ID:      count = 25; modeName = "sv";      break;
-                            case OH_COLL_ID: count = 39; modeName = "oh_coll"; break;
-                            case EG1_ID:     count = 39; modeName = "eg1";     break;
-                            case EG2_ID:     count = 39; modeName = "eg2";     break;
-                            case LEG1_ID:    count = 39; modeName = "leg1";    break;
-                            case VLS_ID:     count = 26; modeName = "vls";     break;
-                            case MV_ID:      count = 17; modeName = "mw";      break;
-                        }
-                        draw(modeName, count);
+                        newDraw((int) drawerItem.getIdentifier());
                         return false;
                         }
                     })
@@ -264,10 +239,38 @@ public class MainActivity extends AppCompatActivity {
         mDrawer.setSelection(F2L_ID);
     }
 
-    void draw(String picName, int pic_count) {
-        String[] algoritms = getResources().getStringArray(getResources().getIdentifier(picName, "array", getPackageName()));
-        toolbar.setTitle(getResources().getString(getResources().getIdentifier(picName + "_header", "string", getPackageName())));
 
+    void newDraw(int mode_id) {
+        String mode, picMode, titleMode, name;
+        mode = picMode = "f2l";
+        switch (mode_id) {
+            case OLL_ID: mode = picMode = "oll"; break;
+            case OH_OLL_ID: mode = "oh_oll"; picMode = "oll"; break;
+
+            case PLL_ID: mode = picMode = "pll"; break;
+            case OH_PLL_ID: mode = "oh_pll"; picMode = "pll"; break;
+
+            case COLL_ID: mode = picMode = "coll"; break;
+            case OH_COLL_ID: mode = "oh_coll"; picMode = "coll"; break;
+
+            case OPF2L_ID: mode = picMode = "op"; break;
+            case VHF2L_ID: mode = picMode = "vh"; break;
+            case WV_ID: mode = picMode = "wv"; break;
+            case SV_ID: mode = picMode = "sv"; break;
+            case MW_ID: mode = picMode = "mw"; break;
+            case OLE_ID: mode = picMode = "ole"; break;
+            case OLC_ID: mode = picMode = "olc"; break;
+            case VLS_ID: mode = picMode = "vls"; break;
+
+            case CLL_ID: mode = picMode = "cll"; break;
+            case EG1_ID: mode = "eg1_"; picMode = "cll"; break;
+            case EG2_ID: mode = "eg2_"; picMode = "cll"; break;
+            case LEG1_ID: mode = "leg1_"; picMode = "cll"; break;
+        }
+
+        toolbar.setTitle(getResources().getString(getResources().getIdentifier(mode + "_header", "string", getPackageName())));
+
+        /*
         switch (picName) {
             case "oh_oll":  picName = "oll";  break;
             case "oh_pll":  picName = "pll";  break;
@@ -276,23 +279,17 @@ public class MainActivity extends AppCompatActivity {
             case "leg1":
             case "eg2":
                 picName = "cll";  break;
-        }
+         */
 
-
-        String[] titles = getResources().getStringArray(getResources().getIdentifier(locale + "oll" + "_headers", "array", getPackageName()));
-        if (picName.equals("pll") || picName.equals("coll") || picName.equals("ole") || picName.equals("cll")) {
-            titles = getResources().getStringArray(getResources().getIdentifier(locale + picName + "_headers", "array", getPackageName()));
-        }
         LinearLayout mainLayout = findViewById(R.id.main_view);
         mainLayout.removeAllViews();
         mainLayout.setPadding(0,5,0,40);
 
         ScrollView scrollview = findViewById(R.id.main_scroll);
         scrollview.scrollTo(0,0);
-        for (int i = 0, j = 0; i <= pic_count; i++, j += 3) {
-            if ((picName.equals("oll") || picName.equals("pll")) && i == 3) {
-                continue;
-            }
+        for (int i = 0; i < Integer.parseInt(getResources().getString(getResources().getIdentifier(mode + "_count", "string", getPackageName()))); i++) {
+            int algCount = Integer.parseInt(getResources().getString(getResources().getIdentifier(mode + i + "_count", "string", getPackageName())));
+            if (algCount == 0) continue;
 
             LinearLayout line = new LinearLayout(this);
             line.setOrientation(LinearLayout.HORIZONTAL);
@@ -305,44 +302,60 @@ public class MainActivity extends AppCompatActivity {
             line.setLayoutParams(layoutParams);
 
             ImageView image = new ImageView(this);
-            String name = picName + i;
+            name = picMode + i;
             image.setImageResource(getResources().getIdentifier(name, "drawable", getPackageName()));
             image.setLayoutParams(new LinearLayout.LayoutParams(picLen, picLen));
 
             LinearLayout algLayout = new LinearLayout(this);
             algLayout.setOrientation(LinearLayout.VERTICAL);
             algLayout.setPadding(20,0,0,0);
-            for (int n = 0; n < 3; n++) {
-                if (!algoritms[j + n].equals("")){
-                    TextView text = new TextView(this);
-                    text.setText(algoritms[j + n]);
-                    text.setTextColor(getResources().getColor(R.color.colorBlack));
-                    text.setTextSize(textSize);
-                    algLayout.addView(text);
-                }
-            }
 
-            if ((picName.equals("oll") || picName.equals("pll") || picName.equals("coll") || picName.equals("ole") || picName.equals("cll")) && !titles[i].equals("0")) {
-                TextView title = new TextView(this);
-                title.setTextColor(getResources().getColor(R.color.colorBlack));
-                title.setText(titles[i]);
-                title.setPadding(0,20,0,0);
-                title.setTextSize(textSize + 4);
-                title.setTextAlignment(TextView.TEXT_ALIGNMENT_CENTER);
-                mainLayout.addView(title);
-            }
-            line.setId(100 + i);
 
-            line.setOnLongClickListener(new View.OnLongClickListener() {
-                @Override
-                public boolean onLongClick(View v) {
-                    return false;
-                }
-            });
+            for (int n = 0; n < algCount; n++) {
+                String alg = getResources().getString(getResources().getIdentifier(mode + i + "_" + n, "string", getPackageName()));
+                TextView text = new TextView(this);
+                text.setText(alg);
+                text.setTextColor(getResources().getColor(R.color.colorBlack));
+                text.setTextSize(textSize);
+                algLayout.addView(text);
+            }
+            String title = getResources().getString(getResources().getIdentifier(picMode + i + "_title", "string", getPackageName()));
+            if (!title.equals("")) {
+                TextView titleView = new TextView(this);
+                titleView.setTextColor(getResources().getColor(R.color.colorBlack));
+                titleView.setText(title);
+                titleView.setPadding(0,20,0,0);
+                titleView.setTextSize(textSize + 4);
+                titleView.setTextAlignment(TextView.TEXT_ALIGNMENT_CENTER);
+                mainLayout.addView(titleView);
+            }
 
             line.addView(image);
             line.addView(algLayout);
             mainLayout.addView(line);
         }
     }
+    /*
+    line.setId(i);
+
+            line.setOnLongClickListener(new View.OnLongClickListener() {
+                @Override
+                public boolean onLongClick(View v) {
+                    AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                    LayoutInflater inflater = getLayoutInflater();
+                    View view = inflater.inflate(R.layout.dialog_alg, null);
+
+                    TextView text = view.findViewById(R.id.modeName);
+                    ImageView image = view.findViewById(R.id.dialogImage);
+                    text.setText(modeName);
+                    image.setImageResource(getResources().getIdentifier(modeName + v.getId(), "drawable", getPackageName()));
+                    image.setLayoutParams(new LinearLayout.LayoutParams(picLen, picLen));
+
+                    builder.setView(view);
+                    AlertDialog dialog = builder.create();
+                    dialog.show();
+                    return false;
+                }
+            });
+     */
 }

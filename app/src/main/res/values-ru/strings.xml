@@ -15,4 +15,441 @@
     <string name="oll_header">OLL - Ориентация последнего слоя</string>
     <string name="pll_header">PLL - Перестановка последнего слоя</string>
     <string name="oh_coll_header">OH COLL - COLL Одной рукой</string>
+
+
+    <string name="oll0_title">Глаза</string>
+    <string name="oll0_subtitle">Глаза</string>
+
+    <string name="oll1_title">Уши</string>
+    <string name="oll1_subtitle">Уши</string>
+
+    <string name="oll2_title">Восьмерка</string>
+    <string name="oll2_subtitle">Восьмерка</string>
+
+    <string name="oll4_title">Двойные глаза</string>
+    <string name="oll4_subtitle">Двойные глаза</string>
+
+    <string name="oll5_title">Вертолет</string>
+    <string name="oll5_subtitle">Вертолет</string>
+
+    <string name="oll6_title">Рыбки</string>
+    <string name="oll6_subtitle">Рыбки</string>
+
+    <string name="oll7_title" />
+    <string name="oll7_subtitle">Рыбки</string>
+
+    <string name="oll8_title">Точки</string>
+    <string name="oll8_subtitle">Точки</string>
+
+    <string name="oll9_title" />
+    <string name="oll9_subtitle">Точки</string>
+
+    <string name="oll10_title">Запятые</string>
+    <string name="oll10_subtitle">Запятые</string>
+
+    <string name="oll11_title" />
+    <string name="oll11_subtitle">Запятые</string>
+
+    <string name="oll12_title">Микки Маусы</string>
+    <string name="oll12_subtitle">Микки Маусы</string>
+
+    <string name="oll13_title" />
+    <string name="oll13_subtitle">Микки Маусы</string>
+
+    <string name="oll14_title">Диагональ</string>
+    <string name="oll14_subtitle">Диагональ</string>
+
+    <string name="oll15_title">Снежинка</string>
+    <string name="oll15_subtitle">Снежинка</string>
+
+    <string name="oll16_title">Буква "Н"</string>
+    <string name="oll16_subtitle">Буква "Н"</string>
+
+    <string name="oll17_title">Летающий змей</string>
+    <string name="oll17_subtitle">Летающий змей</string>
+
+    <string name="oll18_title">Палки</string>
+    <string name="oll18_subtitle">Палки</string>
+
+    <string name="oll19_title" />
+    <string name="oll19_subtitle">Палки</string>
+
+    <string name="oll20_title" />
+    <string name="oll20_subtitle">Палки</string>
+
+    <string name="oll21_title" />
+    <string name="oll21_subtitle">Палки</string>
+
+    <string name="oll22_title">Буквы Г</string>
+    <string name="oll22_subtitle">Буквы Г</string>
+
+    <string name="oll23_title" />
+    <string name="oll23_subtitle">Буквы Г</string>
+
+    <string name="oll24_title" />
+    <string name="oll24_subtitle">Буквы Г</string>
+
+    <string name="oll25_title" />
+    <string name="oll25_subtitle">Буквы Г</string>
+
+    <string name="oll26_title">Буквы Т</string>
+    <string name="oll26_subtitle">Буквы Т</string>
+
+    <string name="oll27_title" />
+    <string name="oll27_subtitle">Буквы Т</string>
+
+    <string name="oll28_title">Скобки</string>
+    <string name="oll28_subtitle">Скобки</string>
+
+    <string name="oll29_title" />
+    <string name="oll29_subtitle">Скобки</string>
+
+    <string name="oll30_title">Пропеллеры</string>
+    <string name="oll30_subtitle">Пропеллеры</string>
+
+    <string name="oll31_title" />
+    <string name="oll31_subtitle">Пропеллеры</string>
+
+    <string name="oll32_title">Стелсы</string>
+    <string name="oll32_subtitle">Стелсы</string>
+
+    <string name="oll33_title" />
+    <string name="oll33_subtitle">Стелсы</string>
+
+    <string name="oll34_title" />
+    <string name="oll34_subtitle">Стелсы</string>
+
+    <string name="oll35_title" />
+    <string name="oll35_subtitle">Стелсы</string>
+
+    <string name="oll36_title" />
+    <string name="oll36_subtitle">Стелсы</string>
+
+    <string name="oll37_title" />
+    <string name="oll37_subtitle">Стелсы</string>
+
+    <string name="oll38_title">Квадраты</string>
+    <string name="oll38_subtitle">Квадраты</string>
+
+    <string name="oll39_title" />
+    <string name="oll39_subtitle">Квадраты</string>
+
+    <string name="oll40_title">Рюмки</string>
+    <string name="oll40_subtitle">Рюмки</string>
+
+    <string name="oll41_title" />
+    <string name="oll41_subtitle">Рюмки</string>
+
+    <string name="oll42_title">Молнии</string>
+    <string name="oll42_subtitle">Молнии</string>
+
+    <string name="oll43_title" />
+    <string name="oll43_subtitle">Молнии</string>
+
+    <string name="oll44_title" />
+    <string name="oll44_subtitle">Молнии</string>
+
+    <string name="oll45_title" />
+    <string name="oll45_subtitle">Молнии</string>
+
+    <string name="oll46_title">Мягкие знаки</string>
+    <string name="oll46_subtitle">Мягкие знаки</string>
+
+    <string name="oll47_title" />
+    <string name="oll47_subtitle">Мягкие знаки</string>
+
+    <string name="oll48_title" />
+    <string name="oll48_subtitle">Мягкие знаки</string>
+
+    <string name="oll49_title" />
+    <string name="oll49_subtitle">Мягкие знаки</string>
+
+    <string name="oll50_title">Буквы М</string>
+    <string name="oll50_subtitle">Буквы М</string>
+
+    <string name="oll51_title" />
+    <string name="oll51_subtitle">Буквы М</string>
+
+    <string name="oll52_title">Галстуки</string>
+    <string name="oll52_subtitle">Галстуки</string>
+
+    <string name="oll53_title" />
+    <string name="oll53_subtitle">Галстуки</string>
+
+    <string name="oll54_title">Петухи</string>
+    <string name="oll54_subtitle">Петухи</string>
+
+    <string name="oll55_title" />
+    <string name="oll55_subtitle">Петухи</string>
+
+    <string name="oll56_title" />
+    <string name="oll56_subtitle">Петухи</string>
+
+    <string name="oll57_title" />
+    <string name="oll57_subtitle">Петухи</string>
+
+
+    <string name="pll0_title">Треугольники углов (А-perms)</string>
+    <string name="pll0_subtitle">Треугольники углов (А-perms)</string>
+
+    <string name="pll1_title" />
+    <string name="pll1_subtitle">Треугольники углов (А-perms)</string>
+
+    <string name="pll2_title">Терминатор (E-perm)</string>
+    <string name="pll2_subtitle">Терминатор (E-perm)</string>
+
+    <string name="pll4_title">Саночки (Z-perm)</string>
+    <string name="pll4_subtitle">Саночки (Z-perm)</string>
+
+    <string name="pll5_title">Крест сторон (H-perm)</string>
+    <string name="pll5_subtitle">Крест сторон (H-perm)</string>
+
+    <string name="pll6_title">Треугольники сторон (U-perms)</string>
+    <string name="pll6_subtitle">Треугольники сторон (U-perms)</string>
+
+    <string name="pll7_title" />
+    <string name="pll7_subtitle">Треугольники сторон (U-perms)</string>
+
+    <string name="pll8_title">Лямбды (J-perms)</string>
+    <string name="pll8_subtitle">Лямбды (J-perms)</string>
+
+    <string name="pll9_title" />
+    <string name="pll9_subtitle">Лямбды (J-perms)</string>
+
+    <string name="pll10_title">Cемерки (R-perms)</string>
+    <string name="pll10_subtitle">Cемерки (R-perms)</string>
+
+    <string name="pll11_title" />
+    <string name="pll11_subtitle">Cемерки (R-perms)</string>
+
+    <string name="pll12_title">Буква Т (T-perm)</string>
+    <string name="pll12_subtitle">Буква Т (T-perm)</string>
+
+    <string name="pll13_title">Копье (Y-perm)</string>
+    <string name="pll13_subtitle">Копье (Y-perm)</string>
+
+    <string name="pll14_title">Параллельный перенос (F-perm)</string>
+    <string name="pll14_subtitle">Параллельный перенос (F-perm)</string>
+
+    <string name="pll15_title">Летающая тарелка (V-perm)</string>
+    <string name="pll15_subtitle">Летающая тарелка (V-perm)</string>
+
+    <string name="pll16_title">Буквы X (N-perms)</string>
+    <string name="pll16_subtitle">Буквы X (N-perms)</string>
+
+    <string name="pll17_title" />
+    <string name="pll17_subtitle">Буквы X (N-perms)</string>
+
+    <string name="pll18_title">Восьмерки (G-perms)</string>
+    <string name="pll18_subtitle">Восьмерки (G-perms)</string>
+
+    <string name="pll19_title" />
+    <string name="pll19_subtitle">Восьмерки (G-perms)</string>
+
+    <string name="pll20_title" />
+    <string name="pll20_subtitle">Восьмерки (G-perms)</string>
+
+    <string name="pll21_title" />
+    <string name="pll21_subtitle">Восьмерки (G-perms)</string>
+
+    <string name="coll0_title">Глаза</string>
+    <string name="coll0_subtitle">Глаза</string>
+
+    <string name="coll1_title" />
+    <string name="coll1_subtitle">Глаза</string>
+
+    <string name="coll2_title" />
+    <string name="coll2_subtitle">Глаза</string>
+
+    <string name="coll3_title" />
+    <string name="coll3_subtitle">Глаза</string>
+
+    <string name="coll4_title" />
+    <string name="coll4_subtitle">Глаза</string>
+
+    <string name="coll5_title" />
+    <string name="coll5_subtitle">Глаза</string>
+
+    <string name="coll6_title">Уши</string>
+    <string name="coll6_subtitle">Уши</string>
+
+    <string name="coll7_title" />
+    <string name="coll7_subtitle">Уши</string>
+
+    <string name="coll8_title" />
+    <string name="coll8_subtitle">Уши</string>
+
+    <string name="coll9_title" />
+    <string name="coll9_subtitle">Уши</string>
+
+    <string name="coll10_title" />
+    <string name="coll10_subtitle">Уши</string>
+
+    <string name="coll11_title" />
+    <string name="coll11_subtitle">Уши</string>
+
+    <string name="coll12_title">Восьмерки</string>
+    <string name="coll12_subtitle">Восьмерки</string>
+
+    <string name="coll13_title" />
+    <string name="coll13_subtitle">Восьмерки</string>
+
+    <string name="coll14_title" />
+    <string name="coll14_subtitle">Восьмерки</string>
+
+    <string name="coll15_title" />
+    <string name="coll15_subtitle">Восьмерки</string>
+
+    <string name="coll16_title" />
+    <string name="coll16_subtitle">Восьмерки</string>
+
+    <string name="coll17_title" />
+    <string name="coll17_subtitle">Восьмерки</string>
+
+    <string name="coll18_title">Двойные глаза</string>
+    <string name="coll18_subtitle">Двойные глаза</string>
+
+    <string name="coll19_title" />
+    <string name="coll19_subtitle">Двойные глаза</string>
+
+    <string name="coll20_title" />
+    <string name="coll20_subtitle">Двойные глаза</string>
+
+    <string name="coll21_title" />
+    <string name="coll21_subtitle">Двойные глаза</string>
+
+    <string name="coll22_title">Вертолеты</string>
+    <string name="coll22_subtitle">Вертолеты</string>
+
+    <string name="coll23_title" />
+    <string name="coll23_subtitle">Вертолеты</string>
+
+    <string name="coll24_title" />
+    <string name="coll24_subtitle">Вертолеты</string>
+
+    <string name="coll25_title" />
+    <string name="coll25_subtitle">Вертолеты</string>
+
+    <string name="coll26_title" />
+    <string name="coll26_subtitle">Вертолеты</string>
+
+    <string name="coll27_title" />
+    <string name="coll27_subtitle">Вертолеты</string>
+
+    <string name="coll28_title">Рыбки</string>
+    <string name="coll28_subtitle">Рыбки</string>
+
+    <string name="coll29_title" />
+    <string name="coll29_subtitle">Рыбки</string>
+
+    <string name="coll30_title" />
+    <string name="coll30_subtitle">Рыбки</string>
+
+    <string name="coll31_title" />
+    <string name="coll31_subtitle">Рыбки</string>
+
+    <string name="coll32_title" />
+    <string name="coll32_subtitle">Рыбки</string>
+
+    <string name="coll33_title" />
+    <string name="coll33_subtitle">Рыбки</string>
+
+    <string name="coll34_title">Антирыбки</string>
+    <string name="coll34_subtitle">Антирыбки</string>
+
+    <string name="coll35_title" />
+    <string name="coll35_subtitle">Антирыбки</string>
+
+    <string name="coll36_title" />
+    <string name="coll36_subtitle">Антирыбки</string>
+
+    <string name="coll37_title" />
+    <string name="coll37_subtitle">Антирыбки</string>
+
+    <string name="coll38_title" />
+    <string name="coll38_subtitle">Антирыбки</string>
+
+    <string name="coll39_title" />
+    <string name="coll39_subtitle">Антирыбки</string>
+
+    <string name="ole0_title">Глаза</string>
+    <string name="ole0_subtitle">Глаза</string>
+
+    <string name="ole1_title" />
+    <string name="ole1_subtitle">Глаза</string>
+
+    <string name="ole2_title" />
+    <string name="ole2_subtitle">Глаза</string>
+
+    <string name="ole3_title" />
+    <string name="ole3_subtitle">Глаза</string>
+
+    <string name="ole4_title">Уши</string>
+    <string name="ole4_subtitle">Уши</string>
+
+    <string name="ole5_title" />
+    <string name="ole5_subtitle">Уши</string>
+
+    <string name="ole6_title" />
+    <string name="ole6_subtitle">Уши</string>
+
+    <string name="ole7_title" />
+    <string name="ole7_subtitle">Уши</string>
+
+    <string name="ole8_title">Восьмерки</string>
+    <string name="ole8_subtitle">Восьмерки</string>
+
+    <string name="ole9_title" />
+    <string name="ole9_subtitle">Восьмерки</string>
+
+    <string name="ole10_title" />
+    <string name="ole10_subtitle">Восьмерки</string>
+
+    <string name="ole11_title" />
+    <string name="ole11_subtitle">Восьмерки</string>
+
+    <string name="ole12_title">Двойные глаза</string>
+    <string name="ole12_subtitle">Двойные глаза</string>
+
+    <string name="ole13_title" />
+    <string name="ole13_subtitle">Двойные глаза</string>
+
+    <string name="ole14_title">Вертолет</string>
+    <string name="ole14_subtitle">Вертолет</string>
+
+    <string name="ole15_title" />
+    <string name="ole15_subtitle">Вертолет</string>
+
+    <string name="ole16_title" />
+    <string name="ole16_subtitle">Вертолет</string>
+
+    <string name="ole17_title" />
+    <string name="ole17_subtitle">Вертолет</string>
+
+    <string name="ole18_title">Рыбки</string>
+    <string name="ole18_subtitle">Рыбки</string>
+
+    <string name="ole19_title" />
+    <string name="ole19_subtitle">Рыбки</string>
+
+    <string name="ole20_title" />
+    <string name="ole20_subtitle">Рыбки</string>
+
+    <string name="ole21_title" />
+    <string name="ole21_subtitle">Рыбки</string>
+
+    <string name="ole22_title">Антирыбки</string>
+    <string name="ole22_subtitle">Антирыбки</string>
+
+    <string name="ole23_title" />
+    <string name="ole23_subtitle">Антирыбки</string>
+
+    <string name="ole24_title" />
+    <string name="ole24_subtitle">Антирыбки</string>
+
+    <string name="ole25_title" />
+    <string name="ole25_subtitle">Антирыбки</string>
+
+
+
 </resources>
