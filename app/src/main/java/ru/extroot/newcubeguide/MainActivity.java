@@ -1,11 +1,8 @@
 package ru.extroot.newcubeguide;
 
-import android.app.AlertDialog;
-import android.app.Dialog;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.Gravity;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -241,8 +238,8 @@ public class MainActivity extends AppCompatActivity {
 
 
     void newDraw(int mode_id) {
-        String mode, picMode, titleMode, name;
-        mode = picMode = "f2l";
+        String picMode;
+        String mode = picMode = "f2l";
         switch (mode_id) {
             case OLL_ID: mode = picMode = "oll"; break;
             case OH_OLL_ID: mode = "oh_oll"; picMode = "oll"; break;
@@ -269,18 +266,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         toolbar.setTitle(getResources().getString(getResources().getIdentifier(mode + "_header", "string", getPackageName())));
-
-        /*
-        switch (picName) {
-            case "oh_oll":  picName = "oll";  break;
-            case "oh_pll":  picName = "pll";  break;
-            case "oh_coll": picName = "coll"; break;
-            case "eg1":
-            case "leg1":
-            case "eg2":
-                picName = "cll";  break;
-         */
-
+        
         LinearLayout mainLayout = findViewById(R.id.main_view);
         mainLayout.removeAllViews();
         mainLayout.setPadding(0,5,0,40);
@@ -302,8 +288,7 @@ public class MainActivity extends AppCompatActivity {
             line.setLayoutParams(layoutParams);
 
             ImageView image = new ImageView(this);
-            name = picMode + i;
-            image.setImageResource(getResources().getIdentifier(name, "drawable", getPackageName()));
+            image.setImageResource(getResources().getIdentifier(picMode + i, "drawable", getPackageName()));
             image.setLayoutParams(new LinearLayout.LayoutParams(picLen, picLen));
 
             LinearLayout algLayout = new LinearLayout(this);
@@ -335,27 +320,4 @@ public class MainActivity extends AppCompatActivity {
             mainLayout.addView(line);
         }
     }
-    /*
-    line.setId(i);
-
-            line.setOnLongClickListener(new View.OnLongClickListener() {
-                @Override
-                public boolean onLongClick(View v) {
-                    AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-                    LayoutInflater inflater = getLayoutInflater();
-                    View view = inflater.inflate(R.layout.dialog_alg, null);
-
-                    TextView text = view.findViewById(R.id.modeName);
-                    ImageView image = view.findViewById(R.id.dialogImage);
-                    text.setText(modeName);
-                    image.setImageResource(getResources().getIdentifier(modeName + v.getId(), "drawable", getPackageName()));
-                    image.setLayoutParams(new LinearLayout.LayoutParams(picLen, picLen));
-
-                    builder.setView(view);
-                    AlertDialog dialog = builder.create();
-                    dialog.show();
-                    return false;
-                }
-            });
-     */
 }
