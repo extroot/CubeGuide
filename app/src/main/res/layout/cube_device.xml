@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+    <TextView
+        style="@style/H2"
+        android:text="@string/eazy3_p2_1" />
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/xxxxbxxxx_xxxxyxxxx_xxxxrxxxx" />
+
+    <TextView
+        android:id="@+id/eazy3_1_1"
+        style="@style/text"
+        android:text="@string/text404" />
+
+    <ImageView
+        android:src="@drawable/xbxbxbxbx_xyxyxyxyx_xrxrxrxrx"
+        android:layout_width="150dp"
+        android:layout_height="150dp" />
+    <TextView
+        android:id="@+id/eazy3_1_2"
+        style="@style/text"
+        android:text="@string/text404" />
+
+    <ImageView
+        android:src="@drawable/bxbxxxbxb_yxyxxxyxy_rxrxxxrxr"
+        android:layout_width="150dp"
+        android:layout_height="150dp" />
+    <TextView
+        android:id="@+id/eazy3_1_3"
+        style="@style/text"
+        android:text="@string/text404" />
+</LinearLayout>

@@ -1,8 +1,10 @@
 package ru.extroot.newcubeguide;
 
 import android.os.Bundle;
+import android.text.Html;
 import android.util.DisplayMetrics;
 import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -23,7 +25,7 @@ import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 import org.jetbrains.annotations.NotNull;
 
 
-public class MainActivity extends AppCompatActivity {
+    public class MainActivity extends AppCompatActivity {
     /*
     TODO: Rewrite full app
     3x3x3:
@@ -31,6 +33,16 @@ public class MainActivity extends AppCompatActivity {
         OLL     - 2
         PLL     - 3
         TODO: Expert F2L, OLL, PLL
+
+    3x3x3 EASY  - 22
+
+    TODO: easy Fridrich, 4x4x4, 5x5x5, 2x2x2
+
+    3x3x3 OH:
+        OH_OLL  - 7
+        OH_PLL  - 8
+        OH_COLL - 14
+
     3x3x3 PRO:
         VHF2L   - 4
         OPF2L   - 5
@@ -41,19 +53,17 @@ public class MainActivity extends AppCompatActivity {
         SV      - 13
         VLS     - 18  TODO: VLS titles
         MW      - 19
-    3x3x3 OH:
-        OH_OLL  - 7
-        OH_PLL  - 8
-        OH_COLL - 14
+
     2x2x2 EG:
         CLL     - 9
         EG1     - 15
         EG2     - 16
+        TODO: Ortega
         LEG1    - 17
-    TEST:
-        PLL     - 101
-        OLL     - 102
-        TODO: ORTEGA
+
+    Megaminx:
+        MG_OLL  - 20
+        PLLR    - 21
      */
     private Toolbar toolbar;
 
@@ -76,9 +86,13 @@ public class MainActivity extends AppCompatActivity {
     private static final int LEG1_ID    = 17;
     private static final int VLS_ID     = 18;
     private static final int MW_ID      = 19;
+    private static final int MG_OLL_ID  = 20;
+    private static final int PLLR_ID    = 21;
+    private static final int EAZY_3_ID   = 22;
 
     private int picLen = 250;
     private int textSize = 16;
+    String picMode, mode;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -91,10 +105,16 @@ public class MainActivity extends AppCompatActivity {
 
         DisplayMetrics displaymetrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
-        if (displaymetrics.widthPixels < 1000) {
+        if (displaymetrics.widthPixels < 700) {
+            picLen = 100 ;
+            textSize = 14;
+        } else if (displaymetrics.widthPixels < 1000) {
             picLen = 150;
             textSize = 14;
         }
+        System.out.println(displaymetrics.widthPixels);
+        System.out.println(picLen);
+
 
         DrawerBuilder drawerBuilder = new DrawerBuilder()
                 .withActivity(this)
@@ -102,25 +122,30 @@ public class MainActivity extends AppCompatActivity {
                 .withToolbar(toolbar)
                 .addDrawerItems(
                         new PrimaryDrawerItem()
+                                .withName(getResources().getString(R.string.eazy3_header))
+                                .withSelectable(false)
+                                .withIconTintingEnabled(true)
+                                .withIdentifier(EAZY_3_ID),
+                        new ExpandableDrawerItem()
                                 .withName(getResources().getString(R.string.header_3x3x3))
                                 .withSelectable(false)
-                                .withEnabled(false)
-                                .withIconTintingEnabled(true),
-                        new SecondaryDrawerItem()
-                                .withName(getResources().getString(R.string.f2l_header))
-                                .withLevel(2)
                                 .withIconTintingEnabled(true)
-                                .withIdentifier(F2L_ID),
-                        new SecondaryDrawerItem()
-                                .withName(getResources().getString(R.string.oll_header))
-                                .withLevel(2)
-                                .withIconTintingEnabled(true)
-                                .withIdentifier(OLL_ID),
-                        new SecondaryDrawerItem()
-                                .withName(getResources().getString(R.string.pll_header))
-                                .withLevel(2)
-                                .withIconTintingEnabled(true)
-                                .withIdentifier(PLL_ID),
+                                .withSubItems(
+                                        new SecondaryDrawerItem()
+                                                .withName(getResources().getString(R.string.f2l_header))
+                                                .withLevel(2)
+                                                .withIconTintingEnabled(true)
+                                                .withIdentifier(F2L_ID),
+                                        new SecondaryDrawerItem()
+                                                .withName(getResources().getString(R.string.oll_header))
+                                                .withLevel(2)
+                                                .withIconTintingEnabled(true)
+                                                .withIdentifier(OLL_ID),
+                                        new SecondaryDrawerItem()
+                                                .withName(getResources().getString(R.string.pll_header))
+                                                .withLevel(2)
+                                                .withIconTintingEnabled(true)
+                                                .withIdentifier(PLL_ID)),
                         new ExpandableDrawerItem()
                                 .withName(getResources().getString(R.string.header_3x3x3_oh))
                                 .withSelectable(false)
@@ -222,51 +247,92 @@ public class MainActivity extends AppCompatActivity {
                                                 .withName(getResources().getString(R.string.leg1__header))
                                                 .withLevel(2)
                                                 .withIconTintingEnabled(true)
-                                                .withIdentifier(LEG1_ID))
+                                                .withIdentifier(LEG1_ID)),
+                        new ExpandableDrawerItem()
+                                .withName(getResources().getString(R.string.header_mg))
+                                .withSelectable(false)
+                                .withIconTintingEnabled(true)
+                                .withSubItems(
+                                        new SecondaryDrawerItem()
+                                                .withName(getResources().getString(R.string.mg_oll_header))
+                                                .withLevel(2)
+                                                .withIconTintingEnabled(true)
+                                                .withIdentifier(MG_OLL_ID),
+                                        new SecondaryDrawerItem()
+                                                .withName(getResources().getString(R.string.pllr_header))
+                                                .withLevel(2)
+                                                .withIconTintingEnabled(true)
+                                                .withIdentifier(PLLR_ID))
                 )
                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
                     @Override
                     public boolean onItemClick(View view, int position, @NotNull IDrawerItem drawerItem) {
-                        newDraw((int) drawerItem.getIdentifier());
+
+                        mode = picMode = "f2l";
+                        switch ((int) drawerItem.getIdentifier()) {
+                            case OLL_ID: mode = picMode = "oll"; break;
+                            case OH_OLL_ID: mode = "oh_oll"; picMode = "oll"; break;
+
+                            case PLL_ID: mode = picMode = "pll"; break;
+                            case OH_PLL_ID: mode = "oh_pll"; picMode = "pll"; break;
+
+                            case COLL_ID: mode = picMode = "coll"; break;
+                            case OH_COLL_ID: mode = "oh_coll"; picMode = "coll"; break;
+
+                            case OPF2L_ID: mode = picMode = "op"; break;
+                            case VHF2L_ID: mode = picMode = "vh"; break;
+                            case WV_ID: mode = picMode = "wv"; break;
+                            case SV_ID: mode = picMode = "sv"; break;
+                            case MW_ID: mode = picMode = "mw"; break;
+                            case OLE_ID: mode = picMode = "ole"; break;
+                            case OLC_ID: mode = picMode = "olc"; break;
+                            case VLS_ID: mode = picMode = "vls"; break;
+
+                            case CLL_ID: mode = picMode = "cll"; break;
+                            case EG1_ID: mode = "eg1_"; picMode = "cll"; break;
+                            case EG2_ID: mode = "eg2_"; picMode = "cll"; break;
+                            case LEG1_ID: mode = "leg1_"; picMode = "cll"; break;
+
+                            case MG_OLL_ID: mode = picMode = "mg_oll"; break;
+                            case PLLR_ID: mode = picMode = "pllr"; break;
+
+                            case EAZY_3_ID: tutorials_3x3x3(); return false;
+                            default: return true;
+                        }
+                        newDraw();
+
                         return false;
                         }
                     })
                 .withSavedInstance(savedInstanceState);
         Drawer mDrawer = drawerBuilder.build();
-        mDrawer.setSelection(F2L_ID);
+        mDrawer.setSelection(EAZY_3_ID);
     }
 
 
-    void newDraw(int mode_id) {
-        String picMode;
-        String mode = picMode = "f2l";
-        switch (mode_id) {
-            case OLL_ID: mode = picMode = "oll"; break;
-            case OH_OLL_ID: mode = "oh_oll"; picMode = "oll"; break;
+    void tutorials_3x3x3() {
+        toolbar.setTitle(getResources().getString(R.string.eazy3_header));
 
-            case PLL_ID: mode = picMode = "pll"; break;
-            case OH_PLL_ID: mode = "oh_pll"; picMode = "pll"; break;
+        LinearLayout mainLayout = findViewById(R.id.main_view);
+        mainLayout.removeAllViews();
 
-            case COLL_ID: mode = picMode = "coll"; break;
-            case OH_COLL_ID: mode = "oh_coll"; picMode = "coll"; break;
+        LayoutInflater inflater = (LayoutInflater) this.getSystemService(LAYOUT_INFLATER_SERVICE);
+        View childLayout = inflater.inflate(R.layout.eazy3,
+                (ViewGroup) findViewById(R.id.eazy3));
 
-            case OPF2L_ID: mode = picMode = "op"; break;
-            case VHF2L_ID: mode = picMode = "vh"; break;
-            case WV_ID: mode = picMode = "wv"; break;
-            case SV_ID: mode = picMode = "sv"; break;
-            case MW_ID: mode = picMode = "mw"; break;
-            case OLE_ID: mode = picMode = "ole"; break;
-            case OLC_ID: mode = picMode = "olc"; break;
-            case VLS_ID: mode = picMode = "vls"; break;
+        ((TextView) childLayout.findViewById(R.id.eazy3_1_1)).setText(Html.fromHtml(getResources().getString(R.string.eazy3_1_1)));
+        ((TextView) childLayout.findViewById(R.id.eazy3_1_2)).setText(Html.fromHtml(getResources().getString(R.string.eazy3_1_2)));
+        ((TextView) childLayout.findViewById(R.id.eazy3_1_3)).setText(Html.fromHtml(getResources().getString(R.string.eazy3_1_3)));
 
-            case CLL_ID: mode = picMode = "cll"; break;
-            case EG1_ID: mode = "eg1_"; picMode = "cll"; break;
-            case EG2_ID: mode = "eg2_"; picMode = "cll"; break;
-            case LEG1_ID: mode = "leg1_"; picMode = "cll"; break;
-        }
+        ((TextView) childLayout.findViewById(R.id.eazy3_2_1)).setText(Html.fromHtml(getResources().getString(R.string.eazy3_2_1)));
 
+
+        mainLayout.addView(childLayout);
+    }
+
+
+    void newDraw() {
         toolbar.setTitle(getResources().getString(getResources().getIdentifier(mode + "_header", "string", getPackageName())));
-        
         LinearLayout mainLayout = findViewById(R.id.main_view);
         mainLayout.removeAllViews();
         mainLayout.setPadding(0,5,0,40);

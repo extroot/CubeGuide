@@ -4,6 +4,7 @@
     <string name="header_3x3x3_oh">3x3x3 - One Hand</string>
     <string name="header_3x3x3_pro">3x3x3 - PRO methods</string>
     <string name="header_2x2x2">2x2x2 - EG method</string>
+    <string name="header_mg">Megaminx - layered method</string>
     <string name="f2l_header">F2L - First Two Layers</string>
     <string name="oll_header">OLL - Orientation of the Last Layer</string>
     <string name="pll_header">PLL - Permutation of the Last Layer</string>
@@ -23,6 +24,46 @@
     <string name="oh_coll_header">OH COLL - One Hand COLL</string>
     <string name="vls_header" translatable="false">VLS - Valk Last Slot</string>
     <string name="mw_header" translatable="false">Magic Wondeful</string>
+    <string name="mg_oll_header">OLL - Orientation of the Last Layer</string>
+    <string name="pllr_header">PLL - Permutation of the Last Layer</string>
+    <string name="eazy3_header">3x3x3 - Beginners Method</string>
+
+    <string name="text404">If you see this, then something has gone wrong. Please report a bug.</string>
+    <string name="test_text" translatable="false"><![CDATA[<b></b>]]></string>
+    <string name="eazy3__" translatable="false"></string>
+
+    <string name="eazy3_p1_1" translatable="false">Подготовительный этап</string>
+    <string name="eazy3_p2_1" translatable="false">Устройство кубика</string>
+
+    <string name="eazy3_1_1" translatable="false"><![CDATA[<b>Центры</b> (6 шт.) Они никогда не меняют своего положения друг относительно друга и всегда остаются на своём месте. Т.е. в кубике всегда будет действовать закономерность: напротив белого центра будет желтый, напротив синего – зеленый, а напротив красного – оранжевый. Цвет центра соответственно и есть цветом собранной стороны (синий центр ➝ синяя сторона и т.д.).]]></string>
+    <string name="eazy3_1_2" translatable="false"><![CDATA[<b>Ребра</b> (12 шт.) Ребра кубика имеют два цвета и формируют своеобразный \"крест\", когда находится на своих местах. Эти цвета между собой невозможно разъединить.]]></string>
+    <string name="eazy3_1_3" translatable="false"><![CDATA[<b>Углы</b> (8 шт.) Угловые элементы состоят из 3 цветов. Эти цвета также  нельзя разъединить между собой.]]></string>
+
+    <string name="eazy3_p2_2" translatable="false">Грани</string>
+
+    <string name="eazy3_2_1" translatable="false"><![CDATA[<b>Грани кубика Рубика</b> - 9 элементов, которые можно вращать одновременно]]></string>
+    <string name="eazy3_2_2" translatable="false">\nСобрать кубик нам помогут алгоритмы. Апостроф, или как его называют спидкуберы \"штрих\" обозначает, что движение должно исполняться против часовой стрелки. Чтобы не запутаться, представьте что вы смотрите на вращаемую сторону прямо перед собой.</string>
+    <string name="eazy3_2_3" translatable="false">\nНапример: \n\n— R (от англ. \"right\") это поворот правой грани по часовой стрелке.\n— R\' поворот правой грани против часовой стрелки</string>
+
+    <string name="eazy3_2_r" translatable="false">Правая грань (Right)\nдвижение R</string>
+    <string name="eazy3_2_nr" translatable="false">Правая грань\nдвижение R\'</string>
+    <string name="eazy3_2_l" translatable="false">Левая грань (Left)\nдвижение L</string>
+    <string name="eazy3_2_nl" translatable="false">Левая грань\nдвижение L\'</string>
+    <string name="eazy3_2_u" translatable="false">Движение U</string>
+    <string name="eazy3_2_nu" translatable="false">Движение U\'</string>
+    <string name="eazy3_2_d" translatable="false">Движение D</string>
+    <string name="eazy3_2_nd" translatable="false">Движение D\'</string>
+    <string name="eazy3_2_f" translatable="false">Движение F</string>
+    <string name="eazy3_2_nf" translatable="false">Движение F\'</string>
+    <string name="eazy3_2_b" translatable="false">Движение B</string>
+    <string name="eazy3_2_nb" translatable="false">Движение B\'</string>
+
+    <string name="eazy3_p1_2" translatable="false">Этап 1. Правильный крест</string>
+    <string name="eazy3_p2_3" translatable="false">Цветок</string>
+
+    <string name="eazy3_3_1" translatable="false">Сборку правильного креста мы делим на два шага, первый шаг это "цветок", который потом и превращается в правильный крест на 2 шаге.</string>
+    <string name="eazy3_3_2" translatable="false">Наша цель – собрать цветок, в котором центр будет желтый, а лепестки – белыми (рис 1.). Кубик во время сборки держим желтым центром вверх.\n\nКогда цветок будет готов, мы заменим желтый центр на белый, чтобы переделать его в правильный крест. (рис. 2)</string>
+    <string name="eazy3_3_" translatable="false"></string>
 
 
     <!-- OLL algs -->
@@ -3630,6 +3671,171 @@
     <string name="vls26_title" translatable="false" />
     <string name="vls26_subtitle" translatable="false" />
 
-    >
+    <string name="mg_oll_count" translatable="false">19</string>
+    <string name="mg_oll0_count" translatable="false">1</string>
+    <string name="mg_oll0_0" translatable="false">F (U R U\' R\') F\'</string>
+    <string name="mg_oll0_title">Stars</string>
+    <string name="mg_oll0_subtitle" />
+
+    <string name="mg_oll1_count" translatable="false">1</string>
+    <string name="mg_oll1_0" translatable="false">F (R U R\' U\') F\'</string>
+    <string name="mg_oll1_title" />
+    <string name="mg_oll1_subtitle" />
+
+    <string name="mg_oll2_count" translatable="false">1</string>
+    <string name="mg_oll2_0" translatable="false">F R U2 R2\' F R F\' U2\' F\'</string>
+    <string name="mg_oll2_title" />
+    <string name="mg_oll2_subtitle" />
+
+    <string name="mg_oll3_count" translatable="false">1</string>
+    <string name="mg_oll3_0" translatable="false">R U2 R\' U R U2 R\'</string>
+    <string name="mg_oll3_title">Corner orientation</string>
+    <string name="mg_oll3_subtitle" />
+
+    <string name="mg_oll4_count" translatable="false">1</string>
+    <string name="mg_oll4_0" translatable="false">R U R U R\' U R U2\' R\' U\' R\'</string>
+    <string name="mg_oll4_title" />
+    <string name="mg_oll4_subtitle" />
+
+    <string name="mg_oll5_count" translatable="false">1</string>
+    <string name="mg_oll5_0" translatable="false">R U R\' U R U R\' U2\' R U\' R\'</string>
+    <string name="mg_oll5_title" />
+    <string name="mg_oll5_subtitle" />
+
+    <string name="mg_oll6_count" translatable="false">1</string>
+    <string name="mg_oll6_0" translatable="false">y R U R U2 R\' U\' R U\' R\' U\' R\'</string>
+    <string name="mg_oll6_title" />
+    <string name="mg_oll6_subtitle" />
+
+    <string name="mg_oll7_count" translatable="false">1</string>
+    <string name="mg_oll7_0" translatable="false">R U R\' U R U2\' R\'</string>
+    <string name="mg_oll7_title" />
+    <string name="mg_oll7_subtitle" />
+
+    <string name="mg_oll8_count" translatable="false">1</string>
+    <string name="mg_oll8_0" translatable="false">R\' U\' R U\' R\' U2 R</string>
+    <string name="mg_oll8_title" />
+    <string name="mg_oll8_subtitle" />
+
+    <string name="mg_oll9_count" translatable="false">1</string>
+    <string name="mg_oll9_0" translatable="false">R\' U2\' R U R\' U R</string>
+    <string name="mg_oll9_title" />
+    <string name="mg_oll9_subtitle" />
+
+    <string name="mg_oll10_count" translatable="false">1</string>
+    <string name="mg_oll10_0" translatable="false">R U2 R\' U\' R U\' R\'</string>
+    <string name="mg_oll10_title" />
+    <string name="mg_oll10_subtitle" />
+
+    <string name="mg_oll11_count" translatable="false">1</string>
+    <string name="mg_oll11_0" translatable="false">R U R\' U R U R\' U\' R U2\' R\'</string>
+    <string name="mg_oll11_title" />
+    <string name="mg_oll11_subtitle" />
+
+    <string name="mg_oll12_count" translatable="false">1</string>
+    <string name="mg_oll12_0" translatable="false">R U2 R\' U\' R U R\' U\' R U\' R\'</string>
+    <string name="mg_oll12_title" />
+    <string name="mg_oll12_subtitle" />
+
+    <string name="mg_oll13_count" translatable="false">1</string>
+    <string name="mg_oll13_0" translatable="false">R U R\' U R U\' R\' U R U2\' R\'</string>
+    <string name="mg_oll13_title" />
+    <string name="mg_oll13_subtitle" />
+
+    <string name="mg_oll14_count" translatable="false">1</string>
+    <string name="mg_oll14_0" translatable="false">R U2 R\' U\' R U\' R2\' U\' R U\' R\' U2 R</string>
+    <string name="mg_oll14_title" />
+    <string name="mg_oll14_subtitle" />
+
+    <string name="mg_oll15_count" translatable="false">1</string>
+    <string name="mg_oll15_0" translatable="false">R U2\' R\' U\' R U R\' U\' R U2\' R\'</string>
+    <string name="mg_oll15_title" />
+    <string name="mg_oll15_subtitle" />
+
+    <string name="mg_oll16_count" translatable="false">1</string>
+    <string name="mg_oll16_0" translatable="false">R\' U2 R U R\' U\' R U R\' U2 R</string>
+    <string name="mg_oll16_title" />
+    <string name="mg_oll16_subtitle" />
+
+    <string name="mg_oll17_count" translatable="false">1</string>
+    <string name="mg_oll17_0" translatable="false">R U R\' U2 R U2\' R\' U R U2\' R\'</string>
+    <string name="mg_oll17_title" />
+    <string name="mg_oll17_subtitle" />
+
+    <string name="mg_oll18_count" translatable="false">1</string>
+    <string name="mg_oll18_0" translatable="false">R U2 R\' U\' R U2 R\' U2\' R U\' R\'</string>
+    <string name="mg_oll18_title" />
+    <string name="mg_oll18_subtitle" />
+
+    <string name="pllr_count" translatable="false">14</string>
+    <string name="pllr0_count" translatable="false">1</string>
+    <string name="pllr0_0" translatable="false">R\' U\' R U\' R U R2\' U R U\' R U\' R\'</string>
+    <string name="pllr0_title">Edge permutation</string>
+    <string name="pllr0_subtitle"  />
+
+    <string name="pllr1_count" translatable="false">1</string>
+    <string name="pllr1_0" translatable="false">R U R\' U R\' U\' R2 U\' R\' U R\' U R U2\'</string>
+    <string name="pllr1_title"  />
+    <string name="pllr1_subtitle"  />
+
+    <string name="pllr2_count" translatable="false">1</string>
+    <string name="pllr2_0" translatable="false">R2 U2\' R2\' U\' R2 U2\' R2\'</string>
+    <string name="pllr2_title"  />
+    <string name="pllr2_subtitle"  />
+
+    <string name="pllr3_count" translatable="false">1</string>
+    <string name="pllr3_0" translatable="false">R2 U2 R2\' U R2 U2 R2\'</string>
+    <string name="pllr3_title"  />
+    <string name="pllr3_subtitle"  />
+
+    <string name="pllr4_count" translatable="false">1</string>
+    <string name="pllr4_0" translatable="false">R\' U\' R2 U\' R\' U R\' U R</string>
+    <string name="pllr4_title"  />
+    <string name="pllr4_subtitle"  />
+
+    <string name="pllr5_count" translatable="false">1</string>
+    <string name="pllr5_0" translatable="false">(y\') (R2\' U2\' R2 U\')x6</string>
+    <string name="pllr5_title"  />
+    <string name="pllr5_subtitle"  />
+
+    <string name="pllr6_count" translatable="false">1</string>
+    <string name="pllr6_0" translatable="false">(R\' L\') U2 L U R (y) (R L) U2\' R\' U\' L\'</string>
+    <string name="pllr6_title"  />
+    <string name="pllr6_subtitle"  />
+
+    <string name="pllr7_count" translatable="false">1</string>
+    <string name="pllr7_0" translatable="false">y x R2\' U2 R\' dR\' R U2\' R\' dR R2\'</string>
+    <string name="pllr7_title">Corner permutation</string>
+    <string name="pllr7_subtitle"  />
+
+    <string name="pllr8_count" translatable="false">1</string>
+    <string name="pllr8_0" translatable="false">y x U2 R2 U L U\' R2 U L\' U2</string>
+    <string name="pllr8_title"  />
+    <string name="pllr8_subtitle"  />
+
+    <string name="pllr9_count" translatable="false">1</string>
+    <string name="pllr9_0" translatable="false">R2 U R\' y U\' R U R\' U\' R U R\' U\' R U R\' y\' R U\' R2\'</string>
+    <string name="pllr9_title"  />
+    <string name="pllr9_subtitle"  />
+
+    <string name="pllr10_count" translatable="false">1</string>
+    <string name="pllr10_0" translatable="false">R\' U\' R\' z\' R\' U L\' U\' R U L U\' R\' U L U\' R U2</string>
+    <string name="pllr10_title"  />
+    <string name="pllr10_subtitle"  />
+
+    <string name="pllr11_count" translatable="false">1</string>
+    <string name="pllr11_0" translatable="false">L\' R U R\' U R U\' R\' U R U\' R\' U R U2\' R\' L</string>
+    <string name="pllr11_title"  />
+    <string name="pllr11_subtitle"  />
+
+    <string name="pllr12_count" translatable="false">1</string>
+    <string name="pllr12_0" translatable="false">bR\' R\' U L U\' R\' U L\' U\' R2 bR</string>
+    <string name="pllr12_title"  />
+    <string name="pllr12_subtitle"  />
+
+    <string name="pllr13_count" translatable="false">1</string>
+    <string name="pllr13_0" translatable="false">bR\' R2\' U L U\' R U L\' U\' R bR</string>
+    <string name="pllr13_title"  />
+    <string name="pllr13_subtitle"  />
 
 </resources>
