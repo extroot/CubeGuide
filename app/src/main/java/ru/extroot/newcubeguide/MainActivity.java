@@ -268,8 +268,8 @@ import org.jetbrains.annotations.NotNull;
                     @Override
                     public boolean onItemClick(View view, int position, @NotNull IDrawerItem drawerItem) {
 
-                        mode = picMode = "f2l";
                         switch ((int) drawerItem.getIdentifier()) {
+                            case F2L_ID: mode = picMode = "f2l"; break;
                             case OLL_ID: mode = picMode = "oll"; break;
                             case OH_OLL_ID: mode = "oh_oll"; picMode = "oll"; break;
 
@@ -345,7 +345,7 @@ import org.jetbrains.annotations.NotNull;
 
             LinearLayout line = new LinearLayout(this);
             line.setOrientation(LinearLayout.HORIZONTAL);
-            line.setPadding(20, 30, 0, 0);
+            line.setPadding(1, 30, 0, 15);
             line.setGravity(Gravity.CENTER_VERTICAL);
             LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams
                     (LinearLayout.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
@@ -360,7 +360,6 @@ import org.jetbrains.annotations.NotNull;
             LinearLayout algLayout = new LinearLayout(this);
             algLayout.setOrientation(LinearLayout.VERTICAL);
             algLayout.setPadding(20,0,0,0);
-
 
             for (int n = 0; n < algCount; n++) {
                 String alg = getResources().getString(getResources().getIdentifier(mode + i + "_" + n, "string", getPackageName()));
@@ -380,10 +379,15 @@ import org.jetbrains.annotations.NotNull;
                 titleView.setTextAlignment(TextView.TEXT_ALIGNMENT_CENTER);
                 mainLayout.addView(titleView);
             }
-
+            View sep = new View(this);
+            LinearLayout.LayoutParams sepParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 1);
+            sep.setLayoutParams(sepParams);
+            sep.setBackgroundColor(getResources().getColor(R.color.material_drawer_divider));
+            sep.setPadding(0,1,1,1);
             line.addView(image);
             line.addView(algLayout);
             mainLayout.addView(line);
+            mainLayout.addView(sep);
         }
     }
 }
