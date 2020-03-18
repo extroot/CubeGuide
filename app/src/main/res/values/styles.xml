@@ -20,13 +20,14 @@
     <style name="text">
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">wrap_content</item>
+        <item name="android:padding">4dp</item>
         <item name="android:textColor">@color/colorBlack</item>
     </style>
 
     <style name="H" parent="text">
         <item name="android:layout_width">match_parent</item>
         <item name="android:gravity">center_horizontal</item>
-        <item name="android:padding">5dp</item>
+        <item name="android:padding">10dp</item>
     </style>
 
     <style name="H1" parent="H">
@@ -37,11 +38,16 @@
         <item name="android:textSize">20sp</item>
     </style>
 
+    <style name="H3" parent="H">
+        <item name="android:textSize">18sp</item>
+    </style>
+
     <style name="textCenter" parent="text">
         <item name="android:textAlignment">center</item>
     </style>
 
     <style name="lineCenter">
+        <item name="android:padding">2dp</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:gravity">center_horizontal</item>
