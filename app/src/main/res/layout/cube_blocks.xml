@@ -6,13 +6,10 @@ android:layout_height="wrap_content"
 android:gravity="center_horizontal"
 android:orientation="vertical">
 <LinearLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:gravity="center_horizontal"
+    style="@style/lineCenter"
     android:orientation="horizontal">
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/lineCenter"
         android:orientation="vertical">
         <ImageView
             android:layout_width="150dp"
@@ -20,15 +17,12 @@ android:orientation="vertical">
             android:src="@drawable/ggyggyggy_wwwwwwggg_rrrrrrrrr" />
 
         <TextView
-            style="@style/text"
-            android:textAlignment="center"
+            style="@style/textCenter"
             android:text="@string/eazy3_2_r" />
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
+        style="@style/lineCenter"
         android:orientation="vertical">
         <ImageView
             android:layout_width="150dp"
@@ -36,22 +30,17 @@ android:orientation="vertical">
             android:src="@drawable/ggwggwggw_wwwwwwbbb_rrrrrrrrr" />
 
         <TextView
-            style="@style/text"
-            android:textAlignment="center"
+            style="@style/textCenter"
             android:text="@string/eazy3_2_nr" />
     </LinearLayout>
 
 </LinearLayout>
 
 <LinearLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:gravity="center_horizontal"
+    style="@style/lineCenter"
     android:orientation="horizontal">
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
+        style="@style/lineCenter"
         android:orientation="vertical">
         <ImageView
             android:layout_width="150dp"
@@ -59,14 +48,11 @@ android:orientation="vertical">
             android:src="@drawable/wggwggwgg_bbbwwwwww_rrrrrrrrr" />
 
         <TextView
-            style="@style/text"
-            android:textAlignment="center"
+            style="@style/textCenter"
             android:text="@string/eazy3_2_l" />
     </LinearLayout>
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
+        style="@style/lineCenter"
         android:orientation="vertical">
         <ImageView
             android:layout_width="150dp"
@@ -74,21 +60,16 @@ android:orientation="vertical">
             android:src="@drawable/yggyggygg_gggwwwwww_rrrrrrrrr" />
 
         <TextView
-            style="@style/text"
-            android:textAlignment="center"
+            style="@style/textCenter"
             android:text="@string/eazy3_2_nl" />
     </LinearLayout>
 </LinearLayout>
 
 <LinearLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:gravity="center_horizontal"
+    style="@style/lineCenter"
     android:orientation="horizontal">
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
+        style="@style/lineCenter"
         android:orientation="vertical">
         <ImageView
             android:layout_width="150dp"
@@ -96,14 +77,11 @@ android:orientation="vertical">
             android:src="@drawable/rrrgggggg_wwwwwwwww_bbbrrrrrr" />
 
         <TextView
-            style="@style/text"
-            android:textAlignment="center"
+            style="@style/textCenter"
             android:text="@string/eazy3_2_u" />
     </LinearLayout>
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
+        style="@style/lineCenter"
         android:orientation="vertical">
         <ImageView
             android:layout_width="150dp"
@@ -111,21 +89,16 @@ android:orientation="vertical">
             android:src="@drawable/ooogggggg_wwwwwwwww_gggrrrrrr" />
 
         <TextView
-            style="@style/text"
-            android:textAlignment="center"
+            style="@style/textCenter"
             android:text="@string/eazy3_2_nu" />
     </LinearLayout>
 </LinearLayout>
 
 <LinearLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:gravity="center_horizontal"
+    style="@style/lineCenter"
     android:orientation="horizontal">
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
+        style="@style/lineCenter"
         android:orientation="vertical">
         <ImageView
             android:layout_width="150dp"
@@ -133,14 +106,11 @@ android:orientation="vertical">
             android:src="@drawable/ggggggooo_wwwwwwwww_rrrrrrggg" />
 
         <TextView
-            style="@style/text"
-            android:textAlignment="center"
+            style="@style/textCenter"
             android:text="@string/eazy3_2_d" />
     </LinearLayout>
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
+        style="@style/lineCenter"
         android:orientation="vertical">
         <ImageView
             android:layout_width="150dp"
@@ -148,21 +118,16 @@ android:orientation="vertical">
             android:src="@drawable/ggggggrrr_wwwwwwwww_rrrrrrbbb" />
 
         <TextView
-            style="@style/text"
-            android:textAlignment="center"
+            style="@style/textCenter"
             android:text="@string/eazy3_2_nd" />
     </LinearLayout>
 </LinearLayout>
 
 <LinearLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:gravity="center_horizontal"
+    style="@style/lineCenter"
     android:orientation="horizontal">
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
+        style="@style/lineCenter"
         android:orientation="vertical">
         <ImageView
             android:layout_width="150dp"
@@ -170,14 +135,11 @@ android:orientation="vertical">
             android:src="@drawable/ggggggggg_owwowwoww_wrrwrrwrr" />
 
         <TextView
-            style="@style/text"
-            android:textAlignment="center"
+            style="@style/textCenter"
             android:text="@string/eazy3_2_f" />
     </LinearLayout>
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
+        style="@style/lineCenter"
         android:orientation="vertical">
         <ImageView
             android:layout_width="150dp"
@@ -185,21 +147,16 @@ android:orientation="vertical">
             android:src="@drawable/ggggggggg_rwwrwwrww_yrryrryrr" />
 
         <TextView
-            style="@style/text"
-            android:textAlignment="center"
+            style="@style/textCenter"
             android:text="@string/eazy3_2_nf" />
     </LinearLayout>
 </LinearLayout>
 
 <LinearLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:gravity="center_horizontal"
+    style="@style/lineCenter"
     android:orientation="horizontal">
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
+        style="@style/lineCenter"
         android:orientation="vertical">
         <ImageView
             android:layout_width="150dp"
@@ -207,14 +164,11 @@ android:orientation="vertical">
             android:src="@drawable/ggggggggg_wwrwwrwwr_rryrryrry" />
 
         <TextView
-            style="@style/text"
-            android:textAlignment="center"
+            style="@style/textCenter"
             android:text="@string/eazy3_2_b" />
     </LinearLayout>
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
+        style="@style/lineCenter"
         android:orientation="vertical">
         <ImageView
             android:layout_width="150dp"
@@ -222,8 +176,7 @@ android:orientation="vertical">
             android:src="@drawable/ggggggggg_wwowwowwo_rrwrrwrrw" />
 
         <TextView
-            style="@style/text"
-            android:textAlignment="center"
+            style="@style/textCenter"
             android:text="@string/eazy3_2_nb" />
     </LinearLayout>
 </LinearLayout>

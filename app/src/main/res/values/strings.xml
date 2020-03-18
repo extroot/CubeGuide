@@ -63,7 +63,18 @@
 
     <string name="eazy3_3_1" translatable="false">Сборку правильного креста мы делим на два шага, первый шаг это "цветок", который потом и превращается в правильный крест на 2 шаге.</string>
     <string name="eazy3_3_2" translatable="false">Наша цель – собрать цветок, в котором центр будет желтый, а лепестки – белыми (рис 1.). Кубик во время сборки держим желтым центром вверх.\n\nКогда цветок будет готов, мы заменим желтый центр на белый, чтобы переделать его в правильный крест. (рис. 2)</string>
-    <string name="eazy3_3_" translatable="false"></string>
+    <string name="eazy3_3_3" translatable="false">Цветок</string>
+    <string name="eazy3_3_4" translatable="false">Крест</string>
+
+    <string name="eazy3_sv_1" translatable="false">Для создания цветка нам нужно найти все 4 белых ребра и поднять их к желтому центру. Сделать это очень просто. Вы можете сделать это интуитивно и сразу перейти к следующему шагу.</string>
+    <string name="eazy3_sv_res" translatable="false">Результат</string>
+
+    <string name="eazy3_sv_2" translatable="false">1. Если мы видим белый цвет на среднем слое, то просто поднимаем его движением \"R\". Делаем так со всеми ребрами на среднем слое.</string>
+    <string name="eazy3_sv_2_1" translatable="false">1. Поднимаем R</string>
+
+    <string name="eazy3_sv_3" translatable="false">2. В случае если на среднем слое есть ребро, но поставить его мешает другая деталь, – отодвигаем мешающую нам деталь движением U и ставим нужную на свое место движением R.</string>
+    <string name="eazy3_sv_3_1" translatable="false">2. Делаем U R</string>
+
 
 
     <!-- OLL algs -->

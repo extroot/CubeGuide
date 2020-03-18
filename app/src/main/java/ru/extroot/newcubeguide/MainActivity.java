@@ -345,7 +345,7 @@ import org.jetbrains.annotations.NotNull;
 
             LinearLayout line = new LinearLayout(this);
             line.setOrientation(LinearLayout.HORIZONTAL);
-            line.setPadding(1, 30, 0, 15);
+            line.setPadding(15, 15, 0, 15);
             line.setGravity(Gravity.CENTER_VERTICAL);
             LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams
                     (LinearLayout.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
@@ -378,16 +378,17 @@ import org.jetbrains.annotations.NotNull;
                 titleView.setTextSize(textSize + 4);
                 titleView.setTextAlignment(TextView.TEXT_ALIGNMENT_CENTER);
                 mainLayout.addView(titleView);
-            }
-            View sep = new View(this);
-            LinearLayout.LayoutParams sepParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 1);
-            sep.setLayoutParams(sepParams);
-            sep.setBackgroundColor(getResources().getColor(R.color.material_drawer_divider));
-            sep.setPadding(0,1,1,1);
+            } else {
+                    View sep = new View(this);
+                    LinearLayout.LayoutParams sepParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 1);
+                    sep.setLayoutParams(sepParams);
+                    sep.setBackgroundColor(getResources().getColor(R.color.material_drawer_divider));
+                    sep.setPadding(3, 1, 1, 3);
+                    mainLayout.addView(sep);
+                }
             line.addView(image);
             line.addView(algLayout);
             mainLayout.addView(line);
-            mainLayout.addView(sep);
         }
     }
 }

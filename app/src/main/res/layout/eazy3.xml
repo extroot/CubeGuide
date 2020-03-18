@@ -36,17 +36,8 @@
         style="@style/H1"
         android:text="@string/eazy3_p1_2" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:orientation="vertical">
-        <TextView
-            style="@style/H2"
-            android:text="@string/eazy3_p2_3" />
-        <TextView
-        style="@style/text"
-        android:text="@string/eazy3_3_1" />
-    </LinearLayout>
+    <include layout="@layout/cube_cross" />
+
+
 
 </LinearLayout>
