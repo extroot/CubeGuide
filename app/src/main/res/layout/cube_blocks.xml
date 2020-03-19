@@ -6,6 +6,21 @@
     android:gravity="center_horizontal"
     android:paddingTop="10dp"
     android:orientation="vertical">
+
+    <TextView
+        style="@style/H2"
+        android:text="@string/easy3_p2_2" />
+    <TextView
+        android:id="@+id/easy3_2_1"
+        style="@style/text"
+        android:text="@string/text404" />
+    <TextView
+        style="@style/text"
+        android:text="@string/easy3_2_2" />
+    <TextView
+        style="@style/text"
+        android:text="@string/easy3_2_3" />
+
     <LinearLayout
         style="@style/lineCenter"
         android:orientation="horizontal">
@@ -19,7 +34,7 @@
 
             <TextView
                 style="@style/textCenter"
-                android:text="@string/eazy3_2_r" />
+                android:text="@string/easy3_2_r" />
         </LinearLayout>
 
         <LinearLayout
@@ -32,7 +47,7 @@
 
             <TextView
                 style="@style/textCenter"
-                android:text="@string/eazy3_2_nr" />
+                android:text="@string/easy3_2_nr" />
         </LinearLayout>
 
     </LinearLayout>
@@ -50,7 +65,7 @@
 
             <TextView
                 style="@style/textCenter"
-                android:text="@string/eazy3_2_l" />
+                android:text="@string/easy3_2_l" />
         </LinearLayout>
         <LinearLayout
             style="@style/lineCenter"
@@ -62,7 +77,7 @@
 
             <TextView
                 style="@style/textCenter"
-                android:text="@string/eazy3_2_nl" />
+                android:text="@string/easy3_2_nl" />
         </LinearLayout>
     </LinearLayout>
 
@@ -79,7 +94,7 @@
 
             <TextView
                 style="@style/textCenter"
-                android:text="@string/eazy3_2_u" />
+                android:text="@string/easy3_2_u" />
         </LinearLayout>
         <LinearLayout
             style="@style/lineCenter"
@@ -91,7 +106,7 @@
 
             <TextView
                 style="@style/textCenter"
-                android:text="@string/eazy3_2_nu" />
+                android:text="@string/easy3_2_nu" />
         </LinearLayout>
     </LinearLayout>
 
@@ -108,7 +123,7 @@
 
             <TextView
                 style="@style/textCenter"
-                android:text="@string/eazy3_2_d" />
+                android:text="@string/easy3_2_d" />
         </LinearLayout>
         <LinearLayout
             style="@style/lineCenter"
@@ -120,7 +135,7 @@
 
             <TextView
                 style="@style/textCenter"
-                android:text="@string/eazy3_2_nd" />
+                android:text="@string/easy3_2_nd" />
         </LinearLayout>
     </LinearLayout>
 
@@ -137,7 +152,7 @@
 
             <TextView
                 style="@style/textCenter"
-                android:text="@string/eazy3_2_f" />
+                android:text="@string/easy3_2_f" />
         </LinearLayout>
         <LinearLayout
             style="@style/lineCenter"
@@ -149,7 +164,7 @@
 
             <TextView
                 style="@style/textCenter"
-                android:text="@string/eazy3_2_nf" />
+                android:text="@string/easy3_2_nf" />
         </LinearLayout>
     </LinearLayout>
 
@@ -166,7 +181,7 @@
 
             <TextView
                 style="@style/textCenter"
-                android:text="@string/eazy3_2_b" />
+                android:text="@string/easy3_2_b" />
         </LinearLayout>
         <LinearLayout
             style="@style/lineCenter"
@@ -178,7 +193,7 @@
 
             <TextView
                 style="@style/textCenter"
-                android:text="@string/eazy3_2_nb" />
+                android:text="@string/easy3_2_nb" />
         </LinearLayout>
     </LinearLayout>
 

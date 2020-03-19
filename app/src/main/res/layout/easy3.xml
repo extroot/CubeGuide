@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="20dp"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:paddingTop="5dp"
+    android:id="@+id/easy3">
+
+    <TextView
+        style="@style/H1"
+        android:text="@string/easy3_p1_1" />
+
+    <include layout="@layout/cube_device" />
+
+    <include layout="@layout/cube_blocks" />
+
+
+    <TextView
+        style="@style/H1"
+        android:text="@string/easy3_p1_2" />
+
+    <include layout="@layout/cube_flower" />
+
+    <include layout="@layout/cube_cross" />
+
+    <TextView
+        style="@style/H1"
+        android:text="@string/easy3_fl_h1" />
+
+    <include layout="@layout/cube_fl" />
+
+    <TextView
+        style="@style/H1"
+        android:text="@string/easy3_sl_h1" />
+
+    <include layout="@layout/cube_sl" />
+
+
+
+</LinearLayout>

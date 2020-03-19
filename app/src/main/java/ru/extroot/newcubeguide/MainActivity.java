@@ -88,7 +88,7 @@ import org.jetbrains.annotations.NotNull;
     private static final int MW_ID      = 19;
     private static final int MG_OLL_ID  = 20;
     private static final int PLLR_ID    = 21;
-    private static final int EAZY_3_ID   = 22;
+    private static final int easy_3_ID   = 22;
 
     private int picLen = 250;
     private int textSize = 16;
@@ -122,10 +122,10 @@ import org.jetbrains.annotations.NotNull;
                 .withToolbar(toolbar)
                 .addDrawerItems(
                         new PrimaryDrawerItem()
-                                .withName(getResources().getString(R.string.eazy3_header))
+                                .withName(getResources().getString(R.string.easy3_header))
                                 .withSelectable(false)
                                 .withIconTintingEnabled(true)
-                                .withIdentifier(EAZY_3_ID),
+                                .withIdentifier(easy_3_ID),
                         new ExpandableDrawerItem()
                                 .withName(getResources().getString(R.string.header_3x3x3))
                                 .withSelectable(false)
@@ -296,7 +296,7 @@ import org.jetbrains.annotations.NotNull;
                             case MG_OLL_ID: mode = picMode = "mg_oll"; break;
                             case PLLR_ID: mode = picMode = "pllr"; break;
 
-                            case EAZY_3_ID: tutorials_3x3x3(); return false;
+                            case easy_3_ID: tutorials_3x3x3(); return false;
                             default: return true;
                         }
                         newDraw();
@@ -306,25 +306,31 @@ import org.jetbrains.annotations.NotNull;
                     })
                 .withSavedInstance(savedInstanceState);
         Drawer mDrawer = drawerBuilder.build();
-        mDrawer.setSelection(EAZY_3_ID);
+        mDrawer.setSelection(easy_3_ID);
     }
 
 
     void tutorials_3x3x3() {
-        toolbar.setTitle(getResources().getString(R.string.eazy3_header));
+        toolbar.setTitle(getResources().getString(R.string.easy3_header));
 
         LinearLayout mainLayout = findViewById(R.id.main_view);
         mainLayout.removeAllViews();
 
         LayoutInflater inflater = (LayoutInflater) this.getSystemService(LAYOUT_INFLATER_SERVICE);
-        View childLayout = inflater.inflate(R.layout.eazy3,
-                (ViewGroup) findViewById(R.id.eazy3));
+        View childLayout = inflater.inflate(R.layout.easy3,
+                (ViewGroup) findViewById(R.id.easy3));
 
-        ((TextView) childLayout.findViewById(R.id.eazy3_1_1)).setText(Html.fromHtml(getResources().getString(R.string.eazy3_1_1)));
-        ((TextView) childLayout.findViewById(R.id.eazy3_1_2)).setText(Html.fromHtml(getResources().getString(R.string.eazy3_1_2)));
-        ((TextView) childLayout.findViewById(R.id.eazy3_1_3)).setText(Html.fromHtml(getResources().getString(R.string.eazy3_1_3)));
+        ((TextView) childLayout.findViewById(R.id.easy3_1_1)).setText(Html.fromHtml(getResources().getString(R.string.easy3_1_1)));
+        ((TextView) childLayout.findViewById(R.id.easy3_1_2)).setText(Html.fromHtml(getResources().getString(R.string.easy3_1_2)));
+        ((TextView) childLayout.findViewById(R.id.easy3_1_3)).setText(Html.fromHtml(getResources().getString(R.string.easy3_1_3)));
 
-        ((TextView) childLayout.findViewById(R.id.eazy3_2_1)).setText(Html.fromHtml(getResources().getString(R.string.eazy3_2_1)));
+        ((TextView) childLayout.findViewById(R.id.easy3_2_1)).setText(Html.fromHtml(getResources().getString(R.string.easy3_2_1)));
+
+        ((TextView) childLayout.findViewById(R.id.easy3_fl_1_4)).setText(Html.fromHtml(getResources().getString(R.string.easy3_fl_1_4)));
+        ((TextView) childLayout.findViewById(R.id.easy3_sl_1_1)).setText(Html.fromHtml(getResources().getString(R.string.easy3_sl_1_1)));
+        ((TextView) childLayout.findViewById(R.id.easy3_sl_2_2)).setText(Html.fromHtml(getResources().getString(R.string.easy3_sl_2_2)));
+        ((TextView) childLayout.findViewById(R.id.easy3_sl_3_2)).setText(Html.fromHtml(getResources().getString(R.string.easy3_sl_3_2)));
+        ((TextView) childLayout.findViewById(R.id.easy3_sl_4_1)).setText(Html.fromHtml(getResources().getString(R.string.easy3_sl_4_1)));
 
 
         mainLayout.addView(childLayout);

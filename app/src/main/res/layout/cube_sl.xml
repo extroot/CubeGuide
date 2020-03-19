@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="10dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        style="@style/lineCenter"
+        android:orientation="horizontal">
+        <LinearLayout
+            style="@style/lineCenter"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/xxxxrxrrr_xxxxyxxxx_xxxxgxggg" />
+
+            <TextView
+                style="@style/textCenter"
+                android:text="@string/easy3_sl_1_2" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/lineCenter"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/xxxrrrrrr_xxxxyxxxx_xxxgggggg" />
+
+            <TextView
+                style="@style/textCenter"
+                android:text="@string/easy3_sl_1_3" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        style="@style/text"
+        android:id="@+id/easy3_sl_1_1"
+        android:text="@string/text404" />
+
+
+    <TextView
+        style="@style/H2"
+        android:text="@string/easy3_sl_h2_2" />
+
+    <LinearLayout
+        style="@style/lineCenter"
+        android:orientation="horizontal">
+        <LinearLayout
+            style="@style/lineCenter"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/xrxxrxrrr_xxxgyxxxx_xxxxgxggg" />
+
+            <TextView
+                style="@style/textCenter"
+                android:text="@string/easy3_sl_2_4" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/lineCenter"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/xxxxrrrrr_xxxxyxxxx_xxxggxggg" />
+
+            <TextView
+                style="@style/textCenter"
+                android:text="@string/easy3_res" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        style="@style/text"
+        android:text="@string/easy3_sl_2_1" />
+
+    <TextView
+        style="@style/text"
+        android:id="@+id/easy3_sl_2_2"
+        android:text="@string/text404" />
+
+    <TextView
+    style="@style/text"
+    android:text="@string/easy3_sl_2_3" />
+
+    <TextView
+        style="@style/H2"
+        android:text="@string/easy3_sl_h2_3" />
+
+    <LinearLayout
+        style="@style/lineCenter"
+        android:orientation="horizontal">
+        <LinearLayout
+            style="@style/lineCenter"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/xxxxrxrrr_xxxxyxxrx_xgxxgxggg" />
+
+            <TextView
+                style="@style/textCenter"
+                android:text="@string/easy3_sl_3_4" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/lineCenter"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/xxxxrrrrr_xxxxyxxxx_xxxggxggg" />
+
+            <TextView
+                style="@style/textCenter"
+                android:text="@string/easy3_res" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        style="@style/text"
+        android:text="@string/easy3_sl_3_1" />
+
+    <TextView
+        style="@style/text"
+        android:id="@+id/easy3_sl_3_2"
+        android:text="@string/text404" />
+
+    <TextView
+    style="@style/text"
+    android:text="@string/easy3_sl_3_3" />
+
+    <TextView
+        style="@style/H2"
+        android:text="@string/easy3_sl_h2_4" />
+
+    <LinearLayout
+        style="@style/lineCenter"
+        android:orientation="horizontal">
+        <LinearLayout
+            style="@style/lineCenter"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/xxxxrgrrr_xxxxyxxxx_xxxrgxggg" />
+
+            <TextView
+                style="@style/textCenter"
+                android:text="@string/easy3_sl_4_4" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/lineCenter"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/xxxxrxrrr_xxxxyxxgx_xrxxgxggg" />
+
+            <TextView
+                style="@style/textCenter"
+                android:text="@string/easy3_res" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        style="@style/text"
+        android:id="@+id/easy3_sl_4_1"
+        android:text="@string/text404" />
+
+    <TextView
+        style="@style/text"
+        android:text="@string/easy3_sl_4_2" />
+
+    <TextView
+        style="@style/text"
+        android:text="@string/easy3_sl_4_3" />
+
+
+</LinearLayout>

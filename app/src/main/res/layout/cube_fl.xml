@@ -3,54 +3,12 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:gravity="center_horizontal"
+    android:paddingTop="10dp"
     android:orientation="vertical">
-    <LinearLayout
-        style="@style/lineCenter"
-        android:orientation="horizontal">
-        <LinearLayout
-            style="@style/lineCenter"
-            android:orientation="vertical">
-            <ImageView
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:src="@drawable/xxxxxxxxx_xwxwywxwx_xxxxxxxxx" />
 
-            <TextView
-                style="@style/text"
-                android:textAlignment="center"
-                android:text="@string/easy3_3_3" />
-        </LinearLayout>
-
-        <LinearLayout
-            style="@style/lineCenter"
-            android:orientation="vertical">
-            <ImageView
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:src="@drawable/xxxxxxxxx_xwxwwwxwxxxxxxxxxx" />
-
-            <TextView
-                style="@style/text"
-                android:textAlignment="center"
-                android:text="@string/easy3_3_4" />
-        </LinearLayout>
-    </LinearLayout>
-    
-    <TextView
-        style="@style/text"
-        android:text="@string/easy3_3_1" />
     <TextView
         style="@style/H2"
-        android:text="@string/easy3_p2_3" />
-
-    <TextView
-        style="@style/text"
-        android:text="@string/easy3_sv_1" />
-
-    <TextView
-        style="@style/text"
-        android:text="@string/easy3_sv_2" />
+        android:text="@string/easy3_fl_h2_1" />
 
     <LinearLayout
         style="@style/lineCenter"
@@ -61,12 +19,11 @@
             <ImageView
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:src="@drawable/xxxxxwxxx_xxxxyxxx_xxxxxxxxxx" />
+                android:src="@drawable/xgxxgxxxx_xwxwwwxwx_xrxxrxxxx" />
 
             <TextView
-                style="@style/text"
-                android:textAlignment="center"
-                android:text="@string/easy3_sv_2_1" />
+                style="@style/textCenter"
+                android:text="@string/easy3_fl_1_1" />
         </LinearLayout>
 
         <LinearLayout
@@ -75,18 +32,22 @@
             <ImageView
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:src="@drawable/xxxxxxxxx_xxxxyxxw_xxxxxxxxxx" />
+                android:src="@drawable/gggxgxxxx_wwwwwwwww_rrrxrxxxx" />
 
             <TextView
-                style="@style/text"
-                android:textAlignment="center"
-                android:text="@string/easy3_res" />
+                style="@style/textCenter"
+                android:text="@string/easy3_fl_1_2" />
         </LinearLayout>
     </LinearLayout>
 
     <TextView
         style="@style/text"
-        android:text="@string/easy3_sv_3" />
+        android:text="@string/easy3_fl_1_3" />
+    <TextView
+        style="@style/text"
+        android:id="@+id/easy3_fl_1_4"
+        android:text="@string/text404" />
+
 
     <LinearLayout
         style="@style/lineCenter"
@@ -97,12 +58,11 @@
             <ImageView
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:src="@drawable/xxxxxwxxx_xxxxyxxw_xxxxxxxxxx" />
+                android:src="@drawable/xxxxrxxrx_xxxxyxxxx_xxxxgxxgx" />
 
             <TextView
-                style="@style/text"
-                android:textAlignment="center"
-                android:text="@string/easy3_sv_3_1" />
+                style="@style/textCenter"
+                android:text="@string/easy3_fl_2_1" />
         </LinearLayout>
 
         <LinearLayout
@@ -111,22 +71,18 @@
             <ImageView
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:src="@drawable/xxxxxxxxx_xxxwyxxw_xxxxxxxxxx" />
+                android:src="@drawable/xxxxrxxrx_xxxxyxxxg_xxrxgxxgx" />
 
             <TextView
-                style="@style/text"
-                android:textAlignment="center"
-                android:text="@string/easy3_res" />
+                style="@style/textCenter"
+                android:text="@string/easy3_fl_2_2" />
         </LinearLayout>
     </LinearLayout>
 
     <TextView
-        style="@style/H3"
-        android:text="@string/easy3_sv_4_h" />
-
-    <TextView
         style="@style/text"
-        android:text="@string/easy3_sv_4" />
+        android:text="@string/easy3_fl_2_3" />
+
 
     <LinearLayout
         style="@style/lineCenter"
@@ -137,12 +93,11 @@
             <ImageView
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:src="@drawable/xxxxxxxxx_xwxxywxxx_xxxxxxxxxx" />
+                android:src="@drawable/xxrxrxxrx_xxxxyxgxx_wxxxgxxgx" />
 
             <TextView
-                style="@style/text"
-                android:textAlignment="center"
-                android:text="@string/easy3_sv_4_1" />
+                style="@style/textCenter"
+                android:text="@string/easy3_fl_3_1" />
         </LinearLayout>
 
         <LinearLayout
@@ -151,18 +106,17 @@
             <ImageView
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:src="@drawable/xxxxxxxxx_xwxxywxwx_xxxxxxxxxx" />
+                android:src="@drawable/xxxxrxxrr_xxxxyxxxx_xxxxgxggx" />
 
             <TextView
-                style="@style/text"
-                android:textAlignment="center"
+                style="@style/textCenter"
                 android:text="@string/easy3_res" />
         </LinearLayout>
     </LinearLayout>
 
     <TextView
         style="@style/text"
-        android:text="@string/easy3_sv_5" />
+        android:text="@string/easy3_fl_3_2" />
 
     <LinearLayout
         style="@style/lineCenter"
@@ -173,12 +127,11 @@
             <ImageView
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:src="@drawable/xxxxxxxwx_xwxxywxwx_xxxxxxxxxx" />
+                android:src="@drawable/xxgxrxxrx_xxxxyxwxx_rxxxgxxgx" />
 
             <TextView
-                style="@style/text"
-                android:textAlignment="center"
-                android:text="@string/easy3_sv_5_1" />
+                style="@style/textCenter"
+                android:text="@string/easy3_fl_4_1" />
         </LinearLayout>
 
         <LinearLayout
@@ -187,14 +140,18 @@
             <ImageView
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:src="@drawable/xxxxxxxxx_xwxwywxwx_xxxxxxxxx" />
+                android:src="@drawable/xxxxrxxrr_xxxxyxxxx_xxxxgxggx" />
 
             <TextView
-                style="@style/text"
-                android:textAlignment="center"
+                style="@style/textCenter"
                 android:text="@string/easy3_res" />
         </LinearLayout>
     </LinearLayout>
+
+    <TextView
+        style="@style/text"
+        android:text="@string/easy3_fl_4_2" />
+
 
     <LinearLayout
         style="@style/lineCenter"
@@ -205,12 +162,11 @@
             <ImageView
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:src="@drawable/xwxxxxxxx_xwxxywxwx_xxxxxxxxxx" />
+                android:src="@drawable/xxxxrxxrg_xxxxyxxxx_xxxxgxwgx" />
 
             <TextView
-                style="@style/text"
-                android:textAlignment="center"
-                android:text="@string/easy3_sv_5_2" />
+                style="@style/textCenter"
+                android:text="@string/easy3_fl_5_1" />
         </LinearLayout>
 
         <LinearLayout
@@ -219,21 +175,55 @@
             <ImageView
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:src="@drawable/xxxxxxxxx_xwxwywxwx_xxxxxxxxx" />
+                android:src="@drawable/xxxxrxxrr_xxxxyxxxx_xxxxgxggx" />
 
             <TextView
-                style="@style/text"
-                android:textAlignment="center"
+                style="@style/textCenter"
                 android:text="@string/easy3_res" />
         </LinearLayout>
     </LinearLayout>
 
     <TextView
-        style="@style/H3"
-        android:text="@string/easy3_sv_endH" />
+        style="@style/text"
+        android:text="@string/easy3_fl_5_2" />
+
+<LinearLayout
+        style="@style/lineCenter"
+        android:orientation="horizontal">
+        <LinearLayout
+            style="@style/lineCenter"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/xxxxrxrrg_xxxxyxxxx_xxxxgxogr" />
+
+            <TextView
+                style="@style/textCenter"
+                android:text="@string/easy3_fl_6_1" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/lineCenter"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/xxwxrxrrx_xxxxyxgxx_oxxxgxxgr" />
+
+            <TextView
+                style="@style/textCenter"
+                android:text="@string/easy3_res" />
+        </LinearLayout>
+    </LinearLayout>
 
     <TextView
         style="@style/text"
-        android:text="@string/easy3_sv_end" />
+        android:text="@string/easy3_fl_6_2" />
+
+    <TextView
+        style="@style/H2"
+        android:text="@string/easy_fl_h2_2" />
+
 
 </LinearLayout>

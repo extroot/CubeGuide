@@ -7,7 +7,7 @@
     android:orientation="vertical">
     <TextView
         style="@style/H2"
-        android:text="@string/eazy3_p2_1" />
+        android:text="@string/easy3_p2_1" />
 
     <ImageView
         android:layout_width="150dp"
@@ -15,7 +15,7 @@
         android:src="@drawable/xxxxbxxxx_xxxxyxxxx_xxxxrxxxx" />
 
     <TextView
-        android:id="@+id/eazy3_1_1"
+        android:id="@+id/easy3_1_1"
         style="@style/text"
         android:text="@string/text404" />
 
@@ -24,7 +24,7 @@
         android:layout_width="150dp"
         android:layout_height="150dp" />
     <TextView
-        android:id="@+id/eazy3_1_2"
+        android:id="@+id/easy3_1_2"
         style="@style/text"
         android:text="@string/text404" />
 
@@ -33,7 +33,7 @@
         android:layout_width="150dp"
         android:layout_height="150dp" />
     <TextView
-        android:id="@+id/eazy3_1_3"
+        android:id="@+id/easy3_1_3"
         style="@style/text"
         android:text="@string/text404" />
 </LinearLayout>
