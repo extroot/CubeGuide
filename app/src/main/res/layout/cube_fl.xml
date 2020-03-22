@@ -3,7 +3,6 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingTop="10dp"
     android:orientation="vertical">
 
     <TextView
@@ -45,8 +44,7 @@
         android:text="@string/easy3_fl_1_3" />
     <TextView
         style="@style/text"
-        android:id="@+id/easy3_fl_1_4"
-        android:text="@string/text404" />
+        android:text="@string/easy3_fl_1_4" />
 
 
     <LinearLayout
@@ -222,7 +220,7 @@
         android:text="@string/easy3_fl_6_2" />
 
     <TextView
-        style="@style/H2"
+        style="@style/H3"
         android:text="@string/easy_fl_h2_2" />
 
 

@@ -32,6 +32,8 @@
 
     <style name="H1" parent="H">
         <item name="android:textSize">24sp</item>
+        <item name="android:padding">15dp</item>
+        <item name="android:textStyle">bold</item>
     </style>
 
     <style name="H2" parent="H">

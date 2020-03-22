@@ -1,7 +1,6 @@
 package ru.extroot.newcubeguide;
 
 import android.os.Bundle;
-import android.text.Html;
 import android.util.DisplayMetrics;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -319,20 +318,6 @@ import org.jetbrains.annotations.NotNull;
         LayoutInflater inflater = (LayoutInflater) this.getSystemService(LAYOUT_INFLATER_SERVICE);
         View childLayout = inflater.inflate(R.layout.easy3,
                 (ViewGroup) findViewById(R.id.easy3));
-
-        ((TextView) childLayout.findViewById(R.id.easy3_1_1)).setText(Html.fromHtml(getResources().getString(R.string.easy3_1_1)));
-        ((TextView) childLayout.findViewById(R.id.easy3_1_2)).setText(Html.fromHtml(getResources().getString(R.string.easy3_1_2)));
-        ((TextView) childLayout.findViewById(R.id.easy3_1_3)).setText(Html.fromHtml(getResources().getString(R.string.easy3_1_3)));
-
-        ((TextView) childLayout.findViewById(R.id.easy3_2_1)).setText(Html.fromHtml(getResources().getString(R.string.easy3_2_1)));
-
-        ((TextView) childLayout.findViewById(R.id.easy3_fl_1_4)).setText(Html.fromHtml(getResources().getString(R.string.easy3_fl_1_4)));
-        ((TextView) childLayout.findViewById(R.id.easy3_sl_1_1)).setText(Html.fromHtml(getResources().getString(R.string.easy3_sl_1_1)));
-        ((TextView) childLayout.findViewById(R.id.easy3_sl_2_2)).setText(Html.fromHtml(getResources().getString(R.string.easy3_sl_2_2)));
-        ((TextView) childLayout.findViewById(R.id.easy3_sl_3_2)).setText(Html.fromHtml(getResources().getString(R.string.easy3_sl_3_2)));
-        ((TextView) childLayout.findViewById(R.id.easy3_sl_4_1)).setText(Html.fromHtml(getResources().getString(R.string.easy3_sl_4_1)));
-
-
         mainLayout.addView(childLayout);
     }
 

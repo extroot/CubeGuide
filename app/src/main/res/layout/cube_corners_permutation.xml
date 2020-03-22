@@ -5,7 +5,9 @@
     android:layout_height="wrap_content"
     android:paddingTop="10dp"
     android:orientation="vertical">
-
+    <TextView
+        style="@style/H2"
+        android:text="@string/easy3_cp_h2_1" />
     <LinearLayout
         style="@style/lineCenter"
         android:orientation="horizontal">
@@ -15,11 +17,11 @@
             <ImageView
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:src="@drawable/xxxxrxrrr_xxxxyxxxx_xxxxgxggg" />
+                android:src="@drawable/bgbgggggg_yygyyyyyg_royoooooo" />
 
             <TextView
                 style="@style/textCenter"
-                android:text="@string/easy3_sl_1_2" />
+                android:text="@string/easy3_cp_1_7" />
         </LinearLayout>
 
         <LinearLayout
@@ -28,22 +30,33 @@
             <ImageView
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:src="@drawable/xxxrrrrrr_xxxxyxxxx_xxxgggggg" />
+                android:src="@drawable/xgogggggg_xyxyyygyx_yoxoooooo" />
 
             <TextView
                 style="@style/textCenter"
-                android:text="@string/easy3_sl_1_3" />
+                android:text="@string/easy3_cp_1_8" />
         </LinearLayout>
     </LinearLayout>
 
     <TextView
         style="@style/text"
-        android:text="@string/easy3_sl_1_1" />
-
-
+        android:text="@string/easy3_cp_1_1" />
     <TextView
-        style="@style/H2"
-        android:text="@string/easy3_sl_h2_2" />
+        style="@style/text"
+        android:text="@string/easy3_cp_1_2" />
+    <TextView
+        style="@style/text"
+        android:text="@string/easy3_cp_1_3" />
+    <TextView
+        style="@style/text"
+        android:text="@string/easy3_cp_1_4" />
+    <TextView
+        style="@style/text"
+        android:text="@string/easy3_cp_1_5" />
+    <TextView
+        style="@style/text"
+        android:text="@string/easy3_cp_1_6" />
+
 
     <LinearLayout
         style="@style/lineCenter"
@@ -54,11 +67,11 @@
             <ImageView
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:src="@drawable/xrxxrxrrr_xxxgyxxxx_xxxxgxggg" />
+                android:src="@drawable/xrxgggggg_xyxyyyxyx_xoxoooooo" />
 
             <TextView
                 style="@style/textCenter"
-                android:text="@string/easy3_sl_2_4" />
+                android:text="@string/easy3_cp_2_2" />
         </LinearLayout>
 
         <LinearLayout
@@ -67,7 +80,7 @@
             <ImageView
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:src="@drawable/xxxxrrrrr_xxxxyxxxx_xxxggxggg" />
+                android:src="@drawable/xgxgggggg_xyxyyyxyx_xoxoooooo" />
 
             <TextView
                 style="@style/textCenter"
@@ -77,19 +90,7 @@
 
     <TextView
         style="@style/text"
-        android:text="@string/easy3_sl_2_1" />
-
-    <TextView
-        style="@style/text"
-        android:text="@string/easy3_sl_2_2" />
-
-    <TextView
-    style="@style/text"
-    android:text="@string/easy3_sl_2_3" />
-
-    <TextView
-        style="@style/H2"
-        android:text="@string/easy3_sl_h2_3" />
+        android:text="@string/easy3_cp_2_1" />
 
     <LinearLayout
         style="@style/lineCenter"
@@ -100,11 +101,11 @@
             <ImageView
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:src="@drawable/xxxxrxrrr_xxxxyxxrx_xgxxgxggg" />
+                android:src="@drawable/xrxgggggg_xyxyyyxyx_xoxoooooo" />
 
             <TextView
                 style="@style/textCenter"
-                android:text="@string/easy3_sl_3_4" />
+                android:text="@string/easy3_cp_3_2" />
         </LinearLayout>
 
         <LinearLayout
@@ -113,71 +114,17 @@
             <ImageView
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:src="@drawable/xxxxrrrrr_xxxxyxxxx_xxxggxggg" />
+                android:src="@drawable/xgxgggggg_xyxyyyxyx_xoxoooooo" />
 
             <TextView
                 style="@style/textCenter"
-                android:text="@string/easy3_res" />
+                android:text="@string/easy3_cp_3_3" />
         </LinearLayout>
     </LinearLayout>
 
     <TextView
         style="@style/text"
-        android:text="@string/easy3_sl_3_1" />
-
-    <TextView
-        style="@style/text"
-        android:text="@string/easy3_sl_3_2" />
-
-    <TextView
-    style="@style/text"
-    android:text="@string/easy3_sl_3_3" />
-
-    <TextView
-        style="@style/H2"
-        android:text="@string/easy3_sl_h2_4" />
-
-    <LinearLayout
-        style="@style/lineCenter"
-        android:orientation="horizontal">
-        <LinearLayout
-            style="@style/lineCenter"
-            android:orientation="vertical">
-            <ImageView
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:src="@drawable/xxxxrgrrr_xxxxyxxxx_xxxrgxggg" />
-
-            <TextView
-                style="@style/textCenter"
-                android:text="@string/easy3_sl_4_4" />
-        </LinearLayout>
-
-        <LinearLayout
-            style="@style/lineCenter"
-            android:orientation="vertical">
-            <ImageView
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:src="@drawable/xxxxrxrrr_xxxxyxxgx_xrxxgxggg" />
-
-            <TextView
-                style="@style/textCenter"
-                android:text="@string/easy3_res" />
-        </LinearLayout>
-    </LinearLayout>
-
-    <TextView
-        style="@style/text"
-        android:text="@string/easy3_sl_4_1" />
-
-    <TextView
-        style="@style/text"
-        android:text="@string/easy3_sl_4_2" />
-
-    <TextView
-        style="@style/text"
-        android:text="@string/easy3_sl_4_3" />
+        android:text="@string/easy3_cp_3_1" />
 
 
 </LinearLayout>

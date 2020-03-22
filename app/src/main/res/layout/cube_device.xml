@@ -15,25 +15,22 @@
         android:src="@drawable/xxxxbxxxx_xxxxyxxxx_xxxxrxxxx" />
 
     <TextView
-        android:id="@+id/easy3_1_1"
         style="@style/text"
-        android:text="@string/text404" />
+        android:text="@string/easy3_1_1" />
 
     <ImageView
         android:src="@drawable/xbxbxbxbx_xyxyxyxyx_xrxrxrxrx"
         android:layout_width="150dp"
         android:layout_height="150dp" />
     <TextView
-        android:id="@+id/easy3_1_2"
         style="@style/text"
-        android:text="@string/text404" />
+        android:text="@string/easy3_1_2" />
 
     <ImageView
         android:src="@drawable/bxbxxxbxb_yxyxxxyxy_rxrxxxrxr"
         android:layout_width="150dp"
         android:layout_height="150dp" />
     <TextView
-        android:id="@+id/easy3_1_3"
         style="@style/text"
-        android:text="@string/text404" />
+        android:text="@string/easy3_1_3" />
 </LinearLayout>

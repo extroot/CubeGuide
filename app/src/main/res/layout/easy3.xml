@@ -39,6 +39,33 @@
 
     <include layout="@layout/cube_sl" />
 
+    <TextView
+        style="@style/H1"
+        android:text="@string/easy3_ll_h1" />
+
+    <include layout="@layout/cube_yellow_cross" />
+
+    <include layout="@layout/cube_true_yellow_cross" />
+
+    <include layout="@layout/cube_corners_permutation" />
+
+    <TextView
+        style="@style/H1"
+        android:text="@string/easy3_pcll_h1" />
+
+    <include layout="@layout/cube_pcll" />
+    <TextView
+        style="@style/H1"
+        android:text="@string/easy3_ocll_h1" />
+
+    <include layout="@layout/cube_ocll" />
+
+    <TextView
+        style="@style/H1"
+        android:text="@string/easy_3_out_h1" />
+    <TextView
+    style="@style/text"
+    android:text="@string/easy_3_out_text" />
 
 
 </LinearLayout>
