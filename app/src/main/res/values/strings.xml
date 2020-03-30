@@ -26,190 +26,172 @@
     <string name="mw_header" translatable="false">Magic Wondeful</string>
     <string name="mg_oll_header">OLL - Orientation of the Last Layer</string>
     <string name="pllr_header">PLL - Permutation of the Last Layer</string>
-    <string name="easy3_header">3x3x3 - Beginners Method</string>
+    <string name="easy3_header">3x3x3 - Beginners Method</string>Углы
 
 
-    <string name="easy3_p1_1" translatable="false">Подготовительный этап</string>
-    <string name="easy3_p2_1" translatable="false">Устройство кубика</string>
+    <string name="easy3_p1_1">Preparatory stage</string>
+    <string name="easy3_p2_1">Cube device</string>
 
-    <string name="easy3_1_1" translatable="false"><b>Центры</b> (6 шт.) Они никогда не меняют своего положения друг относительно друга и всегда остаются на своём месте. Т.е. в кубике всегда будет действовать закономерность: напротив белого центра будет желтый, напротив синего – зеленый, а напротив красного – оранжевый. Цвет центра соответственно и есть цветом собранной стороны (синий центр ➝ синяя сторона и т.д.).</string>
-    <string name="easy3_1_2" translatable="false"><b>Ребра</b> (12 шт.) Ребра кубика имеют два цвета и формируют своеобразный \"крест\", когда находится на своих местах. Эти цвета между собой невозможно разъединить.</string>
-    <string name="easy3_1_3" translatable="false"><b>Углы</b> (8 шт.) Угловые элементы состоят из 3 цветов. Эти цвета также  нельзя разъединить между собой.</string>
+    <string name="easy3_1_1"><b>Centers</b> (6 pcs.) They never change their position relative to each other and always remain in their place, that is, in the cube there will always be a pattern: opposite the white center will be yellow, opposite the blue - green, and opposite red - orange. The color of the center, respectively, is the color of the assembled side (blue center ➝ blue side, etc.).</string>
+    <string name="easy3_1_2"><b>Ribs</b> (12 pcs.) The edges of the cube have two colors and form a kind of \"cross\" when it is in place. These colors cannot be separated.</string>
+    <string name="easy3_1_3"><b>Corners</b> (8 pcs.) Corner elements consist of 3 colors. These colors also cannot be disconnected among themselves.</string>
 
-    <string name="easy3_p2_2" translatable="false">Грани</string>
+    <string name="easy3_p2_2">Sides</string>
 
-    <string name="easy3_2_1" translatable="false"><b>Грани кубика Рубика</b> - 9 элементов, которые можно вращать одновременно.\n\nСобрать кубик нам помогут алгоритмы. Апостроф, или как его называют спидкуберы \"штрих\" обозначает, что движение должно исполняться против часовой стрелки. Чтобы не запутаться, представьте что вы смотрите на вращаемую сторону прямо перед собой.\n\nНапример: \n\n— R (от англ. \"right\") это поворот правой грани по часовой стрелке.\n— R\' поворот правой грани против часовой стрелки</string>
+    <string name="easy3_2_1"><b>Sides of the Rubik\'s Cube</b> - 9 elements that can be rotated simultaneously.\n\nAlgorithms will help us to collect the cube. An apostrophe, or as it is called speedcubers \"stroke\" means that the movement should be performed counterclockwise. In order not to get confused, imagine that you are looking at the rotating side in front of you.\n\nНапример: \n\n— <b>R</b> it is turning the right side clockwise.\n— <b>R\'</b> it is turning the right side counterclockwise</string>
 
-    <string name="easy3_2_r" translatable="false">Правая грань (Right)\nдвижение <b>R</b></string>
-    <string name="easy3_2_nr" translatable="false">Правая грань\nдвижение <b>R\'</b></string>
-    <string name="easy3_2_l" translatable="false">Левая грань (Left)\nдвижение <b>L</b></string>
-    <string name="easy3_2_nl" translatable="false">Левая грань\nдвижение <b>L\'</b></string>
-    <string name="easy3_2_u" translatable="false">Движение <b>U</b></string>
-    <string name="easy3_2_nu" translatable="false">Движение <b>U\'</b></string>
-    <string name="easy3_2_d" translatable="false">Движение <b>D</b></string>
-    <string name="easy3_2_nd" translatable="false">Движение <b>D\'</b></string>
-    <string name="easy3_2_f" translatable="false">Движение <b>F</b></string>
-    <string name="easy3_2_nf" translatable="false">Движение <b>F\'</b></string>
-    <string name="easy3_2_b" translatable="false">Движение <b>B</b></string>
-    <string name="easy3_2_nb" translatable="false">Движение <b>B\'</b></string>
-    <string name="easy3_p1_2" translatable="false">Этап 1. Правильный крест</string>
-    <string name="easy3_p2_3" translatable="false">Цветок</string>
+    <string name="easy3_2_r">Right side\nMove <b>R</b></string>
+    <string name="easy3_2_nr">Right side\nMove <b>R\'</b></string>
+    <string name="easy3_2_l">Left side\nMove <b>L</b></string>
+    <string name="easy3_2_nl">Left side\nMove <b>L\'</b></string>
+    <string name="easy3_2_u">Move <b>U</b></string>
+    <string name="easy3_2_nu">Move <b>U\'</b></string>
+    <string name="easy3_2_d">Move <b>D</b></string>
+    <string name="easy3_2_nd">Move <b>D\'</b></string>
+    <string name="easy3_2_f">Move <b>F</b></string>
+    <string name="easy3_2_nf">Move <b>F\'</b></string>
+    <string name="easy3_2_b">Move <b>B</b></string>
+    <string name="easy3_2_nb">Move <b>B\'</b></string>
+    <string name="easy3_p1_2">Stage 1. Сorrect cross</string>
+    <string name="easy3_p2_3">Flower</string>
 
-    <string name="easy3_3_1" translatable="false">Сборку правильного креста мы делим на два шага, первый шаг это "цветок", который потом и превращается в правильный крест на 2 шаге.</string>
-    <string name="easy3_3_2" translatable="false">Наша цель – собрать цветок, в котором центр будет желтый, а лепестки – белыми (рис 1.). Кубик во время сборки держим желтым центром вверх.\n\nКогда цветок будет готов, мы заменим желтый центр на белый, чтобы переделать его в правильный крест. (рис. 2)</string>
-    <string name="easy3_3_3" translatable="false"><b>Цветок</b></string>
-    <string name="easy3_3_4" translatable="false"><b>Крест</b></string>
+    <string name="easy3_3_1">We divide the assembly of the correct cross into two steps, the first step is the "flower", which then turns into the right cross in the second step.</string>
+    <string name="easy3_3_2">Our goal is to collect a flower in which the center is yellow, and the petals are white (pic 1). During assembly, hold the cube with the yellow center up. \n\nWhen the flower is ready, we will replace the yellow center with white to remake it into the correct cross. (pic. 2)</string>
+    <string name="easy3_3_3"><b>Flower</b></string>
+    <string name="easy3_3_4"><b>Cross</b></string>
 
-    <string name="easy3_sv_1" translatable="false">Для создания цветка нам нужно найти все 4 белых ребра и поднять их к желтому центру. Сделать это очень просто. Вы можете сделать это интуитивно и сразу перейти к следующему шагу.</string>
-    <string name="easy3_res" translatable="false"><b>Результат</b></string>
+    <string name="easy3_sv_1">To create a flower, we need to find all 4 white edges and raise them to the yellow center. It is very easy to do. You can do this intuitively and go straight to the next step.</string>
+    <string name="easy3_res"><b>Result</b></string>
 
-    <string name="easy3_sv_2" translatable="false">1. Если мы видим белый цвет на среднем слое, то просто поднимаем его движением \"R\". Делаем так со всеми ребрами на среднем слое.</string>
-    <string name="easy3_sv_2_1" translatable="false">1. Поднимаем <b>R</b></string>
+    <string name="easy3_sv_2">1. If we see white on the middle layer, then simply lift it with a movement \"R\". Do this with all the edges on the middle layer.</string>
+    <string name="easy3_sv_2_1">1. Lift <b>R</b></string>
 
-    <string name="easy3_sv_3" translatable="false">2. В случае если на среднем слое есть ребро, но поставить его мешает другая деталь, – отодвигаем мешающую нам деталь движением U и ставим нужную на свое место движением R.</string>
-    <string name="easy3_sv_3_1" translatable="false">2. Делаем <b>U R</b></string>
-
-
-    <string name="easy3_sv_4_h" translatable="false">Детали на среднем слое закончились. Переходим в нижний.</string>
-    <string name="easy3_sv_4" translatable="false">3. Если нужная нам деталь смотрит белым цветом вниз, то просто поднимаем ее двумя движениями R, что в формулах записывается R2.</string>
-    <string name="easy3_sv_4_1" translatable="false">3. Делаем <b>R2</b></string>
-
-    <string name="easy3_sv_5" translatable="false">4. Если деталь находится на верхнем или нижнем слое и смотрит белым на вас (Рис 4 или 5), то сначала нужно переместить деталь на средний слой движением F, а после поставить деталь со среднего слоя на свое место (если оно занято другой деталью, отодвиньте ее движением U или U\').</string>
-    <string name="easy3_sv_5_1" translatable="false">4. <b>F U L\'</b></string>
-    <string name="easy3_sv_5_2" translatable="false">5. <b>F U\' R</b></string>
-
-    <string name="easy3_sv_endH" translatable="false">Поздравляем! </string>
-    <string name="easy3_sv_end" translatable="false">Если у Вас получилось собрать цветок, то следующие этапы сборки кубика не вызовут у вас никаких сложностей. Цветок самый тяжелый для понимания среди начинающих.</string>
-
-    <string name="easy3_p2_4" translatable="false">Крест</string>
-    <string name="easy3_cross_1" translatable="false">Очень просто и всего в несколько движений цветок можно превратить в правильный крест.</string>
-    <string name="easy3_cross_2_1" translatable="false">Смотрим на цветок и обращаем внимание на цвет ребра. Выбираем любое из ребер, совмещаем его с центром такого же цвета и опускаем вниз (делаем движение F2).</string>
-    <string name="easy3_cross_2_2" translatable="false">Делаем так поочерёдно со всеми ребрами.</string>
-    <string name="easy3_cross_2_3" translatable="false"><b>F2</b></string>
-    <string name="easy3_cross_3_1" translatable="false">Когда ребра закончатся —  переворачиваем весь кубик, и видим, что белый правильный крест собран.</string>
-    <string name="easy3_cross_3_2" translatable="false">Обратите внимание, цвет ребер в кресте должен совпадать с цветами центров. Если у вас вдруг получился неправильный крест, попробуйте еще раз!</string>
-    <string name="easy3_cross_3_3" translatable="false"><b>Правильный крест</b></string>
-    <string name="easy3_cross_3_4" translatable="false"><b>Неправильный крест</b></string>
-
-    <string name="easy3_fl_h1" translatable="false">Этап 2. Первый слой</string>
-    <string name="easy3_fl_h2_1" translatable="false">Углы</string>
-    <string name="easy3_fl_1_1" translatable="false"><b>Без углов</b></string>
-    <string name="easy3_fl_1_2" translatable="false"><b>С углами</b></string>
-    <string name="easy3_fl_1_3" translatable="false">Дальше мы будем собирать уголки, (3 цвета на элементе), в итоге должен получиться целый первый слой.</string>
-    <string name="easy3_fl_1_4" translatable="false">Но для начала мы выучим очень простую, но эффективную формулу, которая называется пиф-паф. Состоит из 4 движений <b>R U R\' U\'</b>, а простыми словами: <b>вверх-влево-вниз-вправо</b>.{</string>
-
-    <string name="easy3_fl_2_1" translatable="false"><b>Рис.1</b></string>
-    <string name="easy3_fl_2_2" translatable="false"><b>Рис.2</b></string>
-    <string name="easy3_fl_2_3" translatable="false">Перемещаем наш собранный правильный крест вниз (Рис.1) . Ищем уголок на верхнем слое, с белым цветом. (Рис.2)</string>
+    <string name="easy3_sv_3">2. If there is an edge on the middle layer, but another part interferes with delivering it, we move the part that interferes with us with the movement U and put the necessary one in its place with the movement R.</string>
+    <string name="easy3_sv_3_1">2. Do <b>U R</b></string>
 
 
-    <string name="easy3_fl_3_1" translatable="false"><b>R U R\' U\'</b></string>
-    <string name="easy3_fl_3_2" translatable="false">Если, например, угол зелено-красный, то ставим его между зеленым и красным центром, выполняем пиф-паф.</string>
+    <string name="easy3_sv_4_h">Details on the middle layer are over. Go to the bottom.</string>
+    <string name="easy3_sv_4">3. If the part we need looks white down, then simply raise it with two movements R, which is written in the formulas R2.</string>
+    <string name="easy3_sv_4_1">3. Do <b>R2</b></string>
 
-    <string name="easy3_fl_4_1" translatable="false"><b>(R U R\' U\')x3</b></string>
-    <string name="easy3_fl_4_2" translatable="false">В зависимости от ситуации пиф-паф приходиться выполнять от 1 до  до 5 раз, если например уголок смотрит белым вверх то выполнять нужно 3 раза.</string>
+    <string name="easy3_sv_5">4. If the part is on the upper or lower layer and looks white at you (Pic. 4 or 5), then first you need to move the part to the middle layer by moving F, and then put the part from the middle layer in its place (if it is occupied by another part, move by its motion U or U\').</string>
+    <string name="easy3_sv_5_1">4. <b>F U L\'</b></string>
+    <string name="easy3_sv_5_2">5. <b>F U\' R</b></string>
 
-    <string name="easy3_fl_5_1" translatable="false"><b>(R U R\' U\')x2</b></string>
-    <string name="easy3_fl_5_2" translatable="false">Если вы заметили что уголок стоит на своем месте, но его так же нужно развернуть мы используем пиф-паф. Крутите до тех пор, пока уголок не станет правильно.</string>
+    <string name="easy3_sv_endH">Congratulations!</string>
+    <string name="easy3_sv_end">If you managed to collect the flower, then the following stages of assembling the cube will not cause you any difficulties. The flower is the hardest to understand among beginners.</string>
 
-    <string name="easy3_fl_6_1" translatable="false"><b>R U R\' U\'</b></string>
-    <string name="easy3_fl_6_2" translatable="false">Но, если вам вдруг не повезло и уголки с белым цветом закончились на верхнем слое, нужно одним пиф-пафом выбить уголок который стоит в неправильном месте и дальше уже расставлять обычным образом.</string>
-    <string name="easy_fl_h2_2" translatable="false">Поздравляем, первый слой собран!</string>
+    <string name="easy3_p2_4">Cross</string>
+    <string name="easy3_cross_1">It is very simple and in just a few movements, the flower can be turned into a regular cross.</string>
+    <string name="easy3_cross_2_1">We look at the flower and pay attention to the color of the rib. Choose any of the edges, combine it with the center of the same color and lower it down (make the movement F2).</string>
+    <string name="easy3_cross_2_2">We do this in turn with all the ribs.</string>
+    <string name="easy3_cross_2_3"><b>F2</b></string>
+    <string name="easy3_cross_3_1">When the ribs end, turn the entire cube over and see that the white regular cross is assembled.</string>
+    <string name="easy3_cross_3_2">Please note that the color of the edges in the cross should match the colors of the centers. If you suddenly get the wrong cross, try again!</string>
+    <string name="easy3_cross_3_3"><b>True cross</b></string>
+    <string name="easy3_cross_3_4"><b>Bad Cross</b></string>
 
-    <string name="easy3_sl_h1" translatable="false">Этап 3. Средний слой</string>
+    <string name="easy3_fl_h1">Stage 2. The first layer</string>
+    <string name="easy3_fl_h2_1">Corners</string>
+    <string name="easy3_fl_1_1"><b>No corners</b></string>
+    <string name="easy3_fl_1_2"><b>With corners</b></string>
+    <string name="easy3_fl_1_3">Next we will collect the corners, (3 colors on the element), as a result, the whole first layer should be obtained.</string>
+    <string name="easy3_fl_1_4">But first, we will learn a very simple but effective formula called bang-bang. Consists of 4 movements <b>R U R\' U\'</b>, in simple words: <b>up-left-down-right</b>.</string>
 
-    <string name="easy3_sl_1_1" translatable="false">Что бы собрать второй слой нужно по очереди ставить ребра из верхнего слоя в средний. Для этого нам нужно выучить пиф-паф левой рукой <b>L\' U\' L U</b> или другими словами левой рукой мы делаем вверх-вправо-вниз-влево</string>
-    <string name="easy3_sl_1_2" translatable="false"><b>Один слой</b></string>
-    <string name="easy3_sl_1_3" translatable="false"><b>Два слоя</b></string>
-
-    <string name="easy3_sl_h2_2" translatable="false">Ребро идет вправо</string>
-    <string name="easy3_sl_2_1" translatable="false">Обращаем особое внимание на цвета. Для примера возьмем зелено-красное ребро. Подводим его и ставим красным цветом к красному центру и держим кубик красным цветом к себе (Рис.1).</string>
-    <string name="easy3_sl_2_2" translatable="false">Делаем <b>U  R U R\' U\' y L\' U\' L U</b></string>
-    <string name="easy3_sl_2_3" translatable="false">y значит перехват кубика вправо. В нашем случае зеленый центр станет перед нами. Словами формула будет звучать так: правый пиф-паф,перехват вправо, левый пиф-паф.</string>
-    <string name="easy3_sl_2_4" translatable="false"><b>Рис.1</b></string>
-
-    <string name="easy3_sl_h2_3" translatable="false">Ребро идет влево</string>
-    <string name="easy3_sl_3_1" translatable="false">Если вы подставили зелено-красное ребро к зеленому центру (Рис.2) то можем заметить что ребро в этот раз идет влево.</string>
-    <string name="easy3_sl_3_2" translatable="false">Значит мы будем делать <b>U\' L\' U\' L U y\' R U R\' U\'</b></string>
-    <string name="easy3_sl_3_3" translatable="false"><b>y\'</b> значит перехват кубика влево. В нашем случае красный центр станет перед нами. Словами формула будет звучать так: левый пиф-паф, перехват влево, правый пиф-паф.</string>
-    <string name="easy3_sl_3_4" translatable="false"><b>Рис.2</b></string>
-
-    <string name="easy3_sl_h2_4" translatable="false">Ребра закончились</string>
-    <string name="easy3_sl_4_1" translatable="false">Если вам не повезло и на верхнем слое закончились нужные ребра, а второй слой не собран - не проблема! Ставим неправильно собранное ребро справа (Рис.3) и делаем <b>R U R\' U\' y L\' U\' L U</b></string>
-    <string name="easy3_sl_4_2" translatable="false">Cловами звучит так: правый пиф-паф, перехват вправо (зеленый центр перед вами) левый пиф-паф и дальше обычно расставляем ребра.</string>
-    <string name="easy3_sl_4_3" translatable="false">Позравляем, после расстановки всех ребер во втором слое кубик собран на 60 процентов. До данного этапа доходит меньше половины, поэтому если вы справились, то вы молодец и скоро ваш кубик Рубика будет собран.</string>
-    <string name="easy3_sl_4_4" translatable="false"><b>Рис.3</b></string>
-
-    <string name="easy3_ll_h1" translatable="false">Этап 4. Последний слой</string>
-
-    <string name="easy3_yc_h2_1" translatable="false">Желтый крест</string>
-
-    <string name="easy3_yc_1_1" translatable="false">Мы уже почти собрали кубик. Осталось совсем немножко. На этом этапе мы снова переворачиваем кубик желтым цветом вверх.</string>
-    <string name="easy3_yc_1_2" translatable="false">Последовательность создания желтого креста такая:\nточка → пол креста (девять часов) → палка → крест</string>
-    <string name="easy3_yc_1_3" translatable="false">У Вас на кубике уже может быть собран целый крест. Но не всегда так везет. Иногда все-таки получается одна грустная точка, которую нужно превратить постепенно в крест. </string>
-    <string name="easy3_yc_1_4" translatable="false"><b>Точка</b></string>
-    <string name="easy3_yc_1_5" translatable="false"><b>Пол креста (девять часов)</b></string>
-
-    <string name="easy3_yc_2_1" translatable="false">Какая бы фигура у вас не была – делаем <b>F R U R\' U\' F\'</b>. Проще говоря <b>F (пиф-паф) F\'</b>.</string>
-    <string name="easy3_yc_2_2" translatable="false">Обратите внимание, что если у вас \"пол креста\", то держать его нужно на 9 часов, что бы одна стрелка смотрела влево, а вторая— вверх. А если палка, то держите ее горизонтально и лишь потом делайте алгоритм.</string>
-    <string name="easy3_yc_2_3" translatable="false">Если изначально у Вас была точка, то она превратиться в пол креста, если было пол креста, то они превратятся в палку, а если палка, – то в крест.</string>
-    <string name="easy3_yc_2_4" translatable="false"><b>Внимание!</b>\nЕсли у Вас одновременно вверх смотрит 1 или 3 элемента и Вы не видите ни одной из приведенных фигур, Ваш кубик могли разбирать на детали и неправильно собрать (нечаянно или с целью подшутить). В таком случае вы не соберете куб по формулам. Настоятельно рекомендуем - разберите куб на части и соберите его по цветам механическим способом.</string>
-    <string name="easy3_yc_2_5" translatable="false"><b>Палка</b></string>
-    <string name="easy3_yc_2_6" translatable="false"><b>Крест</b></string>
+    <string name="easy3_fl_2_1"><b>Pic.1</b></string>
+    <string name="easy3_fl_2_2"><b>Pic.2</b></string>
+    <string name="easy3_fl_2_3">Move our assembled regular cross down (Pic. 1). We are looking for a corner on the top layer, with white color. (Pic. 2)</string>
 
 
-    <string name="easy3_tyc_h2_1" translatable="false">Правильный желтый крест</string>
+    <string name="easy3_fl_3_1"><b>R U R\' U\'</b></string>
+    <string name="easy3_fl_3_2">If, for example, the angle is green-red, then we put it between the green and the red center, we perform a bang-bang.</string>
 
-    <string name="easy3_tyc_1_1" translatable="false">Крест, который получился, может быть неправильным (Рис.1). Нам нужно сделать так, что б все цвета на ребрах крестика (3 слоя) совпадали с центрами (Рис.2).</string>
-    <string name="easy3_tyc_1_2" translatable="false">Внимание, у нас может быть только три ситуации:\n1. ребра совпадают рядом\n2. ребра совпадают напротив\n3. вам повезло, и крестик сразу правильный или нужно только довернуть верхний слой.</string>
-    <string name="easy3_tyc_1_3" translatable="false"><b>Рис.1</b></string>
-    <string name="easy3_tyc_1_4" translatable="false"><b>Рис.2</b></string>
+    <string name="easy3_fl_4_1"><b>(R U R\' U\')x3</b></string>
+    <string name="easy3_fl_4_2">Depending on the situation, bang-bang must be performed from 1 to 5 times, if for example a corner looks white up, then you need to perform 3 times.</string>
 
-    <string name="easy3_tyc_2_1" translatable="false">1. ребра совпадают рядом\nЕсли эти два ребра соседние — ставим их справа и сзади, делаем формулу <b>R U R\' U R U2 R\' U</b>, у вас должен получится правильный крест (цвет ребер креста, совпадает с центрами.</string>
-    <string name="easy3_tyc_2_2" translatable="false"><b>Рядом</b></string>
+    <string name="easy3_fl_5_1"><b>(R U R\' U\')x2</b></string>
+    <string name="easy3_fl_5_2">If you notice that the corner is in place, but you also need to expand it, we use a bang-bang. Twist until the corner is correct.</string>
 
-    <string name="easy3_tyc_3_1" translatable="false">2. ребра совпадают напротив\nЕсли эти два ребра совпадают напротив — ставим их перед нами и сзади, делаем формулу <b>R U R\' U R U2 R\'</b>, у вас должен получится предыдущая ситуация (Рядом).</string>
-    <string name="easy3_tyc_3_2" translatable="false"><b>Напротив</b></string>
-    <string name="easy3_tyc_3_3" translatable="false"><b>Рядом</b></string>
+    <string name="easy3_fl_6_1"><b>R U R\' U\'</b></string>
+    <string name="easy3_fl_6_2">But, if you were unlucky and the corners with white ended on the top layer, you need to beat a corner with one bang-bang, which stands in the wrong place and continue to be arranged in the usual way.</string>
+    <string name="easy_fl_h2_2">Congratulations, the first layer is assembled!</string>
+
+    <string name="easy3_sl_h1">Stage 3. The middle layer</string>
+
+    <string name="easy3_sl_1_1">To collect the second layer, you need to take turns to put the edges from the top layer to the middle. To do this, we need to learn the bang-bang with the left hand <b>L\' U\' L U</b> or in other words with the left hand we do <b>up-right-down-left</b></string>
+    <string name="easy3_sl_1_2"><b>One layer</b></string>
+    <string name="easy3_sl_1_3"><b>Two layers</b></string>
+
+    <string name="easy3_sl_h2_2">The edge goes to the right.</string>
+    <string name="easy3_sl_2_1">We pay special attention to colors. For example, take the green-red rib. We bring it up and put it in red to the red center and hold the cube in red to ourselves (Pic. 1).</string>
+    <string name="easy3_sl_2_2">Do <b>U  R U R\' U\' y L\' U\' L U</b></string>
+    <string name="easy3_sl_2_3">y means intercepting the cube to the right. In our case, the green center will be in front of us. In words, the formula will sound like this: right bang-bang, interception to the right, left bang-bang.</string>
+    <string name="easy3_sl_2_4"><b>Pic. 1</b></string>
+
+    <string name="easy3_sl_h2_3">The edge goes to the left</string>
+    <string name="easy3_sl_3_1">If you substitute a green-red edge to the green center (Pic. 2), we can notice that this time the edge goes to the left. </string>
+    <string name="easy3_sl_3_2">So we will do <b>U\' L\' U\' L U y\' R U R\' U\'</b></string>
+    <string name="easy3_sl_3_3"><b>y\'</b> means intercepting the cube to the left. In our case, the red center will be in front of us. In words, the formula will sound like this: left bang-bang, interception to the left, right bang-bang.</string>
+    <string name="easy3_sl_3_4"><b>Pic. 2</b></string>
+
+    <string name="easy3_sl_h2_4">Ribs are over</string>
+    <string name="easy3_sl_4_1">If you are unlucky and the necessary edges have ended on the top layer, and the second layer is not assembled - no problem! We put an incorrectly assembled edge on the right (Pic. 3) and do <b>R U R\' U\' y L\' U\' L U</b></string>
+    <string name="easy3_sl_4_2">The words are as follows: the right bang-bang, the interception to the right (the green center in front of you), the left bang-bang and then we usually arrange the ribs.</string>
+    <string name="easy3_sl_4_3">Congratulations, after arranging all the edges in the second layer, the cube is 60 percent assembled. Less than half comes to this stage, so if you succeed, then you are well done and soon your Rubik\'s cube will be collected.</string>
+    <string name="easy3_sl_4_4"><b>Pic. 3</b></string>
+
+    <string name="easy3_ll_h1">Stage 4. Edges of the last layer</string>
+
+    <string name="easy3_yc_h2_1">Yellow cross</string>
+
+    <string name="easy3_yc_1_1">We have almost collected the cube. Just a little bit left. At this stage, we again flip the cube yellow up.</string>
+    <string name="easy3_yc_1_2">The sequence for creating a yellow cross is as follows: \npoint → half a cross (nine hours) → stick → cross</string>
+    <string name="easy3_yc_1_3">You can already have a whole cross assembled on a cube. But not always so lucky. Sometimes, nevertheless, you get one sad point, which you need to turn gradually into a cross.</string>
+    <string name="easy3_yc_1_4"><b>Point</b></string>
+    <string name="easy3_yc_1_5"><b>Half cross (nine hours)</b></string>
+
+    <string name="easy3_yc_2_1">Whatever figure you have, we do <b>F R U R\' U\' F\'</b>. Simply put <b>F (bang-bang) F\'</b>.</string>
+    <string name="easy3_yc_2_2">Please note that if you have \"the floor of the cross\", then you need to hold it for 9 hours, so that one arrow looks to the left, and the second - up. And if the stick, then hold it horizontally and only then do the algorithm.</string>
+    <string name="easy3_yc_2_3">If you originally had a point, then it will turn into a half cross, if there was a half cross, then they will turn into a stick, and if a stick, then into a cross.</string>
+    <string name="easy3_yc_2_4"><b>Attention!</b>\nIf you have 1 or 3 elements looking up at the same time and you do not see any of the figures shown, your cube could be disassembled into parts and incorrectly assembled (by accident or with the aim of playing a trick). In this case, you will not collect the cube according to the formulas. We strongly recommend - disassemble the cube into parts and assemble it according to the colors mechanically.</string>
+    <string name="easy3_yc_2_5"><b>Stick</b></string>
+    <string name="easy3_yc_2_6"><b>Cross</b></string>
 
 
-    <string name="easy3_cp_h2_1" translatable="false">Расстановка углов третьего слоя</string>
+    <string name="easy3_tyc_h2_1">Right yellow cross</string>
 
-    <string name="easy3_cp_1_1" translatable="false">Сначала нужно проверить, сколько углов стоят на своем месте. Это либо все, 1 угол либо же ни одного. Если на месте все углы – пропускаем этот этап и переходим к следующему.</string>
-    <string name="easy3_cp_1_2" translatable="false">Углы могут смотреть желтым цветом в любую сторону. Главное, что бы оранжево-зеленый угол стоял между оранжевым и зеленым центром, зелено-красный угол стоял между зеленым и красным и т.д.</string>
-    <string name="easy3_cp_1_3" translatable="false">Если таких углов нет, то делаем алгоритм:\n<b>R U\' L\' U R\' U\' L U</b></string>
-    <string name="easy3_cp_1_4" translatable="false">После исполнения алгоритма должен появиться 1 правильный угол. Ставим его слева и сверху (там где большой палец левой руки) и делаем тот же алгоритм. Если ничего не получилось, опять ставим в верхнюю левую точку и повторяем.</string>
-    <string name="easy3_cp_1_5" translatable="false"><b>Внимание!</b>\nЕсли у Вас на своем месте стоит только 2 или 3 элемента, Ваш кубик разбирали на детали и неправильно собрали. Из такого состояния кубик не соберете по формулам. Разберите куб на части и соберите его по цветам механическим способом.</string>
-    <string name="easy3_cp_1_6" translatable="false">Когда все углы будут стоять на своем месте – остается всего лишь развернуть их, что бы полностью собрать кубик.</string>
-    <string name="easy3_cp_1_7" translatable="false"><b>Ноль углов на месте</b></string>
-    <string name="easy3_cp_1_8" translatable="false"><b>Один угол на своем месте</b></string>
+    <string name="easy3_tyc_1_1">The cross that turned out may be wrong (Pic. 1). We need to make sure that all the colors on the edges of the cross (3 layers) coincide with the centers (Pic. 2).</string>
+    <string name="easy3_tyc_1_2">Attention, we can have only three situations: \n1. edges coincide near \n2. edges coincide opposite \n3. you are lucky, and the cross is right or you just need to tighten the top layer.</string>
+    <string name="easy3_tyc_1_3"><b>Pic.1</b></string>
+    <string name="easy3_tyc_1_4"><b>Pic.2</b></string>
 
-    <string name="easy3_cp_2_1" translatable="false">1. ребра совпадают рядом\nЕсли эти два ребра соседние — ставим их справа и сзади, делаем формулу <b>R U R\' U R U2 R\' U</b>, у вас должен получится правильный крест (цвет ребер креста, совпадает с центрами.</string>
-    <string name="easy3_cp_2_2" translatable="false"><b>Рядом</b></string>
+    <string name="easy3_tyc_2_1">1. edges coincide next \nIf these two edges are adjacent - put them on the right and back, we make the formula <b>R U R\' U R U2 R\' U</b>, you should get the right cross (the color of the edges of the cross coincides with the centers.</string>
+    <string name="easy3_tyc_2_2"><b>Nearby</b></string>
 
-    <string name="easy3_cp_3_1" translatable="false">2. ребра совпадают напротив\nЕсли эти два ребра совпадают напротив — ставим их перед нами и сзади, делаем формулу <b>R U R\' U R U2 R\'</b>, у вас должен получится предыдущая ситуация (Рядом).</string>
-    <string name="easy3_cp_3_2" translatable="false"><b>Напротив</b></string>
-    <string name="easy3_cp_3_3" translatable="false"><b>Рядом</b></string>
+    <string name="easy3_tyc_3_1">2. edges coincide opposite \nIf these two edges coincide opposite - put them in front of us and behind, we make the formula <b>R U R\' U R U2 R\'</b>, you should get the previous situation (Nearby).</string>
+    <string name="easy3_tyc_3_2"><b>Opposite</b></string>
+    <string name="easy3_tyc_3_3"><b>Nearby</b></string>
 
-    <string name="easy3_pcll_h1" translatable="false">Эпап 5. Расстановка углов третьего слоя</string>
-    <string name="easy3_pcll_text1" translatable="false">Сначала нужно проверить, сколько углов стоят на своем месте. Это либо все, 1 угол либо же ни одного. Если на месте все углы – пропускаем этот этап и переходим к следующему.\n\nУглы могут смотреть желтым цветом в любую сторону. Главное, что бы оранжево-зеленый угол стоял между оранжевым и зеленым центром, зелено-красный угол стоял между зеленым и красным и т.д.</string>
-    <string name="easy3_pcll_text2" translatable="false">Если таких углов нет, то делаем алгоритм:\n<b>R U\' L\' U R\' U\' L U</b>\n\nПосле исполнения алгоритма должен появиться 1 правильный угол. Ставим его слева и сверху (там где большой палец левой руки) и делаем тот же алгоритм. Если ничего не получилось, опять ставим в нижнюю левую точку и повторяем.\n\n<b>Внимание!</b>\nЕсли у Вас на своем месте стоит только 2 или 3 элемента, Ваш кубик разбирали на детали и неправильно собрали. Из такого состояния кубик не соберете по формулам. Разберите куб на части и соберите его по цветам механическим способом.\n\nКогда все углы будут стоять на своем месте – остается всего лишь развернуть их, что бы полностью собрать кубик.</string>
-    <string name="easy3_pcll_1" translatable="false"><b>Ноль углов на месте</b></string>
-    <string name="easy3_pcll_2" translatable="false"><b>Один угол на своем месте</b></string>
 
-    <string name="easy3_ocll_h1" translatable="false">Последний этап. Разворот углов</string>
-    <string name="easy3_ocll_text1" translatable="false">Разворачивать углы мы будем пиф-пафом (<b>R U R\' U\'</b>). Это простая формула, которую вы уже очень хорошо знаете!</string>
-    <string name="easy3_ocll_text2" translatable="false">Проверьте еще разок, все ли углы стоят на своих местах (Рис.1). Перехватите кубик так, что б уголки которые нужно собрать были снизу (Рис.2).</string>
-    <string name="easy3_ocll_text3" translatable="false">Начинаем с любого несобранного угла и делаем пиф-пафы до тех пор, пока угол не будет собран. (Рис.3)\nЗатем крутим нижний слой,и подставляем следующий не развернутый уголок (Рис.4). </string>
-    <string name="easy3_ocll_text4" translatable="false">Продолжаем делать пиф-пафы, пока не соберется 2-ой угол (Рис.5) и так далее. (<b>ВНИМАНИЕ!</b> Если угол уже собрался, пиф-паф все равно нужно доделать до конца, и только потом приступать к следующему).\nКогда вы развернете все уголки, кубик будет собран, не забудьте довернуть последнее движение.\n\n<b>Предупреждение</b>\nЗдесь легче всего где-нибудь оступиться. По-этому внимательно, иначе кубик придется собирать заново.</string>
-    <string name="easy3_ocll_1_1" translatable="false"><b>Рис.1</b></string>
-    <string name="easy3_ocll_1_2" translatable="false"><b>Рис.2</b></string>
-    <string name="easy3_ocll_2_1" translatable="false"><b>Рис.3</b></string>
-    <string name="easy3_ocll_2_2" translatable="false"><b>Рис.4</b></string>
-    <string name="easy3_ocll_3_1" translatable="false"><b>Рис.5</b></string>
+    <string name="easy3_pcll_h1">Stage 5. Corner placement of the third layer</string>
+    <string name="easy3_pcll_text1">First you need to check how many corners are in place. This is either all, 1 corner or not a single one. If all the corners are in place, skip this step and move on to the next. \n\nThe corners can look yellow in any direction. The main thing is that the orange-green corner stands between the orange and green center, the green-red corner stands between green and red, etc.</string>
+    <string name="easy3_pcll_text2">If there are no such angles, then we make an algorithm:\n<b>R U\' L\' U R\' U\' L U</b>\n\nAfter the execution of the algorithm, 1 correct angle should appear. We put it on the left and on the top (where the thumb of the left hand is) and do the same algorithm. If all else fails, again put in the lower left point and repeat.\n\n<b>Attention!</b>\nIf you have only 2 or 3 elements in place, your cube was disassembled into parts and incorrectly assembled. From this state, the cube cannot be assembled using the formulas. Disassemble the cube into parts and assemble it according to the colors mechanically.\n\nWhen all the corners stand in their place, all that remains is to deploy them to completely assemble the cube.</string>
+    <string name="easy3_pcll_1"><b>Zero corners in place</b></string>
+    <string name="easy3_pcll_2"><b>One corner in place</b></string>
 
-    <string name="easy_3_out_h1" translatable="false">Поздравляем!</string>
-    <string name="easy_3_out_text" translatable="false">Вы молодец. У вас получилось собрать свой первый кубик Рубика.\nРасскажите об этом своим друзьям.</string>
+    <string name="easy3_ocll_h1">Final stage. Corners orientation.</string>
+    <string name="easy3_ocll_text1">We’ll be turning corners with bang-bang(<b>R U R\' U\'</b>). This is a simple formula that you already know very well!</string>
+    <string name="easy3_ocll_text2">Check once again that all corners are in place (Pic. 1). Intercept the cube so that the corners to be assembled were from below (Pic. 2).</string>
+    <string name="easy3_ocll_text3">We start from any unassembled corner and make bang-bangs until the corner is assembled. (Pic. 3) \nThen twist the bottom layer, and substitute the next unfolded corner (Fig. 4). </string>
+    <string name="easy3_ocll_text4">We continue to make bang-bangs until the 2nd corner is assembled (Pic. 5) and so on. \n\n<b>ATTENTION!</b> If the corner is already assembled, you still need to finish the bang-bang to the end, and only then proceed to the next. \nWhen you expand all the corners, the cube will be assembled, do not forget to tighten the last movement.\n\n<b>Warning</b>\nIt’s easiest to stumble somewhere. Therefore, carefully, otherwise the cube will have to be re-assembled.</string>
+    <string name="easy3_ocll_1_1"><b>Pic. 1</b></string>
+    <string name="easy3_ocll_1_2"><b>Pic. 2</b></string>
+    <string name="easy3_ocll_2_1"><b>Pic. 3</b></string>
+    <string name="easy3_ocll_2_2"><b>Pic. 4</b></string>
+    <string name="easy3_ocll_3_1"><b>Pic. 5</b></string>
+
+    <string name="easy_3_out_h1">Congratulations!</string>
+    <string name="easy_3_out_text">You are well done. You managed to collect your first Rubik\'s Cube.\nTell this to your friends.</string>
 
     <!-- OLL algs -->
     <string name="oll_count" translatable="false">58</string>

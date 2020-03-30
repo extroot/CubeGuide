@@ -47,8 +47,6 @@
 
     <include layout="@layout/cube_true_yellow_cross" />
 
-    <include layout="@layout/cube_corners_permutation" />
-
     <TextView
         style="@style/H1"
         android:text="@string/easy3_pcll_h1" />
