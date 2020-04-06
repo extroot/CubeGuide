@@ -26,7 +26,7 @@
     <string name="mw_header" translatable="false">Magic Wondeful</string>
     <string name="mg_oll_header">OLL - Orientation of the Last Layer</string>
     <string name="pllr_header">PLL - Permutation of the Last Layer</string>
-    <string name="easy3_header">3x3x3 - Beginners Method</string>Углы
+    <string name="easy3_header">3x3x3 - Beginners Method</string>
 
 
     <string name="easy3_p1_1">Preparatory stage</string>
