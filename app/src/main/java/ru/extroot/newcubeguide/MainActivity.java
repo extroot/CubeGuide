@@ -87,7 +87,7 @@ import org.jetbrains.annotations.NotNull;
     private static final int MW_ID      = 19;
     private static final int MG_OLL_ID  = 20;
     private static final int PLLR_ID    = 21;
-    private static final int easy_3_ID   = 22;
+    private static final int easy_3_ID  = 22;
 
     private int picLen = 250;
     private int textSize = 16;
