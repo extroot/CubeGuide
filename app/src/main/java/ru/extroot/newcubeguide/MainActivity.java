@@ -2,6 +2,7 @@ package ru.extroot.newcubeguide;
 
 import android.os.Bundle;
 import android.util.DisplayMetrics;
+import android.view.ContextThemeWrapper;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -333,17 +334,7 @@ import org.jetbrains.annotations.NotNull;
         for (int i = 0; i < Integer.parseInt(getResources().getString(getResources().getIdentifier(mode + "_count", "string", getPackageName()))); i++) {
             int algCount = Integer.parseInt(getResources().getString(getResources().getIdentifier(mode + i + "_count", "string", getPackageName())));
             if (algCount == 0) continue;
-
-            LinearLayout line = new LinearLayout(this);
-            line.setOrientation(LinearLayout.HORIZONTAL);
-            line.setPadding(15, 15, 0, 15);
-            line.setGravity(Gravity.CENTER_VERTICAL);
-            LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams
-                    (LinearLayout.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-            // установка layout_gravity
-            layoutParams.gravity = Gravity.CENTER_VERTICAL;
-            line.setLayoutParams(layoutParams);
-
+            LinearLayout line = new LinearLayout(new ContextThemeWrapper(this, R.style.line));
             ImageView image = new ImageView(this);
             image.setImageResource(getResources().getIdentifier(picMode + i, "drawable", getPackageName()));
             image.setLayoutParams(new LinearLayout.LayoutParams(picLen, picLen));

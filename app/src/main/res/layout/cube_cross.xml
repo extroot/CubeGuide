@@ -49,10 +49,6 @@
         style="@style/text"
         android:text="@string/easy3_cross_2_1" />
 
-    <TextView
-        style="@style/text"
-        android:text="@string/easy3_cross_2_2" />
-
     <LinearLayout
         style="@style/lineCenter"
         android:orientation="horizontal">
