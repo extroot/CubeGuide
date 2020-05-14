@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="wv_count" translatable="false">52</string>
+    <string name="wv0_count" translatable="false">1</string>
+    <string name="wv0_0" translatable="false">U\' L\' U L</string>
+    <string name="wv0_title" translatable="false" />
+    <string name="wv0_subtitle" translatable="false" />
+
+    <string name="wv1_count" translatable="false">1</string>
+    <string name="wv1_0" translatable="false">U R U\' R\'</string>
+    <string name="wv1_title" translatable="false" />
+    <string name="wv1_subtitle" translatable="false" />
+
+    <string name="wv2_count" translatable="false">2</string>
+    <string name="wv2_0" translatable="false">L F\' L\' U\' L\' U L F</string>
+    <string name="wv2_1" translatable="false">U R\' U L\' U\' R U\' L</string>
+    <string name="wv2_title" translatable="false" />
+    <string name="wv2_subtitle" translatable="false" />
+
+    <string name="wv3_count" translatable="false">2</string>
+    <string name="wv3_0" translatable="false">R\' F R U R U\' R\' F\'</string>
+    <string name="wv3_1" translatable="false">U\' L U\' R U L\' U R\'</string>
+    <string name="wv3_title" translatable="false" />
+    <string name="wv3_subtitle" translatable="false" />
+
+    <string name="wv4_count" translatable="false">2</string>
+    <string name="wv4_0" translatable="false">R\' U\' R U2 Rw\' F\' Rw U2 R\' U2 R</string>
+    <string name="wv4_1" translatable="false">U\' L2 D\' L U L\' D L2</string>
+    <string name="wv4_title" translatable="false" />
+    <string name="wv4_subtitle" translatable="false" />
+
+    <string name="wv5_count" translatable="false">2</string>
+    <string name="wv5_0" translatable="false">U R2 D R\' U\' R D\' R2</string>
+    <string name="wv5_1" translatable="false">y U R\' F R2 U\' R2 F\' R2 U\' R\' U R U R\'</string>
+    <string name="wv5_title" translatable="false" />
+    <string name="wv5_subtitle" translatable="false" />
+
+    <string name="wv6_count" translatable="false">1</string>
+    <string name="wv6_0" translatable="false">U\' L\' U L U R U R\' U R U2 R\'</string>
+    <string name="wv6_title" translatable="false" />
+    <string name="wv6_subtitle" translatable="false" />
+
+    <string name="wv7_count" translatable="false">1</string>
+    <string name="wv7_0" translatable="false">U R U\' R\' U R\' U\' R U\' R\' U2 R</string>
+    <string name="wv7_title" translatable="false" />
+    <string name="wv7_subtitle" translatable="false" />
+
+    <string name="wv8_count" translatable="false">1</string>
+    <string name="wv8_0" translatable="false">U\' L\' U\' L U L\' U L</string>
+    <string name="wv8_title" translatable="false" />
+    <string name="wv8_subtitle" translatable="false" />
+
+    <string name="wv9_count" translatable="false">1</string>
+    <string name="wv9_0" translatable="false">U R U R\' U\' R U\' R\'</string>
+    <string name="wv9_title" translatable="false" />
+    <string name="wv9_subtitle" translatable="false" />
+
+    <string name="wv10_count" translatable="false">1</string>
+    <string name="wv10_0" translatable="false">L\' U L U2 L\' U L U2 L\' U\' L</string>
+    <string name="wv10_title" translatable="false" />
+    <string name="wv10_subtitle" translatable="false" />
+
+    <string name="wv11_count" translatable="false">1</string>
+    <string name="wv11_0" translatable="false">R U\' R\' U2 R U\' R\' U2 R U R\'</string>
+    <string name="wv11_title" translatable="false" />
+    <string name="wv11_subtitle" translatable="false" />
+
+    <string name="wv12_count" translatable="false">2</string>
+    <string name="wv12_0" translatable="false">U2 L\' U L U\' L\' U2 L</string>
+    <string name="wv12_1" translatable="false">U2 L\' U\' R U\' L U R\'</string>
+    <string name="wv12_title" translatable="false" />
+    <string name="wv12_subtitle" translatable="false" />
+
+    <string name="wv13_count" translatable="false">2</string>
+    <string name="wv13_0" translatable="false">U2 R U\' R\' U R U2 R\'</string>
+    <string name="wv13_1" translatable="false">U2 R U L\' U R\' U\' L</string>
+    <string name="wv13_title" translatable="false" />
+    <string name="wv13_subtitle" translatable="false" />
+
+    <string name="wv14_count" translatable="false">2</string>
+    <string name="wv14_0" translatable="false">U2 F Rw\' F2 Rw U2 Rw U\' Rw\'</string>
+    <string name="wv14_1" translatable="false">U2 F2 R\' F2 R U2 R U2 R\'</string>
+    <string name="wv14_title" translatable="false" />
+    <string name="wv14_subtitle" translatable="false" />
+
+    <string name="wv15_count" translatable="false">3</string>
+    <string name="wv15_0" translatable="false">U2 F\' R U2 R\' U2 R\' F R</string>
+    <string name="wv15_1" translatable="false">U2 F2 L F2 L\' U2 L\' U2 L</string>
+    <string name="wv15_2" translatable="false">U L\' U2 R U L U\' L\' U R\' U2 L</string>
+    <string name="wv15_title" translatable="false" />
+    <string name="wv15_subtitle" translatable="false" />
+
+    <string name="wv16_count" translatable="false">2</string>
+    <string name="wv16_0" translatable="false">L U2 L\' U\' L U\' L2 U2 L</string>
+    <string name="wv16_1" translatable="false">U\' L\' U\' L2 U L2 U L2 U2 L\'</string>
+    <string name="wv16_title" translatable="false" />
+    <string name="wv16_subtitle" translatable="false" />
+
+    <string name="wv17_count" translatable="false">3</string>
+    <string name="wv17_0" translatable="false">R\' F R2 U R\' U\' R U R\' U\' F\'</string>
+    <string name="wv17_1" translatable="false">U R U R2 U\' R2 U\' R2 U2 R</string>
+    <string name="wv17_2" translatable="false">R\' U2 R U R\' U R2 U2 R\'</string>
+    <string name="wv17_title" translatable="false" />
+    <string name="wv17_subtitle" translatable="false" />
+
+    <string name="wv18_count" translatable="false">2</string>
+    <string name="wv18_0" translatable="false">U\' L\' U L R U R\' U R U2 R\'</string>
+    <string name="wv18_1" translatable="false">U2 L U L2 U L2 U2 L\'</string>
+    <string name="wv18_title" translatable="false" />
+    <string name="wv18_subtitle" translatable="false" />
+
+    <string name="wv19_count" translatable="false">2</string>
+    <string name="wv19_0" translatable="false">U2 R\' U\' R2 U\' R2 U2 R</string>
+    <string name="wv19_1" translatable="false">U R U\' R\' U\' R U2 R\' U\' R U\' R\'</string>
+    <string name="wv19_title" translatable="false" />
+    <string name="wv19_subtitle" translatable="false" />
+
+    <string name="wv20_count" translatable="false">1</string>
+    <string name="wv20_0" translatable="false">U\' R U2 L\' U\' L R\' U\' R U\' R\'</string>
+    <string name="wv20_title" translatable="false" />
+    <string name="wv20_subtitle" translatable="false" />
+
+    <string name="wv21_count" translatable="false">2</string>
+    <string name="wv21_0" translatable="false">L R\' F R2 U\' R\' U F\' L\'</string>
+    <string name="wv21_1" translatable="false">U2 L\' R U R\' U\' L R U2 R\'</string>
+    <string name="wv21_title" translatable="false" />
+    <string name="wv21_subtitle" translatable="false" />
+
+    <string name="wv22_count" translatable="false">1</string>
+    <string name="wv22_0" translatable="false">U2 L\' U2 L</string>
+    <string name="wv22_title" translatable="false" />
+    <string name="wv22_subtitle" translatable="false" />
+
+    <string name="wv23_count" translatable="false">1</string>
+    <string name="wv23_0" translatable="false">U2 R U2 R\'</string>
+    <string name="wv23_title" translatable="false" />
+    <string name="wv23_subtitle" translatable="false" />
+
+    <string name="wv24_count" translatable="false">1</string>
+    <string name="wv24_0" translatable="false">Rw U Rw\' U2 L\' U2 L F\'</string>
+    <string name="wv24_title" translatable="false" />
+    <string name="wv24_subtitle" translatable="false" />
+
+    <string name="wv25_count" translatable="false">1</string>
+    <string name="wv25_0" translatable="false">R\' F\' R U2 R U2 R\' F</string>
+    <string name="wv25_title" translatable="false" />
+    <string name="wv25_subtitle" translatable="false" />
+
+    <string name="wv26_count" translatable="false">2</string>
+    <string name="wv26_0" translatable="false">Rw U2 Rw2 F Rw U L\' U\' Rw U2 x\'</string>
+    <string name="wv26_1" translatable="false">U2 R U\' L\' U L R\' U L\' U L</string>
+    <string name="wv26_title" translatable="false" />
+    <string name="wv26_subtitle" translatable="false" />
+
+    <string name="wv27_count" translatable="false">2</string>
+    <string name="wv27_0" translatable="false">R\' F2 R2 U\' R\' U\' R U R\' F2</string>
+    <string name="wv27_1" translatable="false">U2 L\' U R U\' R\' L U\' R U\' R\'</string>
+    <string name="wv27_title" translatable="false" />
+    <string name="wv27_subtitle" translatable="false" />
+
+    <string name="wv28_count" translatable="false">3</string>
+    <string name="wv28_0" translatable="false">Rw U2 Rw\' F2 U\' R U\' R\'</string>
+    <string name="wv28_1" translatable="false">y\' U\' R U R\' F R\' F\' R2 U\' R\'</string>
+    <string name="wv28_2" translatable="false">U\' L\' U2 R\' U\' R L U2 R\' U\' R</string>
+    <string name="wv28_title" translatable="false" />
+    <string name="wv28_subtitle" translatable="false" />
+
+    <string name="wv29_count" translatable="false">2</string>
+    <string name="wv29_0" translatable="false">U R U\' x\' U R\' D R U\' R\' D\' x</string>
+    <string name="wv29_1" translatable="false">U y\' x\' R\' F\' R U\' R U R2 F R</string>
+    <string name="wv29_title" translatable="false" />
+    <string name="wv29_subtitle" translatable="false" />
+
+    <string name="wv30_count" translatable="false">1</string>
+    <string name="wv30_0" translatable="false">R U R\' U R U2 R\' L\' U2 L</string>
+    <string name="wv30_title" translatable="false" />
+    <string name="wv30_subtitle" translatable="false" />
+
+    <string name="wv31_count" translatable="false">1</string>
+    <string name="wv31_0" translatable="false">U2 R U2 R2 U\' R U\' R\' U2 R</string>
+    <string name="wv31_title" translatable="false" />
+    <string name="wv31_subtitle" translatable="false" />
+
+    <string name="wv32_count" translatable="false">1</string>
+    <string name="wv32_0" translatable="false">U2 R U\' L\' U R\' U2 L</string>
+    <string name="wv32_title" translatable="false" />
+    <string name="wv32_subtitle" translatable="false" />
+
+    <string name="wv33_count" translatable="false">1</string>
+    <string name="wv33_0" translatable="false">U2 L\' U R U\' L U2 R\'</string>
+    <string name="wv33_title" translatable="false" />
+    <string name="wv33_subtitle" translatable="false" />
+
+    <string name="wv34_count" translatable="false">1</string>
+    <string name="wv34_0" translatable="false">R U\' Rw\' F Rw R\'</string>
+    <string name="wv34_title" translatable="false" />
+    <string name="wv34_subtitle" translatable="false" />
+
+    <string name="wv35_count" translatable="false">2</string>
+    <string name="wv35_0" translatable="false">L\' U R U\' x\' M\'</string>
+    <string name="wv35_1" translatable="false">y U R\' F U\' F\' U R</string>
+    <string name="wv35_title" translatable="false" />
+    <string name="wv35_subtitle" translatable="false" />
+
+    <string name="wv36_count" translatable="false">1</string>
+    <string name="wv36_0" translatable="false">U\' R U2 R\' L\' U\' L U\' R U\' R\'</string>
+    <string name="wv36_title" translatable="false" />
+    <string name="wv36_subtitle" translatable="false" />
+
+    <string name="wv37_count" translatable="false">1</string>
+    <string name="wv37_0" translatable="false">U R U\' R\' U\' R U R\' U R U2 R\'</string>
+    <string name="wv37_title" translatable="false" />
+    <string name="wv37_subtitle" translatable="false" />
+
+    <string name="wv38_count" translatable="false">1</string>
+    <string name="wv38_0" translatable="false">U\' L\' U L U R\' U\' R U\' R\' U2 R</string>
+    <string name="wv38_title" translatable="false" />
+    <string name="wv38_subtitle" translatable="false" />
+
+    <string name="wv39_count" translatable="false">1</string>
+    <string name="wv39_0" translatable="false">U R U\' R2 U2 R U R\' U R</string>
+    <string name="wv39_title" translatable="false" />
+    <string name="wv39_subtitle" translatable="false" />
+
+    <string name="wv40_count" translatable="false">2</string>
+    <string name="wv40_0" translatable="false">U2 L\' U2 L U R U R\' U R U2 R\'</string>
+    <string name="wv40_1" translatable="false">U\' L2 D\' L U\' L\' D L U2 L</string>
+    <string name="wv40_title" translatable="false" />
+    <string name="wv40_subtitle" translatable="false" />
+
+    <string name="wv41_count" translatable="false">2</string>
+    <string name="wv41_0" translatable="false">U R2 D R\' U R D\' R\' U2 R\'</string>
+    <string name="wv41_1" translatable="false">L\' U R2 U\' L U R\' U\' R\'</string>
+    <string name="wv41_title" translatable="false" />
+    <string name="wv41_subtitle" translatable="false" />
+
+    <string name="wv42_count" translatable="false">2</string>
+    <string name="wv42_0" translatable="false">L2 U\' L U\' L U L\' U\' L\' U2 L2</string>
+    <string name="wv42_1" translatable="false">U2 L U\' R\' U L2 U\' R U\' L</string>
+    <string name="wv42_title" translatable="false" />
+    <string name="wv42_subtitle" translatable="false" />
+
+    <string name="wv43_count" translatable="false">1</string>
+    <string name="wv43_0" translatable="false">R2 U R\' U R\' U\' R U R U2 R2</string>
+    <string name="wv43_title" translatable="false" />
+    <string name="wv43_subtitle" translatable="false" />
+
+    <string name="wv44_count" translatable="false">1</string>
+    <string name="wv44_0" translatable="false">U2 L\' U L U\' L\' U L U\' L\' U2 L</string>
+    <string name="wv44_title" translatable="false" />
+    <string name="wv44_subtitle" translatable="false" />
+
+    <string name="wv45_count" translatable="false">1</string>
+    <string name="wv45_0" translatable="false">U2 R U\' R\' U R U\' R\' U R U2 R\'</string>
+    <string name="wv45_title" translatable="false" />
+    <string name="wv45_subtitle" translatable="false" />
+
+    <string name="wv46_count" translatable="false">1</string>
+    <string name="wv46_0" translatable="false">U2 L\' U2 L U R\' U\' R U\' R\' U2 R</string>
+    <string name="wv46_title" translatable="false" />
+    <string name="wv46_subtitle" translatable="false" />
+
+    <string name="wv47_count" translatable="false">1</string>
+    <string name="wv47_0" translatable="false">U2 R U2 R2 U2 R U R\' U R</string>
+    <string name="wv47_title" translatable="false" />
+    <string name="wv47_subtitle" translatable="false" />
+
+    <string name="wv48_count" translatable="false">1</string>
+    <string name="wv48_0" translatable="false">U\' L\' U L U R\' U2 R U R\' U R</string>
+    <string name="wv48_title" translatable="false" />
+    <string name="wv48_subtitle" translatable="false" />
+
+    <string name="wv49_count" translatable="false">1</string>
+    <string name="wv49_0" translatable="false">U R U\' R2 U\' R U\' R\' U2 R</string>
+    <string name="wv49_title" translatable="false" />
+    <string name="wv49_subtitle" translatable="false" />
+
+    <string name="wv50_count" translatable="false">1</string>
+    <string name="wv50_0" translatable="false">U\' L\' U\' L U L\' U\' L U L\' U L</string>
+    <string name="wv50_title" translatable="false" />
+    <string name="wv50_subtitle" translatable="false" />
+
+    <string name="wv51_count" translatable="false">2</string>
+    <string name="wv51_0" translatable="false">U R U R\' U\' R U R\' U\' R U\' R\'</string>
+    <string name="wv51_1" translatable="false">`</string>
+    <string name="wv51_title" translatable="false" />
+    <string name="wv51_subtitle" translatable="false" />
+</resources>

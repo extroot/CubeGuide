@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="f2l_count" translatable="false">41</string>
+    <string name="f2l0_count" translatable="false">3</string>
+    <string name="f2l0_0" translatable="false">y U\' L\' U L</string>
+    <string name="f2l0_1" translatable="false">y\' U\' R\' U R</string>
+    <string name="f2l0_2" translatable="false">F R\' F\' R</string>
+    <string name="f2l0_title" translatable="false" />
+    <string name="f2l0_subtitle" translatable="false" />
+
+    <string name="f2l1_count" translatable="false">3</string>
+    <string name="f2l1_0" translatable="false">U R U\' R\'</string>
+    <string name="f2l1_1" translatable="false">y U F\' U\' F\'</string>
+    <string name="f2l1_2" translatable="false">y2 U L U L\'</string>
+    <string name="f2l1_title" translatable="false" />
+    <string name="f2l1_subtitle" translatable="false" />
+
+    <string name="f2l2_count" translatable="false">3</string>
+    <string name="f2l2_0" translatable="false">F\' U\' F</string>
+    <string name="f2l2_1" translatable="false">y\' R\' U\' R</string>
+    <string name="f2l2_2" translatable="false">y L\' U\' L</string>
+    <string name="f2l2_title" translatable="false" />
+    <string name="f2l2_subtitle" translatable="false" />
+
+    <string name="f2l3_count" translatable="false">2</string>
+    <string name="f2l3_0" translatable="false">R U R\'</string>
+    <string name="f2l3_1" translatable="false">y2 L U L\'</string>
+    <string name="f2l3_title" translatable="false" />
+    <string name="f2l3_subtitle" translatable="false" />
+
+    <string name="f2l4_count" translatable="false">3</string>
+    <string name="f2l4_0" translatable="false">y\' U R\' U\' R U R\' U2 R</string>
+    <string name="f2l4_1" translatable="false">U\' Rw U\' R\' U R U Rw\'</string>
+    <string name="f2l4_2" translatable="false">y2 U\' x\' R U\' Rw\' F Rw U Lw\'</string>
+    <string name="f2l4_title" translatable="false" />
+    <string name="f2l4_subtitle" translatable="false" />
+
+    <string name="f2l5_count" translatable="false">3</string>
+    <string name="f2l5_0" translatable="false">U\' R U R\' U2 R U\' R\'</string>
+    <string name="f2l5_1" translatable="false">y\' U Rw\' U R U\' R\' U\' Rw</string>
+    <string name="f2l5_2" translatable="false">y R\' F Rw U\' Rw\' F\' R</string>
+    <string name="f2l5_title" translatable="false" />
+    <string name="f2l5_subtitle" translatable="false" />
+
+    <string name="f2l6_count" translatable="false">2</string>
+    <string name="f2l6_0" translatable="false">y\' U R\' U2 R U R\' U2 R</string>
+    <string name="f2l6_1" translatable="false">Rw\' U2 R2 U R2 U Rw</string>
+    <string name="f2l6_title" translatable="false" />
+    <string name="f2l6_subtitle" translatable="false" />
+
+    <string name="f2l7_count" translatable="false">2</string>
+    <string name="f2l7_0" translatable="false">U\' R U2 R\' U2 R U\' R\'</string>
+    <string name="f2l7_1" translatable="false">y2 U\' L U2 L\' U\' L U2 L\'</string>
+    <string name="f2l7_title" translatable="false" />
+    <string name="f2l7_subtitle" translatable="false" />
+
+    <string name="f2l8_count" translatable="false">3</string>
+    <string name="f2l8_0" translatable="false">F R U R\' U\' F\' R U\' R\'</string>
+    <string name="f2l8_1" translatable="false">U\' R U\' R\' U F\' U\' F</string>
+    <string name="f2l8_2" translatable="false">y\' U R\' U\' R U\' R\' U\' R</string>
+    <string name="f2l8_title" translatable="false" />
+    <string name="f2l8_subtitle" translatable="false" />
+
+    <string name="f2l9_count" translatable="false">2</string>
+    <string name="f2l9_0" translatable="false">U\' R U R\' U R U R\'</string>
+    <string name="f2l9_1" translatable="false">U2 R U\' R\' U\' R U R\'</string>
+    <string name="f2l9_title" translatable="false" />
+    <string name="f2l9_subtitle" translatable="false" />
+
+    <string name="f2l10_count" translatable="false">3</string>
+    <string name="f2l10_0" translatable="false">y\' R U2 R2 U\' R2 U\' R\'</string>
+    <string name="f2l10_1" translatable="false">y L\' U L U\' L\' U L U2 L\' U L</string>
+    <string name="f2l10_2" translatable="false">y2 U2 R\' U2 R U R\' U\' R U R\' U\' R</string>
+    <string name="f2l10_title" translatable="false" />
+    <string name="f2l10_subtitle" translatable="false" />
+
+    <string name="f2l11_count" translatable="false">3</string>
+    <string name="f2l11_0" translatable="false">R U\' R\' U R U\' R\' U2 R U\' R\'</string>
+    <string name="f2l11_1" translatable="false">R\' U2 R2 U R2 U R</string>
+    <string name="f2l11_2" translatable="false">y2 L U2 L2 U L2 U L</string>
+    <string name="f2l11_title" translatable="false" />
+    <string name="f2l11_subtitle" translatable="false" />
+
+    <string name="f2l12_count" translatable="false">1</string>
+    <string name="f2l12_0" translatable="false">y\' U R\' U R U\' R\' U\' R</string>
+    <string name="f2l12_title" translatable="false" />
+    <string name="f2l12_subtitle" translatable="false" />
+
+    <string name="f2l13_count" translatable="false">1</string>
+    <string name="f2l13_0" translatable="false">U\' R U\' R\' U R U R\'</string>
+    <string name="f2l13_title" translatable="false" />
+    <string name="f2l13_subtitle" translatable="false" />
+
+    <string name="f2l14_count" translatable="false">3</string>
+    <string name="f2l14_0" translatable="false">R U\' R\' y\' U2 R\' U\' R</string>
+    <string name="f2l14_1" translatable="false">U F U R U\' R\' F\' R U R\'</string>
+    <string name="f2l14_2" translatable="false">y Rw\' R U\' R\' F R U M\'</string>
+    <string name="f2l14_title" translatable="false" />
+    <string name="f2l14_subtitle" translatable="false" />
+
+    <string name="f2l15_count" translatable="false">3</string>
+    <string name="f2l15_0" translatable="false">R U R\' U2 R U\' R\' U R U\' R\'</string>
+    <string name="f2l15_1" translatable="false">Rw\' R U Rw U\' Rw\' U\' M\'</string>
+    <string name="f2l15_2" translatable="false">(y\') R\' U R U2 y R U R\'</string>
+    <string name="f2l15_title" translatable="false" />
+    <string name="f2l15_subtitle" translatable="false" />
+
+    <string name="f2l16_count" translatable="false">2</string>
+    <string name="f2l16_0" translatable="false">y\' R\' U2 R U R\' U\' R</string>
+    <string name="f2l16_1" translatable="false">R\' F R F\' R U\' R\' U R U\' R\'</string>
+    <string name="f2l16_title" translatable="false" />
+    <string name="f2l16_subtitle" translatable="false" />
+
+    <string name="f2l17_count" translatable="false">1</string>
+    <string name="f2l17_0" translatable="false">R U2 R\' U\' R U R\'</string>
+    <string name="f2l17_title" translatable="false" />
+    <string name="f2l17_subtitle" translatable="false" />
+
+    <string name="f2l18_count" translatable="false">3</string>
+    <string name="f2l18_0" translatable="false">y\' R\' U2 R U\' R\' U R</string>
+    <string name="f2l18_1" translatable="false">R U\' R2 F R F\' R U\' R\'</string>
+    <string name="f2l18_2" translatable="false">y L\' U2 L U\' L\' U L</string>
+    <string name="f2l18_title" translatable="false" />
+    <string name="f2l18_subtitle" translatable="false" />
+
+    <string name="f2l19_count" translatable="false">2</string>
+    <string name="f2l19_0" translatable="false">R U2 R\' U R U\' R\'</string>
+    <string name="f2l19_1" translatable="false">U\' R U\' R\' U R U\' R\' U R U R\'</string>
+    <string name="f2l19_title" translatable="false" />
+    <string name="f2l19_subtitle" translatable="false" />
+
+    <string name="f2l20_count" translatable="false">3</string>
+    <string name="f2l20_0" translatable="false">R U R\' F\' U\' F</string>
+    <string name="f2l20_1" translatable="false">y\' R\' U\' R U\' R\' U R</string>
+    <string name="f2l20_2" translatable="false">y L\' U\' L U\' L\' U L</string>
+    <string name="f2l20_title" translatable="false" />
+    <string name="f2l20_subtitle" translatable="false" />
+
+    <string name="f2l21_count" translatable="false">3</string>
+    <string name="f2l21_0" translatable="false">R U R\' U R U\' R\'</string>
+    <string name="f2l21_1" translatable="false">U2 R U\' R\' U2 R U R\'</string>
+    <string name="f2l21_2" translatable="false">y\' R\' Dw\' F R U R\'</string>
+    <string name="f2l21_title" translatable="false" />
+    <string name="f2l21_subtitle" translatable="false" />
+
+    <string name="f2l22_count" translatable="false">3</string>
+    <string name="f2l22_0" translatable="false">y U\' L\' U L U L\' U L U\' L\' U L</string>
+    <string name="f2l22_1" translatable="false">F U R U\' R\' F\' R U\' R\'</string>
+    <string name="f2l22_2" translatable="false">U\' R U R2 F R F\' R U\' R\'</string>
+    <string name="f2l22_title" translatable="false" />
+    <string name="f2l22_subtitle" translatable="false" />
+
+    <string name="f2l23_count" translatable="false">3</string>
+    <string name="f2l23_0" translatable="false">R U\' R\' U R U2 R\' U R U R\'</string>
+    <string name="f2l23_1" translatable="false">R U R\' U2 R U R\' U\' R U R\'</string>
+    <string name="f2l23_2" translatable="false">(U2) R2 U2 R\' U\' R U\' R2</string>
+    <string name="f2l23_title" translatable="false" />
+    <string name="f2l23_subtitle" translatable="false" />
+
+    <string name="f2l24_count" translatable="false">2</string>
+    <string name="f2l24_0" translatable="false">y Rw U Rw\' U\' L\' U L F\'</string>
+    <string name="f2l24_1" translatable="false">U R U\' R\' F R\' F\' R</string>
+    <string name="f2l24_title" translatable="false" />
+    <string name="f2l24_subtitle" translatable="false" />
+
+    <string name="f2l25_count" translatable="false">3</string>
+    <string name="f2l25_0" translatable="false">R\' F\' R U R U\' R\' F</string>
+    <string name="f2l25_1" translatable="false">U\' F\' R U R\' U\' R\' F R</string>
+    <string name="f2l25_2" translatable="false">y U\' L\' U L U y\' R U\' R\'</string>
+    <string name="f2l25_title" translatable="false" />
+    <string name="f2l25_subtitle" translatable="false" />
+
+    <string name="f2l26_count" translatable="false">3</string>
+    <string name="f2l26_0" translatable="false">y\' R\' U R U\' R\' U R</string>
+    <string name="f2l26_1" translatable="false">R U R\' U\' F R\' F\' R</string>
+    <string name="f2l26_2" translatable="false">y L\' U L U\' L\' U L</string>
+    <string name="f2l26_title" translatable="false" />
+    <string name="f2l26_subtitle" translatable="false" />
+
+    <string name="f2l27_count" translatable="false">2</string>
+    <string name="f2l27_0" translatable="false">R U\' R\' U R U\' R\'</string>
+    <string name="f2l27_1" translatable="false">y2 L U\' L U L U\' L\'</string>
+    <string name="f2l27_title" translatable="false" />
+    <string name="f2l27_subtitle" translatable="false" />
+
+    <string name="f2l28_count" translatable="false">1</string>
+    <string name="f2l28_0" translatable="false">y L\' U\' L U L\' U\' L</string>
+    <string name="f2l28_title" translatable="false" />
+    <string name="f2l28_subtitle" translatable="false" />
+
+    <string name="f2l29_count" translatable="false">2</string>
+    <string name="f2l29_0" translatable="false">R U R\' U\' R U R\'</string>
+    <string name="f2l29_1" translatable="false">U\' R U2 R\' U2 R U R\'</string>
+    <string name="f2l29_title" translatable="false" />
+    <string name="f2l29_subtitle" translatable="false" />
+
+    <string name="f2l30_count" translatable="false">2</string>
+    <string name="f2l30_0" translatable="false">U\' R U\' R\' U2 R U\' R\'</string>
+    <string name="f2l30_1" translatable="false">y\' U R\' U2 R U\' R\' U\' R</string>
+    <string name="f2l30_title" translatable="false" />
+    <string name="f2l30_subtitle" translatable="false" />
+
+    <string name="f2l31_count" translatable="false">3</string>
+    <string name="f2l31_0" translatable="false">U\' R U2\' R\' U R U R\'</string>
+    <string name="f2l31_1" translatable="false">U R U R\' U2 R U R\'</string>
+    <string name="f2l31_2" translatable="false">y\' U R\' U R U2 R\' U R</string>
+    <string name="f2l31_title" translatable="false" />
+    <string name="f2l31_subtitle" translatable="false" />
+
+    <string name="f2l32_count" translatable="false">2</string>
+    <string name="f2l32_0" translatable="false">U\' R U R\' Dw R\' U\' R</string>
+    <string name="f2l32_1" translatable="false">U2 R U R\' y U\' L\' U L</string>
+    <string name="f2l32_title" translatable="false" />
+    <string name="f2l32_subtitle" translatable="false" />
+
+    <string name="f2l33_count" translatable="false">2</string>
+    <string name="f2l33_0" translatable="false">U F\' U\' F U\' R U R\'</string>
+    <string name="f2l33_1" translatable="false">U2 F\' U\' F U R U\' R\'</string>
+    <string name="f2l33_title" translatable="false" />
+    <string name="f2l33_subtitle" translatable="false" />
+
+    <string name="f2l34_count" translatable="false">3</string>
+    <string name="f2l34_0" translatable="false">U R U\' R\' U R U\' R\' U R U\' R\'</string>
+    <string name="f2l34_1" translatable="false">R U R\' U\' R U R\' U\' R U R\'</string>
+    <string name="f2l34_2" translatable="false">U2 R U\' R\' U R U R\' U R U\' R\'</string>
+    <string name="f2l34_title" translatable="false" />
+    <string name="f2l34_subtitle" translatable="false" />
+
+    <string name="f2l35_count" translatable="false">3</string>
+    <string name="f2l35_0" translatable="false">R U\' R\' U y\' R\' U R</string>
+    <string name="f2l35_1" translatable="false">U\' R\' F R F\' R U\' R\'</string>
+    <string name="f2l35_2" translatable="false">U R U2 R\' F\' U\' F</string>
+    <string name="f2l35_title" translatable="false" />
+    <string name="f2l35_subtitle" translatable="false" />
+
+    <string name="f2l36_count" translatable="false">3</string>
+    <string name="f2l36_0" translatable="false">R U\' R\' U\' R U R\' U2 R U\' R\'</string>
+    <string name="f2l36_1" translatable="false">R U R\' U\' R U2 R\' U\' R U R\'</string>
+    <string name="f2l36_2" translatable="false">y\' R\' U R U\' R\' U2 R U\' R\' U R</string>
+    <string name="f2l36_title" translatable="false" />
+    <string name="f2l36_subtitle" translatable="false" />
+
+    <string name="f2l37_count" translatable="false">2</string>
+    <string name="f2l37_0" translatable="false">R U\' R\' U R U2\' R\' U R U\' R\'</string>
+    <string name="f2l37_1" translatable="false">R U2 R U R\' U R U2 R2\'</string>
+    <string name="f2l37_title" translatable="false" />
+    <string name="f2l37_subtitle" translatable="false" />
+
+    <string name="f2l38_count" translatable="false">2</string>
+    <string name="f2l38_0" translatable="false">R U\' R\' U\' R U\' R\' Dw R\' U\' R</string>
+    <string name="f2l38_1" translatable="false">R F U R U\' R\' F\' U\' R\'</string>
+    <string name="f2l38_title" translatable="false" />
+    <string name="f2l38_subtitle" translatable="false" />
+
+    <string name="f2l39_count" translatable="false">2</string>
+    <string name="f2l39_0" translatable="false">R U R\' U\' R U\' R\' U2 F\' U\' F</string>
+    <string name="f2l39_1" translatable="false">y F R U2 R\' F\' L\' U\' L</string>
+    <string name="f2l39_title" translatable="false" />
+    <string name="f2l39_subtitle" translatable="false" />
+
+    <string name="f2l40_count" translatable="false">2</string>
+    <string name="f2l40_0" translatable="false">R\' F R F\' R U\' R\' U R U\' R\' U2 R U\' R\'</string>
+    <string name="f2l40_1" translatable="false">R U\' R\' U y\' R\' U2 R U2\' R\' U R</string>
+    <string name="f2l40_title" translatable="false" />
+    <string name="f2l40_subtitle" translatable="false" />
+</resources>

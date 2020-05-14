@@ -3,7 +3,6 @@ package ru.extroot.newcubeguide;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.ContextThemeWrapper;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,6 +27,7 @@ import org.jetbrains.annotations.NotNull;
     public class MainActivity extends AppCompatActivity {
     /*
     TODO: Rewrite full app
+    TODO: Rewrite string resources
     3x3x3:
         F2l     - 1
         OLL     - 2
@@ -35,7 +35,6 @@ import org.jetbrains.annotations.NotNull;
         TODO: Expert F2L, OLL, PLL
 
     3x3x3 EASY  - 22
-
     TODO: easy Fridrich, 4x4x4, 5x5x5, 2x2x2
 
     3x3x3 OH:
@@ -51,19 +50,19 @@ import org.jetbrains.annotations.NotNull;
         OLC     - 11
         WV      - 12
         SV      - 13
-        VLS     - 18  TODO: VLS titles
+        VLS     - 18
         MW      - 19
 
     2x2x2 EG:
         CLL     - 9
         EG1     - 15
         EG2     - 16
-        TODO: Ortega
         LEG1    - 17
-
+        TODO: Ortega
+  
     Megaminx:
         MG_OLL  - 20
-        PLLR    - 21
+        MG_PLL    - 21
      */
     private Toolbar toolbar;
 
@@ -87,7 +86,7 @@ import org.jetbrains.annotations.NotNull;
     private static final int VLS_ID     = 18;
     private static final int MW_ID      = 19;
     private static final int MG_OLL_ID  = 20;
-    private static final int PLLR_ID    = 21;
+    private static final int MG_PLL_ID  = 21;
     private static final int easy_3_ID  = 22;
 
     private int picLen = 250;
@@ -95,7 +94,8 @@ import org.jetbrains.annotations.NotNull;
     String picMode, mode;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -105,16 +105,15 @@ import org.jetbrains.annotations.NotNull;
 
         DisplayMetrics displaymetrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
-        if (displaymetrics.widthPixels < 700) {
+        if (displaymetrics.widthPixels < 700)
+        {
             picLen = 100 ;
             textSize = 14;
-        } else if (displaymetrics.widthPixels < 1000) {
+        } else if (displaymetrics.widthPixels < 1000)
+        {
             picLen = 150;
             textSize = 14;
         }
-        System.out.println(displaymetrics.widthPixels);
-        System.out.println(picLen);
-
 
         DrawerBuilder drawerBuilder = new DrawerBuilder()
                 .withActivity(this)
@@ -124,182 +123,156 @@ import org.jetbrains.annotations.NotNull;
                         new PrimaryDrawerItem()
                                 .withName(getResources().getString(R.string.easy3_header))
                                 .withSelectable(false)
-                                .withIconTintingEnabled(true)
                                 .withIdentifier(easy_3_ID),
                         new ExpandableDrawerItem()
                                 .withName(getResources().getString(R.string.header_3x3x3))
                                 .withSelectable(false)
-                                .withIconTintingEnabled(true)
                                 .withSubItems(
                                         new SecondaryDrawerItem()
                                                 .withName(getResources().getString(R.string.f2l_header))
                                                 .withLevel(2)
-                                                .withIconTintingEnabled(true)
                                                 .withIdentifier(F2L_ID),
                                         new SecondaryDrawerItem()
                                                 .withName(getResources().getString(R.string.oll_header))
                                                 .withLevel(2)
-                                                .withIconTintingEnabled(true)
                                                 .withIdentifier(OLL_ID),
                                         new SecondaryDrawerItem()
                                                 .withName(getResources().getString(R.string.pll_header))
                                                 .withLevel(2)
-                                                .withIconTintingEnabled(true)
                                                 .withIdentifier(PLL_ID)),
                         new ExpandableDrawerItem()
                                 .withName(getResources().getString(R.string.header_3x3x3_oh))
                                 .withSelectable(false)
-                                .withIconTintingEnabled(true)
                                 .withSubItems(
                                         new SecondaryDrawerItem()
                                                 .withName(getResources().getString(R.string.oh_oll_header))
                                                 .withLevel(2)
-                                                .withIconTintingEnabled(true)
                                                 .withIdentifier(OH_OLL_ID),
                                         new SecondaryDrawerItem()
                                                 .withName(getResources().getString(R.string.oh_pll_header))
                                                 .withLevel(2)
-                                                .withIconTintingEnabled(true)
                                                 .withIdentifier(OH_PLL_ID),
                                         new SecondaryDrawerItem()
                                                 .withName(getResources().getString(R.string.oh_coll_header))
                                                 .withLevel(2)
-                                                .withIconTintingEnabled(true)
                                                 .withIdentifier(OH_COLL_ID)),
                         new ExpandableDrawerItem()
                                 .withName(getResources().getString(R.string.header_3x3x3_pro))
                                 .withSelectable(false)
-                                .withIconTintingEnabled(true)
                                 .withSubItems(
                                         new SecondaryDrawerItem()
                                                 .withName(getResources().getString(R.string.vh_header))
                                                 .withLevel(2)
-                                                .withIconTintingEnabled(true)
                                                 .withIdentifier(VHF2L_ID),
                                         new SecondaryDrawerItem()
                                                 .withName(getResources().getString(R.string.op_header))
                                                 .withLevel(2)
-                                                .withIconTintingEnabled(true)
                                                 .withIdentifier(OPF2L_ID),
                                         new SecondaryDrawerItem()
                                                 .withName(getResources().getString(R.string.coll_header))
                                                 .withLevel(2)
                                                 .withTextColor(R.color.colorBlack)
-                                                .withIconTintingEnabled(true)
                                                 .withIdentifier(COLL_ID),
                                         new SecondaryDrawerItem()
                                                 .withName(getResources().getString(R.string.ole_header))
                                                 .withLevel(2)
                                                 .withTextColor(R.color.colorBlack)
-                                                .withIconTintingEnabled(true)
                                                 .withIdentifier(OLE_ID),
                                         new SecondaryDrawerItem()
                                                 .withName(getResources().getString(R.string.olc_header))
                                                 .withLevel(2)
                                                 .withTextColor(R.color.colorBlack)
-                                                .withIconTintingEnabled(true)
                                                 .withIdentifier(OLC_ID),
                                         new SecondaryDrawerItem()
                                                 .withName(getResources().getString(R.string.wv_header))
                                                 .withLevel(2)
                                                 .withTextColor(R.color.colorBlack)
-                                                .withIconTintingEnabled(true)
                                                 .withIdentifier(WV_ID),
                                         new SecondaryDrawerItem()
                                                 .withName(getResources().getString(R.string.sv_header))
                                                 .withLevel(2)
                                                 .withTextColor(R.color.colorBlack)
-                                                .withIconTintingEnabled(true)
                                                 .withIdentifier(SV_ID),
                                         new SecondaryDrawerItem()
                                                 .withName(getResources().getString(R.string.vls_header))
                                                 .withLevel(2)
                                                 .withTextColor(R.color.colorBlack)
-                                                .withIconTintingEnabled(true)
                                                 .withIdentifier(VLS_ID),
                                         new SecondaryDrawerItem()
                                                 .withName(getResources().getString(R.string.mw_header))
                                                 .withLevel(2)
                                                 .withTextColor(R.color.colorBlack)
-                                                .withIconTintingEnabled(true)
                                                 .withIdentifier(MW_ID)),
                         new ExpandableDrawerItem()
                                 .withName(getResources().getString(R.string.header_2x2x2))
                                 .withSelectable(false)
-                                .withIconTintingEnabled(true)
                                 .withSubItems(
                                         new SecondaryDrawerItem()
                                                 .withName(getResources().getString(R.string.cll_header))
                                                 .withLevel(2)
-                                                .withIconTintingEnabled(true)
                                                 .withIdentifier(CLL_ID),
                                         new SecondaryDrawerItem()
                                                 .withName(getResources().getString(R.string.eg1__header))
                                                 .withLevel(2)
-                                                .withIconTintingEnabled(true)
                                                 .withIdentifier(EG1_ID),
                                         new SecondaryDrawerItem()
                                                 .withName(getResources().getString(R.string.eg2__header))
                                                 .withLevel(2)
-                                                .withIconTintingEnabled(true)
                                                 .withIdentifier(EG2_ID),
                                         new SecondaryDrawerItem()
                                                 .withName(getResources().getString(R.string.leg1__header))
                                                 .withLevel(2)
-                                                .withIconTintingEnabled(true)
                                                 .withIdentifier(LEG1_ID)),
                         new ExpandableDrawerItem()
                                 .withName(getResources().getString(R.string.header_mg))
                                 .withSelectable(false)
-                                .withIconTintingEnabled(true)
                                 .withSubItems(
                                         new SecondaryDrawerItem()
                                                 .withName(getResources().getString(R.string.mg_oll_header))
                                                 .withLevel(2)
-                                                .withIconTintingEnabled(true)
                                                 .withIdentifier(MG_OLL_ID),
                                         new SecondaryDrawerItem()
-                                                .withName(getResources().getString(R.string.pllr_header))
+                                                .withName(getResources().getString(R.string.mg_pll_header))
                                                 .withLevel(2)
-                                                .withIconTintingEnabled(true)
-                                                .withIdentifier(PLLR_ID))
+                                                .withIdentifier(MG_PLL_ID))
                 )
-                .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
+                .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener()
+                {
                     @Override
-                    public boolean onItemClick(View view, int position, @NotNull IDrawerItem drawerItem) {
+                    public boolean onItemClick(View view, int position, @NotNull IDrawerItem drawerItem)
+                    {
 
                         switch ((int) drawerItem.getIdentifier()) {
-                            case F2L_ID: mode = picMode = "f2l"; break;
-                            case OLL_ID: mode = picMode = "oll"; break;
-                            case OH_OLL_ID: mode = "oh_oll"; picMode = "oll"; break;
-
-                            case PLL_ID: mode = picMode = "pll"; break;
-                            case OH_PLL_ID: mode = "oh_pll"; picMode = "pll"; break;
-
-                            case COLL_ID: mode = picMode = "coll"; break;
+                            case F2L_ID:     mode = picMode = "f2l"; break;
+                            case OLL_ID:     mode = picMode = "oll"; break;
+                            case PLL_ID:     mode = picMode = "pll"; break;
+                            
+                            case OH_OLL_ID:  mode = "oh_oll";  picMode = "oll";  break; 
+                            case OH_PLL_ID:  mode = "oh_pll";  picMode = "pll";  break;
                             case OH_COLL_ID: mode = "oh_coll"; picMode = "coll"; break;
+                            
+                            case COLL_ID:    mode = picMode = "coll"; break;
+                            case OPF2L_ID:   mode = picMode = "op";   break;
+                            case VHF2L_ID:   mode = picMode = "vh";   break;
+                            case WV_ID:      mode = picMode = "wv";   break;
+                            case SV_ID:      mode = picMode = "sv";   break;
+                            case MW_ID:      mode = picMode = "mw";   break;
+                            case OLE_ID:     mode = picMode = "ole";  break;
+                            case OLC_ID:     mode = picMode = "olc";  break;
+                            case VLS_ID:     mode = picMode = "vls";  break;
 
-                            case OPF2L_ID: mode = picMode = "op"; break;
-                            case VHF2L_ID: mode = picMode = "vh"; break;
-                            case WV_ID: mode = picMode = "wv"; break;
-                            case SV_ID: mode = picMode = "sv"; break;
-                            case MW_ID: mode = picMode = "mw"; break;
-                            case OLE_ID: mode = picMode = "ole"; break;
-                            case OLC_ID: mode = picMode = "olc"; break;
-                            case VLS_ID: mode = picMode = "vls"; break;
+                            case CLL_ID:     mode = picMode = "cll";          break;
+                            case EG1_ID:     mode = "eg1_";  picMode = "cll"; break;
+                            case EG2_ID:     mode = "eg2_";  picMode = "cll"; break;
+                            case LEG1_ID:    mode = "leg1_"; picMode = "cll"; break;
 
-                            case CLL_ID: mode = picMode = "cll"; break;
-                            case EG1_ID: mode = "eg1_"; picMode = "cll"; break;
-                            case EG2_ID: mode = "eg2_"; picMode = "cll"; break;
-                            case LEG1_ID: mode = "leg1_"; picMode = "cll"; break;
+                            case MG_OLL_ID:  mode = picMode = "mg_oll"; break;
+                            case MG_PLL_ID:  mode = picMode = "mg_pll"; break;
 
-                            case MG_OLL_ID: mode = picMode = "mg_oll"; break;
-                            case PLLR_ID: mode = picMode = "pllr"; break;
-
-                            case easy_3_ID: tutorials_3x3x3(); return false;
+                            case easy_3_ID:  tutorials_3x3x3(); return false; 
                             default: return true;
                         }
-                        newDraw();
+                        Draw();
 
                         return false;
                         }
@@ -310,7 +283,8 @@ import org.jetbrains.annotations.NotNull;
     }
 
 
-    void tutorials_3x3x3() {
+    void tutorials_3x3x3()
+    {
         toolbar.setTitle(getResources().getString(R.string.easy3_header));
 
         LinearLayout mainLayout = findViewById(R.id.main_view);
@@ -323,7 +297,8 @@ import org.jetbrains.annotations.NotNull;
     }
 
 
-    void newDraw() {
+    void Draw()
+    {
         toolbar.setTitle(getResources().getString(getResources().getIdentifier(mode + "_header", "string", getPackageName())));
         LinearLayout mainLayout = findViewById(R.id.main_view);
         mainLayout.removeAllViews();
@@ -331,36 +306,46 @@ import org.jetbrains.annotations.NotNull;
 
         ScrollView scrollview = findViewById(R.id.main_scroll);
         scrollview.scrollTo(0,0);
-        for (int i = 0; i < Integer.parseInt(getResources().getString(getResources().getIdentifier(mode + "_count", "string", getPackageName()))); i++) {
+        for (int i = 0; i < Integer.parseInt(getResources().getString(getResources().getIdentifier(mode + "_count", "string", getPackageName()))); i++)
+        {
             int algCount = Integer.parseInt(getResources().getString(getResources().getIdentifier(mode + i + "_count", "string", getPackageName())));
             if (algCount == 0) continue;
-            LinearLayout line = new LinearLayout(new ContextThemeWrapper(this, R.style.line));
+
+
             ImageView image = new ImageView(this);
             image.setImageResource(getResources().getIdentifier(picMode + i, "drawable", getPackageName()));
             image.setLayoutParams(new LinearLayout.LayoutParams(picLen, picLen));
+
+            LinearLayout line = new LinearLayout(new ContextThemeWrapper(this, R.style.line));
 
             LinearLayout algLayout = new LinearLayout(this);
             algLayout.setOrientation(LinearLayout.VERTICAL);
             algLayout.setPadding(20,0,0,0);
 
-            for (int n = 0; n < algCount; n++) {
+            for (int n = 0; n < algCount; n++)
+            {
                 String alg = getResources().getString(getResources().getIdentifier(mode + i + "_" + n, "string", getPackageName()));
+
                 TextView text = new TextView(this);
                 text.setText(alg);
                 text.setTextColor(getResources().getColor(R.color.colorBlack));
                 text.setTextSize(textSize);
                 algLayout.addView(text);
             }
+
             String title = getResources().getString(getResources().getIdentifier(picMode + i + "_title", "string", getPackageName()));
-            if (!title.equals("")) {
+            if (!title.equals(""))
+            {
                 TextView titleView = new TextView(this);
                 titleView.setTextColor(getResources().getColor(R.color.colorBlack));
                 titleView.setText(title);
                 titleView.setPadding(0,20,0,0);
                 titleView.setTextSize(textSize + 4);
                 titleView.setTextAlignment(TextView.TEXT_ALIGNMENT_CENTER);
+
                 mainLayout.addView(titleView);
-            } else {
+            } else
+                {
                     View sep = new View(this);
                     LinearLayout.LayoutParams sepParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 1);
                     sep.setLayoutParams(sepParams);

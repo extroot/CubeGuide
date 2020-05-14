@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="pll0_title">Треугольники углов (А-perms)</string>
+    <string name="pll0_subtitle">Треугольники углов (А-perms)</string>
+
+    <string name="pll1_title" />
+    <string name="pll1_subtitle">Треугольники углов (А-perms)</string>
+
+    <string name="pll2_title">Терминатор (E-perm)</string>
+    <string name="pll2_subtitle">Терминатор (E-perm)</string>
+
+    <string name="pll4_title">Саночки (Z-perm)</string>
+    <string name="pll4_subtitle">Саночки (Z-perm)</string>
+
+    <string name="pll5_title">Крест сторон (H-perm)</string>
+    <string name="pll5_subtitle">Крест сторон (H-perm)</string>
+
+    <string name="pll6_title">Треугольники сторон (U-perms)</string>
+    <string name="pll6_subtitle">Треугольники сторон (U-perms)</string>
+
+    <string name="pll7_title" />
+    <string name="pll7_subtitle">Треугольники сторон (U-perms)</string>
+
+    <string name="pll8_title">Лямбды (J-perms)</string>
+    <string name="pll8_subtitle">Лямбды (J-perms)</string>
+
+    <string name="pll9_title" />
+    <string name="pll9_subtitle">Лямбды (J-perms)</string>
+
+    <string name="pll10_title">Cемерки (R-perms)</string>
+    <string name="pll10_subtitle">Cемерки (R-perms)</string>
+
+    <string name="pll11_title" />
+    <string name="pll11_subtitle">Cемерки (R-perms)</string>
+
+    <string name="pll12_title">Буква Т (T-perm)</string>
+    <string name="pll12_subtitle">Буква Т (T-perm)</string>
+
+    <string name="pll13_title">Копье (Y-perm)</string>
+    <string name="pll13_subtitle">Копье (Y-perm)</string>
+
+    <string name="pll14_title">Параллельный перенос (F-perm)</string>
+    <string name="pll14_subtitle">Параллельный перенос (F-perm)</string>
+
+    <string name="pll15_title">Летающая тарелка (V-perm)</string>
+    <string name="pll15_subtitle">Летающая тарелка (V-perm)</string>
+
+    <string name="pll16_title">Буквы X (N-perms)</string>
+    <string name="pll16_subtitle">Буквы X (N-perms)</string>
+
+    <string name="pll17_title" />
+    <string name="pll17_subtitle">Буквы X (N-perms)</string>
+
+    <string name="pll18_title">Восьмерки (G-perms)</string>
+    <string name="pll18_subtitle">Восьмерки (G-perms)</string>
+
+    <string name="pll19_title" />
+    <string name="pll19_subtitle">Восьмерки (G-perms)</string>
+
+    <string name="pll20_title" />
+    <string name="pll20_subtitle">Восьмерки (G-perms)</string>
+
+    <string name="pll21_title" />
+    <string name="pll21_subtitle">Восьмерки (G-perms)</string>
+</resources>

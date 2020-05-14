@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ole_count" translatable="false">26</string>
+    <string name="ole0_count" translatable="false">2</string>
+    <string name="ole0_0" translatable="false">R F R\' U R U\' F\' R\'</string>
+    <string name="ole0_1" translatable="false">U R U\' R\' U R\' D\' R U\' R\' D R</string>
+    <string name="ole0_title">U-shapes</string>
+    <string name="ole0_subtitle">U-shapes</string>
+
+    <string name="ole1_count" translatable="false">2</string>
+    <string name="ole1_0" translatable="false">L U\' D R U R\' D\' L\'</string>
+    <string name="ole1_1" translatable="false">U R\' U2 R U\' R2 U2 R U2 R U\' R</string>
+    <string name="ole1_title" />
+    <string name="ole1_subtitle">U-shapes</string>
+
+    <string name="ole2_count" translatable="false">1</string>
+    <string name="ole2_0" translatable="false">U\' F\' R U D2 R\' U\' R D2 R2 F R</string>
+    <string name="ole2_title" />
+    <string name="ole2_subtitle">U-shapes</string>
+
+    <string name="ole3_count" translatable="false">1</string>
+    <string name="ole3_0" translatable="false">F2 R U2 R\' U2 R\' F2 R2 U2 R\'</string>
+    <string name="ole3_title" />
+    <string name="ole3_subtitle">U-shapes</string>
+
+    <string name="ole4_count" translatable="false">1</string>
+    <string name="ole4_0" translatable="false">R\' F\' R U R U\' R\' F</string>
+    <string name="ole4_title">T-shapes</string>
+    <string name="ole4_subtitle">T-shapes</string>
+
+    <string name="ole5_count" translatable="false">1</string>
+    <string name="ole5_0" translatable="false">U R U\' R\' U R U L U\' R\' U L\'</string>
+    <string name="ole5_title" />
+    <string name="ole5_subtitle">T-shapes</string>
+
+    <string name="ole6_count" translatable="false">2</string>
+    <string name="ole6_0" translatable="false">U\' R U L U L\' U\' R\' U2 L U2 L\'</string>
+    <string name="ole6_1" translatable="false">U R\' U2 R U D\' R2 U R\' U\' R2 D</string>
+    <string name="ole6_title" />
+    <string name="ole6_subtitle">T-shapes</string>
+
+    <string name="ole7_count" translatable="false">3</string>
+    <string name="ole7_0" translatable="false">R\' D\' R U R\' D R U2 R U\' R\' U R U R\'</string>
+    <string name="ole7_1" translatable="false">R\' U R\' U2 R\' U2 R2 U R\' U2 R</string>
+    <string name="ole7_2" translatable="false">F2 R U2 R D R2 U2 R\' D\' F2 R</string>
+    <string name="ole7_title" />
+    <string name="ole7_subtitle">T-shapes</string>
+
+    <string name="ole8_count" translatable="false">2</string>
+    <string name="ole8_0" translatable="false">R U R U2 R\' U R2 U2 R\' U2 R\' U R2</string>
+    <string name="ole8_1" translatable="false">L U2 L\' U2 R U L U\' L\' U\' R\'</string>
+    <string name="ole8_title">L-shapes</string>
+    <string name="ole8_subtitle">L-shapes</string>
+
+    <string name="ole9_count" translatable="false">2</string>
+    <string name="ole9_0" translatable="false">U\' F\' R U R\' U\' R\' F R</string>
+    <string name="ole9_1" translatable="false">R U\' R\' U2 R2 U R\' U R U2 R2</string>
+    <string name="ole9_title" />
+    <string name="ole9_subtitle">L-shapes</string>
+
+    <string name="ole10_count" translatable="false">1</string>
+    <string name="ole10_0" translatable="false">R2 U\' R U\' R U R2 U\' R U2 R2 U</string>
+    <string name="ole10_title" />
+    <string name="ole10_subtitle">L-shapes</string>
+
+    <string name="ole11_count" translatable="false">2</string>
+    <string name="ole11_0" translatable="false">F U2 L F\' L\' U\' R U\' R\' F\'</string>
+    <string name="ole11_1" translatable="false">U R2 U2 R\' U\' R U\' R2 U2 R U R\'</string>
+    <string name="ole11_title" />
+    <string name="ole11_subtitle">L-shapes</string>
+
+    <string name="ole12_count" translatable="false">3</string>
+    <string name="ole12_0" translatable="false">R U\' R\' U\' R U\' R\' U R U R\'</string>
+    <string name="ole12_1" translatable="false">R2 U R\' U\' R\' U\' R U R U\' R2</string>
+    <string name="ole12_2" translatable="false">F2 R U\' R2 F2 R2 U R\' F2</string>
+    <string name="ole12_title">H-shapes</string>
+    <string name="ole12_subtitle">H-shapes</string>
+
+    <string name="ole13_count" translatable="false">2</string>
+    <string name="ole13_0" translatable="false">U\' R U\' R\' U\' R U R\' U R U R\'</string>
+    <string name="ole13_1" translatable="false">R U R U2 R2 U\' R2 U\' R2 U\' R U\' R\'</string>
+    <string name="ole13_title" />
+    <string name="ole13_subtitle">H-shapes</string>
+
+    <string name="ole14_count" translatable="false">1</string>
+    <string name="ole14_0" translatable="false">U2 R U R\' U2 R U2 R\' U2 R U\' R\'</string>
+    <string name="ole14_title">Pi-shapes</string>
+    <string name="ole14_subtitle">Pi-shapes</string>
+
+    <string name="ole15_count" translatable="false">1</string>
+    <string name="ole15_0" translatable="false">U2 R U2 R\' U R U\' R\' U2 R U\' R\'</string>
+    <string name="ole15_title" />
+    <string name="ole15_subtitle">Pi-shapes</string>
+
+    <string name="ole16_count" translatable="false">2</string>
+    <string name="ole16_0" translatable="false">R U R\' U2 R U R\' U\' R U2 R\'</string>
+    <string name="ole16_1" translatable="false">U2 R U\' R D R\' U2 R D\' R\' U R\'</string>
+    <string name="ole16_title" />
+    <string name="ole16_subtitle">Pi-shapes</string>
+
+    <string name="ole17_count" translatable="false">2</string>
+    <string name="ole17_0" translatable="false">R U2 R\' U R U2 R\' U\' R U2 R\'</string>
+    <string name="ole17_1" translatable="false">U\' R U\' R2 D\' R U R\' D R2 U R\'</string>
+    <string name="ole17_title" />
+    <string name="ole17_subtitle">Pi-shapes</string>
+
+    <string name="ole18_count" translatable="false">2</string>
+    <string name="ole18_0" translatable="false">R U R\' U2 R U R\' U2 R U\' R\'</string>
+    <string name="ole18_1" translatable="false">R2 U R2 U R U\' R U\' R2</string>
+    <string name="ole18_title">Sune</string>
+    <string name="ole18_subtitle">Sune</string>
+
+    <string name="ole19_count" translatable="false">2</string>
+    <string name="ole19_0" translatable="false">U R U\' R\' U R U R\' U2 R U R\'</string>
+    <string name="ole19_1" translatable="false">R\' U2 R U R2 U\' R U R U R</string>
+    <string name="ole19_title" />
+    <string name="ole19_subtitle">Sune</string>
+
+    <string name="ole20_count" translatable="false">1</string>
+    <string name="ole20_0" translatable="false">U2 R U2 R\' U R U\' R\' U2 R U R\' U\' R U\' R\'</string>
+    <string name="ole20_title" />
+    <string name="ole20_subtitle">Sune</string>
+
+    <string name="ole21_count" translatable="false">1</string>
+    <string name="ole21_0" translatable="false">U2 R\' U2 R\' U2 R2 U2 R2 U\' R\' U R</string>
+    <string name="ole21_title" />
+    <string name="ole21_subtitle">Sune</string>
+
+    <string name="ole22_count" translatable="false">2</string>
+    <string name="ole22_0" translatable="false">U\' R\' U\' R2 U\' R2 U2 R2 U R\'</string>
+    <string name="ole22_1" translatable="false">R\' U\' R\' U\' R\' U R2 U\' R\' U2 R</string>
+    <string name="ole22_title">Antisune</string>
+    <string name="ole22_subtitle">Antisune</string>
+
+    <string name="ole23_count" translatable="false">2</string>
+    <string name="ole23_0" translatable="false">U\' F\' R U R2 U\' R\' F R U R</string>
+    <string name="ole23_1" translatable="false">U2 R U R\' U2 R U2 R\' U\' R U2 R\'</string>
+    <string name="ole23_title" />
+    <string name="ole23_subtitle">Antisune</string>
+
+    <string name="ole24_count" translatable="false">3</string>
+    <string name="ole24_0" translatable="false">U2 R2 U R\' U R\' U\' R2 U\' R2</string>
+    <string name="ole24_1" translatable="false">R\' U\' R U2 R2 U2 R U2 R U\' R</string>
+    <string name="ole24_2" translatable="false">F2 U\' F2 R U R\' F2 U F2</string>
+    <string name="ole24_title" />
+    <string name="ole24_subtitle">Antisune</string>
+
+    <string name="ole25_count" translatable="false">3</string>
+    <string name="ole25_0" translatable="false">U\' R U\' R\' U2 R U\' R\' U\' R U R\'</string>
+    <string name="ole25_1" translatable="false">R U R U2 R2 U\' R2 U\' R\' U2 R\'</string>
+    <string name="ole25_2" translatable="false">U\' R2 U R2 U\' R\' U\' R U R\' U\' R2</string>
+    <string name="ole25_title" />
+    <string name="ole25_subtitle">Antisune</string>
+</resources>

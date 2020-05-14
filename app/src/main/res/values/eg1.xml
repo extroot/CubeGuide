@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="eg1__count" translatable="false">40</string>
+    <string name="eg1_0_count" translatable="false">2</string>
+    <string name="eg1_0_0" translatable="false">(U\') F\' L U2 F2 R U\' x\'</string>
+    <string name="eg1_0_1" translatable="false">z\' R\' U\' R U2 x\' U2 R U\'</string>
+
+    <string name="eg1_1_count" translatable="false">2</string>
+    <string name="eg1_1_0" translatable="false">R U R\' F2 U F R U R\' </string>
+    <string name="eg1_1_1" translatable="false">(U2) F R2 U\' R2 F U\' F2 U\' R</string>
+
+    <string name="eg1_2_count" translatable="false">2</string>
+    <string name="eg1_2_0" translatable="false">(U\') R\' F R U2 R U\' R2 F2 R F\'</string>
+    <string name="eg1_2_1" translatable="false">(U2) F R\' F\' R U R\' F\' R2 U R\'</string>
+
+    <string name="eg1_3_count" translatable="false">3</string>
+    <string name="eg1_3_0" translatable="false">F\' U R U\' R\' U F R U R\'</string>
+    <string name="eg1_3_1" translatable="false">(U) F\' R\' F R2 U R\' U\' F R\' F\' R</string>
+    <string name="eg1_3_2" translatable="false">(U2) F U\' R U2 R\' F2 R\' F R</string>
+
+    <string name="eg1_4_count" translatable="false">2</string>
+    <string name="eg1_4_0" translatable="false">(U) R U\' R\' U R U\' R\' U F R U\' R\'</string>
+    <string name="eg1_4_1" translatable="false">(U) R U\' R\' U R U\' R\' U\' R\' F\' R F</string>
+
+    <string name="eg1_5_count" translatable="false">1</string>
+    <string name="eg1_5_0" translatable="false">R\' F R2 U\' R\' U L F\' L\' F</string>
+
+    <string name="eg1_6_count" translatable="false">2</string>
+    <string name="eg1_6_0" translatable="false">(U\') B U\' R2 F2 U\' F</string>
+    <string name="eg1_6_1" translatable="false">(U) R\' F R2 U R\' F\' U\' R U\' R\'</string>
+
+    <string name="eg1_7_count" translatable="false">2</string>
+    <string name="eg1_7_0" translatable="false">(U) R U\' R\' F\' U\' F2 R U\' R\'</string>
+    <string name="eg1_7_1" translatable="false">R U\' F2 R U2 R U\' F</string>
+
+    <string name="eg1_8_count" translatable="false">2</string>
+    <string name="eg1_8_0" translatable="false">F\' R U R\' U\' R U R2\' F\' R</string>
+    <string name="eg1_8_1" translatable="false">(U\') R U\' R\' U2 R\' F R2 U2 R\' F</string>
+
+    <string name="eg1_9_count" translatable="false">1</string>
+    <string name="eg1_9_0" translatable="false">R U\' R\' F\' U\' R U R\' U\' F</string>
+
+    <string name="eg1_10_count" translatable="false">2</string>
+    <string name="eg1_10_0" translatable="false">(U\') R U R\' F\' U\' R U R\' U\' R U R\'</string>
+    <string name="eg1_10_1" translatable="false">(U) F\' R\' F R U R U R\' U\' R U R\'</string>
+
+    <string name="eg1_11_count" translatable="false">1</string>
+    <string name="eg1_11_0" translatable="false">(U2) R U\' R2 F R U\' R\' F R F\'</string>
+
+    <string name="eg1_12_count" translatable="false">3</string>
+    <string name="eg1_12_0" translatable="false">(U2) R2 B2 R\' U R\' U\' R U2 R U\' R2</string>
+    <string name="eg1_12_1" translatable="false">(U2) F2 R U R\' U2 R U R\' U\' F</string>
+    <string name="eg1_12_2" translatable="false">(U) F U\' R\' F R U\' F2 R U R\'</string>
+
+    <string name="eg1_13_count" translatable="false">1</string>
+    <string name="eg1_13_0" translatable="false">(U\') R\' F R2 U\' R2 F R</string>
+
+    <string name="eg1_14_count" translatable="false">1</string>
+    <string name="eg1_14_0" translatable="false">(U\') F R\' F U\' F2 R U R</string>
+
+    <string name="eg1_15_count" translatable="false">3</string>
+    <string name="eg1_15_0" translatable="false">(U\') R U\' R\' U R U\' R\' F R U\' R\'</string>
+    <string name="eg1_15_1" translatable="false">(U\') F\' R U R\' U\' R U R\' F\' R U R\'</string>
+    <string name="eg1_15_2" translatable="false">(U\') L\' U L U\' L\' U L F\' L\' U L</string>
+
+    <string name="eg1_16_count" translatable="false">2</string>
+    <string name="eg1_16_0" translatable="false">(U) F U\' R U2 R\' F\' R U R\' F\'</string>
+    <string name="eg1_16_1" translatable="false">R U\' R2 F R U R U\' R\' U\' R\' F R F\'</string>
+
+    <string name="eg1_17_count" translatable="false">3</string>
+    <string name="eg1_17_0" translatable="false">(U\') R\' F R F\' R\' F R2 U R\' U\' R U\' R\'</string>
+    <string name="eg1_17_1" translatable="false">F R U\' R\' F R U2 R\' U F\'</string>
+    <string name="eg1_17_2" translatable="false">(U\') R\' F R F\' U\' R U\' R\' U R\' F R2 U\' R\'</string>
+
+    <string name="eg1_18_count" translatable="false">2</string>
+    <string name="eg1_18_0" translatable="false">R U’ R2’ F R2 U R’ U’ R U’ R’</string>
+    <string name="eg1_18_1" translatable="false">R U R\' U R U R2 F R2 U\' R\'</string>
+
+    <string name="eg1_19_count" translatable="false">2</string>
+    <string name="eg1_19_0" translatable="false">(U2) x U\' R\' U R U\' F R U R U\'  </string>
+    <string name="eg1_19_1" translatable="false">F R U\' R\' F U\' F\' R\' F\' R </string>
+
+    <string name="eg1_20_count" translatable="false">3</string>
+    <string name="eg1_20_0" translatable="false">(U) F\' U2 R U2 R\' U2 F</string>
+    <string name="eg1_20_1" translatable="false">R U\' R\' U\' R U\' R\' U2 R U\' R\' F R U\' R\'</string>
+    <string name="eg1_20_2" translatable="false">(U\') R U\' R2 F2 R F\' U R U R\'</string>
+
+    <string name="eg1_21_count" translatable="false">1</string>
+    <string name="eg1_21_0" translatable="false">(U2) R\' F R F\' R\' F R2 U\' R\'</string>
+
+    <string name="eg1_22_count" translatable="false">3</string>
+    <string name="eg1_22_0" translatable="false">(U2) R\' F R F\' U R U\' R\' F R U\' R\'</string>
+    <string name="eg1_22_1" translatable="false">(U\') R U\' R\' U R U\' R\' U R\' F\' R F</string>
+    <string name="eg1_22_2" translatable="false">(U\') R U\' R\' U R U\' R\' U\' F R U\' R\'</string>
+
+    <string name="eg1_23_count" translatable="false">1</string>
+    <string name="eg1_23_0" translatable="false">(U\') R\' F R2 U\' R\' U y\' R U R\'</string>
+
+    <string name="eg1_24_count" translatable="false">3</string>
+    <string name="eg1_24_0" translatable="false">R U\' R\' U R U\' R2 F\' R F</string>
+    <string name="eg1_24_1" translatable="false">(U) F R U\' R\' F\' R U R\' F\' R U R\'</string>
+    <string name="eg1_24_2" translatable="false">(U) R U R\' F\' R U2 R\' U2 R U R\'</string>
+
+    <string name="eg1_25_count" translatable="false">3</string>
+    <string name="eg1_25_0" translatable="false">(U2) (F R\' F\' R) U2 R U\' R2 F\' R2 U R\'</string>
+    <string name="eg1_25_1" translatable="false">x R\' U\' R U\' R\' U\' R U\' R\' U2 R</string>
+    <string name="eg1_25_2" translatable="false">(U2) R\' F R F\' R\' F R U R U2 R\'</string>
+
+    <string name="eg1_26_count" translatable="false">1</string>
+    <string name="eg1_26_0" translatable="false">R\' U R2 U\' R2 U\' F R2 U\' R\'</string>
+
+    <string name="eg1_27_count" translatable="false">2</string>
+    <string name="eg1_27_0" translatable="false">R\' F R2 U R\' F\' R U2 R\'</string>
+    <string name="eg1_27_1" translatable="false">(U) L\' U2 L F\' R\' F R2 U R\' </string>
+
+    <string name="eg1_28_count" translatable="false">3</string>
+    <string name="eg1_28_0" translatable="false">(U) L\' U L y\' R U2 R U\' R2</string>
+    <string name="eg1_28_1" translatable="false">(U2) F\' R\' F R U\' R U R\' U\' R U R\'</string>
+    <string name="eg1_28_2" translatable="false">(U) R U R\' F\' R U R\' U\' F R\' F\' R</string>
+
+    <string name="eg1_29_count" translatable="false">3</string>
+    <string name="eg1_29_0" translatable="false">(U) R\' U2\' F R U2 R U\' R2 F</string>
+    <string name="eg1_29_1" translatable="false"> (U\') F\' U2 F\' R U2 R\' U\' F</string>
+    <string name="eg1_29_2" translatable="false">R U\' R\' y\' R\' U2 R\' U R2</string>
+
+    <string name="eg1_30_count" translatable="false">3</string>
+    <string name="eg1_30_0" translatable="false">(U2) R2 U R U\' R2 F R U2 R\' F</string>
+    <string name="eg1_30_1" translatable="false">(U\') F2 U\' R2 U\' R\' U R\' F R2</string>
+    <string name="eg1_30_2" translatable="false">L\' U L U2 R\' F2 R F\' L\' U L</string>
+
+    <string name="eg1_31_count" translatable="false">2</string>
+    <string name="eg1_31_0" translatable="false">(U) F\' R\' F R2 U R\' U\' R U R\'</string>
+    <string name="eg1_31_1" translatable="false">(U\') R U\' R\' F R U\' R\' F R U R\' F\'</string>
+
+    <string name="eg1_32_count" translatable="false">2</string>
+    <string name="eg1_32_0" translatable="false">(U2) R U\' R2 F R U R U2 R\'</string>
+    <string name="eg1_32_1" translatable="false">L\' U L2 F\' L\' U\' L\' U2 L</string>
+
+    <string name="eg1_33_count" translatable="false">3</string>
+    <string name="eg1_33_0" translatable="false">R2 B2 U\' R\' U\' R U\' R\' U R\'</string>
+    <string name="eg1_33_1" translatable="false">(U\') R U\' R\' F\' U\' x U R\' U\' R U x\'</string>
+    <string name="eg1_33_2" translatable="false">(U2) R U R\' F\' R U2 R\' U y R\' F R</string>
+
+    <string name="eg1_34_count" translatable="false">2</string>
+    <string name="eg1_34_0" translatable="false">(U2) R U R2 x U\' R U R\' U\' R</string>
+    <string name="eg1_34_1" translatable="false">R\' F\' R2 U R\' F\' R U R\'</string>
+
+    <string name="eg1_35_count" translatable="false">3</string>
+    <string name="eg1_35_0" translatable="false">(U\') R U\' R\' U2 F R U2 R\' F</string>
+    <string name="eg1_35_1" translatable="false">(U\') L\' U L U2 F\' L\' U2 L F\'</string>
+    <string name="eg1_35_2" translatable="false">R U R\' F R U R\' F U\' R U\' R\'</string>
+
+    <string name="eg1_36_count" translatable="false">3</string>
+    <string name="eg1_36_0" translatable="false">R\' F R2 U\' R2 U\' F U R</string>
+    <string name="eg1_36_1" translatable="false">(U) R U R\' F R U\' R\' U\' R U\' R\' F </string>
+    <string name="eg1_36_2" translatable="false">R\' F R2 U\' R\' F R U R\' F\'</string>
+
+    <string name="eg1_37_count" translatable="false">1</string>
+    <string name="eg1_37_0" translatable="false">F\' U R U\' R2 F2 R U\' F</string>
+
+    <string name="eg1_38_count" translatable="false">3</string>
+    <string name="eg1_38_0" translatable="false">R\' U\' R\' F2 U F\' R F\'</string>
+    <string name="eg1_38_1" translatable="false">(U) R\' F R F\' U2 F R U2 R\' F</string>
+    <string name="eg1_38_2" translatable="false">U\') R\' F2 R F\' R\' U\' F2 R F\' U R</string>
+
+    <string name="eg1_39_count" translatable="false">1</string>
+    <string name="eg1_39_0" translatable="false">R U R\' F\' R U R\' U\' R U R\' U\'</string>
+</resources>

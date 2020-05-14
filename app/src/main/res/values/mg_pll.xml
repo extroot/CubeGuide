@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="mg_pll_count" translatable="false">14</string>
+    <string name="mg_pll0_count" translatable="false">1</string>
+    <string name="mg_pll0_0" translatable="false">R\' U\' R U\' R U R2\' U R U\' R U\' R\'</string>
+    <string name="mg_pll0_title">Edge permutation</string>
+    <string name="mg_pll0_subtitle"  />
+
+    <string name="mg_pll1_count" translatable="false">1</string>
+    <string name="mg_pll1_0" translatable="false">R U R\' U R\' U\' R2 U\' R\' U R\' U R U2\'</string>
+    <string name="mg_pll1_title"  />
+    <string name="mg_pll1_subtitle"  />
+
+    <string name="mg_pll2_count" translatable="false">1</string>
+    <string name="mg_pll2_0" translatable="false">R2 U2\' R2\' U\' R2 U2\' R2\'</string>
+    <string name="mg_pll2_title"  />
+    <string name="mg_pll2_subtitle"  />
+
+    <string name="mg_pll3_count" translatable="false">1</string>
+    <string name="mg_pll3_0" translatable="false">R2 U2 R2\' U R2 U2 R2\'</string>
+    <string name="mg_pll3_title"  />
+    <string name="mg_pll3_subtitle"  />
+
+    <string name="mg_pll4_count" translatable="false">1</string>
+    <string name="mg_pll4_0" translatable="false">R\' U\' R2 U\' R\' U R\' U R</string>
+    <string name="mg_pll4_title"  />
+    <string name="mg_pll4_subtitle"  />
+
+    <string name="mg_pll5_count" translatable="false">1</string>
+    <string name="mg_pll5_0" translatable="false">(y\') (R2\' U2\' R2 U\')x6</string>
+    <string name="mg_pll5_title"  />
+    <string name="mg_pll5_subtitle"  />
+
+    <string name="mg_pll6_count" translatable="false">1</string>
+    <string name="mg_pll6_0" translatable="false">(R\' L\') U2 L U R (y) (R L) U2\' R\' U\' L\'</string>
+    <string name="mg_pll6_title"  />
+    <string name="mg_pll6_subtitle"  />
+
+    <string name="mg_pll7_count" translatable="false">1</string>
+    <string name="mg_pll7_0" translatable="false">y x R2\' U2 R\' dR\' R U2\' R\' dR R2\'</string>
+    <string name="mg_pll7_title">Corner permutation</string>
+    <string name="mg_pll7_subtitle"  />
+
+    <string name="mg_pll8_count" translatable="false">1</string>
+    <string name="mg_pll8_0" translatable="false">y x U2 R2 U L U\' R2 U L\' U2</string>
+    <string name="mg_pll8_title"  />
+    <string name="mg_pll8_subtitle"  />
+
+    <string name="mg_pll9_count" translatable="false">1</string>
+    <string name="mg_pll9_0" translatable="false">R2 U R\' y U\' R U R\' U\' R U R\' U\' R U R\' y\' R U\' R2\'</string>
+    <string name="mg_pll9_title"  />
+    <string name="mg_pll9_subtitle"  />
+
+    <string name="mg_pll10_count" translatable="false">1</string>
+    <string name="mg_pll10_0" translatable="false">R\' U\' R\' z\' R\' U L\' U\' R U L U\' R\' U L U\' R U2</string>
+    <string name="mg_pll10_title"  />
+    <string name="mg_pll10_subtitle"  />
+
+    <string name="mg_pll11_count" translatable="false">1</string>
+    <string name="mg_pll11_0" translatable="false">L\' R U R\' U R U\' R\' U R U\' R\' U R U2\' R\' L</string>
+    <string name="mg_pll11_title"  />
+    <string name="mg_pll11_subtitle"  />
+
+    <string name="mg_pll12_count" translatable="false">1</string>
+    <string name="mg_pll12_0" translatable="false">bR\' R\' U L U\' R\' U L\' U\' R2 bR</string>
+    <string name="mg_pll12_title"  />
+    <string name="mg_pll12_subtitle"  />
+
+    <string name="mg_pll13_count" translatable="false">1</string>
+    <string name="mg_pll13_0" translatable="false">bR\' R2\' U L U\' R U L\' U\' R bR</string>
+    <string name="mg_pll13_title"  />
+    <string name="mg_pll13_subtitle"  />
+</resources>
