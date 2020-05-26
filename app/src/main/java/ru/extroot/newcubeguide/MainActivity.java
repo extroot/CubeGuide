@@ -24,10 +24,9 @@ import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 import org.jetbrains.annotations.NotNull;
 
 
-    public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
     /*
     TODO: Rewrite full app
-    TODO: Rewrite string resources
     3x3x3:
         F2l     - 1
         OLL     - 2
@@ -87,7 +86,7 @@ import org.jetbrains.annotations.NotNull;
     private static final int MW_ID      = 19;
     private static final int MG_OLL_ID  = 20;
     private static final int MG_PLL_ID  = 21;
-    private static final int easy_3_ID  = 22;
+    private static final int EASY_3_ID  = 22;
 
     private int picLen = 250;
     private int textSize = 16;
@@ -123,7 +122,7 @@ import org.jetbrains.annotations.NotNull;
                         new PrimaryDrawerItem()
                                 .withName(getResources().getString(R.string.easy3_header))
                                 .withSelectable(false)
-                                .withIdentifier(easy_3_ID),
+                                .withIdentifier(EASY_3_ID),
                         new ExpandableDrawerItem()
                                 .withName(getResources().getString(R.string.header_3x3x3))
                                 .withSelectable(false)
@@ -269,7 +268,7 @@ import org.jetbrains.annotations.NotNull;
                             case MG_OLL_ID:  mode = picMode = "mg_oll"; break;
                             case MG_PLL_ID:  mode = picMode = "mg_pll"; break;
 
-                            case easy_3_ID:  tutorials_3x3x3(); return false; 
+                            case EASY_3_ID:  tutorials_3x3x3(); return false;
                             default: return true;
                         }
                         Draw();
@@ -279,7 +278,7 @@ import org.jetbrains.annotations.NotNull;
                     })
                 .withSavedInstance(savedInstanceState);
         Drawer mDrawer = drawerBuilder.build();
-        mDrawer.setSelection(easy_3_ID);
+        mDrawer.setSelection(EASY_3_ID);
     }
 
 
