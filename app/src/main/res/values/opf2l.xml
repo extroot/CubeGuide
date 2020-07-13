@@ -1,198 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="op_count" translatable="false">29</string>
-    <string name="op0_count" translatable="false">3</string>
-    <string name="op0_0" translatable="false">L U L U L U\' L\' U\' L\'</string>
-    <string name="op0_1" translatable="false">y2 R U R U R U\' R\' U\' R\'</string>
-    <string name="op0_2" translatable="false">y2 U\' R U R U R2 U\' R\' U\' R\'</string>
+
+
+    <string name="op0" translatable="false">L U L U L U\' L\' U\' L\'\ny2 R U R U R U\' R\' U\' R\'\ny2 U\' R U R U R2 U\' R\' U\' R\'</string>
     <string name="op0_title" translatable="false"/>
     <string name="op0_subtitle" translatable="false"/>
 
-    <string name="op1_count" translatable="false">3</string>
-    <string name="op1_0" translatable="false">R\' U\' R\' U\' R\' U R U R</string>
-    <string name="op1_1" translatable="false">U2 R\' U\' R\' U\' R U R U R</string>
-    <string name="op1_2" translatable="false">U\' F\' R U R\' U\' Rw R\' U R U\' Rw\' F</string>
+    <string name="op1" translatable="false">R\' U\' R\' U\' R\' U R U R\nU2 R\' U\' R\' U\' R U R U R\nU\' F\' R U R\' U\' Rw R\' U R U\' Rw\' F</string>
     <string name="op1_title" translatable="false"/>
     <string name="op1_subtitle" translatable="false"/>
 
-    <string name="op2_count" translatable="false">3</string>
-    <string name="op2_0" translatable="false">U R D2 R\' U R D2 R\'</string>
-    <string name="op2_1" translatable="false">y R D\' R\' U R D R\'</string>
-    <string name="op2_2" translatable="false">y\' U R\' D\' R U\' R\' D R</string>
+    <string name="op2" translatable="false">U R D2 R\' U R D2 R\'\ny R D\' R\' U R D R\'\ny\' U R\' D\' R U\' R\' D R</string>
     <string name="op2_title" translatable="false"/>
     <string name="op2_subtitle" translatable="false"/>
 
-    <string name="op3_count" translatable="false">3</string>
-    <string name="op3_0" translatable="false">U\' R\' F\' R U R U\' R\' F R U R\'</string>
-    <string name="op3_1" translatable="false">y R\' D R U\' R\' D\' R</string>
-    <string name="op3_2" translatable="false">y\' U R D\' R\' U\' R D\' R\'</string>
+    <string name="op3" translatable="false">U\' R\' F\' R U R U\' R\' F R U R\'\ny R\' D R U\' R\' D\' R\ny\' U R D\' R\' U\' R D\' R\'</string>
     <string name="op3_title" translatable="false"/>
     <string name="op3_subtitle" translatable="false"/>
 
-    <string name="op4_count" translatable="false">3</string>
-    <string name="op4_0" translatable="false">R U2 L\' U2 L U2 R\'</string>
-    <string name="op4_1" translatable="false">Rw U2 Rw\' F2 R U2 R\'</string>
-    <string name="op4_2" translatable="false">U\' R U2 L\' U\' L U2 R\'</string>
+    <string name="op4" translatable="false">R U2 L\' U2 L U2 R\'\nRw U2 Rw\' F2 R U2 R\'\nU\' R U2 L\' U\' L U2 R\'</string>
     <string name="op4_title" translatable="false"/>
     <string name="op4_subtitle" translatable="false"/>
 
-    <string name="op5_count" translatable="false">3</string>
-    <string name="op5_0" translatable="false">L\' U2 R U2 R\' U2 L</string>
-    <string name="op5_1" translatable="false">Lw\' U2 R U2 Rw\' U2 L</string>
-    <string name="op5_2" translatable="false">U\' L\' U2 R U\' R\' U2 L</string>
+    <string name="op5" translatable="false">L\' U2 R U2 R\' U2 L\nLw\' U2 R U2 Rw\' U2 L\nU\' L\' U2 R U\' R\' U2 L</string>
     <string name="op5_title" translatable="false"/>
     <string name="op5_subtitle" translatable="false"/>
 
-    <string name="op6_count" translatable="false">3</string>
-    <string name="op6_0" translatable="false">L\' U L U\' R D2 R\' U R D2 R\'</string>
-    <string name="op6_1" translatable="false">L\' U\' R\' U2 L U2 L\' U2 R U2 L</string>
-    <string name="op6_2" translatable="false">y2 R\' U\' L\' U2 R U2 R\' U2 L U2 R</string>
+    <string name="op6" translatable="false">L\' U L U\' R D2 R\' U R D2 R\'\nL\' U\' R\' U2 L U2 L\' U2 R U2 L\ny2 R\' U\' L\' U2 R U2 R\' U2 L U2 R</string>
     <string name="op6_title" translatable="false"/>
     <string name="op6_subtitle" translatable="false"/>
 
-    <string name="op7_count" translatable="false">3</string>
-    <string name="op7_0" translatable="false">R U\' R\' U R\' F\' R U R U\' R\' F R U R\'</string>
-    <string name="op7_1" translatable="false">R U L U2 R\' U2 R U2\' L\' U2 R\'</string>
-    <string name="op7_2" translatable="false">R U2 L U2 R\' U2 R U2 L\' U\' R\'</string>
+    <string name="op7" translatable="false">R U\' R\' U R\' F\' R U R U\' R\' F R U R\'\nR U L U2 R\' U2 R U2\' L\' U2 R\'\nR U2 L U2 R\' U2 R U2 L\' U\' R\'</string>
     <string name="op7_title" translatable="false"/>
     <string name="op7_subtitle" translatable="false"/>
 
-    <string name="op8_count" translatable="false">3</string>
-    <string name="op8_0" translatable="false">U\' R\' D R U R\' D\' R L\' U L</string>
-    <string name="op8_1" translatable="false">L\' U2 Rw U\' Rw\' U\' L U Rw U Rw\'</string>
-    <string name="op8_2" translatable="false">U\' L F\' L\' U\' L\' U L F L\' U2 L</string>
+    <string name="op8" translatable="false">U\' R\' D R U R\' D\' R L\' U L\nL\' U2 Rw U\' Rw\' U\' L U Rw U Rw\'\nU\' L F\' L\' U\' L\' U L F L\' U2 L</string>
     <string name="op8_title" translatable="false"/>
     <string name="op8_subtitle" translatable="false"/>
 
-    <string name="op9_count" translatable="false">3</string>
-    <string name="op9_0" translatable="false">R U2 R\' F R U R\' U\' R\' F\' R</string>
-    <string name="op9_1" translatable="false">U R\' F R U R U\' R\' F\' R U2 R\'</string>
-    <string name="op9_2" translatable="false">R U\' F\' Rw U R\' U\' Rw\' F</string>
+    <string name="op9" translatable="false">R U2 R\' F R U R\' U\' R\' F\' R\nU R\' F R U R U\' R\' F\' R U2 R\'\nR U\' F\' Rw U R\' U\' Rw\' F</string>
     <string name="op9_title" translatable="false"/>
     <string name="op9_subtitle" translatable="false"/>
 
-    <string name="op10_count" translatable="false">3</string>
-    <string name="op10_0" translatable="false">L\' U L U L\' U L y\' U R U2 R\' U R U R\'</string>
-    <string name="op10_1" translatable="false">y2 R U2\' R\' U R2 U\' R\' U R\' U R\'</string>
-    <string name="op10_2" translatable="false">y2 U R\' U R U\' R\' U\' F\' Rw U R U\' Rw\' F</string>
+    <string name="op10" translatable="false">L\' U L U L\' U L y\' U R U2 R\' U R U R\'\ny2 R U2\' R\' U R2 U\' R\' U R\' U R\'\ny2 U R\' U R U\' R\' U\' F\' Rw U R U\' Rw\' F</string>
     <string name="op10_title" translatable="false"/>
     <string name="op10_subtitle" translatable="false"/>
 
-    <string name="op11_count" translatable="false">2</string>
-    <string name="op11_0" translatable="false">U R U2 R\' U R U R\' L U\' R U R\' L\'</string>
-    <string name="op11_1" translatable="false">R\' U2 R U\' R2 U R U\' R U\' R</string>
+    <string name="op11" translatable="false">U R U2 R\' U R U R\' L U\' R U R\' L\'\nR\' U2 R U\' R2 U R U\' R U\' R</string>
     <string name="op11_title" translatable="false"/>
     <string name="op11_subtitle" translatable="false"/>
-
-    <string name="op12_count" translatable="false">3</string>
-    <string name="op12_0" translatable="false">R\' F2 R U R\' F2 R U\' R\' F2 R</string>
-    <string name="op12_1" translatable="false">L\' U L U\' L\' U2 L U\' L\' U\' L</string>
-    <string name="op12_2" translatable="false">y2 U\' R\' U\' R\' U2 R U R\' U R2</string>
+\n
+    <string name="op12" translatable="false">R\' F2 R U R\' F2 R U\' R\' F2 R\nL\' U L U\' L\' U2 L U\' L\' U\' L\ny2 U\' R\' U\' R\' U2 R U R\' U R2</string>
     <string name="op12_title" translatable="false"/>
     <string name="op12_subtitle" translatable="false"/>
 
-    <string name="op13_count" translatable="false">3</string>
-    <string name="op13_0" translatable="false">R U\' R\' U R U2 R\' U R U R\'</string>
-    <string name="op13_1" translatable="false">R2 U R\' U R U2 R\' U\' R\'</string>
-    <string name="op13_2" translatable="false">U R U R U2 R\' U\' R U\' R2</string>
+    <string name="op13" translatable="false">R U\' R\' U R U2 R\' U R U R\'\nR2 U R\' U R U2 R\' U\' R\'\nU R U R U2 R\' U\' R U\' R2</string>
     <string name="op13_title" translatable="false"/>
     <string name="op13_subtitle" translatable="false"/>
 
-    <string name="op14_count" translatable="false">3</string>
-    <string name="op14_0" translatable="false">F2 R U\' R\' U2 R U R\' F2</string>
-    <string name="op14_1" translatable="false">U2 L\' U L U L\' U2 L U L\' U\' L</string>
-    <string name="op14_2" translatable="false">y2 R\' U2 R U R\' U2 R U\' R\' U2 R</string>
+    <string name="op14" translatable="false">F2 R U\' R\' U2 R U R\' F2\nU2 L\' U L U L\' U2 L U L\' U\' L\ny2 R\' U2 R U R\' U2 R U\' R\' U2 R</string>
     <string name="op14_title" translatable="false"/>
     <string name="op14_subtitle" translatable="false"/>
 
-    <string name="op15_count" translatable="false">3</string>
-    <string name="op15_0" translatable="false">R U2\' R\' U\' R U2 R\' U R U2 R\'</string>
-    <string name="op15_1" translatable="false">U2 R U\' R\' U\' R U2 R\' U\' R U R\'</string>
-    <string name="op15_2" translatable="false">R U2\' R\' U\' L\' R U R\' U\' L</string>
+    <string name="op15" translatable="false">R U2\' R\' U\' R U2 R\' U R U2 R\'\nU2 R U\' R\' U\' R U2 R\' U\' R U R\'\nR U2\' R\' U\' L\' R U R\' U\' L</string>
     <string name="op15_title" translatable="false"/>
     <string name="op15_subtitle" translatable="false"/>
 
-    <string name="op16_count" translatable="false">3</string>
-    <string name="op16_0" translatable="false">R U2\' R\' U\' L\' U2 R U R\' L</string>
-    <string name="op16_1" translatable="false">y2 R\' U\' R2 D R\' U2 R D\' R2 U R</string>
-    <string name="op16_2" translatable="false">y2 L U2\' L\' U\' R\' U2 L U L\' R</string>
+    <string name="op16" translatable="false">R U2\' R\' U\' L\' U2 R U R\' L\ny2 R\' U\' R2 D R\' U2 R D\' R2 U R\ny2 L U2\' L\' U\' R\' U2 L U L\' R</string>
     <string name="op16_title" translatable="false"/>
     <string name="op16_subtitle" translatable="false"/>
 
-    <string name="op17_count" translatable="false">3</string>
-    <string name="op17_0" translatable="false">R U R2 D\' R U2 R\' D R2 U\' R\'</string>
-    <string name="op17_1" translatable="false">L\' U2 L U R U2 L\' U\' L R\'</string>
-    <string name="op17_2" translatable="false">y2 R\' U2 R U L U2 R\' U\' R L\'</string>
+    <string name="op17" translatable="false">R U R2 D\' R U2 R\' D R2 U\' R\'\nL\' U2 L U R U2 L\' U\' L R\'\ny2 R\' U2 R U L U2 R\' U\' R L\'</string>
     <string name="op17_title" translatable="false"/>
     <string name="op17_subtitle" translatable="false"/>
 
-    <string name="op18_count" translatable="false">2</string>
-    <string name="op18_0" translatable="false">y2 R\' U2 R\' D\' R U2 R\' D R U R</string>
-    <string name="op18_1" translatable="false">y2 R\' U2 R U\' R\' U2 R2 U R\' U R U2 R\'</string>
+    <string name="op18" translatable="false">y2 R\' U2 R\' D\' R U2 R\' D R U R\ny2 R\' U2 R U\' R\' U2 R2 U R\' U R U2 R\'</string>
     <string name="op18_title" translatable="false"/>
     <string name="op18_subtitle" translatable="false"/>
 
-    <string name="op19_count" translatable="false">3</string>
-    <string name="op19_0" translatable="false">R U2\' R D R\' U2 R D\' R\' U\' R\'</string>
-    <string name="op19_1" translatable="false">U L\' U2 R U\' R\' U2 L U R U R\'</string>
-    <string name="op19_2" translatable="false">R U\' R\' U2\' R U L U\' R\' U L\'</string>
+    <string name="op19" translatable="false">R U2\' R D R\' U2 R D\' R\' U\' R\'\nU L\' U2 R U\' R\' U2 L U R U R\'\nR U\' R\' U2\' R U L U\' R\' U L\'</string>
     <string name="op19_title" translatable="false"/>
     <string name="op19_subtitle" translatable="false"/>
 
-    <string name="op20_count" translatable="false">2</string>
-    <string name="op20_0" translatable="false">U\' R2 F2\' R F2\' R U2\' R\' U2\' R</string>
-    <string name="op20_1" translatable="false">y\' U2 F\' U\' F U R U2 R\' U R U R\'</string>
+    <string name="op20" translatable="false">U\' R2 F2\' R F2\' R U2\' R\' U2\' R\ny\' U2 F\' U\' F U R U2 R\' U R U R\'</string>
     <string name="op20_title" translatable="false"/>
     <string name="op20_subtitle" translatable="false"/>
 
-    <string name="op21_count" translatable="false">2</string>
-    <string name="op21_0" translatable="false">U2 R U R\' U\' y\' R\' U2 R U\' R\' U\' R</string>
-    <string name="op21_1" translatable="false">U L R U2\' L\' U2\' R\' U2\' L U2\' L\'</string>
+    <string name="op21" translatable="false">U2 R U R\' U\' y\' R\' U2 R U\' R\' U\' R\nU L R U2\' L\' U2\' R\' U2\' L U2\' L\'</string>
     <string name="op21_title" translatable="false"/>
     <string name="op21_subtitle" translatable="false"/>
 
-    <string name="op22_count" translatable="false">3</string>
-    <string name="op22_0" translatable="false">R D2 R\' U\' R D2 R\' U L\' U\' L</string>
-    <string name="op22_1" translatable="false">R U2 R\' U\' L\' U2 L R U2 R\' U R U2 R\'</string>
-    <string name="op22_2" translatable="false">y2 R\' U\' R\' D\' R U2\' R\' D R U2 R</string>
+    <string name="op22" translatable="false">R D2 R\' U\' R D2 R\' U L\' U\' L\nR U2 R\' U\' L\' U2 L R U2 R\' U R U2 R\'\ny2 R\' U\' R\' D\' R U2\' R\' D R U2 R</string>
     <string name="op22_title" translatable="false"/>
     <string name="op22_subtitle" translatable="false"/>
 
-    <string name="op23_count" translatable="false">3</string>
-    <string name="op23_0" translatable="false">R U\' R\' U L\' U2 R U\' R\' U2 L</string>
-    <string name="op23_1" translatable="false">R U R D R\' U2 R D\' R\' U2\' R\'</string>
-    <string name="op23_2" translatable="false">U2 R\' D\' Rw U2 Rw\' D R</string>
+    <string name="op23" translatable="false">R U\' R\' U L\' U2 R U\' R\' U2 L\nR U R D R\' U2 R D\' R\' U2\' R\'\n\nU2 R\' D\' Rw U2 Rw\' D R</string>
     <string name="op23_title" translatable="false"/>
     <string name="op23_subtitle" translatable="false"/>
 
-    <string name="op24_count" translatable="false">2</string>
-    <string name="op24_0" translatable="false">y2 U R\' U\' R U\' R\' U2\' R\' U\' R U\' R\' U2\' R2</string>
-    <string name="op24_1" translatable="false">y2 U2 R\' U\' R2 U2 R2 U\' R2 U\' R2 U\' R</string>
+    <string name="op24" translatable="false">y2 U R\' U\' R U\' R\' U2\' R\' U\' R U\' R\' U2\' R2\ny2 U2 R\' U\' R2 U2 R2 U\' R2 U\' R2 U\' R</string>
     <string name="op24_title" translatable="false" />
     <string name="op24_subtitle" translatable="false"/>
 
-    <string name="op25_count" translatable="false">3</string>
-    <string name="op25_0" translatable="false">R U2 R\' U2 F\' R U2 R\' U2 R\' F R</string>
-    <string name="op25_1" translatable="false">U\' R U R\' U R U2 R U R\' U R U2 R2</string>
-    <string name="op25_2" translatable="false">R U R\' U2 R U\' R\' U2 R U2 R\' U R U2 R\'</string>
+    <string name="op25" translatable="false">R U2 R\' U2 F\' R U2 R\' U2 R\' F R\nU\' R U R\' U R U2 R U R\' U R U2 R2\nR U R\' U2 R U\' R\' U2 R U2 R\' U R U2 R\'</string>
     <string name="op25_title" translatable="false"/>
     <string name="op25_subtitle" translatable="false"/>
 
-    <string name="op26_count" translatable="false">2</string>
-    <string name="op26_0" translatable="false">U2 L\' U L U2 L\' U\' L</string>
-    <string name="op26_1" translatable="false">y2 U2 R\' U R U2\' R\' U\' R</string>
+    <string name="op26" translatable="false">U2 L\' U L U2 L\' U\' L\ny2 U2 R\' U R U2\' R\' U\' R</string>
     <string name="op26_title" translatable="false"/>
     <string name="op26_subtitle" translatable="false"/>
 
-    <string name="op27_count" translatable="false">1</string>
-    <string name="op27_0" translatable="false">U2 R U\' R\' U2\' R U R\'</string>
+    <string name="op27" translatable="false">U2 R U\' R\' U2\' R U R\'</string>
     <string name="op27_title" translatable="false"/>
     <string name="op27_subtitle" translatable="false"/>
 
-    <string name="op28_count" translatable="false">3</string>
-    <string name="op28_0" translatable="false">U\' R U\' R\' U R U2\' R\' U\' R U R\'</string>
-    <string name="op28_1" translatable="false">R2 U R2 U R2 U2 R2</string>
-    <string name="op28_2" translatable="false">x R\' U R U\' R\' U R U\' R\' U R\' U\' x\'</string>
+    <string name="op28" translatable="false">U\' R U\' R\' U R U2\' R\' U\' R U R\'\nR2 U R2 U R2 U2 R2\nx R\' U R U\' R\' U R U\' R\' U R\' U\' x\'</string>
     <string name="op28_title" translatable="false"/>
     <string name="op28_subtitle" translatable="false"/>
 </resources>

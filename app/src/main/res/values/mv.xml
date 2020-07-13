@@ -1,99 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="mw_count" translatable="false">18</string>
-    <string name="mw0_count" translatable="false">2</string>
-    <string name="mw0_0" translatable="false">(U) F\' U\' F U R U2 R\'</string>
-    <string name="mw0_1" translatable="false">R\' F R Dw R\' U R U2\' R\'</string>
+
+    <string name="mw0" translatable="false">(U) F\' U\' F U R U2 R\'\nR\' F R Dw R\' U R U2\' R\'</string>
     <string name="mw0_title" translatable="false" />
     <string name="mw0_subtitle" translatable="false" />
 
-    <string name="mw1_count" translatable="false">1</string>
-    <string name="mw1_0" translatable="false">F2 L F L\' F U\' R U R\'</string>
+    <string name="mw1" translatable="false">F2 L F L\' F U\' R U R\'</string>
     <string name="mw1_title" translatable="false" />
     <string name="mw1_subtitle" translatable="false" />
 
-    <string name="mw2_count" translatable="false">1</string>
-    <string name="mw2_0" translatable="false">M\' U R U\' Rw\'</string>
+    <string name="mw2" translatable="false">M\' U R U\' Rw\'</string>
     <string name="mw2_title" translatable="false" />
     <string name="mw2_subtitle" translatable="false" />
 
-    <string name="mw3_count" translatable="false">1</string>
-    <string name="mw3_0" translatable="false">(U) R U\' R\' F R U R\' U\' F\'</string>
+    <string name="mw3" translatable="false">(U) R U\' R\' F R U R\' U\' F\'</string>
     <string name="mw3_title" translatable="false" />
     <string name="mw3_subtitle" translatable="false" />
 
-    <string name="mw4_count" translatable="false">2</string>
-    <string name="mw4_0" translatable="false">x\' R\' D R2 U\' R\' D\' R U R\'</string>
-    <string name="mw4_1" translatable="false">R\' F R2 U R\' U\' R\' F\' R U R U\' R\'</string>
+    <string name="mw4" translatable="false">x\' R\' D R2 U\' R\' D\' R U R\'\n</string>
     <string name="mw4_title" translatable="false" />
     <string name="mw4_subtitle" translatable="false" />
 
-    <string name="mw5_count" translatable="false">1</string>
-    <string name="mw5_0" translatable="false">R\' F R F\' R\' U\' R U\' R\' U2 R</string>
+    <string name="mw5" translatable="false">R\' F R F\' R\' U\' R U\' R\' U2 R</string>
     <string name="mw5_title" translatable="false" />
     <string name="mw5_subtitle" translatable="false" />
 
-    <string name="mw6_count" translatable="false">1</string>
-    <string name="mw6_0" translatable="false">(U) R U\' R\' U\' R\' U\' R\' F R F\' U R</string>
+    <string name="mw6" translatable="false">(U) R U\' R\' U\' R\' U\' R\' F R F\' U R</string>
     <string name="mw6_title" translatable="false" />
     <string name="mw6_subtitle" translatable="false" />
 
-    <string name="mw7_count" translatable="false">2</string>
-    <string name="mw7_0" translatable="false">L R\' F R F\' U L\' U L U2 L\'</string>
-    <string name="mw7_1" translatable="false">y\' U R\' U2 R Rw\' U Rw U\' Rw\' U\' Rw</string>
+    <string name="mw7" translatable="false">L R\' F R F\' U L\' U L U2 L\'\ny\' U R\' U2 R Rw\' U Rw U\' Rw\' U\' Rw</string>
     <string name="mw7_title" translatable="false" />
     <string name="mw7_subtitle" translatable="false" />
 
-    <string name="mw8_count" translatable="false">1</string>
-    <string name="mw8_0" translatable="false">R\' F R F\'</string>
+    <string name="mw8" translatable="false">R\' F R F\'</string>
     <string name="mw8_title" translatable="false" />
     <string name="mw8_subtitle" translatable="false" />
 
-    <string name="mw9_count" translatable="false">2</string>
-    <string name="mw9_0" translatable="false">(U) y\' R\' F\' L\' U\' L F R</string>
-    <string name="mw9_1" translatable="false">R\' U2 Rw U R U\' Rw\' R\' U2 R</string>
+    <string name="mw9" translatable="false">(U) y\' R\' F\' L\' U\' L F R\nR\' U2 Rw U R U\' Rw\' R\' U2 R</string>
     <string name="mw9_title" translatable="false" />
     <string name="mw9_subtitle" translatable="false" />
 
-    <string name="mw10_count" translatable="false">1</string>
-    <string name="mw10_0" translatable="false">(U2) L R\' F\' L\' F2 R F R\' F2 R</string>
+    <string name="mw10" translatable="false">(U2) L R\' F\' L\' F2 R F R\' F2 R</string>
     <string name="mw10_title" translatable="false" />
     <string name="mw10_subtitle" translatable="false" />
 
-    <string name="mw11_count" translatable="false">1</string>
-    <string name="mw11_0" translatable="false">(U) F\' U F R U\' R\'</string>
+    <string name="mw11" translatable="false">(U) F\' U F R U\' R\'</string>
     <string name="mw11_title" translatable="false" />
     <string name="mw11_subtitle" translatable="false" />
 
-    <string name="mw12_count" translatable="false">2</string>
-    <string name="mw12_0" translatable="false">y U M U\' R\' F\' R U M\'</string>
-    <string name="mw12_1" translatable="false">(U2) R\' F2 L F L\' F2 R F\'</string>
+    <string name="mw12" translatable="false">y U M U\' R\' F\' R U M\'\n(U2) R\' F2 L F L\' F2 R F\'</string>
     <string name="mw12_title" translatable="false" />
     <string name="mw12_subtitle" translatable="false" />
 
-    <string name="mw13_count" translatable="false">2</string>
-    <string name="mw13_0" translatable="false">(U2) y\' R2 F R F\' R</string>
-    <string name="mw13_1" translatable="false">U2 F2 Rw U Rw\' F</string>
+    <string name="mw13" translatable="false">(U2) y\' R2 F R F\' R\nU2 F2 Rw U Rw\' F</string>
     <string name="mw13_title" translatable="false" />
     <string name="mw13_subtitle" translatable="false" />
 
-    <string name="mw14_count" translatable="false">1</string>
-    <string name="mw14_0" translatable="false">(U2) x U2 L U2 R\' U\' L\' U R</string>
+    <string name="mw14" translatable="false">(U2) x U2 L U2 R\' U\' L\' U R</string>
     <string name="mw14_title" translatable="false" />
     <string name="mw14_subtitle" translatable="false" />
 
-    <string name="mw15_count" translatable="false">1</string>
-    <string name="mw15_0" translatable="false">(y\' U) R\' F\' U2 F U R</string>
+    <string name="mw15" translatable="false">(y\' U) R\' F\' U2 F U R</string>
     <string name="mw15_title" translatable="false" />
     <string name="mw15_subtitle" translatable="false" />
 
-    <string name="mw16_count" translatable="false">1</string>
-    <string name="mw16_0" translatable="false">(U) R U\' R\' U R\' U\' F\' U F R</string>
+    <string name="mw16" translatable="false">(U) R U\' R\' U R\' U\' F\' U F R</string>
     <string name="mw16_title" translatable="false" />
     <string name="mw16_subtitle" translatable="false" />
 
-    <string name="mw17_count" translatable="false">1</string>
-    <string name="mw17_0" translatable="false">(y U) F R U\' R\' F\'</string>
+    <string name="mw17" translatable="false">(y U) F R U\' R\' F\'</string>
     <string name="mw17_title" translatable="false" />
     <string name="mw17_subtitle" translatable="false" />
 </resources>

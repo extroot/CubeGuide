@@ -1,106 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="oh_pll_count" translatable="false">22</string>
-    <string name="oh_pll0_count" translatable="false">3</string>
-    <string name="oh_pll0_0" translatable="false">x R\' U R\' D2 R U\' R\' z\' R2 U2</string>
-    <string name="oh_pll0_1" translatable="false">R\' U2 R2 U\' L\' U R\' U\' L U R\' U2 R</string>
-    <string name="oh_pll0_2" translatable="false">y x R2 U2 R\' D\' R U2 z\' U\' R U\'</string>
 
-    <string name="oh_pll1_count" translatable="false">3</string>
-    <string name="oh_pll1_0" translatable="false">x R2 D2 R U R\' D2 R U\' R</string>
-    <string name="oh_pll1_1" translatable="false">x\' R2 U2 R z\' R U\' L2 U R\' U</string>
-    <string name="oh_pll1_2" translatable="false">y x\' R U\' R z\' R2 U\' L U R2 U2</string>
-
-    <string name="oh_pll2_count" translatable="false">2</string>
-    <string name="oh_pll2_0" translatable="false">x\' R U\' R\' D R U R\' D\' R U R\' D R U\' R\' Uw\'</string>
-    <string name="oh_pll2_1" translatable="false">y/y\' R U\' R\' U R L\' U2 L U\' R\' U2 L\' U L U\' R U\' R\'</string>
-
-    <string name="oh_pll3_count" translatable="false">0</string>
-
-    <string name="oh_pll4_count" translatable="false">2</string>
-    <string name="oh_pll4_0" translatable="false">y U2 R\' U\' R U\' R U R U\' R\' U R U R2 U\' R\'</string>
-    <string name="oh_pll4_1" translatable="false">U2 R\' U\' R2 U R U R\' U\' R U R U\' R U\' R\'</string>
-
-    <string name="oh_pll5_count" translatable="false">3</string>
-    <string name="oh_pll5_0" translatable="false">U R U2 R\' U\' R\' U\' R2 U\' R2 U2 R2 U2 R\'</string>
-    <string name="oh_pll5_1" translatable="false">R2 U2 R U2 R2 U2 R2 U2 R U2 R2</string>
-    <string name="oh_pll5_2" translatable="false">R2 U2 R2 U2 R2 U\' R2 U2 R2 U2 R2 U</string>
-
-    <string name="oh_pll6_count" translatable="false">3</string>
-    <string name="oh_pll6_0" translatable="false">R U\' R U R U R U\' R\' U\' R2</string>
-    <string name="oh_pll6_1" translatable="false">y2 R2 U\' R\' U\' R U R U R U\' R</string>
-    <string name="oh_pll6_2" translatable="false">z U2 R\' U\' R\' U R U R U R\' U</string>
-
-    <string name="oh_pll7_count" translatable="false">3</string>
-    <string name="oh_pll7_0" translatable="false">R2 U R U R\' U\' R\' U\' R\' U R\'</string>
-    <string name="oh_pll7_1" translatable="false">(Dw2) R\' U\' R U\' R U R2 U R U\' R U\' R\'</string>
-    <string name="oh_pll7_2" translatable="false">z U\' R U\' R\' U\' R\' U\' R U R U2</string>
-
-    <string name="oh_pll8_count" translatable="false">3</string>
-    <string name="oh_pll8_0" translatable="false">R U2 R\' U\' R U2 L\' U R\' U\' Rw</string>
-    <string name="oh_pll8_1" translatable="false">y U\' R U R\' F\' R U R\' U\' R\' F R2 U\' R\'</string>
-    <string name="oh_pll8_2" translatable="false">y U\' L R U2 R\' U\' R U2 z U\' R Uw\'</string>
-
-    <string name="oh_pll9_count" translatable="false">3</string>
-    <string name="oh_pll9_0" translatable="false">R\' U2 R U R\' U2 Rw x\' U\' R U L\'</string>
-    <string name="oh_pll9_1" translatable="false">U\' R\' U L\' U2 R U\' R\' U2 R Rw</string>
-    <string name="oh_pll9_2" translatable="false">y2 z U\' R2 U R U\' R2 D R\' U R Uw\'</string>
-
-    <string name="oh_pll10_count" translatable="false">3</string>
-    <string name="oh_pll10_0" translatable="false">R\' U2 R\' D\' R U\' R\' D R U R U\' R\' U\' R U\'</string>
-    <string name="oh_pll10_1" translatable="false">U R\' U R U R\' U\' R\' D\' R U R\' D R U2 R</string>
-    <string name="oh_pll10_2" translatable="false">R\' U2 R U2 R\' F R U R\' U\' R\' F\' R2 U\'</string>
-
-    <string name="oh_pll11_count" translatable="false">2</string>
-    <string name="oh_pll11_0" translatable="false">y R U R\' F\' R U2 R\' U2 R\' F R U R U2 R\' U\'</string>
-    <string name="oh_pll11_1" translatable="false">y2 R U2 R D R\' U R D\' R\' U\' R\' U R U R\' U</string>
-
-    <string name="oh_pll12_count" translatable="false">3</string>
-    <string name="oh_pll12_0" translatable="false">R U R\' U\' R\' F R2 U\' R\' U\' R U R\' F\'</string>
-    <string name="oh_pll12_1" translatable="false">F R U\' R\' U R U R2 F\' R U R U\' R\'</string>
-    <string name="oh_pll12_2" translatable="false">R U R\' U\' R2 D R\' U\' R\' U\' R U R2 D\' R</string>
-
-    <string name="oh_pll13_count" translatable="false">3</string>
-    <string name="oh_pll13_0" translatable="false">R2 U\' R\' U R U\' x\' U\' z\' U\' R U\' R\' U\' z U R</string>
-    <string name="oh_pll13_1" translatable="false">y\' R U R2 U L\' U2 R U\' R\' U2 L R U\' R U\' R\'</string>
-    <string name="oh_pll13_2" translatable="false">y2 z U\' R\' U2 R\' D R2 U\' R U R2 D\' U\' R U\' R U</string>
-
-    <string name="oh_pll14_count" translatable="false">3</string>
-    <string name="oh_pll14_0" translatable="false">R2 U R U R2 U\' R\' U\' R2 U\' R U2 L\' U R\' U\' Rw</string>
-    <string name="oh_pll14_1" translatable="false">R\' U\' F\' R U R\' U\' R\' F R2 U\' R\' U\' R U R\' U R</string>
-    <string name="oh_pll14_2" translatable="false">x R2 U R U\' R\' y R\' U\' R U x U2 R U\' R\' U R</string>
-
-    <string name="oh_pll15_count" translatable="false">3</string>
-    <string name="oh_pll15_0" translatable="false">R U2 R\' D R U\' R U\' R U R2 D R\' U\' R D2</string>
-    <string name="oh_pll15_1" translatable="false">R\' U R\' U\' y z\' U\' R U\' R\' U2 y\' R\' U\' R U R</string>
-    <string name="oh_pll15_2" translatable="false">L U\' R\' U L\' U\' L U\' R U L\' U2 R\' U2 R</string>
-
-    <string name="oh_pll16_count" translatable="false">3</string>
-    <string name="oh_pll16_0" translatable="false">R U R\' U L\' U R U\' L U2 R\' U R U2 R\' U\' R U\' R\'</string>
-    <string name="oh_pll16_1" translatable="false">U L U\' R U2 L\' U L R\' U\' R U2 z U\' R Uw\'</string>
-    <string name="oh_pll16_2" translatable="false">R U R\' U\' L U2 L\' U\' L U2 R\' U L\' U\' R U R U\' R\'</string>
-
-    <string name="oh_pll17_count" translatable="false">3</string>
-    <string name="oh_pll17_0" translatable="false">R\' U2 R U R2 U\' R\' U R2 D\' R U\' R\' D R\' U2 R</string>
-    <string name="oh_pll17_1" translatable="false">U\' R\' U L\' U2 R U\' R\' z U R U\' R2 z\' R U\' Rw</string>
-    <string name="oh_pll17_2" translatable="false">R\' U\' R U\' L U\' R\' U L\' U2 R U\' R\' U2 R U R\' U R</string>
-
-    <string name="oh_pll18_count" translatable="false">3</string>
-    <string name="oh_pll18_0" translatable="false">z U2 Rw\' U R\' U R U\' Rw U2 x U R\' U\'</string>
-    <string name="oh_pll18_1" translatable="false">z R\' Rw U2 R\' U R\' U R U\' R U2 L\' R U R\' U\'</string>
-    <string name="oh_pll18_2" translatable="false">y2 R2 Uw\' R U\' R U R\' D x\' U2 Rw U\' Rw\'</string>
-
-    <string name="oh_pll19_count" translatable="false">2</string>
-    <string name="oh_pll19_0" translatable="false">y z U R U\' x\' U2 Rw\' U R\' U\' R U\' Rw U2</string>
-    <string name="oh_pll19_1" translatable="false">y\' R U R\' y\' R2 Uw\' R U\' R\' U R\' Uw R2</string>
-
-    <string name="oh_pll20_count" translatable="false">3</string>
-    <string name="oh_pll20_0" translatable="false">R2 Uw R\' U R\' U\' R Uw\' R2 y z U\' R U</string>
-    <string name="oh_pll20_1" translatable="false">Uw\' U R2 U R\' U R\' U\' R U\' R2 D U\' R\' U R</string>
-    <string name="oh_pll20_2" translatable="false">y2 z U2 Rw U\' R U\' R\' U Rw\' U2 x\' U\' R U</string>
-
-    <string name="oh_pll21_count" translatable="false">3</string>
-    <string name="oh_pll21_0" translatable="false">y z U\' R\' U x U2 Rw U\' R U R\' U Rw\' U2</string>
-    <string name="oh_pll21_1" translatable="false">y\' R\' U\' R y R2 Uw R\' U R U\' R Uw\' R2</string>
-    <string name="oh_pll21_2" translatable="false">y\' R\' U\' R y\' z U2 Rw U\' R U R\' U Rw\' U2</string>
+    <string name="oh_pll0" translatable="false">x R\' U R\' D2 R U\' R\' z\' R2 U2\nR\' U2 R2 U\' L\' U R\' U\' L U R\' U2 R\ny x R2 U2 R\' D\' R U2 z\' U\' R U\'</string>
+    <string name="oh_pll1" translatable="false">x R2 D2 R U R\' D2 R U\' R\nx\' R2 U2 R z\' R U\' L2 U R\' U\ny x\' R U\' R z\' R2 U\' L U R2 U2</string>
+    <string name="oh_pll2" translatable="false">x\' R U\' R\' D R U R\' D\' R U R\' D R U\' R\' Uw\'\ny/y\' x\' R U\' R U\' z U\' R Uw\' z x\' U\' R U\' R\' U\' z U\' R z\' R U\'\ny/y\' R U\' R\' U R L\' U2 L U\' R\' U2 L\' U L U\' R U\' R\'</string>
+    <string name="oh_pll3" translatable="false" />
+    <string name="oh_pll4" translatable="false">y U2 R\' U\' R U\' R U R U\' R\' U R U R2 U\' R\'\nU2 R\' U\' R2 U R U R\' U\' R U R U\' R U\' R\'</string>
+    <string name="oh_pll5" translatable="false">U R U2 R\' U\' R\' U\' R2 U\' R2 U2 R2 U2 R\'\nR2 U2 R U2 R2 U2 R2 U2 R U2 R2\nR2 U2 R2 U2 R2 U\' R2 U2 R2 U2 R2 U</string>
+    <string name="oh_pll6" translatable="false">R U\' R U R U R U\' R\' U\' R2\ny2 R2 U\' R\' U\' R U R U R U\' R\nz U2 R\' U\' R\' U R U R U R\' U</string>
+    <string name="oh_pll7" translatable="false">R2 U R U R\' U\' R\' U\' R\' U R\'\n(Dw2) R\' U\' R U\' R U R2 U R U\' R U\' R\'\nz U\' R U\' R\' U\' R\' U\' R U R U2</string>
+    <string name="oh_pll8" translatable="false">R U2 R\' U\' R U2 L\' U R\' U\' Rw\ny U\' R U R\' F\' R U R\' U\' R\' F R2 U\' R\'\ny U\' L R U2 R\' U\' R U2 z U\' R Uw\'</string>
+    <string name="oh_pll9" translatable="false">R\' U2 R U R\' U2 Rw x\' U\' R U L\'\nU\' R\' U L\' U2 R U\' R\' U2 R Rw\ny2 z U\' R2 U R U\' R2 D R\' U R Uw\'</string>
+    <string name="oh_pll10" translatable="false">R\' U2 R\' D\' R U\' R\' D R U R U\' R\' U\' R U\'\nU R\' U R U R\' U\' R\' D\' R U R\' D R U2 R\nR\' U2 R U2 R\' F R U R\' U\' R\' F\' R2 U\'\ny\' z U\' R U R U\' R\' U\' L\' U R U\' L U R2 U R</string>
+    <string name="oh_pll11" translatable="false">y R U R\' F\' R U2 R\' U2 R\' F R U R U2 R\' U\'\ny2 R U2 R D R\' U R D\' R\' U\' R\' U R U R\' U</string>
+    <string name="oh_pll12" translatable="false">R U R\' U\' R\' F R2 U\' R\' U\' R U R\' F\'\nF R U\' R\' U R U R2 F\' R U R U\' R\'\nR U R\' U\' R2 D R\' U\' R\' U\' R U R2 D\' R</string>
+    <string name="oh_pll13" translatable="false">R2 U\' R\' U R U\' x\' U\' z\' U\' R U\' R\' U\' z U R\ny\' R U R2 U L\' U2 R U\' R\' U2 L R U\' R U\' R\'\ny2 z U\' R\' U2 R\' D R2 U\' R U R2 D\' U\' R U\' R U</string>
+    <string name="oh_pll14" translatable="false">R2 U R U R2 U\' R\' U\' R2 U\' R U2 L\' U R\' U\' Rw\nR U2\' R\' U\' R U2\' R L\' U R U R U\' R\' U\' R2 U\' Rw\nR\' U\' F\' R U R\' U\' R\' F R2 U\' R\' U\' R U R\' U R</string>
+    <string name="oh_pll15" translatable="false">R U2 R\' D R U\' R U\' R U R2 D R\' U\' R D2\nR\' U R\' U\' y z\' U\' R U\' R\' U2 y\' R\' U\' R U R\nL U\' R\' U L\' U\' L U\' R U L\' U2 R\' U2 R</string>
+    <string name="oh_pll16" translatable="false">R U R\' U L\' U R U\' L U2 R\' U R U2 R\' U\' R U\' R\'\nR U R\' U R U2 R\' U\' R U2 L\' U R\' U\' L U\' R U\' R\'\nU L U\' R U2 L\' U L R\' U\' R U2 z U\' R Uw\'</string>
+    <string name="oh_pll17" translatable="false">R\' U2 R U R2 U\' R\' U R2 D\' R U\' R\' D R\' U2 R\nU\' R\' U L\' U2 R U\' R\' z U R U\' R2 z\' R U\' Rw\nR\' U\' R U\' L U\' R\' U L\' U2 R U\' R\' U2 R U R\' U R</string>
+    <string name="oh_pll18" translatable="false">z U2 Rw\' U R\' U R U\' Rw U2 x U R\' U\'\nz R\' Rw U2 R\' U R\' U R U\' R U2 L\' R U R\' U\'\ny2 R2 Uw\' R U\' R U R\' D x\' U2 Rw U\' Rw\'</string>
+    <string name="oh_pll19" translatable="false">y z U R U\' x\' U2 Rw\' U R\' U\' R U\' Rw U2\ny\' R U R\' y\' R2 Uw\' R U\' R\' U R\' Uw R2</string>
+    <string name="oh_pll20" translatable="false">R2 Uw R\' U R\' U\' R Uw\' R2 y z U\' R U\nUw\' U R2 U R\' U R\' U\' R U\' R2 D U\' R\' U R\ny\' U R2 U R\' U R\' U\' R U\' R2 D U\' R\' U R Uw\'</string>
+    <string name="oh_pll21" translatable="false">y z U\' R\' U x U2 Rw U\' R U R\' U Rw\' U2\ny\' R\' U\' R y R2 Uw R\' U R U\' R Uw\' R2\ny\' R\' U\' R y\' z U2 Rw U\' R U R\' U Rw\' U2</string>
 </resources>

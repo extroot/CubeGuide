@@ -1,8 +1,11 @@
 package ru.extroot.newcubeguide;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+
 import android.os.Bundle;
-import android.util.DisplayMetrics;
 import android.view.ContextThemeWrapper;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,9 +14,6 @@ import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-
 import com.mikepenz.materialdrawer.Drawer;
 import com.mikepenz.materialdrawer.DrawerBuilder;
 import com.mikepenz.materialdrawer.model.ExpandableDrawerItem;
@@ -21,49 +21,45 @@ import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
 import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 
-import org.jetbrains.annotations.NotNull;
-
-
 public class MainActivity extends AppCompatActivity {
     /*
-    TODO: Rewrite full app
-    3x3x3:
-        F2l     - 1
-        OLL     - 2
-        PLL     - 3
-        TODO: Expert F2L, OLL, PLL
+   TODO: Rewrite full app
+   3x3x3:
+       F2l     - 1
+       OLL     - 2
+       PLL     - 3
+       TODO: Expert F2L, OLL, PLL
 
-    3x3x3 EASY  - 22
-    TODO: easy Fridrich, 4x4x4, 5x5x5, 2x2x2
+   3x3x3 EASY  - 22
+   TODO: easy Fridrich, 4x4x4, 5x5x5, 2x2x2
 
-    3x3x3 OH:
-        OH_OLL  - 7
-        OH_PLL  - 8
-        OH_COLL - 14
+   3x3x3 OH:
+       OH_OLL  - 7
+       OH_PLL  - 8
+       OH_COLL - 14
 
-    3x3x3 PRO:
-        VHF2L   - 4
-        OPF2L   - 5
-        COLL    - 6
-        OLE     - 10
-        OLC     - 11
-        WV      - 12
-        SV      - 13
-        VLS     - 18
-        MW      - 19
+   3x3x3 PRO:
+       VHF2L   - 4
+       OPF2L   - 5
+       COLL    - 6
+       OLE     - 10
+       OLC     - 11
+       WV      - 12
+       SV      - 13
+       VLS     - 18
+       MW      - 19
 
-    2x2x2 EG:
-        CLL     - 9
-        EG1     - 15
-        EG2     - 16
-        LEG1    - 17
-        TODO: Ortega
-  
-    Megaminx:
-        MG_OLL  - 20
-        MG_PLL    - 21
-     */
-    private Toolbar toolbar;
+   2x2x2 EG:
+       CLL     - 9
+       EG1     - 15
+       EG2     - 16
+       LEG1    - 17
+       TODO: Ortega
+
+   Megaminx:
+       MG_OLL  - 20
+       MG_PLL    - 21
+    */
 
     private static final int F2L_ID     = 1;
     private static final int PLL_ID     = 2;
@@ -88,31 +84,20 @@ public class MainActivity extends AppCompatActivity {
     private static final int MG_PLL_ID  = 21;
     private static final int EASY_3_ID  = 22;
 
+    private Toolbar toolbar;
+    private String picMode, mode;
+
     private int picLen = 250;
     private int textSize = 16;
-    String picMode, mode;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         toolbar = findViewById(R.id.toolbar);
         toolbar.setTitle(getResources().getString(R.string.f2l_header));
         setSupportActionBar(toolbar);
-
-        DisplayMetrics displaymetrics = new DisplayMetrics();
-        getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
-        if (displaymetrics.widthPixels < 700)
-        {
-            picLen = 100;
-            textSize = 14;
-        } else if (displaymetrics.widthPixels < 1000)
-        {
-            picLen = 150;
-            textSize = 14;
-        }
 
         DrawerBuilder drawerBuilder = new DrawerBuilder()
                 .withActivity(this)
@@ -121,7 +106,6 @@ public class MainActivity extends AppCompatActivity {
                 .addDrawerItems(
                         new PrimaryDrawerItem()
                                 .withName(getResources().getString(R.string.easy3_header))
-                                .withSelectable(false)
                                 .withIdentifier(EASY_3_ID),
                         new ExpandableDrawerItem()
                                 .withName(getResources().getString(R.string.header_3x3x3))
@@ -170,37 +154,30 @@ public class MainActivity extends AppCompatActivity {
                                         new SecondaryDrawerItem()
                                                 .withName(getResources().getString(R.string.coll_header))
                                                 .withLevel(2)
-                                                .withTextColor(R.color.colorBlack)
                                                 .withIdentifier(COLL_ID),
                                         new SecondaryDrawerItem()
                                                 .withName(getResources().getString(R.string.ole_header))
                                                 .withLevel(2)
-                                                .withTextColor(R.color.colorBlack)
                                                 .withIdentifier(OLE_ID),
                                         new SecondaryDrawerItem()
                                                 .withName(getResources().getString(R.string.olc_header))
                                                 .withLevel(2)
-                                                .withTextColor(R.color.colorBlack)
                                                 .withIdentifier(OLC_ID),
                                         new SecondaryDrawerItem()
                                                 .withName(getResources().getString(R.string.wv_header))
                                                 .withLevel(2)
-                                                .withTextColor(R.color.colorBlack)
                                                 .withIdentifier(WV_ID),
                                         new SecondaryDrawerItem()
                                                 .withName(getResources().getString(R.string.sv_header))
                                                 .withLevel(2)
-                                                .withTextColor(R.color.colorBlack)
                                                 .withIdentifier(SV_ID),
                                         new SecondaryDrawerItem()
                                                 .withName(getResources().getString(R.string.vls_header))
                                                 .withLevel(2)
-                                                .withTextColor(R.color.colorBlack)
                                                 .withIdentifier(VLS_ID),
                                         new SecondaryDrawerItem()
                                                 .withName(getResources().getString(R.string.mw_header))
                                                 .withLevel(2)
-                                                .withTextColor(R.color.colorBlack)
                                                 .withIdentifier(MW_ID)),
                         new ExpandableDrawerItem()
                                 .withName(getResources().getString(R.string.header_2x2x2))
@@ -238,18 +215,18 @@ public class MainActivity extends AppCompatActivity {
                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener()
                 {
                     @Override
-                    public boolean onItemClick(View view, int position, @NotNull IDrawerItem drawerItem)
+                    public boolean onItemClick(View view, int position, IDrawerItem drawerItem)
                     {
 
                         switch ((int) drawerItem.getIdentifier()) {
                             case F2L_ID:     mode = picMode = "f2l"; break;
                             case OLL_ID:     mode = picMode = "oll"; break;
                             case PLL_ID:     mode = picMode = "pll"; break;
-                            
-                            case OH_OLL_ID:  mode = "oh_oll";  picMode = "oll";  break; 
+
+                            case OH_OLL_ID:  mode = "oh_oll";  picMode = "oll";  break;
                             case OH_PLL_ID:  mode = "oh_pll";  picMode = "pll";  break;
                             case OH_COLL_ID: mode = "oh_coll"; picMode = "coll"; break;
-                            
+
                             case COLL_ID:    mode = picMode = "coll"; break;
                             case OPF2L_ID:   mode = picMode = "op";   break;
                             case VHF2L_ID:   mode = picMode = "vh";   break;
@@ -274,13 +251,13 @@ public class MainActivity extends AppCompatActivity {
                         Draw();
 
                         return false;
-                        }
-                    })
+                    }
+                })
                 .withSavedInstance(savedInstanceState);
         Drawer mDrawer = drawerBuilder.build();
         mDrawer.setSelection(EASY_3_ID);
-    }
 
+    }
 
     void tutorials_3x3x3()
     {
@@ -295,7 +272,6 @@ public class MainActivity extends AppCompatActivity {
         mainLayout.addView(childLayout);
     }
 
-
     void Draw()
     {
         toolbar.setTitle(getResources().getString(getResources().getIdentifier(mode + "_header", "string", getPackageName())));
@@ -307,8 +283,8 @@ public class MainActivity extends AppCompatActivity {
         scrollview.scrollTo(0,0);
         for (int i = 0; i < Integer.parseInt(getResources().getString(getResources().getIdentifier(mode + "_count", "string", getPackageName()))); i++)
         {
-            int algCount = Integer.parseInt(getResources().getString(getResources().getIdentifier(mode + i + "_count", "string", getPackageName())));
-            if (algCount == 0) continue;
+            //int algCount = Integer.parseInt(getResources().getString(getResources().getIdentifier(mode + i + "_count", "string", getPackageName())));
+            //if (algCount == 0) continue;
 
 
             ImageView image = new ImageView(this);
@@ -317,6 +293,18 @@ public class MainActivity extends AppCompatActivity {
 
             LinearLayout line = new LinearLayout(new ContextThemeWrapper(this, R.style.line));
 
+            TextView algText = new TextView(this);
+            System.out.println(i);
+            String alg = getResources().getString(getResources().getIdentifier(mode + i, "string", getPackageName()));
+
+            if (alg.equals("")) continue;
+
+            algText.setText(alg);
+            algText.setGravity(Gravity.CENTER_VERTICAL);
+            algText.setTextSize(textSize);
+            algText.setPadding(15, 0, 0, 0);
+
+            /*
             LinearLayout algLayout = new LinearLayout(this);
             algLayout.setOrientation(LinearLayout.VERTICAL);
             algLayout.setPadding(20,0,0,0);
@@ -327,16 +315,15 @@ public class MainActivity extends AppCompatActivity {
 
                 TextView text = new TextView(this);
                 text.setText(alg);
-                text.setTextColor(getResources().getColor(R.color.colorBlack));
                 text.setTextSize(textSize);
                 algLayout.addView(text);
             }
+             */
 
             String title = getResources().getString(getResources().getIdentifier(picMode + i + "_title", "string", getPackageName()));
             if (!title.equals(""))
             {
                 TextView titleView = new TextView(this);
-                titleView.setTextColor(getResources().getColor(R.color.colorBlack));
                 titleView.setText(title);
                 titleView.setPadding(0,20,0,0);
                 titleView.setTextSize(textSize + 4);
@@ -344,16 +331,17 @@ public class MainActivity extends AppCompatActivity {
 
                 mainLayout.addView(titleView);
             } else
-                {
-                    View sep = new View(this);
-                    LinearLayout.LayoutParams sepParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 1);
-                    sep.setLayoutParams(sepParams);
-                    sep.setBackgroundColor(getResources().getColor(R.color.material_drawer_divider));
-                    sep.setPadding(3, 1, 1, 3);
-                    mainLayout.addView(sep);
-                }
+            {
+                View sep = new View(this);
+                LinearLayout.LayoutParams sepParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 1);
+                sep.setLayoutParams(sepParams);
+                sep.setBackgroundColor(getColor(R.color.material_drawer_divider));
+                sep.setPadding(3, 1, 1, 3);
+                mainLayout.addView(sep);
+            }
             line.addView(image);
-            line.addView(algLayout);
+            line.addView(algText);
+            //line.addView(algLayout);
             mainLayout.addView(line);
         }
     }
