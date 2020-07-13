@@ -106,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
         getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
         if (displaymetrics.widthPixels < 700)
         {
-            picLen = 100 ;
+            picLen = 100;
             textSize = 14;
         } else if (displaymetrics.widthPixels < 1000)
         {
