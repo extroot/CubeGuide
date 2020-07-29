@@ -1,22 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Cube Guide</string>
+
+    <string name="easy3_header">3x3x3 - Метод для начинающих</string>
+
     <string name="header_3x3x3">3x3x3 - Метод CFOP</string>
-    <string name="header_2x2x2">2x2x2 - Метод EG</string>
     <string name="f2l_header">F2L - Первые два слоя</string>
-    <string name="coll_header">COLL - Перестановка углов и OLL</string>
-    <string name="cll_header">CLL - Перестановка углов и OLL</string>
-    <string name="header_3x3x3_oh">3x3x3 - Одной рукой</string>
-    <string name="header_3x3x3_pro">3x3x3 - Продвинутые методы</string>
-    <string name="oh_oll_header">OH OLL - OLL Одной рукой</string>
-    <string name="oh_pll_header">OH PLL - PLL Одной рукой</string>
-    <string name="olc_header">OLC - Ориентация последнего угла</string>
-    <string name="ole_header">OLE - Ориентация последнего ребра</string>
     <string name="oll_header">OLL - Ориентация последнего слоя</string>
     <string name="pll_header">PLL - Перестановка последнего слоя</string>
+
+    <string name="header_3x3x3_oh">3x3x3 - Одной рукой</string>
+    <string name="oh_oll_header">OH OLL - OLL Одной рукой</string>
+    <string name="oh_pll_header">OH PLL - PLL Одной рукой</string>
     <string name="oh_coll_header">OH COLL - COLL Одной рукой</string>
+
+    <string name="header_3x3x3_pro">3x3x3 - Продвинутые методы</string>
+    <string name="coll_header">COLL - Перестановка углов и OLL</string>
+    <string name="olc_header">OLC - Ориентация последнего угла</string>
+    <string name="ole_header">OLE - Ориентация последнего ребра</string>
+    <string name="ell_header">ELL - Ребра последнего слоя</string>
+
+    <string name="zbll_t_header">Уши</string>
+    <string name="zbll_u_header">Глаза</string>
+    <string name="zbll_l_header">Восьмерки</string>
+    <string name="zbll_h_header">Двойные глаза</string>
+    <string name="zbll_pi_header">Вертолеты</string>
+    <string name="zbll_sune_header">Рыбки</string>
+    <string name="zbll_antisune_header">Антирыбки</string>
+
+    <string name="uz_header">3x3x3 – Узоры</string>
+
+    <string name="header_2x2x2">2x2x2</string>
+    <string name="ortega_header">Ортега (Varasano)</string>
+    <string name="cll_header">CLL - Перестановка углов и OLL</string>
+    <string name="tcllp_header">TCLL+ - Twisty CLL (Угол справа)</string>
+
+    <string name="l2c_header">L2C – Последние 2 центра</string>
+    <string name="l2e_header">L2E – Последние 2 ребра</string>
+
     <string name="header_mg">Мегаминкс - Послойный метод</string>
     <string name="mg_pll_header">PLL - Перестановка последнего слоя</string>
     <string name="mg_oll_header">OLL - Ориентация последнего слоя</string>
-    <string name="easy3_header">3x3x3 - Метод для начинающих</string>
+
+    <string name="header_pyraminx">Пирамидка</string>
+    <string name="l3c_header">L3C – Последние 3 центра</string>
+    <string name="l3e_header">L3E – Последние 3 ребра</string>
+
 </resources>

@@ -1,3 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="eg1__count" translatable="false">40</string>
+
+    <string name="eg1_0" translatable="false">(U\') F\' L U2 F2 R U\' x\'\nz\' R\' U\' R U2 x\' U2 R U\'</string>
+    <string name="eg1_1" translatable="false">R U R\' F2 U F R U R\'\n(U2) F R2 U\' R2 F U\' F2 U\' R</string>
+    <string name="eg1_2" translatable="false">(U\') R\' F R U2 R U\' R2 F2 R F\'\n(U2) F R\' F\' R U R\' F\' R2 U R\'</string>
+    <string name="eg1_3" translatable="false">F\' U R U\' R\' U F R U R\'\n(U) F\' R\' F R2 U R\' U\' F R\' F\' R\n(U2) F U\' R U2 R\' F2 R\' F R</string>
+    <string name="eg1_4" translatable="false">(U) R U\' R\' U R U\' R\' U F R U\' R\'\n(U) R U\' R\' U R U\' R\' U\' R\' F\' R F</string>
+    <string name="eg1_5" translatable="false">R\' F R2 U\' R\' U L F\' L\' F</string>
+    <string name="eg1_6" translatable="false">(U\') B U\' R2 F2 U\' F\n(U) R\' F R2 U R\' F\' U\' R U\' R\'</string>
+    <string name="eg1_7" translatable="false">(U) R U\' R\' F\' U\' F2 R U\' R\'\nR U\' F2 R U2 R U\' F</string>
+    <string name="eg1_8" translatable="false">F\' R U R\' U\' R U R2\' F\' R\n(U\') R U\' R\' U2 R\' F R2 U2 R\' F</string>
+    <string name="eg1_9" translatable="false">R U\' R\' F\' U\' R U R\' U\' F</string>
+    <string name="eg1_10" translatable="false">(U\') R U R\' F\' U\' R U R\' U\' R U R\'\n(U) F\' R\' F R U R U R\' U\' R U R\'</string>
+    <string name="eg1_11" translatable="false">(U2) R U\' R2 F R U\' R\' F R F\'</string>
+    <string name="eg1_12" translatable="false">(U2) R2 B2 R\' U R\' U\' R U2 R U\' R2\n(U2) F2 R U R\' U2 R U R\' U\' F\n(U) F U\' R\' F R U\' F2 R U R\'</string>
+    <string name="eg1_13" translatable="false">(U\') R\' F R2 U\' R2 F R</string>
+    <string name="eg1_14" translatable="false">(U\') F R\' F U\' F2 R U R</string>
+    <string name="eg1_15" translatable="false">(U\') R U\' R\' U R U\' R\' F R U\' R\'\n(U\') F\' R U R\' U\' R U R\' F\' R U R\'\n(U\') L\' U L U\' L\' U L F\' L\' U L\nF2 R U R\' U2\' F2 R U\' R\' </string>
+    <string name="eg1_16" translatable="false">(U) F U\' R U2 R\' F\' R U R\' F\'\nR U\' R2 F R U R U\' R\' U\' R\' F R F\'</string>
+    <string name="eg1_17" translatable="false">(U\') R\' F R F\' R\' F R2 U R\' U\' R U\' R\'\nF R U\' R\' F R U2 R\' U F\'\n(U\') R\' F R F\' U\' R U\' R\' U R\' F R2 U\' R\'</string>
+    <string name="eg1_18" translatable="false">R U’ R2’ F R2 U R’ U’ R U’ R’\nR U R\' U R U R2 F R2 U\' R\'</string>
+    <string name="eg1_19" translatable="false">(U2) x U\' R\' U R U\' F R U R U\'\nF R U\' R\' F U\' F\' R\' F\' R </string>
+    <string name="eg1_20" translatable="false">(U) F\' U2 R U2 R\' U2 F\nR U\' R\' U\' R U\' R\' U2 R U\' R\' F R U\' R\'\n(U\') R U\' R2 F2 R F\' U R U R\'</string>
+    <string name="eg1_21" translatable="false">(U2) R\' F R F\' R\' F R2 U\' R\'</string>
+    <string name="eg1_22" translatable="false">(U2) R\' F R F\' U R U\' R\' F R U\' R\'\n(U\') R U\' R\' U R U\' R\' U R\' F\' R F\n(U\') R U\' R\' U R U\' R\' U\' F R U\' R\'\n(U) F U\' R\' F2 R F\' U2 F\'</string>
+    <string name="eg1_23" translatable="false">(U\') R\' F R2 U\' R\' U y\' R U R\'</string>
+    <string name="eg1_24" translatable="false">R U\' R\' U R U\' R2 F\' R F\n(U) F R U\' R\' F\' R U R\' F\' R U R\'\n(U) R U R\' F\' R U2 R\' U2 R U R\'</string>
+    <string name="eg1_25" translatable="false">(U2) (F R\' F\' R) U2 R U\' R2 F\' R2 U R\'\nx R\' U\' R U\' R\' U\' R U\' R\' U2 R\n(U2) R\' F R F\' R\' F R U R U2 R\'\n(U) R\' F R U\' R\' F R2 U R\' F\'</string>
+    <string name="eg1_26" translatable="false">R\' U R2 U\' R2 U\' F R2 U\' R\'</string>
+    <string name="eg1_27" translatable="false">R\' F R2 U R\' F\' R U2 R\'\n(U) L\' U2 L F\' R\' F R2 U R\'</string>
+    <string name="eg1_28" translatable="false">(U) L\' U L y\' R U2 R U\' R2\n(U2) F\' R\' F R U\' R U R\' U\' R U R\'\n(U) R U R\' F\' R U R\' U\' F R\' F\' R</string>
+    <string name="eg1_29" translatable="false">(U) R\' U2\' F R U2 R U\' R2 F\n(U\') F\' U2 F\' R U2 R\' U\' F\nR U\' R\' y\' R\' U2 R\' U R2\n(U2) R\' F R F\' U2 R U2 R\' F R U\' R\'</string>
+    <string name="eg1_30" translatable="false">(U2) R2 U R U\' R2 F R U2 R\' F\n(U\') F2 U\' R2 U\' R\' U R\' F R2\nL\' U L U2 R\' F2 R F\' L\' U L\n(U) F L F\' L2 U\' L U L\' U\' L</string>
+    <string name="eg1_31" translatable="false">(U) F\' R\' F R2 U R\' U\' R U R\'\n(U\') R U\' R\' F R U\' R\' F R U R\' F\'</string>
+    <string name="eg1_32" translatable="false">(U2) R U\' R2 F R U R U2 R\'\nL\' U L2 F\' L\' U\' L\' U2 L</string>
+    <string name="eg1_33" translatable="false">R2 B2 U\' R\' U\' R U\' R\' U R\'\n(U\') R U\' R\' F\' U\' x U R\' U\' R U x\'\n(U2) R U R\' F\' R U2 R\' U y R\' F R</string>
+    <string name="eg1_34" translatable="false">(U2) R U R2 x U\' R U R\' U\' R\nR\' F\' R2 U R\' F\' R U R\'</string>
+    <string name="eg1_35" translatable="false">(U\') R U\' R\' U2 F R U2 R\' F\n(U\') L\' U L U2 F\' L\' U2 L F\'\nR U R\' F R U R\' F U\' R U\' R\'</string>
+    <string name="eg1_36" translatable="false">R\' F R2 U\' R2 U\' F U R\n(U) R U R\' F R U\' R\' U\' R U\' R\' F\nR\' F R2 U\' R\' F R U R\' F\'</string>
+    <string name="eg1_37" translatable="false">F\' U R U\' R2 F2 R U\' F</string>
+    <string name="eg1_38" translatable="false"> R\' U\' R\' F2 U F\' R F\'\n(U) R\' F R F\' U2 F R U2 R\' F\n(U\') R\' F2 R F\' R\' U\' F2 R F\' U R</string>
+    <string name="eg1_39" translatable="false">R U R\' F\' R U R\' U\' R U R\' U\'</string>
 </resources>

@@ -1,30 +1,74 @@
 <resources>
     <string name="app_name">Cube Guide</string>
-    <string name="header_3x3x3">3x3x3 - CFOP method</string>
-    <string name="header_3x3x3_oh">3x3x3 - One Hand</string>
-    <string name="header_3x3x3_pro">3x3x3 - PRO methods</string>
-    <string name="header_2x2x2">2x2x2 - EG method</string>
-    <string name="header_mg">Megaminx - layered method</string>
-    <string name="f2l_header">F2L - First Two Layers</string>
-    <string name="oll_header">OLL - Orientation of the Last Layer</string>
-    <string name="pll_header">PLL - Permutation of the Last Layer</string>
-    <string name="cll_header">CLL - Corners Last Layer</string>
-    <string name="eg1__header" translatable="false">EG1 - CLL and direct swap on the bottom</string>
-    <string name="eg2__header" translatable="false">EG2 - CLL and diagonal swap on the bottom</string>
-    <string name="leg1__header" translatable="false">LEG1 - Left EG1</string>
-    <string name="oh_oll_header">OH OLL - One Hand OLL</string>
-    <string name="oh_pll_header">OH PLL - One Hand PLL</string>
-    <string name="vh_header" translatable="false">VHF2L - Vandenbergh-Harris F2L</string>
-    <string name="op_header" translatable="false">OPF2L - Orientation-Preserving F2L</string>
-    <string name="coll_header">COLL - Corners and OLL</string>
-    <string name="ole_header">OLE - Orientation of the Last Edge</string>
-    <string name="olc_header">OLC - Orientation of the Last Corner</string>
-    <string name="wv_header" translatable="false">WV - Winter Variation</string>
-    <string name="sv_header" translatable="false">SV - Summer Variation</string>
-    <string name="oh_coll_header">OH COLL - One Hand COLL</string>
-    <string name="vls_header" translatable="false">VLS - Valk Last Slot</string>
-    <string name="mw_header" translatable="false">Magic Wondeful</string>
-    <string name="mg_oll_header">OLL - Orientation of the Last Layer</string>
-    <string name="mg_pll_header">PLL - Permutation of the Last Layer</string>
+    
     <string name="easy3_header">3x3x3 – Beginners’ Method</string>
+
+    <string name="header_3x3x3">3x3x3 – CFOP method</string>
+    <string name="f2l_header">F2L – First Two Layers</string>
+    <string name="oll_header">OLL – Orientation of the Last Layer</string>
+    <string name="pll_header">PLL – Permutation of the Last Layer</string>
+    
+    <string name="header_3x3x3_oh">3x3x3 – One Hand</string>
+    <string name="oh_oll_header">OH OLL – One Hand OLL</string>
+    <string name="oh_pll_header">OH PLL – One Hand PLL</string>
+    <string name="oh_coll_header">OH COLL – One Hand COLL</string>
+    
+    <string name="header_3x3x3_pro">3x3x3 – PRO methods</string>
+    <string name="vh_header" translatable="false">VHF2L – Vandenbergh–Harris F2L</string>
+    <string name="op_header" translatable="false">OPF2L – Orientation–Preserving F2L</string>
+    <string name="coll_header">COLL – Corners and OLL</string>
+    <string name="ole_header">OLE – Orientation of the Last Edge</string>
+    <string name="olc_header">OLC – Orientation of the Last Corner</string>
+    <string name="wv_header" translatable="false">WV – Winter Variation</string>
+    <string name="wv_help" translatable="false">Winter Variation is used to insert the CE pair while orienting the LL corners, when the LL edges are oriented.</string>
+    <string name="sv_header" translatable="false">SV – Summer Variation</string>
+    <string name="vls_header" translatable="false">VLS – Valk Last Slot</string>
+    <string name="mw_header" translatable="false">Magic Wondeful</string>
+    <string name="cls_header" translatable="false">CLS - Corner step of the Last Slot</string>
+    <string name="cls_help" translatable="false">CLS is part of the MGLS method. CLS involves placing the LS corner while orienting the LL corners. It is used when the LS edge is in place and the LL edges are oriented.</string>
+    <string name="ell_header">ELL - Edges of the Last Layer</string>
+    <string name="ell_help" translatable="false">ELL is used to solve the edges of the last layer, when everything else is solved.</string>
+    <string name="oellcp_header" translatable="false">OELLCP - Orientation of the Edges of the Last Layer and Corner Permutation</string>
+    <string name="els_header" translatable="false">ELS - Edge Step of the Last Slot</string>
+    <string name="els_help" translatable="false">ELS is part of the MGLS method. ELS involves placing the LS edge while orienting the LL edges.</string>
+    <string name="pll_sc_header" translatable="false">PLL Skip Cases</string>
+
+    <string name="zbll_header" translatable="false">ZBLL</string>
+    <string name="zbll_t_header">T-shapes</string>
+    <string name="zbll_u_header">U-shapes</string>
+    <string name="zbll_l_header">L-shapes</string>
+    <string name="zbll_h_header">H-shapes</string>
+    <string name="zbll_pi_header">Pi-shapes</string>
+    <string name="zbll_sune_header">Sune</string>
+    <string name="zbll_antisune_header">Antisune</string>
+
+    <string name="uz_header">3x3x3 – Patterns</string>
+    
+    <string name="header_2x2x2">2x2x2</string>
+    <string name="ortega_header">Ortega (Varasano)</string>
+    <string name="cll_header">CLL – Corners Last Layer</string>
+    <string name="eg1__header" translatable="false">EG1 – CLL and direct swap on the bottom</string>
+    <string name="eg2__header" translatable="false">EG2 – CLL and diagonal swap on the bottom</string>
+    <string name="leg1__header" translatable="false">LEG1 – Left EG1</string>
+    <string name="tcllp_header">TCLL+ – Twisty CLL (Угол справа)</string>
+
+    <string name="poll_header" translatable="false">4x4x4 POLL – Parity OLL</string>
+
+    <string name="header_5x5x5" translatable="false">5x5x5</string>
+    <string name="l2c_header">L2C – Last 2 Centers</string>
+    <string name="l2e_header">L2E – Last 2 Edges</string>
+    
+    <string name="header_mg">Megaminx – layered method</string>
+    <string name="mg_oll_header">OLL – Orientation of the Last Layer</string>
+    <string name="mg_pll_header">PLL – Permutation of the Last Layer</string>
+    
+    <string name="header_pyraminx">Pyraminx</string>
+    <string name="l3c_header">L3C – Last 3 Centers</string>
+    <string name="l3e_header">L3E – Last 3 Edges</string>
+    
+    <string name="header_square1" translatable="false">Square-1</string>
+    <string name="eo_header" translatable="false">EO – Edges Orientation</string>
+    <string name="cp_header" translatable="false">CP – Corners Permutation</string>
+    <string name="ep_header" translatable="false">EP – Edges Permutation</string>
+
 </resources>
