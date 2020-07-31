@@ -3,12 +3,15 @@ package ru.extroot.newcubeguide;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.view.ContextThemeWrapper;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
@@ -16,9 +19,13 @@ import android.widget.TextView;
 
 import com.mikepenz.materialdrawer.Drawer;
 import com.mikepenz.materialdrawer.DrawerBuilder;
+import com.mikepenz.materialdrawer.interfaces.OnCheckedChangeListener;
 import com.mikepenz.materialdrawer.model.ExpandableDrawerItem;
 import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
 import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
+import com.mikepenz.materialdrawer.model.SwitchDrawerItem;
+import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
+
 
 public class MainActivity extends AppCompatActivity
 {
@@ -111,17 +118,15 @@ public class MainActivity extends AppCompatActivity
     private static final int POLL_ID    = 25;
     private static final int L2C_ID     = 26;
     private static final int L2E_ID     = 27;
-    private static final int CLS_ID     = 28;
-    private static final int ELL_ID     = 29;
-    private static final int OELLCP_ID  = 30;
-    private static final int ELS_ID     = 31;
-    private static final int PLL_SC_ID  = 32;
-    private static final int L3C_ID     = 33;
-    private static final int L3E_ID     = 34;
-    private static final int EO_ID      = 35;
-    private static final int CP_ID      = 36;
-    private static final int EP_ID      = 37;
-    private static final int UZ_ID      = 40;
+    private static final int ELL_ID     = 28;
+    private static final int OELLCP_ID  = 29;
+    private static final int PLL_SC_ID  = 30;
+    private static final int L3C_ID     = 31;
+    private static final int L3E_ID     = 32;
+    private static final int EO_ID      = 33;
+    private static final int CP_ID      = 34;
+    private static final int EP_ID      = 35;
+    private static final int UZ_ID      = 36;
     private static final int ZBLL_T_ID        = 41;
     private static final int ZBLL_U_ID        = 42;
     private static final int ZBLL_L_ID        = 43;
@@ -130,8 +135,22 @@ public class MainActivity extends AppCompatActivity
     private static final int ZBLL_SUNE_ID     = 46;
     private static final int ZBLL_ANTISUNE_ID = 47;
 
+    private static final int NUMBER_SWITCH_ID = 101;
+
     private Toolbar toolbar;
+    private SharedPreferences settings;
+    private SharedPreferences.Editor prefEditor;
+
     private String picMode, mode;
+
+    private int picLen = 250;
+    private int textSize = 16;
+
+    private Boolean help;
+    private Boolean numbering = false;
+
+    private static final String PREFS_FILE = "main";
+    private static final String PREF_NUMB = "Numbering";
 
     @Override
     protected void onCreate( Bundle savedInstanceState )
@@ -141,6 +160,22 @@ public class MainActivity extends AppCompatActivity
 
         toolbar = findViewById( R.id.toolbar );
         setSupportActionBar( toolbar );
+
+        DisplayMetrics displaymetrics = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics( displaymetrics );
+        if ( displaymetrics.widthPixels < 700 )
+        {
+            picLen = 100;
+            textSize = 14;
+        } else if ( displaymetrics.widthPixels < 1000 )
+        {
+            picLen = 150;
+            textSize = 14;
+        }
+
+        settings = getSharedPreferences( PREFS_FILE, MODE_PRIVATE );
+        prefEditor = settings.edit();
+        numbering = settings.getBoolean( PREF_NUMB, false );
 
         DrawerBuilder drawerBuilder = new DrawerBuilder()
                 .withActivity( this )
@@ -188,62 +223,67 @@ public class MainActivity extends AppCompatActivity
                                 .withName( R.string.header_3x3x3_pro )
                                 .withSelectable( false )
                                 .withSubItems(
-                                        new SecondaryDrawerItem()
-                                                .withName( R.string.vh_header )
-                                                .withLevel( 2 )
-                                                .withIdentifier( VHF2L_ID ),
-                                        new SecondaryDrawerItem()
-                                                .withName( R.string.op_header)
-                                                .withLevel( 2 )
-                                                .withIdentifier( OPF2L_ID ),
-                                        new SecondaryDrawerItem()
-                                                .withName( R.string.coll_header )
-                                                .withLevel( 2 )
-                                                .withIdentifier( COLL_ID ),
-                                        new SecondaryDrawerItem()
-                                                .withName( R.string.ole_header )
-                                                .withLevel( 2 )
-                                                .withIdentifier( OLE_ID ),
-                                        new SecondaryDrawerItem()
-                                                .withName( R.string.olc_header )
-                                                .withLevel( 2 )
-                                                .withIdentifier( OLC_ID ),
-                                        new SecondaryDrawerItem()
-                                                .withName( R.string.wv_header )
-                                                .withLevel( 2 )
-                                                .withIdentifier( WV_ID ),
-                                        new SecondaryDrawerItem()
-                                                .withName( R.string.sv_header )
-                                                .withLevel( 2 )
-                                                .withIdentifier( SV_ID ),
-                                        new SecondaryDrawerItem()
-                                                .withName( R.string.vls_header )
-                                                .withLevel( 2 )
-                                                .withIdentifier( VLS_ID ),
-                                        new SecondaryDrawerItem()
-                                                .withName( R.string.mw_header )
-                                                .withLevel( 2 )
-                                                .withIdentifier( MW_ID ),
-                                        new SecondaryDrawerItem()
-                                                .withName( R.string.cls_header )
-                                                .withLevel( 2 )
-                                                .withIdentifier( CLS_ID ),
-                                        new SecondaryDrawerItem()
-                                                .withName( R.string.ell_header )
-                                                .withLevel( 2 )
-                                                .withIdentifier( ELL_ID ),
-                                        new SecondaryDrawerItem()
-                                                .withName( R.string.oellcp_header )
-                                                .withLevel( 2 )
-                                                .withIdentifier( OELLCP_ID ),
-                                        new SecondaryDrawerItem()
-                                                .withName( R.string.els_header )
-                                                .withLevel( 2 )
-                                                .withIdentifier( ELS_ID ),
-                                        new SecondaryDrawerItem()
-                                                .withName( R.string.pll_sc_header )
-                                                .withLevel( 2 )
-                                                .withIdentifier( PLL_SC_ID ),
+                                        new ExpandableDrawerItem()
+                                                .withName( R.string.ls_ll_header )
+                                                .withSelectable( false )
+                                                .withLevel(2)
+                                                .withSubItems(
+                                                        new SecondaryDrawerItem()
+                                                                .withName( R.string.vh_header )
+                                                                .withLevel( 3 )
+                                                                .withIdentifier( VHF2L_ID ),
+                                                        new SecondaryDrawerItem()
+                                                                .withName( R.string.op_header)
+                                                                .withLevel( 3 )
+                                                                .withIdentifier( OPF2L_ID ),
+
+                                                        new SecondaryDrawerItem()
+                                                                .withName( R.string.ole_header )
+                                                                .withLevel( 3 )
+                                                                .withIdentifier( OLE_ID ),
+                                                        new SecondaryDrawerItem()
+                                                                .withName( R.string.olc_header )
+                                                                .withLevel( 3 )
+                                                                .withIdentifier( OLC_ID ),
+                                                        new SecondaryDrawerItem()
+                                                                .withName( R.string.wv_header )
+                                                                .withLevel( 3 )
+                                                                .withIdentifier( WV_ID ),
+                                                        new SecondaryDrawerItem()
+                                                                .withName( R.string.sv_header )
+                                                                .withLevel( 3 )
+                                                                .withIdentifier( SV_ID ),
+                                                        new SecondaryDrawerItem()
+                                                                .withName( R.string.vls_header )
+                                                                .withLevel( 3 )
+                                                                .withIdentifier( VLS_ID ),
+                                                        new SecondaryDrawerItem()
+                                                                .withName( R.string.mw_header )
+                                                                .withLevel( 3 )
+                                                                .withIdentifier( MW_ID )
+                                                ),
+                                        new ExpandableDrawerItem()
+                                                .withName( R.string.ll_header )
+                                                .withSelectable( false )
+                                                .withLevel(2)
+                                                .withSubItems(
+                                                        new SecondaryDrawerItem()
+                                                                .withName( R.string.coll_header )
+                                                                .withLevel( 3 )
+                                                                .withIdentifier( COLL_ID ),
+                                                        new SecondaryDrawerItem()
+                                                                .withName( R.string.ell_header )
+                                                                .withLevel( 3 )
+                                                                .withIdentifier( ELL_ID ),
+                                                        new SecondaryDrawerItem()
+                                                                .withName( R.string.oellcp_header )
+                                                                .withLevel( 3 )
+                                                                .withIdentifier( OELLCP_ID ),
+                                                        new SecondaryDrawerItem()
+                                                                .withName( R.string.pll_sc_header )
+                                                                .withLevel( 3 )
+                                                                .withIdentifier( PLL_SC_ID )
+                                                ),
                                         new ExpandableDrawerItem()
                                                 .withName( R.string.zbll_header )
                                                 .withSelectable( false )
@@ -369,11 +409,24 @@ public class MainActivity extends AppCompatActivity
                                                 .withName( R.string.ep_header )
                                                 .withLevel( 2 )
                                                 .withIdentifier( EP_ID )
-                                )
-                )
-                .withOnDrawerItemClickListener((view, position, drawerItem) -> {
+                                ),
+                        new SwitchDrawerItem()
+                                .withName( R.string.number_switch )
+                                .withLevel( 1 )
+                                .withChecked( numbering )
+                                .withSelectable( false )
+                                .withIdentifier( NUMBER_SWITCH_ID)
+                                .withOnCheckedChangeListener((drawerItem, compoundButton, b) -> {
+                                    numbering = b;
+                                    prefEditor.putBoolean(PREF_NUMB, numbering);
+                                    prefEditor.apply();
+                                    Draw();
+                                })
+                ).withOnDrawerItemClickListener((view, position, drawerItem) ->
+                {
+                    help = false;
                     switch ( (int) drawerItem.getIdentifier() ) {
-                        case EASY_3_ID:  tutorials_3x3x3(); return false;
+                        case EASY_3_ID:  mode = picMode = "easy3"; break;
 
                         case F2L_ID:     mode = picMode = "f2l"; break;
                         case OLL_ID:     mode = picMode = "oll"; break;
@@ -386,16 +439,14 @@ public class MainActivity extends AppCompatActivity
                         case COLL_ID:    mode = picMode = "coll";   break;
                         case OPF2L_ID:   mode = picMode = "op";     break;
                         case VHF2L_ID:   mode = picMode = "vh";     break;
-                        case WV_ID:      mode = picMode = "wv";     break;
+                        case WV_ID:      mode = picMode = "wv";     help = true; break;
                         case SV_ID:      mode = picMode = "sv";     break;
                         case MW_ID:      mode = picMode = "mw";     break;
                         case OLE_ID:     mode = picMode = "ole";    break;
                         case OLC_ID:     mode = picMode = "olc";    break;
                         case VLS_ID:     mode = picMode = "vls";    break;
-                        case CLS_ID:     mode = picMode = "cls";    break;
-                        case ELL_ID:     mode = picMode = "ell";    break;
+                        case ELL_ID:     mode = picMode = "ell";    help = true; break;
                         case OELLCP_ID:  mode = picMode = "oellcp"; break;
-                        case ELS_ID:     mode = picMode = "els";    break;
                         case PLL_SC_ID:  mode = picMode = "pll_sc"; break;
 
                         case ZBLL_T_ID:        mode = picMode = "zbll_t";        break;
@@ -430,9 +481,10 @@ public class MainActivity extends AppCompatActivity
                         case CP_ID:      mode = picMode = "cp"; break;
                         case EP_ID:      mode = picMode = "ep"; break;
 
+
                         default: return true;
                     }
-                    toolbar.setTitle( getResources().getString( getResources().getIdentifier( mode + "_header", "string", getPackageName() ) ) );
+                    toolbar.setTitle( getString( getResources().getIdentifier( mode + "_header", "string", getPackageName() ) ) );
                     Draw();
                     return false;
                 })
@@ -447,26 +499,40 @@ public class MainActivity extends AppCompatActivity
     {
         toolbar.setTitle( R.string.easy3_header );
 
-        LinearLayout mainLayout = findViewById( R.id.main_view );
-        mainLayout.removeAllViews();
 
-        LayoutInflater inflater = (LayoutInflater) this.getSystemService( LAYOUT_INFLATER_SERVICE );
-        View childLayout = inflater.inflate( R.layout.easy3, findViewById( R.id.easy3 ));
-        mainLayout.addView( childLayout );
     }
 
     void Draw()
     {
-        // TODO: use Dimens.
-        int picLen = 250;
-        int textSize = 16;
+        /*
+        TODO: Help Text.
+        if ( help ) {
+            ExpandableTextView expTv1 = (ExpandableTextView) findViewById( R.id.expand_text_view );
+            expTv1.setText( getString( R.string.help ) + getString( getResources().getIdentifier( mode + "_help", "string", getPackageName() ) ) );
+        }
+         */
+
+
+
         LinearLayout mainLayout = findViewById( R.id.main_view );
         mainLayout.removeAllViews();
         mainLayout.setPadding( 0, 5, 0, 40 );
 
         ScrollView scrollview = findViewById( R.id.main_scroll );
         scrollview.scrollTo( 0,0 );
-        for ( int i = 0; i < Integer.parseInt( getResources().getString( getResources().getIdentifier( mode + "_count", "string", getPackageName() ) ) ); i++ )
+        System.out.println( mode );
+        if ( mode.equals("easy3") )
+        {
+            LayoutInflater inflater = (LayoutInflater) this.getSystemService( LAYOUT_INFLATER_SERVICE );
+            View childLayout = inflater.inflate( R.layout.easy3, findViewById( R.id.easy3 ));
+            mainLayout.addView( childLayout );
+            return;
+        }
+
+        int offset = 0;
+
+        System.out.println( numbering );
+        for ( int i = 0; i < Integer.parseInt( getString( getResources().getIdentifier( mode + "_count", "string", getPackageName() ) ) ); i++ )
         {
             ImageView image = new ImageView( this );
             image.setImageResource( getResources().getIdentifier( picMode + i, "drawable", getPackageName() ) );
@@ -474,11 +540,25 @@ public class MainActivity extends AppCompatActivity
 
             LinearLayout line = new LinearLayout( new ContextThemeWrapper( this, R.style.line ) );
 
+            String alg = getString( getResources().getIdentifier( mode + i, "string", getPackageName() ) );
+
+            if ( alg.equals( "" ) )
+            {
+                offset++;
+                continue;
+            }
+
+            if ( numbering ) {
+                TextView numberText = new TextView(this);
+                numberText.setText(String.valueOf(i + 1 - offset));
+                numberText.setPadding(0, 0, 10, 0);
+                numberText.setGravity(Gravity.CENTER_VERTICAL);
+                numberText.setTextSize(textSize);
+
+                line.addView(numberText);
+            }
+
             TextView algText = new TextView( this );
-
-            String alg = getResources().getString( getResources().getIdentifier( mode + i, "string", getPackageName() ) );
-
-            if ( alg.equals( "" ) ) continue;
             algText.setText( alg );
             algText.setGravity( Gravity.CENTER_VERTICAL );
             algText.setTextSize( textSize );
@@ -492,7 +572,7 @@ public class MainActivity extends AppCompatActivity
                 line.setGravity( Gravity.CENTER_HORIZONTAL );
                 algText.setGravity( Gravity.CENTER_HORIZONTAL );
             }
-            String title = getResources().getString( getResources().getIdentifier( picMode + i + "_title", "string", getPackageName() ) );
+            String title = getString( getResources().getIdentifier( picMode + i + "_title", "string", getPackageName() ) );
             if ( !title.equals( "" ) )
             {
                 TextView titleView = new TextView( this );

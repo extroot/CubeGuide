@@ -15,9 +15,11 @@
     <string name="oh_coll_header">OH COLL - COLL Одной рукой</string>
 
     <string name="header_3x3x3_pro">3x3x3 - Продвинутые методы</string>
+    <string name="ls_ll_header">LS+LL – Последняя пара + последний слой</string>
     <string name="coll_header">COLL - Перестановка углов и OLL</string>
     <string name="olc_header">OLC - Ориентация последнего угла</string>
     <string name="ole_header">OLE - Ориентация последнего ребра</string>
+    <string name="ll_header">LL - Последний слой</string>
     <string name="ell_header">ELL - Ребра последнего слоя</string>
 
     <string name="zbll_t_header">Уши</string>
@@ -35,6 +37,8 @@
     <string name="cll_header">CLL - Перестановка углов и OLL</string>
     <string name="tcllp_header">TCLL+ - Twisty CLL (Угол справа)</string>
 
+    <string name="poll_header" translatable="false">4x4x4 POLL – Паритетный OLL</string>
+
     <string name="l2c_header">L2C – Последние 2 центра</string>
     <string name="l2e_header">L2E – Последние 2 ребра</string>
 
@@ -46,4 +50,9 @@
     <string name="l3c_header">L3C – Последние 3 центра</string>
     <string name="l3e_header">L3E – Последние 3 ребра</string>
 
+    <string name="eo_header">EO – Ориентация ребер</string>
+    <string name="cp_header">CP – Перестановка углов</string>
+    <string name="ep_header">EP – Перестановка ребер</string>
+
+    <string name="number_switch">Нумерация формул</string>
 </resources>
