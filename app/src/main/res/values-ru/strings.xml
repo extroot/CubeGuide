@@ -22,6 +22,7 @@
     <string name="ll_header">LL - Последний слой</string>
     <string name="ell_header">ELL - Ребра последнего слоя</string>
 
+    <string name="zbll_header">ZBLL – Zborowski-Bruchem LL</string>
     <string name="zbll_t_header">Уши</string>
     <string name="zbll_u_header">Глаза</string>
     <string name="zbll_l_header">Восьмерки</string>

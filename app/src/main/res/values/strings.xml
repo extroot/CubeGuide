@@ -35,7 +35,7 @@
     <string name="oellcp_header" translatable="false">OELLCP – Orientation of the Edges of the Last Layer and Corner Permutation</string>
     <string name="pll_sc_header" translatable="false">PLL Skip Cases</string>
 
-    <string name="zbll_header" translatable="false">ZBLL</string>
+    <string name="zbll_header">ZBLL – Zborowski-Bruchem LL</string>
     <string name="zbll_t_header">T–shapes</string>
     <string name="zbll_u_header">U–shapes</string>
     <string name="zbll_l_header">L–shapes</string>

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.ContextThemeWrapper;
@@ -11,7 +12,6 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
@@ -19,12 +19,12 @@ import android.widget.TextView;
 
 import com.mikepenz.materialdrawer.Drawer;
 import com.mikepenz.materialdrawer.DrawerBuilder;
-import com.mikepenz.materialdrawer.interfaces.OnCheckedChangeListener;
 import com.mikepenz.materialdrawer.model.ExpandableDrawerItem;
 import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
 import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
 import com.mikepenz.materialdrawer.model.SwitchDrawerItem;
-import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
+
+//import java.util.Locale;
 
 
 public class MainActivity extends AppCompatActivity
@@ -65,6 +65,7 @@ public class MainActivity extends AppCompatActivity
            ZBLL_PI       - 45
            ZBLL_SUNE     - 46
            ZBLL_ANTISUNE - 47
+   TODO!: EN pattern titles
    3x3x3 UZ    - 40 TODO: UZ titles (En & Ru)
    TODO: UZ 2x2x2, 4x4x4, 5x5x5
    2x2x2:
@@ -126,7 +127,7 @@ public class MainActivity extends AppCompatActivity
     private static final int EO_ID      = 33;
     private static final int CP_ID      = 34;
     private static final int EP_ID      = 35;
-    private static final int UZ_ID      = 36;
+    //private static final int UZ_ID      = 36;
     private static final int ZBLL_T_ID        = 41;
     private static final int ZBLL_U_ID        = 42;
     private static final int ZBLL_L_ID        = 43;
@@ -136,9 +137,11 @@ public class MainActivity extends AppCompatActivity
     private static final int ZBLL_ANTISUNE_ID = 47;
 
     private static final int NUMBER_SWITCH_ID = 101;
+    // TODO: Translations in menu
+    //private static final int RU_ID = 201;
+    //private static final int EN_ID = 202;
 
     private Toolbar toolbar;
-    private SharedPreferences settings;
     private SharedPreferences.Editor prefEditor;
 
     private String picMode, mode;
@@ -159,6 +162,7 @@ public class MainActivity extends AppCompatActivity
         setContentView( R.layout.activity_main );
 
         toolbar = findViewById( R.id.toolbar );
+        toolbar.setTitle( R.string.easy3_header );
         setSupportActionBar( toolbar );
 
         DisplayMetrics displaymetrics = new DisplayMetrics();
@@ -173,7 +177,7 @@ public class MainActivity extends AppCompatActivity
             textSize = 14;
         }
 
-        settings = getSharedPreferences( PREFS_FILE, MODE_PRIVATE );
+        SharedPreferences settings = getSharedPreferences(PREFS_FILE, MODE_PRIVATE);
         prefEditor = settings.edit();
         numbering = settings.getBoolean( PREF_NUMB, false );
 
@@ -319,9 +323,9 @@ public class MainActivity extends AppCompatActivity
                                                                 .withIdentifier( ZBLL_ANTISUNE_ID )
                                                 )
                                 ),
-                        new PrimaryDrawerItem()
-                                .withName( R.string.uz_header )
-                                .withIdentifier( UZ_ID ),
+                        //new PrimaryDrawerItem()
+                        //        .withName( R.string.uz_header )
+                        //        .withIdentifier( UZ_ID ),
                         new ExpandableDrawerItem()
                                 .withName( R.string.header_2x2x2 )
                                 .withSelectable( false )
@@ -412,7 +416,6 @@ public class MainActivity extends AppCompatActivity
                                 ),
                         new SwitchDrawerItem()
                                 .withName( R.string.number_switch )
-                                .withLevel( 1 )
                                 .withChecked( numbering )
                                 .withSelectable( false )
                                 .withIdentifier( NUMBER_SWITCH_ID)
@@ -422,6 +425,21 @@ public class MainActivity extends AppCompatActivity
                                     prefEditor.apply();
                                     Draw();
                                 })
+                        /*
+                        new ExpandableDrawerItem()
+                                .withName( "Язык" )
+                                .withSelectable( false )
+                                .withSubItems(
+                                        new SecondaryDrawerItem()
+                                                .withName( "Русский" )
+                                                .withLevel( 2 )
+                                                .withIdentifier( RU_ID ),
+                                        new SecondaryDrawerItem()
+                                                .withName( "English" )
+                                                .withLevel( 2 )
+                                                .withIdentifier( EN_ID )
+                                )
+                         */
                 ).withOnDrawerItemClickListener((view, position, drawerItem) ->
                 {
                     help = false;
@@ -457,7 +475,7 @@ public class MainActivity extends AppCompatActivity
                         case ZBLL_SUNE_ID:     mode = picMode = "zbll_sune";     break;
                         case ZBLL_ANTISUNE_ID: mode = picMode = "zbll_antisune"; break;
 
-                        case UZ_ID:      mode = picMode = "uz"; break;
+                        //case UZ_ID:      mode = picMode = "uz"; break;
 
                         case CLL_ID:     mode = picMode = "cll";          break;
                         case ORTEGA_ID:  mode = picMode = "ortega";       break;
@@ -481,6 +499,9 @@ public class MainActivity extends AppCompatActivity
                         case CP_ID:      mode = picMode = "cp"; break;
                         case EP_ID:      mode = picMode = "ep"; break;
 
+                        //case RU_ID: setLocale("ru");  break;
+                        //case EN_ID: setLocale("en");  break;
+
 
                         default: return true;
                     }
@@ -494,13 +515,6 @@ public class MainActivity extends AppCompatActivity
         mDrawer.setSelection( EASY_3_ID );
     }
 
-    // TODO: normal inflate easy3x3x3 and others in Draw() function.
-    void tutorials_3x3x3()
-    {
-        toolbar.setTitle( R.string.easy3_header );
-
-
-    }
 
     void Draw()
     {
@@ -520,7 +534,6 @@ public class MainActivity extends AppCompatActivity
 
         ScrollView scrollview = findViewById( R.id.main_scroll );
         scrollview.scrollTo( 0,0 );
-        System.out.println( mode );
         if ( mode.equals("easy3") )
         {
             LayoutInflater inflater = (LayoutInflater) this.getSystemService( LAYOUT_INFLATER_SERVICE );
@@ -598,4 +611,14 @@ public class MainActivity extends AppCompatActivity
             mainLayout.addView( line );
         }
     }
+
+    /*
+    public void setLocale(String languageToLoad) {
+        Locale locale = new Locale(languageToLoad);
+        Locale.setDefault(locale);
+        Configuration config = new Configuration();
+        config.locale = locale;
+        getBaseContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
+    }
+     */
 }
