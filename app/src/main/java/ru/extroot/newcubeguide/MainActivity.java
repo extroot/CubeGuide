@@ -177,7 +177,7 @@ public class MainActivity extends AppCompatActivity
             textSize = 14;
         }
 
-        SharedPreferences settings = getSharedPreferences(PREFS_FILE, MODE_PRIVATE);
+        SharedPreferences settings = getSharedPreferences( PREFS_FILE, MODE_PRIVATE );
         prefEditor = settings.edit();
         numbering = settings.getBoolean( PREF_NUMB, false );
 
@@ -419,12 +419,12 @@ public class MainActivity extends AppCompatActivity
                                 .withChecked( numbering )
                                 .withSelectable( false )
                                 .withIdentifier( NUMBER_SWITCH_ID)
-                                .withOnCheckedChangeListener((drawerItem, compoundButton, b) -> {
+                                .withOnCheckedChangeListener( ( drawerItem, compoundButton, b ) -> {
                                     numbering = b;
-                                    prefEditor.putBoolean(PREF_NUMB, numbering);
+                                    prefEditor.putBoolean( PREF_NUMB, numbering );
                                     prefEditor.apply();
                                     Draw();
-                                })
+                                } )
                         /*
                         new ExpandableDrawerItem()
                                 .withName( "Язык" )
