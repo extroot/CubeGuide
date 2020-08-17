@@ -38,7 +38,7 @@
     <string name="cll_header">CLL - Перестановка углов и OLL</string>
     <string name="tcllp_header">TCLL+ - Twisty CLL (Угол справа)</string>
 
-    <string name="poll_header" translatable="false">4x4x4 POLL – Паритетный OLL</string>
+    <string name="poll_header">4x4x4 POLL – Паритетный OLL</string>
 
     <string name="l2c_header">L2C – Последние 2 центра</string>
     <string name="l2e_header">L2E – Последние 2 ребра</string>

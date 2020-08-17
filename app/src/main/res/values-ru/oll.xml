@@ -1,176 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="oll0_title">Глаза</string>
-    <string name="oll0_subtitle">Глаза</string>
-
-    <string name="oll1_title">Уши</string>
-    <string name="oll1_subtitle">Уши</string>
-
-    <string name="oll2_title">Восьмерка</string>
-    <string name="oll2_subtitle">Восьмерка</string>
-
+    <string name="oll0_title">"Глаза"</string>
+    <string name="oll1_title">"Уши"</string>
+    <string name="oll2_title">"Восьмерка"</string>
     <string name="oll3_title" />
-    <string name="oll3_subtitle" />
-
-    <string name="oll4_title">Двойные глаза</string>
-    <string name="oll4_subtitle">Двойные глаза</string>
-
-    <string name="oll5_title">Вертолет</string>
-    <string name="oll5_subtitle">Вертолет</string>
-
-    <string name="oll6_title">Рыбки</string>
-    <string name="oll6_subtitle">Рыбки</string>
-
+    <string name="oll4_title">"Двойные глаза"</string>
+    <string name="oll5_title">"Вертолет"</string>
+    <string name="oll6_title">"Рыбки"</string>
     <string name="oll7_title" />
-    <string name="oll7_subtitle">Рыбки</string>
-
-    <string name="oll8_title">Точки</string>
-    <string name="oll8_subtitle">Точки</string>
-
+    <string name="oll8_title">"Точки"</string>
     <string name="oll9_title" />
-    <string name="oll9_subtitle">Точки</string>
-
-    <string name="oll10_title">Запятые</string>
-    <string name="oll10_subtitle">Запятые</string>
-
+    <string name="oll10_title">"Запятые"</string>
     <string name="oll11_title" />
-    <string name="oll11_subtitle">Запятые</string>
-
-    <string name="oll12_title">Микки Маусы</string>
-    <string name="oll12_subtitle">Микки Маусы</string>
-
+    <string name="oll12_title">"Микки Маусы"</string>
     <string name="oll13_title" />
-    <string name="oll13_subtitle">Микки Маусы</string>
-
-    <string name="oll14_title">Диагональ</string>
-    <string name="oll14_subtitle">Диагональ</string>
-
-    <string name="oll15_title">Снежинка</string>
-    <string name="oll15_subtitle">Снежинка</string>
-
-    <string name="oll16_title">Буква "Н"</string>
-    <string name="oll16_subtitle">Буква "Н"</string>
-
-    <string name="oll17_title">Летающий змей</string>
-    <string name="oll17_subtitle">Летающий змей</string>
-
-    <string name="oll18_title">Палки</string>
-    <string name="oll18_subtitle">Палки</string>
-
+    <string name="oll14_title">"Диагональ"</string>
+    <string name="oll15_title">"Снежинка"</string>
+    <string name="oll16_title">"Буква "Н""</string>
+    <string name="oll17_title">"Летающий змей"</string>
+    <string name="oll18_title">"Палки"</string>
     <string name="oll19_title" />
-    <string name="oll19_subtitle">Палки</string>
-
     <string name="oll20_title" />
-    <string name="oll20_subtitle">Палки</string>
-
     <string name="oll21_title" />
-    <string name="oll21_subtitle">Палки</string>
-
-    <string name="oll22_title">Буквы Г</string>
-    <string name="oll22_subtitle">Буквы Г</string>
-
+    <string name="oll22_title">"Буквы Г"</string>
     <string name="oll23_title" />
-    <string name="oll23_subtitle">Буквы Г</string>
-
     <string name="oll24_title" />
-    <string name="oll24_subtitle">Буквы Г</string>
-
     <string name="oll25_title" />
-    <string name="oll25_subtitle">Буквы Г</string>
-
-    <string name="oll26_title">Буквы Т</string>
-    <string name="oll26_subtitle">Буквы Т</string>
-
+    <string name="oll26_title">"Буквы Т"</string>
     <string name="oll27_title" />
-    <string name="oll27_subtitle">Буквы Т</string>
-
-    <string name="oll28_title">Скобки</string>
-    <string name="oll28_subtitle">Скобки</string>
-
+    <string name="oll28_title">"Скобки"</string>
     <string name="oll29_title" />
-    <string name="oll29_subtitle">Скобки</string>
-
-    <string name="oll30_title">Пропеллеры</string>
-    <string name="oll30_subtitle">Пропеллеры</string>
-
+    <string name="oll30_title">"Пропеллеры"</string>
     <string name="oll31_title" />
-    <string name="oll31_subtitle">Пропеллеры</string>
-
-    <string name="oll32_title">Стелсы</string>
-    <string name="oll32_subtitle">Стелсы</string>
-
+    <string name="oll32_title">"Стелсы"</string>
     <string name="oll33_title" />
-    <string name="oll33_subtitle">Стелсы</string>
-
     <string name="oll34_title" />
-    <string name="oll34_subtitle">Стелсы</string>
-
     <string name="oll35_title" />
-    <string name="oll35_subtitle">Стелсы</string>
-
     <string name="oll36_title" />
-    <string name="oll36_subtitle">Стелсы</string>
-
     <string name="oll37_title" />
-    <string name="oll37_subtitle">Стелсы</string>
-
-    <string name="oll38_title">Квадраты</string>
-    <string name="oll38_subtitle">Квадраты</string>
-
+    <string name="oll38_title">"Квадраты"</string>
     <string name="oll39_title" />
-    <string name="oll39_subtitle">Квадраты</string>
-
-    <string name="oll40_title">Рюмки</string>
-    <string name="oll40_subtitle">Рюмки</string>
-
+    <string name="oll40_title">"Рюмки"</string>
     <string name="oll41_title" />
-    <string name="oll41_subtitle">Рюмки</string>
-
-    <string name="oll42_title">Молнии</string>
-    <string name="oll42_subtitle">Молнии</string>
-
+    <string name="oll42_title">"Молнии"</string>
     <string name="oll43_title" />
-    <string name="oll43_subtitle">Молнии</string>
-
     <string name="oll44_title" />
-    <string name="oll44_subtitle">Молнии</string>
-
     <string name="oll45_title" />
-    <string name="oll45_subtitle">Молнии</string>
-
-    <string name="oll46_title">Мягкие знаки</string>
-    <string name="oll46_subtitle">Мягкие знаки</string>
-
+    <string name="oll46_title">"Мягкие знаки"</string>
     <string name="oll47_title" />
-    <string name="oll47_subtitle">Мягкие знаки</string>
-
     <string name="oll48_title" />
-    <string name="oll48_subtitle">Мягкие знаки</string>
-
     <string name="oll49_title" />
-    <string name="oll49_subtitle">Мягкие знаки</string>
-
-    <string name="oll50_title">Буквы М</string>
-    <string name="oll50_subtitle">Буквы М</string>
-
+    <string name="oll50_title">"Буквы М"</string>
     <string name="oll51_title" />
-    <string name="oll51_subtitle">Буквы М</string>
-
-    <string name="oll52_title">Галстуки</string>
-    <string name="oll52_subtitle">Галстуки</string>
-
+    <string name="oll52_title">"Галстуки"</string>
     <string name="oll53_title" />
-    <string name="oll53_subtitle">Галстуки</string>
-
-    <string name="oll54_title">Петухи</string>
-    <string name="oll54_subtitle">Петухи</string>
-
+    <string name="oll54_title">"Петухи"</string>
     <string name="oll55_title" />
-    <string name="oll55_subtitle">Петухи</string>
-
     <string name="oll56_title" />
-    <string name="oll56_subtitle">Петухи</string>
-
     <string name="oll57_title" />
-    <string name="oll57_subtitle">Петухи</string>
 </resources>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="pll_sc_count" translatable="false">"63"</string>
+
+    <string name="pll_sc0_title" translatable="false" />
+    <string name="pll_sc1_title" translatable="false" />
+    <string name="pll_sc2_title" translatable="false" />
+    <string name="pll_sc3_title" translatable="false" />
+    <string name="pll_sc4_title" translatable="false" />
+    <string name="pll_sc5_title" translatable="false" />
+    <string name="pll_sc6_title" translatable="false" />
+    <string name="pll_sc7_title" translatable="false" />
+    <string name="pll_sc8_title" translatable="false" />
+    <string name="pll_sc9_title" translatable="false" />
+    <string name="pll_sc10_title" translatable="false" />
+    <string name="pll_sc11_title" translatable="false" />
+    <string name="pll_sc12_title" translatable="false" />
+    <string name="pll_sc13_title" translatable="false" />
+    <string name="pll_sc14_title" translatable="false" />
+    <string name="pll_sc15_title" translatable="false" />
+    <string name="pll_sc16_title" translatable="false" />
+    <string name="pll_sc17_title" translatable="false" />
+    <string name="pll_sc18_title" translatable="false" />
+    <string name="pll_sc19_title" translatable="false" />
+    <string name="pll_sc20_title" translatable="false" />
+    <string name="pll_sc21_title" translatable="false" />
+    <string name="pll_sc22_title" translatable="false" />
+    <string name="pll_sc23_title" translatable="false" />
+    <string name="pll_sc24_title" translatable="false" />
+    <string name="pll_sc25_title" translatable="false" />
+    <string name="pll_sc26_title" translatable="false" />
+    <string name="pll_sc27_title" translatable="false" />
+    <string name="pll_sc28_title" translatable="false" />
+    <string name="pll_sc29_title" translatable="false" />
+    <string name="pll_sc30_title" translatable="false" />
+    <string name="pll_sc31_title" translatable="false" />
+    <string name="pll_sc32_title" translatable="false" />
+    <string name="pll_sc33_title" translatable="false" />
+    <string name="pll_sc34_title" translatable="false" />
+    <string name="pll_sc35_title" translatable="false" />
+    <string name="pll_sc36_title" translatable="false" />
+    <string name="pll_sc37_title" translatable="false" />
+    <string name="pll_sc38_title" translatable="false" />
+    <string name="pll_sc39_title" translatable="false" />
+    <string name="pll_sc40_title" translatable="false" />
+    <string name="pll_sc41_title" translatable="false" />
+    <string name="pll_sc42_title" translatable="false" />
+    <string name="pll_sc43_title" translatable="false" />
+    <string name="pll_sc44_title" translatable="false" />
+    <string name="pll_sc45_title" translatable="false" />
+    <string name="pll_sc46_title" translatable="false" />
+    <string name="pll_sc47_title" translatable="false" />
+    <string name="pll_sc48_title" translatable="false" />
+    <string name="pll_sc49_title" translatable="false" />
+    <string name="pll_sc50_title" translatable="false" />
+    <string name="pll_sc51_title" translatable="false" />
+    <string name="pll_sc52_title" translatable="false" />
+    <string name="pll_sc53_title" translatable="false" />
+    <string name="pll_sc54_title" translatable="false" />
+    <string name="pll_sc55_title" translatable="false" />
+    <string name="pll_sc56_title" translatable="false" />
+    <string name="pll_sc57_title" translatable="false" />
+    <string name="pll_sc58_title" translatable="false" />
+    <string name="pll_sc59_title" translatable="false" />
+    <string name="pll_sc60_title" translatable="false" />
+    <string name="pll_sc61_title" translatable="false" />
+    <string name="pll_sc62_title" translatable="false" />
+
+    <string name="pll_sc0" translatable="false">"R2 D R' U2 R D' R' U2 R'"</string>
+    <string name="pll_sc1" translatable="false">"y' Lw' U' L U Lw F' L' F"</string>
+    <string name="pll_sc2" translatable="false">"F R' F' Rw U R U' Rw'"</string>
+    <string name="pll_sc3" translatable="false">"y2 R2 D' R U2 R' D R U2 R"</string>
+    <string name="pll_sc4" translatable="false">"y Rw U R' U' Rw' F R F'"</string>
+    <string name="pll_sc5" translatable="false">"y F' L F Lw' U' L' U Lw"</string>
+    <string name="pll_sc6" translatable="false">"R' F2 R U2 R U2R' F2 R U2 R'"</string>
+    <string name="pll_sc7" translatable="false">"y' R U2 R' F2 R U2 R' U2 R' F2 R"</string>
+    <string name="pll_sc8" translatable="false">"R U2 R D R' U2 R D' R2"</string>
+    <string name="pll_sc9" translatable="false">"L F2 L' U2 L' U2 L F2 L' U2 L"</string>
+    <string name="pll_sc10" translatable="false">"y L' U2 L F2 L' U2 L U2 L F2 L'"</string>
+    <string name="pll_sc11" translatable="false">"y' R' U2 R' D' R U2 R' D R2"</string>
+    <string name="pll_sc12" translatable="false">"y F [Y perm] F'"</string>
+    <string name="pll_sc13" translatable="false">"y2 R' [Y perm] R"</string>
+    <string name="pll_sc14" translatable="false">"R U R' U R U2 R'"</string>
+    <string name="pll_sc15" translatable="false">"y' R U2 R' U' R U' R'"</string>
+    <string name="pll_sc16" translatable="false">"R U2 R' U' R U R' U' R U' R'"</string>
+    <string name="pll_sc17" translatable="false">"y' R' U2 R U R' U R"</string>
+    <string name="pll_sc18" translatable="false">"L' U' L U' L' U2 L"</string>
+    <string name="pll_sc19" translatable="false">"L' U2 L U L' U' L U L' U L"</string>
+    <string name="pll_sc20" translatable="false">"L' U R U' L U R'"</string>
+    <string name="pll_sc21" translatable="false">"R U' L' U R' U' L"</string>
+    <string name="pll_sc22" translatable="false">"R U R' U R U' R' U R U2 R'"</string>
+    <string name="pll_sc23" translatable="false">"L' U' L U' L' U L U' L' U2 L"</string>
+    <string name="pll_sc24" translatable="false">"F R U R' U' R U R' U' R U R' U' F'"</string>
+    <string name="pll_sc25" translatable="false">"Rw U R' U' R U2 Rw'"</string>
+    <string name="pll_sc26" translatable="false">"Lw' U' L U' L' U2 Lw"</string>
+    <string name="pll_sc27" translatable="false">"y Rw R2 U' R U' R' U2 R U' M"</string>
+    <string name="pll_sc28" translatable="false">"y' Lw' L2 U L' U L U2 L' U M"</string>
+    <string name="pll_sc29" translatable="false">"L' U2 L U2 L F' L' F"</string>
+    <string name="pll_sc30" translatable="false">"R U2 R' U2 R' F R F'"</string>
+    <string name="pll_sc31" translatable="false">"y2 F R U R' U' F' U F R U R' U' F'"</string>
+    <string name="pll_sc32" translatable="false">"y2 F' L' U' L U F U' F' L' U' L U F"</string>
+    <string name="pll_sc33" translatable="false">"F R' F' R U2 R U2 R'"</string>
+    <string name="pll_sc34" translatable="false">"F' L F L' U2 L' U2 L"</string>
+    <string name="pll_sc35" translatable="false">"y2 F R U R' U' F' U' F' L' U' L U F"</string>
+    <string name="pll_sc36" translatable="false">"y2 F' L' U' L U F U F R U R' U' F'"</string>
+    <string name="pll_sc37" translatable="false">"F R U' R' U' R U R' F'"</string>
+    <string name="pll_sc38" translatable="false">"y' R U R' y' Rw' U Rw U' Rw' U' Rw "</string>
+    <string name="pll_sc39" translatable="false">"R' U' R y Rw U' Rw' U Rw U Rw'"</string>
+    <string name="pll_sc40" translatable="false">"y F' L' U L U L' U' L F"</string>
+    <string name="pll_sc41" translatable="false">"y L' U' L U L F' L2 U' L U F"</string>
+    <string name="pll_sc42" translatable="false">"R U R' U' R' F R2 U R' U' F'"</string>
+    <string name="pll_sc43" translatable="false">"F R U R' U' F'"</string>
+    <string name="pll_sc44" translatable="false">"R U R' U' R' F R F'"</string>
+    <string name="pll_sc45" translatable="false">"R' U' R U y' x' R U L' U' M'"</string>
+    <string name="pll_sc46" translatable="false">"y' R' U' R' F R F' U R"</string>
+    <string name="pll_sc47" translatable="false">"y2 F' L' U' L U F"</string>
+    <string name="pll_sc48" translatable="false">"R' U' R U Lw U' R' U x"</string>
+    <string name="pll_sc49" translatable="false">"y2 R U R' U' y' Rw' U' R U M'"</string>
+    <string name="pll_sc50" translatable="false">"y' R U x' R U' R' U x U' R'"</string>
+    <string name="pll_sc51" translatable="false">"Rw U' Rw' U' Rw U Rw' y' R' U R"</string>
+    <string name="pll_sc52" translatable="false">"R' F R U R' F' R y' R U' R'"</string>
+    <string name="pll_sc53" translatable="false">"F U R U2 R' U' R U R' F' "</string>
+    <string name="pll_sc54" translatable="false">"F' U' L' U2 L U L' U' L F"</string>
+    <string name="pll_sc55" translatable="false">"F U R U' R2 F' R U R U' R'"</string>
+    <string name="pll_sc56" translatable="false">"F' U' L' U L2 F L' U' L' U L"</string>
+    <string name="pll_sc57" translatable="false">"M' U M U2 M' U M"</string>
+    <string name="pll_sc58" translatable="false">"R U R' U' M' U R U' Rw'"</string>
+    <string name="pll_sc59" translatable="false">"M' U' M U2 M' U M"</string>
+    <string name="pll_sc60" translatable="false">"R' U' R U M U' R' U Rw"</string>
+    <string name="pll_sc61" translatable="false">"y Rw U R' U' M U R U' R'"</string>
+    <string name="pll_sc62" translatable="false">"y Rw' U' R U M' U' R' U R"</string>
+</resources>

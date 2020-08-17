@@ -1,237 +1,288 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="oll_count" translatable="false">58</string>
+    <string name="oll_count" translatable="false">"58"</string>
 
-    <string name="oll0" translatable="false">R2 D\' R U2 R\' D R U2 R\ny R2 D\' R U\' R\' D R2 U\' R\' U2 R\ny\' R U R\' U\' R U\' R\' U2 R U\' R\' U2 R U R\'</string>
-    <string name="oll0_title">Cross shapes</string>
-    <string name="oll0_subtitle">Cross shapes</string>
+    <string name="oll0" translatable="false">"R2 D' R U2 R' D R U2 R
+y R2 D' R U' R' D R2 U' R' U2 R
+y' R U R' U' R U' R' U2 R U' R' U2 R U R'"</string>
+    <string name="oll0_title">"Cross shapes"</string>
 
-    <string name="oll1" translatable="false">R\' F\' R U R\' U\' R\' F R U R\ny2 F R U R\' U\' R\' F\' R U R U\' R\'\nR U R D R\' U\' R D\' R2</string>
+    <string name="oll1" translatable="false">"R' F' R U R' U' R' F R U R
+y2 F R U R' U' R' F' R U R U' R'
+R U R D R' U' R D' R2"</string>
     <string name="oll1_title" />
-    <string name="oll1_subtitle">Cross shapes</string>
 
-    <string name="oll2" translatable="false">x\' D R U R\' D\' R U\' Lw\'\nR2 D\' R U\' R\' D R U R\ny x\' R U\' R\' D R U R\' D\'</string>
+    <string name="oll2" translatable="false">"x' D R U R' D' R U' Lw'
+R2 D' R U' R' D R U R
+y x' R U' R' D R U R' D'"</string>
     <string name="oll2_title" />
-    <string name="oll2_subtitle">Cross shapes</string>
 
     <string name="oll3" translatable="false" />
     <string name="oll3_title" />
-    <string name="oll3_subtitle" />
 
-    <string name="oll4" translatable="false">R U R\' U R U\' R\' U R U2 R\'\ny/y\' R U2 R\' U\' R U R\' U\' R U\' R\'</string>
+    <string name="oll4" translatable="false">"R U R' U R U' R' U R U2 R'
+y/y' R U2 R' U' R U R' U' R U' R'"</string>
     <string name="oll4_title" />
-    <string name="oll4_subtitle">Cross shapes</string>
 
-    <string name="oll5" translatable="false">R U2 R2 U\' R2 U\' R2 U2 R\nR\' U2 R2 U R2 U R2 U2 R\'\ny2 L\' U R U\' L U\' R\' U\' R U\' R\'</string>
+    <string name="oll5" translatable="false">"R U2 R2 U' R2 U' R2 U2 R
+R' U2 R2 U R2 U R2 U2 R'
+y2 L' U R U' L U' R' U' R U' R'"</string>
     <string name="oll5_title" />
-    <string name="oll5_subtitle">Cross shapes</string>
 
-    <string name="oll6" translatable="false">R U R\' U R U2 R\'\ny L U2 L U L\' U L\ny\' R\' U2 R U R\' U R</string>
+    <string name="oll6" translatable="false">"R U R' U R U2 R'
+y L U2 L U L' U L
+y' R' U2 R U R' U R"</string>
     <string name="oll6_title" />
-    <string name="oll6_subtitle">Cross shapes</string>
 
-    <string name="oll7" translatable="false">L\' U\' L U\' L\' U2 L\ny\' R U2 R\' U\' R U\' R\'\ny2 R\' U\' R U\' R\' U2 R</string>
+    <string name="oll7" translatable="false">"L' U' L U' L' U2 L
+y' R U2 R' U' R U' R'
+y2 R' U' R U' R' U2 R"</string>
     <string name="oll7_title" />
-    <string name="oll7_subtitle">Cross shapes</string>
 
-    <string name="oll8" translatable="false">R U2 R2 F R F\' U2 R\' F R F\'\nR U B\' R B R2 U\' R\' F R F\'\ny R U\' R2 D\' Rw U\' Rw\' D R2 U R\'</string>
-    <string name="oll8_title">Dot shapes</string>
-    <string name="oll8_subtitle">Dot shapes</string>
+    <string name="oll8" translatable="false">"R U2 R2 F R F' U2 R' F R F'
+R U B' R B R2 U' R' F R F'
+y R U' R2 D' Rw U' Rw' D R2 U R'"</string>
+    <string name="oll8_title">"Dot shapes"</string>
 
-    <string name="oll9" translatable="false">F R U R\' U\' S R U R\' U\' Fw\'\nRw\' U\' Rw R\' U\' R U\' R\' U R U2 Rw\' U Rw\ny Rw U Rw\' U2 R U2 R\' U2 Rw U\' Rw\'</string>
+    <string name="oll9" translatable="false">"F R U R' U' S R U R' U' Fw'
+Rw' U' Rw R' U' R U' R' U R U2 Rw' U Rw
+y Rw U Rw' U2 R U2 R' U2 Rw U' Rw'"</string>
     <string name="oll9_title" />
-    <string name="oll9_subtitle">Dot shapes</string>
 
-    <string name="oll10" translatable="false">Rw\' R2 U R\' U Rw U2 Rw\' U R\' Rw\nRw\' R U R\' F2 R U L\' U L Rw R\'\ny\' Fw R U R\' U\' Fw\' U\' F R U R\' U\' F\'</string>
+    <string name="oll10" translatable="false">"Rw' R2 U R' U Rw U2 Rw' U R' Rw
+Rw' R U R' F2 R U L' U L Rw R'
+y' Fw R U R' U' Fw' U' F R U R' U' F'"</string>
     <string name="oll10_title" />
-    <string name="oll10_subtitle">Dot shapes</string>
 
-    <string name="oll11" translatable="false">Rw\' R U\' Rw U2 Rw\' U\' R U\' R2 Rw\ny F U R U\' R\' F\' R\' F\' U\' F U R\ny\' Fw R U R\' U\' Dw\' x R\' F R U R\' U\' F\'</string>
+    <string name="oll11" translatable="false">"Rw' R U' Rw U2 Rw' U' R U' R2 Rw
+y F U R U' R' F' R' F' U' F U R
+y' Fw R U R' U' Dw' x R' F R U R' U' F'"</string>
     <string name="oll11_title" />
-    <string name="oll11_subtitle">Dot shapes</string>
 
-    <string name="oll12" translatable="false">Rw\' R U R U R\' U\' Rw R2 F R F\'\nR\' U2 F R U R\' U\' F2 U2 F R\ny2 F R\' F\' R U R U\' R\' U\' F R U R\' U\' F\'</string>
+    <string name="oll12" translatable="false">"Rw' R U R U R' U' Rw R2 F R F'
+R' U2 F R U R' U' F2 U2 F R
+y2 F R' F' R U R U' R' U' F R U R' U' F'"</string>
     <string name="oll12_title" />
-    <string name="oll12_subtitle">Dot shapes</string>
 
-    <string name="oll13" translatable="false">Rw U R\' U R U2 Rw2 U\' R U\' R\' U2 Rw\ny R U2 R2 F R F\' U2 Rw R\' U R U\' Rw\'\ny\' F R U\' R\' U\' R U R\' F\' U\' F R U R\' U\' F\'</string>
+    <string name="oll13" translatable="false">"Rw U R' U R U2 Rw2 U' R U' R' U2 Rw
+y R U2 R2 F R F' U2 Rw R' U R U' Rw'
+y' F R U' R' U' R U R' F' U' F R U R' U' F'"</string>
     <string name="oll13_title" />
-    <string name="oll13_subtitle">Dot shapes</string>
 
-    <string name="oll14" translatable="false">R U R\' U R\' F R F\' U2 R\' F R F\'\ny F U R U\' R\' U\' R\' F R F\' R U R\' F\'\ny2 F R\' F\' R2 Rw\' U R U\' R\' U\' M\'</string>
+    <string name="oll14" translatable="false">"R U R' U R' F R F' U2 R' F R F'
+y F U R U' R' U' R' F R F' R U R' F'
+y2 F R' F' R2 Rw' U R U' R' U' M'"</string>
     <string name="oll14_title" />
-    <string name="oll14_subtitle">Dot shapes</string>
 
-    <string name="oll15" translatable="false">Rw\' R U R U R\' U\' Rw R\' M\' U R U\' Rw\'\nRw U R\' U\' M2 U R U\' R\' U\' M\'\nS R\' U\' R U R U R U\' R\' S\'</string>
+    <string name="oll15" translatable="false">"Rw' R U R U R' U' Rw R' M' U R U' Rw'
+Rw U R' U' M2 U R U' R' U' M'
+S R' U' R U R U R U' R' S'"</string>
     <string name="oll15_title" />
-    <string name="oll15_subtitle">Dot shapes</string>
 
-    <string name="oll16" translatable="false">R U R\' U\' M\' U R U\' Rw\'\ny/y\' R U R\' U\' M U R U\' R\' U\' M\'</string>
-    <string name="oll16_title">4 Corners shapes</string>
-    <string name="oll16_subtitle">4 Corners shapes</string>
+    <string name="oll16" translatable="false">"R U R' U' M' U R U' Rw'
+y/y' R U R' U' M U R U' R' U' M'"</string>
+    <string name="oll16_title">"4 Corners shapes"</string>
 
-    <string name="oll17" translatable="false">Rw U R\' U\' Rw\' R U R U\' R\'\ny R\' F\' Rw U Rw\' R U\' L\' U L\ny\' Rw\' U\' R U M\' U\' R\' U R</string>
+    <string name="oll17" translatable="false">"Rw U R' U' Rw' R U R U' R'
+y R' F' Rw U Rw' R U' L' U L
+y' Rw' U' R U M' U' R' U R"</string>
     <string name="oll17_title" />
-    <string name="oll17_subtitle">4 Corners shapes</string>
 
-    <string name="oll18" translatable="false">F U R U\' R\' U R U\' R\' F\'\ny R\' U\' R\' F R F\' R U\' R\' U2 R\ny\' R\' U2 R U R\' F R\' F\' R U R</string>
-    <string name="oll18_title">Line shapes</string>
-    <string name="oll18_subtitle">Line shapes</string>
+    <string name="oll18" translatable="false">"F U R U' R' U R U' R' F'
+y R' U' R' F R F' R U' R' U2 R
+y' R' U2 R U R' F R' F' R U R"</string>
+    <string name="oll18_title">"Line shapes"</string>
 
-    <string name="oll19" translatable="false">F R U R\' U y\' R\' U\' R U\' R\'\ny R U R\' U R U\' B U\' B\' R\'\ny R U R\' U R U\' y R U\' R\' F\'</string>
+    <string name="oll19" translatable="false">"F R U R' U y' R' U' R U' R'
+y R U R' U R U' B U' B' R'
+y R U R' U R U' y R U' R' F'"</string>
     <string name="oll19_title" />
-    <string name="oll19_subtitle">Line shapes</string>
 
-    <string name="oll20" translatable="false">Rw\' U\' Rw U\' R\' U R U\' R\' U R Rw\' U Rw\nRw U Rw\' U R U\' R\' U R U\' R\' Rw U\' Rw\'\nF R U R\' U\' R F\' Rw U R\' U\' Rw\'</string>
+    <string name="oll20" translatable="false">"Rw' U' Rw U' R' U R U' R' U R Rw' U Rw
+Rw U Rw' U R U' R' U R U' R' Rw U' Rw'
+F R U R' U' R F' Rw U R' U' Rw'"</string>
     <string name="oll20_title" />
-    <string name="oll20_subtitle">Line shapes</string>
 
-    <string name="oll21" translatable="false">R\' F R U R U\' R2 F\' R2 U\' R\' U R U R\'\ny/y\' R U2 R2 U\' R U\' R\' U2 F R F\'</string>
+    <string name="oll21" translatable="false">"R' F R U R U' R2 F' R2 U' R' U R U R'
+y/y' R U2 R2 U' R U' R' U2 F R F'"</string>
     <string name="oll21_title" />
-    <string name="oll21_subtitle">Line shapes</string>
 
-    <string name="oll22" translatable="false">Rw U Rw\' R U R\' U\' Rw U\' Rw\'\ny2 x\' R U R\' Rw U Rw\' F\' R U\' Lw\'\ny2 R\' F R U R\' U\' F\' R U\' R\' U2 R</string>
-    <string name="oll22_title">Knight Move shapes</string>
-    <string name="oll22_subtitle">Knight Move shapes</string>
+    <string name="oll22" translatable="false">"Rw U Rw' R U R' U' Rw U' Rw'
+y2 x' R U R' Rw U Rw' F' R U' Lw'
+y2 R' F R U R' U' F' R U' R' U2 R"</string>
+    <string name="oll22_title">"Knight Move shapes"</string>
 
-    <string name="oll23" translatable="false">Lw\' U\' Lw L\' U\' L U R\' F R\ny2 Rw\' U\' Rw R\' U\' R U Rw\' U Rw</string>
+    <string name="oll23" translatable="false">"Lw' U' Lw L' U' L U R' F R
+y2 Rw' U' Rw R' U' R U Rw' U Rw"</string>
     <string name="oll23_title" />
-    <string name="oll23_subtitle">Knight Move shapes</string>
 
-    <string name="oll24" translatable="false">Lw U\' R\' F\' R U R\' U\' F U x\nFw R U R2 U\' R\' U R U\' Fw\'
-y2 Rw U\' Rw\' U\' Rw U Rw\' F\' U F</string>
+    <string name="oll24" translatable="false">"Lw U' R' F' R U R' U' F U x
+Fw R U R2 U' R' U R U' Fw'
+y2 Rw U' Rw' U' Rw U Rw' F' U F"</string>
     <string name="oll24_title" />
-    <string name="oll24_subtitle">Knight Move shapes</string>
 
-    <string name="oll25" translatable="false">Rw\' U Rw U Rw\' U\' Rw B U\' B\'\ny2 R\' F R U R\' F\' R F U\' F\'\ny2 F\' U\' Rw\' F Rw2 U Rw\' U\' L\' U L</string>
+    <string name="oll25" translatable="false">"Rw' U Rw U Rw' U' Rw B U' B'
+y2 R' F R U R' F' R F U' F'
+y2 F' U' Rw' F Rw2 U Rw' U' L' U L"</string>
     <string name="oll25_title" />
-    <string name="oll25_subtitle">Knight Move shapes</string>
 
-    <string name="oll26" translatable="false">F R U R\' U\' F\'\ny R\' F\' U\' F U R\'\ny2 F\' L\' U\' L U F</string>
-    <string name="oll26_title">T-shapes</string>
-    <string name="oll26_subtitle">T-shapes</string>
+    <string name="oll26" translatable="false">"F R U R' U' F'
+y R' F' U' F U R'
+y2 F' L' U' L U F"</string>
+    <string name="oll26_title">"T-shapes"</string>
 
-    <string name="oll27" translatable="false">R U R\' U\' R\' F R F\'\nF R U\' R\' U R U R\' F\'\nR U R\' F\' U\' F R U\' R\'</string>
+    <string name="oll27" translatable="false">"R U R' U' R' F R F'
+F R U' R' U R U R' F'
+R U R' F' U' F R U' R'"</string>
     <string name="oll27_title" />
-    <string name="oll27_subtitle">T-shapes</string>
 
-    <string name="oll28" translatable="false">R U R2 U\' R\' F R U R U\' F\'\nR U R\' U\' y R\' F\' Rw U Rw\' R\nR U R\' U\' x D\' R\' U R U\' D x\'</string>
-    <string name="oll28_title">C-shapes</string>
-    <string name="oll28_subtitle">C-shapes</string>
+    <string name="oll28" translatable="false">"R U R2 U' R' F R U R U' F'
+R U R' U' y R' F' Rw U Rw' R
+R U R' U' x D' R' U R U' D x'"</string>
+    <string name="oll28_title">"C-shapes"</string>
 
-    <string name="oll29" translatable="false">y R\' U\' R\' F R F\' U R\ny R U x\' R U\' R\' U x U\' R\'\ny\' L\' U\' Rw\' U L U\' F Rw</string>
+    <string name="oll29" translatable="false">"y R' U' R' F R F' U R
+y R U x' R U' R' U x U' R'
+y' L' U' Rw' U L U' F Rw"</string>
     <string name="oll29_title" />
-    <string name="oll29_subtitle">C-shapes</string>
-\n
-    <string name="oll30" translatable="false">R\' F R U R\' U\' F\' U R\ny2 Rw\' U Rw U Rw\' F\' U\' F Rw\ny2 Fw R\' F\' R U R U\' R\' S\'</string>
-    <string name="oll30_title">Z-shapes</string>
-    <string name="oll30_subtitle">Z-shapes</string>
 
-    <string name="oll31" translatable="false">L F\' L\' U\' L U F U\' L\'\ny2 R U R\' F\' U\' F U R U2 R\'\ny2 R B\' R\' U\' R U B U\' R\'</string>
+
+    <string name="oll30" translatable="false">"R' F R U R' U' F' U R
+y2 Rw' U Rw U Rw' F' U' F Rw
+y2 Fw R' F' R U R U' R' S'"</string>
+    <string name="oll30_title">"Z-shapes"</string>
+
+    <string name="oll31" translatable="false">"L F' L' U' L U F U' L'
+y2 R U R' F' U' F U R U2 R'
+y2 R B' R' U' R U B U' R'"</string>
     <string name="oll31_title" />
-    <string name="oll31_subtitle">Z-shapes</string>
 
-    <string name="oll32" translatable="false">y Fw U R U\' R\' U R U\' R\' Fw\'\ny R U Lw U\' R\' U R U\' R\' x U\' R\'\ny\' F R U R\' U\' R U R\' U\' F\'</string>
-    <string name="oll32_title">L-shapes</string>
-    <string name="oll32_subtitle">L-shapes</string>
+    <string name="oll32" translatable="false">"y Fw U R U' R' U R U' R' Fw'
+y R U Lw U' R' U R U' R' x U' R'
+y' F R U R' U' R U R' U' F'"</string>
+    <string name="oll32_title">"L-shapes"</string>
 
-    <string name="oll33" translatable="false">R\' U\' Lw\' U R U\' R\' U R U\' x\' U R\nF\' L\' U\' L U L\' U\' L U F\ny\' F U R U\' R\' F\' R U R\' U R U2 R\'</string>
+    <string name="oll33" translatable="false">"R' U' Lw' U R U' R' U R U' x' U R
+F' L' U' L U L' U' L U F
+y' F U R U' R' F' R U R' U R U2 R'"</string>
     <string name="oll33_title" />
-    <string name="oll33_subtitle">L-shapes</string>
 
-    <string name="oll34" translatable="false">Rw U R\' U R U\' R\' U R U2 Rw\'\ny\' Rw U2 R\' U\' R U R\' U\' R U\' Rw\'</string>
+    <string name="oll34" translatable="false">"Rw U R' U R U' R' U R U2 Rw'
+y' Rw U2 R' U' R U R' U' R U' Rw'"</string>
     <string name="oll34_title" />
-    <string name="oll34_subtitle">L-shapes</string>
 
-    <string name="oll35" translatable="false">y Rw\' U\' R U\' R\' U R U\' R\' U2 Rw\ny2 Rw\' U2 R U R\' U\' R U R\' U Rw\ny\' F R U R\' U\' R U\' R\' U R U R\' F\'</string>
+    <string name="oll35" translatable="false">"y Rw' U' R U' R' U R U' R' U2 Rw
+y2 Rw' U2 R U R' U' R U R' U Rw
+y' F R U R' U' R U' R' U R U R' F'"</string>
     <string name="oll35_title" />
-    <string name="oll35_subtitle">L-shapes</string>
 
-    <string name="oll36" translatable="false">Rw U\' Rw2 U Rw2 U Rw2 U\' Rw\ny R\' U2 R U R\' U R F R U R\' U\' F\'\ny\' F R\' F2 R U2 R U2 R\' F</string>
+    <string name="oll36" translatable="false">"Rw U' Rw2 U Rw2 U Rw2 U' Rw
+y R' U2 R U R' U R F R U R' U' F'
+y' F R' F2 R U2 R U2 R' F"</string>
     <string name="oll36_title" />
-    <string name="oll36_subtitle">L-shapes</string>
 
-    <string name="oll37" translatable="false">R U2 R\' U\' R U\' R\' F R U R\' U\' F\'\nF\' R U2 R\' U2 R\' F2 R F\'\ny Rw\' U Rw2 U\' Rw2 U\' Rw2 U Rw\'</string>
+    <string name="oll37" translatable="false">"R U2 R' U' R U' R' F R U R' U' F'
+F' R U2 R' U2 R' F2 R F'
+y Rw' U Rw2 U' Rw2 U' Rw2 U Rw'"</string>
     <string name="oll37_title" />
-    <string name="oll37_subtitle">L-shapes</string>
 
-    <string name="oll38" translatable="false">Rw U2 R\' U\' R U\' Rw\'\ny\' x\' D R2 U\' R\' U R\' D\' x\ny2 Lw U2 L\' U\' L U\' Lw\'</string>
-    <string name="oll38_title">Square shapes</string>
-    <string name="oll38_subtitle">Square shapes</string>
+    <string name="oll38" translatable="false">"Rw U2 R' U' R U' Rw'
+y' x' D R2 U' R' U R' D' x
+y2 Lw U2 L' U' L U' Lw'"</string>
+    <string name="oll38_title">"Square shapes"</string>
 
-    <string name="oll39" translatable="false">R\' F2 Rw U Rw\' F R\ny2 Rw\' U2 R U R\' U Rw</string>
+    <string name="oll39" translatable="false">"R' F2 Rw U Rw' F R
+y2 Rw' U2 R U R' U Rw"</string>
     <string name="oll39_title" />
-    <string name="oll39_subtitle">Square shapes</string>
-\n
-    <string name="oll40" translatable="false">Rw U R\' U R U\' R\' U\' Rw\' R U R U\' R\'\ny R U R\' U F\' U F U\' R U2 R\'\ny\' Rw R2 U2 R U R\' U R U Rw\' R</string>
-    <string name="oll40_title">Fish shapes</string>
-    <string name="oll40_subtitle">Fish shapes</string>
 
-    <string name="oll41" translatable="false">R U R\' U\' R\' F R2 U R\' U\' F\'\nR\' U\' R y\' x\' R U\' R\' F R U R\'\ny R\' U\' R U\' R\' U R\' F R F\' U R</string>
+
+    <string name="oll40" translatable="false">"Rw U R' U R U' R' U' Rw' R U R U' R'
+y R U R' U F' U F U' R U2 R'
+y' Rw R2 U2 R U R' U R U Rw' R"</string>
+    <string name="oll40_title">"Fish shapes"</string>
+
+    <string name="oll41" translatable="false">"R U R' U' R' F R2 U R' U' F'
+R' U' R y' x' R U' R' F R U R'
+y R' U' R U' R' U R' F R F' U R"</string>
     <string name="oll41_title" />
-    <string name="oll41_subtitle">Fish shapes</string>
 
-    <string name="oll42" translatable="false">Rw U R\' U R U2 Rw\'\nF R\' F\' R U2 R U2 R\'\ny2 Lw U L\' U L U2 Lw\'</string>
-    <string name="oll42_title">Small Lightning Bolts shapes</string>
-    <string name="oll42_subtitle">Small Lightning Bolts shapes</string>
+    <string name="oll42" translatable="false">"Rw U R' U R U2 Rw'
+F R' F' R U2 R U2 R'
+y2 Lw U L' U L U2 Lw'"</string>
+    <string name="oll42_title">"Small Lightning Bolts shapes"</string>
 
-    <string name="oll43" translatable="false">R U2 R\' U2 R\' F R F\'\nR\' F\' Rw U\' Rw\' F2 R\ny2 Rw\' U\' R U\' R\' U2 Rw</string>
+    <string name="oll43" translatable="false">"R U2 R' U2 R' F R F'
+R' F' Rw U' Rw' F2 R
+y2 Rw' U' R U' R' U2 Rw"</string>
     <string name="oll43_title" />
-    <string name="oll43_subtitle">Small Lightning Bolts shapes</string>
 
-    <string name="oll44" translatable="false">y Rw R2 U\' R U\' R\' U2 R U\' Rw\' R\ny\' Rw\' R U2 R\' U\' R U\' R\' U2 R U M\'\ny\' Rw\' U\' R U\' x\' R U\' R\' U Lw\' U2 Rw</string>
+    <string name="oll44" translatable="false">"y Rw R2 U' R U' R' U2 R U' Rw' R
+y' Rw' R U2 R' U' R U' R' U2 R U M'
+y' Rw' U' R U' x' R U' R' U Lw' U2 Rw"</string>
     <string name="oll44_title" />
-    <string name="oll44_subtitle">Small Lightning Bolts shapes</string>
 
-    <string name="oll45" translatable="false">Rw R\' U R U R\' U R U2 R\' U Rw\' R\ny Rw\' R2 U R\' U R U2 R\' U M\'\ny\' Rw U R\' U R\' F R F\' R U2 Rw\'</string>
+    <string name="oll45" translatable="false">"Rw R' U R U R' U R U2 R' U Rw' R
+y Rw' R2 U R' U R U2 R' U M'
+y' Rw U R' U R' F R F' R U2 Rw'"</string>
     <string name="oll45_title" />
-    <string name="oll45_subtitle">Small Lightning Bolts shapes</string>
 
-    <string name="oll46" translatable="false">B\' U\' R\' U R B\nFw\' L\' U\' L U Fw\ny R\' U\' F\' U F R</string>
-    <string name="oll46_title">P-shapes</string>
-    <string name="oll46_subtitle">P-shapes</string>
+    <string name="oll46" translatable="false">"B' U' R' U R B
+Fw' L' U' L U Fw
+y R' U' F' U F R"</string>
+    <string name="oll46_title">"P-shapes"</string>
 
-    <string name="oll47" translatable="false">Fw R U R\' U\' Fw\'\ny F U R\' F R F\' U\' F\'\ny2 F U R U\' R\' F\'</string>
+    <string name="oll47" translatable="false">"Fw R U R' U' Fw'
+y F U R' F R F' U' F'
+y2 F U R U' R' F'"</string>
     <string name="oll47_title" />
-    <string name="oll47_subtitle">P-shapes</string>
 
-    <string name="oll48" translatable="false">R\' F R U R\' U\' F2 U F R\nR\' U\' F\' U\' F U R U2 R\' U\' R\nRw\' F\' U F Rw U\' Rw\' U\' Rw</string>
+    <string name="oll48" translatable="false">"R' F R U R' U' F2 U F R
+R' U' F' U' F U R U2 R' U' R
+Rw' F' U F Rw U' Rw' U' Rw"</string>
     <string name="oll48_title" />
-    <string name="oll48_subtitle">P-shapes</string>
 
-    <string name="oll49" translatable="false">R U B\' U\' R\' U R B R\'\nS R U R\' U\' R\' F R Fw\'\ny x\' U\' R U Lw\' U\' R\' U\' R U R\' U R</string>
+    <string name="oll49" translatable="false">"R U B' U' R' U R B R'
+S R U R' U' R' F R Fw'
+y x' U' R U Lw' U' R' U' R U R' U R"</string>
     <string name="oll49_title" />
-    <string name="oll49_subtitle">P-shapes</string>
 
-    <string name="oll50" translatable="false">R U R\' U R U\' R\' U\' R\' F R F\'\ny2 R U R\' U F\' U F U2 R U\' R\'\ny2 R U2 R2 F2 Rw U L\' U2 R U\'</string>
-    <string name="oll50_title">W-shapes</string>
-    <string name="oll50_subtitle">W-shapes</string>
+    <string name="oll50" translatable="false">"R U R' U R U' R' U' R' F R F'
+y2 R U R' U F' U F U2 R U' R'
+y2 R U2 R2 F2 Rw U L' U2 R U'"</string>
+    <string name="oll50_title">"W-shapes"</string>
 
-    <string name="oll51" translatable="false">L\' U\' L U\' L\' U L U Rw U\' Rw\' F\ny\' R U R2\' F\' U\' F U R2 U2\' R\'\ny Fw R U R\' U\' x\' R2 U\' R\' U R\' U\' z\'</string>
+    <string name="oll51" translatable="false">"L' U' L U' L' U L U Rw U' Rw' F
+y' R U R2' F' U' F U R2 U2' R'
+y Fw R U R' U' x' R2 U' R' U R' U' z'"</string>
     <string name="oll51_title" />
-    <string name="oll51_subtitle">W-shapes</string>
 
-    <string name="oll52" translatable="false">y R\' U2 Lw R U\' R\' U Lw\' U2 R\ny R\' U\' F R\' F\' R2 U\' R\' U2 R\ny2 R U2 R2 F R F\' R U2 R\'</string>
-    <string name="oll52_title">Fish shapes</string>
-    <string name="oll52_subtitle">Fish shapes</string>
+    <string name="oll52" translatable="false">"y R' U2 Lw R U' R' U Lw' U2 R
+y R' U' F R' F' R2 U' R' U2 R
+y2 R U2 R2 F R F' R U2 R'"</string>
+    <string name="oll52_title">"Fish shapes"</string>
 
-    <string name="oll53" translatable="false">F R U\' R\' U\' R U R\' F\'\nF R\' F\' R U R U\' R\'\ny\' R U R\' F\' U F R U\' R\'</string>
+    <string name="oll53" translatable="false">"F R U' R' U' R U R' F'
+F R' F' R U R U' R'
+y' R U R' F' U F R U' R'"</string>
     <string name="oll53_title" />
-    <string name="oll53_subtitle">Fish shapes</string>
 
-    <string name="oll54" translatable="false">R U\' R\' U2 R U B U\' B\' U\' R\'\ny Lw U\' R\' U R U\' R\' U Lw\' U\' R U R\' U\' R\ny\' R U R\' U R U\' R\' U R U\' R\' U\' R\' F R F\'</string>
-    <string name="oll54_title">Awkward shapes</string>
-    <string name="oll54_subtitle">Awkward shapes</string>
+    <string name="oll54" translatable="false">"R U' R' U2 R U B U' B' U' R'
+y Lw U' R' U R U' R' U Lw' U' R U R' U' R
+y' R U R' U R U' R' U R U' R' U' R' F R F'"</string>
+    <string name="oll54_title">"Awkward shapes"</string>
 
-    <string name="oll55" translatable="false">R\' U\' R U\' R\' U2 R F R U R\' U\' F\'\ny Lw\' U R U\' R\' U R U\' x\' R U R\' U\' R U R\' U\'\ny2 R\' U R U2 R\' U\' F\' U F U R</string>
+    <string name="oll55" translatable="false">"R' U' R U' R' U2 R F R U R' U' F'
+y Lw' U R U' R' U R U' x' R U R' U' R U R' U'
+y2 R' U R U2 R' U' F' U F U R"</string>
     <string name="oll55_title" />
-    <string name="oll55_subtitle">Awkward shapes</string>
 
-    <string name="oll56" translatable="false">Fw R U R2 U\' R\' U R2 U\' R\' Fw\'\nR2\' U R\' B\' R U\' R2\' U R B R\'\ny\' R\' F\' Rw U\' Rw\' F2 R2 U R\' U R U2 R\'</string>
+    <string name="oll56" translatable="false">"Fw R U R2 U' R' U R2 U' R' Fw'
+R2' U R' B' R U' R2' U R B R'
+y' R' F' Rw U' Rw' F2 R2 U R' U R U2 R'"</string>
     <string name="oll56_title" />
-    <string name="oll56_subtitle">Awkward shapes</string>
 
-    <string name="oll57" translatable="false">Rw2 D\' Rw U Rw\' D Rw2 U\' Rw\' U\' Rw\nM U R U R\' U\' R\' F R F\' M\'\ny R U R\' U\' R U\' R\' F\' U\' F R U R\'</string>
+    <string name="oll57" translatable="false">"Rw2 D' Rw U Rw' D Rw2 U' Rw' U' Rw
+M U R U R' U' R' F R F' M'
+y R U R' U' R U' R' F' U' F R U R'"</string>
     <string name="oll57_title" />
-    <string name="oll57_subtitle">Awkward shapes</string>
 </resources>

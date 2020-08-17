@@ -1,45 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="oh_coll_count" translatable="false">40</string>
+    <string name="oh_coll_count" translatable="false">"40"</string>
 
-    <string name="oh_coll0" translatable="false">R\' U\' R U\' R\' U2 R2 U\' L\' U R\' U\' L\nz U2 L U\' R2 U L\' U\' R2 U\' z\'</string>
-    <string name="oh_coll1" translatable="false">R2 D\' R U2 R\' D R U2 R</string>
-    <string name="oh_coll2" translatable="false">F R U\' R\' U R U R\' U R U\' R\' F\\nR\' U2\' R U2\' L U2\' R\' U2\' R U2\' L\'</string>
-    <string name="oh_coll3" translatable="false">R U\' R\' U F\' Rw U\' Rw\' x U2 R\' U R U\\nL\' R U R2 U2 L U\' L\' U2 L R2 U2 R\'</string>
-    <string name="oh_coll4" translatable="false">R\' U\' R U\' R\' U2 R2 U R\' U R U2 R\'</string>
-    <string name="oh_coll5" translatable="false">R\' U2\' R F U\' R\' U\' R U F\'\nR\' U2 R U L U2 R\' U\' R U2 L\'\ny2 R U2\' R\' U\' L\' U2\' R U R\' U2\' L</string>
-    <string name="oh_coll6" translatable="false">y R\' U\' R F R\' U R U\' F\'\ny2 x\' R U R\' D R U\' R\' Uw\'\nz U\' R\' U\' L\' U R U\' L U2 z\'</string>
-    <string name="oh_coll7" translatable="false">y\' Rw U R\' U\' L\' U R U\'\nx\' z\' U\' R\' U L\' U\' R U Rw</string>
-    <string name="oh_coll8" translatable="false">L U\' R U R\' L\' U2 R U R\'\nR\' U R U2 L\' R\' U R U\' L\ny2 R U\' R\' U2 L R U\' R\' U L\'</string>
-    <string name="oh_coll9" translatable="false">L R\' U\' R\' U L\' U\' R U\' R U R\' U R\ny2 F R U R\' U\' R U\' R\' U\' R U R\' F\'</string>
-    <string name="oh_coll10" translatable="false">F U\' R2 U R\' U R U2 R2 U\' R U2 R\' F\'\nR2 U R\' D\' R U R\' D R\' U\' R2 U\' R2\nL\' U2 L U\' R\' U L\' U\' R2 U\' L U R\'</string>
-    <string name="oh_coll11" translatable="false">y\' R U R\' U R U2 R\' U\' R U2 R\' U\' R U\' R\'\nR U2 R\' U\' R U\' R2 U2\' R U R\' U R</string>
-    <string name="oh_coll12" translatable="false">L\' U2 R U\' R\' U2 Rw x\' R U\' R\'</string>
-    <string name="oh_coll13" translatable="false">R U2 R\' U\' R U R\' U\' R U R\' U\' R U\' R\'</string>
-    <string name="oh_coll14" translatable="false">L U2 R\' U\' R U2 L\' U R\' U2 R\ny2 R U2 R D R\' U2\' R D\' R2</string>
-    <string name="oh_coll15" translatable="false">y R U\' L U\' R2 U L\' U\' R2 U2 R\'\ny R\' U2 R\' D\' R U2\' R\' D R2</string>
-    <string name="oh_coll16" translatable="false">y R U R\' U\' R\' F R U R U\' R\' F\'\ny2 Rw\' U\' R\' U L U\' R U x</string>
-    <string name="oh_coll17" translatable="false">F R U\' R\' U\' R U2 R\' U\' F\'\ny\' R L\' U\' L U R\' U\' L\' U L</string>
-    <string name="oh_coll18" translatable="false">R\' U\' R U\' R\' U R U\' R\' U2 R\ny/y\' R U2 R\' U\' R U R\' U\' R U\' R\'</string>
-    <string name="oh_coll19" translatable="false">y/y\' F R U R\' U\' R U R\' U\' R U R\' U\' F\'</string>
-    <string name="oh_coll20" translatable="false">F R U\' R\' U R U2 R\' U\' R U R\' U\' F\'\nL\' R U R\' U R U\' R\' U2\' L U\' R U2\' R\'</string>
-    <string name="oh_coll21" translatable="false">y2 R\' U\' R U\' R\' U\' L U\' R U L\'\ny2 R U R\' U R U L\' U R\' U\' L</string>
-    <string name="oh_coll22" translatable="false">R\' U\' R U\' R\' U2 R U R\' U\' R U\' R\' U2 R\nR U2 R2 U\' R2 U\' R2 U2 R</string>
-    <string name="oh_coll23" translatable="false">F R2 U\' R U\' R U\' R\' U2 R\' U R2 F\'\nR U\' R\' U2 L\' U R U\' L R\' U2 R U R\'\nF U R\' U\' R2 U\' R2 U2 R F\' L\' U L</string>
-    <string name="oh_coll24" translatable="false">y2 L\' U R U\' L U\' R\' U\' R U\' R\'\ny\' R U R\' U F\' R U2 R\' U2 R\' F R</string>
-    <string name="oh_coll25" translatable="false">R U y R U\' R\' U R U2 R\' U\' R U R\' F\'\nR U2\' R\' U L\' U2 R U R\' U\' R U\' R\' L</string>
-    <string name="oh_coll26" translatable="false">y R U2 R\' U\' R U\' R2 U L U\' R U L\'</string>
-    <string name="oh_coll27" translatable="false">R U R\' U\' R\' F R2 U R\' U\' R U R\' U\' F\'\ny\' R\' U2 R U R\' U R2 U\' L\' U R\' U\' L</string>
-    <string name="oh_coll28" translatable="false">R\' U2 R U R\' U R\ny R U R\' U R U2 R\'</string>
-    <string name="oh_coll29" translatable="false">y2 F U R\' F R F\' R U\' R\' U R U\' R\' F\'\ny\' R U R\' U L\' U R U\' L U2 R\'</string>
-    <string name="oh_coll30" translatable="false">y L\' R U R\' U\' L U2 R U2 R\'\ny\' R2 D\' R U2 R\' D R2 U R\' U R</string>
-    <string name="oh_coll31" translatable="false">y R U\' L\' U R\' U\' L\ny\' L U\' R\' U L\' U\' R</string>
-    <string name="oh_coll32" translatable="false">y\' R U R\' U R2 D R\' U2 R D\' R2</string>
-    <string name="oh_coll33" translatable="false">R U R\' U R U\' R D R\' U\' R D\' R2\'</string>
-    <string name="oh_coll34" translatable="false">y R\' U R U\' R\' U2 R\ny2 R U2 R\' U\' R U\' R\'</string>
-    <string name="oh_coll35" translatable="false">y\' R\' U\' R U\' L U\' R\' U L\' U2 R</string>
-    <string name="oh_coll36" translatable="false">y\' L\' U R U\' L U R\'</string>
-    <string name="oh_coll37" translatable="false">F U R\' U\' R F\' U\' R\' U2 R\ny\' R2 D R\' U2 R D\' R2 U\' R U\' R\'</string>
-    <string name="oh_coll38" translatable="false">y\' R\' U\' R U\' R2 D\' R U2 R\' D R2</string>
-    <string name="oh_coll39" translatable="false">y\' R2 D R\' U R D\' R\' U R\' U\' R U\' R\'\ny2 R\' U\' R U\' R\' U R\' D\' R U R\' D R2</string>
+    <string name="oh_coll0" translatable="false">"R' U' R U' R' U2 R2 U' L' U R' U' L
+z U2 L U' R2 U L' U' R2 U' z'"</string>
+    <string name="oh_coll1" translatable="false">"R2 D' R U2 R' D R U2 R"</string>
+    <string name="oh_coll2" translatable="false">"F R U' R' U R U R' U R U' R' F\
+R' U2' R U2' L U2' R' U2' R U2' L'"</string>
+    <string name="oh_coll3" translatable="false">"R U' R' U F' Rw U' Rw' x U2 R' U R U\
+L' R U R2 U2 L U' L' U2 L R2 U2 R'"</string>
+    <string name="oh_coll4" translatable="false">"R' U' R U' R' U2 R2 U R' U R U2 R'"</string>
+    <string name="oh_coll5" translatable="false">"R' U2' R F U' R' U' R U F'
+R' U2 R U L U2 R' U' R U2 L'
+y2 R U2' R' U' L' U2' R U R' U2' L"</string>
+    <string name="oh_coll6" translatable="false">"y R' U' R F R' U R U' F'
+y2 x' R U R' D R U' R' Uw'
+z U' R' U' L' U R U' L U2 z'"</string>
+    <string name="oh_coll7" translatable="false">"y' Rw U R' U' L' U R U'
+x' z' U' R' U L' U' R U Rw"</string>
+    <string name="oh_coll8" translatable="false">"L U' R U R' L' U2 R U R'
+R' U R U2 L' R' U R U' L
+y2 R U' R' U2 L R U' R' U L'"</string>
+    <string name="oh_coll9" translatable="false">"L R' U' R' U L' U' R U' R U R' U R
+y2 F R U R' U' R U' R' U' R U R' F'"</string>
+    <string name="oh_coll10" translatable="false">"F U' R2 U R' U R U2 R2 U' R U2 R' F'
+R2 U R' D' R U R' D R' U' R2 U' R2
+L' U2 L U' R' U L' U' R2 U' L U R'"</string>
+    <string name="oh_coll11" translatable="false">"y' R U R' U R U2 R' U' R U2 R' U' R U' R'
+R U2 R' U' R U' R2 U2' R U R' U R"</string>
+    <string name="oh_coll12" translatable="false">"L' U2 R U' R' U2 Rw x' R U' R'"</string>
+    <string name="oh_coll13" translatable="false">"R U2 R' U' R U R' U' R U R' U' R U' R'"</string>
+    <string name="oh_coll14" translatable="false">"L U2 R' U' R U2 L' U R' U2 R
+y2 R U2 R D R' U2' R D' R2"</string>
+    <string name="oh_coll15" translatable="false">"y R U' L U' R2 U L' U' R2 U2 R'
+y R' U2 R' D' R U2' R' D R2"</string>
+    <string name="oh_coll16" translatable="false">"y R U R' U' R' F R U R U' R' F'
+y2 Rw' U' R' U L U' R U x"</string>
+    <string name="oh_coll17" translatable="false">"F R U' R' U' R U2 R' U' F'
+y' R L' U' L U R' U' L' U L"</string>
+    <string name="oh_coll18" translatable="false">"R' U' R U' R' U R U' R' U2 R
+y/y' R U2 R' U' R U R' U' R U' R'"</string>
+    <string name="oh_coll19" translatable="false">"y/y' F R U R' U' R U R' U' R U R' U' F'"</string>
+    <string name="oh_coll20" translatable="false">"F R U' R' U R U2 R' U' R U R' U' F'
+L' R U R' U R U' R' U2' L U' R U2' R'"</string>
+    <string name="oh_coll21" translatable="false">"y2 R' U' R U' R' U' L U' R U L'
+y2 R U R' U R U L' U R' U' L"</string>
+    <string name="oh_coll22" translatable="false">"R' U' R U' R' U2 R U R' U' R U' R' U2 R
+R U2 R2 U' R2 U' R2 U2 R"</string>
+    <string name="oh_coll23" translatable="false">"F R2 U' R U' R U' R' U2 R' U R2 F'
+R U' R' U2 L' U R U' L R' U2 R U R'
+F U R' U' R2 U' R2 U2 R F' L' U L"</string>
+    <string name="oh_coll24" translatable="false">"y2 L' U R U' L U' R' U' R U' R'
+y' R U R' U F' R U2 R' U2 R' F R"</string>
+    <string name="oh_coll25" translatable="false">"R U y R U' R' U R U2 R' U' R U R' F'
+R U2' R' U L' U2 R U R' U' R U' R' L"</string>
+    <string name="oh_coll26" translatable="false">"y R U2 R' U' R U' R2 U L U' R U L'"</string>
+    <string name="oh_coll27" translatable="false">"R U R' U' R' F R2 U R' U' R U R' U' F'
+y' R' U2 R U R' U R2 U' L' U R' U' L"</string>
+    <string name="oh_coll28" translatable="false">"R' U2 R U R' U R
+y R U R' U R U2 R'"</string>
+    <string name="oh_coll29" translatable="false">"y2 F U R' F R F' R U' R' U R U' R' F'
+y' R U R' U L' U R U' L U2 R'"</string>
+    <string name="oh_coll30" translatable="false">"y L' R U R' U' L U2 R U2 R'
+y' R2 D' R U2 R' D R2 U R' U R"</string>
+    <string name="oh_coll31" translatable="false">"y R U' L' U R' U' L
+y' L U' R' U L' U' R"</string>
+    <string name="oh_coll32" translatable="false">"y' R U R' U R2 D R' U2 R D' R2"</string>
+    <string name="oh_coll33" translatable="false">"R U R' U R U' R D R' U' R D' R2'"</string>
+    <string name="oh_coll34" translatable="false">"y R' U R U' R' U2 R
+y2 R U2 R' U' R U' R'"</string>
+    <string name="oh_coll35" translatable="false">"y' R' U' R U' L U' R' U L' U2 R"</string>
+    <string name="oh_coll36" translatable="false">"y' L' U R U' L U R'"</string>
+    <string name="oh_coll37" translatable="false">"F U R' U' R F' U' R' U2 R
+y' R2 D R' U2 R D' R2 U' R U' R'"</string>
+    <string name="oh_coll38" translatable="false">"y' R' U' R U' R2 D' R U2 R' D R2"</string>
+    <string name="oh_coll39" translatable="false">"y' R2 D R' U R D' R' U R' U' R U' R'
+y2 R' U' R U' R' U R' D' R U R' D R2"</string>
 </resources>

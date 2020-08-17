@@ -1,132 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="vh_count" translatable="false">32</string>
+    <string name="vh_count" translatable="false">"32"</string>
 
-    <string name="vh0" translatable="false">y R B R\' U2 Rw\' R U M\'</string>
+    <string name="vh0" translatable="false">"y R B R' U2 Rw' R U M'"</string>
     <string name="vh0_title" translatable="false" />
-    <string name="vh0_subtitle" translatable="false" />
 
-    <string name="vh1" translatable="false">U\' F U R U\' R\' F2 U\' F R U R\'\ny R\' F\' R U2 M\' U\' M</string>
+    <string name="vh1" translatable="false">"U' F U R U' R' F2 U' F R U R'
+y R' F' R U2 M' U' M"</string>
     <string name="vh1_title" translatable="false" />
-    <string name="vh1_subtitle" translatable="false" />
 
-    <string name="vh2" translatable="false">U2 Rw\' F U\' F U Rw\nU F U R U\' R\' F\' L\' U2 L</string>
+    <string name="vh2" translatable="false">"U2 Rw' F U' F U Rw
+U F U R U' R' F' L' U2 L"</string>
     <string name="vh2_title" translatable="false" />
-    <string name="vh2_subtitle" translatable="false" />
 
-    <string name="vh3" translatable="false">U R U\' R2 F\' U\' F U R\nU2 R U\' B U\' B\' R\'</string>
+    <string name="vh3" translatable="false">"U R U' R2 F' U' F U R
+U2 R U' B U' B' R'"</string>
     <string name="vh3_title" translatable="false" />
-    <string name="vh3_subtitle" translatable="false" />
 
-    <string name="vh4" translatable="false">Rw U\' Rw\' F2 R U R\' U\' F\'\nL\' U L F U F\' L\' U\' L</string>
+    <string name="vh4" translatable="false">"Rw U' Rw' F2 R U R' U' F'
+L' U L F U F' L' U' L"</string>
     <string name="vh4_title" translatable="false" />
-    <string name="vh4_subtitle" translatable="false" />
 
-    <string name="vh5" translatable="false">R\' F R2 U R\' U\' F\'\nR U\' R\' F\' U\' F R U R\'</string>
+    <string name="vh5" translatable="false">"R' F R2 U R' U' F'
+R U' R' F' U' F R U R'"</string>
     <string name="vh5_title" translatable="false" />
-    <string name="vh5_subtitle" translatable="false" />
 
-    <string name="vh6" translatable="false">Rw U\' Rw\' F2 U R U\' R\' F\'\nU\' L\' U\' L U2 Rw U\' Rw\' F</string>
+    <string name="vh6" translatable="false">"Rw U' Rw' F2 U R U' R' F'
+U' L' U' L U2 Rw U' Rw' F"</string>
     <string name="vh6_title" translatable="false" />
-    <string name="vh6_subtitle" translatable="false" />
 
-    <string name="vh7" translatable="false">R\' U\' F U R2 U\' R\' F\'\nU R U R\' U2 R\' F R F\'</string>
+    <string name="vh7" translatable="false">"R' U' F U R2 U' R' F'
+U R U R' U2 R' F R F'"</string>
     <string name="vh7_title" translatable="false" />
-    <string name="vh7_subtitle" translatable="false" />
 
-    <string name="vh8" translatable="false">U\' F U\' F\' Rw\' F Rw\ny\' U\' Rw U\' Rw\' U Rw U Rw\'</string>
+    <string name="vh8" translatable="false">"U' F U' F' Rw' F Rw
+y' U' Rw U' Rw' U Rw U Rw'"</string>
     <string name="vh8_title" translatable="false" />
-    <string name="vh8_subtitle" translatable="false" />
 
-    <string name="vh9" translatable="false">U R B U\' B\' R\'\ny U R\' F R U\' R\' F\' R\nDw Rw\' U Rw U\' Rw\' U\' Rw</string>
+    <string name="vh9" translatable="false">"U R B U' B' R'
+y U R' F R U' R' F' R
+Dw Rw' U Rw U' Rw' U' Rw"</string>
     <string name="vh9_title" translatable="false" />
-    <string name="vh9_subtitle" translatable="false" />
 
-    <string name="vh10" translatable="false">Rw U\' Rw\' F</string>
+    <string name="vh10" translatable="false">"Rw U' Rw' F"</string>
     <string name="vh10_title" translatable="false" />
-    <string name="vh10_subtitle" translatable="false" />
 
-    <string name="vh11" translatable="false">R\' F R F\'\nRw R\' U R U\' Rw\'</string>
+    <string name="vh11" translatable="false">"R' F R F'
+Rw R' U R U' Rw'"</string>
     <string name="vh11_title" translatable="false" />
-    <string name="vh11_subtitle" translatable="false" />
 
-    <string name="vh12" translatable="false">U\' F R U R\' F\'</string>
+    <string name="vh12" translatable="false">"U' F R U R' F'"</string>
     <string name="vh12_title" translatable="false" />
-    <string name="vh12_subtitle" translatable="false" />
 
-    <string name="vh13" translatable="false">U R B\' U\' R\' U R B R\'\nU y\' R\' F\' U\' F R\nU F\' U2 F R U\' R\'</string>
+    <string name="vh13" translatable="false">"U R B' U' R' U R B R'
+U y' R' F' U' F R
+U F' U2 F R U' R'"</string>
     <string name="vh13_title" translatable="false" />
-    <string name="vh13_subtitle" translatable="false" />
 
-    <string name="vh14" translatable="false">U\' L\' U L</string>
+    <string name="vh14" translatable="false">"U' L' U L"</string>
     <string name="vh14_title" translatable="false" />
-    <string name="vh14_subtitle" translatable="false" />
 
-    <string name="vh15" translatable="false">U R U\' R\'</string>
+    <string name="vh15" translatable="false">"U R U' R'"</string>
     <string name="vh15_title" translatable="false" />
-    <string name="vh15_subtitle" translatable="false" />
 
-    <string name="vh16" translatable="false">L D R\' F\' R D\' L2 U\' L\ny2 R D Rw\' U Rw D\' R2 U\' R</string>
+    <string name="vh16" translatable="false">"L D R' F' R D' L2 U' L
+y2 R D Rw' U Rw D' R2 U' R"</string>
     <string name="vh16_title" translatable="false" />
-    <string name="vh16_subtitle" translatable="false" />
 
-    <string name="vh17" translatable="false">R\' D\' Rw U\' Rw\' D R2 U R\'</string>
+    <string name="vh17" translatable="false">"R' D' Rw U' Rw' D R2 U R'"</string>
     <string name="vh17_title" translatable="false" />
-    <string name="vh17_subtitle" translatable="false" />
 
-    <string name="vh18" translatable="false">Rw\' F\' U\' R U\' R\' U2 Rw</string>
+    <string name="vh18" translatable="false">"Rw' F' U' R U' R' U2 Rw"</string>
     <string name="vh18_title" translatable="false" />
-    <string name="vh18_subtitle" translatable="false" />
 
-    <string name="vh19" translatable="false">R U\' R2 F R F\' R U2 R\'</string>
+    <string name="vh19" translatable="false">"R U' R2 F R F' R U2 R'"</string>
     <string name="vh19_title" translatable="false" />
-    <string name="vh19_subtitle" translatable="false" />
 
-    <string name="vh20" translatable="false">Rw\' F2 U\' F U Rw</string>
+    <string name="vh20" translatable="false">"Rw' F2 U' F U Rw"</string>
     <string name="vh20_title" translatable="false" />
-    <string name="vh20_subtitle" translatable="false" />
 
-    <string name="vh21" translatable="false">R U2 B U\' B\' R\'\nU F U R U\' R2 F\' R</string>
+    <string name="vh21" translatable="false">"R U2 B U' B' R'
+U F U R U' R2 F' R"</string>
     <string name="vh21_title" translatable="false" />
-    <string name="vh21_subtitle" translatable="false" />
 
-    <string name="vh22" translatable="false">L\' U L2 F U F U\' L\'</string>
+    <string name="vh22" translatable="false">"L' U L2 F U F U' L'"</string>
     <string name="vh22_title" translatable="false" />
-    <string name="vh22_subtitle" translatable="false" />
 
-    <string name="vh23" translatable="false">R U R2 F\' U\' F U R\nF U R U\' R\' F\' R U R\' U R U\' R\'</string>
+    <string name="vh23" translatable="false">"R U R2 F' U' F U R
+F U R U' R' F' R U R' U R U' R'"</string>
     <string name="vh23_title" translatable="false" />
-    <string name="vh23_subtitle" translatable="false" />
 
-    <string name="vh24" translatable="false">L\' U2 L U Rw U\' Rw F\ny\' U R U2 R\' F R\' F\' R</string>
+    <string name="vh24" translatable="false">"L' U2 L U Rw U' Rw F
+y' U R U2 R' F R' F' R"</string>
     <string name="vh24_title" translatable="false" />
-    <string name="vh24_subtitle" translatable="false" />
 
-    <string name="vh25" translatable="false">R U2 R\' U\' R\' F R F\'</string>
+    <string name="vh25" translatable="false">"R U2 R' U' R' F R F'"</string>
     <string name="vh25_title" translatable="false" />
-    <string name="vh25_subtitle" translatable="false" />
 
-    <string name="vh26" translatable="false">U F U2 F\' U\' L\' U L</string>
+    <string name="vh26" translatable="false">"U F U2 F' U' L' U L"</string>
     <string name="vh26_title" translatable="false" />
-    <string name="vh26_subtitle" translatable="false" />
 
-    <string name="vh27" translatable="false">R U R\' F U R U\' R\' F\'\nU\' F\' U2 F U R U\' R\'</string>
+    <string name="vh27" translatable="false">"R U R' F U R U' R' F'
+U' F' U2 F U R U' R'"</string>
     <string name="vh27_title" translatable="false" />
-    <string name="vh27_subtitle" translatable="false" />
 
-    <string name="vh28" translatable="false">U2 R\' F R U R\' F\' R\nL\' U L U2 Rw U\' Rw F</string>
+    <string name="vh28" translatable="false">"U2 R' F R U R' F' R
+L' U L U2 Rw U' Rw F"</string>
     <string name="vh28_title" translatable="false" />
-    <string name="vh28_subtitle" translatable="false" />
 
-    <string name="vh29" translatable="false">R U\' R\' U2 R\' F R F\'\nU2 Rw U\' Rw\' U\' Rw U Rw\'</string>
+    <string name="vh29" translatable="false">"R U' R' U2 R' F R F'
+U2 Rw U' Rw' U' Rw U Rw'"</string>
     <string name="vh29_title" translatable="false" />
-    <string name="vh29_subtitle" translatable="false" />
 
-    <string name="vh30" translatable="false">L\' U\' L</string>
+    <string name="vh30" translatable="false">"L' U' L"</string>
     <string name="vh30_title" translatable="false" />
-    <string name="vh30_subtitle" translatable="false" />
 
-    <string name="vh31" translatable="false">R U R\'</string>
+    <string name="vh31" translatable="false">"R U R'"</string>
     <string name="vh31_title" translatable="false" />
-    <string name="vh31_subtitle" translatable="false" />
 </resources>

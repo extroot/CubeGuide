@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cp_count" translatable="false">"16"</string>
+
+    <string name="cp0" translatable="false">"/ (3,-3) / (-3,0) / (0,3) / (0,-3) / (0,3) /"</string>
+    <string name="cp0_title" translatable="false">"Standard"</string>
+
+    <string name="cp1" translatable="false">"/ (-3,-3) / (3,0) / (-3,-3) / (3,0) / (-3,-3) /"</string>
+    <string name="cp1_title" translatable="false" />
+
+    <string name="cp2" translatable="false">"/ (3,-3) / (0,3) / (-3,0) / (3,0) / (-3,0) /"</string>
+    <string name="cp2_title" translatable="false" />
+
+    <string name="cp3" translatable="false">"/ (3,0) / (-3,-3) / (0,3) /"</string>
+    <string name="cp3_title" translatable="false" />
+
+    <string name="cp4" translatable="false">"/ (3,0) / (-3,0) / (3,0) / (-3,0) /"</string>
+    <string name="cp4_title" translatable="false" />
+
+    <string name="cp5" translatable="false">"/ (-3,-3) / (0,-3) / (-3,-3) / (0,-3) / (-3,-3) /"</string>
+    <string name="cp5_title" translatable="false" />
+
+    <string name="cp6" translatable="false">"/ (0,3) / (0,-3) / (0,3) / (0,-3) /"</string>
+    <string name="cp6_title" translatable="false" />
+
+    <string name="cp7" translatable="false">"/ (3,-3) / (-3,3) /"</string>
+    <string name="cp7_title" translatable="false" />
+
+    <string name="cp8" translatable="false">"/ (3,3) / (-1,0) / (2,0) / (-4,0) / (4,0) / (2,0) / (1,0) / (-3,-3) /"</string>
+    <string name="cp8_title" translatable="false">"Parity"</string>
+
+    <string name="cp9" translatable="false">"/ (3,3) / (-1,0) / (-4,2) / (-2,4) / (0,1) / (3,3) /"</string>
+    <string name="cp9_title" translatable="false" />
+
+    <string name="cp10" translatable="false">"/ (-3,-3) / (0,-5) / (-4,-2) / (-4,0) / (-4,0) / (2,-4) / (5,0) / (-3,-3) /"</string>
+    <string name="cp10_title" translatable="false" />
+
+    <string name="cp11" translatable="false">"/ (-3,0) / (-3,0) / (-5,0) / (-2,0) / (4,0) / (-4,0) / (-2,0) / (5,0) / (-3,0) /"</string>
+    <string name="cp11_title" translatable="false" />
+
+    <string name="cp12" translatable="false">"/ (-3,-3) / (0,-5) / (-4,-2) / (-4,0) / (-4,0) / (2,-4) / (-1,0) / (-3,-3) /"</string>
+    <string name="cp12_title" translatable="false" />
+
+    <string name="cp13" translatable="false">"/ (3,3) / (-1,0) / (-4,2) / (-2,4) / (0,-5) / (3,3) /"</string>
+    <string name="cp13_title" translatable="false" />
+
+    <string name="cp14" translatable="false">"/ (3,3) / (-1,0) / (2,0) / (-4,0) / (4,0) / (2,0) / (-5,0) / (-3,-3) /"</string>
+    <string name="cp14_title" translatable="false" />
+
+    <string name="cp15" translatable="false">"/ (3,3) / (1,0) / (4,-2) / (2,-4) / (0,-4) / (3,3) / (3,0) / (3,3) /"</string>
+    <string name="cp15_title" translatable="false" />
+</resources>

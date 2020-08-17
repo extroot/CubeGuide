@@ -1,80 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="ole0_title">Глаза</string>
-    <string name="ole0_subtitle">Глаза</string>
-
+    <string name="ole0_title">"Глаза"</string>
     <string name="ole1_title" />
-    <string name="ole1_subtitle">Глаза</string>
-
     <string name="ole2_title" />
-    <string name="ole2_subtitle">Глаза</string>
-
     <string name="ole3_title" />
-    <string name="ole3_subtitle">Глаза</string>
-
-    <string name="ole4_title">Уши</string>
-    <string name="ole4_subtitle">Уши</string>
-
+    <string name="ole4_title">"Уши"</string>
     <string name="ole5_title" />
-    <string name="ole5_subtitle">Уши</string>
-
     <string name="ole6_title" />
-    <string name="ole6_subtitle">Уши</string>
-
     <string name="ole7_title" />
-    <string name="ole7_subtitle">Уши</string>
-
-    <string name="ole8_title">Восьмерки</string>
-    <string name="ole8_subtitle">Восьмерки</string>
-
+    <string name="ole8_title">"Восьмерки"</string>
     <string name="ole9_title" />
-    <string name="ole9_subtitle">Восьмерки</string>
-
     <string name="ole10_title" />
-    <string name="ole10_subtitle">Восьмерки</string>
-
     <string name="ole11_title" />
-    <string name="ole11_subtitle">Восьмерки</string>
-
-    <string name="ole12_title">Двойные глаза</string>
-    <string name="ole12_subtitle">Двойные глаза</string>
-
+    <string name="ole12_title">"Двойные глаза"</string>
     <string name="ole13_title" />
-    <string name="ole13_subtitle">Двойные глаза</string>
-
-    <string name="ole14_title">Вертолет</string>
-    <string name="ole14_subtitle">Вертолет</string>
-
+    <string name="ole14_title">"Вертолет"</string>
     <string name="ole15_title" />
-    <string name="ole15_subtitle">Вертолет</string>
-
     <string name="ole16_title" />
-    <string name="ole16_subtitle">Вертолет</string>
-
     <string name="ole17_title" />
-    <string name="ole17_subtitle">Вертолет</string>
-
-    <string name="ole18_title">Рыбки</string>
-    <string name="ole18_subtitle">Рыбки</string>
-
+    <string name="ole18_title">"Рыбки"</string>
     <string name="ole19_title" />
-    <string name="ole19_subtitle">Рыбки</string>
-
     <string name="ole20_title" />
-    <string name="ole20_subtitle">Рыбки</string>
-
     <string name="ole21_title" />
-    <string name="ole21_subtitle">Рыбки</string>
-
-    <string name="ole22_title">Антирыбки</string>
-    <string name="ole22_subtitle">Антирыбки</string>
-
+    <string name="ole22_title">"Антирыбки"</string>
     <string name="ole23_title" />
-    <string name="ole23_subtitle">Антирыбки</string>
-
     <string name="ole24_title" />
-    <string name="ole24_subtitle">Антирыбки</string>
-
     <string name="ole25_title" />
-    <string name="ole25_subtitle">Антирыбки</string>
 </resources>

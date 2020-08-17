@@ -1,108 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="sv_count" translatable="false">26</string>
+    <string name="sv_count" translatable="false">"26"</string>
 
-    <string name="sv0" translatable="false">R U R\' U R\' U2 R U R\' U R\nR U R\' L U\' R\' U L\' U\' R</string>
+    <string name="sv0" translatable="false">"R U R' U R' U2 R U R' U R
+R U R' L U' R' U L' U' R"</string>
     <string name="sv0_title" translatable="false" />
-    <string name="sv0_subtitle" translatable="false" />
 
-    <string name="sv1" translatable="false">R U\' R\' U\' R2 D R\' U\' R D\' R2\nM x D L U L\' D\' M\' x\'</string>
+    <string name="sv1" translatable="false">"R U' R' U' R2 D R' U' R D' R2
+M x D L U L' D' M' x'"</string>
     <string name="sv1_title" translatable="false" />
-    <string name="sv1_subtitle" translatable="false" />
 
-    <string name="sv2" translatable="false">U2 x\' Rw R U\' R\' U L\'</string>
+    <string name="sv2" translatable="false">"U2 x' Rw R U' R' U L'"</string>
     <string name="sv2_title" translatable="false" />
-    <string name="sv2_subtitle" translatable="false" />
 
-    <string name="sv3" translatable="false">R U R\'</string>
+    <string name="sv3" translatable="false">"R U R'"</string>
     <string name="sv3_title" translatable="false" />
-    <string name="sv3_subtitle" translatable="false" />
 
-    <string name="sv4" translatable="false">R U R2 F\' Rw U R U\' Rw\' F\nLw F U L U\' R\' U L U\' x</string>
+    <string name="sv4" translatable="false">"R U R2 F' Rw U R U' Rw' F
+Lw F U L U' R' U L U' x"</string>
     <string name="sv4_title" translatable="false" />
-    <string name="sv4_subtitle" translatable="false" />
 
-    <string name="sv5" translatable="false">R U R\' U\' R U R\' U R U2 R\'</string>
+    <string name="sv5" translatable="false">"R U R' U' R U R' U R U2 R'"</string>
     <string name="sv5_title" translatable="false" />
-    <string name="sv5_subtitle" translatable="false" />
 
-    <string name="sv6" translatable="false">R U M\' U R\' U\' Rw\' F R F\'\nU2 Rw R\' F\' U2 F M</string>
+    <string name="sv6" translatable="false">"R U M' U R' U' Rw' F R F'
+U2 Rw R' F' U2 F M"</string>
     <string name="sv6_title" translatable="false" />
-    <string name="sv6_subtitle" translatable="false" />
 
-    <string name="sv7" translatable="false">R U2 R\' U\' R\' F R U R U\' R\' F\'\nLw F U\' R\' D R U R\' D\' x</string>
+    <string name="sv7" translatable="false">"R U2 R' U' R' F R U R U' R' F'
+Lw F U' R' D R U R' D' x"</string>
     <string name="sv7_title" translatable="false" />
-    <string name="sv7_subtitle" translatable="false" />
 
-    <string name="sv8" translatable="false">R U\' R\' U\' R U\' R\'</string>
+    <string name="sv8" translatable="false">"R U' R' U' R U' R'"</string>
     <string name="sv8_title" translatable="false" />
-    <string name="sv8_subtitle" translatable="false" />
 
-    <string name="sv9" translatable="false">R U\' R\' L\' U R U\' L R\' U\' R U\' R\'\nF2 Rw\' U\' Rw F2 Rw\' U Rw R U R\'</string>
+    <string name="sv9" translatable="false">"R U' R' L' U R U' L R' U' R U' R'
+F2 Rw' U' Rw F2 Rw' U Rw R U R'"</string>
     <string name="sv9_title" translatable="false" />
-    <string name="sv9_subtitle" translatable="false" />
 
-    <string name="sv10" translatable="false">R U R2 U\' R U\' R\' U2 R</string>
+    <string name="sv10" translatable="false">"R U R2 U' R U' R' U2 R"</string>
     <string name="sv10_title" translatable="false" />
-    <string name="sv10_subtitle" translatable="false" />
 
-    <string name="sv11" translatable="false">R U\' R\' U\' R U R\' U\' R U R\' U\' R U\' R\'\nR U R\' Lw\' U\' L\'U R U\' L U x\'</string>
+    <string name="sv11" translatable="false">"R U' R' U' R U R' U' R U R' U' R U' R'
+R U R' Lw' U' L'U R U' L U x'"</string>
     <string name="sv11_title" translatable="false" />
-    <string name="sv11_subtitle" translatable="false" />
 
-    <string name="sv12" translatable="false">R U\' R D R\' U2 R D\' R2</string>
+    <string name="sv12" translatable="false">"R U' R D R' U2 R D' R2"</string>
     <string name="sv12_title" translatable="false" />
-    <string name="sv12_subtitle" translatable="false" />
 
-    <string name="sv13" translatable="false">U2 L U L\' U\' Rw U2 L U2 Rw\' L\'</string>
+    <string name="sv13" translatable="false">"U2 L U L' U' Rw U2 L U2 Rw' L'"</string>
     <string name="sv13_title" translatable="false" />
-    <string name="sv13_subtitle" translatable="false" />
 
-    <string name="sv14" translatable="false">R U\' R\' U\' R U R\' U\' R U\' R\'</string>
+    <string name="sv14" translatable="false">"R U' R' U' R U R' U' R U' R'"</string>
     <string name="sv14_title" translatable="false" />
-    <string name="sv14_subtitle" translatable="false" />
 
-    <string name="sv15" translatable="false">R U2 R\' U F\' R U2 R\' U2 R\' F R\nU R2 L\' U\' L U\' F2 R\' F2 U2 R2</string>
+    <string name="sv15" translatable="false">"R U2 R' U F' R U2 R' U2 R' F R
+U R2 L' U' L U' F2 R' F2 U2 R2"</string>
     <string name="sv15_title" translatable="false" />
-    <string name="sv15_subtitle" translatable="false" />
 
-    <string name="sv16" translatable="false">R U\' R2 U\' R2 U\' R2 U2 R</string>
+    <string name="sv16" translatable="false">"R U' R2 U' R2 U' R2 U2 R"</string>
     <string name="sv16_title" translatable="false" />
-    <string name="sv16_subtitle" translatable="false" />
 
-    <string name="sv17" translatable="false">R U2 R\' U R U2 R\'\nR L\' U R\' U\' L</string>
+    <string name="sv17" translatable="false">"R U2 R' U R U2 R'
+R L' U R' U' L"</string>
     <string name="sv17_title" translatable="false" />
-    <string name="sv17_subtitle" translatable="false" />
 
-    <string name="sv18" translatable="false">R U\' R\' U\' R U\' R2 U\'R U\' R\' U2 R</string>
+    <string name="sv18" translatable="false">"R U' R' U' R U' R2 U'R U' R' U2 R"</string>
     <string name="sv18_title" translatable="false" />
-    <string name="sv18_subtitle" translatable="false" />
 
-    <string name="sv19" translatable="false">U\' R U R D R\' U R D\' R2</string>
+    <string name="sv19" translatable="false">"U' R U R D R' U R D' R2"</string>
     <string name="sv19_title" translatable="false" />
-    <string name="sv19_subtitle" translatable="false" />
 
-    <string name="sv20" translatable="false">R U R2 U2 R U R\' U R\nR U R\' U R U R\' U R U2 R\'</string>
+    <string name="sv20" translatable="false">"R U R2 U2 R U R' U R
+R U R' U R U R' U R U2 R'"</string>
     <string name="sv20_title" translatable="false" />
-    <string name="sv20_subtitle" translatable="false" />
 
-    <string name="sv21" translatable="false">U2 L R U\' R2 U L\' U\' R</string>
+    <string name="sv21" translatable="false">"U2 L R U' R2 U L' U' R"</string>
     <string name="sv21_title" translatable="false" />
-    <string name="sv21_subtitle" translatable="false" />
 
-    <string name="sv22" translatable="false">R U R\' U\' R U2 R\' U\' R U\' R\'\nR\' U L U\' R2 U R\' L\'</string>
+    <string name="sv22" translatable="false">"R U R' U' R U2 R' U' R U' R'
+R' U L U' R2 U R' L'"</string>
     <string name="sv22_title" translatable="false" />
-    <string name="sv22_subtitle" translatable="false" />
 
-    <string name="sv23" translatable="false">R U R\' U R\' U\' R U\' R\' U2 R</string>
+    <string name="sv23" translatable="false">"R U R' U R' U' R U' R' U2 R"</string>
     <string name="sv23_title" translatable="false" />
-    <string name="sv23_subtitle" translatable="false" />
 
-    <string name="sv24" translatable="false">R U2 R\' U R U\' R\' U R U2 R\'</string>
+    <string name="sv24" translatable="false">"R U2 R' U R U' R' U R U2 R'"</string>
     <string name="sv24_title" translatable="false" />
-    <string name="sv24_subtitle" translatable="false" />
 
-    <string name="sv25" translatable="false">R U2 R D R\' U\' R D\' R2</string>
+    <string name="sv25" translatable="false">"R U2 R D R' U' R D' R2"</string>
     <string name="sv25_title" translatable="false" />
-    <string name="sv25_subtitle" translatable="false" />
 </resources>

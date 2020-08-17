@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="oellcp_count" translatable="false">"13"</string>
+
+    <string name="oellcp0" translatable="false">"M' U M U2 M' U M"</string>
+    <string name="oellcp1" translatable="false">"y2 R' U R U y R2 D L' B' L D' R2"</string>
+    <string name="oellcp2" translatable="false">"y2 Rw U' L U2 R' U R U2 L2 x'"</string>
+    <string name="oellcp3" translatable="false">"x L2 U2 R' U' R U2 L' U Rw'"</string>
+    <string name="oellcp4" translatable="false">"y' Lw' U R' U2 L U' L' U2 R2 x'"</string>
+    <string name="oellcp5" translatable="false">"y2 x R2 U2 L U L' U2 R U' Lw"</string>
+    <string name="oellcp6" translatable="false">"R U R' U' M' U R U' Rw'"</string>
+    <string name="oellcp7" translatable="false">"R U' R2 F R F' R U' x' U F2 U' R' x"</string>
+    <string name="oellcp8" translatable="false">"y2 R U' R' F' U F R x' U' R U R2 x"</string>
+    <string name="oellcp9" translatable="false">"y2 x' M' U' R U M U2 L2 U R' U' L2 U2 x U"</string>
+    <string name="oellcp10" translatable="false">"r U R' U' M2 U R U' R' U' M'"</string>
+    <string name="oellcp11" translatable="false">"x' U R' F2 U2 R' U R2 U' R U2 F2 R U' x"</string>
+    <string name="oellcp12" translatable="false">"y' F R' F R2 U R' U' F2 U' Rw U' Rw' F"</string>
+
+    <string name="oellcp0_title" translatable="false" />
+    <string name="oellcp1_title" translatable="false" />
+    <string name="oellcp2_title" translatable="false" />
+    <string name="oellcp3_title" translatable="false" />
+    <string name="oellcp4_title" translatable="false" />
+    <string name="oellcp5_title" translatable="false" />
+    <string name="oellcp6_title" translatable="false" />
+    <string name="oellcp7_title" translatable="false" />
+    <string name="oellcp8_title" translatable="false" />
+    <string name="oellcp9_title" translatable="false" />
+    <string name="oellcp10_title" translatable="false" />
+    <string name="oellcp11_title" translatable="false" />
+    <string name="oellcp12_title" translatable="false" />
+</resources>

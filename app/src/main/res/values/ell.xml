@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ell_count" translatable="false">"29"</string>
+
+    <string name="ell0" translatable="false">"R U' R U R U R U' R' U' R2"</string>
+    <string name="ell1" translatable="false">"R2 U R U R' U' R' U' R' U R'"</string>
+    <string name="ell2" translatable="false">"M2 U M2 U M' U2 M2 U2 M'"</string>
+    <string name="ell3" translatable="false">"M2 U M2 U2 M2 U M2"</string>
+    <string name="ell4" translatable="false">"y' M2 U M U2 M' U M M' U M' U2 M U M'"</string>
+    <string name="ell5" translatable="false">"y Rw' U' R U M' U' R' U R"</string>
+    <string name="ell6" translatable="false">"y M' U' M U2 M' U' M"</string>
+    <string name="ell7" translatable="false">"M U M' U' M' U' M' U M' U M U' M2"</string>
+    <string name="ell8" translatable="false">"y' M' U M2 U M U2 M' U M'"</string>
+    <string name="ell9" translatable="false">"M' U M U2 M' U M"</string>
+    <string name="ell10" translatable="false">"y2 Rw U R' U' M U R U' R'"</string>
+    <string name="ell11" translatable="false">"y2 M' U' M2 U' M U2 M' U' M'"</string>
+    <string name="ell12" translatable="false">"y' M U' M' U M' U M' U' M' U' M U M2"</string>
+    <string name="ell13" translatable="false">"y2 F R U R' U' F2 L' U' L U F"</string>
+    <string name="ell14" translatable="false">"M' U M U M' U2 M U' M' U' M"</string>
+    <string name="ell15" translatable="false">"y' M' U M U M' U M U M' U M"</string>
+    <string name="ell16" translatable="false">"M' U M' U M' U M' U' M' U M' U M' U M'"</string>
+    <string name="ell17" translatable="false">"R U R' U' M' U R U' Rw'"</string>
+    <string name="ell18" translatable="false">"M2 U' M U M' U M' U' M' U' M' U M"</string>
+    <string name="ell19" translatable="false">"R' U' R U M U' R' U Rw"</string>
+    <string name="ell20" translatable="false">"M2 U M U' M' U' M' U M' U M' U' M"</string>
+    <string name="ell21" translatable="false">"M' U' M U M' U' M U' M' U2 M"</string>
+    <string name="ell22" translatable="false">"M' U M U' M' U M U M' U2 M"</string>
+    <string name="ell23" translatable="false">"M' U M2 U2 M' U M' U2 M' U' M U' M"</string>
+    <string name="ell24" translatable="false">"M' U M' U M' U M' U2 M' U M' U M' U M'"</string>
+    <string name="ell25" translatable="false">"M' U M U2 M' U M2 U' M' U2 M U' M'"</string>
+    <string name="ell26" translatable="false">"r U R' U' M2 U R U' R' U' M'"</string>
+    <string name="ell27" translatable="false">"M' U' M U' M' U2 M' U' M' U' M U' M' U' M'"</string>
+    <string name="ell28" translatable="false">"M' U M U M' U2 M' U M' U M U M' U M'"</string>
+
+    <string name="ell0_title" translatable="false" />
+    <string name="ell1_title" translatable="false" />
+    <string name="ell2_title" translatable="false" />
+    <string name="ell3_title" translatable="false" />
+    <string name="ell4_title" translatable="false" />
+    <string name="ell5_title" translatable="false" />
+    <string name="ell6_title" translatable="false" />
+    <string name="ell7_title" translatable="false" />
+    <string name="ell8_title" translatable="false" />
+    <string name="ell9_title" translatable="false" />
+    <string name="ell10_title" translatable="false" />
+    <string name="ell11_title" translatable="false" />
+    <string name="ell12_title" translatable="false" />
+    <string name="ell13_title" translatable="false" />
+    <string name="ell14_title" translatable="false" />
+    <string name="ell15_title" translatable="false" />
+    <string name="ell16_title" translatable="false" />
+    <string name="ell17_title" translatable="false" />
+    <string name="ell18_title" translatable="false" />
+    <string name="ell19_title" translatable="false" />
+    <string name="ell20_title" translatable="false" />
+    <string name="ell21_title" translatable="false" />
+    <string name="ell22_title" translatable="false" />
+    <string name="ell23_title" translatable="false" />
+    <string name="ell24_title" translatable="false" />
+    <string name="ell25_title" translatable="false" />
+    <string name="ell26_title" translatable="false" />
+    <string name="ell27_title" translatable="false" />
+    <string name="ell28_title" translatable="false" />
+
+</resources>

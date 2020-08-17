@@ -1,83 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="vls0_title">Нет дезориентированных углов</string>
-    <string name="vls0_subtitle">Нет дезориентированных углов</string>
-
-    <string name="vls1_title">1 угол дезориентирован</string>
-    <string name="vls1_subtitle">1 угол дезориентирован</string>
-
+    <string name="vls0_title">"Нет дезориентированных углов"</string>
+    <string name="vls1_title">"1 угол дезориентирован"</string>
     <string name="vls2_title" />
-    <string name="vls2_subtitle">1 угол дезориентирован</string>
-
     <string name="vls3_title" />
-    <string name="vls3_subtitle">1 угол дезориентирован</string>
-
     <string name="vls4_title" />
-    <string name="vls4_subtitle">1 угол дезориентирован</string>
-
     <string name="vls5_title" />
-    <string name="vls5_subtitle">1 угол дезориентирован</string>
-
     <string name="vls6_title" />
-    <string name="vls6_subtitle">1 угол дезориентирован</string>
-
-    <string name="vls7_title">2 угла дезориентированы</string>
-    <string name="vls7_subtitle">2 угла дезориентированы</string>
-
+    <string name="vls7_title">"2 угла дезориентированы"</string>
     <string name="vls8_title" />
-    <string name="vls8_subtitle">2 угла дезориентированы</string>
-
     <string name="vls9_title" />
-    <string name="vls9_subtitle">2 угла дезориентированы</string>
-
     <string name="vls10_title" />
-    <string name="vls10_subtitle">2 угла дезориентированы</string>
-
     <string name="vls11_title" />
-    <string name="vls11_subtitle">2 угла дезориентированы</string>
-
     <string name="vls12_title" />
-    <string name="vls12_subtitle">2 угла дезориентированы</string>
-
     <string name="vls13_title" />
-    <string name="vls13_subtitle">2 угла дезориентированы</string>
-
     <string name="vls14_title" />
-    <string name="vls14_subtitle">2 угла дезориентированы</string>
-
     <string name="vls15_title" />
-    <string name="vls15_subtitle">2 угла дезориентированы</string>
-
     <string name="vls16_title" />
-    <string name="vls16_subtitle">2 угла дезориентированы</string>
-
     <string name="vls17_title" />
-    <string name="vls17_subtitle">2 угла дезориентированы</string>
-
     <string name="vls18_title" />
-    <string name="vls18_subtitle">2 угла дезориентированы</string>
-
-    <string name="vls19_title">3 угла дезориентированы</string>
-    <string name="vls19_subtitle">3 угла дезориентированы</string>
-
+    <string name="vls19_title">"3 угла дезориентированы"</string>
     <string name="vls20_title" />
-    <string name="vls20_subtitle">3 угла дезориентированы</string>
-
     <string name="vls21_title" />
-    <string name="vls21_subtitle">3 угла дезориентированы</string>
-
     <string name="vls22_title" />
-    <string name="vls22_subtitle">3 угла дезориентированы</string>
-
     <string name="vls23_title" />
-    <string name="vls23_subtitle">3 угла дезориентированы</string>
-
     <string name="vls24_title" />
-    <string name="vls24_subtitle">3 угла дезориентированы</string>
-
     <string name="vls25_title" />
-    <string name="vls25_subtitle">3 угла дезориентированы</string>
-
     <string name="vls26_title" />
-    <string name="vls26_subtitle">3 угла дезориентированы</string>
 </resources>

@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="zbll_t_count" translatable="false">"72"</string>
+    <string name="zbll_t0" translatable="false">"(U') R U R' U R U2 R' U2 R' U' R U' R' U2 R"</string>
+    <string name="zbll_t0_title" translatable="false" />
+
+    <string name="zbll_t1" translatable="false">"(U) R U R' U R U R2 D' Rw U2 Rw' D R2 U R'"</string>
+    <string name="zbll_t1_title" translatable="false" />
+    <string name="zbll_t2" translatable="false">"R' U R U2 L' R' U R U' L"</string>
+    <string name="zbll_t2_title" translatable="false" />
+
+    <string name="zbll_t3" translatable="false">"(U') Lw' U2 R' D2 R U2 R' D2 R2 x'"</string>
+    <string name="zbll_t3_title" translatable="false" />
+
+    <string name="zbll_t4" translatable="false">"R U R D R' U' R D' R2"</string>
+    <string name="zbll_t4_title" translatable="false" />
+
+    <string name="zbll_t5" translatable="false">"x' U' R' D R U R' D' R x"</string>
+    <string name="zbll_t5_title" translatable="false" />
+
+    <string name="zbll_t6" translatable="false">"R' U R U2 R' U' R U' R U R' U' R' U' R U R U' R'"</string>
+    <string name="zbll_t6_title" translatable="false" />
+
+    <string name="zbll_t7" translatable="false">"(U) R' U' R U' R' U' R2 D Rw' U2 Rw D' R2 U' R"</string>
+    <string name="zbll_t7_title" translatable="false" />
+
+    <string name="zbll_t8" translatable="false">"R' U2 R U R2 F R U R U' R' F' R"</string>
+    <string name="zbll_t8_title" translatable="false" />
+
+    <string name="zbll_t9" translatable="false">"R' U2 R U' R' F R U R' U' R' F' R U' R"</string>
+    <string name="zbll_t9_title" translatable="false" />
+
+    <string name="zbll_t10" translatable="false">"(U') R U2 R' U2 R' F R U R U' R' F'"</string>
+    <string name="zbll_t10_title" translatable="false" />
+
+    <string name="zbll_t11" translatable="false">"(U) R U R' U' R' F' R U2 R U2 R' F"</string>
+    <string name="zbll_t11_title" translatable="false" />
+
+    <string name="zbll_t12" translatable="false">"(U2) R' U2 R U R' U R2 U2 R' U' R U' R'"</string>
+    <string name="zbll_t12_title" translatable="false" />
+
+    <string name="zbll_t13" translatable="false">"(U2) R U' R2 D' Rw U2 Rw' D R2 U R'"</string>
+    <string name="zbll_t13_title" translatable="false" />
+
+    <string name="zbll_t14" translatable="false">"(U2) R' U' R2 U R' F' R U R' U' R' F R2 U' R' U' R' U R"</string>
+    <string name="zbll_t14_title" translatable="false" />
+
+    <string name="zbll_t15" translatable="false">"R' U2 R' D' R U2 R' D R3 U R' U R U2 R'"</string>
+    <string name="zbll_t15_title" translatable="false" />
+
+    <string name="zbll_t16" translatable="false">"(U2) R2 B2 R' U2 R' U2 R B2 R' U R U' R'"</string>
+    <string name="zbll_t16_title" translatable="false" />
+
+    <string name="zbll_t17" translatable="false">"R2 F2 R U2 R U2 R' F2 R U' R' U R"</string>
+    <string name="zbll_t17_title" translatable="false" />
+
+    <string name="zbll_t18" translatable="false">"R U2 R' U' R U' R2 U2 R U R' U R"</string>
+    <string name="zbll_t18_title" translatable="false" />
+
+    <string name="zbll_t19" translatable="false">"R' U R2 D Rw' U2 Rw D' R2 U' R"</string>
+    <string name="zbll_t19_title" translatable="false" />
+
+    <string name="zbll_t20" translatable="false">"(U2) Rw U' Rw U2 R' F R U2 Rw2 F"</string>
+    <string name="zbll_t20_title" translatable="false" />
+
+    <string name="zbll_t21" translatable="false">"(U2) R U2 R D R' U2 R D' R U' R U' R' U2 R"</string>
+    <string name="zbll_t21_title" translatable="false" />
+
+    <string name="zbll_t22" translatable="false">"(U') R' D' R U R' D R2 U' R' U R U R' U' R U R'"</string>
+    <string name="zbll_t22_title" translatable="false" />
+
+    <string name="zbll_t23" translatable="false">"(U') R D R' U' R D' R2 U R U' R' U' R U R' U' R"</string>
+    <string name="zbll_t23_title" translatable="false" />
+
+    <string name="zbll_t24" translatable="false">"R' U R U2 R' U' R U2 R' U' R U' R' U R"</string>
+    <string name="zbll_t24_title" translatable="false" />
+
+    <string name="zbll_t25" translatable="false">"R' U' R U2 R D R' U' R D' R2 U R U' R' U R"</string>
+    <string name="zbll_t25_title" translatable="false" />
+
+    <string name="zbll_t26" translatable="false">"(U') R' U' R' D' R U R' D R U2 R U R' U R"</string>
+    <string name="zbll_t26_title" translatable="false" />
+
+    <string name="zbll_t27" translatable="false">"R' D' R U R' D R U2 R U2 R' U R U R'"</string>
+    <string name="zbll_t27_title" translatable="false" />
+
+    <string name="zbll_t28" translatable="false">"(U') F' U' Rw' F2 Rw U' Rw' F' Rw F"</string>
+    <string name="zbll_t28_title" translatable="false" />
+
+    <string name="zbll_t29" translatable="false">"(U) F U R U2 R' U R U R' F'"</string>
+    <string name="zbll_t29_title" translatable="false" />
+
+    <string name="zbll_t30" translatable="false">"(U2) R U' R' U2 R U R' U2 R U R' U R U' R'"</string>
+    <string name="zbll_t30_title" translatable="false" />
+
+    <string name="zbll_t31" translatable="false">"(U') R U2 R' U' R U Rw' F Rw U2 R' Rw' F Rw"</string>
+    <string name="zbll_t31_title" translatable="false" />
+
+    <string name="zbll_t32" translatable="false">"R' U' R y R U R' U' R Lw U' R' U Lw'"</string>
+    <string name="zbll_t32_title" translatable="false" />
+
+    <string name="zbll_t33" translatable="false">"(U) R' U' R' D' R U R' D R U' R U' R' U2 R"</string>
+    <string name="zbll_t33_title" translatable="false" />
+
+    <string name="zbll_t34" translatable="false">"(U') R U R' U' R U' R' L U' R U R' L'"</string>
+    <string name="zbll_t34_title" translatable="false" />
+
+    <string name="zbll_t35" translatable="false">"R U R' U' R U' R' U' F R U R' U' R' F' R"</string>
+    <string name="zbll_t35_title" translatable="false" />
+
+    <string name="zbll_t36" translatable="false">"R' U R2 U R' U R' U' R U' R' U' R U R U' R'"</string>
+    <string name="zbll_t36_title" translatable="false" />
+
+    <string name="zbll_t37" translatable="false">"R' U' R U R2 D' R U2 R' D R2 U2 R' U2 R"</string>
+    <string name="zbll_t37_title" translatable="false" />
+
+    <string name="zbll_t38" translatable="false">"(U) L' U2 R U2 R' U2 L U R U R' U' R U' R'"</string>
+    <string name="zbll_t38_title" translatable="false" />
+
+    <string name="zbll_t39" translatable="false">"R' U R2 D R' U R D' R' U R' U' R U' R' U' R"</string>
+    <string name="zbll_t39_title" translatable="false" />
+
+    <string name="zbll_t40" translatable="false">"(U) R U R' U R U R' U2 L R U' R' U L'"</string>
+    <string name="zbll_t40_title" translatable="false" />
+
+    <string name="zbll_t41" translatable="false">"(U) R' U' R U' R' U' R U2 L' R' U R U' L"</string>
+    <string name="zbll_t41_title" translatable="false" />
+
+    <string name="zbll_t42" translatable="false">"(U') R U R' U R U' R' U R' U' R2 U' R2 U2 R"</string>
+    <string name="zbll_t42_title" translatable="false" />
+
+    <string name="zbll_t43" translatable="false">"(U) R U R' U' R U R2 D' R U' R' D R U2 R U' R'"</string>
+    <string name="zbll_t43_title" translatable="false" />
+
+    <string name="zbll_t44" translatable="false">"F U' R' U2 R U F' R' U' R U R' U R"</string>
+    <string name="zbll_t44_title" translatable="false" />
+
+    <string name="zbll_t45" translatable="false">"(U2) R U' R2 D' R U' R' D R U' R U R' U R U R'"</string>
+    <string name="zbll_t45_title" translatable="false" />
+
+    <string name="zbll_t46" translatable="false">"R' U' R U' R2' F' R U R U' R' F U R U' R' U2 R"</string>
+    <string name="zbll_t46_title" translatable="false" />
+
+    <string name="zbll_t47" translatable="false">"(U) F R U R' U' R U R' U' F' R U R' U' R' F R F'"</string>
+    <string name="zbll_t47_title" translatable="false" />
+
+    <string name="zbll_t48" translatable="false">"(U2) R' U2 R U R' U R U' R' U' R U' R' U2 R"</string>
+    <string name="zbll_t48_title" translatable="false" />
+
+    <string name="zbll_t49" translatable="false">"(U) R' D' R U' R' D R U' R U' R' U R U' R' U' R U R'"</string>
+    <string name="zbll_t49_title" translatable="false" />
+
+    <string name="zbll_t50" translatable="false">"(U2) R' U' R U' R' U R F U' R' U2 R U F'"</string>
+    <string name="zbll_t50_title" translatable="false" />
+
+    <string name="zbll_t51" translatable="false">"(U) R' U' R U' F U' R' U R U F' R' U R"</string>
+    <string name="zbll_t51_title" translatable="false" />
+
+    <string name="zbll_t52" translatable="false">"(U) R' U' R U R' U' R2 D R' U2 R D' R' U R' U R"</string>
+    <string name="zbll_t52_title" translatable="false" />
+
+    <string name="zbll_t53" translatable="false">"(U) R U R' U' R U R2 D' R U2 R' D R U' R U' R'"</string>
+    <string name="zbll_t53_title" translatable="false" />
+
+    <string name="zbll_t54" translatable="false">"R U2 R' U' R U' R' U R U R'U R U2 R'"</string>
+    <string name="zbll_t54_title" translatable="false" />
+
+    <string name="zbll_t55" translatable="false">"R U' R' U R U R' U' R U R' U R' D' R U R' D R"</string>
+    <string name="zbll_t55_title" translatable="false" />
+
+    <string name="zbll_t56" translatable="false">"R U R' U R U' R' U' L' U2 R U2 R' U2 L"</string>
+    <string name="zbll_t56_title" translatable="false" />
+
+    <string name="zbll_t57" translatable="false">"R' D' R U R' D R2 U R' U2 R U' R' U' R U' R'"</string>
+    <string name="zbll_t57_title" translatable="false" />
+
+    <string name="zbll_t58" translatable="false">"(U2) R U R D R' U2 R D' R' U' R' U R U' R' U' R U' R'"</string>
+    <string name="zbll_t58_title" translatable="false" />
+
+    <string name="zbll_t59" translatable="false">"R' U2 R F U' R' U R U F' R' U R"</string>
+    <string name="zbll_t59_title" translatable="false" />
+
+    <string name="zbll_t60" translatable="false">"(U') R' U' R2 U R2 U R2 U2 R' U R' U R"</string>
+    <string name="zbll_t60_title" translatable="false" />
+
+    <string name="zbll_t61" translatable="false">"(U) R U R D R' U R D' R' U L' U R' U' L"</string>
+    <string name="zbll_t61_title" translatable="false" />
+
+    <string name="zbll_t62" translatable="false">"R' U2 R U R' U R F U R U2 R' U R U R' F'"</string>
+    <string name="zbll_t62_title" translatable="false" />
+
+    <string name="zbll_t63" translatable="false">"(U2) F R U R' U' R U' R' U' R U R' F'"</string>
+    <string name="zbll_t63_title" translatable="false" />
+
+    <string name="zbll_t64" translatable="false">"(U2) F R U R' U' R' F' U2 R U R U' R2 U2 R"</string>
+    <string name="zbll_t64_title" translatable="false" />
+
+    <string name="zbll_t65" translatable="false">"(U) R' U2 R2 U R' U' R' U2 F' R U2 R U2 R' F"</string>
+    <string name="zbll_t65_title" translatable="false" />
+
+    <string name="zbll_t66" translatable="false">"(U') R U R2 U' R2 U' R2 U2 R U' R U' R'"</string>
+    <string name="zbll_t66_title" translatable="false" />
+
+    <string name="zbll_t67" translatable="false">"(U2) R2 F R U R' U' R' F' R' U' R2 U2 R U2 R"</string>
+    <string name="zbll_t67_title" translatable="false" />
+
+    <string name="zbll_t68" translatable="false">"Rw' U' Lw' U2 R U' R' U2 Lw R U' R' U2 Rw"</string>
+    <string name="zbll_t68_title" translatable="false" />
+
+    <string name="zbll_t69" translatable="false">"(U') R U R' U2 R U' R' U2 R U' R2 F' R U R U' R' F"</string>
+    <string name="zbll_t69_title" translatable="false" />
+
+    <string name="zbll_t70" translatable="false">"(U') R U' R' U' R U R D R' U2 R D' R' U' R'"</string>
+    <string name="zbll_t70_title" translatable="false" />
+
+    <string name="zbll_t71" translatable="false">"(U') R' U R U R' U' R' D' R U2 R' D R U R"</string>
+    <string name="zbll_t71_title" translatable="false" />
+</resources>

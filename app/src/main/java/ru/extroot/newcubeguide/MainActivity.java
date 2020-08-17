@@ -127,7 +127,7 @@ public class MainActivity extends AppCompatActivity
     private static final int EO_ID      = 33;
     private static final int CP_ID      = 34;
     private static final int EP_ID      = 35;
-    //private static final int UZ_ID      = 36;
+    private static final int UZ_ID      = 36;
     private static final int ZBLL_T_ID        = 41;
     private static final int ZBLL_U_ID        = 42;
     private static final int ZBLL_L_ID        = 43;
@@ -323,9 +323,9 @@ public class MainActivity extends AppCompatActivity
                                                                 .withIdentifier( ZBLL_ANTISUNE_ID )
                                                 )
                                 ),
-                        //new PrimaryDrawerItem()
-                        //        .withName( R.string.uz_header )
-                        //        .withIdentifier( UZ_ID ),
+                        new PrimaryDrawerItem()
+                                .withName( R.string.uz_header )
+                                .withIdentifier( UZ_ID ),
                         new ExpandableDrawerItem()
                                 .withName( R.string.header_2x2x2 )
                                 .withSelectable( false )
@@ -475,7 +475,7 @@ public class MainActivity extends AppCompatActivity
                         case ZBLL_SUNE_ID:     mode = picMode = "zbll_sune";     break;
                         case ZBLL_ANTISUNE_ID: mode = picMode = "zbll_antisune"; break;
 
-                        //case UZ_ID:      mode = picMode = "uz"; break;
+                        case UZ_ID:      mode = picMode = "uz"; break;
 
                         case CLL_ID:     mode = picMode = "cll";          break;
                         case ORTEGA_ID:  mode = picMode = "ortega";       break;

@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="zbll_pi_count" translatable="false">"72"</string>
+
+    <string name="zbll_pi0" translatable="false">"R' U' R U R U2 R' U' R U' R2 U2 R"</string>
+    <string name="zbll_pi0_title" translatable="false" />
+
+    <string name="zbll_pi1" translatable="false">"F R2 U' R U' R U' R' U2 R' U R2 F'"</string>
+    <string name="zbll_pi1_title" translatable="false" />
+
+    <string name="zbll_pi2" translatable="false">"(U') F U R U2 R' U R U R' F' R U2 R' U' R U' R'"</string>
+    <string name="zbll_pi2_title" translatable="false" />
+
+    <string name="zbll_pi3" translatable="false">"(U) R U2 R2 U' R U' R' U2 F R U R U' R' F'"</string>
+    <string name="zbll_pi3_title" translatable="false" />
+
+    <string name="zbll_pi4" translatable="false">"r' F' r U r U2 r' F2 U' R U R' U' R U' R'"</string>
+    <string name="zbll_pi4_title" translatable="false" />
+
+    <string name="zbll_pi5" translatable="false">"(U') R U R' U R U' R' U F2 r U2 r' U' r' F r"</string>
+    <string name="zbll_pi5_title" translatable="false" />
+
+    <string name="zbll_pi6" translatable="false">"R U R' U' R' U2 R U R' U R2 U2 R'"</string>
+    <string name="zbll_pi6_title" translatable="false" />
+
+    <string name="zbll_pi7" translatable="false">"(U2) F R2 U' R U2 R U R' U R' U R2 F'"</string>
+    <string name="zbll_pi7_title" translatable="false" />
+
+    <string name="zbll_pi8" translatable="false">"r U' r' U' r U r' U' l R U' R' U l'"</string>
+    <string name="zbll_pi8_title" translatable="false" />
+
+    <string name="zbll_pi9" translatable="false">"(U') R U R' U R U2 R2 F' r U R U' r' F"</string>
+    <string name="zbll_pi9_title" translatable="false" />
+
+    <string name="zbll_pi10" translatable="false">"(U2) R U2 R' U2 R' F R2 U' R' U2 R U2 R' U' F'"</string>
+    <string name="zbll_pi10_title" translatable="false" />
+
+    <string name="zbll_pi11" translatable="false">"(U) F U R U2 R' U2 R U R2 F' R U2 R U2 R'"</string>
+    <string name="zbll_pi11_title" translatable="false" />
+
+    <string name="zbll_pi12" translatable="false">"(U') R' U2 R U R' U R2 U R' U R U2 R'"</string>
+    <string name="zbll_pi12_title" translatable="false" />
+
+    <string name="zbll_pi13" translatable="false">"F U R' U' R2 U' R2 U2 R U2 R U R' F'"</string>
+    <string name="zbll_pi13_title" translatable="false" />
+
+    <string name="zbll_pi14" translatable="false">"r' U r U r' U' r U R2 F R F' R"</string>
+    <string name="zbll_pi14_title" translatable="false" />
+
+    <string name="zbll_pi15" translatable="false">"(U') r' F' r U' r' F2 r2 U R' U' r' F R F'"</string>
+    <string name="zbll_pi15_title" translatable="false" />
+
+    <string name="zbll_pi16" translatable="false">"R' F R U R' U' R' F' R2 U' R' U R U' R' U2 R"</string>
+    <string name="zbll_pi16_title" translatable="false" />
+
+    <string name="zbll_pi17" translatable="false">"R U' R' U' R U' R' U R U R' U R' F' R U R U' R' F"</string>
+    <string name="zbll_pi17_title" translatable="false" />
+
+    <string name="zbll_pi18" translatable="false">"(U) R U2 R' U' R U' R2 U' R U' R' U2 R"</string>
+    <string name="zbll_pi18_title" translatable="false" />
+
+    <string name="zbll_pi19" translatable="false">"r' U' R U' R' U R U' R' U R' F R F' U r"</string>
+    <string name="zbll_pi19_title" translatable="false" />
+
+    <string name="zbll_pi20" translatable="false">"r' U' R U' R' U2 r U' R U2 R' U2 R' F R F'"</string>
+    <string name="zbll_pi20_title" translatable="false" />
+
+    <string name="zbll_pi21" translatable="false">"F R U R' U' R' F' R U2 R' U' R2 U' R2 U2 R"</string>
+    <string name="zbll_pi21_title" translatable="false" />
+
+    <string name="zbll_pi22" translatable="false">"R' L U2 R2 U R2 U R U L' U' R U2 R'"</string>
+    <string name="zbll_pi22_title" translatable="false" />
+
+    <string name="zbll_pi23" translatable="false">"R L' U2 R2 U' R2 U' R' U' L U R' U2 R"</string>
+    <string name="zbll_pi23_title" translatable="false" />
+
+    <string name="zbll_pi24" translatable="false">"(U') R U2 R' U2 R U' R' U2 R U' R' U2 R U R'"</string>
+    <string name="zbll_pi24_title" translatable="false" />
+
+    <string name="zbll_pi25" translatable="false">"(U) R U2 R' U' F' R U2 R' U' R U' R' F R U' R'"</string>
+    <string name="zbll_pi25_title" translatable="false" />
+
+    <string name="zbll_pi26" translatable="false">"R' U' R U R2 F' R U R U' R' F U' R U R' U R"</string>
+    <string name="zbll_pi26_title" translatable="false" />
+
+    <string name="zbll_pi27" translatable="false">"(U) R' U' R L U2 R' U2 R U2 L' U R' U2 R"</string>
+    <string name="zbll_pi27_title" translatable="false" />
+
+    <string name="zbll_pi28" translatable="false">"l U2 l' U2 R' U2 R B2 U R' U R"</string>
+    <string name="zbll_pi28_title" translatable="false" />
+
+    <string name="zbll_pi29" translatable="false">"R' F2 R U2 R U2 R' F2 U' R U' R'"</string>
+    <string name="zbll_pi29_title" translatable="false" />
+
+    <string name="zbll_pi30" translatable="false">"(U) R' U2 R U2 R' U R U2 R' U R U2 R' U' R"</string>
+    <string name="zbll_pi30_title" translatable="false" />
+
+    <string name="zbll_pi31" translatable="false">"(U) R' U' R' D' R U R' D R U2 R' D' R U2 R' D R2"</string>
+    <string name="zbll_pi31_title" translatable="false" />
+
+    <string name="zbll_pi32" translatable="false">"R U2 R D' R U' R' D R' U' R2 U2 R"</string>
+    <string name="zbll_pi32_title" translatable="false" />
+
+    <string name="zbll_pi33" translatable="false">"(U') F U' R U' R' U R U R' U2 R U2 R' U F' U"</string>
+    <string name="zbll_pi33_title" translatable="false" />
+
+    <string name="zbll_pi34" translatable="false">"(U') R U R' U F2 R U2 R' U2 R' F2 R"</string>
+    <string name="zbll_pi34_title" translatable="false" />
+
+    <string name="zbll_pi35" translatable="false">"(U) R' U' R U' B2 R' U2 R U2 l U2 l'"</string>
+    <string name="zbll_pi35_title" translatable="false" />
+
+    <string name="zbll_pi36" translatable="false">"(U2) R U' R' U2 R U R' U2 R U R' U2 R U2 R'"</string>
+    <string name="zbll_pi36_title" translatable="false" />
+
+    <string name="zbll_pi37" translatable="false">"(U') R' U' R U R' U' R2 D R' U R D' R' U R' U2 R"</string>
+    <string name="zbll_pi37_title" translatable="false" />
+
+    <string name="zbll_pi38" translatable="false">"R' U' R U' R2 D' R U R' D R2 U' R' U2 R"</string>
+    <string name="zbll_pi38_title" translatable="false" />
+
+    <string name="zbll_pi39" translatable="false">"(U) R2 D' R U' R' D R U R' D' R U R' D R U R U' R' U' R"</string>
+    <string name="zbll_pi39_title" translatable="false" />
+
+    <string name="zbll_pi40" translatable="false">" (U') R' U2 R U R' U R2 U' L' U R' U' L"</string>
+    <string name="zbll_pi40_title" translatable="false" />
+
+    <string name="zbll_pi41" translatable="false">"(U) R U2 R' U' R U' R2 U L U' R U L'"</string>
+    <string name="zbll_pi41_title" translatable="false" />
+
+    <string name="zbll_pi42" translatable="false">"(U2) R' U R U2 R' U' R U2 R' U' R U2 R' U2 R"</string>
+    <string name="zbll_pi42_title" translatable="false" />
+
+    <string name="zbll_pi43" translatable="false">"(U) R U R' U' R U R2 D' R U' R' D R U' R U2 R'"</string>
+    <string name="zbll_pi43_title" translatable="false" />
+
+    <string name="zbll_pi44" translatable="false">"(U2) L' U R U' L U' R' U' R U' R'"</string>
+    <string name="zbll_pi44_title" translatable="false" />
+
+    <string name="zbll_pi45" translatable="false">"R' U' F' R U R' U' R' F R2 U2' R' U2 R"</string>
+    <string name="zbll_pi45_title" translatable="false" />
+
+    <string name="zbll_pi46" translatable="false">"(U) R U R' U R U' R' U R U' R D R' U' R D' R2"</string>
+    <string name="zbll_pi46_title" translatable="false" />
+
+    <string name="zbll_pi47" translatable="false">"(U') R' U' R U' R' U R U' R' U R' D' R U R' D R2"</string>
+    <string name="zbll_pi47_title" translatable="false" />
+
+    <string name="zbll_pi48" translatable="false">"R' U2 R2 U R2 U R2 U2 R'"</string>
+    <string name="zbll_pi48_title" translatable="false" />
+
+    <string name="zbll_pi49" translatable="false">"(U2) R U2 R' U R' D' R U R' D R2 U' R' U R U' R'"</string>
+    <string name="zbll_pi49_title" translatable="false" />
+
+    <string name="zbll_pi50" translatable="false">"R U' L' U R' U L U L' U L"</string>
+    <string name="zbll_pi50_title" translatable="false" />
+
+    <string name="zbll_pi51" translatable="false">"(U') R U R' U R U' R' U' R' F' R U2 R U2' R' F"</string>
+    <string name="zbll_pi51_title" translatable="false" />
+
+    <string name="zbll_pi52" translatable="false">"R U R' U' R' F R2 U R' U' R U R' U' F'"</string>
+    <string name="zbll_pi52_title" translatable="false" />
+
+    <string name="zbll_pi53" translatable="false">"(U) F U R U' R' U R U' R2 F' R U R U' R'"</string>
+    <string name="zbll_pi53_title" translatable="false" />
+
+    <string name="zbll_pi54" translatable="false">"R U2 R2 U' R2 U' R2 U2 R"</string>
+    <string name="zbll_pi54_title" translatable="false" />
+
+    <string name="zbll_pi55" translatable="false">"(U2) R' U2 R U' R D R' U' R D' R2 U R U' R' U R"</string>
+    <string name="zbll_pi55_title" translatable="false" />
+
+    <string name="zbll_pi56" translatable="false">"(U) R2 D' R U2 R' D R2 U R2 D' R U R' D R2"</string>
+    <string name="zbll_pi56_title" translatable="false" />
+
+    <string name="zbll_pi57" translatable="false">"(U2) R' U' R' D' R U R' D R' U R' U R U2 R'"</string>
+    <string name="zbll_pi57_title" translatable="false" />
+
+    <string name="zbll_pi58" translatable="false">"(U2) R' U' R U' R' U' R U' x' U L' U L U2 R U' R' U"</string>
+    <string name="zbll_pi58_title" translatable="false" />
+
+    <string name="zbll_pi59" translatable="false">"U R U R' U R U2 R' U' R L' U R' U' L U2 R U2 R'"</string>
+    <string name="zbll_pi59_title" translatable="false" />
+
+    <string name="zbll_pi60" translatable="false">"R U R' U' R' U' R U R U R' U' R' U R U' R U' R'"</string>
+    <string name="zbll_pi60_title" translatable="false" />
+
+    <string name="zbll_pi61" translatable="false">"R2 D R' U' R D' R' U' R' U R U' R' U' R U' R'"</string>
+    <string name="zbll_pi61_title" translatable="false" />
+
+    <string name="zbll_pi62" translatable="false">"(U') R2 D R' U2 R D' R2 U' R2 D R' U' R D' R2"</string>
+    <string name="zbll_pi62_title" translatable="false" />
+
+    <string name="zbll_pi63" translatable="false">"(U2) R U R D R' U' R D' R U' R U' R' U2 R"</string>
+    <string name="zbll_pi63_title" translatable="false" />
+
+    <string name="zbll_pi64" translatable="false">"R U2 R' U' R U R' U2 L' U R U' M'"</string>
+    <string name="zbll_pi64_title" translatable="false" />
+
+    <string name="zbll_pi65" translatable="false">"R' U2 R U R' U' R U2 L U' R' U R L'"</string>
+    <string name="zbll_pi65_title" translatable="false" />
+
+    <string name="zbll_pi66" translatable="false">"R U2 R' U' R U' R' U' R U2 R' U' R U' R'"</string>
+    <string name="zbll_pi66_title" translatable="false" />
+
+    <string name="zbll_pi67" translatable="false">"R2 D' R U R' D R U R U' R' U R U R' U R"</string>
+    <string name="zbll_pi67_title" translatable="false" />
+
+    <string name="zbll_pi68" translatable="false">"(U2) R U2 R' U' R U r' F2 r U2 R' U' r' F r"</string>
+    <string name="zbll_pi68_title" translatable="false" />
+
+    <string name="zbll_pi69" translatable="false">"(U) F U R U' R' U R U2 R' U' R U R' F'"</string>
+    <string name="zbll_pi69_title" translatable="false" />
+
+    <string name="zbll_pi70" translatable="false">"(U') L R' U' R U L' U2 R' U R U' R' U2 R"</string>
+    <string name="zbll_pi70_title" translatable="false" />
+
+    <string name="zbll_pi71" translatable="false">"(U) R L' U R' U' L U2 R U' R' U R U2 R'"</string>
+    <string name="zbll_pi71_title" translatable="false" />
+</resources>

@@ -1,44 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="mg_pll0_title">Перестановка ребер</string>
-    <string name="mg_pll0_subtitle"  />
+    <string name="mg_pll0_title">"Перестановка ребер"</string>
 
     <string name="mg_pll1_title"  />
-    <string name="mg_pll1_subtitle"  />
 
     <string name="mg_pll2_title"  />
-    <string name="mg_pll2_subtitle"  />
 
     <string name="mg_pll3_title"  />
-    <string name="mg_pll3_subtitle"  />
 
     <string name="mg_pll4_title"  />
-    <string name="mg_pll4_subtitle"  />
 
     <string name="mg_pll5_title"  />
-    <string name="mg_pll5_subtitle"  />
 
     <string name="mg_pll6_title"  />
-    <string name="mg_pll6_subtitle"  />
 
-    <string name="mg_pll7_title">Перестановка углов</string>
-    <string name="mg_pll7_subtitle"  />
+    <string name="mg_pll7_title">"Перестановка углов"</string>
 
     <string name="mg_pll8_title"  />
-    <string name="mg_pll8_subtitle"  />
 
     <string name="mg_pll9_title"  />
-    <string name="mg_pll9_subtitle"  />
 
     <string name="mg_pll10_title"  />
-    <string name="mg_pll10_subtitle"  />
 
     <string name="mg_pll11_title"  />
-    <string name="mg_pll11_subtitle"  />
 
     <string name="mg_pll12_title"  />
-    <string name="mg_pll12_subtitle"  />
 
     <string name="mg_pll13_title"  />
-    <string name="mg_pll13_subtitle"  />
 </resources>

@@ -1,45 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="leg1__count" translatable="false">40</string>
+    <string name="leg1__count" translatable="false">"40"</string>
 
-    <string name="leg1_0" translatable="false">(U2) R\' F R2 F\' R2 U2 R</string>
-    <string name="leg1_1" translatable="false">(U2) R\' U F\' R2 F\' U2 R F\'\n(U\') R U R2\' F\' U F2 R2 F\'</string>
-    <string name="leg1_2" translatable="false">(U2) F R\' F\' R2 U2 R U\' R2</string>
-    <string name="leg1_3" translatable="false">(U) R2 U\' R2\' F\' R U2 R\' U2 R\' F\n(U\') R2 F\' U\' R U\' R U\' R2 F2</string>
-    <string name="leg1_4" translatable="false">(U2) F2 R F\' U R\' F U\' R2</string>
-    <string name="leg1_5" translatable="false">(U\') R U2 R U\' R2 F R2 F\'</string>
-    <string name="leg1_6" translatable="false">(U2) L U\' R2 U R2 B2 R\'\n(U2) R F\' R2 U2 F\' R</string>
-    <string name="leg1_7" translatable="false">(U) R2 U R2 U\' R U2 R\' U\' R U R\'\n(U\') F\' U F2 R2 F\' R2 U\' R\'</string>
-    <string name="leg1_8" translatable="false">(U\') F R2 F\' R2 U R\' U2 R\'</string>
-    <string name="leg1_9" translatable="false">(U\') F\' R U2 R U2\' R\' F R2 U R2\'</string>
-    <string name="leg1_10" translatable="false">F\' U R\' U\' R U F2 R2 F\' R\'\nR\' F\' U R\' U R F2 R F\'</string>
-    <string name="leg1_11" translatable="false">(U2) R2 U R\' U2 R2 F R F\'</string>
-    <string name="leg1_12" translatable="false">(U2) F R F\' R\' F R2 F\' R\' U2 R\n(U\') R F R\' F\' U R U\' R2 F R F\'</string>
-    <string name="leg1_13" translatable="false">(U\') R U R\' U\' R U2 R U\' R2\n(U\') R2 U R\' U2 R\' U R U\' R\'</string>
-    <string name="leg1_14" translatable="false">(U2) R F\' U R\' F2 U R F</string>
-    <string name="leg1_15" translatable="false">(U\') R2 U R\' F R F\' U R\'</string>
-    <string name="leg1_16" translatable="false">R U\' F R2 F\' R\' F R F\' R\'\n(U) R U\' R\' F R F\' R2\' U2 R</string>
-    <string name="leg1_17" translatable="false">(U) R U R\' U R2 U\' R2 F R2 F\'</string>
-    <string name="leg1_18" translatable="false">(U\') R2 U\' R\' U\' R U\' R\' U R\'\nR\' U R\' U\' R U\' R\' U\' R2</string>
-    <string name="leg1_19" translatable="false">(U2) R2 U R2 F\' R2 F\' R2 F R2\n(U) R\' F R2 F\' U2\' R U\' R U\' R\'</string>
-    <string name="leg1_20" translatable="false">(U) R U R\' F R2 F\' R U\' R\'</string>
-    <string name="leg1_21" translatable="false">(U\') F\' U\' F R2 U\' R\' U R U\' R\'\n(U2) R\' F R F\' U2 R2\' U\' R U2 R</string>
-    <string name="leg1_22" translatable="false">(U\') R2 U R\' U2 R\' F\' U\' F</string>
-    <string name="leg1_23" translatable="false">(U) R2 U\' R U2 R F R F\'\nR\' U F R2 F\' R U2 R</string>
-    <string name="leg1_24" translatable="false">R2 U R\' U\' F R2 F\' U R\'</string>
-    <string name="leg1_25" translatable="false">(U2) R U\' R\' U\' R2 U\' R2 F R F\'\n(U\') R\' F2 R2 F\' R U2 R B2</string>
-    <string name="leg1_26" translatable="false">R\' U R\' U R2 U\' R U2 R\'\nR U\' R\' y U\' R U R2 F\' R</string>
-    <string name="leg1_27" translatable="false">(U\') R\' U R\' U\' R U L\' U R2 U\' L</string>
-    <string name="leg1_28" translatable="false">F\' U F R U2 R U\' R2\'</string>
-    <string name="leg1_29" translatable="false">(U2) R\' U2\' R\' F R2 F\' U\' R\n(U\') F R\' F\' R\' U2 R\' U R2\nR U\' R\' y U\' R U R2 F\' R</string>
-    <string name="leg1_30" translatable="false">(U) R U R\' U\' F\' R\' U2 R U\' F\n(U2) R\' U R\' U\' R\' F U2 R2 B</string>
-    <string name="leg1_31" translatable="false">(U) R U\' F R2 F\' U R U\' R2\n(U) F\' R2 U R F\' R\' U R\' F\'</string>
-    <string name="leg1_32" translatable="false">F\' R\' U2 R U\' F2 R F\'</string>
-    <string name="leg1_33" translatable="false">F R F\' R\' F R2 F\' U R\' U R\nx R U2 R\' U2 L U2 R U\' R2 F2</string>
-    <string name="leg1_34" translatable="false">(U2) F2 R2 F R2 U R2 U\' F2 R\n(U2) R\' U2 R\' U\' R U R\' F R\' F\'</string>
-    <string name="leg1_35" translatable="false">(U\') R\' F R2 F\' R\' U2 F R F\'</string>
-    <string name="leg1_36" translatable="false">R F2 R F\' R\' F U\' F\nF R\' F R\' U\' R F2 R\nR\' F\' U F R F\' U\' F2 R F\'</string>
-    <string name="leg1_37" translatable="false">R2 U\' R U\' R\' U R\' U\' R U\' R2</string>
-    <string name="leg1_38" translatable="false">F\' R\' U\' F2 R U\' F R\'\nR2 B2 R U R\' F\' R U R\' U\' R U R\'</string>
-    <string name="leg1_39" translatable="false">R U2 R U\' F R F\' R</string>
+    <string name="leg1_0" translatable="false">"(U2) R' F R2 F' R2 U2 R"</string>
+    <string name="leg1_1" translatable="false">"(U2) R' U F' R2 F' U2 R F'
+(U') R U R2' F' U F2 R2 F'"</string>
+    <string name="leg1_2" translatable="false">"(U2) F R' F' R2 U2 R U' R2"</string>
+    <string name="leg1_3" translatable="false">"(U) R2 U' R2' F' R U2 R' U2 R' F
+(U') R2 F' U' R U' R U' R2 F2"</string>
+    <string name="leg1_4" translatable="false">"(U2) F2 R F' U R' F U' R2"</string>
+    <string name="leg1_5" translatable="false">"(U') R U2 R U' R2 F R2 F'"</string>
+    <string name="leg1_6" translatable="false">"(U2) L U' R2 U R2 B2 R'
+(U2) R F' R2 U2 F' R"</string>
+    <string name="leg1_7" translatable="false">"(U) R2 U R2 U' R U2 R' U' R U R'
+(U') F' U F2 R2 F' R2 U' R'"</string>
+    <string name="leg1_8" translatable="false">"(U') F R2 F' R2 U R' U2 R'"</string>
+    <string name="leg1_9" translatable="false">"(U') F' R U2 R U2' R' F R2 U R2'"</string>
+    <string name="leg1_10" translatable="false">"F' U R' U' R U F2 R2 F' R'
+R' F' U R' U R F2 R F'"</string>
+    <string name="leg1_11" translatable="false">"(U2) R2 U R' U2 R2 F R F'"</string>
+    <string name="leg1_12" translatable="false">"(U2) F R F' R' F R2 F' R' U2 R
+(U') R F R' F' U R U' R2 F R F'"</string>
+    <string name="leg1_13" translatable="false">"(U') R U R' U' R U2 R U' R2
+(U') R2 U R' U2 R' U R U' R'"</string>
+    <string name="leg1_14" translatable="false">"(U2) R F' U R' F2 U R F"</string>
+    <string name="leg1_15" translatable="false">"(U') R2 U R' F R F' U R'"</string>
+    <string name="leg1_16" translatable="false">"R U' F R2 F' R' F R F' R'
+(U) R U' R' F R F' R2' U2 R"</string>
+    <string name="leg1_17" translatable="false">"(U) R U R' U R2 U' R2 F R2 F'"</string>
+    <string name="leg1_18" translatable="false">"(U') R2 U' R' U' R U' R' U R'
+R' U R' U' R U' R' U' R2"</string>
+    <string name="leg1_19" translatable="false">"(U2) R2 U R2 F' R2 F' R2 F R2
+(U) R' F R2 F' U2' R U' R U' R'"</string>
+    <string name="leg1_20" translatable="false">"(U) R U R' F R2 F' R U' R'"</string>
+    <string name="leg1_21" translatable="false">"(U') F' U' F R2 U' R' U R U' R'
+(U2) R' F R F' U2 R2' U' R U2 R"</string>
+    <string name="leg1_22" translatable="false">"(U') R2 U R' U2 R' F' U' F"</string>
+    <string name="leg1_23" translatable="false">"(U) R2 U' R U2 R F R F'
+R' U F R2 F' R U2 R"</string>
+    <string name="leg1_24" translatable="false">"R2 U R' U' F R2 F' U R'"</string>
+    <string name="leg1_25" translatable="false">"(U2) R U' R' U' R2 U' R2 F R F'
+(U') R' F2 R2 F' R U2 R B2"</string>
+    <string name="leg1_26" translatable="false">"R' U R' U R2 U' R U2 R'
+R U' R' y U' R U R2 F' R"</string>
+    <string name="leg1_27" translatable="false">"(U') R' U R' U' R U L' U R2 U' L"</string>
+    <string name="leg1_28" translatable="false">"F' U F R U2 R U' R2'"</string>
+    <string name="leg1_29" translatable="false">"(U2) R' U2' R' F R2 F' U' R
+(U') F R' F' R' U2 R' U R2
+R U' R' y U' R U R2 F' R"</string>
+    <string name="leg1_30" translatable="false">"(U) R U R' U' F' R' U2 R U' F
+(U2) R' U R' U' R' F U2 R2 B"</string>
+    <string name="leg1_31" translatable="false">"(U) R U' F R2 F' U R U' R2
+(U) F' R2 U R F' R' U R' F'"</string>
+    <string name="leg1_32" translatable="false">"F' R' U2 R U' F2 R F'"</string>
+    <string name="leg1_33" translatable="false">"F R F' R' F R2 F' U R' U R
+x R U2 R' U2 L U2 R U' R2 F2"</string>
+    <string name="leg1_34" translatable="false">"(U2) F2 R2 F R2 U R2 U' F2 R
+(U2) R' U2 R' U' R U R' F R' F'"</string>
+    <string name="leg1_35" translatable="false">"(U') R' F R2 F' R' U2 F R F'"</string>
+    <string name="leg1_36" translatable="false">"R F2 R F' R' F U' F
+F R' F R' U' R F2 R
+R' F' U F R F' U' F2 R F'"</string>
+    <string name="leg1_37" translatable="false">"R2 U' R U' R' U R' U' R U' R2"</string>
+    <string name="leg1_38" translatable="false">"F' R' U' F2 R U' F R'
+R2 B2 R U R' F' R U R' U' R U R'"</string>
+    <string name="leg1_39" translatable="false">"R U2 R U' F R F' R"</string>
 </resources>

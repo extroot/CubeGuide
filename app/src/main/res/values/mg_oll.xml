@@ -1,80 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="mg_oll_count" translatable="false">19</string>
+    <string name="mg_oll_count" translatable="false">"19"</string>
 
-    <string name="mg_oll0" translatable="false">F (U R U\' R\') F\'</string>
-    <string name="mg_oll0_title">Stars</string>
-    <string name="mg_oll0_subtitle" />
+    <string name="mg_oll0" translatable="false">"F (U R U' R') F'"</string>
+    <string name="mg_oll0_title">"Stars"</string>
 
-    <string name="mg_oll1" translatable="false">F (R U R\' U\') F\'</string>
+    <string name="mg_oll1" translatable="false">"F (R U R' U') F'"</string>
     <string name="mg_oll1_title" />
-    <string name="mg_oll1_subtitle" />
 
-    <string name="mg_oll2" translatable="false">F R U2 R2\' F R F\' U2\' F\'</string>
+    <string name="mg_oll2" translatable="false">"F R U2 R2' F R F' U2' F'"</string>
     <string name="mg_oll2_title" />
-    <string name="mg_oll2_subtitle" />
 
-    <string name="mg_oll3" translatable="false">R U2 R\' U R U2 R\'</string>
-    <string name="mg_oll3_title">Corner orientation</string>
-    <string name="mg_oll3_subtitle" />
+    <string name="mg_oll3" translatable="false">"R U2 R' U R U2 R'"</string>
+    <string name="mg_oll3_title">"Corner orientation"</string>
 
-    <string name="mg_oll4" translatable="false">R U R U R\' U R U2\' R\' U\' R\'</string>
+    <string name="mg_oll4" translatable="false">"R U R U R' U R U2' R' U' R'"</string>
     <string name="mg_oll4_title" />
-    <string name="mg_oll4_subtitle" />
 
-    <string name="mg_oll5" translatable="false">R U R\' U R U R\' U2\' R U\' R\'</string>
+    <string name="mg_oll5" translatable="false">"R U R' U R U R' U2' R U' R'"</string>
     <string name="mg_oll5_title" />
-    <string name="mg_oll5_subtitle" />
 
-    <string name="mg_oll6" translatable="false">y R U R U2 R\' U\' R U\' R\' U\' R\'</string>
+    <string name="mg_oll6" translatable="false">"y R U R U2 R' U' R U' R' U' R'"</string>
     <string name="mg_oll6_title" />
-    <string name="mg_oll6_subtitle" />
 
-    <string name="mg_oll7" translatable="false">R U R\' U R U2\' R\'</string>
+    <string name="mg_oll7" translatable="false">"R U R' U R U2' R'"</string>
     <string name="mg_oll7_title" />
-    <string name="mg_oll7_subtitle" />
 
-    <string name="mg_oll8" translatable="false">R\' U\' R U\' R\' U2 R</string>
+    <string name="mg_oll8" translatable="false">"R' U' R U' R' U2 R"</string>
     <string name="mg_oll8_title" />
-    <string name="mg_oll8_subtitle" />
 
-    <string name="mg_oll9" translatable="false">R\' U2\' R U R\' U R</string>
+    <string name="mg_oll9" translatable="false">"R' U2' R U R' U R"</string>
     <string name="mg_oll9_title" />
-    <string name="mg_oll9_subtitle" />
 
-    <string name="mg_oll10" translatable="false">R U2 R\' U\' R U\' R\'</string>
+    <string name="mg_oll10" translatable="false">"R U2 R' U' R U' R'"</string>
     <string name="mg_oll10_title" />
-    <string name="mg_oll10_subtitle" />
 
-    <string name="mg_oll11" translatable="false">R U R\' U R U R\' U\' R U2\' R\'</string>
+    <string name="mg_oll11" translatable="false">"R U R' U R U R' U' R U2' R'"</string>
     <string name="mg_oll11_title" />
-    <string name="mg_oll11_subtitle" />
 
-    <string name="mg_oll12" translatable="false">R U2 R\' U\' R U R\' U\' R U\' R\'</string>
+    <string name="mg_oll12" translatable="false">"R U2 R' U' R U R' U' R U' R'"</string>
     <string name="mg_oll12_title" />
-    <string name="mg_oll12_subtitle" />
 
-    <string name="mg_oll13" translatable="false">R U R\' U R U\' R\' U R U2\' R\'</string>
+    <string name="mg_oll13" translatable="false">"R U R' U R U' R' U R U2' R'"</string>
     <string name="mg_oll13_title" />
-    <string name="mg_oll13_subtitle" />
 
-    <string name="mg_oll14" translatable="false">R U2 R\' U\' R U\' R2\' U\' R U\' R\' U2 R</string>
+    <string name="mg_oll14" translatable="false">"R U2 R' U' R U' R2' U' R U' R' U2 R"</string>
     <string name="mg_oll14_title" />
-    <string name="mg_oll14_subtitle" />
 
-    <string name="mg_oll15" translatable="false">R U2\' R\' U\' R U R\' U\' R U2\' R\'</string>
+    <string name="mg_oll15" translatable="false">"R U2' R' U' R U R' U' R U2' R'"</string>
     <string name="mg_oll15_title" />
-    <string name="mg_oll15_subtitle" />
 
-    <string name="mg_oll16" translatable="false">R\' U2 R U R\' U\' R U R\' U2 R</string>
+    <string name="mg_oll16" translatable="false">"R' U2 R U R' U' R U R' U2 R"</string>
     <string name="mg_oll16_title" />
-    <string name="mg_oll16_subtitle" />
 
-    <string name="mg_oll17" translatable="false">R U R\' U2 R U2\' R\' U R U2\' R\'</string>
+    <string name="mg_oll17" translatable="false">"R U R' U2 R U2' R' U R U2' R'"</string>
     <string name="mg_oll17_title" />
-    <string name="mg_oll17_subtitle" />
 
-    <string name="mg_oll18" translatable="false">R U2 R\' U\' R U2 R\' U2\' R U\' R\'</string>
+    <string name="mg_oll18" translatable="false">"R U2 R' U' R U2 R' U2' R U' R'"</string>
     <string name="mg_oll18_title" />
-    <string name="mg_oll18_subtitle" />
 </resources>
