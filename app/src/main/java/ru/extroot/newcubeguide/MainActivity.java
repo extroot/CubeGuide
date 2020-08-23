@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.content.SharedPreferences;
-import android.content.res.Configuration;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.ContextThemeWrapper;
@@ -17,6 +16,9 @@ import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
+import com.google.android.play.core.review.ReviewManager;
+import com.google.android.play.core.review.ReviewManagerFactory;
+
 import com.mikepenz.materialdrawer.Drawer;
 import com.mikepenz.materialdrawer.DrawerBuilder;
 import com.mikepenz.materialdrawer.model.ExpandableDrawerItem;
@@ -26,18 +28,24 @@ import com.mikepenz.materialdrawer.model.SwitchDrawerItem;
 
 //import java.util.Locale;
 
+//import com.google.android.play.core.tasks.Task;
+//import com.google.android.play.core.review.ReviewInfo;
+
 
 public class MainActivity extends AppCompatActivity
 {
     /*
-   TODO: Rewrite full app
+   TODO: Переписать код на kotlin
+
+   TODO: Сделать пожертвования
+
    3x3x3:
        F2l     - 1
        OLL     - 2
        PLL     - 3
-       TODO: Expert F2L, OLL, PLL
+       TODO: Expert F2L
    3x3x3 EASY  - 22
-   TODO: easy Fridrich, 4x4x4, 5x5x5, 2x2x2
+   TODO: 4x4x4, 5x5x5, 2x2x2, Фридрих для начинающих
    3x3x3 OH:
        OH_OLL  - 7
        OH_PLL  - 8
@@ -65,9 +73,8 @@ public class MainActivity extends AppCompatActivity
            ZBLL_PI       - 45
            ZBLL_SUNE     - 46
            ZBLL_ANTISUNE - 47
-   TODO!: EN pattern titles
-   3x3x3 UZ    - 40 TODO: UZ titles (En & Ru)
-   TODO: UZ 2x2x2, 4x4x4, 5x5x5
+   3x3x3 UZ    - 40
+   TODO: Узоры для 2x2x2, 4x4x4, 5x5x5
    2x2x2:
        CLL     - 9
        Ortega  - 23
@@ -137,12 +144,16 @@ public class MainActivity extends AppCompatActivity
     private static final int ZBLL_ANTISUNE_ID = 47;
 
     private static final int NUMBER_SWITCH_ID = 101;
-    // TODO: Translations in menu
+    // TODO: Сделать оценку приложения из меню
+    //private static final int REVIEW_ID        = 102;
+
+    // TODO: Сделать переключениее языка в меню
     //private static final int RU_ID = 201;
     //private static final int EN_ID = 202;
 
     private Toolbar toolbar;
     private SharedPreferences.Editor prefEditor;
+    //ReviewManager manager;
 
     private String picMode, mode;
 
@@ -153,13 +164,15 @@ public class MainActivity extends AppCompatActivity
     private Boolean numbering = false;
 
     private static final String PREFS_FILE = "main";
-    private static final String PREF_NUMB = "Numbering";
+    private static final String PREF_NUMB = "numbering";
 
     @Override
     protected void onCreate( Bundle savedInstanceState )
     {
         super.onCreate( savedInstanceState );
         setContentView( R.layout.activity_main );
+
+        //ReviewManager manager = ReviewManagerFactory.create(this);
 
         toolbar = findViewById( R.id.toolbar );
         toolbar.setTitle( R.string.easy3_header );
@@ -426,6 +439,11 @@ public class MainActivity extends AppCompatActivity
                                     Draw();
                                 } )
                         /*
+                        new PrimaryDrawerItem()
+                                .withName( "Оценить приложение" )
+                                .withIdentifier( REVIEW_ID )
+                         */
+                        /*
                         new ExpandableDrawerItem()
                                 .withName( "Язык" )
                                 .withSelectable( false )
@@ -499,6 +517,20 @@ public class MainActivity extends AppCompatActivity
                         case CP_ID:      mode = picMode = "cp"; break;
                         case EP_ID:      mode = picMode = "ep"; break;
 
+                        /*
+                        case REVIEW_ID:
+                            Task<ReviewInfo> request = manager.requestReviewFlow();
+                            request.addOnCompleteListener(task -> {
+                                if (task.isSuccessful()) {
+                                    // We can get the ReviewInfo object
+                                    ReviewInfo reviewInfo = task.getResult();
+                                } else {
+                                    // There was some problem, continue regardless of the result.
+                                }
+                            });
+                         */
+
+
                         //case RU_ID: setLocale("ru");  break;
                         //case EN_ID: setLocale("en");  break;
 
@@ -511,7 +543,7 @@ public class MainActivity extends AppCompatActivity
                 })
                 .withSavedInstance( savedInstanceState );
         Drawer mDrawer = drawerBuilder.build();
-        // TODO: save method, when app stops.
+        // TODO: Открывать приложение на последнем методе.
         mDrawer.setSelection( EASY_3_ID );
     }
 
@@ -519,7 +551,7 @@ public class MainActivity extends AppCompatActivity
     void Draw()
     {
         /*
-        TODO: Help Text.
+        TODO: Текст подсказки методов
         if ( help ) {
             ExpandableTextView expTv1 = (ExpandableTextView) findViewById( R.id.expand_text_view );
             expTv1.setText( getString( R.string.help ) + getString( getResources().getIdentifier( mode + "_help", "string", getPackageName() ) ) );
@@ -577,7 +609,7 @@ public class MainActivity extends AppCompatActivity
             algText.setTextSize( textSize );
             algText.setPadding( 15, 0, 10, 0 );
 
-            // TODO: make orientation string resources in methods.
+            // TODO: Сделать переключение ориентации из строковых ресурсов
             if ( picMode.equals( "l3c" ) || picMode.equals( "eo" ) || picMode.equals( "cp" ) || picMode.equals( "ep" ) )
             {
                 image.setLayoutParams( new LinearLayout.LayoutParams( LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT) );
@@ -590,7 +622,7 @@ public class MainActivity extends AppCompatActivity
             {
                 TextView titleView = new TextView( this );
                 titleView.setText( title );
-                // TODO: use styles for text, separators and titles.
+                // TODO: Сделать стили для строк, названий и разделителей
                 titleView.setPadding( 0, 20, 0, 0 );
                 titleView.setTextSize( textSize + 4 );
                 titleView.setTextAlignment( TextView.TEXT_ALIGNMENT_CENTER );
@@ -601,7 +633,7 @@ public class MainActivity extends AppCompatActivity
                 View sep = new View( this );
                 LinearLayout.LayoutParams sepParams = new LinearLayout.LayoutParams( ViewGroup.LayoutParams.MATCH_PARENT, 1 );
                 sep.setLayoutParams( sepParams );
-                // TODO: Dark separator color.
+                // TODO: Темный цвет для разделителя
                 sep.setBackgroundColor( getColor( R.color.material_drawer_divider ) );
                 sep.setPadding( 3, 1, 1, 3 );
                 mainLayout.addView( sep );
