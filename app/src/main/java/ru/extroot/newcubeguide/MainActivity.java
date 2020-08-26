@@ -3,7 +3,9 @@ package ru.extroot.newcubeguide;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.ContextThemeWrapper;
@@ -16,9 +18,6 @@ import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
-import com.google.android.play.core.review.ReviewManager;
-import com.google.android.play.core.review.ReviewManagerFactory;
-
 import com.mikepenz.materialdrawer.Drawer;
 import com.mikepenz.materialdrawer.DrawerBuilder;
 import com.mikepenz.materialdrawer.model.ExpandableDrawerItem;
@@ -26,20 +25,13 @@ import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
 import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
 import com.mikepenz.materialdrawer.model.SwitchDrawerItem;
 
-//import java.util.Locale;
-
-//import com.google.android.play.core.tasks.Task;
-//import com.google.android.play.core.review.ReviewInfo;
-
 
 public class MainActivity extends AppCompatActivity
 {
     /*
    TODO: Переписать код на kotlin
-   TODO: Диалог для каждой формулы
-
+   TODO: Сделать переключениее языка в меню
    TODO: Сделать пожертвования
-
    3x3x3:
        F2l     - 1
        OLL     - 2
@@ -145,36 +137,28 @@ public class MainActivity extends AppCompatActivity
     private static final int ZBLL_ANTISUNE_ID = 47;
 
     private static final int NUMBER_SWITCH_ID = 101;
-    // TODO: Сделать оценку приложения из меню
-    //private static final int REVIEW_ID        = 102;
+    private static final int REVIEW_ID        = 102;
 
-    // TODO: Сделать переключениее языка в меню
-    //private static final int RU_ID            = 103;
-    //private static final int EN_ID            = 104;
-
+    private static final String APP_PNAME = "ru.extroot.newcubeguide";
+    private static final String PREFS_FILE = "main";
+    private static final String PREF_NUMB = "numbering";
 
     private Toolbar toolbar;
     private SharedPreferences.Editor prefEditor;
-    //ReviewManager manager;
-
-    private String picMode, mode;
+    Drawer mDrawer;
 
     private int picLen = 250;
     private int textSize = 16;
 
-    private Boolean help;
+    private String picMode, mode;
     private Boolean numbering = false;
 
-    private static final String PREFS_FILE = "main";
-    private static final String PREF_NUMB = "numbering";
 
     @Override
     protected void onCreate( Bundle savedInstanceState )
     {
         super.onCreate( savedInstanceState );
         setContentView( R.layout.activity_main );
-
-        //ReviewManager manager = ReviewManagerFactory.create(this);
 
         toolbar = findViewById( R.id.toolbar );
         toolbar.setTitle( R.string.easy3_header );
@@ -439,30 +423,13 @@ public class MainActivity extends AppCompatActivity
                                     prefEditor.putBoolean( PREF_NUMB, numbering );
                                     prefEditor.apply();
                                     Draw();
-                                } )
-                        /*
+                                } ),
                         new PrimaryDrawerItem()
                                 .withName( "Оценить приложение" )
-                                .withIdentifier( REVIEW_ID )
-                         */
-                        /*
-                        new ExpandableDrawerItem()
-                                .withName( "Язык" )
                                 .withSelectable( false )
-                                .withSubItems(
-                                        new SecondaryDrawerItem()
-                                                .withName( "Русский" )
-                                                .withLevel( 2 )
-                                                .withIdentifier( RU_ID ),
-                                        new SecondaryDrawerItem()
-                                                .withName( "English" )
-                                                .withLevel( 2 )
-                                                .withIdentifier( EN_ID )
-                                )
-                         */
+                                .withIdentifier( REVIEW_ID )
                 ).withOnDrawerItemClickListener((view, position, drawerItem) ->
                 {
-                    help = false;
                     switch ( (int) drawerItem.getIdentifier() ) {
                         case EASY_3_ID:  mode = picMode = "easy3"; break;
 
@@ -477,13 +444,13 @@ public class MainActivity extends AppCompatActivity
                         case COLL_ID:    mode = picMode = "coll";   break;
                         case OPF2L_ID:   mode = picMode = "op";     break;
                         case VHF2L_ID:   mode = picMode = "vh";     break;
-                        case WV_ID:      mode = picMode = "wv";     help = true; break;
+                        case WV_ID:      mode = picMode = "wv";     break;
                         case SV_ID:      mode = picMode = "sv";     break;
                         case MW_ID:      mode = picMode = "mw";     break;
                         case OLE_ID:     mode = picMode = "ole";    break;
                         case OLC_ID:     mode = picMode = "olc";    break;
                         case VLS_ID:     mode = picMode = "vls";    break;
-                        case ELL_ID:     mode = picMode = "ell";    help = true; break;
+                        case ELL_ID:     mode = picMode = "ell";    break;
                         case OELLCP_ID:  mode = picMode = "oellcp"; break;
                         case PLL_SC_ID:  mode = picMode = "pll_sc"; break;
 
@@ -519,23 +486,13 @@ public class MainActivity extends AppCompatActivity
                         case CP_ID:      mode = picMode = "cp"; break;
                         case EP_ID:      mode = picMode = "ep"; break;
 
-                        /*
                         case REVIEW_ID:
-                            Task<ReviewInfo> request = manager.requestReviewFlow();
-                            request.addOnCompleteListener(task -> {
-                                if (task.isSuccessful()) {
-                                    // We can get the ReviewInfo object
-                                    ReviewInfo reviewInfo = task.getResult();
-                                } else {
-                                    // There was some problem, continue regardless of the result.
-                                }
-                            });
-                         */
-
-
-                        //case RU_ID: setLocale("ru");  break;
-                        //case EN_ID: setLocale("en");  break;
-
+                            try {
+                                startActivity( new Intent( Intent.ACTION_VIEW, Uri.parse( "market://details?id=" + APP_PNAME ) ) );
+                            } catch ( Exception e ) {
+                                e.printStackTrace();
+                            }
+                            return false;
 
                         default: return true;
                     }
@@ -544,7 +501,7 @@ public class MainActivity extends AppCompatActivity
                     return false;
                 })
                 .withSavedInstance( savedInstanceState );
-        Drawer mDrawer = drawerBuilder.build();
+        mDrawer = drawerBuilder.build();
         // TODO: Открывать приложение на последнем методе.
         mDrawer.setSelection( EASY_3_ID );
     }
@@ -560,15 +517,12 @@ public class MainActivity extends AppCompatActivity
         }
          */
 
-
-
         LinearLayout mainLayout = findViewById( R.id.main_view );
         mainLayout.removeAllViews();
-        mainLayout.setPadding( 0, 5, 0, 40 );
 
         ScrollView scrollview = findViewById( R.id.main_scroll );
         scrollview.scrollTo( 0,0 );
-        if ( mode.equals("easy3") )
+        if ( mode.equals( "easy3" ) )
         {
             LayoutInflater inflater = (LayoutInflater) this.getSystemService( LAYOUT_INFLATER_SERVICE );
             View childLayout = inflater.inflate( R.layout.easy3, findViewById( R.id.easy3 ));
@@ -645,14 +599,4 @@ public class MainActivity extends AppCompatActivity
             mainLayout.addView( line );
         }
     }
-
-    /*
-    public void setLocale(String languageToLoad) {
-        Locale locale = new Locale(languageToLoad);
-        Locale.setDefault(locale);
-        Configuration config = new Configuration();
-        config.locale = locale;
-        getBaseContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
-    }
-     */
 }

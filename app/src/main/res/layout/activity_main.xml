@@ -27,41 +27,13 @@
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         android:id="@+id/main_scroll">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:orientation="vertical"
-            android:layout_height="wrap_content">
-            <!--
-            <com.ms.square.android.expandabletextview.ExpandableTextView xmlns:expandableTextView="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/expand_text_view"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginStart="10dp"
-                expandableTextView:maxCollapsedLines="1"
-                expandableTextView:animDuration="200">
-                <TextView
-                    android:id="@id/expandable_text"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:textSize="20sp" />
-                <ImageButton
-                    android:id="@id/expand_collapse"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="16dp"
-                    android:layout_gravity="right|bottom"
-                    android:background="@android:color/transparent"/>
-            </com.ms.square.android.expandabletextview.ExpandableTextView>
-            -->
             <LinearLayout
                 android:id="@+id/main_view"
                 android:layout_width="match_parent"
+                android:paddingTop="5dp"
+                android:paddingBottom="40dp"
                 android:layout_height="wrap_content"
                 android:orientation="vertical" />
-        </LinearLayout>
     </ScrollView>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
