@@ -56,4 +56,5 @@
     <string name="ep_header">EP – Перестановка ребер</string>
 
     <string name="number_switch">Нумерация формул</string>
+    <string name="review_btn">Оценить приложение</string>
 </resources>

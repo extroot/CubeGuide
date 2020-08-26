@@ -1,8 +1,5 @@
 <resources>
     <string name="app_name">Cube Guide</string>
-
-    <string name="help" translatable="false">What is it?\n</string>
-
     <string name="easy3_header">3x3x3 – Beginners’ Method</string>
 
     <string name="header_3x3x3">3x3x3 – CFOP method</string>
@@ -74,5 +71,6 @@
     <string name="ep_header">EP – Edges Permutation</string>
 
     <string name="number_switch">Algs numbering</string>
+    <string name="review_btn">Rate this app</string>
 
 </resources>

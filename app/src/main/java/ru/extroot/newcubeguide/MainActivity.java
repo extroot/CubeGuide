@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity
    TODO: Переписать код на kotlin
    TODO: Сделать переключениее языка в меню
    TODO: Сделать пожертвования
+   TODO: Описания методов
    3x3x3:
        F2l     - 1
        OLL     - 2
@@ -425,7 +426,7 @@ public class MainActivity extends AppCompatActivity
                                     Draw();
                                 } ),
                         new PrimaryDrawerItem()
-                                .withName( "Оценить приложение" )
+                                .withName( R.string.review_btn )
                                 .withSelectable( false )
                                 .withIdentifier( REVIEW_ID )
                 ).withOnDrawerItemClickListener((view, position, drawerItem) ->
@@ -509,13 +510,6 @@ public class MainActivity extends AppCompatActivity
 
     void Draw()
     {
-        /*
-        TODO: Текст подсказки методов
-        if ( help ) {
-            ExpandableTextView expTv1 = (ExpandableTextView) findViewById( R.id.expand_text_view );
-            expTv1.setText( getString( R.string.help ) + getString( getResources().getIdentifier( mode + "_help", "string", getPackageName() ) ) );
-        }
-         */
 
         LinearLayout mainLayout = findViewById( R.id.main_view );
         mainLayout.removeAllViews();
