@@ -29,17 +29,11 @@ import com.mikepenz.materialdrawer.model.SwitchDrawerItem;
 public class MainActivity extends AppCompatActivity
 {
     /*
-   TODO: Переписать код на kotlin
-   TODO: Сделать переключениее языка в меню
-   TODO: Сделать пожертвования
-   TODO: Описания методов
    3x3x3:
        F2l     - 1
        OLL     - 2
        PLL     - 3
-       TODO: Expert F2L
    3x3x3 EASY  - 22
-   TODO: 4x4x4, 5x5x5, 2x2x2, Фридрих для начинающих
    3x3x3 OH:
        OH_OLL  - 7
        OH_PLL  - 8
@@ -68,14 +62,12 @@ public class MainActivity extends AppCompatActivity
            ZBLL_SUNE     - 46
            ZBLL_ANTISUNE - 47
    3x3x3 UZ    - 40
-   TODO: Узоры для 2x2x2, 4x4x4, 5x5x5
    2x2x2:
        CLL     - 9
        Ortega  - 23
        EG1     - 15
        EG2     - 16
        LEG1    - 17
-       TODO: TCLL-
        TCLL+   - 24
    4x4x4 POLL  - 25
    5x5x5:
@@ -503,7 +495,6 @@ public class MainActivity extends AppCompatActivity
                 })
                 .withSavedInstance( savedInstanceState );
         mDrawer = drawerBuilder.build();
-        // TODO: Открывать приложение на последнем методе.
         mDrawer.setSelection( EASY_3_ID );
     }
 
@@ -559,7 +550,6 @@ public class MainActivity extends AppCompatActivity
             algText.setTextSize( textSize );
             algText.setPadding( 15, 0, 10, 0 );
 
-            // TODO: Сделать переключение ориентации из строковых ресурсов
             if ( picMode.equals( "l3c" ) || picMode.equals( "eo" ) || picMode.equals( "cp" ) || picMode.equals( "ep" ) )
             {
                 image.setLayoutParams( new LinearLayout.LayoutParams( LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT) );
@@ -572,7 +562,6 @@ public class MainActivity extends AppCompatActivity
             {
                 TextView titleView = new TextView( this );
                 titleView.setText( title );
-                // TODO: Сделать стили для строк, названий и разделителей
                 titleView.setPadding( 0, 20, 0, 0 );
                 titleView.setTextSize( textSize + 4 );
                 titleView.setTextAlignment( TextView.TEXT_ALIGNMENT_CENTER );
@@ -583,7 +572,6 @@ public class MainActivity extends AppCompatActivity
                 View sep = new View( this );
                 LinearLayout.LayoutParams sepParams = new LinearLayout.LayoutParams( ViewGroup.LayoutParams.MATCH_PARENT, 1 );
                 sep.setLayoutParams( sepParams );
-                // TODO: Темный цвет для разделителя
                 sep.setBackgroundColor( getColor( R.color.material_drawer_divider ) );
                 sep.setPadding( 3, 1, 1, 3 );
                 mainLayout.addView( sep );
