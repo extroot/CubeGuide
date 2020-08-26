@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity
 {
     /*
    TODO: Переписать код на kotlin
+   TODO: Диалог для каждой формулы
 
    TODO: Сделать пожертвования
 
@@ -148,8 +149,9 @@ public class MainActivity extends AppCompatActivity
     //private static final int REVIEW_ID        = 102;
 
     // TODO: Сделать переключениее языка в меню
-    //private static final int RU_ID = 201;
-    //private static final int EN_ID = 202;
+    //private static final int RU_ID            = 103;
+    //private static final int EN_ID            = 104;
+
 
     private Toolbar toolbar;
     private SharedPreferences.Editor prefEditor;
