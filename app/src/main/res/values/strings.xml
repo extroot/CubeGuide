@@ -49,7 +49,7 @@
     <string name="eg1__header" translatable="false">EG1 – CLL and direct swap on the bottom</string>
     <string name="eg2__header" translatable="false">EG2 – CLL and diagonal swap on the bottom</string>
     <string name="leg1__header" translatable="false">LEG1 – Left EG1</string>
-    <string name="tcllp_header">TCLL+ – Twisty CLL (Угол справа)</string>
+    <string name="tcllp_header">TCLL+ – Twisty CLL (Right corner)</string>
 
     <string name="poll_header">4x4x4 POLL – Parity OLL</string>
 

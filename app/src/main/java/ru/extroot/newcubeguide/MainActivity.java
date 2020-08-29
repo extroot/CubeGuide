@@ -501,12 +501,14 @@ public class MainActivity extends AppCompatActivity
 
     void Draw()
     {
+        int offset = 0;
 
         LinearLayout mainLayout = findViewById( R.id.main_view );
         mainLayout.removeAllViews();
 
         ScrollView scrollview = findViewById( R.id.main_scroll );
         scrollview.scrollTo( 0,0 );
+
         if ( mode.equals( "easy3" ) )
         {
             LayoutInflater inflater = (LayoutInflater) this.getSystemService( LAYOUT_INFLATER_SERVICE );
@@ -515,9 +517,6 @@ public class MainActivity extends AppCompatActivity
             return;
         }
 
-        int offset = 0;
-
-        System.out.println( numbering );
         for ( int i = 0; i < Integer.parseInt( getString( getResources().getIdentifier( mode + "_count", "string", getPackageName() ) ) ); i++ )
         {
             ImageView image = new ImageView( this );
@@ -527,7 +526,6 @@ public class MainActivity extends AppCompatActivity
             LinearLayout line = new LinearLayout( new ContextThemeWrapper( this, R.style.line ) );
 
             String alg = getString( getResources().getIdentifier( mode + i, "string", getPackageName() ) );
-
             if ( alg.equals( "" ) )
             {
                 offset++;
@@ -535,13 +533,13 @@ public class MainActivity extends AppCompatActivity
             }
 
             if ( numbering ) {
-                TextView numberText = new TextView(this);
-                numberText.setText(String.valueOf(i + 1 - offset));
-                numberText.setPadding(0, 0, 10, 0);
-                numberText.setGravity(Gravity.CENTER_VERTICAL);
-                numberText.setTextSize(textSize);
+                TextView numberText = new TextView(this );
+                numberText.setText( String.valueOf( i + 1 - offset ) );
+                numberText.setPadding( 0, 0, 10, 0 );
+                numberText.setGravity( Gravity.CENTER_VERTICAL );
+                numberText.setTextSize( textSize );
 
-                line.addView(numberText);
+                line.addView( numberText );
             }
 
             TextView algText = new TextView( this );
@@ -553,10 +551,13 @@ public class MainActivity extends AppCompatActivity
             if ( picMode.equals( "l3c" ) || picMode.equals( "eo" ) || picMode.equals( "cp" ) || picMode.equals( "ep" ) )
             {
                 image.setLayoutParams( new LinearLayout.LayoutParams( LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT) );
+
                 line.setOrientation( LinearLayout.VERTICAL );
                 line.setGravity( Gravity.CENTER_HORIZONTAL );
+
                 algText.setGravity( Gravity.CENTER_HORIZONTAL );
             }
+
             String title = getString( getResources().getIdentifier( picMode + i + "_title", "string", getPackageName() ) );
             if ( !title.equals( "" ) )
             {
@@ -574,8 +575,10 @@ public class MainActivity extends AppCompatActivity
                 sep.setLayoutParams( sepParams );
                 sep.setBackgroundColor( getColor( R.color.material_drawer_divider ) );
                 sep.setPadding( 3, 1, 1, 3 );
+
                 mainLayout.addView( sep );
             }
+
             line.addView( image );
             line.addView( algText );
             mainLayout.addView( line );
