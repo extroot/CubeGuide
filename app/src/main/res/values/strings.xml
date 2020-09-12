@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Cube Guide</string>
     <string name="easy3_header">3x3x3 – Beginners’ Method</string>
 
@@ -46,9 +46,9 @@
     <string name="header_2x2x2">2x2x2</string>
     <string name="ortega_header">Ortega (Varasano)</string>
     <string name="cll_header">CLL – Corners Last Layer</string>
-    <string name="eg1__header" translatable="false">EG1 – CLL and direct swap on the bottom</string>
+    <string name="eg1__header" translatable="false" tools:ignore="Typos">EG1 – CLL and direct swap on the bottom</string>
     <string name="eg2__header" translatable="false">EG2 – CLL and diagonal swap on the bottom</string>
-    <string name="leg1__header" translatable="false">LEG1 – Left EG1</string>
+    <string name="leg1__header" translatable="false" tools:ignore="Typos">LEG1 – Left EG1</string>
     <string name="tcllp_header">TCLL+ – Twisty CLL (Right corner)</string>
 
     <string name="poll_header">4x4x4 POLL – Parity OLL</string>

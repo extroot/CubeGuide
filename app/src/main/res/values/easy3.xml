@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="easy3_p1_1">Preparatory stage</string>
-    <string name="easy3_p2_1">Cube’s design</string>
+    <string name="easy3_p2_1">Cube\'s design</string>
 
     <string name="easy3_1_1"><b>Center pieces</b> (6 pcs.) Centers never change their position in relation to each other and always stay in the same place. Therefore, the following pattern can be observed: the center piece colors are always opposite each other - white is opposite yellow, blue is opposite green, and orange is opposite red. Hence, the color of the center determines the color of the face (blue center means that the face has to be blue, etc.).</string>
     <string name="easy3_1_2"><b>Edge pieces</b> (12 pcs.) The edges have two stickers of different colors and form a kind of cross when they are in the right place. These two stickers cannot be separated.</string>
@@ -9,7 +9,7 @@
 
     <string name="easy3_p2_2">Sides</string>
 
-    <string name="easy3_2_1"><b>Sides of the Rubik\’s Cube</b> are 9 elements that can be rotated simultaneously.\n\nAlgorithms will help us to solve the Cube. A letter followed by an apostrophe, or \"prime\" as it is called by the speedcubers, indicates a counterclockwise turn. To avoid confusion, imagine that you are looking at the rotating side.\n\nFor example, <b>R</b> means that you should turn the right side clockwise, while <b>R\'</b> denotes a counterclockwise rotation.</string>
+    <string name="easy3_2_1"><b>Sides of the Rubik\'s Cube</b> are 9 elements that can be rotated simultaneously.\n\nAlgorithms will help us to solve the Cube. A letter followed by an apostrophe, or \"prime\" as it is called by the speedcubers, indicates a counterclockwise turn. To avoid confusion, imagine that you are looking at the rotating side.\n\nFor example, <b>R</b> means that you should turn the right side clockwise, while <b>R\'</b> denotes a counterclockwise rotation.</string>
 
     <string name="easy3_2_r">Right side\nMove <b>R</b></string>
     <string name="easy3_2_nr">Right side\nMove <b>R\'</b></string>
@@ -41,7 +41,7 @@
     <string name="easy3_sv_3_1">2. Do <b>U R</b></string>
 
 
-    <string name="easy3_sv_4_h">We are done with the middle layer. Let’s proceed with the bottom one.</string>
+    <string name="easy3_sv_4_h">We are done with the middle layer. Let\'s proceed with the bottom one.</string>
     <string name="easy3_sv_4">3. If the white sticker on piece that we need faces down, simply move it up using two R moves, which are referred to as R2 in the formulas.</string>
     <string name="easy3_sv_4_1">3. Do <b>R2</b></string>
 
@@ -66,7 +66,7 @@
     <string name="easy3_fl_1_1"><b>Without corners</b></string>
     <string name="easy3_fl_1_2"><b>With corners</b></string>
     <string name="easy3_fl_1_3">Our next step is to solve the corners (the 3-colored pieces). As a result, our first layer should be completed.</string>
-    <string name="easy3_fl_1_4">But first, let’s learn a very simple but effective formula called PIF-PAF. It includes a sequence of 4 moves: <b>R U R\' U\'</b>, simply put, <b>up-left-down-right</b>.</string>
+    <string name="easy3_fl_1_4">But first, let\'s learn a very simple but effective formula called PIF-PAF. It includes a sequence of 4 moves: <b>R U R\' U\'</b>, simply put, <b>up-left-down-right</b>.</string>
 
     <string name="easy3_fl_2_1"><b>Pic. 1</b></string>
     <string name="easy3_fl_2_2"><b>Pic. 2</b></string>
@@ -84,7 +84,7 @@
 
     <string name="easy3_fl_6_1"><b>R U R\' U\'</b></string>
     <string name="easy3_fl_6_2">If you were unlucky and ran out of the corners with the white stickers on the top layer, you should replace the misplaced piece using the PIF-PAF once, and continue to arrange the corner pieces as you did before.</string>
-    <string name="easy_fl_h2_2">Congratulations, you’ve finished the first layer!</string>
+    <string name="easy_fl_h2_2">Congratulations, you\'ve finished the first layer!</string>
 
     <string name="easy3_sl_h1">Stage 3. The middle layer</string>
 
@@ -93,7 +93,7 @@
     <string name="easy3_sl_1_3"><b>Two layers</b></string>
 
     <string name="easy3_sl_h2_2">The edge piece goes to the right.</string>
-    <string name="easy3_sl_2_1">You should pay particular attention to the colors. For example, let’s take the edge piece colored green and red. You should move it to ensure that its red sticker is located next to the red center piece and hold the cube so that the red cubies face you (Pic. 1).</string>
+    <string name="easy3_sl_2_1">You should pay particular attention to the colors. For example, let\'s take the edge piece colored green and red. You should move it to ensure that its red sticker is located next to the red center piece and hold the cube so that the red cubies face you (Pic. 1).</string>
     <string name="easy3_sl_2_2">Do <b>U  R U R\' U\' y L\' U\' L U</b></string>
     <string name="easy3_sl_2_3">y means rotating the cube on the Y axis to the right. In this case, the green center piece should be in front of you. In other words, the formula implies: the right PIF-PAF, rotating the cube on the Y axis to the right, and the left PIF-PAF.</string>
     <string name="easy3_sl_2_4"><b>Pic. 1</b></string>
@@ -107,7 +107,7 @@
     <string name="easy3_sl_h2_4">There are no edge pieces anymore</string>
     <string name="easy3_sl_4_1">If you were unlucky and ran out of the edges on the top layer, and, as a result, failed to complete the second layer – it is not a problem! Put the wrongly assembled edge on the right (Pic. 3) and do <b>R U R\' U\' y L\' U\' L U</b></string>
     <string name="easy3_sl_4_2">In other words, it means: the right PIF-PAF, rotating the cube on the Y axis to the right (the green center piece should be in front of you), the left PIF-PAF, and after that you can arrange the edge pieces the way you did it before.</string>
-    <string name="easy3_sl_4_3">Congratulations, after you have solved the edge pieces in the second layer, the cube is 60 percent ready. Less than half of the beginners can reach this stage, so if you managed to do it, you are doing a great job and your Rubik’s Cube will be solved really soon.</string>
+    <string name="easy3_sl_4_3">Congratulations, after you have solved the edge pieces in the second layer, the cube is 60 percent ready. Less than half of the beginners can reach this stage, so if you managed to do it, you are doing a great job and your Rubik\'s Cube will be solved really soon.</string>
     <string name="easy3_sl_4_4"><b>Pic. 3</b></string>
 
     <string name="easy3_ll_h1">Stage 4. Edges of the last layer</string>
@@ -115,15 +115,15 @@
     <string name="easy3_yc_h2_1">Yellow cross</string>
 
     <string name="easy3_yc_1_1">We have nearly solved the cube. You are almost there. At this stage, you should flip the cube once again so that the yellow pieces are on the top.</string>
-    <string name="easy3_yc_1_2">Your yellow cross should undergo the following transformations:\na single dot → half a cross (nine o’clock) → a line → a cross</string>
-    <string name="easy3_yc_1_3">Maybe, the cross has already been formed on your cube as a result of the previous steps. But you can’t always be that lucky. Sometimes you may get just one lonely dot, which you will have to gradually turn into the cross.</string>
+    <string name="easy3_yc_1_2">Your yellow cross should undergo the following transformations:\na single dot → half a cross (nine o\'clock) → a line → a cross</string>
+    <string name="easy3_yc_1_3">Maybe, the cross has already been formed on your cube as a result of the previous steps. But you can\'t always be that lucky. Sometimes you may get just one lonely dot, which you will have to gradually turn into the cross.</string>
     <string name="easy3_yc_1_4"><b>Dot</b></string>
-    <string name="easy3_yc_1_5"><b>Half cross (nine o’clock)</b></string>
+    <string name="easy3_yc_1_5"><b>Half cross (nine o\'clock)</b></string>
 
     <string name="easy3_yc_2_1">Regardless of the figure that you got, do <b>F R U R\' U\' F\'</b>. Simply put, <b>F (PIF-PAF) F\'</b>.</string>
     <string name="easy3_yc_2_2">Please, note that if you got a half cross, you should hold the cube so that it resembles the clock with the hour hand pointing to the clock number nine and the minute one – to twelve. If you got the line, put it in a horizontal position before starting the algorithm.</string>
     <string name="easy3_yc_2_3">If you entered this stage with a dot, it will turn into a half cross; if you already have a half cross, it will turn into a line, and if you have a line, it will turn into a cross.</string>
-    <string name="easy3_yc_2_4"><b>Attention!</b>\nIf 1 or 3 elements are placed face up at the same time and you cannot see any of the figures that we’ve described before, your cube must have been taken apart and assembled incorrectly (it could’ve happened accidently or perhaps someone wanted to play a little joke on you). In this case, you will not manage to solve the cube following the formulas. We strongly recommend you to reassemble the cube mechanically in accordance with the colors.</string>
+    <string name="easy3_yc_2_4"><b>Attention!</b>\nIf 1 or 3 elements are placed face up at the same time and you cannot see any of the figures that we\'ve described before, your cube must have been taken apart and assembled incorrectly (it could\'ve happened accidentally or perhaps someone wanted to play a little joke on you). In this case, you will not manage to solve the cube following the formulas. We strongly recommend you to reassemble the cube mechanically in accordance with the colors.</string>
     <string name="easy3_yc_2_5"><b>Line</b></string>
     <string name="easy3_yc_2_6"><b>Cross</b></string>
 
@@ -131,7 +131,7 @@
     <string name="easy3_tyc_h2_1">The proper yellow cross</string>
 
     <string name="easy3_tyc_1_1">The cross that you will finally get may turn out to be incorrect (Pic. 1). You should make sure that all the colors of the edge pieces constituting the cross (3 layers) match the center pieces (Pic. 2).</string>
-    <string name="easy3_tyc_1_2">Attention, there can be only three scenarios:\n1. The neighboring edges coincide\n2. The opposite edges coincide\n3. You are lucky, as you’ve got the proper cross straightaway or you just need to fix the top layer.</string>
+    <string name="easy3_tyc_1_2">Attention, there can be only three scenarios:\n1. The neighboring edges coincide\n2. The opposite edges coincide\n3. You are lucky, as you\'ve got the proper cross straightaway or you just need to fix the top layer.</string>
     <string name="easy3_tyc_1_3"><b>Pic. 1</b></string>
     <string name="easy3_tyc_1_4"><b>Pic. 2</b></string>
 
@@ -145,7 +145,7 @@
 
     <string name="easy3_pcll_h1">Stage 5. Solving corners of the third layer</string>
     <string name="easy3_pcll_text1">First, check how many corners are in the correct positions: all of them, one or not a single one. If all the corners are in the right place, skip this step and move on to the next one. \n\nThe yellow stickers of the corner pieces can face any direction. The main thing is to make sure that the corner colored orange and green is located between the orange and the green center pieces, the corner colored green and red is between the green and the red centers, etc.</string>
-    <string name="easy3_pcll_text2">If none of the corner pieces is placed correctly, follow this algorithm:\n<b>R U\' L\' U R\' U\' L U</b>\n\nAfter this, you will get one properly located corner. Put it on the left and on the top (right where your left thumb is) and repeat the algorithm. If it didn’t work, put it in the bottom left position and repeat one again.\n\n<b>Attention!</b>\nIf only 2 or 3 pieces are in their due places, your cube must have been taken apart and assembled incorrectly. In this case, you will not manage to solve the cube following the formulas. Reassemble the cube mechanically in accordance with the colors.\n\nWhen all the corner pieces are in correct positions, all you have to do is just to turn them to finish solving the cube.</string>
+    <string name="easy3_pcll_text2">If none of the corner pieces is placed correctly, follow this algorithm:\n<b>R U\' L\' U R\' U\' L U</b>\n\nAfter this, you will get one properly located corner. Put it on the left and on the top (right where your left thumb is) and repeat the algorithm. If it didn\'t work, put it in the bottom left position and repeat one again.\n\n<b>Attention!</b>\nIf only 2 or 3 pieces are in their due places, your cube must have been taken apart and assembled incorrectly. In this case, you will not manage to solve the cube following the formulas. Reassemble the cube mechanically in accordance with the colors.\n\nWhen all the corner pieces are in correct positions, all you have to do is just to turn them to finish solving the cube.</string>
     <string name="easy3_pcll_1"><b>All the corners are placed incorrectly </b></string>
     <string name="easy3_pcll_2"><b>One corner is in the right place</b></string>
 
@@ -153,7 +153,7 @@
     <string name="easy3_ocll_text1">We are going to turn the corners using the PIF-PAF moves (<b>R U R\' U\'</b>). It is a simple formula that you already know very well!</string>
     <string name="easy3_ocll_text2">Once again, check that all the corners are in the right places (Pic. 1). Hold the cube so that the corners that have to be oriented are on the bottom (Pic. 2).</string>
     <string name="easy3_ocll_text3">Start with any unfinished corner and repeat PIF-PAFs until the corner is ready. (Pic. 3)\nThen twist the bottom layer, and proceed to the next corner (Pic. 4).</string>
-    <string name="easy3_ocll_text4">ontinue doing PIF-PAFS until the 2nd corner is completed (Pic. 5) and so on.\n\n<b>ATTENTION!</b> If the corner is already solved, you still need to finish the sequence of the PIF-PAF moves, and only then proceed to the next pieces.\nWhen you are done with all of the corners, the cube will be solved. Do not forget to complete the last move.\n\n<b>Warning</b>\nIt’s the step where you are most likely to make a mistake. Therefore, be careful, otherwise you will have to start solving the cube from the very beginning.</string>
+    <string name="easy3_ocll_text4">ontinue doing PIF-PAFS until the 2nd corner is completed (Pic. 5) and so on.\n\n<b>ATTENTION!</b> If the corner is already solved, you still need to finish the sequence of the PIF-PAF moves, and only then proceed to the next pieces.\nWhen you are done with all of the corners, the cube will be solved. Do not forget to complete the last move.\n\n<b>Warning</b>\nIt\'s the step where you are most likely to make a mistake. Therefore, be careful, otherwise you will have to start solving the cube from the very beginning.</string>
     <string name="easy3_ocll_1_1"><b>Pic. 1</b></string>
     <string name="easy3_ocll_1_2"><b>Pic. 2</b></string>
     <string name="easy3_ocll_2_1"><b>Pic. 3</b></string>
@@ -161,5 +161,5 @@
     <string name="easy3_ocll_3_1"><b>Pic. 5</b></string>
 
     <string name="easy_3_out_h1">Congratulations!</string>
-    <string name="easy_3_out_text">Good job! You have managed to solve your first Rubik’s Cube.\nShare it with your friends.</string>
+    <string name="easy_3_out_text">Good job! You have managed to solve your first Rubik\'s Cube.\nShare it with your friends.</string>
 </resources>
