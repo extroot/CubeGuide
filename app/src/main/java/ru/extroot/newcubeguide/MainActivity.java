@@ -138,12 +138,12 @@ public class MainActivity extends AppCompatActivity
 
     private Toolbar toolbar;
     private SharedPreferences.Editor prefEditor;
-    Drawer mDrawer;
 
     private int picLen = 250;
     private int textSize = 16;
 
-    private String picMode, mode;
+    private String picMode;
+    private String mode;
     private Boolean numbering = false;
 
 
@@ -499,12 +499,12 @@ public class MainActivity extends AppCompatActivity
                     return false;
                 })
                 .withSavedInstance( savedInstanceState );
-        mDrawer = drawerBuilder.build();
+        Drawer mDrawer = drawerBuilder.build();
         mDrawer.setSelection( EASY_3_ID );
     }
 
 
-    void draw()
+    private void draw()
     {
         int offset = 0;
 
