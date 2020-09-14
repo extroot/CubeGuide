@@ -171,8 +171,13 @@ public class MainActivity extends AppCompatActivity
 
         SharedPreferences settings = getSharedPreferences( PREFS_FILE, MODE_PRIVATE );
         prefEditor = settings.edit();
+        prefEditor.apply();
         numbering = settings.getBoolean( PREF_NUMB, false );
 
+        handleDrawer( savedInstanceState );
+    }
+
+    private void handleDrawer(Bundle savedInstanceState) {
         DrawerBuilder drawerBuilder = new DrawerBuilder()
                 .withActivity( this )
                 .withDelayOnDrawerClose( -1 )
@@ -415,13 +420,13 @@ public class MainActivity extends AppCompatActivity
                                     numbering = b;
                                     prefEditor.putBoolean( PREF_NUMB, numbering );
                                     prefEditor.apply();
-                                    Draw();
+                                    draw();
                                 } ),
                         new PrimaryDrawerItem()
                                 .withName( R.string.review_btn )
                                 .withSelectable( false )
                                 .withIdentifier( REVIEW_ID )
-                ).withOnDrawerItemClickListener((view, position, drawerItem) ->
+                ).withOnDrawerItemClickListener( ( view, position, drawerItem ) ->
                 {
                     switch ( (int) drawerItem.getIdentifier() ) {
                         case EASY_3_ID:  mode = picMode = "easy3"; break;
@@ -490,7 +495,7 @@ public class MainActivity extends AppCompatActivity
                         default: return true;
                     }
                     toolbar.setTitle( getString( getResources().getIdentifier( mode + "_header", "string", getPackageName() ) ) );
-                    Draw();
+                    draw();
                     return false;
                 })
                 .withSavedInstance( savedInstanceState );
@@ -499,7 +504,7 @@ public class MainActivity extends AppCompatActivity
     }
 
 
-    void Draw()
+    void draw()
     {
         int offset = 0;
 
