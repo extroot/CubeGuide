@@ -35,9 +35,14 @@ public class MainActivity extends AppCompatActivity
        PLL     - 3
    3x3x3 EASY  - 22
    3x3x3 OH:
-       OH_OLL  - 7
-       OH_PLL  - 8
-       OH_COLL - 14
+       Left Hand:
+           OH_OLL_LH  - 7
+           OH_PLL_LH  - 8
+           OH_COLL_LH - 14
+       Right Hand:
+           OH_OLL_RH  - 44
+           OH_PLL_RH  - 45
+           OH_COLL_RH - 46
    3x3x3 PRO:
        VHF2L   - 4
        OPF2L   - 5
@@ -91,14 +96,18 @@ public class MainActivity extends AppCompatActivity
     private static final int VHF2L_ID   = 4;
     private static final int OPF2L_ID   = 5;
     private static final int COLL_ID    = 6;
-    private static final int OH_OLL_ID  = 7;
-    private static final int OH_PLL_ID  = 8;
+
+    private static final int OH_OLL_LH_ID = 7;
+    private static final int OH_PLL_LH_ID = 8;
+
     private static final int CLL_ID     = 9;
     private static final int OLE_ID     = 10;
     private static final int OLC_ID     = 11;
     private static final int WV_ID      = 12;
     private static final int SV_ID      = 13;
-    private static final int OH_COLL_ID = 14;
+
+    private static final int OH_COLL_LH_ID = 14;
+
     private static final int EG1_ID     = 15;
     private static final int EG2_ID     = 16;
     private static final int LEG1_ID    = 17;
@@ -121,13 +130,17 @@ public class MainActivity extends AppCompatActivity
     private static final int CP_ID      = 34;
     private static final int EP_ID      = 35;
     private static final int UZ_ID      = 36;
-    private static final int ZBLL_T_ID        = 41;
-    private static final int ZBLL_U_ID        = 42;
-    private static final int ZBLL_L_ID        = 43;
-    private static final int ZBLL_H_ID        = 44;
-    private static final int ZBLL_PI_ID       = 45;
-    private static final int ZBLL_SUNE_ID     = 46;
-    private static final int ZBLL_ANTISUNE_ID = 47;
+    private static final int ZBLL_T_ID        = 37;
+    private static final int ZBLL_U_ID        = 38;
+    private static final int ZBLL_L_ID        = 39;
+    private static final int ZBLL_H_ID        = 40;
+    private static final int ZBLL_PI_ID       = 41;
+    private static final int ZBLL_SUNE_ID     = 42;
+    private static final int ZBLL_ANTISUNE_ID = 43;
+
+    private static final int OH_OLL_RH_ID = 44;
+    private static final int OH_PLL_RH_ID = 45;
+    private static final int OH_COLL_RH_ID = 46;
 
     private static final int NUMBER_SWITCH_ID = 101;
     private static final int REVIEW_ID        = 102;
@@ -207,18 +220,42 @@ public class MainActivity extends AppCompatActivity
                                 .withName( R.string.header_3x3x3_oh )
                                 .withSelectable( false )
                                 .withSubItems(
-                                        new SecondaryDrawerItem()
-                                                .withName( R.string.oh_oll_header )
+                                        new ExpandableDrawerItem()
+                                                .withName( R.string.header_3x3x3_oh_lh)
+                                                .withSelectable( false )
                                                 .withLevel( 2 )
-                                                .withIdentifier( OH_OLL_ID ),
-                                        new SecondaryDrawerItem()
-                                                .withName( R.string.oh_pll_header )
+                                                .withSubItems(
+                                                new SecondaryDrawerItem()
+                                                        .withName( R.string.oh_oll_lh_header)
+                                                        .withLevel( 3 )
+                                                        .withIdentifier(OH_OLL_LH_ID),
+                                                new SecondaryDrawerItem()
+                                                        .withName( R.string.oh_pll_lh_header)
+                                                        .withLevel( 3 )
+                                                        .withIdentifier(OH_PLL_LH_ID),
+                                                new SecondaryDrawerItem()
+                                                        .withName( R.string.oh_coll_lh_header)
+                                                        .withLevel( 3 )
+                                                        .withIdentifier(OH_COLL_LH_ID)
+                                                ),
+                                        new ExpandableDrawerItem()
+                                                .withName( R.string.header_3x3x3_oh_rh )
+                                                .withSelectable( false )
                                                 .withLevel( 2 )
-                                                .withIdentifier( OH_PLL_ID ),
-                                        new SecondaryDrawerItem()
-                                                .withName( R.string.oh_coll_header )
-                                                .withLevel( 2 )
-                                                .withIdentifier( OH_COLL_ID )
+                                                .withSubItems(
+                                                new SecondaryDrawerItem()
+                                                        .withName( R.string.oh_oll_lh_header)
+                                                        .withLevel( 3 )
+                                                        .withIdentifier(OH_OLL_RH_ID),
+                                                new SecondaryDrawerItem()
+                                                        .withName( R.string.oh_pll_lh_header)
+                                                        .withLevel( 3 )
+                                                        .withIdentifier(OH_PLL_RH_ID),
+                                                new SecondaryDrawerItem()
+                                                        .withName( R.string.oh_coll_lh_header)
+                                                        .withLevel( 3 )
+                                                        .withIdentifier(OH_COLL_RH_ID)
+                                                )
                                 ),
                         new ExpandableDrawerItem()
                                 .withName( R.string.header_3x3x3_pro )
@@ -435,9 +472,13 @@ public class MainActivity extends AppCompatActivity
                         case OLL_ID:     mode = picMode = "oll"; break;
                         case PLL_ID:     mode = picMode = "pll"; break;
 
-                        case OH_OLL_ID:  mode = "oh_oll";  picMode = "oll";  break;
-                        case OH_PLL_ID:  mode = "oh_pll";  picMode = "pll";  break;
-                        case OH_COLL_ID: mode = "oh_coll"; picMode = "coll"; break;
+                        case OH_OLL_LH_ID:  mode = "oh_oll_lh";  picMode = "oll";  break;
+                        case OH_PLL_LH_ID:  mode = "oh_pll_lh";  picMode = "pll";  break;
+                        case OH_COLL_LH_ID: mode = "oh_coll_lh"; picMode = "coll"; break;
+
+                        case OH_OLL_RH_ID:  mode = "oh_oll_rh";  picMode = "oll";  break;
+                        case OH_PLL_RH_ID:  mode = "oh_pll_rh";  picMode = "pll";  break;
+                        case OH_COLL_RH_ID: mode = "oh_coll_rh"; picMode = "coll"; break;
 
                         case COLL_ID:    mode = picMode = "coll";   break;
                         case OPF2L_ID:   mode = picMode = "op";     break;

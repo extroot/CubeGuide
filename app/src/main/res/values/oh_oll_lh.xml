@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="oh_oll_lh_count" translatable="false">"58"</string>
+
+    <string name="oh_oll_lh0" translatable="false">"R' U' R U' R' U2 R2 U R' U R U2 R'
+y2 R U R' U R U2 R2 U' R U' R' U2 R"</string>
+    <string name="oh_oll_lh1" translatable="false">"y' R U R' U R U2 R' U' R U2 R' U' R U' R'
+y' Rw U R' U' L' U R U'"</string>
+    <string name="oh_oll_lh2" translatable="false">"R U2 R' U' R U R' U' R U R' U' R U' R'
+y2 R U R' U R U2 R' U R' U' R U' R' U2 R"</string>
+    <string name="oh_oll_lh3" translatable="false" />
+    <string name="oh_oll_lh4" translatable="false">"R' U' R U' R' U R U' R' U2 R
+y/y' R U2 R' U' R U R' U' R U' R'"</string>
+    <string name="oh_oll_lh5" translatable="false">"R' U' R U' R' U2 R U R' U' R U' R' U2 R
+R U2 R2 U' R2 U' R2 U2 R
+R' U2 R2 U R2 U R2 U2 R'"</string>
+    <string name="oh_oll_lh6" translatable="false">"R U R' U R U2 R'
+y' R' U2 R U R' U R"</string>
+    <string name="oh_oll_lh7" translatable="false">"y' R U2 R' U' R U' R'
+y2 R' U' R U' R' U2 R"</string>
+    <string name="oh_oll_lh8" translatable="false">"Rw' U' R U' R' U2 Rw U Rw U2 R' U' R U' Rw'"</string>
+    <string name="oh_oll_lh9" translatable="false">"Rw U2 R' U' R U' Rw' U' Rw U2 R' U' R U' Rw'
+Rw' U' Rw R' U' R U' R' U R U2 Rw' U Rw
+F R U Rw' U' R U R2 Rw y' U' R'"</string>
+    <string name="oh_oll_lh10" translatable="false">"Rw' R2 U R' U Rw U2 Rw' U Rw R'"</string>
+    <string name="oh_oll_lh11" translatable="false">"R Rw' U' Rw U2 Rw' U' R U' R2 Rw"</string>
+    <string name="oh_oll_lh12" translatable="false">"Rw' U2 R U R' U Rw2 U2 R' U' R U' Rw'"</string>
+    <string name="oh_oll_lh13" translatable="false">"Rw U R' U R U2 Rw2 U' R U' R' U2 Rw
+y2 Rw' U' R U' R' U2 Rw2 U R' U R U2 Rw'"</string>
+    <string name="oh_oll_lh14" translatable="false">"x' R U' R' U z x U2 R y U' R U' R' F'
+y2 Rw U R' U R U2 Rw' U2 Rw U2 R' U' R U' Rw'"</string>
+    <string name="oh_oll_lh15" translatable="false">"Rw' R U R U R' U' Rw2' R2 U R U' Rw'"</string>
+    <string name="oh_oll_lh16" translatable="false">"R U R' U' Rw R' U R U' Rw'
+R' U' R U Rw' R U' R' U Rw"</string>
+    <string name="oh_oll_lh17" translatable="false">"Rw U R' U' Rw' R U R U' R'
+y' Rw' U' R U Rw R' U' R' U R
+y2 x' R U' R U2 L' U L U2 R2 x"</string>
+    <string name="oh_oll_lh18" translatable="false">"F U R U' R' U R U' R' F'"</string>
+    <string name="oh_oll_lh19" translatable="false">"F R U R' U y' R' U' R U' R'
+y R U R' U R y U' R U' R' F'
+y' z U R U' R U x' z' U' R U' R' F'"</string>
+    <string name="oh_oll_lh20" translatable="false">"Rw U Rw' U R U' R' U R U' R' Rw U' Rw'"</string>
+    <string name="oh_oll_lh21" translatable="false">"Rw U2 R' U' R2 Rw' U R' U' Rw U' Rw'
+R U2 R' U' R U' R' U' Rw' U' R U' R' U2 Rw
+y R' U' R U' R' U2 R U Rw U2 R' U' R U' Rw'"</string>
+    <string name="oh_oll_lh22" translatable="false">"Rw U Rw' R U R' U' Rw U' Rw'
+y2 R' F R U R' U' F' R U' R' U2 R"</string>
+    <string name="oh_oll_lh23" translatable="false">"R' U' R U' R' U2 R U' Rw U2 R' U' R U' Rw'
+y2 Rw' U' Rw R' U' R U Rw' U Rw"</string>
+    <string name="oh_oll_lh24" translatable="false">"R' U' R U' Rw U R2 U R2 U2 Rw'
+y2 Rw U' Rw' U' Rw U Rw' y' R' U R
+y2 F U R U2 R' U' R U R' F'"</string>
+    <string name="oh_oll_lh25" translatable="false">"Rw' U Rw U Rw' U' Rw y R U' R'
+y2 R U R' U Rw' U' R2 U' R2 U2 Rw"</string>
+    <string name="oh_oll_lh26" translatable="false">"F R U R' U' F'"</string>
+    <string name="oh_oll_lh27" translatable="false">"R U R' U' R' F R F'"</string>
+    <string name="oh_oll_lh28" translatable="false">"R U R2 U' R' F R U R U' F'
+R U R' U' y' Rw' U' R U Rw R'"</string>
+    <string name="oh_oll_lh29" translatable="false">"y R' U' R' F R F' U R
+y R U x' R U' R' U x U' R'"</string>
+    <string name="oh_oll_lh30" translatable="false">"R' F R U R' U' F' U R
+y2 F R U R' U' F' R U R' U R U2 R'"</string>
+    <string name="oh_oll_lh31" translatable="false">"R U2 R' U' R U' R' F U R U' R' F'
+y2 R U R' F' U' F U R U2 R'"</string>
+    <string name="oh_oll_lh32" translatable="false">"y R U R' F' U2 F R U R' U' R U' R'
+y' F R U R' U' R U R' U' F'"</string>
+    <string name="oh_oll_lh33" translatable="false">"F' z U' R' U R U' R' U R F' z'
+F R U' R' F' z U' R' U R U' R U"</string>
+    <string name="oh_oll_lh34" translatable="false">"Rw U R' U R U' R' U R U2 Rw'
+y' Rw U2 R' U' R U R' U' R U' Rw'"</string>
+    <string name="oh_oll_lh35" translatable="false">"y Rw' U' R U' R' U R U' R' U2 Rw
+y' F R U R' U' R U' R' U R U R' F'
+y2 Rw' U2 R U R' U' R U R' U Rw"</string>
+    <string name="oh_oll_lh36" translatable="false">"Rw U' Rw2 U Rw2 U Rw2 U' Rw
+R U2 R' Rw' U' R2 U' R2 U2 Rw
+y R' U2 R U R' U R F R U R' U' F'"</string>
+    <string name="oh_oll_lh37" translatable="false">"R U2 R' U' R U' R' F R U R' U' F'
+y Rw' U Rw2 U' Rw2 U' Rw2 U Rw'
+y Rw' U2 R2 U R2 U Rw R U2 R'"</string>
+    <string name="oh_oll_lh38" translatable="false">"Rw U2 R' U' R U' Rw'"</string>
+    <string name="oh_oll_lh39" translatable="false">"y2 Rw' U2 R U R' U Rw"</string>
+    <string name="oh_oll_lh40" translatable="false">"Rw U R' U R U' R' U' Rw' R U R U' R'
+y' Rw R2 U2 R U R' U R U R Rw'
+y2 R U R' U R' F R F' R U2 R'"</string>
+    <string name="oh_oll_lh41" translatable="false">"R U R' U' R' F R2 U R' U' F'
+R' U' R y Rw U' Rw' U Rw U Rw'
+y' Rw' R2 U2 R' U' R U' R' U' Rw R'"</string>
+    <string name="oh_oll_lh42" translatable="false">"Rw U R' U R U2 Rw'"</string>
+    <string name="oh_oll_lh43" translatable="false">"y2 Rw' U' R U' R' U2 Rw"</string>
+    <string name="oh_oll_lh44" translatable="false">"y Rw R2 U' R U' R' U2 R U' Rw' R"</string>
+    <string name="oh_oll_lh45" translatable="false">"y Rw' R2 U R' U R U2 R' U Rw R'
+y2 Rw' U' R U' R' U2 Rw U' R U2 R' U' R U' R'"</string>
+    <string name="oh_oll_lh46" translatable="false">"y R' U' F' U F R
+y' R U R' F' U2 F R U' R'"</string>
+    <string name="oh_oll_lh47" translatable="false">"R U x' U' R U R' x U' R'
+y' F R U' R' U2 R U R' F'
+y2 F U R U' R' F'"</string>
+    <string name="oh_oll_lh48" translatable="false">"x' R U' R' U y' R U R U' R' U R' U' z'
+y2 R' U' F U R U' R' F' R"</string>
+    <string name="oh_oll_lh49" translatable="false">"R U2 R' U' F' U F R U' R'
+y x' U' R U R' x U' R' U' R U R' U R"</string>
+    <string name="oh_oll_lh50" translatable="false">"R U R' U R U' R' U' R' F R F'"</string>
+    <string name="oh_oll_lh51" translatable="false">"y2 R' U' R U' R' U R U x' R U' R' U x
+y2 Rw' U' R U' R' U R U L U' R' U x"</string>
+    <string name="oh_oll_lh52" translatable="false">"F U R U' R' F' U R' U2 R U R' U R
+y2 R U2 R' U' y' Rw' U Rw U' Rw' U' Rw
+y2 Rw' U Rw y R2 U R U2 R' U R U2 R' U' R"</string>
+    <string name="oh_oll_lh53" translatable="false">"F R U' R' U' R U R' F'
+y2 Rw' U Rw y R' U' R' U R"</string>
+    <string name="oh_oll_lh54" translatable="false">"R U' R' U2 R U y R U' R' U' F'
+
+y2 R U R' U R U2 R' F R U R' U' F'"</string>
+    <string name="oh_oll_lh55" translatable="false">"R' U' R U' R' U2 R F R U R' U' F'
+y R' U2 R U R' U R2 y R U R' U' F'"</string>
+    <string name="oh_oll_lh56" translatable="false">"R U R' U R U' R' U R U' y R U' R' F'
+Rw' U2 R U R' U Rw R U2 R' U' R U' R'
+y2 F U R U2 R' U' R U2 R' U' F'"</string>
+    <string name="oh_oll_lh57" translatable="false">"y R' U2 R2 U R' U' R' U2 F R F'
+y2 Rw U2 R' U' R U' Rw' R' U2 R U R' U R
+y2 F R' U' R2 U' R2 U2 R U' F'"</string>
+</resources>
