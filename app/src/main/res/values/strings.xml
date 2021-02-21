@@ -58,7 +58,9 @@
     <string name="leg1__header" translatable="false" tools:ignore="Typos">LEG1 – Left EG1</string>
     <string name="tcllp_header">TCLL+ – Twisty CLL (Right corner)</string>
 
-    <string name="poll_header">4x4x4 POLL – Parity OLL</string>
+    <string name="header_4x4x4" translatable="false">4x4x4</string>
+    <string name="easy4_header">Beginners’ Method</string>
+    <string name="poll_header">POLL – Parity OLL</string>
 
     <string name="header_5x5x5" translatable="false">5x5x5</string>
     <string name="l2c_header">L2C – Last 2 Centers</string>
