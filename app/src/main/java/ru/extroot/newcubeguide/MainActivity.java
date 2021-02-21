@@ -1,18 +1,20 @@
 package ru.extroot.newcubeguide;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
-import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.util.DisplayMetrics;
-import android.view.ContextThemeWrapper;
-import android.view.Gravity;
-import android.view.LayoutInflater;
+
 import android.view.View;
+import android.view.Gravity;
 import android.view.ViewGroup;
+import android.view.LayoutInflater;
+import android.view.ContextThemeWrapper;
+
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
@@ -20,10 +22,11 @@ import android.widget.TextView;
 
 import com.mikepenz.materialdrawer.Drawer;
 import com.mikepenz.materialdrawer.DrawerBuilder;
-import com.mikepenz.materialdrawer.model.ExpandableDrawerItem;
+import com.mikepenz.materialdrawer.model.DividerDrawerItem;
+import com.mikepenz.materialdrawer.model.SwitchDrawerItem;
 import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
 import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
-import com.mikepenz.materialdrawer.model.SwitchDrawerItem;
+import com.mikepenz.materialdrawer.model.ExpandableDrawerItem;
 
 
 public class MainActivity extends AppCompatActivity
@@ -74,7 +77,12 @@ public class MainActivity extends AppCompatActivity
        EG2     - 16
        LEG1    - 17
        TCLL+   - 24
-   4x4x4 POLL  - 25
+
+   4x4x4:
+       EASY    - 47 -- Will be added
+       POLL    - 25 -- Temporarily disabled
+   TODO: 4x4x4
+
    5x5x5:
        L2C     - 26
        L2E     - 27
@@ -118,7 +126,7 @@ public class MainActivity extends AppCompatActivity
     private static final int EASY_3_ID  = 22;
     private static final int ORTEGA_ID  = 23;
     private static final int TCLLP_ID   = 24;
-    private static final int POLL_ID    = 25;
+    // private static final int POLL_ID    = 25;
     private static final int L2C_ID     = 26;
     private static final int L2E_ID     = 27;
     private static final int ELL_ID     = 28;
@@ -138,9 +146,11 @@ public class MainActivity extends AppCompatActivity
     private static final int ZBLL_SUNE_ID     = 42;
     private static final int ZBLL_ANTISUNE_ID = 43;
 
-    private static final int OH_OLL_RH_ID = 44;
-    private static final int OH_PLL_RH_ID = 45;
+    private static final int OH_OLL_RH_ID  = 44;
+    private static final int OH_PLL_RH_ID  = 45;
     private static final int OH_COLL_RH_ID = 46;
+
+    // private static final int EASY_4_ID = 47;
 
     private static final int NUMBER_SWITCH_ID = 101;
     private static final int REVIEW_ID        = 102;
@@ -199,6 +209,7 @@ public class MainActivity extends AppCompatActivity
                         new PrimaryDrawerItem()
                                 .withName( R.string.easy3_header )
                                 .withIdentifier( EASY_3_ID ),
+
                         new ExpandableDrawerItem()
                                 .withName( R.string.header_3x3x3 )
                                 .withSelectable( false )
@@ -216,6 +227,7 @@ public class MainActivity extends AppCompatActivity
                                                 .withLevel( 2 )
                                                 .withIdentifier( PLL_ID )
                                 ),
+
                         new ExpandableDrawerItem()
                                 .withName( R.string.header_3x3x3_oh )
                                 .withSelectable( false )
@@ -238,6 +250,7 @@ public class MainActivity extends AppCompatActivity
                                                         .withLevel( 3 )
                                                         .withIdentifier( OH_COLL_LH_ID )
                                                 ),
+
                                         new ExpandableDrawerItem()
                                                 .withName( R.string.header_3x3x3_oh_rh )
                                                 .withSelectable( false )
@@ -257,6 +270,7 @@ public class MainActivity extends AppCompatActivity
                                                         .withIdentifier( OH_COLL_RH_ID )
                                                 )
                                 ),
+
                         new ExpandableDrawerItem()
                                 .withName( R.string.header_3x3x3_pro )
                                 .withSelectable( false )
@@ -274,7 +288,6 @@ public class MainActivity extends AppCompatActivity
                                                                 .withName( R.string.op_header )
                                                                 .withLevel( 3 )
                                                                 .withIdentifier( OPF2L_ID ),
-
                                                         new SecondaryDrawerItem()
                                                                 .withName( R.string.ole_header )
                                                                 .withLevel( 3 )
@@ -300,6 +313,7 @@ public class MainActivity extends AppCompatActivity
                                                                 .withLevel( 3 )
                                                                 .withIdentifier( MW_ID )
                                                 ),
+
                                         new ExpandableDrawerItem()
                                                 .withName( R.string.ll_header )
                                                 .withSelectable( false )
@@ -322,6 +336,7 @@ public class MainActivity extends AppCompatActivity
                                                                 .withLevel( 3 )
                                                                 .withIdentifier( PLL_SC_ID )
                                                 ),
+
                                         new ExpandableDrawerItem()
                                                 .withName( R.string.zbll_header )
                                                 .withSelectable( false )
@@ -357,9 +372,11 @@ public class MainActivity extends AppCompatActivity
                                                                 .withIdentifier( ZBLL_ANTISUNE_ID )
                                                 )
                                 ),
+
                         new PrimaryDrawerItem()
                                 .withName( R.string.uz_header )
                                 .withIdentifier( UZ_ID ),
+
                         new ExpandableDrawerItem()
                                 .withName( R.string.header_2x2x2 )
                                 .withSelectable( false )
@@ -389,9 +406,22 @@ public class MainActivity extends AppCompatActivity
                                                 .withLevel( 2 )
                                                 .withIdentifier( TCLLP_ID )
                                 ),
-                        new PrimaryDrawerItem()
-                                .withName( R.string.poll_header )
-                                .withIdentifier( POLL_ID ),
+                        /*
+                        new ExpandableDrawerItem()
+                                .withName( R.string.header_4x4x4 )
+                                .withSelectable( false )
+                                .withSubItems(
+                                        new SecondaryDrawerItem()
+                                                .withName( R.string.easy4_header )
+                                                .withLevel( 2 )
+                                                .withIdentifier(EASY_4_ID),
+                                        new SecondaryDrawerItem()
+                                                .withName( R.string.poll_header )
+                                                .withLevel( 2 )
+                                                .withIdentifier( POLL_ID )
+                                ),
+                         */
+
                         new ExpandableDrawerItem()
                                 .withName( R.string.header_5x5x5 )
                                 .withSelectable( false )
@@ -405,6 +435,7 @@ public class MainActivity extends AppCompatActivity
                                                 .withLevel( 2 )
                                                 .withIdentifier( L2E_ID )
                                 ),
+
                         new ExpandableDrawerItem()
                                 .withName( R.string.header_mg )
                                 .withSelectable( false )
@@ -418,6 +449,7 @@ public class MainActivity extends AppCompatActivity
                                                 .withLevel( 2 )
                                                 .withIdentifier( MG_PLL_ID )
                                 ),
+
                         new ExpandableDrawerItem()
                                 .withName( R.string.header_pyraminx )
                                 .withSelectable( false )
@@ -431,6 +463,7 @@ public class MainActivity extends AppCompatActivity
                                                 .withLevel( 2 )
                                                 .withIdentifier( L3E_ID )
                                 ),
+
                         new ExpandableDrawerItem()
                                 .withName( R.string.header_square1 )
                                 .withSelectable( false )
@@ -448,19 +481,27 @@ public class MainActivity extends AppCompatActivity
                                                 .withLevel( 2 )
                                                 .withIdentifier( EP_ID )
                                 ),
+
+                        new DividerDrawerItem(),
+
                         new SwitchDrawerItem()
                                 .withName( R.string.number_switch )
-                                .withChecked( numbering )
+                                .withIcon( R.drawable.ic_format_list_numbered_black_24dp )
+                                .withIconTintingEnabled( true )
                                 .withSelectable( false )
                                 .withIdentifier( NUMBER_SWITCH_ID )
+                                .withChecked( numbering )
                                 .withOnCheckedChangeListener( ( drawerItem, compoundButton, b ) -> {
                                     numbering = b;
                                     prefEditor.putBoolean( PREF_NUMB, numbering );
                                     prefEditor.apply();
                                     draw();
                                 } ),
+
                         new PrimaryDrawerItem()
                                 .withName( R.string.review_btn )
+                                .withIcon( R.drawable.ic_outline_favorite_border_24px )
+                                .withIconTintingEnabled( true )
                                 .withSelectable( false )
                                 .withIdentifier( REVIEW_ID )
                 ).withOnDrawerItemClickListener( ( view, position, drawerItem ) ->
@@ -510,7 +551,7 @@ public class MainActivity extends AppCompatActivity
                         case LEG1_ID:    mode = "leg1_"; picMode = "cll"; break;
                         case TCLLP_ID:   mode = picMode = "tcllp";        break;
 
-                        case POLL_ID:    mode = picMode = "poll"; break;
+                        // case POLL_ID:    mode = picMode = "poll";  break;
 
                         case L2C_ID:     mode = picMode = "l2c"; break;
                         case L2E_ID:     mode = picMode = "l2e"; break;
@@ -553,7 +594,7 @@ public class MainActivity extends AppCompatActivity
         mainLayout.removeAllViews();
 
         ScrollView scrollview = findViewById( R.id.main_scroll );
-        scrollview.scrollTo( 0,0 );
+        scrollview.scrollTo( 0, 0 );
 
         if ( "easy3".equals( mode ) )
         {
