@@ -6,3 +6,5 @@
 </a>
 
 CubeGuide is a material design collection of formulas for solving Rubik's cube and other puzzles.
+# I want to translate this app! 
+If you're interested in translating Twisty Timer, just go to <a href="https://crowdin.com/project/cubeguide">this page</a> and select your language. If it's not on the list, just contact me and I'll add it.
