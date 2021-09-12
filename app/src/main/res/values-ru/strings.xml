@@ -65,4 +65,6 @@
 
     <string name="number_switch">Нумерация формул</string>
     <string name="review_btn">Оценить приложение</string>
+    <string name="translate_btn">Помочь с переводом</string>
+
 </resources>

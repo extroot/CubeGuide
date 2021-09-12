@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.CubeGuide" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.CubeGuideKt" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/material_drawer_hint_text</item>
         <item name="android:textColor">@color/white</item>
@@ -27,8 +27,6 @@
         <item name="material_drawer_header_selection_subtext">@color/material_drawer_dark_header_selection_subtext</item>
         <!-- Customize your theme here. -->
 
-
+        <item name="dividerColor">@color/material_drawer_dark_divider</item>
     </style>
-
-
 </resources>

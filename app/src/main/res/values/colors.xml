@@ -47,5 +47,4 @@
     <color name="material_drawer_dark_selected_text">@color/material_drawer_primary</color>
     <color name="material_drawer_dark_header_selection_text">#FFFFFFFF</color>
     <color name="material_drawer_dark_header_selection_subtext">#B3FFFFFF</color>
-
 </resources>
