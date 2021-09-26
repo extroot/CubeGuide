@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="easy3_count" translatable="false">0</string>
+
     <string name="easy3_p1_1">Preparatory stage</string>
     <string name="easy3_p2_1">Cube\'s design</string>
 

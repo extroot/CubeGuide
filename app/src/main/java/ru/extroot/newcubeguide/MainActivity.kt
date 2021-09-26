@@ -74,6 +74,8 @@ class MainActivity : AppCompatActivity() {
     private val OH_PLL_RH_ID: Long = 45
     private val OH_COLL_RH_ID: Long = 46
 
+    private val CFOP_ABOUT_ID: Long = 47
+
     private val NUMBER_SWITCH_ID: Long = 101
     private val REVIEW_ID: Long        = 102
     private val TRANSLATE_ID: Long     = 103
@@ -92,6 +94,9 @@ class MainActivity : AppCompatActivity() {
     var textSize: Int = 16
 
     lateinit var result: Drawer
+    private lateinit var topAdView: AdView
+    private lateinit var bottomAdView: AdView
+    private lateinit var adRequest: AdRequest
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -102,16 +107,8 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
 
         MobileAds.initialize(this) {}
-        /*
-        val testDeviceIds = Arrays.asList("395B9D062C64202DCC84E20BCC69A4DD")
-        val configuration = RequestConfiguration.Builder().setTestDeviceIds(testDeviceIds).build()
-        MobileAds.setRequestConfiguration(configuration)
-         */
 
         val displaymetrics = DisplayMetrics()
-
-
-
 
         // Java function to update display metrics.
         // idk how correctly use it in kotlin, but it's working like this
@@ -125,6 +122,16 @@ class MainActivity : AppCompatActivity() {
             textSize = 14
         }
 
+        topAdView = AdView(this)
+        topAdView.adSize = AdSize.SMART_BANNER
+        topAdView.adUnitId = "ca-app-pub-9813480536729767/9546708066"
+
+        bottomAdView = AdView(this)
+        bottomAdView.adSize = AdSize.SMART_BANNER
+        bottomAdView.adUnitId = "ca-app-pub-9813480536729767/4920397105"
+
+        adRequest = AdRequest.Builder().build()
+
         val settings = getSharedPreferences(PREFS_FILE, MODE_PRIVATE)
         val prefEditor = settings.edit()
         prefEditor.apply()
@@ -137,6 +144,7 @@ class MainActivity : AppCompatActivity() {
                 PrimaryDrawerItem().withName(R.string.easy3_header).withIdentifier(EASY_3_ID),
                 ExpandableDrawerItem().withName(R.string.header_3x3x3).withSelectable(false)
                     .withSubItems(
+                        //SecondaryDrawerItem().withName(R.string.cfop_about_header).withIdentifier(CFOP_ABOUT_ID).withLevel(2),
                         SecondaryDrawerItem().withName(R.string.f2l_header).withIdentifier(F2L_ID).withLevel(2),
                         SecondaryDrawerItem().withName(R.string.oll_header).withIdentifier(OLL_ID).withLevel(2),
                         SecondaryDrawerItem().withName(R.string.pll_header).withIdentifier(PLL_ID).withLevel(2)
@@ -194,6 +202,10 @@ class MainActivity : AppCompatActivity() {
                         SecondaryDrawerItem().withName(R.string.l2c_header).withIdentifier(L2C_ID).withLevel(2),
                         SecondaryDrawerItem().withName(R.string.l2e_header).withIdentifier(L2E_ID).withLevel(2)
                     ),
+                ExpandableDrawerItem().withName(R.string.header_mg).withSelectable(false).withSubItems(
+                    SecondaryDrawerItem().withName(R.string.mg_oll_header).withIdentifier(MG_OLL_ID).withLevel(2),
+                    SecondaryDrawerItem().withName(R.string.mg_pll_header).withIdentifier(MG_PLL_ID).withLevel(2)
+                ),
                 ExpandableDrawerItem().withName(R.string.header_pyraminx).withSelectable(false).withSubItems(
                         SecondaryDrawerItem().withName(R.string.l3c_header).withIdentifier(L3C_ID).withLevel(2),
                         SecondaryDrawerItem().withName(R.string.l3e_header).withIdentifier(L3E_ID).withLevel(2)
@@ -228,6 +240,8 @@ class MainActivity : AppCompatActivity() {
 
                     when (drawerItem.identifier) {
                         EASY_3_ID -> { picMode = "easy3"; mode = picMode }
+
+                        CFOP_ABOUT_ID -> { picMode = "cfop_about"; mode = picMode }
                         F2L_ID -> { picMode = "f2l"; mode = picMode }
                         OLL_ID -> { picMode = "oll"; mode = picMode }
                         PLL_ID -> { picMode = "pll"; mode = picMode }
@@ -310,21 +324,20 @@ class MainActivity : AppCompatActivity() {
         val scrollview = findViewById<ScrollView>(R.id.main_scroll)
         scrollview.scrollTo(0, 0)
 
-        val adView = AdView(this)
-        adView.adSize = AdSize.SMART_BANNER
-        adView.adUnitId = "ca-app-pub-9813480536729767/9546708066"
-        mainLayout.addView(adView)
-        val adRequest = AdRequest.Builder().build()
-        adView.loadAd(adRequest)
+        mainLayout.addView(topAdView)
+        topAdView.loadAd(adRequest)
 
 
         if ("easy3" == mode) {
             val inflater = this.getSystemService(LAYOUT_INFLATER_SERVICE) as LayoutInflater
             val childLayout: View = inflater.inflate(R.layout.easy3, findViewById(R.id.easy3))
             mainLayout.addView(childLayout)
+        } else if ("cfop_about" == mode) {
+            val inflater = this.getSystemService(LAYOUT_INFLATER_SERVICE) as LayoutInflater
+            val childLayout: View = inflater.inflate(R.layout.cfop_about, findViewById(R.id.cfop_about))
+            mainLayout.addView(childLayout)
             return
         }
-
         for (i in 0 until getString(resources.getIdentifier(mode + "_count", "string", packageName)).toInt()) {
             val image = ImageView(this)
             image.setImageResource(resources.getIdentifier(picMode + i, "drawable", packageName))
@@ -386,5 +399,8 @@ class MainActivity : AppCompatActivity() {
             line.addView(algText)
             mainLayout.addView(line)
         }
+
+        mainLayout.addView(bottomAdView)
+        bottomAdView.loadAd(adRequest)
     }
 }
