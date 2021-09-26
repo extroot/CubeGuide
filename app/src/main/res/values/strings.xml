@@ -3,6 +3,7 @@
     <string name="easy3_header">3x3x3 – Beginners’ Method</string>
 
     <string name="header_3x3x3">3x3x3 – CFOP method</string>
+    <string name="cfop_about_header">About the method</string>
     <string name="f2l_header">F2L – First Two Layers</string>
     <string name="oll_header">OLL – Orientation of the Last Layer</string>
     <string name="pll_header">PLL – Permutation of the Last Layer</string>

@@ -5,6 +5,7 @@
     <string name="easy3_header">3x3x3 - Метод для начинающих</string>
 
     <string name="header_3x3x3">3x3x3 - Метод CFOP</string>
+    <string name="cfop_about_header">О методе</string>
     <string name="f2l_header">F2L - Первые два слоя</string>
     <string name="oll_header">OLL - Ориентация последнего слоя</string>
     <string name="pll_header">PLL - Перестановка последнего слоя</string>
