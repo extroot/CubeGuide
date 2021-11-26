@@ -10,8 +10,8 @@ android {
         applicationId "ru.extroot.newcubeguide"
         minSdk 23
         targetSdk 30
-        versionCode 24
-        versionName "1.5.3"
+        versionCode 25
+        versionName "1.5.4"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }

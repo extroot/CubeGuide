@@ -338,7 +338,10 @@ class MainActivity : AppCompatActivity() {
             mainLayout.addView(childLayout)
             return
         }
-        for (i in 0 until getString(resources.getIdentifier(mode + "_count", "string", packageName)).toInt()) {
+
+        val count = getString(resources.getIdentifier(mode + "_count", "string", packageName)).toInt()
+
+        for (i in 0 until count) {
             val image = ImageView(this)
             image.setImageResource(resources.getIdentifier(picMode + i, "drawable", packageName))
             image.layoutParams = LinearLayout.LayoutParams(picLen, picLen)
@@ -400,7 +403,9 @@ class MainActivity : AppCompatActivity() {
             mainLayout.addView(line)
         }
 
-        mainLayout.addView(bottomAdView)
-        bottomAdView.loadAd(adRequest)
+        if (count > 6 || count == 0) {
+            mainLayout.addView(bottomAdView)
+            bottomAdView.loadAd(adRequest)
+        }
     }
 }
