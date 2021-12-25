@@ -16,6 +16,8 @@ import com.mikepenz.materialdrawer.DrawerBuilder
 import com.mikepenz.materialdrawer.interfaces.OnCheckedChangeListener
 import com.mikepenz.materialdrawer.model.*
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem
+import com.mikhaellopez.ratebottomsheet.RateBottomSheet
+import com.mikhaellopez.ratebottomsheet.RateBottomSheetManager
 
 
 class MainActivity : AppCompatActivity() {
@@ -312,6 +314,14 @@ class MainActivity : AppCompatActivity() {
             })
             .build()
         result.setSelection(EASY_3_ID)
+
+        RateBottomSheetManager(this)
+            .setInstallDays(3)
+            .setLaunchTimes(8)
+            .setRemindInterval(3)
+            .monitor()
+
+        RateBottomSheet.showRateBottomSheetIfMeetsConditions(this)
     }
 
     private fun getHeader(): String {
@@ -343,7 +353,6 @@ class MainActivity : AppCompatActivity() {
         }
         return text
     }
-
 
 
     fun draw() {

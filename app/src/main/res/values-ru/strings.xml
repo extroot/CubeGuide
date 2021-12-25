@@ -68,4 +68,15 @@
     <string name="review_btn">Оценить приложение</string>
     <string name="translate_btn">Помочь с переводом</string>
 
+    <string name="rate_popup_ask_title">Нравится приложение?</string>
+    <string name="rate_popup_ask_message">Нравится ли вам использовать это приложение?</string>
+    <string name="rate_popup_ask_ok">Да</string>
+    <string name="rate_popup_ask_no">Нет</string>
+
+    <string name="rate_popup_title">Оцените приложение</string>
+    <string name="rate_popup_message">Поставьте пожалуйста оценку приложению. Это не займёт больше минуты. Спасибо за вашу поддержку!</string>
+    <string name="rate_popup_ok">Оценить сейчас</string>
+    <string name="rate_popup_later">Напомнить позже</string>
+    <string name="rate_popup_no">Нет, спасибо</string>
+
 </resources>
