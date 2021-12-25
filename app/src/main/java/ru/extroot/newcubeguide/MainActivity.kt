@@ -16,7 +16,6 @@ import com.mikepenz.materialdrawer.DrawerBuilder
 import com.mikepenz.materialdrawer.interfaces.OnCheckedChangeListener
 import com.mikepenz.materialdrawer.model.*
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem
-import java.util.*
 
 
 class MainActivity : AppCompatActivity() {
@@ -86,14 +85,14 @@ class MainActivity : AppCompatActivity() {
     private val PREFS_FILE = "main"
     private val PREF_NUMB = "numbering"
 
-    var numbering: Boolean = false
-    var mode: String = "easy3"
-    var picMode: String = "easy3"
+    private var numbering: Boolean = false
+    private var mode: String = "easy3"
+    private var picMode: String = "easy3"
 
-    var picLen: Int = 250
-    var textSize: Int = 16
+    private var picLen: Int = 250
+    private var textSize: Int = 16
 
-    lateinit var result: Drawer
+    private lateinit var result: Drawer
     private lateinit var topAdView: AdView
     private lateinit var bottomAdView: AdView
     private lateinit var adRequest: AdRequest
@@ -114,7 +113,7 @@ class MainActivity : AppCompatActivity() {
         // idk how correctly use it in kotlin, but it's working like this
         windowManager.defaultDisplay.getMetrics(displaymetrics)
 
-        if (displaymetrics.widthPixels < 700) { 
+        if (displaymetrics.widthPixels < 700) {
             picLen = 100
             textSize = 14
         } else if (displaymetrics.widthPixels < 1000) {
@@ -306,7 +305,7 @@ class MainActivity : AppCompatActivity() {
                         }
                         else -> return true
                     }
-                    toolbar.title = getString(resources.getIdentifier(mode + "_header", "string", packageName))
+                    toolbar.title = getHeader()
                     draw()
                     return false
                 }
@@ -314,6 +313,38 @@ class MainActivity : AppCompatActivity() {
             .build()
         result.setSelection(EASY_3_ID)
     }
+
+    private fun getHeader(): String {
+        return getString(resources.getIdentifier(mode + "_header", "string", packageName))
+    }
+
+    private fun getAlgCount(): Int {
+        return getString(resources.getIdentifier(mode + "_count", "string", packageName)).toInt()
+    }
+
+    private fun getAlgTitle(algNumber: Int): String? {
+        val title: String?
+        val name = picMode + algNumber.toString() + "_title"
+        title = getString(resources.getIdentifier(name, "string", packageName))
+
+        if ("" == title) {
+            return null
+        }
+        return title
+    }
+
+    private fun getAlgText(algNumber: Int): String? {
+        val text: String?
+        val name = mode + algNumber.toString()
+        text =getString(resources.getIdentifier(name, "string", packageName))
+
+        if ("" == text) {
+            return null
+        }
+        return text
+    }
+
+
 
     fun draw() {
         var offset = 0
@@ -339,7 +370,7 @@ class MainActivity : AppCompatActivity() {
             return
         }
 
-        val count = getString(resources.getIdentifier(mode + "_count", "string", packageName)).toInt()
+        val count = getAlgCount()
 
         for (i in 0 until count) {
             val image = ImageView(this)
@@ -347,9 +378,9 @@ class MainActivity : AppCompatActivity() {
             image.layoutParams = LinearLayout.LayoutParams(picLen, picLen)
 
             val line = LinearLayout(ContextThemeWrapper(this, R.style.line))
-            val alg = getString(resources.getIdentifier(mode + i, "string", packageName))
+            val alg = getAlgText(i)
 
-            if ("" == alg) {
+            if (alg == null) {
                 offset++
                 continue
             }
@@ -380,16 +411,17 @@ class MainActivity : AppCompatActivity() {
                 algText.gravity = Gravity.CENTER_HORIZONTAL
             }
 
-            val title = getString(resources.getIdentifier(picMode + i + "_title", "string", packageName))
+            val title = getAlgTitle(i)
 
-            if ("" != title) {
+            if (title != null) {
                 val titleView = TextView(this)
                 titleView.text = title
                 titleView.setPadding(0, 20, 0, 0)
                 titleView.textSize = (textSize + 4).toFloat()
                 titleView.textAlignment = TextView.TEXT_ALIGNMENT_CENTER
                 mainLayout.addView(titleView)
-            } else if (i != 0) {
+            }
+            else if (i != 0) {
                 val sep = View(this)
                 val sepParams = LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 1)
                 sep.layoutParams = sepParams
