@@ -74,8 +74,8 @@
     <string name="rate_popup_ask_no">Нет</string>
 
     <string name="rate_popup_title">Оцените приложение</string>
-    <string name="rate_popup_message">Поставьте пожалуйста оценку приложению. Это не займёт больше минуты. Спасибо за вашу поддержку!</string>
-    <string name="rate_popup_ok">Оценить сейчас</string>
+    <string name="rate_popup_message">Пожалуйста поставьте оценку приложению!\nЭто не займёт больше минуты.\nСпасибо за вашу поддержку!</string>
+    <string name="rate_popup_ok">Оценить</string>
     <string name="rate_popup_later">Напомнить позже</string>
     <string name="rate_popup_no">Нет, спасибо</string>
 

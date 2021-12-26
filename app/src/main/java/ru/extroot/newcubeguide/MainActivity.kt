@@ -1,8 +1,7 @@
 package ru.extroot.newcubeguide
 
-import android.content.Intent
+import android.content.SharedPreferences
 import android.graphics.Color
-import android.net.Uri
 import android.os.Bundle
 import android.util.DisplayMetrics
 import android.view.*
@@ -79,11 +78,9 @@ class MainActivity : AppCompatActivity() {
 
     private val NUMBER_SWITCH_ID: Long = 101
     private val REVIEW_ID: Long        = 102
-    private val TRANSLATE_ID: Long     = 103
 
     // private val EASY_4_ID: Long = 47;
 
-    private val APP_PNAME = "ru.extroot.newcubeguide"
     private val PREFS_FILE = "main"
     private val PREF_NUMB = "numbering"
 
@@ -98,12 +95,15 @@ class MainActivity : AppCompatActivity() {
     private lateinit var topAdView: AdView
     private lateinit var bottomAdView: AdView
     private lateinit var adRequest: AdRequest
+    private lateinit var toolbar: Toolbar
+
+    private lateinit var settings: SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val toolbar = findViewById<Toolbar>(R.id.toolbar)
+        toolbar = findViewById(R.id.toolbar)
         toolbar.setTitle(R.string.easy3_header)
         setSupportActionBar(toolbar)
 
@@ -133,11 +133,22 @@ class MainActivity : AppCompatActivity() {
 
         adRequest = AdRequest.Builder().build()
 
-        val settings = getSharedPreferences(PREFS_FILE, MODE_PRIVATE)
+        settings = getSharedPreferences(PREFS_FILE, MODE_PRIVATE)
         val prefEditor = settings.edit()
         prefEditor.apply()
         numbering = settings.getBoolean(PREF_NUMB, false)
 
+        handleDrawer()
+
+        RateBottomSheetManager(this)
+            .setInstallDays(3)
+            .setLaunchTimes(8)
+            .setRemindInterval(3)
+            .monitor()
+        RateBottomSheet.showRateBottomSheetIfMeetsConditions(this)
+    }
+
+    private fun handleDrawer() {
         result = DrawerBuilder()
             .withActivity(this)
             .withToolbar(toolbar)
@@ -164,58 +175,58 @@ class MainActivity : AppCompatActivity() {
                         )
                     ),
                 ExpandableDrawerItem().withName(R.string.header_3x3x3_pro).withSelectable(false).withSubItems(
-                        ExpandableDrawerItem().withName(R.string.ls_ll_header).withSelectable(false).withLevel(2).withSubItems(
-                            SecondaryDrawerItem().withName(R.string.vh_header).withIdentifier(VHF2L_ID).withLevel(3),
-                            SecondaryDrawerItem().withName(R.string.op_header).withIdentifier(OPF2L_ID).withLevel(3),
-                            SecondaryDrawerItem().withName(R.string.ole_header).withIdentifier(OLE_ID).withLevel(3),
-                            SecondaryDrawerItem().withName(R.string.olc_header).withIdentifier(OLC_ID).withLevel(3),
-                            SecondaryDrawerItem().withName(R.string.wv_header).withIdentifier(WV_ID).withLevel(3),
-                            SecondaryDrawerItem().withName(R.string.sv_header).withIdentifier(SV_ID).withLevel(3),
-                            SecondaryDrawerItem().withName(R.string.vls_header).withIdentifier(VLS_ID).withLevel(3),
-                            SecondaryDrawerItem().withName(R.string.mw_header).withIdentifier(MW_ID).withLevel(3)
-                        ),
-                        ExpandableDrawerItem().withName(R.string.ll_header).withSelectable(false).withLevel(2).withSubItems(
-                            SecondaryDrawerItem().withName(R.string.coll_header).withIdentifier(COLL_ID).withLevel(3),
-                            SecondaryDrawerItem().withName(R.string.ell_header).withIdentifier(ELL_ID).withLevel(3),
-                            SecondaryDrawerItem().withName(R.string.oellcp_header).withIdentifier(OELLCP_ID).withLevel(3),
-                            SecondaryDrawerItem().withName(R.string.pll_sc_header).withIdentifier(PLL_SC_ID).withLevel(3)
-                        ),
-                        ExpandableDrawerItem().withName(R.string.zbll_header).withSelectable(false).withLevel(2).withSubItems(
-                            SecondaryDrawerItem().withName(R.string.zbll_t_header).withIdentifier(ZBLL_T_ID).withLevel(3),
-                            SecondaryDrawerItem().withName(R.string.zbll_u_header).withIdentifier(ZBLL_U_ID).withLevel(3),
-                            SecondaryDrawerItem().withName(R.string.zbll_l_header).withIdentifier(ZBLL_L_ID).withLevel(3),
-                            SecondaryDrawerItem().withName(R.string.zbll_h_header).withIdentifier(ZBLL_H_ID).withLevel(3),
-                            SecondaryDrawerItem().withName(R.string.zbll_pi_header).withIdentifier(ZBLL_PI_ID).withLevel(3),
-                            SecondaryDrawerItem().withName(R.string.zbll_sune_header).withIdentifier(ZBLL_SUNE_ID).withLevel(3),
-                            SecondaryDrawerItem().withName(R.string.zbll_antisune_header).withIdentifier(ZBLL_ANTISUNE_ID).withLevel(3)
-                        ),
+                    ExpandableDrawerItem().withName(R.string.ls_ll_header).withSelectable(false).withLevel(2).withSubItems(
+                        SecondaryDrawerItem().withName(R.string.vh_header).withIdentifier(VHF2L_ID).withLevel(3),
+                        SecondaryDrawerItem().withName(R.string.op_header).withIdentifier(OPF2L_ID).withLevel(3),
+                        SecondaryDrawerItem().withName(R.string.ole_header).withIdentifier(OLE_ID).withLevel(3),
+                        SecondaryDrawerItem().withName(R.string.olc_header).withIdentifier(OLC_ID).withLevel(3),
+                        SecondaryDrawerItem().withName(R.string.wv_header).withIdentifier(WV_ID).withLevel(3),
+                        SecondaryDrawerItem().withName(R.string.sv_header).withIdentifier(SV_ID).withLevel(3),
+                        SecondaryDrawerItem().withName(R.string.vls_header).withIdentifier(VLS_ID).withLevel(3),
+                        SecondaryDrawerItem().withName(R.string.mw_header).withIdentifier(MW_ID).withLevel(3)
                     ),
+                    ExpandableDrawerItem().withName(R.string.ll_header).withSelectable(false).withLevel(2).withSubItems(
+                        SecondaryDrawerItem().withName(R.string.coll_header).withIdentifier(COLL_ID).withLevel(3),
+                        SecondaryDrawerItem().withName(R.string.ell_header).withIdentifier(ELL_ID).withLevel(3),
+                        SecondaryDrawerItem().withName(R.string.oellcp_header).withIdentifier(OELLCP_ID).withLevel(3),
+                        SecondaryDrawerItem().withName(R.string.pll_sc_header).withIdentifier(PLL_SC_ID).withLevel(3)
+                    ),
+                    ExpandableDrawerItem().withName(R.string.zbll_header).withSelectable(false).withLevel(2).withSubItems(
+                        SecondaryDrawerItem().withName(R.string.zbll_t_header).withIdentifier(ZBLL_T_ID).withLevel(3),
+                        SecondaryDrawerItem().withName(R.string.zbll_u_header).withIdentifier(ZBLL_U_ID).withLevel(3),
+                        SecondaryDrawerItem().withName(R.string.zbll_l_header).withIdentifier(ZBLL_L_ID).withLevel(3),
+                        SecondaryDrawerItem().withName(R.string.zbll_h_header).withIdentifier(ZBLL_H_ID).withLevel(3),
+                        SecondaryDrawerItem().withName(R.string.zbll_pi_header).withIdentifier(ZBLL_PI_ID).withLevel(3),
+                        SecondaryDrawerItem().withName(R.string.zbll_sune_header).withIdentifier(ZBLL_SUNE_ID).withLevel(3),
+                        SecondaryDrawerItem().withName(R.string.zbll_antisune_header).withIdentifier(ZBLL_ANTISUNE_ID).withLevel(3)
+                    ),
+                ),
                 PrimaryDrawerItem().withName(R.string.uz_header).withIdentifier(UZ_ID),
                 ExpandableDrawerItem().withName(R.string.header_2x2x2).withSelectable(false).withSubItems(
-                        SecondaryDrawerItem().withName(R.string.ortega_header).withIdentifier(ORTEGA_ID).withLevel(2),
-                        SecondaryDrawerItem().withName(R.string.cll_header).withIdentifier(CLL_ID).withLevel(2),
-                        SecondaryDrawerItem().withName(R.string.eg1__header).withIdentifier(EG1_ID).withLevel(2),
-                        SecondaryDrawerItem().withName(R.string.eg2__header).withIdentifier(EG2_ID).withLevel(2),
-                        SecondaryDrawerItem().withName(R.string.leg1__header).withIdentifier(LEG1_ID).withLevel(2),
-                        SecondaryDrawerItem().withName(R.string.tcllp_header).withIdentifier(TCLLP_ID).withLevel(2)
-                    ),
+                    SecondaryDrawerItem().withName(R.string.ortega_header).withIdentifier(ORTEGA_ID).withLevel(2),
+                    SecondaryDrawerItem().withName(R.string.cll_header).withIdentifier(CLL_ID).withLevel(2),
+                    SecondaryDrawerItem().withName(R.string.eg1__header).withIdentifier(EG1_ID).withLevel(2),
+                    SecondaryDrawerItem().withName(R.string.eg2__header).withIdentifier(EG2_ID).withLevel(2),
+                    SecondaryDrawerItem().withName(R.string.leg1__header).withIdentifier(LEG1_ID).withLevel(2),
+                    SecondaryDrawerItem().withName(R.string.tcllp_header).withIdentifier(TCLLP_ID).withLevel(2)
+                ),
                 ExpandableDrawerItem().withName(R.string.header_5x5x5).withSelectable(false).withSubItems(
-                        SecondaryDrawerItem().withName(R.string.l2c_header).withIdentifier(L2C_ID).withLevel(2),
-                        SecondaryDrawerItem().withName(R.string.l2e_header).withIdentifier(L2E_ID).withLevel(2)
-                    ),
+                    SecondaryDrawerItem().withName(R.string.l2c_header).withIdentifier(L2C_ID).withLevel(2),
+                    SecondaryDrawerItem().withName(R.string.l2e_header).withIdentifier(L2E_ID).withLevel(2)
+                ),
                 ExpandableDrawerItem().withName(R.string.header_mg).withSelectable(false).withSubItems(
                     SecondaryDrawerItem().withName(R.string.mg_oll_header).withIdentifier(MG_OLL_ID).withLevel(2),
                     SecondaryDrawerItem().withName(R.string.mg_pll_header).withIdentifier(MG_PLL_ID).withLevel(2)
                 ),
                 ExpandableDrawerItem().withName(R.string.header_pyraminx).withSelectable(false).withSubItems(
-                        SecondaryDrawerItem().withName(R.string.l3c_header).withIdentifier(L3C_ID).withLevel(2),
-                        SecondaryDrawerItem().withName(R.string.l3e_header).withIdentifier(L3E_ID).withLevel(2)
-                    ),
+                    SecondaryDrawerItem().withName(R.string.l3c_header).withIdentifier(L3C_ID).withLevel(2),
+                    SecondaryDrawerItem().withName(R.string.l3e_header).withIdentifier(L3E_ID).withLevel(2)
+                ),
                 ExpandableDrawerItem().withName(R.string.header_square1).withSelectable(false).withSubItems(
-                        SecondaryDrawerItem().withName(R.string.eo_header).withIdentifier(EO_ID).withLevel(2),
-                        SecondaryDrawerItem().withName(R.string.cp_header).withIdentifier(CP_ID).withLevel(2),
-                        SecondaryDrawerItem().withName(R.string.ep_header).withIdentifier(EP_ID).withLevel(2)
-                    ),
+                    SecondaryDrawerItem().withName(R.string.eo_header).withIdentifier(EO_ID).withLevel(2),
+                    SecondaryDrawerItem().withName(R.string.cp_header).withIdentifier(CP_ID).withLevel(2),
+                    SecondaryDrawerItem().withName(R.string.ep_header).withIdentifier(EP_ID).withLevel(2)
+                ),
 
                 DividerDrawerItem(),
                 SwitchDrawerItem()
@@ -226,17 +237,20 @@ class MainActivity : AppCompatActivity() {
                     .withOnCheckedChangeListener(object : OnCheckedChangeListener {
                         override fun onCheckedChanged(drawerItem: IDrawerItem<*>, buttonView: CompoundButton, isChecked: Boolean) {
                             numbering = isChecked
+                            val prefEditor = settings.edit()
                             prefEditor.putBoolean(PREF_NUMB, numbering)
                             prefEditor.apply()
                             draw()
                             // result.closeDrawer()
                         }
                     }),
-                PrimaryDrawerItem().withName(R.string.review_btn).withIcon(R.drawable.ic_outline_favorite_border_24px).withIconTintingEnabled(true).withSelectable(false).withIdentifier(REVIEW_ID),
-                //PrimaryDrawerItem().withName(R.string.translate_btn).withIcon(R.drawable.ic_outline_translate_18px).withIconTintingEnabled(true).withSelectable(false).withIdentifier(TRANSLATE_ID)
-
-            )
-            .withOnDrawerItemClickListener(object : Drawer.OnDrawerItemClickListener {
+                PrimaryDrawerItem().withName(R.string.review_btn).
+                withIcon(R.drawable.ic_outline_favorite_border_24px).
+                withIconTintingEnabled(true).
+                withSelectable(false).
+                withIdentifier(REVIEW_ID),
+                )
+            .withOnDrawerItemClickListener(object: Drawer.OnDrawerItemClickListener {
                 override fun onItemClick(view: View?, position: Int, drawerItem: IDrawerItem<*>): Boolean {
 
                     when (drawerItem.identifier) {
@@ -292,17 +306,11 @@ class MainActivity : AppCompatActivity() {
                         CP_ID ->     { picMode = "cp"; mode = picMode }
                         EP_ID ->     { picMode = "ep"; mode = picMode }
                         REVIEW_ID -> {
-                            try {
-                                startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=$APP_PNAME"))
-                                )
-                            } catch (e: Exception) { e.printStackTrace() }
-                            return false
-                        }
-                        TRANSLATE_ID -> {
-                            try {
-                                startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://crowdin.com/project/cubeguide"))
-                                )
-                            } catch (e: Exception) { e.printStackTrace() }
+                            RateBottomSheetManager(this@MainActivity)
+                                .setDebugForceOpenEnable(true) // False by default
+                            RateBottomSheet.showRateBottomSheetIfMeetsConditions(
+                                activity = this@MainActivity
+                            )
                             return false
                         }
                         else -> return true
@@ -314,14 +322,6 @@ class MainActivity : AppCompatActivity() {
             })
             .build()
         result.setSelection(EASY_3_ID)
-
-        RateBottomSheetManager(this)
-            .setInstallDays(3)
-            .setLaunchTimes(8)
-            .setRemindInterval(3)
-            .monitor()
-
-        RateBottomSheet.showRateBottomSheetIfMeetsConditions(this)
     }
 
     private fun getHeader(): String {
