@@ -1,5 +1,6 @@
 package ru.extroot.newcubeguide
 
+
 import android.content.SharedPreferences
 import android.graphics.Color
 import android.os.Bundle
@@ -17,6 +18,7 @@ import com.mikepenz.materialdrawer.model.*
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem
 import com.mikhaellopez.ratebottomsheet.RateBottomSheet
 import com.mikhaellopez.ratebottomsheet.RateBottomSheetManager
+import java.security.KeyStore
 
 
 class MainActivity : AppCompatActivity() {
@@ -148,6 +150,77 @@ class MainActivity : AppCompatActivity() {
         RateBottomSheet.showRateBottomSheetIfMeetsConditions(this)
     }
 
+    private fun getModeById(id: Long): String? {
+        return when (id) {
+            F2L_ID -> { "f2l"}
+            OLL_ID -> { "oll"}
+            PLL_ID -> { "pll"}
+
+            OH_OLL_LH_ID ->   { "oh_oll_lh" }
+            OH_PLL_LH_ID ->   { "oh_pll_lh" }
+            OH_COLL_LH_ID ->  { "oh_coll_lh" }
+            OH_OLL_RH_ID ->   { "oh_oll_rh" }
+            OH_PLL_RH_ID ->   { "oh_pll_rh" }
+            OH_COLL_RH_ID ->  { "oh_coll_rh" }
+
+            COLL_ID ->  { "coll"}
+            OPF2L_ID -> { "op"}
+            VHF2L_ID -> { "vh"}
+            WV_ID ->    { "wv"}
+            SV_ID ->    { "sv"}
+            MW_ID ->    { "mw"}
+            OLE_ID ->   { "ole"}
+            OLC_ID ->   { "olc"}
+            VLS_ID ->   { "vls"}
+            ELL_ID ->   { "ell"}
+
+            OELLCP_ID ->  { "oellcp"}
+            PLL_SC_ID ->  { "pll_sc"}
+            ZBLL_T_ID ->  { "zbll_t"}
+            ZBLL_U_ID ->  { "zbll_u"}
+            ZBLL_L_ID ->  { "zbll_l"}
+            ZBLL_H_ID ->  { "zbll_h"}
+            ZBLL_PI_ID ->        { "zbll_pi"}
+            ZBLL_SUNE_ID ->      { "zbll_sune"}
+            ZBLL_ANTISUNE_ID ->  { "zbll_antisune"}
+
+            UZ_ID ->     { "uz"}
+            CLL_ID ->    { "cll"}
+            ORTEGA_ID -> { "ortega"}
+            EG1_ID ->    { "eg1_"}
+            EG2_ID ->    { "eg2_"}
+            LEG1_ID ->   { "leg1_"}
+            TCLLP_ID ->  { "tcllp"}
+            L2C_ID ->    { "l2c"}
+            L2E_ID ->    { "l2e"}
+            MG_OLL_ID -> { "mg_oll"}
+            MG_PLL_ID -> { "mg_pll"}
+            L3C_ID ->    { "l3c"}
+            L3E_ID ->    { "l3e"}
+            EO_ID ->     { "eo"}
+            CP_ID ->     { "cp"}
+            EP_ID ->     { "ep"}
+            else -> { null }
+        }
+    }
+
+    private fun getPicModeById(id: Long): String? {
+        return when (id) {
+            OH_OLL_LH_ID ->   { "oll" }
+            OH_PLL_LH_ID ->   { "pll" }
+            OH_COLL_LH_ID ->  { "coll" }
+            OH_OLL_RH_ID ->   { "oll" }
+            OH_PLL_RH_ID ->   { "pll" }
+            OH_COLL_RH_ID ->  { "coll" }
+
+            EG1_ID ->    { "cll" }
+            EG2_ID ->    { "cll" }
+            LEG1_ID ->   { "cll" }
+
+            else -> { null }
+        }
+    }
+
     private fun handleDrawer() {
         result = DrawerBuilder()
             .withActivity(this)
@@ -156,7 +229,7 @@ class MainActivity : AppCompatActivity() {
                 PrimaryDrawerItem().withName(R.string.easy3_header).withIdentifier(EASY_3_ID),
                 ExpandableDrawerItem().withName(R.string.header_3x3x3).withSelectable(false)
                     .withSubItems(
-                        //SecondaryDrawerItem().withName(R.string.cfop_about_header).withIdentifier(CFOP_ABOUT_ID).withLevel(2),
+                        // SecondaryDrawerItem().withName(R.string.cfop_about_header).withIdentifier(CFOP_ABOUT_ID).withLevel(2),
                         SecondaryDrawerItem().withName(R.string.f2l_header).withIdentifier(F2L_ID).withLevel(2),
                         SecondaryDrawerItem().withName(R.string.oll_header).withIdentifier(OLL_ID).withLevel(2),
                         SecondaryDrawerItem().withName(R.string.pll_header).withIdentifier(PLL_ID).withLevel(2)
@@ -255,56 +328,8 @@ class MainActivity : AppCompatActivity() {
 
                     when (drawerItem.identifier) {
                         EASY_3_ID -> { picMode = "easy3"; mode = picMode }
+                        // CFOP_ABOUT_ID -> { picMode = "cfop_about"; mode = picMode }
 
-                        CFOP_ABOUT_ID -> { picMode = "cfop_about"; mode = picMode }
-                        F2L_ID -> { picMode = "f2l"; mode = picMode }
-                        OLL_ID -> { picMode = "oll"; mode = picMode }
-                        PLL_ID -> { picMode = "pll"; mode = picMode }
-
-                        OH_OLL_LH_ID ->   { mode = "oh_oll_lh"; picMode = "oll" }
-                        OH_PLL_LH_ID ->   { mode = "oh_pll_lh"; picMode = "pll" }
-                        OH_COLL_LH_ID ->  { mode = "oh_coll_lh"; picMode = "coll" }
-                        OH_OLL_RH_ID ->   { mode = "oh_oll_rh"; picMode = "oll" }
-                        OH_PLL_RH_ID ->   { mode = "oh_pll_rh"; picMode = "pll" }
-                        OH_COLL_RH_ID ->  { mode = "oh_coll_rh"; picMode = "coll" }
-
-                        COLL_ID ->  { picMode = "coll"; mode = picMode }
-                        OPF2L_ID -> { picMode = "op"; mode = picMode }
-                        VHF2L_ID -> { picMode = "vh"; mode = picMode }
-                        WV_ID ->    { picMode = "wv"; mode = picMode }
-                        SV_ID ->    { picMode = "sv"; mode = picMode }
-                        MW_ID ->    { picMode = "mw"; mode = picMode }
-                        OLE_ID ->   { picMode = "ole"; mode = picMode }
-                        OLC_ID ->   { picMode = "olc"; mode = picMode }
-                        VLS_ID ->   { picMode = "vls"; mode = picMode }
-                        ELL_ID ->   { picMode = "ell"; mode = picMode }
-
-                        OELLCP_ID ->  { picMode = "oellcp"; mode = picMode }
-                        PLL_SC_ID ->  { picMode = "pll_sc"; mode = picMode }
-                        ZBLL_T_ID ->  { picMode = "zbll_t"; mode = picMode }
-                        ZBLL_U_ID ->  { picMode = "zbll_u"; mode = picMode }
-                        ZBLL_L_ID ->  { picMode = "zbll_l"; mode = picMode }
-                        ZBLL_H_ID ->  { picMode = "zbll_h"; mode = picMode }
-                        ZBLL_PI_ID ->        { picMode = "zbll_pi"; mode = picMode }
-                        ZBLL_SUNE_ID ->      { picMode = "zbll_sune"; mode = picMode }
-                        ZBLL_ANTISUNE_ID ->  { picMode = "zbll_antisune"; mode = picMode }
-
-                        UZ_ID ->     { picMode = "uz"; mode = picMode }
-                        CLL_ID ->    { picMode = "cll"; mode = picMode }
-                        ORTEGA_ID -> { picMode = "ortega"; mode = picMode }
-                        EG1_ID ->    { mode = "eg1_"; picMode = "cll" }
-                        EG2_ID ->    { mode = "eg2_"; picMode = "cll" }
-                        LEG1_ID ->   { mode = "leg1_"; picMode = "cll" }
-                        TCLLP_ID ->  { picMode = "tcllp"; mode = picMode }
-                        L2C_ID ->    { picMode = "l2c"; mode = picMode }
-                        L2E_ID ->    { picMode = "l2e"; mode = picMode }
-                        MG_OLL_ID -> { picMode = "mg_oll"; mode = picMode }
-                        MG_PLL_ID -> { picMode = "mg_pll"; mode = picMode }
-                        L3C_ID ->    { picMode = "l3c"; mode = picMode }
-                        L3E_ID ->    { picMode = "l3e"; mode = picMode }
-                        EO_ID ->     { picMode = "eo"; mode = picMode }
-                        CP_ID ->     { picMode = "cp"; mode = picMode }
-                        EP_ID ->     { picMode = "ep"; mode = picMode }
                         REVIEW_ID -> {
                             RateBottomSheetManager(this@MainActivity)
                                 .setDebugForceOpenEnable(true) // False by default
@@ -313,7 +338,11 @@ class MainActivity : AppCompatActivity() {
                             )
                             return false
                         }
-                        else -> return true
+                        else -> {
+                            if (getModeById(drawerItem.identifier) == null) return true
+                            mode = getModeById(drawerItem.identifier)!!
+                            picMode = getPicModeById(drawerItem.identifier) ?: mode
+                        }
                     }
                     toolbar.title = getHeader()
                     draw()
@@ -326,6 +355,10 @@ class MainActivity : AppCompatActivity() {
 
     private fun getHeader(): String {
         return getString(resources.getIdentifier(mode + "_header", "string", packageName))
+    }
+
+    private fun getImageId(imageNumber: Int): Int {
+        return resources.getIdentifier(picMode + imageNumber, "drawable", packageName)
     }
 
     private fun getAlgCount(): Int {
@@ -383,16 +416,16 @@ class MainActivity : AppCompatActivity() {
 
         for (i in 0 until count) {
             val image = ImageView(this)
-            image.setImageResource(resources.getIdentifier(picMode + i, "drawable", packageName))
+            image.setImageResource(getImageId(i))
             image.layoutParams = LinearLayout.LayoutParams(picLen, picLen)
 
-            val line = LinearLayout(ContextThemeWrapper(this, R.style.line))
             val alg = getAlgText(i)
-
             if (alg == null) {
                 offset++
                 continue
             }
+
+            val line = LinearLayout(ContextThemeWrapper(this, R.style.line))
 
             if (numbering) {
                 val numberText = TextView(this)
