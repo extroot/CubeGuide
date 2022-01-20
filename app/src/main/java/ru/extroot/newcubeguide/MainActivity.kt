@@ -1,6 +1,7 @@
 package ru.extroot.newcubeguide
 
 
+import android.app.AlertDialog
 import android.content.SharedPreferences
 import android.graphics.Color
 import android.os.Bundle
@@ -8,7 +9,6 @@ import android.util.DisplayMetrics
 import android.view.*
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
 import com.google.android.gms.ads.*
 import com.google.android.material.color.MaterialColors
 import com.mikepenz.materialdrawer.Drawer
@@ -18,10 +18,10 @@ import com.mikepenz.materialdrawer.model.*
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem
 import com.mikhaellopez.ratebottomsheet.RateBottomSheet
 import com.mikhaellopez.ratebottomsheet.RateBottomSheetManager
-import java.security.KeyStore
+import ru.extroot.newcubeguide.databinding.ActivityMainBinding
 
 
-class MainActivity : AppCompatActivity() {
+class MainActivity: AppCompatActivity() {
     private val F2L_ID: Long = 1
     private val PLL_ID: Long = 2
     private val OLL_ID: Long = 3
@@ -76,17 +76,18 @@ class MainActivity : AppCompatActivity() {
     private val OH_PLL_RH_ID: Long = 45
     private val OH_COLL_RH_ID: Long = 46
 
-    private val CFOP_ABOUT_ID: Long = 47
+    // TODO: CFOP about page
+    // private val CFOP_ABOUT_ID: Long = 47
 
-    private val NUMBER_SWITCH_ID: Long = 101
-    private val REVIEW_ID: Long        = 102
+    private val COUNTING_SWITCH_ID: Long = 101
+    private val REVIEW_ID: Long          = 102
 
     // private val EASY_4_ID: Long = 47;
 
     private val PREFS_FILE = "main"
     private val PREF_NUMB = "numbering"
 
-    private var numbering: Boolean = false
+    private var isCounting: Boolean = false
     private var mode: String = "easy3"
     private var picMode: String = "easy3"
 
@@ -97,17 +98,20 @@ class MainActivity : AppCompatActivity() {
     private lateinit var topAdView: AdView
     private lateinit var bottomAdView: AdView
     private lateinit var adRequest: AdRequest
-    private lateinit var toolbar: Toolbar
 
     private lateinit var settings: SharedPreferences
 
+    private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
 
-        toolbar = findViewById(R.id.toolbar)
-        toolbar.setTitle(R.string.easy3_header)
-        setSupportActionBar(toolbar)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        val view = binding.root
+        setContentView(view)
+
+        binding.toolbar.setTitle(R.string.easy3_header)
+        setSupportActionBar(binding.toolbar)
 
         MobileAds.initialize(this) {}
 
@@ -138,7 +142,7 @@ class MainActivity : AppCompatActivity() {
         settings = getSharedPreferences(PREFS_FILE, MODE_PRIVATE)
         val prefEditor = settings.edit()
         prefEditor.apply()
-        numbering = settings.getBoolean(PREF_NUMB, false)
+        isCounting = settings.getBoolean(PREF_NUMB, false)
 
         handleDrawer()
 
@@ -224,7 +228,7 @@ class MainActivity : AppCompatActivity() {
     private fun handleDrawer() {
         result = DrawerBuilder()
             .withActivity(this)
-            .withToolbar(toolbar)
+            .withToolbar(binding.toolbar)
             .addDrawerItems(
                 PrimaryDrawerItem().withName(R.string.easy3_header).withIdentifier(EASY_3_ID),
                 ExpandableDrawerItem().withName(R.string.header_3x3x3).withSelectable(false)
@@ -306,12 +310,12 @@ class MainActivity : AppCompatActivity() {
                     .withName(R.string.number_switch)
                     .withIcon(R.drawable.ic_format_list_numbered_black_24dp)
                     .withIconTintingEnabled(true).withSelectable(false)
-                    .withIdentifier(NUMBER_SWITCH_ID).withChecked(numbering)
+                    .withIdentifier(COUNTING_SWITCH_ID).withChecked(isCounting)
                     .withOnCheckedChangeListener(object : OnCheckedChangeListener {
                         override fun onCheckedChanged(drawerItem: IDrawerItem<*>, buttonView: CompoundButton, isChecked: Boolean) {
-                            numbering = isChecked
+                            isCounting = isChecked
                             val prefEditor = settings.edit()
-                            prefEditor.putBoolean(PREF_NUMB, numbering)
+                            prefEditor.putBoolean(PREF_NUMB, isCounting)
                             prefEditor.apply()
                             draw()
                             // result.closeDrawer()
@@ -344,7 +348,8 @@ class MainActivity : AppCompatActivity() {
                             picMode = getPicModeById(drawerItem.identifier) ?: mode
                         }
                     }
-                    toolbar.title = getHeader()
+                    binding.toolbar.title = getHeader()
+                    binding.mainScroll.scrollTo(0, 0)
                     draw()
                     return false
                 }
@@ -387,37 +392,67 @@ class MainActivity : AppCompatActivity() {
         return text
     }
 
+    private fun checkVerticalMode(): Boolean {
+        return "l3c" == picMode || "eo" == picMode || "cp" == picMode || "ep" == picMode
+    }
+
+    private fun isTextMode(): Boolean {
+        return "easy3" == mode || "cfop_about" == mode
+    }
+
+    private fun addBottomAds() {
+        binding.mainView.addView(bottomAdView)
+        bottomAdView.loadAd(adRequest)
+    }
+
+    private val clickListener = View.OnClickListener {view ->
+        val formulaNumber: Int = view.tag.toString().toInt()
+        showCustomAlert(formulaNumber)
+    }
+
+    private fun showCustomAlert(formulaNumber: Int) {
+        val dialogView = layoutInflater.inflate(R.layout.dialog_formula_preview, null)
+        val customDialog = AlertDialog.Builder(this)
+            .setView(dialogView)
+            .show()
+//        val btDismiss = dialogView.findViewById<Button>(R.id.btDismissCustomDialog)
+//        btDismiss.setOnClickListener {
+//            customDialog.dismiss()
+//        }
+    }
+
 
     fun draw() {
-        var offset = 0
+        binding.mainView.removeAllViews()
 
-        val mainLayout = findViewById<LinearLayout>(R.id.main_view)
-        mainLayout.removeAllViews()
-
-        val scrollview = findViewById<ScrollView>(R.id.main_scroll)
-        scrollview.scrollTo(0, 0)
-
-        mainLayout.addView(topAdView)
+        binding.mainView.addView(topAdView)
         topAdView.loadAd(adRequest)
 
-
-        if ("easy3" == mode) {
+        if (isTextMode()) {
             val inflater = this.getSystemService(LAYOUT_INFLATER_SERVICE) as LayoutInflater
-            val childLayout: View = inflater.inflate(R.layout.easy3, findViewById(R.id.easy3))
-            mainLayout.addView(childLayout)
-        } else if ("cfop_about" == mode) {
-            val inflater = this.getSystemService(LAYOUT_INFLATER_SERVICE) as LayoutInflater
-            val childLayout: View = inflater.inflate(R.layout.cfop_about, findViewById(R.id.cfop_about))
-            mainLayout.addView(childLayout)
+            val childLayout = when (mode) {
+                "easy3" -> inflater.inflate(R.layout.easy3, findViewById(R.id.easy3), false)
+                "cfop_about" -> inflater.inflate(R.layout.cfop_about, findViewById(R.id.cfop_about), false)
+                else -> throw Exception("Invalid Mode")
+            }
+            binding.mainView.addView(childLayout)
+            addBottomAds()
             return
         }
 
-        val count = getAlgCount()
+        val imageParams = LinearLayout.LayoutParams(picLen, picLen)
+        val imageParamsVertical = LinearLayout.LayoutParams(
+            LinearLayout.LayoutParams.WRAP_CONTENT,
+            LinearLayout.LayoutParams.WRAP_CONTENT
+        )
+        val sepParams = LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 2)
 
+        val count = getAlgCount()
+        var offset = 0
         for (i in 0 until count) {
             val image = ImageView(this)
             image.setImageResource(getImageId(i))
-            image.layoutParams = LinearLayout.LayoutParams(picLen, picLen)
+            image.layoutParams = imageParams
 
             val alg = getAlgText(i)
             if (alg == null) {
@@ -425,61 +460,52 @@ class MainActivity : AppCompatActivity() {
                 continue
             }
 
-            val line = LinearLayout(ContextThemeWrapper(this, R.style.line))
-
-            if (numbering) {
-                val numberText = TextView(this)
-                numberText.text = (i + 1 - offset).toString()
-                numberText.setPadding(0, 0, 10, 0)
-                numberText.gravity = Gravity.CENTER_VERTICAL
-                numberText.textSize = textSize.toFloat()
-                line.addView(numberText)
-            }
-
-            val algText = TextView(this)
-            algText.text = alg
-            algText.gravity = Gravity.CENTER_VERTICAL
-            algText.textSize = textSize.toFloat()
-            algText.setPadding(15, 0, 10, 0)
-
-            if ("l3c" == picMode || "eo" == picMode || "cp" == picMode || "ep" == picMode) {
-                image.layoutParams =
-                    LinearLayout.LayoutParams(
-                        LinearLayout.LayoutParams.WRAP_CONTENT,
-                        LinearLayout.LayoutParams.WRAP_CONTENT
-                    )
-                line.orientation = LinearLayout.VERTICAL
-                line.gravity = Gravity.CENTER_HORIZONTAL
-                algText.gravity = Gravity.CENTER_HORIZONTAL
-            }
-
             val title = getAlgTitle(i)
 
             if (title != null) {
-                val titleView = TextView(this)
+                val titleView = TextView(ContextThemeWrapper(this, R.style.title))
                 titleView.text = title
-                titleView.setPadding(0, 20, 0, 0)
                 titleView.textSize = (textSize + 4).toFloat()
-                titleView.textAlignment = TextView.TEXT_ALIGNMENT_CENTER
-                mainLayout.addView(titleView)
+                binding.mainView.addView(titleView)
             }
             else if (i != 0) {
                 val sep = View(this)
-                val sepParams = LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 1)
                 sep.layoutParams = sepParams
-                // sep.setBackgroundColor(getColor(R.color.material_drawer_divider))
                 sep.setBackgroundColor(MaterialColors.getColor(this, R.attr.dividerColor, Color.BLACK))
                 sep.setPadding(3, 1, 1, 3)
-                mainLayout.addView(sep)
+                binding.mainView.addView(sep)
             }
+
+            val algText = TextView(ContextThemeWrapper(this, R.style.formulaText))
+            algText.text = alg
+            algText.textSize = textSize.toFloat()
+
+            val line = if (checkVerticalMode()) {
+                algText.gravity = Gravity.CENTER_HORIZONTAL
+                image.layoutParams = imageParamsVertical
+                LinearLayout(ContextThemeWrapper(this, R.style.lineVertical))
+            } else {
+                LinearLayout(ContextThemeWrapper(this, R.style.line))
+            }
+
+            if (isCounting) {
+                val countingText = TextView(ContextThemeWrapper(this, R.style.countingText))
+                countingText.text = (i + 1 - offset).toString()
+                countingText.textSize = textSize.toFloat()
+                line.addView(countingText)
+            }
+
             line.addView(image)
             line.addView(algText)
-            mainLayout.addView(line)
+
+            line.tag = i
+            line.setOnClickListener(clickListener)
+
+            binding.mainView.addView(line)
         }
 
         if (count > 6 || count == 0) {
-            mainLayout.addView(bottomAdView)
-            bottomAdView.loadAd(adRequest)
+            addBottomAds()
         }
     }
 }
