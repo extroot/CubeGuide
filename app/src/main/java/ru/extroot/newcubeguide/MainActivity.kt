@@ -10,7 +10,6 @@ import androidx.core.os.bundleOf
 import androidx.fragment.app.*
 
 import io.sentry.Sentry
-import io.sentry.SentryLevel
 import com.google.android.gms.ads.*
 
 import com.mikepenz.materialdrawer.Drawer
@@ -327,7 +326,6 @@ class MainActivity: AppCompatActivity() {
                     SecondaryDrawerItem().withName(R.string.cp_header).withIdentifier(CP_ID).withLevel(2),
                     SecondaryDrawerItem().withName(R.string.ep_header).withIdentifier(EP_ID).withLevel(2)
                 ),
-
                 DividerDrawerItem(),
                 SwitchDrawerItem()
                     .withName(R.string.number_switch)

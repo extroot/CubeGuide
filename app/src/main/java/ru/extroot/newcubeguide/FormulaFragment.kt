@@ -1,17 +1,13 @@
 package ru.extroot.newcubeguide
 
-import android.graphics.Color
 import android.os.Bundle
-import android.util.Log
 import android.view.*
-import android.widget.ImageView
-import android.widget.LinearLayout
-import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 import io.sentry.Sentry
 import io.sentry.SentryLevel
-import com.google.android.material.color.MaterialColors
 
 import ru.extroot.newcubeguide.databinding.FragmentFormulaBinding
 
@@ -98,72 +94,24 @@ class FormulaFragment : Fragment() {
         return text
     }
 
-    private fun checkVerticalMode(): Boolean {
-        return "l3c" == picMode || "eo" == picMode || "cp" == picMode || "ep" == picMode
-    }
-
-
     private fun draw() {
-        val imageParams = LinearLayout.LayoutParams(picLen, picLen)
-        val imageParamsVertical = LinearLayout.LayoutParams(
-            LinearLayout.LayoutParams.WRAP_CONTENT,
-            LinearLayout.LayoutParams.WRAP_CONTENT
-        )
-        val sepParams = LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 2)
+        val recyclerView: RecyclerView = _binding.recycleView
+        recyclerView.layoutManager = LinearLayoutManager(requireContext())
+        recyclerView.isNestedScrollingEnabled = false
 
         val count = getAlgCount()
-        var offset = 0
+
+        val imageData = mutableListOf<Int>()
+        val algData = mutableListOf<String>()
+        val titleData = mutableListOf<String?>()
+
         for (i in 0 until count) {
-            val image = ImageView(requireContext())
-            image.setImageResource(getImageId(i))
-            image.layoutParams = imageParams
-
-            val alg = getAlgText(i)
-            if (alg == null) {
-                offset++
-                continue
-            }
-
-            val title = getAlgTitle(i)
-
-            if (title != null) {
-                val titleView = TextView(ContextThemeWrapper(requireContext(), R.style.title))
-                titleView.text = title
-                titleView.textSize = (textSize + 4).toFloat()
-                 _binding.fragmentMainLayout.addView(titleView)
-            }
-            else if (i != 0) {
-                val sep = View(requireContext())
-                sep.layoutParams = sepParams
-                sep.setBackgroundColor(MaterialColors.getColor(requireContext(), R.attr.dividerColor, Color.BLACK))
-                sep.setPadding(3, 1, 1, 3)
-                 _binding.fragmentMainLayout.addView(sep)
-            }
-
-            val algText = TextView(ContextThemeWrapper(requireContext(), R.style.formulaText))
-            algText.text = alg
-            algText.textSize = textSize.toFloat()
-
-            val line = if (checkVerticalMode()) {
-                algText.gravity = Gravity.CENTER_HORIZONTAL
-                image.layoutParams = imageParamsVertical
-                LinearLayout(ContextThemeWrapper(requireContext(), R.style.lineVertical))
-            } else {
-                LinearLayout(ContextThemeWrapper(requireContext(), R.style.line))
-            }
-
-            if (isCounting) {
-                val countingText = TextView(ContextThemeWrapper(requireContext(), R.style.countingText))
-                countingText.text = (i + 1 - offset).toString()
-                countingText.textSize = textSize.toFloat()
-                line.addView(countingText)
-            }
-
-            line.addView(image)
-            line.addView(algText)
-
-             _binding.fragmentMainLayout.addView(line)
+            val alg = getAlgText(i) ?: continue
+            imageData.add(getImageId(i))
+            algData.add(alg)
+            titleData.add(getAlgTitle(i))
         }
+        recyclerView.adapter = CustomRecyclerAdapter(titleData, imageData, algData, isCounting)
     }
 
     companion object {
