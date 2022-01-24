@@ -9,6 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="green_old">#008577</color>
 
+    <color name="black_divider">#1F000000</color>
 
     <!-- Material DEFAULT colors -->
     <color name="material_drawer_primary">#2196F3</color>

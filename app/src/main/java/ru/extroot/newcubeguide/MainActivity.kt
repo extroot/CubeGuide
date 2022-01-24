@@ -1,149 +1,140 @@
 package ru.extroot.newcubeguide
 
-
 import android.app.AlertDialog
 import android.content.SharedPreferences
-import android.graphics.Color
 import android.os.Bundle
-import android.util.DisplayMetrics
 import android.view.*
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.os.bundleOf
+import androidx.fragment.app.*
+
+import io.sentry.Sentry
+import io.sentry.SentryLevel
 import com.google.android.gms.ads.*
-import com.google.android.material.color.MaterialColors
+
 import com.mikepenz.materialdrawer.Drawer
 import com.mikepenz.materialdrawer.DrawerBuilder
 import com.mikepenz.materialdrawer.interfaces.OnCheckedChangeListener
-import com.mikepenz.materialdrawer.model.*
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem
+import com.mikepenz.materialdrawer.model.*
+
 import com.mikhaellopez.ratebottomsheet.RateBottomSheet
 import com.mikhaellopez.ratebottomsheet.RateBottomSheetManager
+import io.sentry.UserFeedback
+
 import ru.extroot.newcubeguide.databinding.ActivityMainBinding
+import ru.extroot.newcubeguide.databinding.DialogSendFeedbackBinding
 
 
 class MainActivity: AppCompatActivity() {
-    private val F2L_ID: Long = 1
-    private val PLL_ID: Long = 2
-    private val OLL_ID: Long = 3
-    private val VHF2L_ID: Long = 4
-    private val OPF2L_ID: Long = 5
-    private val COLL_ID: Long = 6
+    companion object {
+        private const val F2L_ID: Long = 1
+        private const val PLL_ID: Long = 2
+        private const val OLL_ID: Long = 3
+        private const val VHF2L_ID: Long = 4
+        private const val OPF2L_ID: Long = 5
+        private const val COLL_ID: Long = 6
 
-    private val OH_OLL_LH_ID: Long = 7
-    private val OH_PLL_LH_ID: Long = 8
+        private const val OH_OLL_LH_ID: Long = 7
+        private const val OH_PLL_LH_ID: Long = 8
 
-    private val CLL_ID: Long = 9
-    private val OLE_ID: Long = 10
-    private val OLC_ID: Long = 11
-    private val WV_ID: Long = 12
-    private val SV_ID: Long = 13
+        private const val CLL_ID: Long = 9
+        private const val OLE_ID: Long = 10
+        private const val OLC_ID: Long = 11
+        private const val WV_ID: Long = 12
+        private const val SV_ID: Long = 13
 
-    private val OH_COLL_LH_ID: Long = 14
+        private const val OH_COLL_LH_ID: Long = 14
 
-    private val EG1_ID: Long = 15
-    private val EG2_ID: Long = 16
-    private val LEG1_ID: Long = 17
-    private val VLS_ID: Long = 18
-    private val MW_ID: Long = 19
-    private val MG_OLL_ID: Long = 20
-    private val MG_PLL_ID: Long = 21
-    private val EASY_3_ID: Long = 22
-    private val ORTEGA_ID: Long = 23
-    private val TCLLP_ID: Long = 24
+        private const val EG1_ID: Long = 15
+        private const val EG2_ID: Long = 16
+        private const val LEG1_ID: Long = 17
+        private const val VLS_ID: Long = 18
+        private const val MW_ID: Long = 19
+        private const val MG_OLL_ID: Long = 20
+        private const val MG_PLL_ID: Long = 21
+        private const val EASY_3_ID: Long = 22
+        private const val ORTEGA_ID: Long = 23
+        private const val TCLLP_ID: Long = 24
 
-    // private val POLL_ID: Long    = 25;
-    private val L2C_ID: Long = 26
-    private val L2E_ID: Long = 27
-    private val ELL_ID: Long = 28
-    private val OELLCP_ID: Long = 29
-    private val PLL_SC_ID: Long = 30
-    private val L3C_ID: Long = 31
-    private val L3E_ID: Long = 32
-    private val EO_ID: Long = 33
-    private val CP_ID: Long = 34
-    private val EP_ID: Long = 35
-    private val UZ_ID: Long = 36
+        // private const val POLL_ID: Long    = 25;
+        private const val L2C_ID: Long = 26
+        private const val L2E_ID: Long = 27
+        private const val ELL_ID: Long = 28
+        private const val OELLCP_ID: Long = 29
+        private const val PLL_SC_ID: Long = 30
+        private const val L3C_ID: Long = 31
+        private const val L3E_ID: Long = 32
+        private const val EO_ID: Long = 33
+        private const val CP_ID: Long = 34
+        private const val EP_ID: Long = 35
+        private const val UZ_ID: Long = 36
 
-    private val ZBLL_T_ID: Long = 37
-    private val ZBLL_U_ID: Long = 38
-    private val ZBLL_L_ID: Long = 39
-    private val ZBLL_H_ID: Long = 40
-    private val ZBLL_PI_ID: Long = 41
-    private val ZBLL_SUNE_ID: Long = 42
-    private val ZBLL_ANTISUNE_ID: Long = 43
+        private const val ZBLL_T_ID: Long = 37
+        private const val ZBLL_U_ID: Long = 38
+        private const val ZBLL_L_ID: Long = 39
+        private const val ZBLL_H_ID: Long = 40
+        private const val ZBLL_PI_ID: Long = 41
+        private const val ZBLL_SUNE_ID: Long = 42
+        private const val ZBLL_ANTISUNE_ID: Long = 43
 
-    private val OH_OLL_RH_ID: Long = 44
-    private val OH_PLL_RH_ID: Long = 45
-    private val OH_COLL_RH_ID: Long = 46
+        private const val OH_OLL_RH_ID: Long = 44
+        private const val OH_PLL_RH_ID: Long = 45
+        private const val OH_COLL_RH_ID: Long = 46
 
-    // TODO: CFOP about page
-    // private val CFOP_ABOUT_ID: Long = 47
+        // private const val EASY_4_ID: Long = 47;
+        // private const val CFOP_ABOUT_ID: Long = 48
 
-    private val COUNTING_SWITCH_ID: Long = 101
-    private val REVIEW_ID: Long          = 102
-
-    // private val EASY_4_ID: Long = 47;
+        private const val COUNTING_SWITCH_ID: Long = 101
+        private const val REVIEW_ID: Long          = 102
+        private const val FEEDBACK_ID: Long        = 103
+    }
 
     private val PREFS_FILE = "main"
     private val PREF_NUMB = "numbering"
 
     private var isCounting: Boolean = false
     private var mode: String = "easy3"
-    private var picMode: String = "easy3"
-
-    private var picLen: Int = 250
-    private var textSize: Int = 16
 
     private lateinit var result: Drawer
     private lateinit var topAdView: AdView
     private lateinit var bottomAdView: AdView
     private lateinit var adRequest: AdRequest
+    private lateinit var feedbackDialog: AlertDialog
 
     private lateinit var settings: SharedPreferences
 
     private lateinit var binding: ActivityMainBinding
+    private lateinit var dialogFeedBackBinding: DialogSendFeedbackBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        val view = binding.root
-        setContentView(view)
-
-        binding.toolbar.setTitle(R.string.easy3_header)
-        setSupportActionBar(binding.toolbar)
-
-        MobileAds.initialize(this) {}
-
-        val displaymetrics = DisplayMetrics()
-
-        // Java function to update display metrics.
-        // idk how correctly use it in kotlin, but it's working like this
-        windowManager.defaultDisplay.getMetrics(displaymetrics)
-
-        if (displaymetrics.widthPixels < 700) {
-            picLen = 100
-            textSize = 14
-        } else if (displaymetrics.widthPixels < 1000) {
-            picLen = 150
-            textSize = 14
+        binding = ActivityMainBinding.inflate(layoutInflater).also {
+            setContentView(it.root)
         }
 
-        topAdView = AdView(this)
-        topAdView.adSize = AdSize.SMART_BANNER
-        topAdView.adUnitId = "ca-app-pub-9813480536729767/9546708066"
-
-        bottomAdView = AdView(this)
-        bottomAdView.adSize = AdSize.SMART_BANNER
-        bottomAdView.adUnitId = "ca-app-pub-9813480536729767/4920397105"
-
-        adRequest = AdRequest.Builder().build()
+        setSupportActionBar(binding.toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setTitle(R.string.easy3_header)
 
         settings = getSharedPreferences(PREFS_FILE, MODE_PRIVATE)
         val prefEditor = settings.edit()
         prefEditor.apply()
         isCounting = settings.getBoolean(PREF_NUMB, false)
 
+
+        if (savedInstanceState == null) {
+            supportFragmentManager.commit {
+                setReorderingAllowed(true)
+                add<Easy3Fragment>(R.id.mainLayout)
+            }
+        }
+
+        dialogFeedBackBinding = DialogSendFeedbackBinding.inflate(layoutInflater)
+        initFeedBackDialog()
+
+        initAd()
         handleDrawer()
 
         RateBottomSheetManager(this)
@@ -154,11 +145,56 @@ class MainActivity: AppCompatActivity() {
         RateBottomSheet.showRateBottomSheetIfMeetsConditions(this)
     }
 
+    private fun initFeedBackDialog() {
+        feedbackDialog = AlertDialog.Builder(this)
+            .setView(dialogFeedBackBinding.root)
+            .setPositiveButton(R.string.rating_dialog_feedback_custom_button_submit
+            ) { _, _ ->
+                val userFeedbackEditText = dialogFeedBackBinding.userFeedbackEditText
+                val userComment = userFeedbackEditText.text.toString()
+
+                if (userComment != "") {
+                    val sentryId = Sentry.captureMessage("User FeedBack")
+                    val userFeedback = UserFeedback(sentryId).apply {
+                        comments = userComment
+                    }
+                    Sentry.captureUserFeedback(userFeedback)
+                } else {
+                    Toast.makeText(this, R.string.emptyFeedBackField, Toast.LENGTH_SHORT).show()
+                    // Sentry.captureMessage("Empty user Feedback", SentryLevel.WARNING)
+                }
+                userFeedbackEditText.text = ""
+            }
+            .setNegativeButton(R.string.rating_dialog_feedback_button_cancel, null)
+            .create()
+    }
+
+    private fun initAd() {
+        MobileAds.initialize(this) {}
+        topAdView = AdView(this)
+        topAdView.adSize = AdSize.SMART_BANNER
+        topAdView.adUnitId = "ca-app-pub-9813480536729767/9546708066"
+
+        bottomAdView = AdView(this)
+        bottomAdView.adSize = AdSize.SMART_BANNER
+        bottomAdView.adUnitId = "ca-app-pub-9813480536729767/4920397105"
+
+        adRequest = AdRequest.Builder().build()
+
+        binding.mainView.addView(topAdView, 0)
+        binding.mainView.addView(bottomAdView)
+
+        topAdView.loadAd(adRequest)
+        bottomAdView.loadAd(adRequest)
+    }
+
     private fun getModeById(id: Long): String? {
         return when (id) {
-            F2L_ID -> { "f2l"}
-            OLL_ID -> { "oll"}
-            PLL_ID -> { "pll"}
+            EASY_3_ID -> { "easy3"}
+
+            F2L_ID -> { "f2l" }
+            OLL_ID -> { "oll" }
+            PLL_ID -> { "pll" }
 
             OH_OLL_LH_ID ->   { "oh_oll_lh" }
             OH_PLL_LH_ID ->   { "oh_pll_lh" }
@@ -167,72 +203,59 @@ class MainActivity: AppCompatActivity() {
             OH_PLL_RH_ID ->   { "oh_pll_rh" }
             OH_COLL_RH_ID ->  { "oh_coll_rh" }
 
-            COLL_ID ->  { "coll"}
-            OPF2L_ID -> { "op"}
-            VHF2L_ID -> { "vh"}
-            WV_ID ->    { "wv"}
-            SV_ID ->    { "sv"}
-            MW_ID ->    { "mw"}
-            OLE_ID ->   { "ole"}
-            OLC_ID ->   { "olc"}
-            VLS_ID ->   { "vls"}
-            ELL_ID ->   { "ell"}
+            COLL_ID ->  { "coll" }
+            OPF2L_ID -> { "op" }
+            VHF2L_ID -> { "vh" }
+            WV_ID ->    { "wv" }
+            SV_ID ->    { "sv" }
+            MW_ID ->    { "mw" }
+            OLE_ID ->   { "ole" }
+            OLC_ID ->   { "olc" }
+            VLS_ID ->   { "vls" }
+            ELL_ID ->   { "ell" }
 
-            OELLCP_ID ->  { "oellcp"}
-            PLL_SC_ID ->  { "pll_sc"}
-            ZBLL_T_ID ->  { "zbll_t"}
-            ZBLL_U_ID ->  { "zbll_u"}
-            ZBLL_L_ID ->  { "zbll_l"}
-            ZBLL_H_ID ->  { "zbll_h"}
-            ZBLL_PI_ID ->        { "zbll_pi"}
-            ZBLL_SUNE_ID ->      { "zbll_sune"}
-            ZBLL_ANTISUNE_ID ->  { "zbll_antisune"}
+            OELLCP_ID ->  { "oellcp" }
+            PLL_SC_ID ->  { "pll_sc" }
+            ZBLL_T_ID ->  { "zbll_t" }
+            ZBLL_U_ID ->  { "zbll_u" }
+            ZBLL_L_ID ->  { "zbll_l" }
+            ZBLL_H_ID ->  { "zbll_h" }
+            ZBLL_PI_ID ->        { "zbll_pi" }
+            ZBLL_SUNE_ID ->      { "zbll_sune" }
+            ZBLL_ANTISUNE_ID ->  { "zbll_antisune" }
 
-            UZ_ID ->     { "uz"}
-            CLL_ID ->    { "cll"}
-            ORTEGA_ID -> { "ortega"}
-            EG1_ID ->    { "eg1_"}
-            EG2_ID ->    { "eg2_"}
-            LEG1_ID ->   { "leg1_"}
-            TCLLP_ID ->  { "tcllp"}
-            L2C_ID ->    { "l2c"}
-            L2E_ID ->    { "l2e"}
-            MG_OLL_ID -> { "mg_oll"}
-            MG_PLL_ID -> { "mg_pll"}
-            L3C_ID ->    { "l3c"}
-            L3E_ID ->    { "l3e"}
-            EO_ID ->     { "eo"}
-            CP_ID ->     { "cp"}
-            EP_ID ->     { "ep"}
+            UZ_ID ->     { "uz" }
+            CLL_ID ->    { "cll" }
+            ORTEGA_ID -> { "ortega" }
+            EG1_ID ->    { "eg1_" }
+            EG2_ID ->    { "eg2_" }
+            LEG1_ID ->   { "leg1_" }
+            TCLLP_ID ->  { "tcllp" }
+            L2C_ID ->    { "l2c" }
+            L2E_ID ->    { "l2e" }
+            MG_OLL_ID -> { "mg_oll" }
+            MG_PLL_ID -> { "mg_pll" }
+            L3C_ID ->    { "l3c" }
+            L3E_ID ->    { "l3e" }
+            EO_ID ->     { "eo" }
+            CP_ID ->     { "cp" }
+            EP_ID ->     { "ep" }
             else -> { null }
         }
     }
 
-    private fun getPicModeById(id: Long): String? {
-        return when (id) {
-            OH_OLL_LH_ID ->   { "oll" }
-            OH_PLL_LH_ID ->   { "pll" }
-            OH_COLL_LH_ID ->  { "coll" }
-            OH_OLL_RH_ID ->   { "oll" }
-            OH_PLL_RH_ID ->   { "pll" }
-            OH_COLL_RH_ID ->  { "coll" }
-
-            EG1_ID ->    { "cll" }
-            EG2_ID ->    { "cll" }
-            LEG1_ID ->   { "cll" }
-
-            else -> { null }
-        }
+    private fun getHeader(cMode: String=mode): String {
+        return getString(resources.getIdentifier(cMode + "_header", "string", packageName))
     }
 
     private fun handleDrawer() {
         result = DrawerBuilder()
             .withActivity(this)
             .withToolbar(binding.toolbar)
+            .withSelectedItem(EASY_3_ID)
             .addDrawerItems(
                 PrimaryDrawerItem().withName(R.string.easy3_header).withIdentifier(EASY_3_ID),
-                ExpandableDrawerItem().withName(R.string.header_3x3x3).withSelectable(false)
-                    .withSubItems(
+                ExpandableDrawerItem().withName(R.string.header_3x3x3).withSelectable(false).withSubItems(
                         // SecondaryDrawerItem().withName(R.string.cfop_about_header).withIdentifier(CFOP_ABOUT_ID).withLevel(2),
                         SecondaryDrawerItem().withName(R.string.f2l_header).withIdentifier(F2L_ID).withLevel(2),
                         SecondaryDrawerItem().withName(R.string.oll_header).withIdentifier(OLL_ID).withLevel(2),
@@ -317,195 +340,71 @@ class MainActivity: AppCompatActivity() {
                             val prefEditor = settings.edit()
                             prefEditor.putBoolean(PREF_NUMB, isCounting)
                             prefEditor.apply()
-                            draw()
-                            // result.closeDrawer()
+                            if (mode != "easy3") {
+                                replaceFr()
+                            }
                         }
                     }),
-                PrimaryDrawerItem().withName(R.string.review_btn).
-                withIcon(R.drawable.ic_outline_favorite_border_24px).
-                withIconTintingEnabled(true).
-                withSelectable(false).
-                withIdentifier(REVIEW_ID),
+                PrimaryDrawerItem()
+                    .withName(R.string.rating_dialog_feedback_title)
+                    .withIcon(R.drawable.baseline_feedback_24)
+                    .withIconTintingEnabled(true)
+                    .withSelectable(false)
+                    .withIdentifier(FEEDBACK_ID),
+                PrimaryDrawerItem().withName(R.string.review_btn)
+                    .withIcon(R.drawable.ic_outline_favorite_border_24px)
+                    .withIconTintingEnabled(true)
+                    .withSelectable(false)
+                    .withIdentifier(REVIEW_ID),
                 )
             .withOnDrawerItemClickListener(object: Drawer.OnDrawerItemClickListener {
                 override fun onItemClick(view: View?, position: Int, drawerItem: IDrawerItem<*>): Boolean {
-
                     when (drawerItem.identifier) {
-                        EASY_3_ID -> { picMode = "easy3"; mode = picMode }
-                        // CFOP_ABOUT_ID -> { picMode = "cfop_about"; mode = picMode }
-
+                        EASY_3_ID -> {
+                            binding.toolbar.title = getHeader("easy3")
+                            binding.mainScroll.scrollTo(0, 0)
+                            supportFragmentManager.commit {
+                                setReorderingAllowed(true)
+                                replace<Easy3Fragment>(R.id.mainLayout)
+                            }
+                            return false
+                        }
                         REVIEW_ID -> {
                             RateBottomSheetManager(this@MainActivity)
                                 .setDebugForceOpenEnable(true) // False by default
                             RateBottomSheet.showRateBottomSheetIfMeetsConditions(
                                 activity = this@MainActivity
                             )
-                            return false
+                            return true
+                        }
+                        FEEDBACK_ID -> {
+                            feedbackDialog.show()
+                            return true
                         }
                         else -> {
-                            if (getModeById(drawerItem.identifier) == null) return true
+                            if (getModeById(drawerItem.identifier) == null) {
+                                return true
+                            }
                             mode = getModeById(drawerItem.identifier)!!
-                            picMode = getPicModeById(drawerItem.identifier) ?: mode
+                            binding.toolbar.title = getHeader()
+                            binding.mainScroll.scrollTo(0, 0)
+                            replaceFr()
+                            return false
                         }
                     }
-                    binding.toolbar.title = getHeader()
-                    binding.mainScroll.scrollTo(0, 0)
-                    draw()
-                    return false
                 }
             })
             .build()
-        result.setSelection(EASY_3_ID)
     }
 
-    private fun getHeader(): String {
-        return getString(resources.getIdentifier(mode + "_header", "string", packageName))
-    }
-
-    private fun getImageId(imageNumber: Int): Int {
-        return resources.getIdentifier(picMode + imageNumber, "drawable", packageName)
-    }
-
-    private fun getAlgCount(): Int {
-        return getString(resources.getIdentifier(mode + "_count", "string", packageName)).toInt()
-    }
-
-    private fun getAlgTitle(algNumber: Int): String? {
-        val title: String?
-        val name = picMode + algNumber.toString() + "_title"
-        title = getString(resources.getIdentifier(name, "string", packageName))
-
-        if ("" == title) {
-            return null
-        }
-        return title
-    }
-
-    private fun getAlgText(algNumber: Int): String? {
-        val text: String?
-        val name = mode + algNumber.toString()
-        text =getString(resources.getIdentifier(name, "string", packageName))
-
-        if ("" == text) {
-            return null
-        }
-        return text
-    }
-
-    private fun checkVerticalMode(): Boolean {
-        return "l3c" == picMode || "eo" == picMode || "cp" == picMode || "ep" == picMode
-    }
-
-    private fun isTextMode(): Boolean {
-        return "easy3" == mode || "cfop_about" == mode
-    }
-
-    private fun addBottomAds() {
-        binding.mainView.addView(bottomAdView)
-        bottomAdView.loadAd(adRequest)
-    }
-
-    private val clickListener = View.OnClickListener {view ->
-        val formulaNumber: Int = view.tag.toString().toInt()
-        showCustomAlert(formulaNumber)
-    }
-
-    private fun showCustomAlert(formulaNumber: Int) {
-        val dialogView = layoutInflater.inflate(R.layout.dialog_formula_preview, null)
-        val customDialog = AlertDialog.Builder(this)
-            .setView(dialogView)
-            .show()
-//        val btDismiss = dialogView.findViewById<Button>(R.id.btDismissCustomDialog)
-//        btDismiss.setOnClickListener {
-//            customDialog.dismiss()
-//        }
-    }
-
-
-    fun draw() {
-        binding.mainView.removeAllViews()
-
-        binding.mainView.addView(topAdView)
-        topAdView.loadAd(adRequest)
-
-        if (isTextMode()) {
-            val inflater = this.getSystemService(LAYOUT_INFLATER_SERVICE) as LayoutInflater
-            val childLayout = when (mode) {
-                "easy3" -> inflater.inflate(R.layout.easy3, findViewById(R.id.easy3), false)
-                "cfop_about" -> inflater.inflate(R.layout.cfop_about, findViewById(R.id.cfop_about), false)
-                else -> throw Exception("Invalid Mode")
-            }
-            binding.mainView.addView(childLayout)
-            addBottomAds()
-            return
-        }
-
-        val imageParams = LinearLayout.LayoutParams(picLen, picLen)
-        val imageParamsVertical = LinearLayout.LayoutParams(
-            LinearLayout.LayoutParams.WRAP_CONTENT,
-            LinearLayout.LayoutParams.WRAP_CONTENT
-        )
-        val sepParams = LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 2)
-
-        val count = getAlgCount()
-        var offset = 0
-        for (i in 0 until count) {
-            val image = ImageView(this)
-            image.setImageResource(getImageId(i))
-            image.layoutParams = imageParams
-
-            val alg = getAlgText(i)
-            if (alg == null) {
-                offset++
-                continue
-            }
-
-            val title = getAlgTitle(i)
-
-            if (title != null) {
-                val titleView = TextView(ContextThemeWrapper(this, R.style.title))
-                titleView.text = title
-                titleView.textSize = (textSize + 4).toFloat()
-                binding.mainView.addView(titleView)
-            }
-            else if (i != 0) {
-                val sep = View(this)
-                sep.layoutParams = sepParams
-                sep.setBackgroundColor(MaterialColors.getColor(this, R.attr.dividerColor, Color.BLACK))
-                sep.setPadding(3, 1, 1, 3)
-                binding.mainView.addView(sep)
-            }
-
-            val algText = TextView(ContextThemeWrapper(this, R.style.formulaText))
-            algText.text = alg
-            algText.textSize = textSize.toFloat()
-
-            val line = if (checkVerticalMode()) {
-                algText.gravity = Gravity.CENTER_HORIZONTAL
-                image.layoutParams = imageParamsVertical
-                LinearLayout(ContextThemeWrapper(this, R.style.lineVertical))
-            } else {
-                LinearLayout(ContextThemeWrapper(this, R.style.line))
-            }
-
-            if (isCounting) {
-                val countingText = TextView(ContextThemeWrapper(this, R.style.countingText))
-                countingText.text = (i + 1 - offset).toString()
-                countingText.textSize = textSize.toFloat()
-                line.addView(countingText)
-            }
-
-            line.addView(image)
-            line.addView(algText)
-
-            line.tag = i
-            line.setOnClickListener(clickListener)
-
-            binding.mainView.addView(line)
-        }
-
-        if (count > 6 || count == 0) {
-            addBottomAds()
+    private fun replaceFr() {
+        supportFragmentManager.commit {
+            setReorderingAllowed(true)
+            replace<FormulaFragment>(R.id.mainLayout, args=bundleOf(
+                "mode" to mode,
+                "packageName" to packageName,
+                "isCounting" to isCounting
+            ))
         }
     }
 }

@@ -2,6 +2,24 @@
     <string name="app_name">Cube Guide</string>
     <string name="easy3_header">3x3x3 – Beginners’ Method</string>
 
+    <string name="rate_popup_ask_title">Like this App?</string>
+    <string name="rate_popup_ask_message">Do you like using this application?</string>
+    <string name="rate_popup_ask_ok">Yes I do</string>
+    <string name="rate_popup_ask_no">Not really</string>
+
+    <string name="rate_popup_title">Rate this app</string>
+    <string name="rate_popup_message">Would you mind taking a moment to rate it? It won\'t take more than a minute. Thanks for your support!</string>
+    <string name="rate_popup_ok">Rate it now</string>
+    <string name="rate_popup_later">Remind me later</string>
+    <string name="rate_popup_no">No, thanks</string>
+
+    <string name="rating_dialog_feedback_title">Give Feedback</string>
+    <string name="rating_dialog_feedback_button_cancel">Cancel</string>
+    <string name="rating_dialog_feedback_custom_button_submit">Submit</string>
+    <string name="rating_dialog_feedback_custom_message">Suggest us what went wrong and we\'ll work on it.</string>
+
+    <string name="emptyFeedBackField">Empty field passed</string>
+
     <string name="header_3x3x3">3x3x3 – CFOP method</string>
     <string name="cfop_about_header">About the method</string>
     <string name="f2l_header">F2L – First Two Layers</string>
@@ -81,16 +99,7 @@
     <string name="number_switch">Algs numbering</string>
     <string name="review_btn">Rate this app</string>
     <string name="translate_btn">Help with translation</string>
-
-    <string name="rate_popup_ask_title">Like this App?</string>
-    <string name="rate_popup_ask_message">Do you like using this application?</string>
-    <string name="rate_popup_ask_ok">Yes I do</string>
-    <string name="rate_popup_ask_no">Not really</string>
-
-    <string name="rate_popup_title">Rate this app</string>
-    <string name="rate_popup_message">Would you mind taking a moment to rate it? It won\'t take more than a minute. Thanks for your support!</string>
-    <string name="rate_popup_ok">Rate it now</string>
-    <string name="rate_popup_later">Remind me later</string>
-    <string name="rate_popup_no">No, thanks</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
