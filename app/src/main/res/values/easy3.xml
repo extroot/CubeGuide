@@ -150,6 +150,7 @@
     <string name="easy3_pcll_text2">If none of the corner pieces is placed correctly, follow this algorithm:\n<b>R U\' L\' U R\' U\' L U</b>\n\nAfter this, you will get one properly located corner. Put it on the left and on the top (right where your left thumb is) and repeat the algorithm. If it didn\'t work, put it in the bottom left position and repeat one again.\n\n<b>Attention!</b>\nIf only 2 or 3 pieces are in their due places, your cube must have been taken apart and assembled incorrectly. In this case, you will not manage to solve the cube following the formulas. Reassemble the cube mechanically in accordance with the colors.\n\nWhen all the corner pieces are in correct positions, all you have to do is just to turn them to finish solving the cube.</string>
     <string name="easy3_pcll_1"><b>All the corners are placed incorrectly </b></string>
     <string name="easy3_pcll_2"><b>One corner is in the right place</b></string>
+    <string name="easy3_pcll">Pic. 1: All the corners are placed incorrectly\nPic. 2: One corner is in the right place</string>
 
     <string name="easy3_ocll_h1">Final stage. Corners orientation.</string>
     <string name="easy3_ocll_text1">We are going to turn the corners using the PIF-PAF moves (<b>R U R\' U\'</b>). It is a simple formula that you already know very well!</string>

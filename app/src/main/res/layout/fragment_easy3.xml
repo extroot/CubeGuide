@@ -1251,7 +1251,7 @@
 
                     <TextView
                         style="@style/textCenter"
-                        android:text="@string/easy3_pcll_1" />
+                        android:text="@string/easy3_tyc_1_3" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -1264,9 +1264,13 @@
 
                     <TextView
                         style="@style/textCenter"
-                        android:text="@string/easy3_pcll_2" />
+                        android:text="@string/easy3_tyc_1_4" />
                 </LinearLayout>
             </LinearLayout>
+
+            <TextView
+                style="@style/text"
+                android:text="@string/easy3_pcll" />
 
             <TextView
                 style="@style/text"
