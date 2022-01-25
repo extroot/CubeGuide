@@ -14,6 +14,8 @@ class CustomRecyclerAdapter(
     private val isCounting: Boolean = false
 ) : RecyclerView.Adapter<CustomRecyclerAdapter.MyViewHolder>() {
 
+    var onClickListener: View.OnClickListener? = null
+
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val imageView: ImageView = itemView.findViewById(R.id.algorithm_line_image)
         val formulaTextView: TextView = itemView.findViewById(R.id.algorithm_line_alg)
@@ -47,6 +49,8 @@ class CustomRecyclerAdapter(
             holder.dividerView.visibility = View.GONE
         }
         holder.imageView.setImageResource(imageData[position])
+        holder.itemView.tag = position
+        holder.itemView.setOnClickListener(onClickListener)
     }
 
     override fun getItemCount(): Int {

@@ -99,7 +99,4 @@
     <string name="number_switch">Algs numbering</string>
     <string name="review_btn">Rate this app</string>
     <string name="translate_btn">Help with translation</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-
 </resources>

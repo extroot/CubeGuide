@@ -1,7 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical">
 
-</LinearLayout>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/outline_background_card_smoother"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/previewTitleText"
+            android:gravity="center_horizontal"
+            android:textSize="22sp"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="OLL 0"
+            app:layout_constraintBottom_toTopOf="@id/divider02"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <include
+            android:id="@+id/divider02"
+            layout="@layout/view_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            app:layout_constraintTop_toBottomOf="@id/previewTitleText"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp" />
+
+        <ImageView
+            android:id="@+id/previewImage"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider02"
+            app:layout_constraintBottom_toTopOf="@id/previewFormulaText"
+            android:src="@drawable/oll0" />
+
+        <TextView
+            android:id="@+id/previewFormulaText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/oll0"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/previewImage"
+            android:textColor="@color/black"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="16sp"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

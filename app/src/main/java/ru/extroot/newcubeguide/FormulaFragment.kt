@@ -1,13 +1,18 @@
 package ru.extroot.newcubeguide
 
+import android.app.AlertDialog
 import android.os.Bundle
 import android.view.*
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 import io.sentry.Sentry
 import io.sentry.SentryLevel
+import io.sentry.UserFeedback
+import ru.extroot.newcubeguide.databinding.DialogFormulaPreviewBinding
+import ru.extroot.newcubeguide.databinding.DialogSendFeedbackBinding
 
 import ru.extroot.newcubeguide.databinding.FragmentFormulaBinding
 
@@ -22,10 +27,11 @@ class FormulaFragment : Fragment() {
     private var picMode: String? = null
     private var isCounting: Boolean = false
 
-    private var picLen: Int = 250
-    private var textSize: Int = 16
+    private lateinit var previewDialog: AlertDialog
+    private lateinit var dialogView: View
 
     private lateinit var _binding: FragmentFormulaBinding
+    private lateinit var dialogPreviewBinding: DialogFormulaPreviewBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,7 +46,14 @@ class FormulaFragment : Fragment() {
             // TODO: message for user
         }
         picMode = getPicModeByMode()
+
+        dialogPreviewBinding = DialogFormulaPreviewBinding.inflate(layoutInflater)
+        dialogView = dialogPreviewBinding.root
+        previewDialog = AlertDialog.Builder(requireContext())
+            .setView(dialogView)
+            .create()
     }
+
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _binding = FragmentFormulaBinding.inflate(inflater, container, false)
@@ -94,6 +107,15 @@ class FormulaFragment : Fragment() {
         return text
     }
 
+    private val onClickListener = View.OnClickListener { v:View ->
+        val position = v.tag.toString().toInt()
+        val title = mode.toString().uppercase() + " " + (position).toString()
+        dialogPreviewBinding.previewTitleText.text = title
+        dialogPreviewBinding.previewImage.setImageResource(getImageId(position))
+        dialogPreviewBinding.previewFormulaText.text = getAlgText(position)
+        previewDialog.show()
+    }
+
     private fun draw() {
         val recyclerView: RecyclerView = _binding.recycleView
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
@@ -111,7 +133,9 @@ class FormulaFragment : Fragment() {
             algData.add(alg)
             titleData.add(getAlgTitle(i))
         }
-        recyclerView.adapter = CustomRecyclerAdapter(titleData, imageData, algData, isCounting)
+        val adapter = CustomRecyclerAdapter(titleData, imageData, algData, isCounting)
+        adapter.onClickListener = onClickListener
+        recyclerView.adapter = adapter
     }
 
     companion object {

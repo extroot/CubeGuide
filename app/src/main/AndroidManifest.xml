@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="ru.extroot.newcubeguide">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -13,21 +13,31 @@
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-3940256099942544~3347511713"/>
-
-        <meta-data android:name="io.sentry.dsn" android:value="https://dc1077f211664caabf39376362729b7c@o1122268.ingest.sentry.io/6159683" />
-        <meta-data android:name="io.sentry.traces.activity.enable" android:value="true" />
-        <meta-data android:name="io.sentry.traces.sample-rate" android:value="1.0" />
-        <meta-data android:name="io.sentry.debug" android:value="true" />
-        <meta-data android:name="io.sentry.release" android:value="1.5.5" />
-        <meta-data android:name="io.sentry.environment" android:value="dev" />
+            android:value="ca-app-pub-3940256099942544~3347511713" />
+        <meta-data
+            android:name="io.sentry.dsn"
+            android:value="https://dc1077f211664caabf39376362729b7c@o1122268.ingest.sentry.io/6159683" />
+        <meta-data
+            android:name="io.sentry.traces.activity.enable"
+            android:value="true" />
+        <meta-data
+            android:name="io.sentry.traces.sample-rate"
+            android:value="1.0" />
+        <meta-data
+            android:name="io.sentry.debug"
+            android:value="true" />
+        <meta-data
+            android:name="io.sentry.release"
+            android:value="1.5.5" />
+        <meta-data
+            android:name="io.sentry.environment"
+            android:value="dev" />
 
         <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

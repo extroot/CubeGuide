@@ -133,7 +133,11 @@ class MainActivity: AppCompatActivity() {
         dialogFeedBackBinding = DialogSendFeedbackBinding.inflate(layoutInflater)
         initFeedBackDialog()
 
-        initAd()
+        try {
+            initAd()
+        } catch (e: Exception) {
+            Sentry.captureException(e, "InitAd")
+        }
         handleDrawer()
 
         RateBottomSheetManager(this)
@@ -247,7 +251,18 @@ class MainActivity: AppCompatActivity() {
         return getString(resources.getIdentifier(cMode + "_header", "string", packageName))
     }
 
-    private fun handleDrawer() {
+    private fun replaceFr() {
+        supportFragmentManager.commit {
+            setReorderingAllowed(true)
+            replace<FormulaFragment>(R.id.mainLayout, args=bundleOf(
+                "mode" to mode,
+                "packageName" to packageName,
+                "isCounting" to isCounting
+            ))
+        }
+    }
+
+     private fun handleDrawer() {
         result = DrawerBuilder()
             .withActivity(this)
             .withToolbar(binding.toolbar)
@@ -393,16 +408,5 @@ class MainActivity: AppCompatActivity() {
                 }
             })
             .build()
-    }
-
-    private fun replaceFr() {
-        supportFragmentManager.commit {
-            setReorderingAllowed(true)
-            replace<FormulaFragment>(R.id.mainLayout, args=bundleOf(
-                "mode" to mode,
-                "packageName" to packageName,
-                "isCounting" to isCounting
-            ))
-        }
     }
 }
