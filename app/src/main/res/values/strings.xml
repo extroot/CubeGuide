@@ -96,7 +96,7 @@
     <string name="cp_header">CP – Corners Permutation</string>
     <string name="ep_header">EP – Edges Permutation</string>
 
-    <string name="number_switch">Algs numbering</string>
+    <string name="number_switch">Algs counting</string>
     <string name="review_btn">Rate this app</string>
     <string name="translate_btn">Help with translation</string>
 </resources>
