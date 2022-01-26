@@ -91,7 +91,6 @@ class FormulaFragment : Fragment() {
     private fun getAlgTitle(algNumber: Int): String? {
         val title: String?
         val name = picMode + algNumber.toString() + "_title"
-        println(name)
         title = getString(resources.getIdentifier(name, "string", packageName))
 
         if ("" == title) {

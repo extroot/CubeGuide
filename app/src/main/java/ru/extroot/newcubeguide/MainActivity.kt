@@ -94,7 +94,7 @@ class MainActivity: AppCompatActivity() {
     private val PREF_NUMB = "numbering"
 
     private var isCounting: Boolean = false
-    private var isGrid: Boolean = true
+    private var isGrid: Boolean = false
     private var mode: String = "easy3"
 
     private lateinit var result: Drawer
@@ -251,8 +251,24 @@ class MainActivity: AppCompatActivity() {
         }
     }
 
-    private fun getHeader(cMode: String=mode): String {
-        return getString(resources.getIdentifier(cMode + "_header", "string", packageName))
+    private fun setHeader() {
+        binding.toolbar.title = getString(resources.getIdentifier(mode + "_header", "string", packageName))
+    }
+
+    private fun checkVerticalMode(): Boolean {
+        return "l3c" == mode || "eo" == mode || "cp" == mode || "ep" == mode
+    }
+
+    private fun isTextMode(): Boolean {
+        return "easy3" == mode || "cfop_about" == mode
+    }
+
+    private fun updateAds() {
+        bottomAdView.visibility = if (isTextMode() || (!checkVerticalMode() && !isGrid)) {
+            View.VISIBLE
+        } else {
+            View.GONE
+        }
     }
 
     private fun replaceFr() {
@@ -379,7 +395,9 @@ class MainActivity: AppCompatActivity() {
                 override fun onItemClick(view: View?, position: Int, drawerItem: IDrawerItem<*>): Boolean {
                     when (drawerItem.identifier) {
                         EASY_3_ID -> {
-                            binding.toolbar.title = getHeader("easy3")
+                            mode = "easy3"
+                            setHeader()
+                            updateAds()
                             binding.mainScroll.scrollTo(0, 0)
                             supportFragmentManager.commit {
                                 setReorderingAllowed(true)
@@ -404,7 +422,8 @@ class MainActivity: AppCompatActivity() {
                                 return true
                             }
                             mode = getModeById(drawerItem.identifier)!!
-                            binding.toolbar.title = getHeader()
+                            setHeader()
+                            updateAds()
                             binding.mainScroll.scrollTo(0, 0)
                             replaceFr()
                             return false
