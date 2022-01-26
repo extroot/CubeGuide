@@ -94,6 +94,7 @@ class MainActivity: AppCompatActivity() {
     private val PREF_NUMB = "numbering"
 
     private var isCounting: Boolean = false
+    private var isGrid: Boolean = true
     private var mode: String = "easy3"
 
     private lateinit var result: Drawer
@@ -175,6 +176,9 @@ class MainActivity: AppCompatActivity() {
     private fun initAd() {
         MobileAds.initialize(this) {}
         topAdView = AdView(this)
+
+        // Adaptive Banner Google's examples outdated
+        // They also use deprecated code of
         topAdView.adSize = AdSize.SMART_BANNER
         topAdView.adUnitId = "ca-app-pub-9813480536729767/9546708066"
 
@@ -257,7 +261,8 @@ class MainActivity: AppCompatActivity() {
             replace<FormulaFragment>(R.id.mainLayout, args=bundleOf(
                 "mode" to mode,
                 "packageName" to packageName,
-                "isCounting" to isCounting
+                "isCounting" to isCounting,
+                "isGrid" to isGrid
             ))
         }
     }
