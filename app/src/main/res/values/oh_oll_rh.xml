@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="oh_oll_rh_count" translatable="false">"58"</string>
+    <string name="oh_oll_rh_count" translatable="false">"57"</string>
 
     <string name="oh_oll_rh0" translatable="false">"L U L' U L U2 L2 U' L U' L' U2 L
 y2 L' U' L U' L' U2 L2 U L' U L U2 L'"</string>
@@ -8,114 +8,113 @@ y2 L' U' L U' L' U2 L2 U L' U L U2 L'"</string>
 y' Lw' U' L U R U' L' U"</string>
     <string name="oh_oll_rh2" translatable="false">"L' U2 L U L' U' L U L' U' L U L' U L
 y2 L' U' L U' L' U2 L U' L U L' U L U2 L'"</string>
-    <string name="oh_oll_rh3" translatable="false"/>
-    <string name="oh_oll_rh4" translatable="false">"L U L' U L U' L' U L U2 L'
+    <string name="oh_oll_rh3" translatable="false">"L U L' U L U' L' U L U2 L'
 y/y' L' U2 L U L' U' L U L' U L"</string>
-    <string name="oh_oll_rh5" translatable="false">"L U L' U L U2 L' U' L U L' U L U2 L'
+    <string name="oh_oll_rh4" translatable="false">"L U L' U L U2 L' U' L U L' U L U2 L'
 L' U2 L2 U L2 U L2 U2 L'
 L U2 L2 U' L2 U' L2 U2 L"</string>
-    <string name="oh_oll_rh6" translatable="false">"L' U' L U' L' U2 L
+    <string name="oh_oll_rh5" translatable="false">"L' U' L U' L' U2 L
 y' L U2 L' U' L U' L'"</string>
-    <string name="oh_oll_rh7" translatable="false">"y' L' U2 L U L' U L
+    <string name="oh_oll_rh6" translatable="false">"y' L' U2 L U L' U L
 y2 L U L' U L U2 L'"</string>
-    <string name="oh_oll_rh8" translatable="false">"Lw U L' U L U2 Lw' U' Lw' U2 L U L' U Lw"</string>
-    <string name="oh_oll_rh9" translatable="false">"Lw' U2 L U L' U Lw U Lw' U2 L U L' U Lw
+    <string name="oh_oll_rh7" translatable="false">"Lw U L' U L U2 Lw' U' Lw' U2 L U L' U Lw"</string>
+    <string name="oh_oll_rh8" translatable="false">"Lw' U2 L U L' U Lw U Lw' U2 L U L' U Lw
 Lw U Lw' L U L' U L U' L' U2 Lw U' Lw'
 F' L' U' Lw U L' U' L2 Lw' y' U L"</string>
-    <string name="oh_oll_rh10" translatable="false">"Lw L2 U' L U' Lw' U2 Lw U' Lw' L"</string>
-    <string name="oh_oll_rh11" translatable="false">"L' Lw U Lw' U2 Lw U L' U L2 Lw'"</string>
-    <string name="oh_oll_rh12" translatable="false">"Lw U2 L' U' L U' Lw2 U2 L U L' U Lw"</string>
-    <string name="oh_oll_rh13" translatable="false">"Lw' U' L U' L' U2 Lw2 U L' U L U2 Lw'
+    <string name="oh_oll_rh9" translatable="false">"Lw L2 U' L U' Lw' U2 Lw U' Lw' L"</string>
+    <string name="oh_oll_rh10" translatable="false">"L' Lw U Lw' U2 Lw U L' U L2 Lw'"</string>
+    <string name="oh_oll_rh11" translatable="false">"Lw U2 L' U' L U' Lw2 U2 L U L' U Lw"</string>
+    <string name="oh_oll_rh12" translatable="false">"Lw' U' L U' L' U2 Lw2 U L' U L U2 Lw'
 y2 Lw U L' U L U2 Lw2 U' L U' L' U2 Lw"</string>
-    <string name="oh_oll_rh14" translatable="false">"x' L' U L U' z x U2 L' y U L' U L F
+    <string name="oh_oll_rh13" translatable="false">"x' L' U L U' z x U2 L' y U L' U L F
 y2 Lw' U' L U' L' U2 Lw U2 Lw' U2 L U L' U Lw"</string>
-    <string name="oh_oll_rh15" translatable="false">"Lw L' U' L' U' L U Rw2' L2 U' L' U Lw"</string>
-    <string name="oh_oll_rh16" translatable="false">"L' U' L U Lw' L U' L' U Lw
+    <string name="oh_oll_rh14" translatable="false">"Lw L' U' L' U' L U Rw2' L2 U' L' U Lw"</string>
+    <string name="oh_oll_rh15" translatable="false">"L' U' L U Lw' L U' L' U Lw
 L U L' U' Lw L' U L U' Lw'"</string>
-    <string name="oh_oll_rh17" translatable="false">"Lw' U' L U Lw L' U' L' U L
+    <string name="oh_oll_rh16" translatable="false">"Lw' U' L U Lw L' U' L' U L
 y' Lw U L' U' Lw' L U L U' L'
 y2 x' L' U L' U2 R U' R' U2 L2 x"</string>
-    <string name="oh_oll_rh18" translatable="false">"F' U' L' U L U' L' U L F"</string>
-    <string name="oh_oll_rh19" translatable="false">"F' L' U' L U' y' L U L' U L
+    <string name="oh_oll_rh17" translatable="false">"F' U' L' U L U' L' U L F"</string>
+    <string name="oh_oll_rh18" translatable="false">"F' L' U' L U' y' L U L' U L
 y L' U' L U' L' y U L' U L F
 y' z U' L' U L' U' x' z' U L' U L F"</string>
-    <string name="oh_oll_rh20" translatable="false">"Lw' U' Lw U' L' U L U' L' U L Lw' U Lw"</string>
-    <string name="oh_oll_rh21" translatable="false">"Lw' U2 L U L2 Lw U' L U Lw' U Lw
+    <string name="oh_oll_rh19" translatable="false">"Lw' U' Lw U' L' U L U' L' U L Lw' U Lw"</string>
+    <string name="oh_oll_rh20" translatable="false">"Lw' U2 L U L2 Lw U' L U Lw' U Lw
 L' U2 L U L' U L U Lw U L' U L U2 Lw'
 y L U L' U L U2 L' U' Lw' U2 L U L' U Lw"</string>
-    <string name="oh_oll_rh22" translatable="false">"Lw' U' Lw L' U' L U Lw' U Lw
+    <string name="oh_oll_rh21" translatable="false">"Lw' U' Lw L' U' L U Lw' U Lw
 y2 L F' L' U' L U F L' U L U2 L'"</string>
-    <string name="oh_oll_rh23" translatable="false">"L U L' U L U2 L' U Lw' U2 L U L' U Lw
+    <string name="oh_oll_rh22" translatable="false">"L U L' U L U2 L' U Lw' U2 L U L' U Lw
 y2 Lw U Lw' L U L' U' Lw U' Lw'"</string>
-    <string name="oh_oll_rh24" translatable="false">"L U L' U Lw' U' L2 U' L2 U2 Lw
+    <string name="oh_oll_rh23" translatable="false">"L U L' U Lw' U' L2 U' L2 U2 Lw
 y2 Lw' U Lw U Lw' U' Lw y' L U' L'
 y2 F' U' L' U2 L U L' U' L F"</string>
-    <string name="oh_oll_rh25" translatable="false">"Lw U' Lw' U' Lw U Lw' y L' U L
+    <string name="oh_oll_rh24" translatable="false">"Lw U' Lw' U' Lw U Lw' y L' U L
 y2 L' U' L U' Lw U L2 U L2 U2 Lw'"</string>
-    <string name="oh_oll_rh26" translatable="false">"F' L' U' L U F"</string>
-    <string name="oh_oll_rh27" translatable="false">"L' U' L U L F' L' F"</string>
-    <string name="oh_oll_rh28" translatable="false">"L' U' L2 U L F' L' U' L' U F
+    <string name="oh_oll_rh25" translatable="false">"F' L' U' L U F"</string>
+    <string name="oh_oll_rh26" translatable="false">"L' U' L U L F' L' F"</string>
+    <string name="oh_oll_rh27" translatable="false">"L' U' L2 U L F' L' U' L' U F
 L' U' L U y' Lw U L' U' Lw' L"</string>
-    <string name="oh_oll_rh29" translatable="false">"y L U L F' L' F U' L'
+    <string name="oh_oll_rh28" translatable="false">"y L U L F' L' F U' L'
 y L' U' x' L' U L U' x U L"</string>
-    <string name="oh_oll_rh30" translatable="false">"L F' L' U' L U F U' L'
+    <string name="oh_oll_rh29" translatable="false">"L F' L' U' L U F U' L'
 y2 F' L' U' L U F L' U' L U' L' U2 L"</string>
-    <string name="oh_oll_rh31" translatable="false">"L' U2 L U L' U L F' U' L' U L F
+    <string name="oh_oll_rh30" translatable="false">"L' U2 L U L' U L F' U' L' U L F
 y2 L' U' L F U F' U' L' U2 L"</string>
-    <string name="oh_oll_rh32" translatable="false">"y L' U' L F U2 F' L' U' L U L' U L
+    <string name="oh_oll_rh31" translatable="false">"y L' U' L F U2 F' L' U' L U L' U L
 y' F' L' U' L U L' U' L U F"</string>
-    <string name="oh_oll_rh33" translatable="false">"F z U L U' L' U L U' L' F z'
+    <string name="oh_oll_rh32" translatable="false">"F z U L U' L' U L U' L' F z'
 F' L' U L F z U L U' L' U L' U'"</string>
-    <string name="oh_oll_rh34" translatable="false">"Lw' U' L U' L' U L U' L' U2 Lw
+    <string name="oh_oll_rh33" translatable="false">"Lw' U' L U' L' U L U' L' U2 Lw
 y' Lw' U2 L U L' U' L U L' U Lw"</string>
-    <string name="oh_oll_rh35" translatable="false">"y Lw U L' U L U' L' U L U2 Lw'
+    <string name="oh_oll_rh34" translatable="false">"y Lw U L' U L U' L' U L U2 Lw'
 y' F' L' U' L U L' U L U' L' U' L F
 y2 Lw U2 L' U' L U L' U' L U' Lw'"</string>
-    <string name="oh_oll_rh36" translatable="false">"Lw' U Lw2 U' Lw2 U' Lw2 U Lw'
+    <string name="oh_oll_rh35" translatable="false">"Lw' U Lw2 U' Lw2 U' Lw2 U Lw'
 L' U2 L Lw U L2 U L2 U2 Lw'
 y L U2 L' U' L U' L' F' L' U' L U F"</string>
-    <string name="oh_oll_rh37" translatable="false">"L' U2 L U L' U L F' L' U' L U F
+    <string name="oh_oll_rh36" translatable="false">"L' U2 L U L' U L F' L' U' L U F
 y Lw U' Lw2 U Lw2 U Lw2 U' Lw
 y Lw U2 L2 U' L2 U' Lw' L' U2 L"</string>
-    <string name="oh_oll_rh38" translatable="false">"Lw' U2 L U L' U Lw"</string>
-    <string name="oh_oll_rh39" translatable="false">"y2 Lw U2 L' U' L U' Lw'"</string>
-    <string name="oh_oll_rh40" translatable="false">"Lw' U' L U' L' U L U Lw L' U' L' U L
+    <string name="oh_oll_rh37" translatable="false">"Lw' U2 L U L' U Lw"</string>
+    <string name="oh_oll_rh38" translatable="false">"y2 Lw U2 L' U' L U' Lw'"</string>
+    <string name="oh_oll_rh39" translatable="false">"Lw' U' L U' L' U L U Lw L' U' L' U L
 y' Lw' L2 U2 L' U' L U' L' U' L' Lw
 y2 L' U' L U' L F' L' F L' U2 L"</string>
-    <string name="oh_oll_rh41" translatable="false">"L' U' L U L F' L2 U' L U F
+    <string name="oh_oll_rh40" translatable="false">"L' U' L U L F' L2 U' L U F
 L U L' y Lw' U Lw U' Lw' U' Lw
 y' Lw L2 U2 L U L' U L U Lw' L"</string>
-    <string name="oh_oll_rh42" translatable="false">"Lw' U' L U' L' U2 Lw"</string>
-    <string name="oh_oll_rh43" translatable="false">"y2 Lw U L' U L U2 Lw'"</string>
-    <string name="oh_oll_rh44" translatable="false">"y Lw' L2 U L' U L U2 L' U Lw L'"</string>
-    <string name="oh_oll_rh45" translatable="false">"y Lw L2 U' L U' L' U2 L U' Lw' L
+    <string name="oh_oll_rh41" translatable="false">"Lw' U' L U' L' U2 Lw"</string>
+    <string name="oh_oll_rh42" translatable="false">"y2 Lw U L' U L U2 Lw'"</string>
+    <string name="oh_oll_rh43" translatable="false">"y Lw' L2 U L' U L U2 L' U Lw L'"</string>
+    <string name="oh_oll_rh44" translatable="false">"y Lw L2 U' L U' L' U2 L U' Lw' L
 y2 Lw U L' U L U2 Lw' U L' U2 L U L' U L"</string>
-    <string name="oh_oll_rh46" translatable="false">"y L U F U' F' L'
+    <string name="oh_oll_rh45" translatable="false">"y L U F U' F' L'
 y' L' U' L F U2 F' L' U L"</string>
-    <string name="oh_oll_rh47" translatable="false">"L' U' x' U L' U' L x U L
+    <string name="oh_oll_rh46" translatable="false">"L' U' x' U L' U' L x U L
 y' F' L' U L U2 L' U' L F
 y2 F' U' L' U L F"</string>
-    <string name="oh_oll_rh48" translatable="false">"x' L' U L U' y' L' U' L' U L U' L U z'
+    <string name="oh_oll_rh47" translatable="false">"x' L' U L U' y' L' U' L' U L U' L U z'
 y2 L U F' U' L' U L F L'"</string>
-    <string name="oh_oll_rh49" translatable="false">"L' U2 L U F U' F' L' U L
+    <string name="oh_oll_rh48" translatable="false">"L' U2 L U F U' F' L' U L
 y x' U L' U' L x U L U L' U' L U' L'"</string>
-    <string name="oh_oll_rh50" translatable="false">"L' U' L U' L' U L U L F' L' F"</string>
-    <string name="oh_oll_rh51" translatable="false">"y2 L U L' U L U' L' U' x' L' U L U' x
+    <string name="oh_oll_rh49" translatable="false">"L' U' L U' L' U L U L F' L' F"</string>
+    <string name="oh_oll_rh50" translatable="false">"y2 L U L' U L U' L' U' x' L' U L U' x
 y2 Lw U L' U L U' L' U' R' U L U' x"</string>
-    <string name="oh_oll_rh52" translatable="false">"F' U' L' U L F U' L U2 L' U' L U' L'
+    <string name="oh_oll_rh51" translatable="false">"F' U' L' U L F U' L U2 L' U' L U' L'
 y2 L' U2 L U y' Lw U' Lw' U Lw U Lw'
 y2 Lw U' Lw' y L2 U' L' U2 L U' L' U2 L U L'"</string>
-    <string name="oh_oll_rh53" translatable="false">"F' L' U L U L' U' L F
+    <string name="oh_oll_rh52" translatable="false">"F' L' U L U L' U' L F
 y2 Lw U' Lw' y L U L U' L'"</string>
-    <string name="oh_oll_rh54" translatable="false">"L' U L U2 L' U' y L' U L U F
+    <string name="oh_oll_rh53" translatable="false">"L' U L U2 L' U' y L' U L U F
 
 y2 L' U' L U' L' U2 L F' L' U' L U F"</string>
-    <string name="oh_oll_rh55" translatable="false">"L U L' U L U2 L' F' L' U' L U F
+    <string name="oh_oll_rh54" translatable="false">"L U L' U L U2 L' F' L' U' L U F
 y L U2 L' U' L U' L2 y L' U' L U F"</string>
-    <string name="oh_oll_rh56" translatable="false">"L' U' L U' L' U L U' L' U y L' U L F
+    <string name="oh_oll_rh55" translatable="false">"L' U' L U' L' U L U' L' U y L' U L F
 Lw U2 L' U' L U' Lw' L' U2 L U L' U L
 y2 F' U' L' U2 L U L' U2 L U F"</string>
-    <string name="oh_oll_rh57" translatable="false">"y L U2 L2 U' L U L U2 F' L' F
+    <string name="oh_oll_rh56" translatable="false">"y L U2 L2 U' L U L U2 F' L' F
 y2 Lw' U2 L U L' U Lw L U2 L' U' L U' L'
 y2 F' L U L2 U L2 U2 L' U F"</string>
-</resources> 
+</resources>
