@@ -1,6 +1,7 @@
 package ru.extroot.newcubeguide
 
 import android.app.AlertDialog
+import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.*
@@ -8,13 +9,13 @@ import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.os.bundleOf
 import androidx.fragment.app.*
+import androidx.preference.PreferenceManager
 
 import io.sentry.Sentry
 import com.google.android.gms.ads.*
 
 import com.mikepenz.materialdrawer.Drawer
 import com.mikepenz.materialdrawer.DrawerBuilder
-import com.mikepenz.materialdrawer.interfaces.OnCheckedChangeListener
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem
 import com.mikepenz.materialdrawer.model.*
 
@@ -85,13 +86,10 @@ class MainActivity: AppCompatActivity() {
         // private const val EASY_4_ID: Long = 47;
         // private const val CFOP_ABOUT_ID: Long = 48
 
-        private const val COUNTING_SWITCH_ID: Long = 101
         private const val REVIEW_ID: Long          = 102
         private const val FEEDBACK_ID: Long        = 103
+        private const val SETTINGS_ID: Long        = 104
     }
-
-    private val PREFS_FILE = "main"
-    private val PREF_NUMB = "numbering"
 
     private var isCounting: Boolean = false
     private var isGrid: Boolean = false
@@ -103,7 +101,7 @@ class MainActivity: AppCompatActivity() {
     private lateinit var adRequest: AdRequest
     private lateinit var feedbackDialog: AlertDialog
 
-    private lateinit var settings: SharedPreferences
+    private lateinit var sharedPref: SharedPreferences
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var dialogFeedBackBinding: DialogSendFeedbackBinding
@@ -118,11 +116,12 @@ class MainActivity: AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setTitle(R.string.easy3_header)
 
-        settings = getSharedPreferences(PREFS_FILE, MODE_PRIVATE)
-        val prefEditor = settings.edit()
-        prefEditor.apply()
-        isCounting = settings.getBoolean(PREF_NUMB, false)
+        val isCountingDefault = resources.getBoolean(R.bool.counting_default_key)
+        val isGridDefault = resources.getBoolean(R.bool.grid_default_key)
 
+        sharedPref = PreferenceManager.getDefaultSharedPreferences(this)
+        isCounting = sharedPref.getBoolean(getString(R.string.counting_key), isCountingDefault)
+        isGrid = sharedPref.getBoolean(getString(R.string.grid_key), isGridDefault)
 
         if (savedInstanceState == null) {
             supportFragmentManager.commit {
@@ -177,8 +176,8 @@ class MainActivity: AppCompatActivity() {
         MobileAds.initialize(this) {}
         topAdView = AdView(this)
 
-        // Adaptive Banner Google's examples outdated
-        // They also use deprecated code of
+        // Google's examples for Adaptive Banner outdated
+        // They also use deprecated code of display metrics, so...
         topAdView.adSize = AdSize.SMART_BANNER
         topAdView.adUnitId = "ca-app-pub-9813480536729767/9546708066"
 
@@ -276,11 +275,14 @@ class MainActivity: AppCompatActivity() {
             setReorderingAllowed(true)
             replace<FormulaFragment>(R.id.mainLayout, args=bundleOf(
                 "mode" to mode,
-                "packageName" to packageName,
-                "isCounting" to isCounting,
-                "isGrid" to isGrid
+                "packageName" to packageName
             ))
         }
+    }
+
+    private fun startSettings() {
+        val intent = Intent(this, SettingsActivity::class.java)
+        startActivity(intent)
     }
 
      private fun handleDrawer() {
@@ -363,22 +365,6 @@ class MainActivity: AppCompatActivity() {
                     SecondaryDrawerItem().withName(R.string.ep_header).withIdentifier(EP_ID).withLevel(2)
                 ),
                 DividerDrawerItem(),
-                SwitchDrawerItem()
-                    .withName(R.string.number_switch)
-                    .withIcon(R.drawable.ic_format_list_numbered_black_24dp)
-                    .withIconTintingEnabled(true).withSelectable(false)
-                    .withIdentifier(COUNTING_SWITCH_ID).withChecked(isCounting)
-                    .withOnCheckedChangeListener(object : OnCheckedChangeListener {
-                        override fun onCheckedChanged(drawerItem: IDrawerItem<*>, buttonView: CompoundButton, isChecked: Boolean) {
-                            isCounting = isChecked
-                            val prefEditor = settings.edit()
-                            prefEditor.putBoolean(PREF_NUMB, isCounting)
-                            prefEditor.apply()
-                            if (mode != "easy3") {
-                                replaceFr()
-                            }
-                        }
-                    }),
                 PrimaryDrawerItem()
                     .withName(R.string.rating_dialog_feedback_title)
                     .withIcon(R.drawable.baseline_feedback_24)
@@ -390,6 +376,11 @@ class MainActivity: AppCompatActivity() {
                     .withIconTintingEnabled(true)
                     .withSelectable(false)
                     .withIdentifier(REVIEW_ID),
+                PrimaryDrawerItem().withName(R.string.settings_btn)
+                    .withIcon(R.drawable.outline_settings_black_18)
+                    .withIconTintingEnabled(true)
+                    .withSelectable(false)
+                    .withIdentifier(SETTINGS_ID),
                 )
             .withOnDrawerItemClickListener(object: Drawer.OnDrawerItemClickListener {
                 override fun onItemClick(view: View?, position: Int, drawerItem: IDrawerItem<*>): Boolean {
@@ -416,6 +407,10 @@ class MainActivity: AppCompatActivity() {
                         FEEDBACK_ID -> {
                             feedbackDialog.show()
                             return true
+                        }
+                        SETTINGS_ID -> {
+                            startSettings()
+                            return false
                         }
                         else -> {
                             if (getModeById(drawerItem.identifier) == null) {
