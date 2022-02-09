@@ -3,32 +3,29 @@ package ru.extroot.newcubeguide
 import android.app.AlertDialog
 import android.os.Bundle
 import android.view.*
-import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.preference.PreferenceManager
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 import io.sentry.Sentry
 import io.sentry.SentryLevel
-import io.sentry.UserFeedback
 import ru.extroot.newcubeguide.databinding.DialogFormulaPreviewBinding
-import ru.extroot.newcubeguide.databinding.DialogSendFeedbackBinding
 
 import ru.extroot.newcubeguide.databinding.FragmentFormulaBinding
 
 private const val ARG_PARAM1 = "mode"
 private const val ARG_PARAM2 = "packageName"
-private const val ARG_PARAM3 = "isCounting"
-private const val ARG_PARAM4 = "isGrid"
-private const val TAG = "FormulaFragment"
+private const val ARG_PARAM3 = "settingPreview"
 
 class FormulaFragment : Fragment() {
     private var mode: String? = null
     private var packageName: String? = null
     private var picMode: String? = null
-    private var isCounting: Boolean = false
-    private var isGrid = false
+    private var isCounting: Boolean = true
+    private var isGrid = true
+    private var settinsPreview = false
 
     private lateinit var previewDialog: AlertDialog
     private lateinit var dialogView: View
@@ -41,8 +38,7 @@ class FormulaFragment : Fragment() {
         arguments?.let {
             mode = it.getString(ARG_PARAM1)
             packageName = it.getString(ARG_PARAM2)
-            isCounting = it.getBoolean(ARG_PARAM3)
-            isGrid = it.getBoolean(ARG_PARAM4)
+            settinsPreview = it.getBoolean(ARG_PARAM3)
         }
         if (mode == null) {
             Sentry.captureMessage("null Mode parameter", SentryLevel.FATAL)
@@ -50,12 +46,28 @@ class FormulaFragment : Fragment() {
             // TODO: message for user
         }
         picMode = getPicModeByMode()
+        getSettings()
 
         dialogPreviewBinding = DialogFormulaPreviewBinding.inflate(layoutInflater)
         dialogView = dialogPreviewBinding.root
         previewDialog = AlertDialog.Builder(requireContext())
             .setView(dialogView)
             .create()
+    }
+
+    private fun getSettings() {
+        val isCountingDefault = resources.getBoolean(R.bool.counting_default_key)
+        val isGridDefault = resources.getBoolean(R.bool.grid_default_key)
+
+        val sharedPref = PreferenceManager.getDefaultSharedPreferences(requireContext())
+        if (sharedPref == null) {
+            Sentry.captureMessage("getPreferences error")
+            isGrid = isGridDefault
+            isCounting = isCountingDefault
+        } else  {
+            isCounting = sharedPref.getBoolean(getString(R.string.counting_key), isCountingDefault)
+            isGrid = sharedPref.getBoolean(getString(R.string.grid_key), isGridDefault)
+        }
     }
 
 
@@ -102,7 +114,7 @@ class FormulaFragment : Fragment() {
     private fun getAlgText(algNumber: Int): String? {
         val text: String?
         val name = mode + algNumber.toString()
-        text =getString(resources.getIdentifier(name, "string", packageName))
+        text = getString(resources.getIdentifier(name, "string", packageName))
 
         if ("" == text) {
             return null
@@ -123,7 +135,9 @@ class FormulaFragment : Fragment() {
         val recyclerView: RecyclerView = _binding.recycleView
         recyclerView.isNestedScrollingEnabled = false
 
-        val count = getAlgCount()
+        var count = getAlgCount()
+        if (settinsPreview && isGrid) count = 6
+        if (settinsPreview && !isGrid) count = 2
 
         val imageData = mutableListOf<Int>()
         val algData = mutableListOf<String>()
@@ -137,24 +151,23 @@ class FormulaFragment : Fragment() {
         }
         val adapter = if (isGrid) {
             recyclerView.layoutManager = GridLayoutManager(requireContext(), 3)
-            CustomRecyclerAdapter(imageData)
+            CustomRecyclerAdapter(imageData, mode!!, isCounting)
         } else {
             recyclerView.layoutManager = LinearLayoutManager(requireContext())
             CustomRecyclerAdapter(titleData, imageData, algData, isCounting)
         }
-        adapter.onClickListener = onClickListener
+        if (!settinsPreview) adapter.onClickListener = onClickListener
         recyclerView.adapter = adapter
     }
 
     companion object {
         @JvmStatic
-        fun newInstance(param1: String, param2: String, param3: Boolean, param4: Boolean) =
+        fun newInstance(param1: String, param2: String, param3: Boolean = false) =
             FormulaFragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)
                     putBoolean(ARG_PARAM3, param3)
-                    putBoolean(ARG_PARAM4, param4)
                 }
             }
     }

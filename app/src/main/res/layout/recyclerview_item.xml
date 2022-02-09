@@ -33,14 +33,29 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="16sp"
+            android:paddingRight="10dp"
             android:text="0" />
 
-        <ImageView
-            android:id="@+id/algorithm_line_image"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/oll0"
-            android:contentDescription="oll0" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/algorithm_line_under_image_text"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="OLL 1"
+                android:layout_gravity="center"
+                android:textSize="12sp"
+                android:paddingBottom="5dp" />
+            <ImageView
+                android:id="@+id/algorithm_line_image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/oll0"
+                android:contentDescription="oll0" />
+        </LinearLayout>
 
         <TextView
             android:id="@+id/algorithm_line_alg"
