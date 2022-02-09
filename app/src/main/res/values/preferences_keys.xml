@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="counting_key" translatable="false">numbering</string>
+    <bool name="counting_default_key" translatable="false">false</bool>
+
+    <string name="grid_key" translatable="false">grid</string>
+    <bool name="grid_default_key" translatable="false">false</bool>
+
+
+</resources>

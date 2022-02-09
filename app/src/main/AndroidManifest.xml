@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="ru.extroot.newcubeguide">
+    package="ru.extroot.newcubeguide" >
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -9,7 +9,13 @@
         android:icon="@drawable/logo"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/Theme.CubeGuide">
+        android:theme="@style/Theme.CubeGuide" >
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="false"
+            android:label="@string/settings_btn"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Theme.CubeGuide.NoActionBar" />
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
@@ -35,9 +41,10 @@
 
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
