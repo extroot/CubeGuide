@@ -17,6 +17,16 @@ android {
         versionCode 26
         versionName "1.5.5"
 
+        def keysPropertiesFile = rootProject.file("keys.properties")
+        def properties = new Properties()
+        properties.load(new FileInputStream(keysPropertiesFile))
+
+        buildConfigField "String", "AD_TOP_ID", properties.getProperty('AD_TOP_ID')
+        buildConfigField "String", "SENTRY_DSN", properties.getProperty('SENTRY_DSN')
+
+//        manifestPlaceholders["SENTRY_DSN"] = properties.getProperty('SENTRY_DSN').toString()
+
+
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -48,12 +58,12 @@ dependencies {
     implementation "com.mikepenz:materialdrawer:7.0.0"
     implementation "com.mikepenz:materialdrawer-nav:7.0.0"
 
-    implementation 'com.google.android.gms:play-services-ads:20.5.0'
+    implementation 'com.google.android.gms:play-services-ads:20.6.0'
     implementation 'com.mikhaellopez:ratebottomsheet:1.1.0'
     implementation 'io.sentry:sentry-android:6.0.0-alpha.1'
     implementation 'androidx.preference:preference-ktx:1.2.0'
-    implementation 'androidx.navigation:navigation-fragment-ktx:2.4.0'
-    implementation 'androidx.navigation:navigation-ui-ktx:2.4.0'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.4.1'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.4.1'
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'

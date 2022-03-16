@@ -21,7 +21,11 @@ import com.mikepenz.materialdrawer.model.*
 
 import com.mikhaellopez.ratebottomsheet.RateBottomSheet
 import com.mikhaellopez.ratebottomsheet.RateBottomSheetManager
+import io.sentry.SentryEvent
+import io.sentry.SentryLevel
+import io.sentry.SentryOptions.BeforeSendCallback
 import io.sentry.UserFeedback
+import io.sentry.android.core.SentryAndroid
 
 import ru.extroot.newcubeguide.databinding.ActivityMainBinding
 import ru.extroot.newcubeguide.databinding.DialogSendFeedbackBinding
@@ -112,6 +116,18 @@ class MainActivity: AppCompatActivity() {
             setContentView(it.root)
         }
 
+        SentryAndroid.init(this) { options ->
+            options.dsn = BuildConfig.SENTRY_DSN
+            options.beforeSend =
+                BeforeSendCallback { event: SentryEvent, hint: Any? ->
+                    if (SentryLevel.DEBUG == event.level) {
+                        null
+                    } else {
+                        event
+                    }
+                }
+        }
+
         setSupportActionBar(binding.toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setTitle(R.string.easy3_header)
@@ -179,19 +195,11 @@ class MainActivity: AppCompatActivity() {
         // Google's examples for Adaptive Banner outdated
         // They also use deprecated code of display metrics, so...
         topAdView.adSize = AdSize.SMART_BANNER
-        topAdView.adUnitId = "ca-app-pub-9813480536729767/9546708066"
-
-        bottomAdView = AdView(this)
-        bottomAdView.adSize = AdSize.SMART_BANNER
-        bottomAdView.adUnitId = "ca-app-pub-9813480536729767/4920397105"
+        topAdView.adUnitId = BuildConfig.AD_TOP_ID
 
         adRequest = AdRequest.Builder().build()
-
         binding.mainView.addView(topAdView, 0)
-        binding.mainView.addView(bottomAdView)
-
         topAdView.loadAd(adRequest)
-        bottomAdView.loadAd(adRequest)
     }
 
     private fun getModeById(id: Long): String? {
@@ -285,7 +293,7 @@ class MainActivity: AppCompatActivity() {
         startActivity(intent)
     }
 
-     private fun handleDrawer() {
+    private fun handleDrawer() {
         result = DrawerBuilder()
             .withActivity(this)
             .withToolbar(binding.toolbar)
