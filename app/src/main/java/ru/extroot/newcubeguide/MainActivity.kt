@@ -262,21 +262,6 @@ class MainActivity: AppCompatActivity() {
         binding.toolbar.title = getString(resources.getIdentifier(mode + "_header", "string", packageName))
     }
 
-    private fun checkVerticalMode(): Boolean {
-        return "l3c" == mode || "eo" == mode || "cp" == mode || "ep" == mode
-    }
-
-    private fun isTextMode(): Boolean {
-        return "easy3" == mode || "cfop_about" == mode
-    }
-
-    private fun updateAds() {
-        bottomAdView.visibility = if (isTextMode() || (!checkVerticalMode() && !isGrid)) {
-            View.VISIBLE
-        } else {
-            View.GONE
-        }
-    }
 
     private fun replaceFr() {
         supportFragmentManager.commit {
@@ -396,7 +381,6 @@ class MainActivity: AppCompatActivity() {
                         EASY_3_ID -> {
                             mode = "easy3"
                             setHeader()
-                            updateAds()
                             binding.mainScroll.scrollTo(0, 0)
                             supportFragmentManager.commit {
                                 setReorderingAllowed(true)
@@ -426,7 +410,6 @@ class MainActivity: AppCompatActivity() {
                             }
                             mode = getModeById(drawerItem.identifier)!!
                             setHeader()
-                            updateAds()
                             binding.mainScroll.scrollTo(0, 0)
                             replaceFr()
                             return false
