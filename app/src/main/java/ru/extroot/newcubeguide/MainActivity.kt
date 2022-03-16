@@ -10,23 +10,19 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.os.bundleOf
 import androidx.fragment.app.*
 import androidx.preference.PreferenceManager
-
-import io.sentry.Sentry
 import com.google.android.gms.ads.*
-
 import com.mikepenz.materialdrawer.Drawer
 import com.mikepenz.materialdrawer.DrawerBuilder
-import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem
 import com.mikepenz.materialdrawer.model.*
-
+import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem
 import com.mikhaellopez.ratebottomsheet.RateBottomSheet
 import com.mikhaellopez.ratebottomsheet.RateBottomSheetManager
+import io.sentry.Sentry
 import io.sentry.SentryEvent
 import io.sentry.SentryLevel
 import io.sentry.SentryOptions.BeforeSendCallback
 import io.sentry.UserFeedback
 import io.sentry.android.core.SentryAndroid
-
 import ru.extroot.newcubeguide.databinding.ActivityMainBinding
 import ru.extroot.newcubeguide.databinding.DialogSendFeedbackBinding
 
@@ -101,7 +97,6 @@ class MainActivity: AppCompatActivity() {
 
     private lateinit var result: Drawer
     private lateinit var topAdView: AdView
-    private lateinit var bottomAdView: AdView
     private lateinit var adRequest: AdRequest
     private lateinit var feedbackDialog: AlertDialog
 
