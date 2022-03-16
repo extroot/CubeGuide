@@ -1,9 +1,6 @@
 package ru.extroot.newcubeguide
 
-import android.content.Context
-import android.content.SharedPreferences
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.os.bundleOf
 import androidx.fragment.app.commit
@@ -31,7 +28,6 @@ class SettingsActivity : AppCompatActivity(), Preference.OnPreferenceChangeListe
     }
 
     override fun onPreferenceChange(preference: Preference, newValue: Any?): Boolean {
-        Log.i(null ,"123")
         updateFr()
         return true
     }
