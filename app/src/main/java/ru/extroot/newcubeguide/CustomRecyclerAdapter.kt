@@ -1,6 +1,5 @@
 package ru.extroot.newcubeguide
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -57,7 +56,6 @@ class CustomRecyclerAdapter(): RecyclerView.Adapter<CustomRecyclerAdapter.MyView
             holder.formulaTextView.visibility = View.GONE
             holder.countingTextView.visibility = View.GONE
 
-            Log.i(null, isCounting.toString())
             if (isCounting) {
                 holder.underImageTextView.visibility = View.VISIBLE
                 holder.underImageTextView.text = mode.uppercase() + " " + (position + 1).toString()
