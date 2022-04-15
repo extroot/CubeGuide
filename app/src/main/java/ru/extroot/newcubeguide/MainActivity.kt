@@ -160,7 +160,7 @@ class MainActivity: AppCompatActivity() {
     }
 
     private fun initFeedBackDialog() {
-        feedbackDialog = AlertDialog.Builder(this)
+        feedbackDialog = AlertDialog.Builder(this, R.style.Theme_CubeGuide_MaterialAlertDialog)
             .setView(dialogFeedBackBinding.root)
             .setPositiveButton(R.string.rating_dialog_feedback_custom_button_submit
             ) { _, _ ->

@@ -14,7 +14,7 @@ android {
         applicationId "ru.extroot.newcubeguide"
         minSdk 23
         targetSdk 31
-        versionCode 26
+        versionCode 28
         versionName "1.5.5"
 
         def keysPropertiesFile = rootProject.file("keys.properties")
@@ -23,9 +23,6 @@ android {
 
         buildConfigField "String", "AD_TOP_ID", properties.getProperty('AD_TOP_ID')
         buildConfigField "String", "SENTRY_DSN", properties.getProperty('SENTRY_DSN')
-
-//        manifestPlaceholders["SENTRY_DSN"] = properties.getProperty('SENTRY_DSN').toString()
-
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
