@@ -1,13 +1,15 @@
 package ru.extroot.newcubeguide
 
-import android.app.AlertDialog
-import android.os.Bundle
 import android.view.*
+import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.preference.PreferenceManager
+import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
+
+import com.afollestad.materialdialogs.MaterialDialog
+import com.afollestad.materialdialogs.customview.customView
 
 import io.sentry.Sentry
 import io.sentry.SentryLevel
@@ -27,7 +29,6 @@ class FormulaFragment : Fragment() {
     private var isGrid = true
     private var settinsPreview = false
 
-    private lateinit var previewDialog: AlertDialog
     private lateinit var dialogView: View
 
     private lateinit var _binding: FragmentFormulaBinding
@@ -50,9 +51,6 @@ class FormulaFragment : Fragment() {
 
         dialogPreviewBinding = DialogFormulaPreviewBinding.inflate(layoutInflater)
         dialogView = dialogPreviewBinding.root
-        previewDialog = AlertDialog.Builder(requireContext())
-            .setView(dialogView)
-            .create()
     }
 
     private fun getSettings() {
@@ -125,10 +123,14 @@ class FormulaFragment : Fragment() {
     private val onClickListener = View.OnClickListener { v:View ->
         val position = v.tag.toString().toInt()
         val title = mode.toString().uppercase() + " " + (position + 1).toString()
-        dialogPreviewBinding.previewTitleText.text = title
+
         dialogPreviewBinding.previewImage.setImageResource(getImageId(position))
-        dialogPreviewBinding.previewFormulaText.text = getAlgText(position)
-        previewDialog.show()
+
+        MaterialDialog(requireContext()).show {
+            title(text=title)
+            customView(view=dialogView)
+            message(text=getAlgText(position))
+        }
     }
 
     private fun draw() {
