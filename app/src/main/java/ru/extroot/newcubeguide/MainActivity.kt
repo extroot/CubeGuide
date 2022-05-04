@@ -14,6 +14,8 @@ import com.google.android.gms.ads.*
 
 import com.afollestad.materialdialogs.input.input
 import com.afollestad.materialdialogs.MaterialDialog
+import com.afollestad.materialdialogs.callbacks.onPreShow
+import com.afollestad.materialdialogs.input.getInputField
 
 import com.mikepenz.materialdrawer.Drawer
 import com.mikepenz.materialdrawer.DrawerBuilder
@@ -374,9 +376,9 @@ class MainActivity : AppCompatActivity() {
                         FEEDBACK_ID -> {
                             MaterialDialog(this@MainActivity).show() {
                                 title(R.string.rating_dialog_feedback_title)
+                                message(R.string.rating_dialog_feedback_custom_message)
                                 input(
-                                    hintRes = R.string.rating_dialog_feedback_custom_message,
-                                    inputType = InputType.TYPE_TEXT_VARIATION_LONG_MESSAGE,
+                                    inputType = InputType.TYPE_TEXT_FLAG_MULTI_LINE,
                                 ) { dialog, text ->
                                     val sentryId = Sentry.captureMessage("User FeedBack")
                                     val userFeedback = UserFeedback(sentryId).apply {
@@ -387,6 +389,13 @@ class MainActivity : AppCompatActivity() {
 
                                 positiveButton(R.string.rating_dialog_feedback_button_submit)
                                 negativeButton(R.string.rating_dialog_feedback_button_cancel)
+
+                                // TODO: make fork of lib and add it to init:
+                                onPreShow { dialog ->
+                                    val editText = dialog.getInputField()
+                                    editText.setLines(6)
+                                    editText.gravity = Gravity.TOP
+                                }
                             }
                             return true
                         }
