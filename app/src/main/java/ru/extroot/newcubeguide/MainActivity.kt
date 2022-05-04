@@ -1,33 +1,39 @@
 package ru.extroot.newcubeguide
 
-import android.app.AlertDialog
+import android.view.*
+import android.os.Bundle
+import android.text.InputType
 import android.content.Intent
 import android.content.SharedPreferences
-import android.os.Bundle
-import android.view.*
-import android.widget.*
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.os.bundleOf
 import androidx.fragment.app.*
+import androidx.core.os.bundleOf
+import androidx.appcompat.app.AppCompatActivity
 import androidx.preference.PreferenceManager
+
 import com.google.android.gms.ads.*
+
+import com.afollestad.materialdialogs.input.input
+import com.afollestad.materialdialogs.MaterialDialog
+
 import com.mikepenz.materialdrawer.Drawer
 import com.mikepenz.materialdrawer.DrawerBuilder
 import com.mikepenz.materialdrawer.model.*
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem
+
 import com.mikhaellopez.ratebottomsheet.RateBottomSheet
 import com.mikhaellopez.ratebottomsheet.RateBottomSheetManager
+
 import io.sentry.Sentry
 import io.sentry.SentryEvent
 import io.sentry.SentryLevel
-import io.sentry.SentryOptions.BeforeSendCallback
 import io.sentry.UserFeedback
 import io.sentry.android.core.SentryAndroid
+import io.sentry.SentryOptions.BeforeSendCallback
+
 import ru.extroot.newcubeguide.databinding.ActivityMainBinding
-import ru.extroot.newcubeguide.databinding.DialogSendFeedbackBinding
 
 
-class MainActivity: AppCompatActivity() {
+class MainActivity : AppCompatActivity() {
     companion object {
         private const val F2L_ID: Long = 1
         private const val PLL_ID: Long = 2
@@ -98,12 +104,10 @@ class MainActivity: AppCompatActivity() {
     private lateinit var result: Drawer
     private lateinit var topAdView: AdView
     private lateinit var adRequest: AdRequest
-    private lateinit var feedbackDialog: AlertDialog
 
     private lateinit var sharedPref: SharedPreferences
 
     private lateinit var binding: ActivityMainBinding
-    private lateinit var dialogFeedBackBinding: DialogSendFeedbackBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -141,8 +145,8 @@ class MainActivity: AppCompatActivity() {
             }
         }
 
-        dialogFeedBackBinding = DialogSendFeedbackBinding.inflate(layoutInflater)
-        initFeedBackDialog()
+//        dialogFeedBackBinding = DialogSendFeedbackBinding.inflate(layoutInflater)
+//        initFeedBackDialog()
 
         try {
             initAd()
@@ -157,30 +161,6 @@ class MainActivity: AppCompatActivity() {
             .setRemindInterval(3)
             .monitor()
         RateBottomSheet.showRateBottomSheetIfMeetsConditions(this)
-    }
-
-    private fun initFeedBackDialog() {
-        feedbackDialog = AlertDialog.Builder(this)
-            .setView(dialogFeedBackBinding.root)
-            .setPositiveButton(R.string.rating_dialog_feedback_custom_button_submit
-            ) { _, _ ->
-                val userFeedbackEditText = dialogFeedBackBinding.userFeedbackEditText
-                val userComment = userFeedbackEditText.text.toString()
-
-                if (userComment != "") {
-                    val sentryId = Sentry.captureMessage("User FeedBack")
-                    val userFeedback = UserFeedback(sentryId).apply {
-                        comments = userComment
-                    }
-                    Sentry.captureUserFeedback(userFeedback)
-                } else {
-                    Toast.makeText(this, R.string.emptyFeedBackField, Toast.LENGTH_SHORT).show()
-                    // Sentry.captureMessage("Empty user Feedback", SentryLevel.WARNING)
-                }
-                userFeedbackEditText.text = ""
-            }
-            .setNegativeButton(R.string.rating_dialog_feedback_button_cancel, null)
-            .create()
     }
 
     private fun initAd() {
@@ -392,7 +372,22 @@ class MainActivity: AppCompatActivity() {
                             return true
                         }
                         FEEDBACK_ID -> {
-                            feedbackDialog.show()
+                            MaterialDialog(this@MainActivity).show() {
+                                title(R.string.rating_dialog_feedback_title)
+                                input(
+                                    hintRes = R.string.rating_dialog_feedback_custom_message,
+                                    inputType = InputType.TYPE_TEXT_VARIATION_LONG_MESSAGE,
+                                ) { dialog, text ->
+                                    val sentryId = Sentry.captureMessage("User FeedBack")
+                                    val userFeedback = UserFeedback(sentryId).apply {
+                                        comments = text.toString()
+                                    }
+                                    Sentry.captureUserFeedback(userFeedback)
+                                }
+
+                                positiveButton(R.string.rating_dialog_feedback_button_submit)
+                                negativeButton(R.string.rating_dialog_feedback_button_cancel)
+                            }
                             return true
                         }
                         SETTINGS_ID -> {

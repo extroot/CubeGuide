@@ -1,11 +1,12 @@
 package ru.extroot.newcubeguide
 
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
+import androidx.preference.*
 import androidx.core.os.bundleOf
 import androidx.fragment.app.commit
 import androidx.fragment.app.replace
-import androidx.preference.*
+import androidx.appcompat.app.AppCompatActivity
+
 import ru.extroot.newcubeguide.databinding.SettingsActivityBinding
 
 class SettingsActivity : AppCompatActivity(), Preference.OnPreferenceChangeListener {
@@ -59,14 +60,14 @@ class SettingsActivity : AppCompatActivity(), Preference.OnPreferenceChangeListe
             gridPreference.switchTextOn = getString(R.string.alg_container_on)
             gridPreference.switchTextOff = getString(R.string.alg_container_off)
             gridPreference.title = getString(R.string.alg_container_type)
-            gridPreference.setDefaultValue(R.bool.grid_default_key)
+            gridPreference.setDefaultValue(resources.getBoolean(R.bool.grid_default_key))
             gridPreference.onPreferenceChangeListener = listener
             algContainerTypeCategory.addPreference(gridPreference)
 
             val countingPreference = SwitchPreferenceCompat(context)
             countingPreference.key = getString(R.string.counting_key)
             countingPreference.title = getString(R.string.number_switch)
-            countingPreference.setDefaultValue(R.bool.counting_default_key)
+            countingPreference.setDefaultValue(resources.getBoolean(R.bool.counting_default_key))
             countingPreference.onPreferenceChangeListener = listener
             algContainerTypeCategory.addPreference(countingPreference)
 

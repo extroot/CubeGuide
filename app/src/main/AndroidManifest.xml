@@ -20,9 +20,7 @@
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-3940256099942544~3347511713" />
-        <!--        <meta-data-->
-        <!--            android:name="io.sentry.dsn"-->
-        <!--            android:value="https://dc1077f211664caabf39376362729b7c@o1122268.ingest.sentry.io/6159683" />-->
+
         <meta-data
             android:name="io.sentry.auto-init"
             android:value="false" />

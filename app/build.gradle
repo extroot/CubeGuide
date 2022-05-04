@@ -24,9 +24,6 @@ android {
         buildConfigField "String", "AD_TOP_ID", properties.getProperty('AD_TOP_ID')
         buildConfigField "String", "SENTRY_DSN", properties.getProperty('SENTRY_DSN')
 
-//        manifestPlaceholders["SENTRY_DSN"] = properties.getProperty('SENTRY_DSN').toString()
-
-
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -62,8 +59,11 @@ dependencies {
     implementation 'com.mikhaellopez:ratebottomsheet:1.1.0'
     implementation 'io.sentry:sentry-android:6.0.0-alpha.1'
     implementation 'androidx.preference:preference-ktx:1.2.0'
-    implementation 'androidx.navigation:navigation-fragment-ktx:2.4.1'
-    implementation 'androidx.navigation:navigation-ui-ktx:2.4.1'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.4.2'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.4.2'
+
+    implementation 'com.afollestad.material-dialogs:core:3.3.0'
+    implementation 'com.afollestad.material-dialogs:input:3.3.0'
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
