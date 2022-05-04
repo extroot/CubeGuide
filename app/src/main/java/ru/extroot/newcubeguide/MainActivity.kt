@@ -147,8 +147,6 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-//        dialogFeedBackBinding = DialogSendFeedbackBinding.inflate(layoutInflater)
-//        initFeedBackDialog()
 
         try {
             initAd()
@@ -405,6 +403,7 @@ class MainActivity : AppCompatActivity() {
                         }
                         else -> {
                             if (getModeById(drawerItem.identifier) == null) {
+                                Sentry.captureMessage("null Mode parameter", SentryLevel.FATAL)
                                 return true
                             }
                             mode = getModeById(drawerItem.identifier)!!

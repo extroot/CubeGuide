@@ -1,12 +1,11 @@
 package ru.extroot.newcubeguide
 
 import android.os.Bundle
-import androidx.preference.*
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.os.bundleOf
 import androidx.fragment.app.commit
 import androidx.fragment.app.replace
-import androidx.appcompat.app.AppCompatActivity
-
+import androidx.preference.*
 import ru.extroot.newcubeguide.databinding.SettingsActivityBinding
 
 class SettingsActivity : AppCompatActivity(), Preference.OnPreferenceChangeListener {
@@ -29,6 +28,18 @@ class SettingsActivity : AppCompatActivity(), Preference.OnPreferenceChangeListe
     }
 
     override fun onPreferenceChange(preference: Preference, newValue: Any?): Boolean {
+        if (preference.key == "change_rw_m") {
+            // It checks like if 'smth' in string meh
+            // TODO: Find normal way to save MultiSelectListPreference
+            val values: CharSequence = newValue.toString()
+            with (preference.sharedPreferences!!.edit()) {
+                putBoolean("replace_rw", values.contains("replace_rw"))
+                putBoolean("replace_lw", values.contains("replace_lw"))
+                putBoolean("replace_dw", values.contains("replace_dw"))
+                putBoolean("replace_uw", values.contains("replace_uw"))
+                apply()
+            }
+        }
         updateFr()
         return true
     }
@@ -51,6 +62,20 @@ class SettingsActivity : AppCompatActivity(), Preference.OnPreferenceChangeListe
         override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
             val context = preferenceManager.context
             val screen = preferenceManager.createPreferenceScreen(context)
+
+            val algsCategory = PreferenceCategory(context)
+            algsCategory.title = "Настройки формул"
+            screen.addPreference(algsCategory)
+
+            val changeRw = MultiSelectListPreference(context)
+            changeRw.title = "Заменять Rw на R"
+            changeRw.key = "change_rw_m"
+            changeRw.setEntries(R.array.replace_rwr)
+            changeRw.setEntryValues(R.array.replace_rwr_values)
+            changeRw.onPreferenceChangeListener = listener
+            algsCategory.addPreference(changeRw)
+
+
             val algContainerTypeCategory = PreferenceCategory(context)
             algContainerTypeCategory.title = getString(R.string.alg_container_header)
             screen.addPreference(algContainerTypeCategory)

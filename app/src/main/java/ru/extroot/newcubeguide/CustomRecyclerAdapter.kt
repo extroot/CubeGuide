@@ -1,10 +1,10 @@
 package ru.extroot.newcubeguide
 
-import android.view.LayoutInflater
+import android.widget.TextView
+import android.widget.ImageView
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
+import android.view.LayoutInflater
 import androidx.recyclerview.widget.RecyclerView
 
 class CustomRecyclerAdapter(): RecyclerView.Adapter<CustomRecyclerAdapter.MyViewHolder>() {

@@ -103,9 +103,9 @@
 
     <string name="title_activity_settings" translatable="false">Settings</string>
 
-    <string name="alg_container_type">Показывать формулы в сетку</string>
-    <string name="alg_container_header">Вид формул</string>
-    <string name="alg_container_on">Формулы отображаются в сетке</string>
-    <string name="alg_container_off">Формулы отображаются в строчку</string>
+    <string name="alg_container_type">Show formulas in grid</string>
+    <string name="alg_container_header">Formula display type</string>
+    <string name="alg_container_on">Formulas are displayed in a grid</string>
+    <string name="alg_container_off">Formulas are displayed in a line</string>
 
 </resources>

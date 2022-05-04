@@ -87,4 +87,8 @@
     <string name="translate_btn">Помочь с переводом</string>
     <string name="settings_btn">Настройки</string>
 
+    <string name="alg_container_type">Показывать формулы в сетку</string>
+    <string name="alg_container_header">Вид формул</string>
+    <string name="alg_container_on">Формулы отображаются в сетке</string>
+    <string name="alg_container_off">Формулы отображаются в строчку</string>
 </resources>

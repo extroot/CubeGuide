@@ -12,7 +12,6 @@ import com.afollestad.materialdialogs.MaterialDialog
 import com.afollestad.materialdialogs.customview.customView
 
 import io.sentry.Sentry
-import io.sentry.SentryLevel
 import ru.extroot.newcubeguide.databinding.DialogFormulaPreviewBinding
 
 import ru.extroot.newcubeguide.databinding.FragmentFormulaBinding
@@ -22,12 +21,17 @@ private const val ARG_PARAM2 = "packageName"
 private const val ARG_PARAM3 = "settingPreview"
 
 class FormulaFragment : Fragment() {
-    private var mode: String? = null
+    private var mode: String = "f2l"
     private var packageName: String? = null
-    private var picMode: String? = null
+    private var picMode: String = "f2l"
     private var isCounting: Boolean = true
     private var isGrid = true
     private var settinsPreview = false
+
+    private var replaceRw = false
+    private var replaceLw = false
+    private var replaceDw = false
+    private var replaceUw = false
 
     private lateinit var dialogView: View
 
@@ -37,14 +41,9 @@ class FormulaFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
-            mode = it.getString(ARG_PARAM1)
+            mode = it.getString(ARG_PARAM1) ?: "f2l"
             packageName = it.getString(ARG_PARAM2)
             settinsPreview = it.getBoolean(ARG_PARAM3)
-        }
-        if (mode == null) {
-            Sentry.captureMessage("null Mode parameter", SentryLevel.FATAL)
-            mode = "f2l"
-            // TODO: message for user
         }
         picMode = getPicModeByMode()
         getSettings()
@@ -65,6 +64,11 @@ class FormulaFragment : Fragment() {
         } else  {
             isCounting = sharedPref.getBoolean(getString(R.string.counting_key), isCountingDefault)
             isGrid = sharedPref.getBoolean(getString(R.string.grid_key), isGridDefault)
+
+            replaceRw = sharedPref.getBoolean("replace_rw", false)
+            replaceLw = sharedPref.getBoolean("replace_lw", false)
+            replaceDw = sharedPref.getBoolean("replace_dw", false)
+            replaceUw = sharedPref.getBoolean("replace_uw", false)
         }
     }
 
@@ -75,7 +79,7 @@ class FormulaFragment : Fragment() {
         return _binding.root
     }
 
-    private fun getPicModeByMode(): String? {
+    private fun getPicModeByMode(): String {
         return when (mode) {
             "oh_oll_lh" -> "oll"
             "oh_pll_lh" -> "pll"
@@ -110,19 +114,24 @@ class FormulaFragment : Fragment() {
     }
 
     private fun getAlgText(algNumber: Int): String? {
-        val text: String?
+        var text: String?
         val name = mode + algNumber.toString()
         text = getString(resources.getIdentifier(name, "string", packageName))
 
         if ("" == text) {
             return null
         }
+
+        if (replaceRw) text = text.replace("Rw", "r")
+        if (replaceLw) text = text.replace("Lw", "l")
+        if (replaceDw) text = text.replace("Dw", "d")
+        if (replaceUw) text = text.replace("Uw", "u")
         return text
     }
 
     private val onClickListener = View.OnClickListener { v:View ->
         val position = v.tag.toString().toInt()
-        val title = mode.toString().uppercase() + " " + (position + 1).toString()
+        val title = mode.uppercase() + " " + (position + 1).toString()
 
         dialogPreviewBinding.previewImage.setImageResource(getImageId(position))
 
@@ -153,7 +162,7 @@ class FormulaFragment : Fragment() {
         }
         val adapter = if (isGrid) {
             recyclerView.layoutManager = GridLayoutManager(requireContext(), 3)
-            CustomRecyclerAdapter(imageData, mode!!, isCounting)
+            CustomRecyclerAdapter(imageData, mode, isCounting)
         } else {
             recyclerView.layoutManager = LinearLayoutManager(requireContext())
             CustomRecyclerAdapter(titleData, imageData, algData, isCounting)
