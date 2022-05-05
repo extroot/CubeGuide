@@ -64,7 +64,7 @@ class SettingsActivity : AppCompatActivity(), Preference.OnPreferenceChangeListe
 
             val rhOhPreference = SwitchPreferenceCompat(context)
             rhOhPreference.key = getString(R.string.rh_oh_key)
-            rhOhPreference.title = "Right Hand OLL"
+            rhOhPreference.title = getString(R.string.rh_oh_switch_title)
             rhOhPreference.setDefaultValue(resources.getBoolean(R.bool.rh_oh_default_key))
             algsCategory.addPreference(rhOhPreference)
 

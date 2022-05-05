@@ -32,6 +32,8 @@
 
     <string name="algs_settings_header">Настройки формул</string>
     <string name="replace_rw_switch_title">Заменять Rw на R</string>
+    <string name="rh_oh_switch_title">OH для правой руки</string>
+
 
     <string name="counting_switch_title">Нумерация формул</string>
     <string name="alg_container_switch_title">Показывать формулы в сетку</string>

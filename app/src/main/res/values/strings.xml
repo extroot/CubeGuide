@@ -31,6 +31,7 @@
 
     <string name="algs_settings_header">Algs settings</string>
     <string name="replace_rw_switch_title">Replace Rw to r</string>
+    <string name="rh_oh_switch_title">Right Hand OH</string>
 
     <string name="alg_container_header">Formula display type</string>
     <string name="counting_switch_title">Algs counting</string>
