@@ -26,11 +26,8 @@ import com.mikhaellopez.ratebottomsheet.RateBottomSheet
 import com.mikhaellopez.ratebottomsheet.RateBottomSheetManager
 
 import io.sentry.Sentry
-import io.sentry.SentryEvent
 import io.sentry.SentryLevel
 import io.sentry.UserFeedback
-import io.sentry.android.core.SentryAndroid
-import io.sentry.SentryOptions.BeforeSendCallback
 
 import ru.extroot.newcubeguide.databinding.ActivityMainBinding
 
@@ -115,18 +112,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater).also {
             setContentView(it.root)
-        }
-
-        SentryAndroid.init(this) { options ->
-            options.dsn = BuildConfig.SENTRY_DSN
-            options.beforeSend =
-                BeforeSendCallback { event: SentryEvent, hint: Any? ->
-                    if (SentryLevel.DEBUG == event.level) {
-                        null
-                    } else {
-                        event
-                    }
-                }
         }
 
         setSupportActionBar(binding.toolbar)
@@ -375,6 +360,7 @@ class MainActivity : AppCompatActivity() {
                             MaterialDialog(this@MainActivity).show() {
                                 title(R.string.rating_dialog_feedback_title)
                                 message(R.string.rating_dialog_feedback_custom_message)
+                                // TODO: `The result of input is not used` warning. idk why.
                                 input(
                                     inputType = InputType.TYPE_TEXT_FLAG_MULTI_LINE,
                                 ) { dialog, text ->
