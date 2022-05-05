@@ -1,11 +1,12 @@
 package ru.extroot.newcubeguide
 
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
+import androidx.preference.*
 import androidx.core.os.bundleOf
 import androidx.fragment.app.commit
 import androidx.fragment.app.replace
-import androidx.preference.*
+import androidx.appcompat.app.AppCompatActivity
+
 import ru.extroot.newcubeguide.databinding.SettingsActivityBinding
 
 class SettingsActivity : AppCompatActivity(), Preference.OnPreferenceChangeListener {
@@ -46,7 +47,7 @@ class SettingsActivity : AppCompatActivity(), Preference.OnPreferenceChangeListe
         }
     }
 
-    class SettingsFragment(val listener: Preference.OnPreferenceChangeListener) : PreferenceFragmentCompat(), Preference.OnPreferenceChangeListener {
+    class SettingsFragment(private val listener: Preference.OnPreferenceChangeListener) : PreferenceFragmentCompat() {
         override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
             val context = preferenceManager.context
             val screen = preferenceManager.createPreferenceScreen(context)
@@ -88,10 +89,6 @@ class SettingsActivity : AppCompatActivity(), Preference.OnPreferenceChangeListe
             algContainerTypeCategory.addPreference(countingPreference)
 
             preferenceScreen = screen
-        }
-
-        override fun onPreferenceChange(preference: Preference, newValue: Any?): Boolean {
-            return true
         }
     }
 }

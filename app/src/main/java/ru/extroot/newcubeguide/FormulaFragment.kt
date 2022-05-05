@@ -11,8 +11,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.afollestad.materialdialogs.MaterialDialog
 import com.afollestad.materialdialogs.customview.customView
 
-import ru.extroot.newcubeguide.databinding.DialogFormulaPreviewBinding
 import ru.extroot.newcubeguide.databinding.FragmentFormulaBinding
+import ru.extroot.newcubeguide.databinding.DialogFormulaPreviewBinding
 
 private const val ARG_PARAM1 = "mode"
 private const val ARG_PARAM2 = "packageName"

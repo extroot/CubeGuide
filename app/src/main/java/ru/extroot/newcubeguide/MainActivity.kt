@@ -7,8 +7,8 @@ import android.content.Intent
 import android.content.SharedPreferences
 import androidx.fragment.app.*
 import androidx.core.os.bundleOf
-import androidx.appcompat.app.AppCompatActivity
 import androidx.preference.PreferenceManager
+import androidx.appcompat.app.AppCompatActivity
 
 import com.google.android.gms.ads.*
 
@@ -84,27 +84,23 @@ class MainActivity : AppCompatActivity() {
         private const val ZBLL_SUNE_ID: Long = 42
         private const val ZBLL_ANTISUNE_ID: Long = 43
 
-//        private const val OH_OLL_RH_ID: Long = 44
-//        private const val OH_PLL_RH_ID: Long = 45
-//        private const val OH_COLL_RH_ID: Long = 46
-
         // private const val EASY_4_ID: Long = 47;
         // private const val CFOP_ABOUT_ID: Long = 48
 
         private const val REVIEW_ID: Long          = 102
         private const val FEEDBACK_ID: Long        = 103
         private const val SETTINGS_ID: Long        = 104
+
+        const val MODE_KEY = "SAVED_MODE_KEY"
     }
 
-    private var isCounting: Boolean = false
-    private var isGrid: Boolean = false
     private var rhOH: Boolean = false
     private var mode: String = "easy3"
+
 
     private lateinit var result: Drawer
     private lateinit var topAdView: AdView
     private lateinit var adRequest: AdRequest
-
     private lateinit var sharedPref: SharedPreferences
 
     private lateinit var binding: ActivityMainBinding
@@ -119,22 +115,14 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setTitle(R.string.easy3_header)
 
-        val isCountingDefault = resources.getBoolean(R.bool.counting_default_key)
-        val isGridDefault = resources.getBoolean(R.bool.grid_default_key)
         val rhOHDefault = resources.getBoolean(R.bool.rh_oh_default_key)
 
         sharedPref = PreferenceManager.getDefaultSharedPreferences(this)
-        isCounting = sharedPref.getBoolean(getString(R.string.counting_key), isCountingDefault)
-        isGrid = sharedPref.getBoolean(getString(R.string.grid_key), isGridDefault)
         rhOH = sharedPref.getBoolean(getString(R.string.rh_oh_key), rhOHDefault)
 
-        if (savedInstanceState == null) {
-            supportFragmentManager.commit {
-                setReorderingAllowed(true)
-                add<Easy3Fragment>(R.id.mainLayout)
-            }
-        }
+        mode = savedInstanceState?.getString(MODE_KEY) ?: mode
 
+        updateScreen()
 
         try {
             initAd()
@@ -149,6 +137,11 @@ class MainActivity : AppCompatActivity() {
             .setRemindInterval(3)
             .monitor()
         RateBottomSheet.showRateBottomSheetIfMeetsConditions(this)
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putString(MODE_KEY, mode)
     }
 
     private fun initAd() {
@@ -167,33 +160,15 @@ class MainActivity : AppCompatActivity() {
 
     private fun getModeById(id: Long): String? {
         return when (id) {
-            EASY_3_ID -> { "easy3"}
+            EASY_3_ID -> { "easy3" }
 
             F2L_ID -> { "f2l" }
             OLL_ID -> { "oll" }
             PLL_ID -> { "pll" }
 
-            OH_OLL ->   {
-                if (rhOH) {
-                    "oh_oll_rh"
-                } else {
-                    "oh_oll_lh"
-                }
-            }
-            OH_PLL ->   {
-                if (rhOH) {
-                    "oh_pll_rh"
-                } else {
-                    "oh_pll_lh"
-                }
-            }
-            OH_COLL ->  {
-                if (rhOH) {
-                    "oh_coll_rh"
-                } else {
-                    "oh_coll_lh"
-                }
-            }
+            OH_OLL ->   { if (rhOH) "oh_oll_rh" else "oh_oll_lh" }
+            OH_PLL ->   { if (rhOH) "oh_pll_rh" else "oh_pll_lh" }
+            OH_COLL ->   { if (rhOH) "oh_coll_rh" else "oh_coll_lh" }
 
             COLL_ID ->  { "coll" }
             OPF2L_ID -> { "op" }
@@ -236,18 +211,24 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun setHeader() {
+
+    private fun updateScreen() {
         binding.toolbar.title = getString(resources.getIdentifier(mode + "_header", "string", packageName))
-    }
 
+        binding.mainScroll.scrollTo(0, 0)
 
-    private fun replaceFr() {
         supportFragmentManager.commit {
             setReorderingAllowed(true)
-            replace<FormulaFragment>(R.id.mainLayout, args=bundleOf(
-                "mode" to mode,
-                "packageName" to packageName
-            ))
+            if ("easy3" == mode) {
+                replace<Easy3Fragment>(R.id.mainLayout)
+            } else {
+                replace<FormulaFragment>(
+                    R.id.mainLayout, args = bundleOf(
+                        "mode" to mode,
+                        "packageName" to packageName
+                    )
+                )
+            }
         }
     }
 
@@ -349,16 +330,6 @@ class MainActivity : AppCompatActivity() {
             .withOnDrawerItemClickListener(object: Drawer.OnDrawerItemClickListener {
                 override fun onItemClick(view: View?, position: Int, drawerItem: IDrawerItem<*>): Boolean {
                     when (drawerItem.identifier) {
-                        EASY_3_ID -> {
-                            mode = "easy3"
-                            setHeader()
-                            binding.mainScroll.scrollTo(0, 0)
-                            supportFragmentManager.commit {
-                                setReorderingAllowed(true)
-                                replace<Easy3Fragment>(R.id.mainLayout)
-                            }
-                            return false
-                        }
                         REVIEW_ID -> {
                             RateBottomSheetManager(this@MainActivity)
                                 .setDebugForceOpenEnable(true) // False by default
@@ -399,19 +370,19 @@ class MainActivity : AppCompatActivity() {
                             return false
                         }
                         else -> {
-                            if (getModeById(drawerItem.identifier) == null) {
+                            // Not selectable items like expandable
+                            if (drawerItem.identifier < 0) return true
+
+                            mode = if (getModeById(drawerItem.identifier) == null) {
                                 Sentry.captureMessage("null Mode parameter " + drawerItem.identifier.toString(), SentryLevel.FATAL)
-                                return true
-                            }
-                            mode = getModeById(drawerItem.identifier)!!
-                            setHeader()
-                            binding.mainScroll.scrollTo(0, 0)
-                            replaceFr()
+                                "f2l"
+                            } else getModeById(drawerItem.identifier)!!
+
+                            updateScreen()
                             return false
                         }
                     }
                 }
-            })
-            .build()
+            }).build()
     }
 }
