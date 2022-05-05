@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Cube Guide</string>
-    <string name="easy3_header">3x3x3 – Beginners’ Method</string>
 
+    <!--                 Rate popup                 -->
     <string name="rate_popup_ask_title">Like this App?</string>
     <string name="rate_popup_ask_message">Do you like using this application?</string>
     <string name="rate_popup_ask_ok">Yes I do</string>
@@ -12,13 +12,31 @@
     <string name="rate_popup_ok">Rate it now</string>
     <string name="rate_popup_later">Remind me later</string>
     <string name="rate_popup_no">No, thanks</string>
+    <!--                 Rate popup                 -->
 
+
+    <!--                 Feedback dialog                 -->
     <string name="rating_dialog_feedback_title">Give Feedback</string>
     <string name="rating_dialog_feedback_button_cancel">Cancel</string>
     <string name="rating_dialog_feedback_button_submit">Submit</string>
     <string name="rating_dialog_feedback_custom_message">Suggest us what went wrong and we\'ll work on it:</string>
+    <!--                 Feedback dialog                 -->
 
-    <string name="emptyFeedBackField">Empty field passed</string>
+
+    <!--                 Settings Activity and menu items                 -->
+    <string name="title_activity_settings">Settings</string>
+
+    <string name="review_btn">Rate this app</string>
+    <string name="settings_btn">Settings</string>
+
+    <string name="alg_container_header">Formula display type</string>
+    <string name="number_switch">Algs counting</string>
+    <string name="alg_container_type">Show formulas in grid</string>
+    <!--                 Settings Activity and menu items                 -->
+
+
+    <!--                 Methods headers                 -->
+    <string name="easy3_header">3x3x3 – Beginners’ Method</string>
 
     <string name="header_3x3x3">3x3x3 – CFOP method</string>
     <string name="cfop_about_header">About the method</string>
@@ -95,17 +113,5 @@
     <string name="eo_header">EO – Edges Orientation</string>
     <string name="cp_header">CP – Corners Permutation</string>
     <string name="ep_header">EP – Edges Permutation</string>
-
-    <string name="number_switch">Algs counting</string>
-    <string name="review_btn">Rate this app</string>
-    <string name="translate_btn">Help with translation</string>
-    <string name="settings_btn">Settings</string>
-
-    <string name="title_activity_settings" translatable="false">Settings</string>
-
-    <string name="alg_container_type">Show formulas in grid</string>
-    <string name="alg_container_header">Formula display type</string>
-    <string name="alg_container_on">Formulas are displayed in a grid</string>
-    <string name="alg_container_off">Formulas are displayed in a line</string>
-
+    <!--                 Methods headers                 -->
 </resources>
