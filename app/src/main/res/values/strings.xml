@@ -29,9 +29,12 @@
     <string name="review_btn">Rate this app</string>
     <string name="settings_btn">Settings</string>
 
+    <string name="algs_settings_header">Algs settings</string>
+    <string name="replace_rw_switch_title">Replace Rw to r</string>
+
     <string name="alg_container_header">Formula display type</string>
-    <string name="number_switch">Algs counting</string>
-    <string name="alg_container_type">Show formulas in grid</string>
+    <string name="counting_switch_title">Algs counting</string>
+    <string name="alg_container_switch_title">Show formulas in grid</string>
     <!--                 Settings Activity and menu items                 -->
 
 

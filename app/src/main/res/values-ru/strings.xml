@@ -29,9 +29,12 @@
 
     <string name="review_btn">Оценить приложение</string>
     <string name="settings_btn">Настройки</string>
-    
-    <string name="number_switch">Нумерация формул</string>
-    <string name="alg_container_type">Показывать формулы в сетку</string>
+
+    <string name="algs_settings_header">Настройки формул</string>
+    <string name="replace_rw_switch_title">Заменять Rw на R</string>
+
+    <string name="counting_switch_title">Нумерация формул</string>
+    <string name="alg_container_switch_title">Показывать формулы в сетку</string>
     <string name="alg_container_header">Вид формул</string>
     <!--                 Страница настроек и доп. поля меню                 -->
 

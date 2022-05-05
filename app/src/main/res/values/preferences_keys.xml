@@ -6,17 +6,7 @@
     <string name="grid_key" translatable="false">grid</string>
     <bool name="grid_default_key" translatable="false">false</bool>
 
-    <string-array name="replace_rwr">
-        <item>Rw to r</item>
-        <item>Lw to l</item>
-        <item>Dw to d</item>
-        <item>Uw to u</item>
-    </string-array>
+    <string name="replace_rw_key" translatable="false">replace_rw</string>
+    <bool name="replace_rw_default_key" translatable="false">false</bool>
 
-    <string-array name="replace_rwr_values">
-        <item>replace_rw</item>
-        <item>replace_lw</item>
-        <item>replace_dw</item>
-        <item>replace_uw</item>
-    </string-array>
 </resources>

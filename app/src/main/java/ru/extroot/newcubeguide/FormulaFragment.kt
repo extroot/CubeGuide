@@ -29,9 +29,6 @@ class FormulaFragment : Fragment() {
     private var settinsPreview = false
 
     private var replaceRw = false
-    private var replaceLw = false
-    private var replaceDw = false
-    private var replaceUw = false
 
     private lateinit var dialogView: View
 
@@ -55,20 +52,18 @@ class FormulaFragment : Fragment() {
     private fun getSettings() {
         val isCountingDefault = resources.getBoolean(R.bool.counting_default_key)
         val isGridDefault = resources.getBoolean(R.bool.grid_default_key)
+        val replaceRwDefault = resources.getBoolean(R.bool.replace_rw_default_key)
 
         val sharedPref = PreferenceManager.getDefaultSharedPreferences(requireContext())
         if (sharedPref == null) {
             Sentry.captureMessage("getPreferences error")
             isGrid = isGridDefault
             isCounting = isCountingDefault
+            replaceRw = replaceRwDefault
         } else  {
             isCounting = sharedPref.getBoolean(getString(R.string.counting_key), isCountingDefault)
             isGrid = sharedPref.getBoolean(getString(R.string.grid_key), isGridDefault)
-
-            replaceRw = sharedPref.getBoolean("replace_rw", false)
-            replaceLw = sharedPref.getBoolean("replace_lw", false)
-            replaceDw = sharedPref.getBoolean("replace_dw", false)
-            replaceUw = sharedPref.getBoolean("replace_uw", false)
+            replaceRw = sharedPref.getBoolean(getString(R.string.replace_rw_key), replaceRwDefault)
         }
     }
 
@@ -122,10 +117,13 @@ class FormulaFragment : Fragment() {
             return null
         }
 
-        if (replaceRw) text = text.replace("Rw", "r")
-        if (replaceLw) text = text.replace("Lw", "l")
-        if (replaceDw) text = text.replace("Dw", "d")
-        if (replaceUw) text = text.replace("Uw", "u")
+        if (replaceRw) {
+            text = text.replace("Rw", "r")
+                .replace("Lw", "l")
+                .replace("Dw", "d")
+                .replace("Uw", "u")
+        }
+
         return text
     }
 

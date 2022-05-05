@@ -28,18 +28,6 @@ class SettingsActivity : AppCompatActivity(), Preference.OnPreferenceChangeListe
     }
 
     override fun onPreferenceChange(preference: Preference, newValue: Any?): Boolean {
-        if (preference.key == "change_rw_m") {
-            // It checks like if 'smth' in string meh
-            // TODO: Find normal way to save MultiSelectListPreference
-            val values: CharSequence = newValue.toString()
-            with (preference.sharedPreferences!!.edit()) {
-                putBoolean("replace_rw", values.contains("replace_rw"))
-                putBoolean("replace_lw", values.contains("replace_lw"))
-                putBoolean("replace_dw", values.contains("replace_dw"))
-                putBoolean("replace_uw", values.contains("replace_uw"))
-                apply()
-            }
-        }
         updateFr()
         return true
     }
@@ -64,16 +52,15 @@ class SettingsActivity : AppCompatActivity(), Preference.OnPreferenceChangeListe
             val screen = preferenceManager.createPreferenceScreen(context)
 
             val algsCategory = PreferenceCategory(context)
-            algsCategory.title = "Настройки формул"
+            algsCategory.title = getString(R.string.algs_settings_header)
             screen.addPreference(algsCategory)
 
-            val changeRw = MultiSelectListPreference(context)
-            changeRw.title = "Заменять Rw на R"
-            changeRw.key = "change_rw_m"
-            changeRw.setEntries(R.array.replace_rwr)
-            changeRw.setEntryValues(R.array.replace_rwr_values)
-            changeRw.onPreferenceChangeListener = listener
-            algsCategory.addPreference(changeRw)
+            val replaceRw = SwitchPreferenceCompat(context)
+            replaceRw.key = getString(R.string.replace_rw_key)
+            replaceRw.title = getString(R.string.replace_rw_switch_title)
+            replaceRw.setDefaultValue(resources.getBoolean(R.bool.replace_rw_default_key))
+            replaceRw.onPreferenceChangeListener = listener
+            algsCategory.addPreference(replaceRw)
 
 
             val algContainerTypeCategory = PreferenceCategory(context)
@@ -82,16 +69,14 @@ class SettingsActivity : AppCompatActivity(), Preference.OnPreferenceChangeListe
 
             val gridPreference = SwitchPreferenceCompat(context)
             gridPreference.key = getString(R.string.grid_key)
-            gridPreference.switchTextOn = getString(R.string.alg_container_on)
-            gridPreference.switchTextOff = getString(R.string.alg_container_off)
-            gridPreference.title = getString(R.string.alg_container_type)
+            gridPreference.title = getString(R.string.alg_container_switch_title)
             gridPreference.setDefaultValue(resources.getBoolean(R.bool.grid_default_key))
             gridPreference.onPreferenceChangeListener = listener
             algContainerTypeCategory.addPreference(gridPreference)
 
             val countingPreference = SwitchPreferenceCompat(context)
             countingPreference.key = getString(R.string.counting_key)
-            countingPreference.title = getString(R.string.number_switch)
+            countingPreference.title = getString(R.string.counting_switch_title)
             countingPreference.setDefaultValue(resources.getBoolean(R.bool.counting_default_key))
             countingPreference.onPreferenceChangeListener = listener
             algContainerTypeCategory.addPreference(countingPreference)
