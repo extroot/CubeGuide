@@ -1,0 +1,5 @@
+<resources>
+    <declare-styleable name="ViewStyle">
+        <attr name="dividerColor" format="color" />
+    </declare-styleable>
+</resources>

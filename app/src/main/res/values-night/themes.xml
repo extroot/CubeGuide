@@ -11,8 +11,7 @@
         <item name="colorSecondaryVariant">@color/teal_200</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
-
+        <item name="android:statusBarColor" >?attr/colorPrimaryVariant</item>
 
         <item name="material_drawer_background">@color/material_drawer_dark_background</item>
         <item name="material_drawer_primary_text">@color/material_drawer_dark_primary_text</item>
@@ -27,8 +26,12 @@
         <item name="material_drawer_header_selection_subtext">@color/material_drawer_dark_header_selection_subtext</item>
         <!-- Customize your theme here. -->
 
+        <item name="md_corner_radius">28dp</item>
+<!--        <item name="md_">@color/md_red_900</item>-->
+        <item name="md_color_button_text">@color/primary</item>
+        <item name="md_color_content">@color/md_white_1000</item>
+        <item name="md_color_widget">@color/primary_dark</item>
 
+        <item name="dividerColor">@color/material_drawer_dark_divider</item>
     </style>
-
-
 </resources>
