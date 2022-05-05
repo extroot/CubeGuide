@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="counting_key" translatable="false">numbering</string>
-    <bool name="counting_default_key" translatable="false">false</bool>
+    <bool name="counting_default_key">false</bool>
 
     <string name="grid_key" translatable="false">grid</string>
-    <bool name="grid_default_key" translatable="false">false</bool>
+    <bool name="grid_default_key">false</bool>
 
     <string name="replace_rw_key" translatable="false">replace_rw</string>
-    <bool name="replace_rw_default_key" translatable="false">false</bool>
+    <bool name="replace_rw_default_key">false</bool>
+
+    <string name="rh_oh_key" translatable="false">rh_oh</string>
+    <bool name="rh_oh_default_key">false</bool>
 
 </resources>

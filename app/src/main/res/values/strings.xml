@@ -48,19 +48,11 @@
     <string name="pll_header">PLL – Permutation of the Last Layer</string>
 
     <string name="header_3x3x3_oh">3x3x3 – One Hand</string>
-    <string name="header_3x3x3_oh_lh">Left Hand</string>
-    <string name="header_3x3x3_oh_rh">Right Hand</string>
-
-    <string name="oh_oll_lh_header">OH OLL – One Hand OLL</string>
-    <string name="oh_pll_lh_header">OH PLL – One Hand PLL</string>
-    <string name="oh_coll_lh_header">OH COLL – One Hand COLL</string>
-
-    <string name="oh_oll_rh_header">OH OLL – One Hand OLL</string>
-    <string name="oh_pll_rh_header">OH PLL – One Hand PLL</string>
-    <string name="oh_coll_rh_header">OH COLL – One Hand COLL</string>
+    <string name="oh_oll_header">OH OLL – One Hand OLL</string>
+    <string name="oh_pll_header">OH PLL – One Hand PLL</string>
+    <string name="oh_coll_header">OH COLL – One Hand COLL</string>
 
     <string name="header_3x3x3_pro">3x3x3 – PRO methods</string>
-
     <string name="ls_ll_header">LS+LL – Last Slot + Last Layer</string>
     <string name="vh_header" translatable="false">VHF2L – Vandenbergh–Harris F2L</string>
     <string name="op_header" translatable="false">OPF2L – Orientation–Preserving F2L</string>

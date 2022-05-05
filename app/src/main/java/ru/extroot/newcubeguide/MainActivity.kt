@@ -41,8 +41,8 @@ class MainActivity : AppCompatActivity() {
         private const val OPF2L_ID: Long = 5
         private const val COLL_ID: Long = 6
 
-        private const val OH_OLL_LH_ID: Long = 7
-        private const val OH_PLL_LH_ID: Long = 8
+        private const val OH_OLL: Long = 7
+        private const val OH_PLL: Long = 8
 
         private const val CLL_ID: Long = 9
         private const val OLE_ID: Long = 10
@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() {
         private const val WV_ID: Long = 12
         private const val SV_ID: Long = 13
 
-        private const val OH_COLL_LH_ID: Long = 14
+        private const val OH_COLL: Long = 14
 
         private const val EG1_ID: Long = 15
         private const val EG2_ID: Long = 16
@@ -84,9 +84,9 @@ class MainActivity : AppCompatActivity() {
         private const val ZBLL_SUNE_ID: Long = 42
         private const val ZBLL_ANTISUNE_ID: Long = 43
 
-        private const val OH_OLL_RH_ID: Long = 44
-        private const val OH_PLL_RH_ID: Long = 45
-        private const val OH_COLL_RH_ID: Long = 46
+//        private const val OH_OLL_RH_ID: Long = 44
+//        private const val OH_PLL_RH_ID: Long = 45
+//        private const val OH_COLL_RH_ID: Long = 46
 
         // private const val EASY_4_ID: Long = 47;
         // private const val CFOP_ABOUT_ID: Long = 48
@@ -98,6 +98,7 @@ class MainActivity : AppCompatActivity() {
 
     private var isCounting: Boolean = false
     private var isGrid: Boolean = false
+    private var rhOH: Boolean = false
     private var mode: String = "easy3"
 
     private lateinit var result: Drawer
@@ -120,10 +121,12 @@ class MainActivity : AppCompatActivity() {
 
         val isCountingDefault = resources.getBoolean(R.bool.counting_default_key)
         val isGridDefault = resources.getBoolean(R.bool.grid_default_key)
+        val rhOHDefault = resources.getBoolean(R.bool.rh_oh_default_key)
 
         sharedPref = PreferenceManager.getDefaultSharedPreferences(this)
         isCounting = sharedPref.getBoolean(getString(R.string.counting_key), isCountingDefault)
         isGrid = sharedPref.getBoolean(getString(R.string.grid_key), isGridDefault)
+        rhOH = sharedPref.getBoolean(getString(R.string.rh_oh_key), rhOHDefault)
 
         if (savedInstanceState == null) {
             supportFragmentManager.commit {
@@ -170,12 +173,27 @@ class MainActivity : AppCompatActivity() {
             OLL_ID -> { "oll" }
             PLL_ID -> { "pll" }
 
-            OH_OLL_LH_ID ->   { "oh_oll_lh" }
-            OH_PLL_LH_ID ->   { "oh_pll_lh" }
-            OH_COLL_LH_ID ->  { "oh_coll_lh" }
-            OH_OLL_RH_ID ->   { "oh_oll_rh" }
-            OH_PLL_RH_ID ->   { "oh_pll_rh" }
-            OH_COLL_RH_ID ->  { "oh_coll_rh" }
+            OH_OLL ->   {
+                if (rhOH) {
+                    "oh_oll_rh"
+                } else {
+                    "oh_oll_lh"
+                }
+            }
+            OH_PLL ->   {
+                if (rhOH) {
+                    "oh_pll_rh"
+                } else {
+                    "oh_pll_lh"
+                }
+            }
+            OH_COLL ->  {
+                if (rhOH) {
+                    "oh_coll_rh"
+                } else {
+                    "oh_coll_lh"
+                }
+            }
 
             COLL_ID ->  { "coll" }
             OPF2L_ID -> { "op" }
@@ -253,16 +271,9 @@ class MainActivity : AppCompatActivity() {
                     ),
                 ExpandableDrawerItem().withName(R.string.header_3x3x3_oh).withSelectable(false)
                     .withSubItems(
-                        ExpandableDrawerItem().withName(R.string.header_3x3x3_oh_lh).withSelectable(false).withLevel(2).withSubItems(
-                            SecondaryDrawerItem().withName(R.string.oh_oll_lh_header).withIdentifier(OH_OLL_LH_ID).withLevel(3),
-                            SecondaryDrawerItem().withName(R.string.oh_pll_lh_header).withIdentifier(OH_PLL_LH_ID).withLevel(3),
-                            SecondaryDrawerItem().withName(R.string.oh_coll_lh_header).withIdentifier(OH_COLL_LH_ID).withLevel(3)
-                        ),
-                        ExpandableDrawerItem().withName(R.string.header_3x3x3_oh_rh).withSelectable(false).withLevel(2).withSubItems(
-                            SecondaryDrawerItem().withName(R.string.oh_oll_rh_header).withIdentifier(OH_OLL_RH_ID).withLevel(3),
-                            SecondaryDrawerItem().withName(R.string.oh_pll_rh_header).withIdentifier(OH_PLL_RH_ID).withLevel(3),
-                            SecondaryDrawerItem().withName(R.string.oh_coll_rh_header).withIdentifier(OH_COLL_RH_ID).withLevel(3)
-                        )
+                        SecondaryDrawerItem().withName(R.string.oh_oll_header).withIdentifier(OH_OLL).withLevel(2),
+                        SecondaryDrawerItem().withName(R.string.oh_pll_header).withIdentifier(OH_PLL).withLevel(2),
+                        SecondaryDrawerItem().withName(R.string.oh_coll_header).withIdentifier(OH_COLL).withLevel(2)
                     ),
                 ExpandableDrawerItem().withName(R.string.header_3x3x3_pro).withSelectable(false).withSubItems(
                     ExpandableDrawerItem().withName(R.string.ls_ll_header).withSelectable(false).withLevel(2).withSubItems(
@@ -389,7 +400,7 @@ class MainActivity : AppCompatActivity() {
                         }
                         else -> {
                             if (getModeById(drawerItem.identifier) == null) {
-                                Sentry.captureMessage("null Mode parameter", SentryLevel.FATAL)
+                                Sentry.captureMessage("null Mode parameter " + drawerItem.identifier.toString(), SentryLevel.FATAL)
                                 return true
                             }
                             mode = getModeById(drawerItem.identifier)!!

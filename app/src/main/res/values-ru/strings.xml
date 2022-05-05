@@ -49,16 +49,10 @@
     <string name="pll_header">PLL - Перестановка последнего слоя</string>
 
     <string name="header_3x3x3_oh">3x3x3 - Одной рукой</string>
-    <string name="header_3x3x3_oh_lh">Левая рука</string>
-    <string name="header_3x3x3_oh_rh">Правая рука</string>
+    <string name="oh_oll_header">OH OLL - OLL Одной рукой</string>
+    <string name="oh_pll_header">OH PLL - PLL Одной рукой</string>
+    <string name="oh_coll_header">OH COLL - COLL Одной рукой</string>
 
-    <string name="oh_oll_lh_header">OH OLL - OLL Одной рукой</string>
-    <string name="oh_pll_lh_header">OH PLL - PLL Одной рукой</string>
-    <string name="oh_coll_lh_header">OH COLL - COLL Одной рукой</string>
-
-    <string name="oh_oll_rh_header">OH OLL - OLL Одной рукой</string>
-    <string name="oh_pll_rh_header">OH PLL - PLL Одной рукой</string>
-    <string name="oh_coll_rh_header">OH COLL - COLL Одной рукой</string>
 
     <string name="header_3x3x3_pro">3x3x3 - Продвинутые методы</string>
     <string name="ls_ll_header">LS+LL – Последняя пара + последний слой</string>

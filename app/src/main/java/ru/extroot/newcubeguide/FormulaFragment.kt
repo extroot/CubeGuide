@@ -11,9 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.afollestad.materialdialogs.MaterialDialog
 import com.afollestad.materialdialogs.customview.customView
 
-import io.sentry.Sentry
 import ru.extroot.newcubeguide.databinding.DialogFormulaPreviewBinding
-
 import ru.extroot.newcubeguide.databinding.FragmentFormulaBinding
 
 private const val ARG_PARAM1 = "mode"
@@ -55,16 +53,9 @@ class FormulaFragment : Fragment() {
         val replaceRwDefault = resources.getBoolean(R.bool.replace_rw_default_key)
 
         val sharedPref = PreferenceManager.getDefaultSharedPreferences(requireContext())
-        if (sharedPref == null) {
-            Sentry.captureMessage("getPreferences error")
-            isGrid = isGridDefault
-            isCounting = isCountingDefault
-            replaceRw = replaceRwDefault
-        } else  {
-            isCounting = sharedPref.getBoolean(getString(R.string.counting_key), isCountingDefault)
-            isGrid = sharedPref.getBoolean(getString(R.string.grid_key), isGridDefault)
-            replaceRw = sharedPref.getBoolean(getString(R.string.replace_rw_key), replaceRwDefault)
-        }
+        isCounting = sharedPref.getBoolean(getString(R.string.counting_key), isCountingDefault)
+        isGrid = sharedPref.getBoolean(getString(R.string.grid_key), isGridDefault)
+        replaceRw = sharedPref.getBoolean(getString(R.string.replace_rw_key), replaceRwDefault)
     }
 
 

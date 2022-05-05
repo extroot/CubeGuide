@@ -55,12 +55,18 @@ class SettingsActivity : AppCompatActivity(), Preference.OnPreferenceChangeListe
             algsCategory.title = getString(R.string.algs_settings_header)
             screen.addPreference(algsCategory)
 
-            val replaceRw = SwitchPreferenceCompat(context)
-            replaceRw.key = getString(R.string.replace_rw_key)
-            replaceRw.title = getString(R.string.replace_rw_switch_title)
-            replaceRw.setDefaultValue(resources.getBoolean(R.bool.replace_rw_default_key))
-            replaceRw.onPreferenceChangeListener = listener
-            algsCategory.addPreference(replaceRw)
+            val replaceRwPreference = SwitchPreferenceCompat(context)
+            replaceRwPreference.key = getString(R.string.replace_rw_key)
+            replaceRwPreference.title = getString(R.string.replace_rw_switch_title)
+            replaceRwPreference.setDefaultValue(resources.getBoolean(R.bool.replace_rw_default_key))
+            replaceRwPreference.onPreferenceChangeListener = listener
+            algsCategory.addPreference(replaceRwPreference)
+
+            val rhOhPreference = SwitchPreferenceCompat(context)
+            rhOhPreference.key = getString(R.string.rh_oh_key)
+            rhOhPreference.title = "Right Hand OLL"
+            rhOhPreference.setDefaultValue(resources.getBoolean(R.bool.rh_oh_default_key))
+            algsCategory.addPreference(rhOhPreference)
 
 
             val algContainerTypeCategory = PreferenceCategory(context)
