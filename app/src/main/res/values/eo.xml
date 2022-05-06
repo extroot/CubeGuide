@@ -2,6 +2,7 @@
 <resources>
     <integer name="eo_count">7</integer>
     <string name="eo_picmode" translatable="false">eo</string>
+    <string name="eo_prefix" translatable="false">eo</string>
 
     <string name="eo0" translatable="false">(1,0) / (3,0) / (3,0) / (-1,-1) / (-2,1) / (-3,0) /</string>
     <string name="eo0_title" translatable="false" />

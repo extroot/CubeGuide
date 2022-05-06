@@ -2,6 +2,7 @@
 <resources>
     <integer name="cll_count">40</integer>
     <string name="cll_picmode" translatable="false">cll</string>
+    <string name="cll_prefix" translatable="false">cll</string>
 
     <string name="cll0" translatable="false">"R U R' U R U2 R'
 (U') R' U2 R U' R' U R"</string>

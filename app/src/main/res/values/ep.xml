@@ -2,6 +2,7 @@
 <resources>
     <integer name="ep_count">99</integer>
     <string name="ep_picmode" translatable="false">ep</string>
+    <string name="ep_prefix" translatable="false">ep</string>
 
     <string name="ep0" translatable="false">/ -3,0 / 0,3
 / 0,-3 / 0,3

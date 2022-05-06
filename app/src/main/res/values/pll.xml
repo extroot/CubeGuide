@@ -2,6 +2,7 @@
 <resources>
     <integer name="pll_count">21</integer>
     <string name="pll_picmode" translatable="false">pll</string>
+    <string name="pll_prefix" translatable="false">pll</string>
 
     <string name="pll0" translatable="false">"Lw' U R' D2 R U' R' D2 R2
 y x' R2 D2 R' U' R D2 R' U R'

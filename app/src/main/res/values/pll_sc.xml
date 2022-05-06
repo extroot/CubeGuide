@@ -2,6 +2,7 @@
 <resources>
     <integer name="pll_sc_count">63</integer>
     <string name="pll_sc_picmode" translatable="false">pll_sc</string>
+    <string name="pll_sc_prefix" translatable="false">pll sc</string>
 
     <string name="pll_sc0_title" translatable="false" />
     <string name="pll_sc1_title" translatable="false" />

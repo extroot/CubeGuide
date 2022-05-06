@@ -2,7 +2,7 @@
 <resources>
     <integer name="oh_coll_lh_count">40</integer>
     <string name="oh_coll_lh_picmode" translatable="false">coll</string>
-
+    <string name="oh_coll_lh_prefix" translatable="false">oh coll</string>
 
     <string name="oh_coll_lh0" translatable="false">"R' U' R U' R' U2 R2 U' L' U R' U' L
 z U2 L U' R2 U L' U' R2 U' z'"</string>

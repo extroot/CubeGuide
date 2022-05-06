@@ -2,6 +2,7 @@
 <resources>
     <integer name="f2l_count">41</integer>
     <string name="f2l_picmode" translatable="false">f2l</string>
+    <string name="f2l_prefix" translatable="false">f2l</string>
 
     <string name="f2l0" translatable="false">"y U' L' U L
 y' U' R' U R

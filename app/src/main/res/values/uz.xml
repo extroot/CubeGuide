@@ -2,6 +2,7 @@
 <resources>
     <integer name="uz_count">46</integer>
     <string name="uz_picmode" translatable="false">uz</string>
+    <string name="uz_prefix" translatable="false">pat</string>
 
     <string name="uz0" translatable="false">"S' M' S M"</string>
     <string name="uz1" translatable="false">"M2 E2 S2"</string>

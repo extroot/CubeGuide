@@ -2,6 +2,7 @@
 <resources>
     <integer name="tcllp_count">43</integer>
     <string name="tcllp_picmode" translatable="false">tcllp</string>
+    <string name="tcllp_prefix" translatable="false">tcllp</string>
 
     <string name="tcllp0" translatable="false">"R' F R F' R' F R F'"</string>
     <string name="tcllp0_title" translatable="false">"Hammer"</string>

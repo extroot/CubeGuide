@@ -2,6 +2,7 @@
 <resources>
     <integer name="oh_pll_rh_count">21</integer>
     <string name="oh_pll_rh_picmode" translatable="false">pll</string>
+    <string name="oh_pll_rh_prefix" translatable="false">oh pll</string>
 
     <string name="oh_pll_rh0" translatable="false">"x L U' L D2 L' U L z' L2 U2
 L U2 L2 U R U' L U R' U' L U2 L'

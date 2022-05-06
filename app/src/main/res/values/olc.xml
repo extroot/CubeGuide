@@ -2,6 +2,7 @@
 <resources>
     <integer name="olc_count">27</integer>
     <string name="olc_picmode" translatable="false">olc</string>
+    <string name="olc_prefix" translatable="false">olc</string>
 
     <string name="olc0" translatable="false">"U' R U' R' U R U2' R' U' R U R'
 R2 U R2 U R2 U2 R2

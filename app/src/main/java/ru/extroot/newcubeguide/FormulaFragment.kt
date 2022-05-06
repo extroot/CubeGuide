@@ -73,6 +73,10 @@ class FormulaFragment : Fragment() {
         return resources.getIdentifier(picMode + imageNumber, "drawable", packageName)
     }
 
+    private fun getPrefix(): String {
+        return getString(resources.getIdentifier(mode + "_prefix", "string", packageName))
+    }
+
     private fun getAlgCount(): Int {
         return getString(resources.getIdentifier(mode + "_count", "integer", packageName)).toInt()
     }
@@ -140,7 +144,7 @@ class FormulaFragment : Fragment() {
         }
         val adapter = if (isGrid) {
             recyclerView.layoutManager = GridLayoutManager(requireContext(), 3)
-            CustomRecyclerAdapter(imageData, mode, isCounting)
+            CustomRecyclerAdapter(imageData, mode, isCounting, getPrefix())
         } else {
             recyclerView.layoutManager = LinearLayoutManager(requireContext())
             CustomRecyclerAdapter(titleData, imageData, algData, isCounting)

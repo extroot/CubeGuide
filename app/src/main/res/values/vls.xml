@@ -2,6 +2,7 @@
 <resources>
     <integer name="vls_count">27</integer>
     <string name="vls_picmode" translatable="false">vls</string>
+    <string name="vls_prefix" translatable="false">vls</string>
 
     <string name="vls0" translatable="false">"U2 M' U' L' U2 R U R' U2 Lw"</string>
     <string name="vls0_title">"0 Corners unoriented"</string>

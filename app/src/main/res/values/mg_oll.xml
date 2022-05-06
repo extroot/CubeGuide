@@ -2,6 +2,7 @@
 <resources>
     <integer name="mg_oll_count">19</integer>
     <string name="mg_oll_picmode" translatable="false">mg_oll</string>
+    <string name="mg_oll_prefix" translatable="false">mg oll</string>
 
     <string name="mg_oll0" translatable="false">"F (U R U' R') F'"</string>
     <string name="mg_oll0_title">"Stars"</string>

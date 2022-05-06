@@ -2,6 +2,7 @@
 <resources>
     <integer name="leg1__count">40</integer>
     <string name="leg1__picmode" translatable="false">cll</string>
+    <string name="leg1__prefix" translatable="false">leg1</string>
 
 
     <string name="leg1_0" translatable="false">"(U2) R' F R2 F' R2 U2 R"</string>

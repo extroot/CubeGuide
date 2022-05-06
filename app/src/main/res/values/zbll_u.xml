@@ -2,6 +2,7 @@
 <resources>
     <integer name="zbll_u_count">72</integer>
     <string name="zbll_u_picmode" translatable="false">zbll_u</string>
+    <string name="zbll_u_prefix" translatable="false">zbll u</string>
 
 
     <string name="zbll_u0" translatable="false">"(U) R U2 R' U' R U' R' U2 R' U2 R U R' U R"</string>

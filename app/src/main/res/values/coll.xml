@@ -2,6 +2,7 @@
 <resources>
     <integer name="coll_count">40</integer>
     <string name="coll_picmode" translatable="false">coll</string>
+    <string name="coll_prefix" translatable="false">coll</string>
 
     <string name="coll0" translatable="false">"x' R U' R' D R U2 R' D' R U' R' x
 y2 R2 D R' U2 R D' R' U2 R'"</string>
