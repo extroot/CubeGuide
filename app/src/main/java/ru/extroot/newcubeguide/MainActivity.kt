@@ -34,6 +34,10 @@ import ru.extroot.newcubeguide.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     companion object {
+        /**
+         * Mode IDs
+         * Necessary for material navigation drawer
+         */
         private const val F2L_ID: Long = 1
         private const val PLL_ID: Long = 2
         private const val OLL_ID: Long = 3
@@ -116,18 +120,16 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setTitle(R.string.easy3_header)
 
-        val rhOHDefault = resources.getBoolean(R.bool.rh_oh_default_key)
-        val restoreOnExitDefault = resources.getBoolean(R.bool.restore_mode_default_key)
 
+        // Get settings from shared preferences
         sharedPref = PreferenceManager.getDefaultSharedPreferences(this)
-        rhOH = sharedPref.getBoolean(getString(R.string.rh_oh_key), rhOHDefault)
-        restoreOnExit = sharedPref.getBoolean(getString(R.string.restore_mode_key), restoreOnExitDefault)
+        rhOH = sharedPref.getBoolean(getString(R.string.rh_oh_key), resources.getBoolean(R.bool.rh_oh_default_key))
+        restoreOnExit = sharedPref.getBoolean(getString(R.string.restore_mode_key), resources.getBoolean(R.bool.restore_mode_default_key))
 
         if (savedInstanceState != null) {
             mode = savedInstanceState.getString(MODE_KEY) ?: mode
         } else if (restoreOnExit) {
-            val modeDefault = getString(R.string.saved_mode_default_key)
-            mode = sharedPref.getString(getString(R.string.saved_mode_key), modeDefault) ?: mode
+            mode = sharedPref.getString(getString(R.string.saved_mode_key), getString(R.string.saved_mode_default_key)) ?: getString(R.string.saved_mode_default_key)
 
             // Check if after editing in settings activity
             if (mode.startsWith("oh_")) {
@@ -135,6 +137,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        // Draw screen elements
         updateScreen()
 
         try {
@@ -142,8 +145,11 @@ class MainActivity : AppCompatActivity() {
         } catch (e: Exception) {
             Sentry.captureException(e, "InitAd")
         }
+
+        // Init navigation drawer
         handleDrawer()
 
+        // Init RateBottomSheet Manager
         RateBottomSheetManager(this)
             .setInstallDays(3)
             .setLaunchTimes(8)
@@ -155,6 +161,8 @@ class MainActivity : AppCompatActivity() {
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
         outState.putString(MODE_KEY, mode)
+
+        // Save mode to shared pref, so on app start open last screen
         with (sharedPref.edit()) {
             putString(getString(R.string.saved_mode_key), mode)
             apply()
@@ -162,6 +170,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initAd() {
+        /**
+         * Initialization of Google ADS
+         */
         MobileAds.initialize(this) {}
         topAdView = AdView(this)
 
@@ -176,6 +187,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun getModeById(id: Long): String? {
+        /**
+         * Returns mode name by it's ID
+         * @param id Mode ID
+         * @return string mode name
+         */
+
         return when (id) {
             EASY_3_ID -> { "easy3" }
 
@@ -228,8 +245,11 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-
     private fun updateScreen() {
+        /**
+         * Draws elements to screen.
+         * Text or basic methods
+         */
         binding.toolbar.title = getString(resources.getIdentifier(mode + "_header", "string", packageName))
 
         binding.mainScroll.scrollTo(0, 0)
@@ -250,11 +270,17 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun startSettings() {
+        /**
+         * Starts Settings activity
+         */
         val intent = Intent(this, SettingsActivity::class.java)
         startActivity(intent)
     }
 
     private fun handleDrawer() {
+        /**
+         * Initialization of Material Navigation Drawer
+         */
         result = DrawerBuilder()
             .withActivity(this)
             .withToolbar(binding.toolbar)

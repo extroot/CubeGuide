@@ -9,6 +9,10 @@ import io.sentry.android.core.SentryAndroid
 
 
 class CubeGuide: Application() {
+    /**
+     * Application class
+     * Sentry init
+     */
     override fun onCreate() {
         super.onCreate()
         SentryAndroid.init(this) { options ->
