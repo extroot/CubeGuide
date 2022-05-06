@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="uz_count" translatable="false">"46"</string>
+    <integer name="uz_count">46</integer>
+    <string name="uz_picmode" translatable="false">uz</string>
+
     <string name="uz0" translatable="false">"S' M' S M"</string>
     <string name="uz1" translatable="false">"M2 E2 S2"</string>
     <string name="uz2" translatable="false">"M2 E2 S2 S' M' S M"</string>

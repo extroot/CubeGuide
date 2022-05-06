@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="eg1__count" translatable="false">"40"</string>
+    <integer name="eg1__count">40</integer>
+    <string name="eg1__picmode" translatable="false">cll</string>
 
     <string name="eg1_0" translatable="false">"(U') F' L U2 F2 R U' x'
 z' R' U' R U2 x' U2 R U'"</string>

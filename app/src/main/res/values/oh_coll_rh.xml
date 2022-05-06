@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="oh_coll_rh_count" translatable="false">"40"</string>
+    <integer name="oh_coll_rh_count">40</integer>
+    <string name="oh_coll_rh_picmode" translatable="false">coll</string>
 
     <string name="oh_coll_rh0" translatable="false">"L U L' U L U2 L2 U R U' L U R'
 z U2 R' U L2 U' R U L2 U z'"</string>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="zbll_h_count" translatable="false">"40"</string>
+    <integer name="zbll_h_count">40</integer>
+    <string name="zbll_h_picmode" translatable="false">zbll_h</string>
 
     <string name="zbll_h0" translatable="false">"R U2 R' U' R U' R' U' R' U' R U' R' U2 R"</string>
     <string name="zbll_h0_title" translatable="false" />

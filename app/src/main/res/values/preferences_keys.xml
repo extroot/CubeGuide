@@ -12,4 +12,8 @@
     <string name="rh_oh_key" translatable="false">rh_oh</string>
     <bool name="rh_oh_default_key">false</bool>
 
+    <string name="restore_mode_key" translatable="false">restore_mode</string>
+    <bool name="restore_mode_default_key">false</bool>
+    <string name="saved_mode_key" translatable="false">saved_mode</string>
+    <string name="saved_mode_default_key" translatable="false">easy3</string>
 </resources>

@@ -96,6 +96,7 @@ class MainActivity : AppCompatActivity() {
 
     private var rhOH: Boolean = false
     private var mode: String = "easy3"
+    private var restoreOnExit: Boolean = false
 
 
     private lateinit var result: Drawer
@@ -116,11 +117,23 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.setTitle(R.string.easy3_header)
 
         val rhOHDefault = resources.getBoolean(R.bool.rh_oh_default_key)
+        val restoreOnExitDefault = resources.getBoolean(R.bool.restore_mode_default_key)
 
         sharedPref = PreferenceManager.getDefaultSharedPreferences(this)
         rhOH = sharedPref.getBoolean(getString(R.string.rh_oh_key), rhOHDefault)
+        restoreOnExit = sharedPref.getBoolean(getString(R.string.restore_mode_key), restoreOnExitDefault)
 
-        mode = savedInstanceState?.getString(MODE_KEY) ?: mode
+        if (savedInstanceState != null) {
+            mode = savedInstanceState.getString(MODE_KEY) ?: mode
+        } else if (restoreOnExit) {
+            val modeDefault = getString(R.string.saved_mode_default_key)
+            mode = sharedPref.getString(getString(R.string.saved_mode_key), modeDefault) ?: mode
+
+            // Check if after editing in settings activity
+            if (mode.startsWith("oh_")) {
+                mode = if (rhOH) mode.replace("lh", "rh") else mode.replace("rh", "lh")
+            }
+        }
 
         updateScreen()
 
@@ -142,6 +155,10 @@ class MainActivity : AppCompatActivity() {
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
         outState.putString(MODE_KEY, mode)
+        with (sharedPref.edit()) {
+            putString(getString(R.string.saved_mode_key), mode)
+            apply()
+        }
     }
 
     private fun initAd() {
@@ -252,9 +269,9 @@ class MainActivity : AppCompatActivity() {
                     ),
                 ExpandableDrawerItem().withName(R.string.header_3x3x3_oh).withSelectable(false)
                     .withSubItems(
-                        SecondaryDrawerItem().withName(R.string.oh_oll_header).withIdentifier(OH_OLL).withLevel(2),
-                        SecondaryDrawerItem().withName(R.string.oh_pll_header).withIdentifier(OH_PLL).withLevel(2),
-                        SecondaryDrawerItem().withName(R.string.oh_coll_header).withIdentifier(OH_COLL).withLevel(2)
+                        SecondaryDrawerItem().withName(R.string.oh_oll_lh_header).withIdentifier(OH_OLL).withLevel(2),
+                        SecondaryDrawerItem().withName(R.string.oh_pll_lh_header).withIdentifier(OH_PLL).withLevel(2),
+                        SecondaryDrawerItem().withName(R.string.oh_coll_lh_header).withIdentifier(OH_COLL).withLevel(2)
                     ),
                 ExpandableDrawerItem().withName(R.string.header_3x3x3_pro).withSelectable(false).withSubItems(
                     ExpandableDrawerItem().withName(R.string.ls_ll_header).withSelectable(false).withLevel(2).withSubItems(
@@ -345,7 +362,7 @@ class MainActivity : AppCompatActivity() {
                                 // TODO: `The result of input is not used` warning. idk why.
                                 input(
                                     inputType = InputType.TYPE_TEXT_FLAG_MULTI_LINE,
-                                ) { dialog, text ->
+                                ) { _, text ->
                                     val sentryId = Sentry.captureMessage("User FeedBack")
                                     val userFeedback = UserFeedback(sentryId).apply {
                                         comments = text.toString()

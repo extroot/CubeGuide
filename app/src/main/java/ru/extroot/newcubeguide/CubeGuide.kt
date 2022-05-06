@@ -14,7 +14,7 @@ class CubeGuide: Application() {
         SentryAndroid.init(this) { options ->
             options.dsn = BuildConfig.SENTRY_DSN
             options.beforeSend =
-                SentryOptions.BeforeSendCallback { event: SentryEvent, hint: Any? ->
+                SentryOptions.BeforeSendCallback { event: SentryEvent, _: Any? ->
                     if (SentryLevel.DEBUG == event.level) {
                         null
                     } else {

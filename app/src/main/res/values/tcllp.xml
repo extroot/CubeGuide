@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="tcllp_count" translatable="false">"43"</string>
+    <integer name="tcllp_count">43</integer>
+    <string name="tcllp_picmode" translatable="false">tcllp</string>
 
     <string name="tcllp0" translatable="false">"R' F R F' R' F R F'"</string>
     <string name="tcllp0_title" translatable="false">"Hammer"</string>

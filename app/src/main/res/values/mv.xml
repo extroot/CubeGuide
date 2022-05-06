@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="mw_count" translatable="false">"18"</string>
+    <integer name="mw_count">18</integer>
+    <string name="mw_picmode" translatable="false">mw</string>
+
 
     <string name="mw0" translatable="false">"(U) F' U' F U R U2 R'
 R' F R Dw R' U R U2' R'"</string>

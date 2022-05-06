@@ -52,8 +52,19 @@ class SettingsActivity : AppCompatActivity(), Preference.OnPreferenceChangeListe
             val context = preferenceManager.context
             val screen = preferenceManager.createPreferenceScreen(context)
 
+            val mainCategory = PreferenceCategory(context)
+            mainCategory.title = getString(R.string.main_category_header)
+            screen.addPreference(mainCategory)
+
+            val restoreModePreference = SwitchPreferenceCompat(context)
+            restoreModePreference.key = getString(R.string.restore_mode_key)
+            restoreModePreference.title = getString(R.string.restore_mode_switch_title)
+            restoreModePreference.setDefaultValue(resources.getBoolean(R.bool.restore_mode_default_key))
+            mainCategory.addPreference(restoreModePreference)
+
+
             val algsCategory = PreferenceCategory(context)
-            algsCategory.title = getString(R.string.algs_settings_header)
+            algsCategory.title = getString(R.string.algs_category_header)
             screen.addPreference(algsCategory)
 
             val replaceRwPreference = SwitchPreferenceCompat(context)
@@ -71,7 +82,7 @@ class SettingsActivity : AppCompatActivity(), Preference.OnPreferenceChangeListe
 
 
             val algContainerTypeCategory = PreferenceCategory(context)
-            algContainerTypeCategory.title = getString(R.string.alg_container_header)
+            algContainerTypeCategory.title = getString(R.string.alg_category_header)
             screen.addPreference(algContainerTypeCategory)
 
             val gridPreference = SwitchPreferenceCompat(context)

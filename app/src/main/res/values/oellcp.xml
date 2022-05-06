@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="oellcp_count" translatable="false">"13"</string>
+    <integer name="oellcp_count">13</integer>
+    <string name="oellcp_picmode" translatable="false">oellcp</string>
+
 
     <string name="oellcp0" translatable="false">"M' U M U2 M' U M"</string>
     <string name="oellcp1" translatable="false">"y2 R' U R U y R2 D L' B' L D' R2"</string>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="l3c_count" translatable="false">"20"</string>
+    <integer name="l3c_count">20</integer>
+    <string name="l3c_picmode" translatable="false">l3c</string>
 
     <string name="l3c0" translatable="false">"R' L' R' L R"</string>
     <string name="l3c1" translatable="false">"L R L R' L'"</string>

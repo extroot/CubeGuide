@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="oh_pll_lh_count" translatable="false">"21"</string>
+    <integer name="oh_pll_lh_count">21</integer>
+    <string name="oh_pll_lh_picmode" translatable="false">pll</string>
 
     <string name="oh_pll_lh0" translatable="false">"x R' U R' D2 R U' R' z' R2 U2
 R' U2 R2 U' L' U R' U' L U R' U2 R

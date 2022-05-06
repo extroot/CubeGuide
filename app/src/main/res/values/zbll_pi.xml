@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="zbll_pi_count" translatable="false">"72"</string>
+    <integer name="zbll_pi_count">72</integer>
+    <string name="zbll_pi_picmode" translatable="false">zbll_pi</string>
 
     <string name="zbll_pi0" translatable="false">"R' U' R U R U2 R' U' R U' R2 U2 R"</string>
     <string name="zbll_pi0_title" translatable="false" />

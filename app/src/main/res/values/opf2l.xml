@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="op_count" translatable="false">"29"</string>
+    <integer name="op_count">29</integer>
+    <string name="op_picmode" translatable="false">op</string>
 
     <string name="op0" translatable="false">"L U L U L U' L' U' L'
 y2 R U R U R U' R' U' R'

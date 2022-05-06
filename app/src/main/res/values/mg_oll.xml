@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="mg_oll_count" translatable="false">"19"</string>
+    <integer name="mg_oll_count">19</integer>
+    <string name="mg_oll_picmode" translatable="false">mg_oll</string>
 
     <string name="mg_oll0" translatable="false">"F (U R U' R') F'"</string>
     <string name="mg_oll0_title">"Stars"</string>

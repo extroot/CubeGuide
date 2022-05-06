@@ -66,18 +66,7 @@ class FormulaFragment : Fragment() {
     }
 
     private fun getPicModeByMode(): String {
-        return when (mode) {
-            "oh_oll_lh" -> "oll"
-            "oh_pll_lh" -> "pll"
-            "oh_coll_lh" -> "coll"
-            "oh_oll_rh" -> "oll"
-            "oh_pll_rh" -> "pll"
-            "oh_coll_rh" -> "coll"
-            "eg1_" -> "cll"
-            "eg2_" -> "cll"
-            "leg1_" -> "cll"
-            else -> mode
-        }
+        return getString(resources.getIdentifier(mode + "_picmode", "string", packageName))
     }
 
     private fun getImageId(imageNumber: Int): Int {
@@ -85,7 +74,7 @@ class FormulaFragment : Fragment() {
     }
 
     private fun getAlgCount(): Int {
-        return getString(resources.getIdentifier(mode + "_count", "string", packageName)).toInt()
+        return getString(resources.getIdentifier(mode + "_count", "integer", packageName)).toInt()
     }
 
     private fun getAlgTitle(algNumber: Int): String? {

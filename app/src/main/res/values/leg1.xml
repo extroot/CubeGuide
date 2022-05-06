@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="leg1__count" translatable="false">"40"</string>
+    <integer name="leg1__count">40</integer>
+    <string name="leg1__picmode" translatable="false">cll</string>
+
 
     <string name="leg1_0" translatable="false">"(U2) R' F R2 F' R2 U2 R"</string>
     <string name="leg1_1" translatable="false">"(U2) R' U F' R2 F' U2 R F'

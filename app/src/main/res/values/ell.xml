@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="ell_count" translatable="false">"29"</string>
+    <integer name="ell_count">29</integer>
+    <string name="ell_picmode" translatable="false">ell</string>
 
     <string name="ell0" translatable="false">"R U' R U R U R U' R' U' R2"</string>
     <string name="ell1" translatable="false">"R2 U R U R' U' R' U' R' U R'"</string>

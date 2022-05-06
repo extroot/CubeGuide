@@ -29,11 +29,14 @@
     <string name="review_btn">Rate this app</string>
     <string name="settings_btn">Settings</string>
 
-    <string name="algs_settings_header">Algs settings</string>
+    <string name="main_category_header">Main settings</string>
+    <string name="restore_mode_switch_title">Restore mode page on app restart</string>
+
+    <string name="algs_category_header">Algs settings</string>
     <string name="replace_rw_switch_title">Replace Rw to r</string>
     <string name="rh_oh_switch_title">Right Hand OH</string>
 
-    <string name="alg_container_header">Formula display type</string>
+    <string name="alg_category_header">Formula display type</string>
     <string name="counting_switch_title">Algs counting</string>
     <string name="alg_container_switch_title">Show formulas in grid</string>
     <!--                 Settings Activity and menu items                 -->
@@ -49,9 +52,12 @@
     <string name="pll_header">PLL – Permutation of the Last Layer</string>
 
     <string name="header_3x3x3_oh">3x3x3 – One Hand</string>
-    <string name="oh_oll_header">OH OLL – One Hand OLL</string>
-    <string name="oh_pll_header">OH PLL – One Hand PLL</string>
-    <string name="oh_coll_header">OH COLL – One Hand COLL</string>
+    <string name="oh_oll_lh_header">OH OLL – One Hand OLL</string>
+    <string name="oh_pll_lh_header">OH PLL – One Hand PLL</string>
+    <string name="oh_coll_lh_header">OH COLL – One Hand COLL</string>
+    <string name="oh_oll_rh_header">OH OLL – One Hand OLL</string>
+    <string name="oh_pll_rh_header">OH PLL – One Hand PLL</string>
+    <string name="oh_coll_rh_header">OH COLL – One Hand COLL</string>
 
     <string name="header_3x3x3_pro">3x3x3 – PRO methods</string>
     <string name="ls_ll_header">LS+LL – Last Slot + Last Layer</string>
