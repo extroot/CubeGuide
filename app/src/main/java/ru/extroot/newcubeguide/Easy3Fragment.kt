@@ -7,11 +7,11 @@ import android.view.LayoutInflater
 import androidx.fragment.app.Fragment
 
 
+/**
+ * Easy3 text method fragment
+ * In future will handle few methods
+ */
 class Easy3Fragment : Fragment() {
-    /**
-     * Easy3 text method fragment
-     * In future will handle few methods
-     */
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

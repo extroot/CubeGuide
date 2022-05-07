@@ -47,6 +47,9 @@ class FormulaFragment : Fragment() {
         dialogView = dialogPreviewBinding.root
     }
 
+    /**
+     * Updates sharedPref variables.
+     */
     private fun getSettings() {
         val isCountingDefault = resources.getBoolean(R.bool.counting_default_key)
         val isGridDefault = resources.getBoolean(R.bool.grid_default_key)
@@ -65,25 +68,41 @@ class FormulaFragment : Fragment() {
         return _binding.root
     }
 
+    /**
+     * Returns images prefix in current mode.
+     */
     private fun getPicModeByMode(): String {
         return getString(resources.getIdentifier(mode + "_picmode", "string", packageName))
     }
 
-    private fun getImageId(imageNumber: Int): Int {
-        return resources.getIdentifier(picMode + imageNumber, "drawable", packageName)
+    /**
+     * Returns image identifier by [position].
+     */
+    private fun getImageId(position: Int): Int {
+        return resources.getIdentifier(picMode + position, "drawable", packageName)
     }
 
+    /**
+     * Returns prefix of current mode.
+     * Uses in grid style as title prefix.
+     */
     private fun getPrefix(): String {
         return getString(resources.getIdentifier(mode + "_prefix", "string", packageName))
     }
 
+    /**
+     * Returns count of algorithms in current mode.
+     */
     private fun getAlgCount(): Int {
         return getString(resources.getIdentifier(mode + "_count", "integer", packageName)).toInt()
     }
 
-    private fun getAlgTitle(algNumber: Int): String? {
+    /**
+     * Returns title of algorithm if exists by it's [position].
+     */
+    private fun getAlgTitle(position: Int): String? {
         val title: String?
-        val name = picMode + algNumber.toString() + "_title"
+        val name = picMode + position.toString() + "_title"
         title = getString(resources.getIdentifier(name, "string", packageName))
 
         if ("" == title) {
@@ -92,9 +111,12 @@ class FormulaFragment : Fragment() {
         return title
     }
 
-    private fun getAlgText(algNumber: Int): String? {
+    /**
+     * Returns text of algorithm by it's [position].
+     */
+    private fun getAlgText(position: Int): String? {
         var text: String?
-        val name = mode + algNumber.toString()
+        val name = mode + position.toString()
         text = getString(resources.getIdentifier(name, "string", packageName))
 
         if ("" == text) {
@@ -124,6 +146,9 @@ class FormulaFragment : Fragment() {
         }
     }
 
+    /**
+     * Creating lists of elements data for recycler view.
+     */
     private fun draw() {
         val recyclerView: RecyclerView = _binding.recycleView
         recyclerView.isNestedScrollingEnabled = false
@@ -144,7 +169,7 @@ class FormulaFragment : Fragment() {
         }
         val adapter = if (isGrid) {
             recyclerView.layoutManager = GridLayoutManager(requireContext(), 3)
-            CustomRecyclerAdapter(imageData, mode, isCounting, getPrefix())
+            CustomRecyclerAdapter(imageData, isCounting, getPrefix())
         } else {
             recyclerView.layoutManager = LinearLayoutManager(requireContext())
             CustomRecyclerAdapter(titleData, imageData, algData, isCounting)

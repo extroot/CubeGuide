@@ -32,6 +32,7 @@ import io.sentry.UserFeedback
 import ru.extroot.newcubeguide.databinding.ActivityMainBinding
 
 
+@Suppress("DEPRECATION", "CheckResult")
 class MainActivity : AppCompatActivity() {
     companion object {
         /**
@@ -186,13 +187,10 @@ class MainActivity : AppCompatActivity() {
         topAdView.loadAd(adRequest)
     }
 
+    /**
+     * Returns mode name by it's [id]
+     */
     private fun getModeById(id: Long): String? {
-        /**
-         * Returns mode name by it's ID
-         * @param id Mode ID
-         * @return string mode name
-         */
-
         return when (id) {
             EASY_3_ID -> { "easy3" }
 
@@ -245,11 +243,11 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    /**
+     * Draws elements to screen.
+     * Text or basic methods
+     */
     private fun updateScreen() {
-        /**
-         * Draws elements to screen.
-         * Text or basic methods
-         */
         binding.toolbar.title = getString(resources.getIdentifier(mode + "_header", "string", packageName))
 
         binding.mainScroll.scrollTo(0, 0)
@@ -269,18 +267,18 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    /**
+     * Starts Settings activity
+     */
     private fun startSettings() {
-        /**
-         * Starts Settings activity
-         */
         val intent = Intent(this, SettingsActivity::class.java)
         startActivity(intent)
     }
 
+    /**
+     * Initialization of Material Navigation Drawer
+     */
     private fun handleDrawer() {
-        /**
-         * Initialization of Material Navigation Drawer
-         */
         result = DrawerBuilder()
             .withActivity(this)
             .withToolbar(binding.toolbar)
@@ -382,7 +380,7 @@ class MainActivity : AppCompatActivity() {
                             return true
                         }
                         FEEDBACK_ID -> {
-                            MaterialDialog(this@MainActivity).show() {
+                            MaterialDialog(this@MainActivity).show {
                                 title(R.string.rating_dialog_feedback_title)
                                 message(R.string.rating_dialog_feedback_custom_message)
                                 // TODO: `The result of input is not used` warning. idk why.

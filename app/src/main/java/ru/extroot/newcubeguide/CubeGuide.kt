@@ -8,13 +8,14 @@ import io.sentry.SentryOptions
 import io.sentry.android.core.SentryAndroid
 
 
+/**
+ * Application class
+ */
 class CubeGuide: Application() {
-    /**
-     * Application class
-     * Sentry init
-     */
     override fun onCreate() {
         super.onCreate()
+
+        // Sentry initialization once for all application
         SentryAndroid.init(this) { options ->
             options.dsn = BuildConfig.SENTRY_DSN
             options.beforeSend =
