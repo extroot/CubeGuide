@@ -2,6 +2,7 @@
 <resources>
     <string name="app_name">Cube Guide</string>
 
+    <!--                 Окно оценки приложения                 -->
     <string name="rate_popup_ask_title">Нравится приложение?</string>
     <string name="rate_popup_ask_message">Нравится ли вам использовать это приложение?</string>
     <string name="rate_popup_ask_ok">Да</string>
@@ -12,14 +13,38 @@
     <string name="rate_popup_ok">Оценить</string>
     <string name="rate_popup_later">Напомнить позже</string>
     <string name="rate_popup_no">Нет, спасибо</string>
+    <!--                 Окно оценки приложения                 -->
 
+
+    <!--                 Диалог обратной связи                 -->
     <string name="rating_dialog_feedback_title">Обратная связь</string>
     <string name="rating_dialog_feedback_button_cancel">Отмена</string>
-    <string name="rating_dialog_feedback_custom_button_submit">Отправить</string>
-    <string name="rating_dialog_feedback_custom_message">Сообщите нам, что вам не понравилось в приложении и мы исправим это.</string>
+    <string name="rating_dialog_feedback_button_submit">Отправить</string>
+    <string name="rating_dialog_feedback_custom_message">Сообщите нам, что вам не понравилось в приложении и мы исправим это:</string>
+    <!--                 Диалог обратной связи                 -->
 
-    <string name="emptyFeedBackField">Форма пустая</string>
 
+    <!--                 Страница настроек и доп. поля меню                 -->
+    <string name="title_activity_settings">Настройки</string>
+
+    <string name="review_btn">Оценить приложение</string>
+    <string name="settings_btn">Настройки</string>
+
+    <string name="main_category_header">Основные настройки</string>
+    <string name="restore_mode_switch_title">Открывать ту же страницу после перезапуска</string>
+
+    <string name="algs_category_header">Настройки формул</string>
+    <string name="replace_rw_switch_title">Заменять Rw на R</string>
+    <string name="rh_oh_switch_title">OH для правой руки</string>
+
+
+    <string name="counting_switch_title">Нумерация формул</string>
+    <string name="alg_container_switch_title">Показывать формулы в сетку</string>
+    <string name="alg_category_header">Вид формул</string>
+    <!--                 Страница настроек и доп. поля меню                 -->
+
+
+    <!--                 Заголовки методов                 -->
     <string name="easy3_header">3x3x3 - Метод для начинающих</string>
 
     <string name="header_3x3x3">3x3x3 - Метод CFOP</string>
@@ -29,16 +54,13 @@
     <string name="pll_header">PLL - Перестановка последнего слоя</string>
 
     <string name="header_3x3x3_oh">3x3x3 - Одной рукой</string>
-    <string name="header_3x3x3_oh_lh">Левая рука</string>
-    <string name="header_3x3x3_oh_rh">Правая рука</string>
-
     <string name="oh_oll_lh_header">OH OLL - OLL Одной рукой</string>
     <string name="oh_pll_lh_header">OH PLL - PLL Одной рукой</string>
     <string name="oh_coll_lh_header">OH COLL - COLL Одной рукой</string>
-
     <string name="oh_oll_rh_header">OH OLL - OLL Одной рукой</string>
     <string name="oh_pll_rh_header">OH PLL - PLL Одной рукой</string>
     <string name="oh_coll_rh_header">OH COLL - COLL Одной рукой</string>
+
 
     <string name="header_3x3x3_pro">3x3x3 - Продвинутые методы</string>
     <string name="ls_ll_header">LS+LL – Последняя пара + последний слой</string>
@@ -81,10 +103,5 @@
     <string name="eo_header">EO – Ориентация ребер</string>
     <string name="cp_header">CP – Перестановка углов</string>
     <string name="ep_header">EP – Перестановка ребер</string>
-
-    <string name="number_switch">Нумерация формул</string>
-    <string name="review_btn">Оценить приложение</string>
-    <string name="translate_btn">Помочь с переводом</string>
-    <string name="settings_btn">Настройки</string>
-
+    <!--                 Заголовки методов                 -->
 </resources>

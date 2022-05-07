@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="pll_sc_count" translatable="false">"63"</string>
+    <integer name="pll_sc_count">63</integer>
+    <string name="pll_sc_picmode" translatable="false">pll_sc</string>
+    <string name="pll_sc_prefix" translatable="false">pll sc</string>
 
     <string name="pll_sc0_title" translatable="false" />
     <string name="pll_sc1_title" translatable="false" />

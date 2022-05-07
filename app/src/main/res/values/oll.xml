@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="oll_count" translatable="false">"57"</string>
+    <integer name="oll_count">57</integer>
+    <string name="oll_picmode" translatable="false">oll</string>
+    <string name="oll_prefix" translatable="false">oll</string>
 
     <string name="oll0" translatable="false">"R2 D' R U2 R' D R U2 R
 y R2 D' R U' R' D R2 U' R' U2 R

@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="ole_count" translatable="false">"26"</string>
+    <integer name="ole_count">26</integer>
+    <string name="ole_picmode" translatable="false">ole</string>
+    <string name="ole_prefix" translatable="false">ole</string>
 
     <string name="ole0" translatable="false">"R F R' U R U' F' R'
 U R U' R' U R' D' R U' R' D R"</string>

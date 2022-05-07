@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="l3e_count" translatable="false">"5"</string>
+    <integer name="l3e_count">5</integer>
+    <string name="l3e_picmode" translatable="false">l3e</string>
+    <string name="l3e_prefix" translatable="false">l3e</string>
 
     <string name="l3e0" translatable="false">"R' L R L' z' L R' L' R"</string>
     <string name="l3e0_title" translatable="false" />

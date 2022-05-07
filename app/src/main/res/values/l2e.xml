@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="l2e_count" translatable="false">"12"</string>
+    <integer name="l2e_count">12</integer>
+    <string name="l2e_picmode" translatable="false">l2e</string>
+    <string name="l2e_prefix" translatable="false">l2e</string>
 
     <string name="l2e0" translatable="false">"Dw R U R' F R' F' R Dw'
 

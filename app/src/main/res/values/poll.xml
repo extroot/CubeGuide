@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="poll_count" translatable="false">"16"</string>
+    <string name="poll_picmode" translatable="false">poll</string>
+    <string name="poll_prefix" translatable="false">poll</string>
 
     <string name="poll0" translatable="false">"Rw2 B2 U2 Lw U2 Rw' U2 Rw U2 F2 Rw F2 Lw' B2 Rw2
 

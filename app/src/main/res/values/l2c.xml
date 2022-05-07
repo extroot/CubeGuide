@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="l2c_count" translatable="false">"25"</string>
+    <integer name="l2c_count">25</integer>
+    <string name="l2c_picmode" translatable="false">l2c</string>
+    <string name="l2c_prefix" translatable="false">l2c</string>
 
     <string name="l2c0" translatable="false">"Rw U2 Rw'
 3Rw U2 3Rw'"</string>

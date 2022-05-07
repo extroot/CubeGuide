@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="cp_count" translatable="false">"16"</string>
+    <integer name="cp_count">16</integer>
+    <string name="cp_picmode" translatable="false">cp</string>
+    <string name="cp_prefix" translatable="false">cp</string>
 
     <string name="cp0" translatable="false">"/ (3,-3) / (-3,0) / (0,3) / (0,-3) / (0,3) /"</string>
     <string name="cp0_title" translatable="false">"Standard"</string>

@@ -1,34 +1,43 @@
 package ru.extroot.newcubeguide
 
-import android.app.AlertDialog
+import android.view.*
+import android.os.Bundle
+import android.text.InputType
 import android.content.Intent
 import android.content.SharedPreferences
-import android.os.Bundle
-import android.view.*
-import android.widget.*
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.os.bundleOf
 import androidx.fragment.app.*
+import androidx.core.os.bundleOf
 import androidx.preference.PreferenceManager
+import androidx.appcompat.app.AppCompatActivity
+
 import com.google.android.gms.ads.*
+
+import com.afollestad.materialdialogs.input.input
+import com.afollestad.materialdialogs.MaterialDialog
+import com.afollestad.materialdialogs.callbacks.onPreShow
+import com.afollestad.materialdialogs.input.getInputField
+
 import com.mikepenz.materialdrawer.Drawer
 import com.mikepenz.materialdrawer.DrawerBuilder
 import com.mikepenz.materialdrawer.model.*
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem
+
 import com.mikhaellopez.ratebottomsheet.RateBottomSheet
 import com.mikhaellopez.ratebottomsheet.RateBottomSheetManager
+
 import io.sentry.Sentry
-import io.sentry.SentryEvent
 import io.sentry.SentryLevel
-import io.sentry.SentryOptions.BeforeSendCallback
 import io.sentry.UserFeedback
-import io.sentry.android.core.SentryAndroid
+
 import ru.extroot.newcubeguide.databinding.ActivityMainBinding
-import ru.extroot.newcubeguide.databinding.DialogSendFeedbackBinding
 
 
-class MainActivity: AppCompatActivity() {
+class MainActivity : AppCompatActivity() {
     companion object {
+        /**
+         * Mode IDs
+         * Necessary for material navigation drawer
+         */
         private const val F2L_ID: Long = 1
         private const val PLL_ID: Long = 2
         private const val OLL_ID: Long = 3
@@ -36,8 +45,8 @@ class MainActivity: AppCompatActivity() {
         private const val OPF2L_ID: Long = 5
         private const val COLL_ID: Long = 6
 
-        private const val OH_OLL_LH_ID: Long = 7
-        private const val OH_PLL_LH_ID: Long = 8
+        private const val OH_OLL: Long = 7
+        private const val OH_PLL: Long = 8
 
         private const val CLL_ID: Long = 9
         private const val OLE_ID: Long = 10
@@ -45,7 +54,7 @@ class MainActivity: AppCompatActivity() {
         private const val WV_ID: Long = 12
         private const val SV_ID: Long = 13
 
-        private const val OH_COLL_LH_ID: Long = 14
+        private const val OH_COLL: Long = 14
 
         private const val EG1_ID: Long = 15
         private const val EG2_ID: Long = 16
@@ -79,31 +88,27 @@ class MainActivity: AppCompatActivity() {
         private const val ZBLL_SUNE_ID: Long = 42
         private const val ZBLL_ANTISUNE_ID: Long = 43
 
-        private const val OH_OLL_RH_ID: Long = 44
-        private const val OH_PLL_RH_ID: Long = 45
-        private const val OH_COLL_RH_ID: Long = 46
-
         // private const val EASY_4_ID: Long = 47;
         // private const val CFOP_ABOUT_ID: Long = 48
 
         private const val REVIEW_ID: Long          = 102
         private const val FEEDBACK_ID: Long        = 103
         private const val SETTINGS_ID: Long        = 104
+
+        const val MODE_KEY = "SAVED_MODE_KEY"
     }
 
-    private var isCounting: Boolean = false
-    private var isGrid: Boolean = false
+    private var rhOH: Boolean = false
     private var mode: String = "easy3"
+    private var restoreOnExit: Boolean = false
+
 
     private lateinit var result: Drawer
     private lateinit var topAdView: AdView
     private lateinit var adRequest: AdRequest
-    private lateinit var feedbackDialog: AlertDialog
-
     private lateinit var sharedPref: SharedPreferences
 
     private lateinit var binding: ActivityMainBinding
-    private lateinit var dialogFeedBackBinding: DialogSendFeedbackBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -111,46 +116,40 @@ class MainActivity: AppCompatActivity() {
             setContentView(it.root)
         }
 
-        SentryAndroid.init(this) { options ->
-            options.dsn = BuildConfig.SENTRY_DSN
-            options.beforeSend =
-                BeforeSendCallback { event: SentryEvent, hint: Any? ->
-                    if (SentryLevel.DEBUG == event.level) {
-                        null
-                    } else {
-                        event
-                    }
-                }
-        }
-
         setSupportActionBar(binding.toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setTitle(R.string.easy3_header)
 
-        val isCountingDefault = resources.getBoolean(R.bool.counting_default_key)
-        val isGridDefault = resources.getBoolean(R.bool.grid_default_key)
 
+        // Get settings from shared preferences
         sharedPref = PreferenceManager.getDefaultSharedPreferences(this)
-        isCounting = sharedPref.getBoolean(getString(R.string.counting_key), isCountingDefault)
-        isGrid = sharedPref.getBoolean(getString(R.string.grid_key), isGridDefault)
+        rhOH = sharedPref.getBoolean(getString(R.string.rh_oh_key), resources.getBoolean(R.bool.rh_oh_default_key))
+        restoreOnExit = sharedPref.getBoolean(getString(R.string.restore_mode_key), resources.getBoolean(R.bool.restore_mode_default_key))
 
-        if (savedInstanceState == null) {
-            supportFragmentManager.commit {
-                setReorderingAllowed(true)
-                add<Easy3Fragment>(R.id.mainLayout)
+        if (savedInstanceState != null) {
+            mode = savedInstanceState.getString(MODE_KEY) ?: mode
+        } else if (restoreOnExit) {
+            mode = sharedPref.getString(getString(R.string.saved_mode_key), getString(R.string.saved_mode_default_key)) ?: getString(R.string.saved_mode_default_key)
+
+            // Check if after editing in settings activity
+            if (mode.startsWith("oh_")) {
+                mode = if (rhOH) mode.replace("lh", "rh") else mode.replace("rh", "lh")
             }
         }
 
-        dialogFeedBackBinding = DialogSendFeedbackBinding.inflate(layoutInflater)
-        initFeedBackDialog()
+        // Draw screen elements
+        updateScreen()
 
         try {
             initAd()
         } catch (e: Exception) {
             Sentry.captureException(e, "InitAd")
         }
+
+        // Init navigation drawer
         handleDrawer()
 
+        // Init RateBottomSheet Manager
         RateBottomSheetManager(this)
             .setInstallDays(3)
             .setLaunchTimes(8)
@@ -159,31 +158,21 @@ class MainActivity: AppCompatActivity() {
         RateBottomSheet.showRateBottomSheetIfMeetsConditions(this)
     }
 
-    private fun initFeedBackDialog() {
-        feedbackDialog = AlertDialog.Builder(this, R.style.Theme_CubeGuide_MaterialAlertDialog)
-            .setView(dialogFeedBackBinding.root)
-            .setPositiveButton(R.string.rating_dialog_feedback_custom_button_submit
-            ) { _, _ ->
-                val userFeedbackEditText = dialogFeedBackBinding.userFeedbackEditText
-                val userComment = userFeedbackEditText.text.toString()
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putString(MODE_KEY, mode)
 
-                if (userComment != "") {
-                    val sentryId = Sentry.captureMessage("User FeedBack")
-                    val userFeedback = UserFeedback(sentryId).apply {
-                        comments = userComment
-                    }
-                    Sentry.captureUserFeedback(userFeedback)
-                } else {
-                    Toast.makeText(this, R.string.emptyFeedBackField, Toast.LENGTH_SHORT).show()
-                    // Sentry.captureMessage("Empty user Feedback", SentryLevel.WARNING)
-                }
-                userFeedbackEditText.text = ""
-            }
-            .setNegativeButton(R.string.rating_dialog_feedback_button_cancel, null)
-            .create()
+        // Save mode to shared pref, so on app start open last screen
+        with (sharedPref.edit()) {
+            putString(getString(R.string.saved_mode_key), mode)
+            apply()
+        }
     }
 
     private fun initAd() {
+        /**
+         * Initialization of Google ADS
+         */
         MobileAds.initialize(this) {}
         topAdView = AdView(this)
 
@@ -198,19 +187,22 @@ class MainActivity: AppCompatActivity() {
     }
 
     private fun getModeById(id: Long): String? {
+        /**
+         * Returns mode name by it's ID
+         * @param id Mode ID
+         * @return string mode name
+         */
+
         return when (id) {
-            EASY_3_ID -> { "easy3"}
+            EASY_3_ID -> { "easy3" }
 
             F2L_ID -> { "f2l" }
             OLL_ID -> { "oll" }
             PLL_ID -> { "pll" }
 
-            OH_OLL_LH_ID ->   { "oh_oll_lh" }
-            OH_PLL_LH_ID ->   { "oh_pll_lh" }
-            OH_COLL_LH_ID ->  { "oh_coll_lh" }
-            OH_OLL_RH_ID ->   { "oh_oll_rh" }
-            OH_PLL_RH_ID ->   { "oh_pll_rh" }
-            OH_COLL_RH_ID ->  { "oh_coll_rh" }
+            OH_OLL ->   { if (rhOH) "oh_oll_rh" else "oh_oll_lh" }
+            OH_PLL ->   { if (rhOH) "oh_pll_rh" else "oh_pll_lh" }
+            OH_COLL ->   { if (rhOH) "oh_coll_rh" else "oh_coll_lh" }
 
             COLL_ID ->  { "coll" }
             OPF2L_ID -> { "op" }
@@ -253,27 +245,42 @@ class MainActivity: AppCompatActivity() {
         }
     }
 
-    private fun setHeader() {
+    private fun updateScreen() {
+        /**
+         * Draws elements to screen.
+         * Text or basic methods
+         */
         binding.toolbar.title = getString(resources.getIdentifier(mode + "_header", "string", packageName))
-    }
 
+        binding.mainScroll.scrollTo(0, 0)
 
-    private fun replaceFr() {
         supportFragmentManager.commit {
             setReorderingAllowed(true)
-            replace<FormulaFragment>(R.id.mainLayout, args=bundleOf(
-                "mode" to mode,
-                "packageName" to packageName
-            ))
+            if ("easy3" == mode) {
+                replace<Easy3Fragment>(R.id.mainLayout)
+            } else {
+                replace<FormulaFragment>(
+                    R.id.mainLayout, args = bundleOf(
+                        "mode" to mode,
+                        "packageName" to packageName
+                    )
+                )
+            }
         }
     }
 
     private fun startSettings() {
+        /**
+         * Starts Settings activity
+         */
         val intent = Intent(this, SettingsActivity::class.java)
         startActivity(intent)
     }
 
     private fun handleDrawer() {
+        /**
+         * Initialization of Material Navigation Drawer
+         */
         result = DrawerBuilder()
             .withActivity(this)
             .withToolbar(binding.toolbar)
@@ -288,16 +295,9 @@ class MainActivity: AppCompatActivity() {
                     ),
                 ExpandableDrawerItem().withName(R.string.header_3x3x3_oh).withSelectable(false)
                     .withSubItems(
-                        ExpandableDrawerItem().withName(R.string.header_3x3x3_oh_lh).withSelectable(false).withLevel(2).withSubItems(
-                            SecondaryDrawerItem().withName(R.string.oh_oll_lh_header).withIdentifier(OH_OLL_LH_ID).withLevel(3),
-                            SecondaryDrawerItem().withName(R.string.oh_pll_lh_header).withIdentifier(OH_PLL_LH_ID).withLevel(3),
-                            SecondaryDrawerItem().withName(R.string.oh_coll_lh_header).withIdentifier(OH_COLL_LH_ID).withLevel(3)
-                        ),
-                        ExpandableDrawerItem().withName(R.string.header_3x3x3_oh_rh).withSelectable(false).withLevel(2).withSubItems(
-                            SecondaryDrawerItem().withName(R.string.oh_oll_rh_header).withIdentifier(OH_OLL_RH_ID).withLevel(3),
-                            SecondaryDrawerItem().withName(R.string.oh_pll_rh_header).withIdentifier(OH_PLL_RH_ID).withLevel(3),
-                            SecondaryDrawerItem().withName(R.string.oh_coll_rh_header).withIdentifier(OH_COLL_RH_ID).withLevel(3)
-                        )
+                        SecondaryDrawerItem().withName(R.string.oh_oll_lh_header).withIdentifier(OH_OLL).withLevel(2),
+                        SecondaryDrawerItem().withName(R.string.oh_pll_lh_header).withIdentifier(OH_PLL).withLevel(2),
+                        SecondaryDrawerItem().withName(R.string.oh_coll_lh_header).withIdentifier(OH_COLL).withLevel(2)
                     ),
                 ExpandableDrawerItem().withName(R.string.header_3x3x3_pro).withSelectable(false).withSubItems(
                     ExpandableDrawerItem().withName(R.string.ls_ll_header).withSelectable(false).withLevel(2).withSubItems(
@@ -373,16 +373,6 @@ class MainActivity: AppCompatActivity() {
             .withOnDrawerItemClickListener(object: Drawer.OnDrawerItemClickListener {
                 override fun onItemClick(view: View?, position: Int, drawerItem: IDrawerItem<*>): Boolean {
                     when (drawerItem.identifier) {
-                        EASY_3_ID -> {
-                            mode = "easy3"
-                            setHeader()
-                            binding.mainScroll.scrollTo(0, 0)
-                            supportFragmentManager.commit {
-                                setReorderingAllowed(true)
-                                replace<Easy3Fragment>(R.id.mainLayout)
-                            }
-                            return false
-                        }
                         REVIEW_ID -> {
                             RateBottomSheetManager(this@MainActivity)
                                 .setDebugForceOpenEnable(true) // False by default
@@ -392,7 +382,30 @@ class MainActivity: AppCompatActivity() {
                             return true
                         }
                         FEEDBACK_ID -> {
-                            feedbackDialog.show()
+                            MaterialDialog(this@MainActivity).show() {
+                                title(R.string.rating_dialog_feedback_title)
+                                message(R.string.rating_dialog_feedback_custom_message)
+                                // TODO: `The result of input is not used` warning. idk why.
+                                input(
+                                    inputType = InputType.TYPE_TEXT_FLAG_MULTI_LINE,
+                                ) { _, text ->
+                                    val sentryId = Sentry.captureMessage("User FeedBack")
+                                    val userFeedback = UserFeedback(sentryId).apply {
+                                        comments = text.toString()
+                                    }
+                                    Sentry.captureUserFeedback(userFeedback)
+                                }
+
+                                positiveButton(R.string.rating_dialog_feedback_button_submit)
+                                negativeButton(R.string.rating_dialog_feedback_button_cancel)
+
+                                // TODO: make fork of lib and add it to init:
+                                onPreShow { dialog ->
+                                    val editText = dialog.getInputField()
+                                    editText.setLines(6)
+                                    editText.gravity = Gravity.TOP
+                                }
+                            }
                             return true
                         }
                         SETTINGS_ID -> {
@@ -400,18 +413,19 @@ class MainActivity: AppCompatActivity() {
                             return false
                         }
                         else -> {
-                            if (getModeById(drawerItem.identifier) == null) {
-                                return true
-                            }
-                            mode = getModeById(drawerItem.identifier)!!
-                            setHeader()
-                            binding.mainScroll.scrollTo(0, 0)
-                            replaceFr()
+                            // Not selectable items like expandable
+                            if (drawerItem.identifier < 0) return true
+
+                            mode = if (getModeById(drawerItem.identifier) == null) {
+                                Sentry.captureMessage("null Mode parameter " + drawerItem.identifier.toString(), SentryLevel.FATAL)
+                                "f2l"
+                            } else getModeById(drawerItem.identifier)!!
+
+                            updateScreen()
                             return false
                         }
                     }
                 }
-            })
-            .build()
+            }).build()
     }
 }

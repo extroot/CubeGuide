@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="ortega_count" translatable="false">"12"</string>
+    <integer name="ortega_count">12</integer>
+    <string name="ortega_picmode" translatable="false">ortega</string>
+    <string name="ortega_prefix" translatable="false">ortega</string>
 
     <string name="ortega0" translatable="false">"R U R' U R U2 R'
 U' R' U2 R U R' U R"</string>

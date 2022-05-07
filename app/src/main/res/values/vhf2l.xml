@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="vh_count" translatable="false">"32"</string>
+    <integer name="vh_count">32</integer>
+    <string name="vh_picmode" translatable="false">vh</string>
+    <string name="vh_prefix" translatable="false">vh f2l</string>
 
     <string name="vh0" translatable="false">"y R B R' U2 Rw' R U M'"</string>
     <string name="vh0_title" translatable="false" />

@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="wv_count" translatable="false">"52"</string>
+    <integer name="wv_count">52</integer>
+    <string name="wv_picmode" translatable="false">wv</string>
+    <string name="wv_prefix" translatable="false">wv</string>
 
     <string name="wv0" translatable="false">"U' L' U L"</string>
     <string name="wv0_title" translatable="false" />

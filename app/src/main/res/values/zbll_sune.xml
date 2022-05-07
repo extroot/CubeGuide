@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="zbll_sune_count" translatable="false">"72"</string>
+    <integer name="zbll_sune_count">72</integer>
+    <string name="zbll_sune_picmode" translatable="false">zbll_sune</string>
+    <string name="zbll_sune_prefix" translatable="false">zbll s</string>
 
     <string name="zbll_sune0" translatable="false">"(U') R' U R2 U R' U R U2 R U2 R U R' U R2"</string>
     <string name="zbll_sune0_title" translatable="false" />

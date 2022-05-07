@@ -1,12 +1,17 @@
 package ru.extroot.newcubeguide
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.LayoutInflater
+import androidx.fragment.app.Fragment
+
 
 class Easy3Fragment : Fragment() {
+    /**
+     * Easy3 text method fragment
+     * In future will handle few methods
+     */
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
