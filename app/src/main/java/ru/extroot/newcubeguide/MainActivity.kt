@@ -7,8 +7,8 @@ import android.content.Intent
 import android.content.SharedPreferences
 import androidx.fragment.app.*
 import androidx.core.os.bundleOf
-import androidx.appcompat.app.AppCompatActivity
 import androidx.preference.PreferenceManager
+import androidx.appcompat.app.AppCompatActivity
 
 import com.google.android.gms.ads.*
 
@@ -32,8 +32,14 @@ import io.sentry.UserFeedback
 import ru.extroot.newcubeguide.databinding.ActivityMainBinding
 
 
+@Suppress("DEPRECATION", "CheckResult")
 class MainActivity : AppCompatActivity() {
     companion object {
+        /**
+         * Mode IDs
+         * Necessary for material navigation drawer.
+         * IDs going in order, when methods was added to app ;D.
+         */
         private const val F2L_ID: Long = 1
         private const val PLL_ID: Long = 2
         private const val OLL_ID: Long = 3
@@ -84,27 +90,24 @@ class MainActivity : AppCompatActivity() {
         private const val ZBLL_SUNE_ID: Long = 42
         private const val ZBLL_ANTISUNE_ID: Long = 43
 
-//        private const val OH_OLL_RH_ID: Long = 44
-//        private const val OH_PLL_RH_ID: Long = 45
-//        private const val OH_COLL_RH_ID: Long = 46
-
         // private const val EASY_4_ID: Long = 47;
         // private const val CFOP_ABOUT_ID: Long = 48
 
         private const val REVIEW_ID: Long          = 102
         private const val FEEDBACK_ID: Long        = 103
         private const val SETTINGS_ID: Long        = 104
+
+        const val MODE_KEY = "SAVED_MODE_KEY"
     }
 
-    private var isCounting: Boolean = false
-    private var isGrid: Boolean = false
     private var rhOH: Boolean = false
     private var mode: String = "easy3"
+    private var restoreOnExit: Boolean = false
+
 
     private lateinit var result: Drawer
     private lateinit var topAdView: AdView
     private lateinit var adRequest: AdRequest
-
     private lateinit var sharedPref: SharedPreferences
 
     private lateinit var binding: ActivityMainBinding
@@ -119,30 +122,36 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setTitle(R.string.easy3_header)
 
-        val isCountingDefault = resources.getBoolean(R.bool.counting_default_key)
-        val isGridDefault = resources.getBoolean(R.bool.grid_default_key)
-        val rhOHDefault = resources.getBoolean(R.bool.rh_oh_default_key)
 
+        // Get settings from shared preferences
         sharedPref = PreferenceManager.getDefaultSharedPreferences(this)
-        isCounting = sharedPref.getBoolean(getString(R.string.counting_key), isCountingDefault)
-        isGrid = sharedPref.getBoolean(getString(R.string.grid_key), isGridDefault)
-        rhOH = sharedPref.getBoolean(getString(R.string.rh_oh_key), rhOHDefault)
+        rhOH = sharedPref.getBoolean(getString(R.string.rh_oh_key), resources.getBoolean(R.bool.rh_oh_default_key))
+        restoreOnExit = sharedPref.getBoolean(getString(R.string.restore_mode_key), resources.getBoolean(R.bool.restore_mode_default_key))
 
-        if (savedInstanceState == null) {
-            supportFragmentManager.commit {
-                setReorderingAllowed(true)
-                add<Easy3Fragment>(R.id.mainLayout)
+        if (savedInstanceState != null) {
+            mode = savedInstanceState.getString(MODE_KEY) ?: mode
+        } else if (restoreOnExit) {
+            mode = sharedPref.getString(getString(R.string.saved_mode_key), getString(R.string.saved_mode_default_key)) ?: getString(R.string.saved_mode_default_key)
+
+            // Check if after editing in settings activity
+            if (mode.startsWith("oh_")) {
+                mode = if (rhOH) mode.replace("lh", "rh") else mode.replace("rh", "lh")
             }
         }
 
+        // Draw screen elements
+        updateScreen()
 
         try {
             initAd()
         } catch (e: Exception) {
             Sentry.captureException(e, "InitAd")
         }
+
+        // Init navigation drawer
         handleDrawer()
 
+        // Init RateBottomSheet Manager
         RateBottomSheetManager(this)
             .setInstallDays(3)
             .setLaunchTimes(8)
@@ -151,7 +160,21 @@ class MainActivity : AppCompatActivity() {
         RateBottomSheet.showRateBottomSheetIfMeetsConditions(this)
     }
 
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putString(MODE_KEY, mode)
+
+        // Save mode to shared pref, so on app start open last screen
+        with (sharedPref.edit()) {
+            putString(getString(R.string.saved_mode_key), mode)
+            apply()
+        }
+    }
+
     private fun initAd() {
+        /**
+         * Initialization of Google ADS
+         */
         MobileAds.initialize(this) {}
         topAdView = AdView(this)
 
@@ -165,35 +188,20 @@ class MainActivity : AppCompatActivity() {
         topAdView.loadAd(adRequest)
     }
 
+    /**
+     * Returns mode name by it's [id]
+     */
     private fun getModeById(id: Long): String? {
         return when (id) {
-            EASY_3_ID -> { "easy3"}
+            EASY_3_ID -> { "easy3" }
 
             F2L_ID -> { "f2l" }
             OLL_ID -> { "oll" }
             PLL_ID -> { "pll" }
 
-            OH_OLL ->   {
-                if (rhOH) {
-                    "oh_oll_rh"
-                } else {
-                    "oh_oll_lh"
-                }
-            }
-            OH_PLL ->   {
-                if (rhOH) {
-                    "oh_pll_rh"
-                } else {
-                    "oh_pll_lh"
-                }
-            }
-            OH_COLL ->  {
-                if (rhOH) {
-                    "oh_coll_rh"
-                } else {
-                    "oh_coll_lh"
-                }
-            }
+            OH_OLL ->   { if (rhOH) "oh_oll_rh" else "oh_oll_lh" }
+            OH_PLL ->   { if (rhOH) "oh_pll_rh" else "oh_pll_lh" }
+            OH_COLL ->   { if (rhOH) "oh_coll_rh" else "oh_coll_lh" }
 
             COLL_ID ->  { "coll" }
             OPF2L_ID -> { "op" }
@@ -236,26 +244,69 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun setHeader() {
+    /**
+     * Draws elements to screen.
+     * Text or basic methods
+     */
+    private fun updateScreen() {
         binding.toolbar.title = getString(resources.getIdentifier(mode + "_header", "string", packageName))
-    }
 
+        binding.mainScroll.scrollTo(0, 0)
 
-    private fun replaceFr() {
         supportFragmentManager.commit {
             setReorderingAllowed(true)
-            replace<FormulaFragment>(R.id.mainLayout, args=bundleOf(
-                "mode" to mode,
-                "packageName" to packageName
-            ))
+            if ("easy3" == mode) {
+                replace<Easy3Fragment>(R.id.mainLayout)
+            } else {
+                replace<FormulaFragment>(
+                    R.id.mainLayout, args = bundleOf(
+                        "mode" to mode,
+                        "packageName" to packageName
+                    )
+                )
+            }
         }
     }
 
+    /**
+     * Starts Settings activity
+     */
     private fun startSettings() {
         val intent = Intent(this, SettingsActivity::class.java)
         startActivity(intent)
     }
 
+    private fun showFeedBackDialog() {
+        MaterialDialog(this@MainActivity).show {
+            title(R.string.rating_dialog_feedback_title)
+            message(R.string.rating_dialog_feedback_custom_message)
+            // TODO: `The result of input is not used` warning. idk why.
+            input(
+                inputType = InputType.TYPE_TEXT_FLAG_MULTI_LINE,
+            ) { _, text ->
+                val sentryId = Sentry.captureMessage("User FeedBack")
+                val userFeedback = UserFeedback(sentryId).apply {
+                    comments = text.toString()
+                }
+                Sentry.captureUserFeedback(userFeedback)
+            }
+
+            positiveButton(R.string.rating_dialog_feedback_button_submit)
+            negativeButton(R.string.rating_dialog_feedback_button_cancel)
+
+            // TODO: make fork of lib and add it to init:
+            onPreShow { dialog ->
+                val editText = dialog.getInputField()
+                editText.setLines(6)
+                editText.gravity = Gravity.TOP
+            }
+        }
+    }
+
+    /**
+     * Initialization of Material Navigation Drawer
+     * Complex hierarchy, I think, will be better move it to menu.xml mb.
+     */
     private fun handleDrawer() {
         result = DrawerBuilder()
             .withActivity(this)
@@ -271,9 +322,9 @@ class MainActivity : AppCompatActivity() {
                     ),
                 ExpandableDrawerItem().withName(R.string.header_3x3x3_oh).withSelectable(false)
                     .withSubItems(
-                        SecondaryDrawerItem().withName(R.string.oh_oll_header).withIdentifier(OH_OLL).withLevel(2),
-                        SecondaryDrawerItem().withName(R.string.oh_pll_header).withIdentifier(OH_PLL).withLevel(2),
-                        SecondaryDrawerItem().withName(R.string.oh_coll_header).withIdentifier(OH_COLL).withLevel(2)
+                        SecondaryDrawerItem().withName(R.string.oh_oll_lh_header).withIdentifier(OH_OLL).withLevel(2),
+                        SecondaryDrawerItem().withName(R.string.oh_pll_lh_header).withIdentifier(OH_PLL).withLevel(2),
+                        SecondaryDrawerItem().withName(R.string.oh_coll_lh_header).withIdentifier(OH_COLL).withLevel(2)
                     ),
                 ExpandableDrawerItem().withName(R.string.header_3x3x3_pro).withSelectable(false).withSubItems(
                     ExpandableDrawerItem().withName(R.string.ls_ll_header).withSelectable(false).withLevel(2).withSubItems(
@@ -349,16 +400,6 @@ class MainActivity : AppCompatActivity() {
             .withOnDrawerItemClickListener(object: Drawer.OnDrawerItemClickListener {
                 override fun onItemClick(view: View?, position: Int, drawerItem: IDrawerItem<*>): Boolean {
                     when (drawerItem.identifier) {
-                        EASY_3_ID -> {
-                            mode = "easy3"
-                            setHeader()
-                            binding.mainScroll.scrollTo(0, 0)
-                            supportFragmentManager.commit {
-                                setReorderingAllowed(true)
-                                replace<Easy3Fragment>(R.id.mainLayout)
-                            }
-                            return false
-                        }
                         REVIEW_ID -> {
                             RateBottomSheetManager(this@MainActivity)
                                 .setDebugForceOpenEnable(true) // False by default
@@ -368,30 +409,7 @@ class MainActivity : AppCompatActivity() {
                             return true
                         }
                         FEEDBACK_ID -> {
-                            MaterialDialog(this@MainActivity).show() {
-                                title(R.string.rating_dialog_feedback_title)
-                                message(R.string.rating_dialog_feedback_custom_message)
-                                // TODO: `The result of input is not used` warning. idk why.
-                                input(
-                                    inputType = InputType.TYPE_TEXT_FLAG_MULTI_LINE,
-                                ) { dialog, text ->
-                                    val sentryId = Sentry.captureMessage("User FeedBack")
-                                    val userFeedback = UserFeedback(sentryId).apply {
-                                        comments = text.toString()
-                                    }
-                                    Sentry.captureUserFeedback(userFeedback)
-                                }
-
-                                positiveButton(R.string.rating_dialog_feedback_button_submit)
-                                negativeButton(R.string.rating_dialog_feedback_button_cancel)
-
-                                // TODO: make fork of lib and add it to init:
-                                onPreShow { dialog ->
-                                    val editText = dialog.getInputField()
-                                    editText.setLines(6)
-                                    editText.gravity = Gravity.TOP
-                                }
-                            }
+                            showFeedBackDialog()
                             return true
                         }
                         SETTINGS_ID -> {
@@ -399,19 +417,19 @@ class MainActivity : AppCompatActivity() {
                             return false
                         }
                         else -> {
-                            if (getModeById(drawerItem.identifier) == null) {
+                            // Not selectable items like expandable
+                            if (drawerItem.identifier < 0) return true
+
+                            mode = if (getModeById(drawerItem.identifier) == null) {
                                 Sentry.captureMessage("null Mode parameter " + drawerItem.identifier.toString(), SentryLevel.FATAL)
-                                return true
-                            }
-                            mode = getModeById(drawerItem.identifier)!!
-                            setHeader()
-                            binding.mainScroll.scrollTo(0, 0)
-                            replaceFr()
+                                "f2l"
+                            } else getModeById(drawerItem.identifier)!!
+
+                            updateScreen()
                             return false
                         }
                     }
                 }
-            })
-            .build()
+            }).build()
     }
 }

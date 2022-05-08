@@ -1,36 +1,56 @@
 package ru.extroot.newcubeguide
 
-import android.widget.TextView
-import android.widget.ImageView
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
+import android.widget.ImageView
 import android.view.LayoutInflater
 import androidx.recyclerview.widget.RecyclerView
 
+
+/**
+ * Custom Recyclel adapter.
+ * Renders lines (or grid) of elements.
+ *
+ * Arguments:
+ *   [imageData] - list of images
+ *   [isCounting] - necessity of placing prefixes with number of algorithm
+ * If render style is grid, uses:
+ *   [prefix] - mode prefix for pics titles.
+ * If render style is line:
+ *   [titleData] - list of titles
+ *   [algData] - list of algorithms.
+ */
+@Suppress("SetTextI18n")
 class CustomRecyclerAdapter(): RecyclerView.Adapter<CustomRecyclerAdapter.MyViewHolder>() {
     constructor(
         titleData: List<String?>?,
         imageData: List<Int>,
         algData: List<String>?,
-        isCounting: Boolean = false) : this() {
+        isCounting: Boolean = false
+    ) : this() {
             this.titleData = titleData
             this.imageData = imageData
             this.algData = algData
             this.isCounting = isCounting
         }
 
-    constructor(imageData: List<Int>, mode: String, isCounting: Boolean) : this() {
+    constructor(
+        imageData: List<Int>,
+        isCounting: Boolean,
+        prefix: String
+    ) : this() {
         this.imageData = imageData
         this.isGrid = true
-        this.mode = mode
         this.isCounting = isCounting
+        this.prefix = prefix
     }
     private var titleData: List<String?>? = null
     private lateinit var imageData: List<Int>
     private var algData: List<String>? = null
     private var isCounting: Boolean = false
     private var isGrid: Boolean = false
-    private var mode: String = "f2l"
+    private var prefix: String = "prefix"
 
     var onClickListener: View.OnClickListener? = null
 
@@ -58,7 +78,7 @@ class CustomRecyclerAdapter(): RecyclerView.Adapter<CustomRecyclerAdapter.MyView
 
             if (isCounting) {
                 holder.underImageTextView.visibility = View.VISIBLE
-                holder.underImageTextView.text = mode.uppercase() + " " + (position + 1).toString()
+                holder.underImageTextView.text = prefix.uppercase() + " " + (position + 1).toString()
             }
         } else {
             holder.formulaTextView.text = algData!![position]

@@ -1,86 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="l2c_count" translatable="false">"25"</string>
+    <integer name="l2c_count">25</integer>
+    <string name="l2c_picmode" translatable="false">l2c</string>
+    <string name="l2c_prefix" translatable="false">l2c</string>
 
     <string name="l2c0" translatable="false">"Rw U2 Rw'
 3Rw U2 3Rw'"</string>
-    <string name="l2c0_title" translatable="false">"Sticky"</string>
-
     <string name="l2c1" translatable="false">"Rw U Rw' U Rw U2 Rw'
 (U2) Rw U2 Rw' U' Rw U' Rw'
 (U' F') Rw U' Rw' U' Rw U2 Rw'"</string>
-    <string name="l2c1_title" translatable="false">"Sune"</string>
-
     <string name="l2c2" translatable="false">"Rw U M' U2 M U Rw'
 (U2) 3Lw' U' M U Rw U' M'"</string>
-    <string name="l2c2_title" translatable="false">"Dot"</string>
-
     <string name="l2c3" translatable="false">"Rw U Rw' U' Rw U Rw' U' Rw U Rw'
 (U2) Rw U M' U2 M U' Rw'"</string>
-    <string name="l2c3_title" translatable="false">"Headlights"</string>
-
     <string name="l2c4" translatable="false">"Rw U' Rw' U2 Rw U' Rw'"</string>
-    <string name="l2c4_title" translatable="false">"Peanut"</string>
-
     <string name="l2c5" translatable="false">"M' U2 M U Rw U2 Rw'
 Rw U2 Rw' U2 Rw U' Rw'"</string>
-    <string name="l2c5_title" translatable="false">"°.°"</string>
-
     <string name="l2c6" translatable="false">"Rw U Rw' U' Rw U2 Rw'"</string>
-    <string name="l2c6_title" translatable="false">"lines"</string>
-
     <string name="l2c7" translatable="false">"Rw U' Rw' U Rw U2 Rw'"</string>
-    <string name="l2c7_title" translatable="false" />
-
     <string name="l2c8" translatable="false">"Rw U Rw' U' Rw U Rw'"</string>
-    <string name="l2c8_title" translatable="false" />
-
     <string name="l2c9" translatable="false">"Rw U' Rw' U Rw U' Rw'"</string>
-    <string name="l2c9_title" translatable="false" />
-
     <string name="l2c10" translatable="false">"Rw U2 Rw' U Rw U2 Rw'"</string>
-    <string name="l2c10_title" translatable="false" />
-
     <string name="l2c11" translatable="false">"Rw U' Rw' U' Rw U' Rw'"</string>
-    <string name="l2c11_title" translatable="false" />
-
     <string name="l2c12" translatable="false">"Rw U2 Rw' U' Rw U2 Rw'"</string>
-    <string name="l2c12_title" translatable="false" />
-
     <string name="l2c13" translatable="false">"Rw U Rw' U Rw U Rw'"</string>
-    <string name="l2c13_title" translatable="false" />
-
     <string name="l2c14" translatable="false">"Rw U Rw'"</string>
-    <string name="l2c14_title" translatable="false" />
-
     <string name="l2c15" translatable="false">"Rw U Rw' U' Rw U' Rw'"</string>
-    <string name="l2c15_title" translatable="false" />
-
     <string name="l2c16" translatable="false">"Rw U' Rw'"</string>
-    <string name="l2c16_title" translatable="false" />
-
     <string name="l2c17" translatable="false">"Rw U' Rw' U Rw U Rw'"</string>
-    <string name="l2c17_title" translatable="false" />
-
     <string name="l2c18" translatable="false">"M' U M"</string>
-    <string name="l2c18_title" translatable="false">"H-H"</string>
-
     <string name="l2c19" translatable="false">"x Rw' U' M U 3Rw"</string>
-    <string name="l2c19_title" translatable="false">"Angelfish-H"</string>
-
     <string name="l2c20" translatable="false">"x Rw' U' M U' 3R"</string>
-    <string name="l2c20_title" translatable="false">"L-T"</string>
-
     <string name="l2c21" translatable="false">"x Rw' U M U 3R"</string>
-    <string name="l2c21_title" translatable="false">"Mirror L-T"</string>
-
     <string name="l2c22" translatable="false">"Rw' F Rw U Rw U2 Rw"</string>
-    <string name="l2c22_title" translatable="false">"Squares"</string>
-
     <string name="l2c23" translatable="false">"Lw' U Lw U2 Rw U2 Rw'"</string>
-    <string name="l2c23_title" translatable="false">"T-C"</string>
-
     <string name="l2c24" translatable="false">"M' U M2 F M'"</string>
-    <string name="l2c24_title" translatable="false">"Checkers"</string>
 
+    <string name="l2c0_title" translatable="false">"Sticky"</string>
+    <string name="l2c1_title" translatable="false">"Sune"</string>
+    <string name="l2c2_title" translatable="false">"Dot"</string>
+    <string name="l2c3_title" translatable="false">"Headlights"</string>
+    <string name="l2c4_title" translatable="false">"Peanut"</string>
+    <string name="l2c5_title" translatable="false">"°.°"</string>
+    <string name="l2c6_title" translatable="false">"lines"</string>
+    <string name="l2c7_title" translatable="false" />
+    <string name="l2c8_title" translatable="false" />
+    <string name="l2c9_title" translatable="false" />
+    <string name="l2c10_title" translatable="false" />
+    <string name="l2c11_title" translatable="false" />
+    <string name="l2c12_title" translatable="false" />
+    <string name="l2c13_title" translatable="false" />
+    <string name="l2c14_title" translatable="false" />
+    <string name="l2c15_title" translatable="false" />
+    <string name="l2c16_title" translatable="false" />
+    <string name="l2c17_title" translatable="false" />
+    <string name="l2c18_title" translatable="false">"H-H"</string>
+    <string name="l2c19_title" translatable="false">"Angelfish-H"</string>
+    <string name="l2c20_title" translatable="false">"L-T"</string>
+    <string name="l2c21_title" translatable="false">"Mirror L-T"</string>
+    <string name="l2c22_title" translatable="false">"Squares"</string>
+    <string name="l2c23_title" translatable="false">"T-C"</string>
+    <string name="l2c24_title" translatable="false">"Checkers"</string>
 </resources>

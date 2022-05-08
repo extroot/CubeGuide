@@ -1,93 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="olc_count" translatable="false">"27"</string>
+    <integer name="olc_count">27</integer>
+    <string name="olc_picmode" translatable="false">olc</string>
+    <string name="olc_prefix" translatable="false">olc</string>
 
     <string name="olc0" translatable="false">"U' R U' R' U R U2' R' U' R U R'
 R2 U R2 U R2 U2 R2
 x R' U R U' R' U R U' R' U R' U' x'"</string>
-    <string name="olc0_title" translatable="false" />
-
     <string name="olc1" translatable="false">"U' R U R' U' R U R' U R U' R'"</string>
-    <string name="olc1_title" translatable="false" />
-
     <string name="olc2" translatable="false">"U R U2 R' U' R U2 R' U' R U2 R'"</string>
-    <string name="olc2_title" translatable="false" />
-
     <string name="olc3" translatable="false">"U' x' U L' U' R2 U L U' R2"</string>
-    <string name="olc3_title" translatable="false" />
-
     <string name="olc4" translatable="false">"U2 R U' R' U R U R' U R U' R'
 U R U' R' U R U' R U2 R U2 R'
 y U' R U R D2 R' U' R D2 R2"</string>
-    <string name="olc4_title" translatable="false" />
-
     <string name="olc5" translatable="false">"U' R U2 R' U R U' R U R' U R U2 R2"</string>
-    <string name="olc5_title" translatable="false" />
-
     <string name="olc6" translatable="false">"U2 L' U R2 U' L U R2"</string>
-    <string name="olc6_title" translatable="false" />
-
     <string name="olc7" translatable="false">"U R U' R' U R U' R' L' U R U' L R'"</string>
-    <string name="olc7_title" translatable="false" />
-
     <string name="olc8" translatable="false">"y' R' U' R U R' U' R U R' U' R"</string>
-    <string name="olc8_title" translatable="false" />
-
     <string name="olc9" translatable="false">"U2 F' R U R' U R U2 R' F"</string>
-    <string name="olc9_title" translatable="false" />
-
     <string name="olc10" translatable="false">"R U2 R' U' R U' R' U R U' R' U2 R U' R'"</string>
-    <string name="olc10_title" translatable="false" />
-
     <string name="olc11" translatable="false">"U R U R' U' R U2 R' U R U' R'"</string>
-    <string name="olc11_title" translatable="false" />
-
     <string name="olc12" translatable="false">"R U R' U' R U R' U' R U R'"</string>
-    <string name="olc12_title" translatable="false" />
-
     <string name="olc13" translatable="false">"R U' R2 U' R U' R' U2 R2 U R'
 F' R' U2 R U R' U' R U R' U R U' F"</string>
-    <string name="olc13_title" translatable="false" />
-
     <string name="olc14" translatable="false">"U2 R U' R' U' R U' R' U2 R U R'
 U2 R F' U' F U' F' U2 F R'
 U R U' R' U R U' R' U R U' R'"</string>
-    <string name="olc14_title" translatable="false" />
-
     <string name="olc15" translatable="false">"U R2 U2 R2 F U' R2 U' R2 U F'"</string>
-    <string name="olc15_title" translatable="false" />
-
     <string name="olc16" translatable="false">"R2 L' U R2 U' L U2 R2 U2 R2"</string>
-    <string name="olc16_title" translatable="false" />
-
     <string name="olc17" translatable="false">"U' R U R' U R U' R' U2 R U R'"</string>
-    <string name="olc17_title" translatable="false" />
-
     <string name="olc18" translatable="false">"U y' R U R2 U R2 U2 R2 U R
 U' R' U' R2 U' R2 U2 R2 U' R'"</string>
-    <string name="olc18_title" translatable="false" />
-
     <string name="olc19" translatable="false">"U2 R U2 R' U2 R U' R' U R U' R'"</string>
-    <string name="olc19_title" translatable="false" />
-
     <string name="olc20" translatable="false">"R' F' R U R U' R' F U' R U' R' U' R U R' U' R U R'"</string>
-    <string name="olc20_title" translatable="false" />
-
     <string name="olc21" translatable="false">"y' U2 F R' U R U' F' U' R' U R"</string>
-    <string name="olc21_title" translatable="false" />
-
     <string name="olc22" translatable="false">"U L' U R U' L R' U2 R U' R'"</string>
-    <string name="olc22_title" translatable="false" />
-
     <string name="olc23" translatable="false">"R U R' U2 R U2 R' U2 R U R'"</string>
-    <string name="olc23_title" translatable="false" />
-
     <string name="olc24" translatable="false">"y' R' U' R U2 R' U2 R U2 R' U' R"</string>
-    <string name="olc24_title" translatable="false" />
-
     <string name="olc25" translatable="false">"y R U R' U R U L2 U R' U' L2"</string>
-    <string name="olc25_title" translatable="false" />
-
     <string name="olc26" translatable="false">"U R2 F' U2 F U2 R2 U' B U' B'"</string>
+
+    <string name="olc0_title" translatable="false" />
+    <string name="olc1_title" translatable="false" />
+    <string name="olc2_title" translatable="false" />
+    <string name="olc3_title" translatable="false" />
+    <string name="olc4_title" translatable="false" />
+    <string name="olc5_title" translatable="false" />
+    <string name="olc6_title" translatable="false" />
+    <string name="olc7_title" translatable="false" />
+    <string name="olc8_title" translatable="false" />
+    <string name="olc9_title" translatable="false" />
+    <string name="olc10_title" translatable="false" />
+    <string name="olc11_title" translatable="false" />
+    <string name="olc12_title" translatable="false" />
+    <string name="olc13_title" translatable="false" />
+    <string name="olc14_title" translatable="false" />
+    <string name="olc15_title" translatable="false" />
+    <string name="olc16_title" translatable="false" />
+    <string name="olc17_title" translatable="false" />
+    <string name="olc18_title" translatable="false" />
+    <string name="olc19_title" translatable="false" />
+    <string name="olc20_title" translatable="false" />
+    <string name="olc21_title" translatable="false" />
+    <string name="olc22_title" translatable="false" />
+    <string name="olc23_title" translatable="false" />
+    <string name="olc24_title" translatable="false" />
+    <string name="olc25_title" translatable="false" />
     <string name="olc26_title" translatable="false" />
 </resources>

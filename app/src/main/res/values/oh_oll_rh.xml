@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="oh_oll_rh_count" translatable="false">"57"</string>
+    <integer name="oh_oll_rh_count">57</integer>
+    <string name="oh_oll_rh_picmode" translatable="false">oll</string>
+    <string name="oh_oll_rh_prefix" translatable="false">oh oll</string>
 
     <string name="oh_oll_rh0" translatable="false">"L U L' U L U2 L2 U' L U' L' U2 L
 y2 L' U' L U' L' U2 L2 U L' U L U2 L'"</string>

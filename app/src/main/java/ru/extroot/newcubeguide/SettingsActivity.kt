@@ -1,11 +1,12 @@
 package ru.extroot.newcubeguide
 
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
+import androidx.preference.*
 import androidx.core.os.bundleOf
 import androidx.fragment.app.commit
 import androidx.fragment.app.replace
-import androidx.preference.*
+import androidx.appcompat.app.AppCompatActivity
+
 import ru.extroot.newcubeguide.databinding.SettingsActivityBinding
 
 class SettingsActivity : AppCompatActivity(), Preference.OnPreferenceChangeListener {
@@ -46,13 +47,24 @@ class SettingsActivity : AppCompatActivity(), Preference.OnPreferenceChangeListe
         }
     }
 
-    class SettingsFragment(val listener: Preference.OnPreferenceChangeListener) : PreferenceFragmentCompat(), Preference.OnPreferenceChangeListener {
+    class SettingsFragment(private val listener: Preference.OnPreferenceChangeListener) : PreferenceFragmentCompat() {
         override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
             val context = preferenceManager.context
             val screen = preferenceManager.createPreferenceScreen(context)
 
+            val mainCategory = PreferenceCategory(context)
+            mainCategory.title = getString(R.string.main_category_header)
+            screen.addPreference(mainCategory)
+
+            val restoreModePreference = SwitchPreferenceCompat(context)
+            restoreModePreference.key = getString(R.string.restore_mode_key)
+            restoreModePreference.title = getString(R.string.restore_mode_switch_title)
+            restoreModePreference.setDefaultValue(resources.getBoolean(R.bool.restore_mode_default_key))
+            mainCategory.addPreference(restoreModePreference)
+
+
             val algsCategory = PreferenceCategory(context)
-            algsCategory.title = getString(R.string.algs_settings_header)
+            algsCategory.title = getString(R.string.algs_category_header)
             screen.addPreference(algsCategory)
 
             val replaceRwPreference = SwitchPreferenceCompat(context)
@@ -64,13 +76,13 @@ class SettingsActivity : AppCompatActivity(), Preference.OnPreferenceChangeListe
 
             val rhOhPreference = SwitchPreferenceCompat(context)
             rhOhPreference.key = getString(R.string.rh_oh_key)
-            rhOhPreference.title = "Right Hand OLL"
+            rhOhPreference.title = getString(R.string.rh_oh_switch_title)
             rhOhPreference.setDefaultValue(resources.getBoolean(R.bool.rh_oh_default_key))
             algsCategory.addPreference(rhOhPreference)
 
 
             val algContainerTypeCategory = PreferenceCategory(context)
-            algContainerTypeCategory.title = getString(R.string.alg_container_header)
+            algContainerTypeCategory.title = getString(R.string.alg_category_header)
             screen.addPreference(algContainerTypeCategory)
 
             val gridPreference = SwitchPreferenceCompat(context)
@@ -88,10 +100,6 @@ class SettingsActivity : AppCompatActivity(), Preference.OnPreferenceChangeListe
             algContainerTypeCategory.addPreference(countingPreference)
 
             preferenceScreen = screen
-        }
-
-        override fun onPreferenceChange(preference: Preference, newValue: Any?): Boolean {
-            return true
         }
     }
 }

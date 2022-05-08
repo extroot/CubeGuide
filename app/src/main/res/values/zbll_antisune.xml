@@ -1,220 +1,152 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="zbll_antisune_count" translatable="false">"72"</string>
+    <integer name="zbll_antisune_count">72</integer>
+    <string name="zbll_antisune_picmode" translatable="false">zbll_antisune</string>
+    <string name="zbll_antisune_prefix" translatable="false">zbll a</string>
 
     <string name="zbll_antisune0" translatable="false">"(U) R U' R2 U' R U' R' U2 R' U2 R' U' R U' R2"</string>
-    <string name="zbll_antisune0_title" translatable="false" />
-
     <string name="zbll_antisune1" translatable="false">"(U') R U2 R2 U' R2 U' R' F U' R' U' R U F'"</string>
-    <string name="zbll_antisune1_title" translatable="false" />
-
     <string name="zbll_antisune2" translatable="false">"R' U L U' R U L'"</string>
-    <string name="zbll_antisune2_title" translatable="false" />
-
     <string name="zbll_antisune3" translatable="false">"R D' R2 D R2 U' R2 D' R2 D R2 U R"</string>
-    <string name="zbll_antisune3_title" translatable="false" />
-
     <string name="zbll_antisune4" translatable="false">"(U') R U2 R2 D' R U2 R' D R2 U' R' U R U' R'"</string>
-    <string name="zbll_antisune4_title" translatable="false" />
-
     <string name="zbll_antisune5" translatable="false">"(U') R U2 R' U' F' R U R' U' R' F R2 U' R'"</string>
-    <string name="zbll_antisune5_title" translatable="false" />
-
     <string name="zbll_antisune6" translatable="false">"(U) R U2 R2 U' R' U R U' R' U' R2 U R"</string>
-    <string name="zbll_antisune6_title" translatable="false" />
-
     <string name="zbll_antisune7" translatable="false">"(U') R D R' U R D' R' U2 R' U' R U2 R' U' R"</string>
-    <string name="zbll_antisune7_title" translatable="false" />
-
     <string name="zbll_antisune8" translatable="false">"(U') R U2 R' U' R U R D R' U2 R D' R2"</string>
-    <string name="zbll_antisune8_title" translatable="false" />
-
     <string name="zbll_antisune9" translatable="false">"(U) R' U' R U' R' U R' D' R U R' D R2"</string>
-    <string name="zbll_antisune9_title" translatable="false" />
-
     <string name="zbll_antisune10" translatable="false">"(U') R D R' U' R D' R2 U' R U2 R' U' R"</string>
-    <string name="zbll_antisune10_title" translatable="false" />
-
     <string name="zbll_antisune11" translatable="false">"(U') R' U2 R' D' R U R' D R2 U' R' U2 R"</string>
-    <string name="zbll_antisune11_title" translatable="false" />
-
     <string name="zbll_antisune12" translatable="false">"R' U' R U' R' U2 R"</string>
-    <string name="zbll_antisune12_title" translatable="false" />
-
     <string name="zbll_antisune13" translatable="false">"(U') R U2 R' U' R U R' L' U R U' L U2 R'"</string>
-    <string name="zbll_antisune13_title" translatable="false" />
-
     <string name="zbll_antisune14" translatable="false">"(U) R D' U R U' R' U2 D R2 U' R U R"</string>
-    <string name="zbll_antisune14_title" translatable="false" />
-
     <string name="zbll_antisune15" translatable="false">"l U' R' D R2 U l' U R' U' R U R' U' F'"</string>
-    <string name="zbll_antisune15_title" translatable="false" />
-
     <string name="zbll_antisune16" translatable="false">"R D' R U' R' D U' R' U R U R2 U' R' U R"</string>
-    <string name="zbll_antisune16_title" translatable="false" />
-
     <string name="zbll_antisune17" translatable="false">"(U2) R' U' R U' R2 D' r U2 r' D R2"</string>
-    <string name="zbll_antisune17_title" translatable="false" />
-
     <string name="zbll_antisune18" translatable="false">"(U) R U2 R' U' R U' R'"</string>
-    <string name="zbll_antisune18_title" translatable="false" />
-
     <string name="zbll_antisune19" translatable="false">"R U' R' U2 R U' R' U2 R' D' R U R' D R"</string>
-    <string name="zbll_antisune19_title" translatable="false" />
-
     <string name="zbll_antisune20" translatable="false">"(U') R U R U' R2 D U2 R' U' R U D' R"</string>
-    <string name="zbll_antisune20_title" translatable="false" />
-
     <string name="zbll_antisune21" translatable="false">"(U') R' D' R U2 R' D R2 U' R' U2 R U R' U R U R'"</string>
-    <string name="zbll_antisune21_title" translatable="false" />
-
     <string name="zbll_antisune22" translatable="false">"R U R' F' R U R' U' R' F R2 U R' U' R U' R'"</string>
-    <string name="zbll_antisune22_title" translatable="false" />
-
     <string name="zbll_antisune23" translatable="false">"R U' R' U2 R U' R2 D' R U' R' D R"</string>
-    <string name="zbll_antisune23_title" translatable="false" />
-
     <string name="zbll_antisune24" translatable="false">"R' U' R2 U R2 U R2 U2 R2 U2 R"</string>
-    <string name="zbll_antisune24_title" translatable="false" />
-
     <string name="zbll_antisune25" translatable="false">"(U') F U' R' U R U F' R' U R U' R' U2 R"</string>
-    <string name="zbll_antisune25_title" translatable="false" />
-
     <string name="zbll_antisune26" translatable="false">"R2 D' R U2 R' D R U R U' R' U2 R"</string>
-    <string name="zbll_antisune26_title" translatable="false" />
-
     <string name="zbll_antisune27" translatable="false">"(U2) R2 D R' U R D' R' U R' U' R U' R'"</string>
-    <string name="zbll_antisune27_title" translatable="false" />
-
     <string name="zbll_antisune28" translatable="false">"(U2) R2 D r' U2 r D' R2 U' R U' R'"</string>
-    <string name="zbll_antisune28_title" translatable="false" />
-
     <string name="zbll_antisune29" translatable="false">"(U) R U R' U' R2 U R U R' U' D R' U' R D' R"</string>
-    <string name="zbll_antisune29_title" translatable="false" />
-
     <string name="zbll_antisune30" translatable="false">"(U2) R U R' U R' U' R2 U' R2 U2 R"</string>
-    <string name="zbll_antisune30_title" translatable="false" />
-
     <string name="zbll_antisune31" translatable="false">"(U) R U R' U L' U2 R U2 R' U2 R L U2 R'"</string>
-    <string name="zbll_antisune31_title" translatable="false" />
-
     <string name="zbll_antisune32" translatable="false">"D R' U' R U' R' U R U D' R2 U R' U R U' R U' R2"</string>
-    <string name="zbll_antisune32_title" translatable="false" />
-
     <string name="zbll_antisune33" translatable="false">"(U) R U2 R' L' U2 R U' R' U2 L R U2 R'"</string>
-    <string name="zbll_antisune33_title" translatable="false" />
-
     <string name="zbll_antisune34" translatable="false">"R U2 R' U' R U' R D R' U2 R D' R' U2 R'"</string>
-    <string name="zbll_antisune34_title" translatable="false" />
-
     <string name="zbll_antisune35" translatable="false">"(U2) R' U' R U' R2 D' R U2 R' D R2"</string>
-    <string name="zbll_antisune35_title" translatable="false" />
-
     <string name="zbll_antisune36" translatable="false">"(U) R' U' R U R U2 R' U' R' U R U' R U' R'"</string>
-    <string name="zbll_antisune36_title" translatable="false" />
-
     <string name="zbll_antisune37" translatable="false">"R U R' F' R U2 R' U' R U' R' F R U' R'"</string>
-    <string name="zbll_antisune37_title" translatable="false" />
-
     <string name="zbll_antisune38" translatable="false">"R' U' R U' R' U' R U R' U' R' D' R U R' D R U2 R"</string>
-    <string name="zbll_antisune38_title" translatable="false" />
-
     <string name="zbll_antisune39" translatable="false">"(U') R U R' U' R' U' R U R U' R' U' R2 D' R U' R' D R U2 R"</string>
-    <string name="zbll_antisune39_title" translatable="false" />
-
     <string name="zbll_antisune40" translatable="false">"L R' U' R U L' U2 R' U2 R"</string>
-    <string name="zbll_antisune40_title" translatable="false" />
-
     <string name="zbll_antisune41" translatable="false">"(U2) R U2 R' U2 L' U R U' R' L"</string>
-    <string name="zbll_antisune41_title" translatable="false" />
-
     <string name="zbll_antisune42" translatable="false">"(U) R U R' U' R' U' R U R U' R' U' R' U R"</string>
-    <string name="zbll_antisune42_title" translatable="false" />
-
     <string name="zbll_antisune43" translatable="false">"R U R' U' R' U' F U R2 U' R' U R U' R' F'"</string>
-    <string name="zbll_antisune43_title" translatable="false" />
-
     <string name="zbll_antisune44" translatable="false">"(U) R U2 R' U' R U R D R' U R D' R' U' R' U R U R'"</string>
-    <string name="zbll_antisune44_title" translatable="false" />
-
     <string name="zbll_antisune45" translatable="false">"(U') R U2 R' U' R2 D R' U2 R D' R' U' R' U R U R'"</string>
-    <string name="zbll_antisune45_title" translatable="false" />
-
     <string name="zbll_antisune46" translatable="false">"(U2) R2 D R' U2 R D' R2 U' R U' R'"</string>
-    <string name="zbll_antisune46_title" translatable="false" />
-
     <string name="zbll_antisune47" translatable="false">"R' U2 R' D' R U2 R' D R U' R U' R' U2 R"</string>
-    <string name="zbll_antisune47_title" translatable="false" />
-
     <string name="zbll_antisune48" translatable="false">"(U) R U R' U R' U' R U R' U' R2 U' R2 U R U' R' U R"</string>
-    <string name="zbll_antisune48_title" translatable="false" />
-
     <string name="zbll_antisune49" translatable="false">"(U) R' U R2 U2 D R' U' R U' D' R2 U' R"</string>
-    <string name="zbll_antisune49_title" translatable="false" />
-
     <string name="zbll_antisune50" translatable="false">"(U2) F U R U' R' U R U' R2 F' R U2 R U2 R'"</string>
-    <string name="zbll_antisune50_title" translatable="false" />
-
     <string name="zbll_antisune51" translatable="false">"(U) R U2 R' U R' D' R U' R' D R U' R U' R'"</string>
-    <string name="zbll_antisune51_title" translatable="false" />
-
     <string name="zbll_antisune52" translatable="false">"R U R' F' R U2 R' U2 R' F R2 U' R'"</string>
-    <string name="zbll_antisune52_title" translatable="false" />
-
     <string name="zbll_antisune53" translatable="false">"R' U' R U R' F R U R' U' R' F' R2"</string>
-    <string name="zbll_antisune53_title" translatable="false" />
-
     <string name="zbll_antisune54" translatable="false">"R' U' R U' R' U' R' U' R' U' R' U R U R2"</string>
-    <string name="zbll_antisune54_title" translatable="false" />
-
     <string name="zbll_antisune55" translatable="false">"R' U R U R' U r U' R' U R U r' R' F R F' U R"</string>
-    <string name="zbll_antisune55_title" translatable="false" />
-
     <string name="zbll_antisune56" translatable="false">"(U2) F R U' R' U R U R2 F' R U R U R' U' R U' R'"</string>
-    <string name="zbll_antisune56_title" translatable="false" />
-
     <string name="zbll_antisune57" translatable="false">"(U') R2 D R' U2 R D' R' U' R' U R U' R' U R U2 R'"</string>
-    <string name="zbll_antisune57_title" translatable="false" />
-
     <string name="zbll_antisune58" translatable="false">"(U') R' U' R U' R U R D R' U' R D' R U2 R"</string>
-    <string name="zbll_antisune58_title" translatable="false" />
-
     <string name="zbll_antisune59" translatable="false">"(U) R U2 R D' R U' R' D R U R U' R U' R'"</string>
-    <string name="zbll_antisune59_title" translatable="false" />
-
     <string name="zbll_antisune60" translatable="false">"(U) R U R' U' R U R2 U' R2 U' R' U R U' R' U R' U R"</string>
-    <string name="zbll_antisune60_title" translatable="false" />
-
     <string name="zbll_antisune61" translatable="false">"z D' R' D R U R' D' R U' R U R' D R U'"</string>
-    <string name="zbll_antisune61_title" translatable="false" />
-
     <string name="zbll_antisune62" translatable="false">"(U2) R' U2 R' F' R U R U' R' F U2 R"</string>
-    <string name="zbll_antisune62_title" translatable="false" />
-
     <string name="zbll_antisune63" translatable="false">"(U2) R' U' R U' R D R' U' R D' R' U R' U2 R"</string>
-    <string name="zbll_antisune63_title" translatable="false" />
-
     <string name="zbll_antisune64" translatable="false">"(U) R U R' U R' U' R' D R' U' R D' R U2 R"</string>
-    <string name="zbll_antisune64_title" translatable="false" />
-
     <string name="zbll_antisune65" translatable="false">"(U) R U R' U R' F U' R2 U' R2 U F' U R"</string>
-    <string name="zbll_antisune65_title" translatable="false" />
-
     <string name="zbll_antisune66" translatable="false">"(U2) R U R' U R' U' R' U R U' R' U' R' U' R' U2 R"</string>
-    <string name="zbll_antisune66_title" translatable="false" />
-
     <string name="zbll_antisune67" translatable="false">"R U2 R' U' R U r' F r U2 R' U' r' F2 r"</string>
-    <string name="zbll_antisune67_title" translatable="false" />
-
     <string name="zbll_antisune68" translatable="false">"(U2) L' U R U' L R U R U R U' R' U' R2"</string>
-    <string name="zbll_antisune68_title" translatable="false" />
-
     <string name="zbll_antisune69" translatable="false">"(U2) R' U2 F' R U R' U' R' F R2 U R' U R"</string>
-    <string name="zbll_antisune69_title" translatable="false" />
-
     <string name="zbll_antisune70" translatable="false">"R2 D' R U' R' D F R U R U' R' F' R"</string>
-    <string name="zbll_antisune70_title" translatable="false" />
-
     <string name="zbll_antisune71" translatable="false">"(U') R U R' U R' U' R2 U' R D' R U R' D R U R"</string>
+
+    <string name="zbll_antisune0_title" translatable="false" />
+    <string name="zbll_antisune1_title" translatable="false" />
+    <string name="zbll_antisune2_title" translatable="false" />
+    <string name="zbll_antisune3_title" translatable="false" />
+    <string name="zbll_antisune4_title" translatable="false" />
+    <string name="zbll_antisune5_title" translatable="false" />
+    <string name="zbll_antisune6_title" translatable="false" />
+    <string name="zbll_antisune7_title" translatable="false" />
+    <string name="zbll_antisune8_title" translatable="false" />
+    <string name="zbll_antisune9_title" translatable="false" />
+    <string name="zbll_antisune10_title" translatable="false" />
+    <string name="zbll_antisune11_title" translatable="false" />
+    <string name="zbll_antisune12_title" translatable="false" />
+    <string name="zbll_antisune13_title" translatable="false" />
+    <string name="zbll_antisune14_title" translatable="false" />
+    <string name="zbll_antisune15_title" translatable="false" />
+    <string name="zbll_antisune16_title" translatable="false" />
+    <string name="zbll_antisune17_title" translatable="false" />
+    <string name="zbll_antisune18_title" translatable="false" />
+    <string name="zbll_antisune19_title" translatable="false" />
+    <string name="zbll_antisune20_title" translatable="false" />
+    <string name="zbll_antisune21_title" translatable="false" />
+    <string name="zbll_antisune22_title" translatable="false" />
+    <string name="zbll_antisune23_title" translatable="false" />
+    <string name="zbll_antisune24_title" translatable="false" />
+    <string name="zbll_antisune25_title" translatable="false" />
+    <string name="zbll_antisune26_title" translatable="false" />
+    <string name="zbll_antisune27_title" translatable="false" />
+    <string name="zbll_antisune28_title" translatable="false" />
+    <string name="zbll_antisune29_title" translatable="false" />
+    <string name="zbll_antisune30_title" translatable="false" />
+    <string name="zbll_antisune31_title" translatable="false" />
+    <string name="zbll_antisune32_title" translatable="false" />
+    <string name="zbll_antisune33_title" translatable="false" />
+    <string name="zbll_antisune34_title" translatable="false" />
+    <string name="zbll_antisune35_title" translatable="false" />
+    <string name="zbll_antisune36_title" translatable="false" />
+    <string name="zbll_antisune37_title" translatable="false" />
+    <string name="zbll_antisune38_title" translatable="false" />
+    <string name="zbll_antisune39_title" translatable="false" />
+    <string name="zbll_antisune40_title" translatable="false" />
+    <string name="zbll_antisune41_title" translatable="false" />
+    <string name="zbll_antisune42_title" translatable="false" />
+    <string name="zbll_antisune43_title" translatable="false" />
+    <string name="zbll_antisune44_title" translatable="false" />
+    <string name="zbll_antisune45_title" translatable="false" />
+    <string name="zbll_antisune46_title" translatable="false" />
+    <string name="zbll_antisune47_title" translatable="false" />
+    <string name="zbll_antisune48_title" translatable="false" />
+    <string name="zbll_antisune49_title" translatable="false" />
+    <string name="zbll_antisune50_title" translatable="false" />
+    <string name="zbll_antisune51_title" translatable="false" />
+    <string name="zbll_antisune52_title" translatable="false" />
+    <string name="zbll_antisune53_title" translatable="false" />
+    <string name="zbll_antisune54_title" translatable="false" />
+    <string name="zbll_antisune55_title" translatable="false" />
+    <string name="zbll_antisune56_title" translatable="false" />
+    <string name="zbll_antisune57_title" translatable="false" />
+    <string name="zbll_antisune58_title" translatable="false" />
+    <string name="zbll_antisune59_title" translatable="false" />
+    <string name="zbll_antisune60_title" translatable="false" />
+    <string name="zbll_antisune61_title" translatable="false" />
+    <string name="zbll_antisune62_title" translatable="false" />
+    <string name="zbll_antisune63_title" translatable="false" />
+    <string name="zbll_antisune64_title" translatable="false" />
+    <string name="zbll_antisune65_title" translatable="false" />
+    <string name="zbll_antisune66_title" translatable="false" />
+    <string name="zbll_antisune67_title" translatable="false" />
+    <string name="zbll_antisune68_title" translatable="false" />
+    <string name="zbll_antisune69_title" translatable="false" />
+    <string name="zbll_antisune70_title" translatable="false" />
     <string name="zbll_antisune71_title" translatable="false" />
 </resources>

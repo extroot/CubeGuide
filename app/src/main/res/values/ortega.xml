@@ -1,59 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="ortega_count" translatable="false">"12"</string>
+    <integer name="ortega_count">12</integer>
+    <string name="ortega_picmode" translatable="false">ortega</string>
+    <string name="ortega_prefix" translatable="false">ortega</string>
 
     <string name="ortega0" translatable="false">"R U R' U R U2 R'
 U' R' U2 R U R' U R"</string>
-    <string name="ortega0_title" translatable="false">"OLL"</string>
-
     <string name="ortega1" translatable="false">"R' U' R U' R'  U2 R
 U R U2 R' U' R U' R'
 U2 L' U' L U' L' U2 L"</string>
-    <string name="ortega1_title" translatable="false" />
-
     <string name="ortega2" translatable="false">"F R U R' U' R U R' U' F'
 U2 F U R U' R' U R U' R' F' "</string>
-    <string name="ortega2_title" translatable="false" />
-
     <string name="ortega3" translatable="false">"F R U R' U' F'
 U2 F U R U' R' F' "</string>
-    <string name="ortega3_title" translatable="false" />
-
     <string name="ortega4" translatable="false">"F' R U R' U' R' F R
 (U') F R' F' R U R U' R' "</string>
-    <string name="ortega4_title" translatable="false" />
-
     <string name="ortega5" translatable="false">"R U R' U' R' F R F'
 U2 L' U' L U L F' L' F"</string>
-    <string name="ortega5_title" translatable="false" />
-
     <string name="ortega6" translatable="false">"R2 U2 R U2 R2"</string>
-    <string name="ortega6_title" translatable="false" />
-
     <string name="ortega7" translatable="false">"U R U R' F' R U R' U' R' F R2 U' R'
 U2 R' F R' F2 R U' R' F2 R2
 U' R2 F2 R U R' F2 R F' R
 R' U R' F2 R F' R' F2 R2"</string>
-    <string name="ortega7_title" translatable="false">"PBL"</string>
-
     <string name="ortega8" translatable="false">"R' U R' F2 R F' U R' F2 R F' R
 F R U' R' U' R U R' F' R U R' U' R' F R F'
 R F' U R U' R' U R B U' R2 F
 z2 R U' R' U' F2 U' R U R' D F2 R2"</string>
-    <string name="ortega8_title" translatable="false" />
-
     <string name="ortega9" translatable="false">"R2 F2 R2"</string>
-    <string name="ortega9_title" translatable="false" />
-
     <string name="ortega10" translatable="false">"R2 U' B2 U2 R2 U' R2
 y2 R2 U' R2 U2 F2 U' R2"</string>
-    <string name="ortega10_title" translatable="false" />
-
     <string name="ortega11" translatable="false">"y2 R' U R' F2 R F' R
 R U' R F2 R' U R'
 For when the bar is on bottom:
 z2 L D' L F2 L' D L'
 x2 R U' R' U' R' F2 U' R U R"</string>
-    <string name="ortega11_title" translatable="false" />
 
+    <string name="ortega0_title" translatable="false">"OLL"</string>
+    <string name="ortega1_title" translatable="false" />
+    <string name="ortega2_title" translatable="false" />
+    <string name="ortega3_title" translatable="false" />
+    <string name="ortega4_title" translatable="false" />
+    <string name="ortega5_title" translatable="false" />
+    <string name="ortega6_title" translatable="false" />
+    <string name="ortega7_title" translatable="false">"PBL"</string>
+    <string name="ortega8_title" translatable="false" />
+    <string name="ortega9_title" translatable="false" />
+    <string name="ortega10_title" translatable="false" />
+    <string name="ortega11_title" translatable="false" />
 </resources>

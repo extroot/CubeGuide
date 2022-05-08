@@ -1,190 +1,152 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="f2l_count" translatable="false">"41"</string>
+    <integer name="f2l_count">41</integer>
+    <string name="f2l_picmode" translatable="false">f2l</string>
+    <string name="f2l_prefix" translatable="false">f2l</string>
 
     <string name="f2l0" translatable="false">"y U' L' U L
 y' U' R' U R
 F R' F' R"</string>
-    <string name="f2l0_title" translatable="false" />
-
     <string name="f2l1" translatable="false">"U R U' R'
 y U F' U' F'
 y2 U L U L'"</string>
-    <string name="f2l1_title" translatable="false" />
-
     <string name="f2l2" translatable="false">"F' U' F
 y' R' U' R
 y L' U' L"</string>
-    <string name="f2l2_title" translatable="false" />
-
     <string name="f2l3" translatable="false">"R U R'
 y2 L U L'
 "</string>
-    <string name="f2l3_title" translatable="false" />
-
     <string name="f2l4" translatable="false">"y' U R' U' R U R' U2 R
 U' Rw U' R' U R U Rw'
 y2 U' x' R U' Rw' F Rw U Lw'"</string>
-    <string name="f2l4_title" translatable="false" />
-
     <string name="f2l5" translatable="false">"U' R U R' U2 R U' R'
 y' U Rw' U R U' R' U' Rw
 y R' F Rw U' Rw' F' R
 y2 U' L U L' U' L U2 L'"</string>
-    <string name="f2l5_title" translatable="false" />
-
     <string name="f2l6" translatable="false">"y' U R' U2 R U R' U2 R
 Rw' U2 R2 U R2 U Rw"</string>
-    <string name="f2l6_title" translatable="false" />
-
     <string name="f2l7" translatable="false">"U' R U2 R' U2 R U' R'
 y2 U' L U2 L' U' L U2 L'"</string>
-    <string name="f2l7_title" translatable="false" />
-
     <string name="f2l8" translatable="false">"F R U R' U' F' R U' R'
 U' R U' R' U F' U' F
 y' U R' U' R U' R' U' R"</string>
-    <string name="f2l8_title" translatable="false" />
-
     <string name="f2l9" translatable="false">"U' R U R' U R U R'
 U2 R U' R' U' R U R'"</string>
-    <string name="f2l9_title" translatable="false" />
-
     <string name="f2l10" translatable="false">"y' R U2 R2 U' R2 U' R'
 y L' U L U' L' U L U2 L' U L
 y2 U2 R' U2 R U R' U' R U R' U' R"</string>
-    <string name="f2l10_title" translatable="false" />
-
     <string name="f2l11" translatable="false">"R U' R' U R U' R' U2 R U' R'
 R' U2 R2 U R2 U R
 y2 L U2 L2 U L2 U L"</string>
-    <string name="f2l11_title" translatable="false" />
-
     <string name="f2l12" translatable="false">"y' U R' U R U' R' U' R"</string>
-    <string name="f2l12_title" translatable="false" />
-
     <string name="f2l13" translatable="false">"U' R U' R' U R U R'"</string>
-    <string name="f2l13_title" translatable="false" />
-
     <string name="f2l14" translatable="false">"R U' R' y' U2 R' U' R
 U F U R U' R' F' R U R'
 y Rw' R U' R' F R U M'"</string>
-    <string name="f2l14_title" translatable="false" />
-
     <string name="f2l15" translatable="false">"R U R' U2 R U' R' U R U' R'
 Rw' R U Rw U' Rw' U' M'
 (y') R' U R U2 y R U R'"</string>
-    <string name="f2l15_title" translatable="false" />
-
     <string name="f2l16" translatable="false">"y' R' U2 R U R' U' R
 R' F R F' R U' R' U R U' R'"</string>
-    <string name="f2l16_title" translatable="false" />
-
     <string name="f2l17" translatable="false">"R U2 R' U' R U R'"</string>
-    <string name="f2l17_title" translatable="false" />
-
     <string name="f2l18" translatable="false">"y' R' U2 R U' R' U R
 R U' R2 F R F' R U' R'
 y L' U2 L U' L' U L"</string>
-    <string name="f2l18_title" translatable="false" />
-
     <string name="f2l19" translatable="false">"R U2 R' U R U' R'
 U' R U' R' U R U' R' U R U R'"</string>
-    <string name="f2l19_title" translatable="false" />
-
     <string name="f2l20" translatable="false">"R U R' F' U' F
 y' R' U' R U' R' U R
 y L' U' L U' L' U L"</string>
-    <string name="f2l20_title" translatable="false" />
-
     <string name="f2l21" translatable="false">"R U R' U R U' R'
 U2 R U' R' U2 R U R'
 y' R' Dw' F R U R'
 y2 L U L' U L U' L'"</string>
-    <string name="f2l21_title" translatable="false" />
-
     <string name="f2l22" translatable="false">"y U' L' U L U L' U L U' L' U L
 F U R U' R' F' R U' R'
 U' R U R2 F R F' R U' R'"</string>
-    <string name="f2l22_title" translatable="false" />
-
     <string name="f2l23" translatable="false">"R U' R' U R U2 R' U R U R'
 R U R' U2 R U R' U' R U R'
 (U2) R2 U2 R' U' R U' R2
 U R U' R' U' R U' R' U R U' R'"</string>
-    <string name="f2l23_title" translatable="false" />
-
     <string name="f2l24" translatable="false">"y Rw U Rw' U' L' U L F'
 U R U' R' F R' F' R"</string>
-    <string name="f2l24_title" translatable="false" />
-
     <string name="f2l25" translatable="false">"R' F' R U R U' R' F
 U' F' R U R' U' R' F R
 y U' L' U L U y' R U' R'"</string>
-    <string name="f2l25_title" translatable="false" />
-
     <string name="f2l26" translatable="false">"y' R' U R U' R' U R
 R U R' U' F R' F' R
 y L' U L U' L' U L"</string>
-    <string name="f2l26_title" translatable="false" />
-
     <string name="f2l27" translatable="false">"R U' R' U R U' R'
 y2 L U' L U L U' L'"</string>
-    <string name="f2l27_title" translatable="false" />
-
     <string name="f2l28" translatable="false">"y L' U' L U L' U' L"</string>
-    <string name="f2l28_title" translatable="false" />
-
     <string name="f2l29" translatable="false">"R U R' U' R U R'
 U' R U2 R' U2 R U R'"</string>
-    <string name="f2l29_title" translatable="false" />
-
     <string name="f2l30" translatable="false">"U' R U' R' U2 R U' R'
 y' U R' U2 R U' R' U' R"</string>
-    <string name="f2l30_title" translatable="false" />
-
     <string name="f2l31" translatable="false">"U' R U2' R' U R U R'
 U R U R' U2 R U R'
 y' U R' U R U2 R' U R"</string>
-    <string name="f2l31_title" translatable="false" />
-
     <string name="f2l32" translatable="false">"U' R U R' Dw R' U' R
 U2 R U R' y U' L' U L"</string>
-    <string name="f2l32_title" translatable="false" />
-
     <string name="f2l33" translatable="false">"U F' U' F U' R U R'
 U2 F' U' F U R U' R'"</string>
-    <string name="f2l33_title" translatable="false" />
-
     <string name="f2l34" translatable="false">"U R U' R' U R U' R' U R U' R'
 R U R' U' R U R' U' R U R'
 U2 R U' R' U R U R' U R U' R'"</string>
-    <string name="f2l34_title" translatable="false" />
-
     <string name="f2l35" translatable="false">"R U' R' U y' R' U R
 U' R' F R F' R U' R'
 U R U2 R' F' U' F"</string>
-    <string name="f2l35_title" translatable="false" />
-
     <string name="f2l36" translatable="false">"R U' R' U' R U R' U2 R U' R'
 R U R' U' R U2 R' U' R U R'
 y' R' U R U' R' U2 R U' R' U R"</string>
-    <string name="f2l36_title" translatable="false" />
-
     <string name="f2l37" translatable="false">"R U' R' U R U2' R' U R U' R'
 R U2 R U R' U R U2 R2'"</string>
-    <string name="f2l37_title" translatable="false" />
-
     <string name="f2l38" translatable="false">"R U' R' U' R U' R' Dw R' U' R
 R F U R U' R' F' U' R'"</string>
-    <string name="f2l38_title" translatable="false" />
-
     <string name="f2l39" translatable="false">"R U R' U' R U' R' U2 F' U' F
 y F R U2 R' F' L' U' L"</string>
-    <string name="f2l39_title" translatable="false" />
-
     <string name="f2l40" translatable="false">"R' F R F' R U' R' U R U' R' U2 R U' R'
 R U' R' U y' R' U2 R U2' R' U R"</string>
 
+    <string name="f2l0_title" translatable="false" />
+    <string name="f2l1_title" translatable="false" />
+    <string name="f2l2_title" translatable="false" />
+    <string name="f2l3_title" translatable="false" />
+    <string name="f2l4_title" translatable="false" />
+    <string name="f2l5_title" translatable="false" />
+    <string name="f2l6_title" translatable="false" />
+    <string name="f2l7_title" translatable="false" />
+    <string name="f2l8_title" translatable="false" />
+    <string name="f2l9_title" translatable="false" />
+    <string name="f2l10_title" translatable="false" />
+    <string name="f2l11_title" translatable="false" />
+    <string name="f2l12_title" translatable="false" />
+    <string name="f2l13_title" translatable="false" />
+    <string name="f2l14_title" translatable="false" />
+    <string name="f2l15_title" translatable="false" />
+    <string name="f2l16_title" translatable="false" />
+    <string name="f2l17_title" translatable="false" />
+    <string name="f2l18_title" translatable="false" />
+    <string name="f2l19_title" translatable="false" />
+    <string name="f2l20_title" translatable="false" />
+    <string name="f2l21_title" translatable="false" />
+    <string name="f2l22_title" translatable="false" />
+    <string name="f2l23_title" translatable="false" />
+    <string name="f2l24_title" translatable="false" />
+    <string name="f2l25_title" translatable="false" />
+    <string name="f2l26_title" translatable="false" />
+    <string name="f2l27_title" translatable="false" />
+    <string name="f2l28_title" translatable="false" />
+    <string name="f2l29_title" translatable="false" />
+    <string name="f2l30_title" translatable="false" />
+    <string name="f2l31_title" translatable="false" />
+    <string name="f2l32_title" translatable="false" />
+    <string name="f2l33_title" translatable="false" />
+    <string name="f2l34_title" translatable="false" />
+    <string name="f2l35_title" translatable="false" />
+    <string name="f2l36_title" translatable="false" />
+    <string name="f2l37_title" translatable="false" />
+    <string name="f2l38_title" translatable="false" />
+    <string name="f2l39_title" translatable="false" />
     <string name="f2l40_title" translatable="false" />
 </resources>

@@ -1,70 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="pll_sc_count" translatable="false">"63"</string>
-
-    <string name="pll_sc0_title" translatable="false" />
-    <string name="pll_sc1_title" translatable="false" />
-    <string name="pll_sc2_title" translatable="false" />
-    <string name="pll_sc3_title" translatable="false" />
-    <string name="pll_sc4_title" translatable="false" />
-    <string name="pll_sc5_title" translatable="false" />
-    <string name="pll_sc6_title" translatable="false" />
-    <string name="pll_sc7_title" translatable="false" />
-    <string name="pll_sc8_title" translatable="false" />
-    <string name="pll_sc9_title" translatable="false" />
-    <string name="pll_sc10_title" translatable="false" />
-    <string name="pll_sc11_title" translatable="false" />
-    <string name="pll_sc12_title" translatable="false" />
-    <string name="pll_sc13_title" translatable="false" />
-    <string name="pll_sc14_title" translatable="false" />
-    <string name="pll_sc15_title" translatable="false" />
-    <string name="pll_sc16_title" translatable="false" />
-    <string name="pll_sc17_title" translatable="false" />
-    <string name="pll_sc18_title" translatable="false" />
-    <string name="pll_sc19_title" translatable="false" />
-    <string name="pll_sc20_title" translatable="false" />
-    <string name="pll_sc21_title" translatable="false" />
-    <string name="pll_sc22_title" translatable="false" />
-    <string name="pll_sc23_title" translatable="false" />
-    <string name="pll_sc24_title" translatable="false" />
-    <string name="pll_sc25_title" translatable="false" />
-    <string name="pll_sc26_title" translatable="false" />
-    <string name="pll_sc27_title" translatable="false" />
-    <string name="pll_sc28_title" translatable="false" />
-    <string name="pll_sc29_title" translatable="false" />
-    <string name="pll_sc30_title" translatable="false" />
-    <string name="pll_sc31_title" translatable="false" />
-    <string name="pll_sc32_title" translatable="false" />
-    <string name="pll_sc33_title" translatable="false" />
-    <string name="pll_sc34_title" translatable="false" />
-    <string name="pll_sc35_title" translatable="false" />
-    <string name="pll_sc36_title" translatable="false" />
-    <string name="pll_sc37_title" translatable="false" />
-    <string name="pll_sc38_title" translatable="false" />
-    <string name="pll_sc39_title" translatable="false" />
-    <string name="pll_sc40_title" translatable="false" />
-    <string name="pll_sc41_title" translatable="false" />
-    <string name="pll_sc42_title" translatable="false" />
-    <string name="pll_sc43_title" translatable="false" />
-    <string name="pll_sc44_title" translatable="false" />
-    <string name="pll_sc45_title" translatable="false" />
-    <string name="pll_sc46_title" translatable="false" />
-    <string name="pll_sc47_title" translatable="false" />
-    <string name="pll_sc48_title" translatable="false" />
-    <string name="pll_sc49_title" translatable="false" />
-    <string name="pll_sc50_title" translatable="false" />
-    <string name="pll_sc51_title" translatable="false" />
-    <string name="pll_sc52_title" translatable="false" />
-    <string name="pll_sc53_title" translatable="false" />
-    <string name="pll_sc54_title" translatable="false" />
-    <string name="pll_sc55_title" translatable="false" />
-    <string name="pll_sc56_title" translatable="false" />
-    <string name="pll_sc57_title" translatable="false" />
-    <string name="pll_sc58_title" translatable="false" />
-    <string name="pll_sc59_title" translatable="false" />
-    <string name="pll_sc60_title" translatable="false" />
-    <string name="pll_sc61_title" translatable="false" />
-    <string name="pll_sc62_title" translatable="false" />
+    <integer name="pll_sc_count">63</integer>
+    <string name="pll_sc_picmode" translatable="false">pll_sc</string>
+    <string name="pll_sc_prefix" translatable="false">pll sc</string>
 
     <string name="pll_sc0" translatable="false">"R2 D R' U2 R D' R' U2 R'"</string>
     <string name="pll_sc1" translatable="false">"y' Lw' U' L U Lw F' L' F"</string>
@@ -129,4 +67,68 @@
     <string name="pll_sc60" translatable="false">"R' U' R U M U' R' U Rw"</string>
     <string name="pll_sc61" translatable="false">"y Rw U R' U' M U R U' R'"</string>
     <string name="pll_sc62" translatable="false">"y Rw' U' R U M' U' R' U R"</string>
+
+    <string name="pll_sc0_title" translatable="false" />
+    <string name="pll_sc1_title" translatable="false" />
+    <string name="pll_sc2_title" translatable="false" />
+    <string name="pll_sc3_title" translatable="false" />
+    <string name="pll_sc4_title" translatable="false" />
+    <string name="pll_sc5_title" translatable="false" />
+    <string name="pll_sc6_title" translatable="false" />
+    <string name="pll_sc7_title" translatable="false" />
+    <string name="pll_sc8_title" translatable="false" />
+    <string name="pll_sc9_title" translatable="false" />
+    <string name="pll_sc10_title" translatable="false" />
+    <string name="pll_sc11_title" translatable="false" />
+    <string name="pll_sc12_title" translatable="false" />
+    <string name="pll_sc13_title" translatable="false" />
+    <string name="pll_sc14_title" translatable="false" />
+    <string name="pll_sc15_title" translatable="false" />
+    <string name="pll_sc16_title" translatable="false" />
+    <string name="pll_sc17_title" translatable="false" />
+    <string name="pll_sc18_title" translatable="false" />
+    <string name="pll_sc19_title" translatable="false" />
+    <string name="pll_sc20_title" translatable="false" />
+    <string name="pll_sc21_title" translatable="false" />
+    <string name="pll_sc22_title" translatable="false" />
+    <string name="pll_sc23_title" translatable="false" />
+    <string name="pll_sc24_title" translatable="false" />
+    <string name="pll_sc25_title" translatable="false" />
+    <string name="pll_sc26_title" translatable="false" />
+    <string name="pll_sc27_title" translatable="false" />
+    <string name="pll_sc28_title" translatable="false" />
+    <string name="pll_sc29_title" translatable="false" />
+    <string name="pll_sc30_title" translatable="false" />
+    <string name="pll_sc31_title" translatable="false" />
+    <string name="pll_sc32_title" translatable="false" />
+    <string name="pll_sc33_title" translatable="false" />
+    <string name="pll_sc34_title" translatable="false" />
+    <string name="pll_sc35_title" translatable="false" />
+    <string name="pll_sc36_title" translatable="false" />
+    <string name="pll_sc37_title" translatable="false" />
+    <string name="pll_sc38_title" translatable="false" />
+    <string name="pll_sc39_title" translatable="false" />
+    <string name="pll_sc40_title" translatable="false" />
+    <string name="pll_sc41_title" translatable="false" />
+    <string name="pll_sc42_title" translatable="false" />
+    <string name="pll_sc43_title" translatable="false" />
+    <string name="pll_sc44_title" translatable="false" />
+    <string name="pll_sc45_title" translatable="false" />
+    <string name="pll_sc46_title" translatable="false" />
+    <string name="pll_sc47_title" translatable="false" />
+    <string name="pll_sc48_title" translatable="false" />
+    <string name="pll_sc49_title" translatable="false" />
+    <string name="pll_sc50_title" translatable="false" />
+    <string name="pll_sc51_title" translatable="false" />
+    <string name="pll_sc52_title" translatable="false" />
+    <string name="pll_sc53_title" translatable="false" />
+    <string name="pll_sc54_title" translatable="false" />
+    <string name="pll_sc55_title" translatable="false" />
+    <string name="pll_sc56_title" translatable="false" />
+    <string name="pll_sc57_title" translatable="false" />
+    <string name="pll_sc58_title" translatable="false" />
+    <string name="pll_sc59_title" translatable="false" />
+    <string name="pll_sc60_title" translatable="false" />
+    <string name="pll_sc61_title" translatable="false" />
+    <string name="pll_sc62_title" translatable="false" />
 </resources>
