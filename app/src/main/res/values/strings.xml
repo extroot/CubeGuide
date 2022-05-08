@@ -20,6 +20,9 @@
     <string name="rating_dialog_feedback_button_cancel">Cancel</string>
     <string name="rating_dialog_feedback_button_submit">Submit</string>
     <string name="rating_dialog_feedback_custom_message">Suggest us what went wrong and we\'ll work on it:</string>
+
+    <string name="feedback_success">Message sent to developers</string>
+    <string name="feedback_fail">Something went wrong. Try again.</string>
     <!--                 Feedback dialog                 -->
 
 

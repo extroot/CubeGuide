@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.text.InputType
 import android.content.Intent
 import android.content.SharedPreferences
+import android.widget.Toast
 import androidx.fragment.app.*
 import androidx.core.os.bundleOf
 import androidx.preference.PreferenceManager
@@ -104,7 +105,6 @@ class MainActivity : AppCompatActivity() {
     private var mode: String = "easy3"
     private var restoreOnExit: Boolean = false
 
-
     private lateinit var result: Drawer
     private lateinit var topAdView: AdView
     private lateinit var adRequest: AdRequest
@@ -127,6 +127,14 @@ class MainActivity : AppCompatActivity() {
         sharedPref = PreferenceManager.getDefaultSharedPreferences(this)
         rhOH = sharedPref.getBoolean(getString(R.string.rh_oh_key), resources.getBoolean(R.bool.rh_oh_default_key))
         restoreOnExit = sharedPref.getBoolean(getString(R.string.restore_mode_key), resources.getBoolean(R.bool.restore_mode_default_key))
+        val isFirstStart = sharedPref.getBoolean(getString(R.string.first_start_key), true)
+        if (isFirstStart) {
+            with(sharedPref.edit()) {
+                putBoolean(getString(R.string.first_start_key), false)
+                apply()
+            }
+        }
+
 
         if (savedInstanceState != null) {
             mode = savedInstanceState.getString(MODE_KEY) ?: mode
@@ -150,14 +158,7 @@ class MainActivity : AppCompatActivity() {
 
         // Init navigation drawer
         handleDrawer()
-
-        // Init RateBottomSheet Manager
-        RateBottomSheetManager(this)
-            .setInstallDays(3)
-            .setLaunchTimes(8)
-            .setRemindInterval(3)
-            .monitor()
-        RateBottomSheet.showRateBottomSheetIfMeetsConditions(this)
+        if (!isFirstStart) RateBottomSheet.showRateBottomSheetIfMeetsConditions(this)
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
@@ -175,7 +176,6 @@ class MainActivity : AppCompatActivity() {
         /**
          * Initialization of Google ADS
          */
-        MobileAds.initialize(this) {}
         topAdView = AdView(this)
 
         // Google's examples for Adaptive Banner outdated
@@ -289,6 +289,7 @@ class MainActivity : AppCompatActivity() {
                     comments = text.toString()
                 }
                 Sentry.captureUserFeedback(userFeedback)
+                Toast.makeText(applicationContext, getString(R.string.feedback_success), Toast.LENGTH_LONG).show()
             }
 
             positiveButton(R.string.rating_dialog_feedback_button_submit)

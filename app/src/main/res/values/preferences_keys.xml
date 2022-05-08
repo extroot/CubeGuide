@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="first_start_key" translatable="false">first_start</string>
+
     <string name="counting_key" translatable="false">numbering</string>
     <bool name="counting_default_key">false</bool>
 
@@ -13,7 +15,7 @@
     <bool name="rh_oh_default_key">false</bool>
 
     <string name="restore_mode_key" translatable="false">restore_mode</string>
-    <bool name="restore_mode_default_key">false</bool>
+    <bool name="restore_mode_default_key">true</bool>
     <string name="saved_mode_key" translatable="false">saved_mode</string>
     <string name="saved_mode_default_key" translatable="false">easy3</string>
 </resources>

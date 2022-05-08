@@ -1,6 +1,9 @@
 package ru.extroot.newcubeguide
 
 import android.app.Application
+import com.google.android.gms.ads.MobileAds
+
+import com.mikhaellopez.ratebottomsheet.RateBottomSheetManager
 
 import io.sentry.SentryEvent
 import io.sentry.SentryLevel
@@ -27,5 +30,15 @@ class CubeGuide: Application() {
                     }
                 }
         }
+
+        // Init Google ADS
+        MobileAds.initialize(this) {}
+
+        // Init RateBottomSheet Manager
+        RateBottomSheetManager(this)
+            .setInstallDays(5)
+            .setLaunchTimes(10)
+            .setRemindInterval(5)
+            .monitor()
     }
 }
