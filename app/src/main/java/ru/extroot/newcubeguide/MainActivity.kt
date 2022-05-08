@@ -275,8 +275,36 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
+    private fun showFeedBackDialog() {
+        MaterialDialog(this@MainActivity).show {
+            title(R.string.rating_dialog_feedback_title)
+            message(R.string.rating_dialog_feedback_custom_message)
+            // TODO: `The result of input is not used` warning. idk why.
+            input(
+                inputType = InputType.TYPE_TEXT_FLAG_MULTI_LINE,
+            ) { _, text ->
+                val sentryId = Sentry.captureMessage("User FeedBack")
+                val userFeedback = UserFeedback(sentryId).apply {
+                    comments = text.toString()
+                }
+                Sentry.captureUserFeedback(userFeedback)
+            }
+
+            positiveButton(R.string.rating_dialog_feedback_button_submit)
+            negativeButton(R.string.rating_dialog_feedback_button_cancel)
+
+            // TODO: make fork of lib and add it to init:
+            onPreShow { dialog ->
+                val editText = dialog.getInputField()
+                editText.setLines(6)
+                editText.gravity = Gravity.TOP
+            }
+        }
+    }
+
     /**
      * Initialization of Material Navigation Drawer
+     * Complex hierarchy, I think, will be better move it to menu.xml mb.
      */
     private fun handleDrawer() {
         result = DrawerBuilder()
@@ -380,30 +408,7 @@ class MainActivity : AppCompatActivity() {
                             return true
                         }
                         FEEDBACK_ID -> {
-                            MaterialDialog(this@MainActivity).show {
-                                title(R.string.rating_dialog_feedback_title)
-                                message(R.string.rating_dialog_feedback_custom_message)
-                                // TODO: `The result of input is not used` warning. idk why.
-                                input(
-                                    inputType = InputType.TYPE_TEXT_FLAG_MULTI_LINE,
-                                ) { _, text ->
-                                    val sentryId = Sentry.captureMessage("User FeedBack")
-                                    val userFeedback = UserFeedback(sentryId).apply {
-                                        comments = text.toString()
-                                    }
-                                    Sentry.captureUserFeedback(userFeedback)
-                                }
-
-                                positiveButton(R.string.rating_dialog_feedback_button_submit)
-                                negativeButton(R.string.rating_dialog_feedback_button_cancel)
-
-                                // TODO: make fork of lib and add it to init:
-                                onPreShow { dialog ->
-                                    val editText = dialog.getInputField()
-                                    editText.setLines(6)
-                                    editText.gravity = Gravity.TOP
-                                }
-                            }
+                            showFeedBackDialog()
                             return true
                         }
                         SETTINGS_ID -> {
