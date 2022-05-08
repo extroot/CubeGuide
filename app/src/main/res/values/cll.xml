@@ -6,205 +6,127 @@
 
     <string name="cll0" translatable="false">"R U R' U R U2 R'
 (U') R' U2 R U' R' U R"</string>
-    <string name="cll0_title" translatable="false">"Sune"</string>
-    <string name="cll0_subtitle" translatable="false">"Sune"</string>
-
     <string name="cll1" translatable="false">"(U') R' F R2 F' R U2 R' U' R2
 (U') R' F R2 F' U' R' U' R2 U R'"</string>
-    <string name="cll1_title" translatable="false"/>
-    <string name="cll1_subtitle" translatable="false">"Sune"</string>
-
     <string name="cll2" translatable="false">"F R' F' R U2 R U2 R'"</string>
-    <string name="cll2_title" translatable="false"/>
-    <string name="cll2_subtitle" translatable="false">"Sune"</string>
-
     <string name="cll3" translatable="false">"R U' R' F L' U' L
 R2 U R' U' R' F R F' R'"</string>
-    <string name="cll3_title" translatable="false"/>
-    <string name="cll3_subtitle" translatable="false">"Sune"</string>
-
     <string name="cll4" translatable="false">"(U2) R U' R U' R' U R' U' y R U' R'"</string>
-    <string name="cll4_title" translatable="false"/>
-    <string name="cll4_subtitle" translatable="false">"Sune"</string>
-
     <string name="cll5" translatable="false">"L' U2 L U2 L F' L' F"</string>
-    <string name="cll5_title" translatable="false"/>
-    <string name="cll5_subtitle" translatable="false">"Sune"</string>
-
     <string name="cll6" translatable="false">"R' U' R U' R' U2 R
 (U) R U2 R' U' R U' R'
 (U2) L' U' L U' L' U2 L"</string>
-    <string name="cll6_title" translatable="false">"Antisune"</string>
-    <string name="cll6_subtitle" translatable="false">"Antisune"</string>
-
     <string name="cll7" translatable="false">"(U2) R' U R U' R2' F R F' R U R' U' R
 (U') R' U' R U' R' U R' F R F' U R
 (U') R2 U R U2 L' U R2 U' L"</string>
-    <string name="cll7_title" translatable="false"/>
-    <string name="cll7_subtitle" translatable="false">"Antisune"</string>
-
     <string name="cll8" translatable="false">"(U2) F' L F L' U2 L' U2 L"</string>
-    <string name="cll8_title" translatable="false"/>
-    <string name="cll8_subtitle" translatable="false">"Antisune"</string>
-
     <string name="cll9" translatable="false">"(U2) L' U L F' R U R'
 R' U L U' R U L'"</string>
-    <string name="cll9_title" translatable="false"/>
-    <string name="cll9_subtitle" translatable="false">"Antisune"</string>
-
     <string name="cll10" translatable="false">"(U2) L' U2 L F' R' F2 R U' R' F R F'
 R2 F R U2 R U' R' U2 F' R"</string>
-    <string name="cll10_title" translatable="false"/>
-    <string name="cll10_subtitle" translatable="false">"Antisune"</string>
-
     <string name="cll11" translatable="false">"(U2) R U2 R' U2 R' F R F'"</string>
-    <string name="cll11_title" translatable="false"/>
-    <string name="cll11_subtitle" translatable="false">"Antisune"</string>
-
     <string name="cll12" translatable="false">"F R U R' U' R U R' U' F'
 (U') F' R U2 R' U2 R' F2 R F'
 R' U R2 U' R2 U' R2 U R'"</string>
-    <string name="cll12_title" translatable="false">"Pi-shapes"</string>
-    <string name="cll12_subtitle" translatable="false">"Pi-shapes"</string>
-
     <string name="cll13" translatable="false">"(U') R' U' R' F R F' R U' R' U2 R
 R2 U R' U' F R F' R U' R2"</string>
-    <string name="cll13_title" translatable="false"/>
-    <string name="cll13_subtitle" translatable="false">"Pi-shapes"</string>
-
     <string name="cll14" translatable="false">"R U' R' F R' F R U R' F R
 (U2) R' F R F' R U' R' U' R U' R'"</string>
-    <string name="cll14_title" translatable="false"/>
-    <string name="cll14_subtitle" translatable="false">"Pi-shapes"</string>
-
     <string name="cll15" translatable="false">"(U') R U' R U' R' U R' F R2 F'
 (U') R' F R U F U' R U R' U' F'"</string>
-    <string name="cll15_title" translatable="false"/>
-    <string name="cll15_subtitle" translatable="false">"Pi-shapes"</string>
-
     <string name="cll16" translatable="false">"R U2 R' U' R U R' U2 R' F R F'
 (U) F' L F L' U2 L' U L U' L' U2 L"</string>
-    <string name="cll16_title" translatable="false"/>
-    <string name="cll16_subtitle" translatable="false">"Pi-shapes"</string>
-
     <string name="cll17" translatable="false">"R' F2 R F' U2 R U' R' U' F
 (U2) L' U2 L U L' U' L U2 L F' L' F
 (U) F R' F' R U2 R U' R' U R U2 R'"</string>
-    <string name="cll17_title" translatable="false"/>
-    <string name="cll17_subtitle" translatable="false">"Pi-shapes"</string>
-
     <string name="cll18" translatable="false">"F R U R' U' F'
 (U2) F U R U' R' F'"</string>
-    <string name="cll18_title" translatable="false">"U-shapes"</string>
-    <string name="cll18_subtitle" translatable="false">"U-shapes"</string>
-
     <string name="cll19" translatable="false">"(U) R U' R' F' L F' L' F2 U' R U R'
 (U') R2 F2 R U R' F U' R U R2
 (U2) R U' R U' R U' R' U R' U R'"</string>
-    <string name="cll19_title" translatable="false"/>
-    <string name="cll19_subtitle" translatable="false">"U-shapes"</string>
-
     <string name="cll20" translatable="false">"(U2) x R U R U' B2 R' U R' U' R x'
 z' U2 R' U' R2 U' R' U' R U' R' U'"</string>
-    <string name="cll20_title" translatable="false"/>
-    <string name="cll20_subtitle" translatable="false">"U-shapes"</string>
-
     <string name="cll21" translatable="false">"(U) x R U' R U' R' U L' U' L
 F R' F' R U' R U' R' U2 R U' R'"</string>
-    <string name="cll21_title" translatable="false"/>
-    <string name="cll21_subtitle" translatable="false">"U-shapes"</string>
-
     <string name="cll22" translatable="false">"(U') R U2 R' U R' F2 R F' R' F2 R
 (U) R U' R2 F R F' R U R' U' R U R'"</string>
-    <string name="cll22_title" translatable="false"/>
-    <string name="cll22_subtitle" translatable="false">"U-shapes"</string>
-
     <string name="cll23" translatable="false">"(U') R2 U R' U' R2 U' y L' U2 L
 (U) R' U R' F R F' R U2 R' U R"</string>
-    <string name="cll23_title" translatable="false"/>
-    <string name="cll23_subtitle" translatable="false">"U-shapes"</string>
-
     <string name="cll24" translatable="false">"(U) F' R U R' U' R' F R
 F R U' R' U' R U R' F'"</string>
-    <string name="cll24_title" translatable="false">"L-shapes"</string>
-    <string name="cll24_subtitle" translatable="false">"L-shapes"</string>
-
     <string name="cll25" translatable="false">"F R' F' R U R U' R'"</string>
-    <string name="cll25_title" translatable="false"/>
-    <string name="cll25_subtitle" translatable="false">"L-shapes"</string>
-
     <string name="cll26" translatable="false">"(U2) L' U2 L F' R' F2 R2 U' R'
 R U2 R2' F R F' R U2' R'"</string>
-    <string name="cll26_title" translatable="false"/>
-    <string name="cll26_subtitle" translatable="false">"L-shapes"</string>
-
     <string name="cll27" translatable="false">"(U) R' U R' U2 R U' R' U R U' R2"</string>
-    <string name="cll27_title" translatable="false"/>
-    <string name="cll27_subtitle" translatable="false">"L-shapes"</string>
-
     <string name="cll28" translatable="false">"(U) x' R' U2 R' U' R U2 R' F R2
 R U2 R' U' y' R2 U' R' U R2
 (U') R U' R' U R U' R' F R' F' R2 U R'"</string>
-    <string name="cll28_title" translatable="false"/>
-    <string name="cll28_subtitle" translatable="false">"L-shapes"</string>
-
     <string name="cll29" translatable="false">"(U') R' F' R U R' U' R' F R2 U' R' U2 R
 R' U' R U2 R' F R' F' R U' R
 R U2 R' F' R U2 R' U R' F2 R"</string>
-    <string name="cll29_title" translatable="false"/>
-    <string name="cll29_subtitle" translatable="false">"L-shapes"</string>
-
     <string name="cll30" translatable="false">"R U R' U' R' F R F'"</string>
-    <string name="cll30_title" translatable="false">"T-shapes"</string>
-    <string name="cll30_subtitle" translatable="false">"T-shapes"</string>
-
     <string name="cll31" translatable="false">"F R F' R U R' U' R'
 (U2) L' U' L U L F' L' F
 F R U' R' U R U R' F'"</string>
-    <string name="cll31_title" translatable="false" />
-    <string name="cll31_subtitle" translatable="false">"T-shapes"</string>
-
     <string name="cll32" translatable="false">"(U) F U' R U2 R' U' F2 R U R'"</string>
-    <string name="cll32_title" translatable="false" />
-    <string name="cll32_subtitle" translatable="false">"T-shapes"</string>
-
     <string name="cll33" translatable="false">"(U2) R' U R' F U' R U F2 R2'
 R U R' U R U2 R2 F' R U' R' F2 R
 (U2) R U' R' U F2 L F L' F R U R'"</string>
-    <string name="cll33_title" translatable="false" />
-    <string name="cll33_subtitle" translatable="false">"T-shapes"</string>
-
     <string name="cll34" translatable="false">"(U') F R U R' U' R U' R' U' R U R' F'
 (U2) L F' z' R' U R' U' R U' R
 (U2) R' U2 R' x U2 R U2' R' U2 R2"</string>
-    <string name="cll34_title" translatable="false"/>
-    <string name="cll34_subtitle" translatable="false">"T-shapes"</string>
-
     <string name="cll35" translatable="false">"(U) R' U R U2 R2 F R F' R
 (U') R' F R U2 R2 F R U' R
 (U') R U' R' U2 R2 x' U' R' U R'"</string>
-    <string name="cll35_title" translatable="false"/>
-    <string name="cll35_subtitle" translatable="false">"T-shapes"</string>
-
     <string name="cll36" translatable="false">"R2 U2 R U2' R2'"</string>
-    <string name="cll36_title" translatable="false">"H-shapes"</string>
-    <string name="cll36_subtitle" translatable="false">"H-shapes"</string>
-
     <string name="cll37" translatable="false">"x' U2 R U2 R2 F2 R U2
 F R U R' U' R U R' U' R U R' U'F'
 (U) R2 F' U2 F2 R2 F' R2"</string>
-    <string name="cll37_title" translatable="false"/>
-    <string name="cll37_subtitle" translatable="false">"H-shapes"</string>
-
     <string name="cll38" translatable="false">"R U R' U R U R' F R' F' R
 R' F' R U2 R U2 R' F U' R U' R'
 (U) R U' R' F U2 R2 F R U' R"</string>
-    <string name="cll38_title" translatable="false"/>
-    <string name="cll38_subtitle" translatable="false">"H-shapes"</string>
-
     <string name="cll39" translatable="false">"(U) F R2 U' R2' U' R2 U R2' F'
 (U') F R' F' R U' R U' R' U R' F R F'
 (U) x' U' R2 U L' U R' U' R U' R"</string>
-    <string name="cll39_title" translatable="false"/>
-    <string name="cll39_subtitle" translatable="false">"H-shapes"</string>
+
+    <string name="cll0_title" translatable="false">"Sune"</string>
+    <string name="cll1_title" translatable="false" />
+    <string name="cll2_title" translatable="false" />
+    <string name="cll3_title" translatable="false" />
+    <string name="cll4_title" translatable="false" />
+    <string name="cll5_title" translatable="false" />
+    <string name="cll6_title" translatable="false">"Antisune"</string>
+    <string name="cll7_title" translatable="false" />
+    <string name="cll8_title" translatable="false" />
+    <string name="cll9_title" translatable="false" />
+    <string name="cll10_title" translatable="false" />
+    <string name="cll11_title" translatable="false" />
+    <string name="cll12_title" translatable="false">"Pi-shapes"</string>
+    <string name="cll13_title" translatable="false" />
+    <string name="cll14_title" translatable="false" />
+    <string name="cll15_title" translatable="false" />
+    <string name="cll16_title" translatable="false" />
+    <string name="cll17_title" translatable="false" />
+    <string name="cll18_title" translatable="false">"U-shapes"</string>
+    <string name="cll19_title" translatable="false" />
+    <string name="cll20_title" translatable="false" />
+    <string name="cll21_title" translatable="false" />
+    <string name="cll22_title" translatable="false" />
+    <string name="cll23_title" translatable="false" />
+    <string name="cll24_title" translatable="false">"L-shapes"</string>
+    <string name="cll25_title" translatable="false" />
+    <string name="cll26_title" translatable="false" />
+    <string name="cll27_title" translatable="false" />
+    <string name="cll28_title" translatable="false" />
+    <string name="cll29_title" translatable="false" />
+    <string name="cll30_title" translatable="false">"T-shapes"</string>
+    <string name="cll31_title" translatable="false" />
+    <string name="cll32_title" translatable="false" />
+    <string name="cll33_title" translatable="false" />
+    <string name="cll34_title" translatable="false" />
+    <string name="cll35_title" translatable="false" />
+    <string name="cll36_title" translatable="false">"H-shapes"</string>
+    <string name="cll37_title" translatable="false" />
+    <string name="cll38_title" translatable="false" />
+    <string name="cll39_title" translatable="false" />
 </resources>

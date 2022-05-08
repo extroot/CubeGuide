@@ -6,199 +6,121 @@
 
     <string name="coll0" translatable="false">"x' R U' R' D R U2 R' D' R U' R' x
 y2 R2 D R' U2 R D' R' U2 R'"</string>
-    <string name="coll0_title">"U-shapes"</string>
-    <string name="coll0_subtitle">"U-shapes"</string>
-
     <string name="coll1" translatable="false">"R2 D' R U2 R' D R U2 R"</string>
-    <string name="coll1_title" />
-    <string name="coll1_subtitle">"U-shapes"</string>
-
     <string name="coll2" translatable="false">"F R U' R' U R U R' U R U' R' F'
 R U R' U' R' F2 R2 U' R' U' R U R' F2
 R' U2 R U2 L U2 R' U2 R U2 L'"</string>
-    <string name="coll2_title" />
-    <string name="coll2_subtitle">"U-shapes"</string>
-
     <string name="coll3" translatable="false">"R' F R U' R' U' R U R' F' R U R' U' R' F R F' R
 R U' R2 U' R2 U R' F' R U R2 U' R' F R2"</string>
-    <string name="coll3_title" />
-    <string name="coll3_subtitle">"U-shapes"</string>
-
     <string name="coll4" translatable="false">"R' U' R U' R' U2 R2 U R' U R U2 R'"</string>
-    <string name="coll4_title" />
-    <string name="coll4_subtitle">"U-shapes"</string>
-
     <string name="coll5" translatable="false">"R2 D' R U R' D R U R U' R' U' R
 R' U2 R U2 R' F' R U R' U' R' F R2
 R' U2 R F U' R' U' R U F'"</string>
-    <string name="coll5_title" />
-    <string name="coll5_subtitle">"U-shapes"</string>
-
     <string name="coll6" translatable="false">"y R' F' Rw U R U' Rw' F
 y2 R' U' R' D' R U R' D R2"</string>
-    <string name="coll6_title">"T-shapes"</string>
-    <string name="coll6_subtitle">"T-shapes"</string>
-
     <string name="coll7" translatable="false">"R U R D R' U' R D' R2
 y' Rw U R' U' L' U R U'"</string>
-    <string name="coll7_title" />
-    <string name="coll7_subtitle">"T-shapes"</string>
-
     <string name="coll8" translatable="false">"R' U R U2 R' L' U R U' L
 R' U2 R U R2' F R U R U' R' F' R
 y F' U' F R U R' F R' F' R2 U' R'"</string>
-    <string name="coll8_title" />
-    <string name="coll8_subtitle">"T-shapes"</string>
-
     <string name="coll9" translatable="false">"Fw U R U' R' U R' U' R' U R U' Fw'
 y R U2 R' F2 R U2 R' U2 R' F2 R
 y2 F R U R' U' R U' R' U' R U R' F'"</string>
-    <string name="coll9_title" />
-    <string name="coll9_subtitle">"T-shapes"</string>
-
     <string name="coll10" translatable="false">"R2 U R' D' R U R' D R' U' R2 U' R2
 y R' U' R U R2' D' R U2 R' D R2' U' R' U R
 y' R D' R U' R' U2 R U' R' D R' U2 R U R'"</string>
-    <string name="coll10_title" />
-    <string name="coll10_subtitle">"T-shapes"</string>
-
     <string name="coll11" translatable="false">"R U2 R' U' R U' R' U R U R' U R U2 R'
 y' R U R2' U' R2 U' R2' U2' R U' R U' R'"</string>
-    <string name="coll11_title" />
-    <string name="coll11_subtitle">"T-shapes"</string>
-
     <string name="coll12" translatable="false">"R' U' R U R' F' R U R' U' R' F R2"</string>
-    <string name="coll12_title">"L-shapes"</string>
-    <string name="coll12_subtitle">"L-shapes"</string>
-
     <string name="coll13" translatable="false">"R U R' U R U' R' U R U' R' U R U2 R'"</string>
-    <string name="coll13_title" />
-    <string name="coll13_subtitle">"L-shapes"</string>
-
     <string name="coll14" translatable="false">"y R' F' R U R' U' R' F R2 U' R' U2 R"</string>
-    <string name="coll14_title" />
-    <string name="coll14_subtitle">"L-shapes"</string>
-
     <string name="coll15" translatable="false">"R' U2 R U R2 D' R U R' D R2
 y R' U2 R' D' R U2 R' D R2"</string>
-    <string name="coll15_title" />
-    <string name="coll15_subtitle">"L-shapes"</string>
-
     <string name="coll16" translatable="false">"y R U R' U' R' F R U R U' R' F'
 y x' R U' R' D R U R' D' x"</string>
-    <string name="coll16_title" />
-    <string name="coll16_subtitle">"L-shapes"</string>
-
     <string name="coll17" translatable="false">"F R U' R' U' R U2 R' U' F'
 x' D R U R' D' R U' Lw'
 y' F' R U2 R' U2 R' F R U R U' R'"</string>
-    <string name="coll17_title" />
-    <string name="coll17_subtitle">"L-shapes"</string>
-
     <string name="coll18" translatable="false">"R U R' U R U' R' U R U2 R'
 y/y' R U2 R' U' R U R' U' R U' R'"</string>
-    <string name="coll18_title">"H-shapes"</string>
-    <string name="coll18_subtitle">"H-shapes"</string>
-
     <string name="coll19" translatable="false">"y/y' F R U R' U' R U R' U' R U R' U' F'
 y/y' F U R U' R' U R U' R' U R U' R' F'"</string>
-    <string name="coll19_title" />
-    <string name="coll19_subtitle">"H-shapes"</string>
-
     <string name="coll20" translatable="false">"F R U' R' U R U2 R' U' R U R' U' F'"</string>
-    <string name="coll20_title" />
-    <string name="coll20_subtitle">"H-shapes"</string>
-
     <string name="coll21" translatable="false">"y' R' U' Lw R U' R' U L' U Rw U' Rw' U' Rw
 y2 R' F' R U2 R U2 R' F U' R U' R'
 y2 R U R' U R U L' U R' U' L"</string>
-    <string name="coll21_title" />
-    <string name="coll21_subtitle">"H-shapes"</string>
-
     <string name="coll22" translatable="false">"R U2 R2 U' R2 U' R2 U2 R"</string>
-    <string name="coll22_title">"Pi-shapes"</string>
-    <string name="coll22_subtitle">"Pi-shapes"</string>
-
     <string name="coll23" translatable="false">"R2' D' R U R' D R U R U' R' U R U R' U R
 y R U2 R' U' F' R U2 R' U' R U' R' F R U' R'
 y' Rw U R' U R' F R F' R U' R' U R U2' Rw'"</string>
-    <string name="coll23_title" />
-    <string name="coll23_subtitle">"Pi-shapes"</string>
-
     <string name="coll24" translatable="false">"R' F R U R' F R F' U' R' F' R2 U' R'
 R U' Rw' F R' F Rw U Rw' F Rw"</string>
-    <string name="coll24_title" />
-    <string name="coll24_subtitle">"Pi-shapes"</string>
-
     <string name="coll25" translatable="false">"R' U' F' R U R' U' R' F R2 U2 R' U2 R
 y F U R U' R' U R U2 R' U' R U R' F'"</string>
-    <string name="coll25_title" />
-    <string name="coll25_subtitle">"Pi-shapes"</string>
-
     <string name="coll26" translatable="false">"R' F2 R U2 R U2 R' F2 U' R U' R'
 y F U R U' R' U R U' R2 F' R U R U' R'"</string>
-    <string name="coll26_title" />
-    <string name="coll26_subtitle">"Pi-shapes"</string>
-
     <string name="coll27" translatable="false">"R U R' U' R' F R2 U R' U' R U R' U' F'
 y' R U R' U F2 R U2 R' U2 R' F2 R
 y' R' F2 R U' R2 F2 R U R U R2 F2 R2"</string>
-    <string name="coll27_title" />
-    <string name="coll27_subtitle">"Pi-shapes"</string>
-
     <string name="coll28" translatable="false">"R' U2 R U R' U R
 y R U R' U R U2 R'"</string>
-    <string name="coll28_title">"Sune"</string>
-    <string name="coll28_subtitle">"Sune"</string>
-
     <string name="coll29" translatable="false">"y2 F U R' F R F' R U' R' U R U' R' F'
 y' R U R' U L' U R U' L U2 R'"</string>
-    <string name="coll29_title" />
-    <string name="coll29_subtitle">"Sune"</string>
-
     <string name="coll30" translatable="false">"y L' R U R' U' L U2 R U2 R'
 y' R2 D' R U2 R' D R2 U R' U R"</string>
-    <string name="coll30_title" />
-    <string name="coll30_subtitle">"Sune"</string>
-
     <string name="coll31" translatable="false">"y R U' L' U R' U' L
 y' L U' R' U L' U' R"</string>
-    <string name="coll31_title" />
-    <string name="coll31_subtitle">"Sune"</string>
-
     <string name="coll32" translatable="false">"y' R U R' U R2 D R' U2 R D' R2"</string>
-    <string name="coll32_title" />
-    <string name="coll32_subtitle">"Sune"</string>
-
     <string name="coll33" translatable="false">"R U R' U R U' R D R' U' R D' R2'"</string>
-    <string name="coll33_title" />
-    <string name="coll33_subtitle">"Sune"</string>
-
     <string name="coll34" translatable="false">"y R' U R U' R' U2 R
 y2 R U2 R' U' R U' R'"</string>
-    <string name="coll34_title">"Antisune"</string>
-    <string name="coll34_subtitle">"Antisune"</string>
-
     <string name="coll35" translatable="false">"y' R' U' R U' L U' R' U L' U2 R"</string>
-    <string name="coll35_title" />
-    <string name="coll35_subtitle">"Antisune"</string>
-
     <string name="coll36" translatable="false">"M' U' L' U R U' L U Rw'
 y' L' U R U' L U R'"</string>
-    <string name="coll36_title" />
-    <string name="coll36_subtitle">"Antisune"</string>
-
     <string name="coll37" translatable="false">"F U R' U' R F' U' R' U2 R
 y' R2 D R' U2 R D' R2 U' R U' R'"</string>
-    <string name="coll37_title" />
-    <string name="coll37_subtitle">"Antisune"</string>
-
     <string name="coll38" translatable="false">"y' R' U' R U' R2 D' R U2 R' D R2"</string>
-    <string name="coll38_title" />
-    <string name="coll38_subtitle">"Antisune"</string>
-
     <string name="coll39" translatable="false">"y' R2 D R' U R D' R' U R' U' R U' R'
 y2 R' U' R U' R' U R' D' R U R' D R2"</string>
+
+    <string name="coll0_title">"U-shapes"</string>
+    <string name="coll1_title" />
+    <string name="coll2_title" />
+    <string name="coll3_title" />
+    <string name="coll4_title" />
+    <string name="coll5_title" />
+    <string name="coll6_title">"T-shapes"</string>
+    <string name="coll7_title" />
+    <string name="coll8_title" />
+    <string name="coll9_title" />
+    <string name="coll10_title" />
+    <string name="coll11_title" />
+    <string name="coll12_title">"L-shapes"</string>
+    <string name="coll13_title" />
+    <string name="coll14_title" />
+    <string name="coll15_title" />
+    <string name="coll16_title" />
+    <string name="coll17_title" />
+    <string name="coll18_title">"H-shapes"</string>
+    <string name="coll19_title" />
+    <string name="coll20_title" />
+    <string name="coll21_title" />
+    <string name="coll22_title">"Pi-shapes"</string>
+    <string name="coll23_title" />
+    <string name="coll24_title" />
+    <string name="coll25_title" />
+    <string name="coll26_title" />
+    <string name="coll27_title" />
+    <string name="coll28_title">"Sune"</string>
+    <string name="coll29_title" />
+    <string name="coll30_title" />
+    <string name="coll31_title" />
+    <string name="coll32_title" />
+    <string name="coll33_title" />
+    <string name="coll34_title">"Antisune"</string>
+    <string name="coll35_title" />
+    <string name="coll36_title" />
+    <string name="coll37_title" />
+    <string name="coll38_title" />
     <string name="coll39_title" />
-    <string name="coll39_subtitle">"Antisune"</string>
 </resources>

@@ -37,7 +37,8 @@ class MainActivity : AppCompatActivity() {
     companion object {
         /**
          * Mode IDs
-         * Necessary for material navigation drawer
+         * Necessary for material navigation drawer.
+         * IDs going in order, when methods was added to app ;D.
          */
         private const val F2L_ID: Long = 1
         private const val PLL_ID: Long = 2

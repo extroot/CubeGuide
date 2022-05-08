@@ -1,40 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="mg_oll0_title">"Звезда"</string>
-
     <string name="mg_oll1_title" />
-
     <string name="mg_oll2_title" />
-
     <string name="mg_oll3_title">"Ориентация углов"</string>
-
     <string name="mg_oll4_title" />
-
     <string name="mg_oll5_title" />
-
     <string name="mg_oll6_title" />
-
     <string name="mg_oll7_title" />
-
     <string name="mg_oll8_title" />
-
     <string name="mg_oll9_title" />
-
     <string name="mg_oll10_title" />
-
     <string name="mg_oll11_title" />
-
     <string name="mg_oll12_title" />
-
     <string name="mg_oll13_title" />
-
     <string name="mg_oll14_title" />
-
     <string name="mg_oll15_title" />
-
     <string name="mg_oll16_title" />
-
     <string name="mg_oll17_title" />
-
     <string name="mg_oll18_title" />
 </resources>

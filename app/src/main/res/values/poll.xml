@@ -5,63 +5,46 @@
     <string name="poll_prefix" translatable="false">poll</string>
 
     <string name="poll0" translatable="false">"Rw2 B2 U2 Lw U2 Rw' U2 Rw U2 F2 Rw F2 Lw' B2 Rw2
-
 Rw' U2 Rw U2 Lw' U2 Rw2 x' U2 Rw U2 Rw' U2 x U2 Rw2 U2 x'"</string>
-    <string name="poll0_title" translatable="false">"Base Cases"</string>
-
     <string name="poll1" translatable="false">"Rw2 B2 Rw' U2 Rw' U2 x' U2 Rw' U2 Rw U2 Rw' U2 Rw2 U2 x U2
-
 Rw' U2 Rw' U2 Lw U2 Rw' U2 Rw U2 x U2 Rw2 U2 Rw' U2 Rw U2"</string>
-    <string name="poll1_title" translatable="false">""</string>
-
     <string name="poll2" translatable="false">"R' DP R
 (U2) R U R' F' OP/DP F R U' R'"</string>
-    <string name="poll2_title" translatable="false">"1 Flipped Edge"</string>
-
     <string name="poll3" translatable="false">"OP/DP"</string>
-    <string name="poll3_title" translatable="false">""</string>
-
     <string name="poll4" translatable="false">"(U) B' R' DP R B"</string>
-    <string name="poll4_title" translatable="false">""</string>
-
     <string name="poll5" translatable="false">"M OP/DP M'"</string>
-    <string name="poll5_title" translatable="false">""</string>
-
     <string name="poll6" translatable="false">"(U') B L DP L' B'"</string>
-    <string name="poll6_title" translatable="false">""</string>
-
     <string name="poll7" translatable="false">"R2 B R' DP R B' R2"</string>
-    <string name="poll7_title" translatable="false">""</string>
-
     <string name="poll8" translatable="false">"(U) B2 R2 DP R2 B2
 (U) R2 B2 R2 OP/DP R2 B2 R2 "</string>
-    <string name="poll8_title" translatable="false">""</string>
-
     <string name="poll9" translatable="false">"3Rw' D R2 DP R2 D' 3Rw"</string>
-    <string name="poll9_title" translatable="false">""</string>
-
     <string name="poll10" translatable="false">"(U') B2 L2 DP L2 B2
 (U') L2 B2 L2 OP/DP L2 B2 L2"</string>
-    <string name="poll10_title" translatable="false">""</string>
-
     <string name="poll11" translatable="false">"(U) R' U' R OP/DP R' U R"</string>
-    <string name="poll11_title" translatable="false">""</string>
-
     <string name="poll12" translatable="false">"L U L' OP/DP L U' L'"</string>
-    <string name="poll12_title" translatable="false">""</string>
-
     <string name="poll13" translatable="false">"(U2) B' R2 DP R2 B
 (U') L' U2 L U' OP/DP U L' U2 L
 (U2) OP/DP R' U' R U' R' U2 R"</string>
-    <string name="poll13_title" translatable="false">""</string>
-
     <string name="poll14" translatable="false">"(U') B L2 DP L2 B'
 (U2) R U2 R' U OP/DP U' R U2 R'
 (U') OP/DP L U L' U L U2 L'"</string>
-    <string name="poll14_title" translatable="false">""</string>
-
     <string name="poll15" translatable="false">"x' U 3Rw F OP F' 3Rw' U' x
 R U R' F' R U R' F' OP F R U' R' F R U' R'"</string>
-    <string name="poll15_title" translatable="false">"3 Flipped Edges"</string>
 
+    <string name="poll0_title" translatable="false">"Base Cases"</string>
+    <string name="poll1_title" translatable="false">""</string>
+    <string name="poll2_title" translatable="false">"1 Flipped Edge"</string>
+    <string name="poll3_title" translatable="false">""</string>
+    <string name="poll4_title" translatable="false">""</string>
+    <string name="poll5_title" translatable="false">""</string>
+    <string name="poll6_title" translatable="false">""</string>
+    <string name="poll7_title" translatable="false">""</string>
+    <string name="poll8_title" translatable="false">""</string>
+    <string name="poll9_title" translatable="false">""</string>
+    <string name="poll10_title" translatable="false">""</string>
+    <string name="poll11_title" translatable="false">""</string>
+    <string name="poll12_title" translatable="false">""</string>
+    <string name="poll13_title" translatable="false">""</string>
+    <string name="poll14_title" translatable="false">""</string>
+    <string name="poll15_title" translatable="false">"3 Flipped Edges"</string>
 </resources>
