@@ -29,6 +29,7 @@ class FormulaFragment : Fragment() {
     private var replaceRw = false
 
     private lateinit var dialogView: View
+    private var previewDialog: MaterialDialog? = null
 
     private lateinit var _binding: FragmentFormulaBinding
     private lateinit var dialogPreviewBinding: DialogFormulaPreviewBinding
@@ -137,12 +138,14 @@ class FormulaFragment : Fragment() {
         val position = v.tag.toString().toInt()
         val title = mode.uppercase() + " " + (position + 1).toString()
 
-        dialogPreviewBinding.previewImage.setImageResource(getImageId(position))
+        if (previewDialog?.isShowing != true) {
+            dialogPreviewBinding.previewImage.setImageResource(getImageId(position))
 
-        MaterialDialog(requireContext()).show {
-            title(text=title)
-            customView(view=dialogView)
-            message(text=getAlgText(position))
+            previewDialog = MaterialDialog(requireContext()).show {
+                title(text = title)
+                customView(view = dialogView)
+                message(text = getAlgText(position))
+            }
         }
     }
 
