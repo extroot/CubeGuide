@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="parity_four_count">12</integer>
+    <string name="parity_four_picmode" translatable="false">parity_four</string>
+    <string name="parity_four_prefix" translatable="false">par</string>
+
+    <string name="parity_four0" translatable="false">"Rw' U2 Rw' U2 Lw U2 Rw' U2 Rw U2 x U2 Rw2 U2 Rw' U2 Rw U2"</string>
+    <string name="parity_four1" translatable="false">"R' [PARITY] R"</string>
+    <string name="parity_four2" translatable="false">"B' R' [PARITY] R B"</string>
+    <string name="parity_four3" translatable="false">"U R' U' R [PARITY] R' U R U'"</string>
+    <string name="parity_four4" translatable="false">"B L [PARITY] L' B'"</string>
+    <string name="parity_four5" translatable="false">"3R' U' 3R [PARITY] 3R' U 3R"</string>
+    <string name="parity_four6" translatable="false">"L R' [PARITY] R L'"</string>
+    <string name="parity_four7" translatable="false">"B' R2 [PARITY] R2 B"</string>
+    <string name="parity_four8" translatable="false">"B L2 [PARITY] L2 B'"</string>
+    <string name="parity_four9" translatable="false">"R2 B R' [PARITY] R B' R2"</string>
+    <string name="parity_four10" translatable="false">"B2 L2 [PARITY] L2 B2"</string>
+    <string name="parity_four11" translatable="false">"B2 R2 [PARITY] R2 B2"</string>
+
+    <string name="parity_four0_title" translatable="false">"PARITY"</string>
+    <string name="parity_four1_title" translatable="false" />
+    <string name="parity_four2_title" translatable="false" />
+    <string name="parity_four3_title" translatable="false" />
+    <string name="parity_four4_title" translatable="false" />
+    <string name="parity_four5_title" translatable="false" />
+    <string name="parity_four6_title" translatable="false" />
+    <string name="parity_four7_title" translatable="false" />
+    <string name="parity_four8_title" translatable="false" />
+    <string name="parity_four9_title" translatable="false" />
+    <string name="parity_four10_title" translatable="false" />
+    <string name="parity_four11_title" translatable="false" />
+</resources>

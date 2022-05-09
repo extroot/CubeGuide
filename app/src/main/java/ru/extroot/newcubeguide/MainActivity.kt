@@ -91,6 +91,9 @@ class MainActivity : AppCompatActivity() {
         private const val ZBLL_SUNE_ID: Long = 42
         private const val ZBLL_ANTISUNE_ID: Long = 43
 
+        private const val PARITY_4_ID: Long = 44
+        private const val CFOP_TWO_ID: Long = 45
+
         // private const val EASY_4_ID: Long = 47;
         // private const val CFOP_ABOUT_ID: Long = 48
 
@@ -174,7 +177,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun initAd() {
         /**
-         * Initialization of Google ADS
+         * Initialization of Google ADS banner
          */
         topAdView = AdView(this)
 
@@ -240,6 +243,9 @@ class MainActivity : AppCompatActivity() {
             EO_ID ->     { "eo" }
             CP_ID ->     { "cp" }
             EP_ID ->     { "ep" }
+            PARITY_4_ID -> { "parity_four" }
+            CFOP_TWO_ID -> { "cfop_two" }
+
             else -> { null }
         }
     }
@@ -280,7 +286,6 @@ class MainActivity : AppCompatActivity() {
         MaterialDialog(this@MainActivity).show {
             title(R.string.rating_dialog_feedback_title)
             message(R.string.rating_dialog_feedback_custom_message)
-            // TODO: `The result of input is not used` warning. idk why.
             input(
                 inputType = InputType.TYPE_TEXT_FLAG_MULTI_LINE,
             ) { _, text ->
@@ -356,6 +361,7 @@ class MainActivity : AppCompatActivity() {
                 ),
                 PrimaryDrawerItem().withName(R.string.uz_header).withIdentifier(UZ_ID),
                 ExpandableDrawerItem().withName(R.string.header_2x2x2).withSelectable(false).withSubItems(
+                    SecondaryDrawerItem().withName(R.string.cfop_two_header).withIdentifier(CFOP_TWO_ID).withLevel(2),
                     SecondaryDrawerItem().withName(R.string.ortega_header).withIdentifier(ORTEGA_ID).withLevel(2),
                     SecondaryDrawerItem().withName(R.string.cll_header).withIdentifier(CLL_ID).withLevel(2),
                     SecondaryDrawerItem().withName(R.string.eg1__header).withIdentifier(EG1_ID).withLevel(2),
@@ -367,6 +373,7 @@ class MainActivity : AppCompatActivity() {
                     SecondaryDrawerItem().withName(R.string.l2c_header).withIdentifier(L2C_ID).withLevel(2),
                     SecondaryDrawerItem().withName(R.string.l2e_header).withIdentifier(L2E_ID).withLevel(2)
                 ),
+                PrimaryDrawerItem().withName(R.string.parity_four_header).withIdentifier(PARITY_4_ID).withLevel(1),
                 ExpandableDrawerItem().withName(R.string.header_mg).withSelectable(false).withSubItems(
                     SecondaryDrawerItem().withName(R.string.mg_oll_header).withIdentifier(MG_OLL_ID).withLevel(2),
                     SecondaryDrawerItem().withName(R.string.mg_pll_header).withIdentifier(MG_PLL_ID).withLevel(2)

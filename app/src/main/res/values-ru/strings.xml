@@ -85,12 +85,14 @@
     <string name="uz_header">3x3x3 – Узоры</string>
 
     <string name="header_2x2x2">2x2x2</string>
+    <string name="cfop_two_header">Метод CFOP</string>
     <string name="ortega_header">Ортега (Varasano)</string>
     <string name="cll_header">CLL - Перестановка углов и OLL</string>
     <string name="tcllp_header">TCLL+ - Twisty CLL (Угол справа)</string>
 
     <string name="easy4_header">Метод для начинающих</string>
     <string name="poll_header">POLL – Паритетный OLL</string>
+    <string name="parity_four_header">4x4x4 – Паритеты</string>
 
     <string name="l2c_header">L2C – Последние 2 центра</string>
     <string name="l2e_header">L2E – Последние 2 ребра</string>
