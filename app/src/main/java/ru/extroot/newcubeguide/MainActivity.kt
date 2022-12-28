@@ -183,7 +183,7 @@ class MainActivity : AppCompatActivity() {
 
         // Google's examples for Adaptive Banner outdated
         // They also use deprecated code of display metrics, so...
-        topAdView.adSize = AdSize.SMART_BANNER
+        topAdView.setAdSize(AdSize.SMART_BANNER)
         topAdView.adUnitId = BuildConfig.AD_TOP_ID
 
         adRequest = AdRequest.Builder().build()
@@ -311,7 +311,7 @@ class MainActivity : AppCompatActivity() {
 
     /**
      * Initialization of Material Navigation Drawer
-     * Complex hierarchy, I think, will be better move it to menu.xml mb.
+     * Complex hierarchy, I think mb will be better move it to menu.xml.
      */
     private fun handleDrawer() {
         result = DrawerBuilder()

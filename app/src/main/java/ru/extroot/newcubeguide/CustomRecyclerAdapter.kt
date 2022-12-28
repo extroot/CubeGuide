@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 
 /**
- * Custom Recyclel adapter.
+ * Custom Recycler adapter.
  * Renders lines (or grid) of elements.
  *
  * Arguments:
