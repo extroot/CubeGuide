@@ -4,7 +4,6 @@ import android.app.Application
 import com.google.android.gms.ads.MobileAds
 
 import com.mikhaellopez.ratebottomsheet.RateBottomSheetManager
-
 import io.sentry.SentryEvent
 import io.sentry.SentryLevel
 import io.sentry.SentryOptions

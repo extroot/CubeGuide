@@ -36,7 +36,7 @@
             android:value="true" />
         <meta-data
             android:name="io.sentry.release"
-            android:value="1.5.5" />
+            android:value="1.5.7" />
         <meta-data
             android:name="io.sentry.environment"
             android:value="dev" />
