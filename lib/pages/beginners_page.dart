@@ -9,8 +9,8 @@ class BeginnersPage extends StatelessWidget {
       child: Column(
         children: <Widget>[
           // Add your static text and images here
-          Text('Welcome to Rubik\'s Cube Tutorials for Beginners!'),
-          Image.asset('assets/beginners_image_1.jpg'),
+          Text('Welcome to Rubik\'s Cube Tutorials for Beginners!')
+          // Image.asset('assets/beginners_image_1.jpg'),
           // create a standard button
 
           // Repeat Text and Image widgets as needed

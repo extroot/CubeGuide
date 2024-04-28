@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import 'db_helper.dart';
-import 'method.dart';
+import '../utils/db_helper.dart';
+import '../utils/method.dart';
 
 class TutorialPage extends StatefulWidget {
   final String title;

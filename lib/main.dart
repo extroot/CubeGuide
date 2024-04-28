@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:in_app_review/in_app_review.dart';
-import 'beginners_page.dart';
-import 'menu_page.dart';
-import 'method_page.dart';
-import 'settings_page.dart';
-import 'db_helper.dart';
-import 'method.dart';
+import 'pages/beginners_page.dart';
+import 'pages/menu_page.dart';
+import 'pages/method_page.dart';
+import 'pages/settings_page.dart';
+import 'utils/db_helper.dart';
+import 'utils/method.dart';
+import 'utils/cube_svg.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await DBHelper.initDB();
+  await CubeSvg.initCubeSvg();
   runApp(RubiksCubeApp());
 }
 
@@ -33,8 +35,8 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  Widget _currentScreen = BeginnersPage();
-  String _currentTitle = 'For Beginners';
+  Widget _currentScreen = MenuPage();
+  String _currentTitle = 'Menu';
   final InAppReview inAppReview = InAppReview.instance;
 
   void _navigateTo(String title) async {
