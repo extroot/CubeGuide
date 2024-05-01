@@ -45,4 +45,7 @@ app.*.map.json
 
 ios/
 android/
-web/
+web/s
+
+# Gradle directoriess
+.gradle/

@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'dart:async';
 
+import 'method.dart';
+
 class CubeSvg {
   static final Map<String, String> svgData = {};
 
@@ -43,12 +45,8 @@ class CubeSvg {
     }
   }
 
-  static Widget cubeCardSolved(String title) {
-    String? notation = svgSolved[title];
-    if (notation == null) {
-      return Text('Error: SVG not found: $title');
-    }
-    return cubeCard(title, notation);
+  static Widget cubeCardSolved(Cube cube) {
+    return cubeCard(cube.title, cube.solved_state);
   }
 
   static Widget cubeSvg(String title, String notation, [double? height]) {

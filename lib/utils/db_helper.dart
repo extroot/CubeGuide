@@ -57,10 +57,43 @@ class DBHelper {
     );
   }
 
+  static Future<Cube> getCubeById(int id) async {
+    final db = await database;
+    final List<Map<String, dynamic>> maps = await db.query(
+      'cubes',
+      where: 'id = ?',
+      whereArgs: [id],
+    );
+
+    return Cube.fromMap(maps[0]);
+  }
+
+  static Future<List<Method>> getMethodsByCube(Cube cube) async {
+    final db = await database;
+    final List<Map<String, dynamic>> maps = await db.query(
+      'methods',
+      where: 'cube_id = ?',
+      whereArgs: [cube.id],
+    );
+
+    return List.generate(maps.length, (i) {
+      return Method.fromMap(maps[i]);
+    });
+  }
+
+  static Future<List<Cube>> getCubes() async {
+    final db = await database;
+    final List<Map<String, dynamic>> maps = await db.query('cubes');
+
+    return List.generate(maps.length, (i) {
+      return Cube.fromMap(maps[i]);
+    });
+  }
+
   static Future<Method> getMethodById(int id) async {
     final db = await database;
     final List<Map<String, dynamic>> maps = await db.query(
-      'modes',
+      'methods',
       where: 'id = ?',
       whereArgs: [id],
     );
@@ -72,12 +105,12 @@ class DBHelper {
     return getAlgs(method.id);
   }
 
-  static Future<List<Alg>> getAlgs(int mode_id) async {
+  static Future<List<Alg>> getAlgs(int method_id) async {
     final db = await database;
     final List<Map<String, dynamic>> maps = await db.query(
       'algs',
-      where: 'mode_id = ?',
-      whereArgs: [mode_id],
+      where: 'method_id = ?',
+      whereArgs: [method_id],
     );
 
     return List.generate(maps.length, (i) {
