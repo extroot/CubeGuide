@@ -7,12 +7,21 @@ import 'pages/settings_page.dart';
 import 'utils/db_helper.dart';
 import 'utils/method.dart';
 import 'utils/cube_svg.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await EasyLocalization.ensureInitialized();
   await DBHelper.initDB();
   await CubeSvg.initCubeSvg();
-  runApp(RubiksCubeApp());
+  runApp(EasyLocalization(
+      supportedLocales: [Locale('en', '')],
+      useOnlyLangCode: true,
+      path: 'assets/translations', // <-- change the path of the translation files
+      fallbackLocale: Locale('en', ''),
+      child: RubiksCubeApp()
+  ),);
 }
 
 class RubiksCubeApp extends StatelessWidget {
@@ -20,6 +29,9 @@ class RubiksCubeApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Rubik\'s Cube Tutorials',
+      localizationsDelegates: context.localizationDelegates,
+      supportedLocales: context.supportedLocales,
+      locale: context.locale,
       theme: ThemeData(
         primarySwatch: Colors.blue,
         fontFamily: 'Lato'
@@ -36,11 +48,11 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   Widget _currentScreen = MenuPage();
-  String _currentTitle = 'Menu';
+  String _currentTitle = 'title'.tr();
   final InAppReview inAppReview = InAppReview.instance;
 
   void _navigateTo(String title) async {
-    List<Alg> algs = [];
+    // List<Alg> algs = [];
     Method method;
     switch (title) {
       case 'Menu':
@@ -49,21 +61,21 @@ class _HomePageState extends State<HomePage> {
       case 'For Beginners':
         _currentScreen = BeginnersPage();
         break;
-      case 'F2L':
-        method = await DBHelper.getMethodById(1);
-        algs = await DBHelper.getAlgsByMethod(method);
-        _currentScreen = TutorialPage(title: 'F2L', algs: algs, method: method);
-        break;
-      case 'OLL':
-        method = await DBHelper.getMethodById(2);
-        algs = await DBHelper.getAlgsByMethod(method);
-        _currentScreen = TutorialPage(title: 'OLL', algs: algs, method: method);
-        break;
-      case 'PLL':
-        method = await DBHelper.getMethodById(3);
-        algs = await DBHelper.getAlgsByMethod(method);
-        _currentScreen = TutorialPage(title: 'PLL', algs: algs, method: method);
-        break;
+      // case 'F2L':
+      //   method = await DBHelper.getMethodById(1);
+      //   algs = await DBHelper.getAlgsByMethod(method);
+      //   _currentScreen = TutorialPage(title: 'F2L', algs: algs, method: method);
+      //   break;
+      // case 'OLL':
+      //   method = await DBHelper.getMethodById(2);
+      //   algs = await DBHelper.getAlgsByMethod(method);
+      //   _currentScreen = TutorialPage(title: 'OLL', algs: algs, method: method);
+      //   break;
+      // case 'PLL':
+      //   method = await DBHelper.getMethodById(3);
+      //   algs = await DBHelper.getAlgsByMethod(method);
+      //   _currentScreen = TutorialPage(title: 'PLL', algs: algs, method: method);
+      //   break;
       case 'Settings':
         _currentScreen = SettingsPage();
         break;

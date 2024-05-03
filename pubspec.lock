@@ -105,6 +105,22 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.8"
+  easy_localization:
+    dependency: "direct main"
+    description:
+      name: easy_localization
+      sha256: "432698c31a488dd64c56d4759f20d04844baba5e9e4f2cb1abb9676257918b17"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.0.6"
+  easy_logger:
+    dependency: transitive
+    description:
+      name: easy_logger
+      sha256: c764a6e024846f33405a2342caf91c62e357c24b02c04dbc712ef232bf30ffb7
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.0.2"
   fake_async:
     dependency: transitive
     description:
@@ -150,6 +166,11 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.0.2"
+  flutter_localizations:
+    dependency: transitive
+    description: flutter
+    source: sdk
+    version: "0.0.0"
   flutter_native_splash:
     dependency: "direct dev"
     description:
@@ -493,6 +514,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.11.1"
+  sticky_headers:
+    dependency: "direct main"
+    description:
+      name: sticky_headers
+      sha256: "9b3dd2cb0fd6a7038170af3261f855660cbb241cb56c501452cb8deed7023ede"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.3.0+2"
   stream_channel:
     dependency: transitive
     description:

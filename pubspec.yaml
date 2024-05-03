@@ -35,10 +35,12 @@ dependencies:
   path_provider: ^2.0.2
   flutter_svg: ^2.0.5
   shared_preferences: ^2.2.2
-#  google_fonts: ^6.1.0
+  sticky_headers: "^0.3.0"
+  #  google_fonts: ^6.1.0
   in_app_review: ^2.0.8
   scrolls_to_top: ^2.1.1
   format: ^1.5.1
+  easy_localization: ^3.0.6
 
   cupertino_icons: ^1.0.2
 
@@ -74,6 +76,7 @@ flutter:
     - assets/f2l0.svg
     - assets/3x3x3.svg
     - assets/logo.png
+    - assets/translations/
     - assets/methods/
     - assets/svg_templates/
     - assets/methods/cll/

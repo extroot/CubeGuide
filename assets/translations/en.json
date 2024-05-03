@@ -1,0 +1,55 @@
+{
+  "title": "Menu page",
+
+  "cube_3x3x3": {
+    "title": "3x3x3",
+    "groups": {
+      "beginner": {
+        "title": "3x3x3 for beginners",
+        "methods": {
+          "beginner": {
+            "title": "Text-based method for begginers",
+            "description": "Большой текстовый метод с инструкциями как собирать кубик рубика для новичков"
+          },
+          "howto": {
+            "title": "Notation explanation"
+          }
+        }
+      },
+      "cfop": {
+        "title": "CFOP (Cross F2L OLL PLL)",
+        "methods": {
+          "f2l": {
+            "title": "F2L – First 2 Layers"
+          },
+          "oll": {
+            "title": "OLL – Orientation of the Last Layer"
+          },
+          "pll": {
+            "title": "PLL – Permutatuin of the Last Layer"
+          }
+        }
+      },
+      "oh": {
+        "title": "Methods, optimized for one hand"
+      },
+      "pro": {
+        "title": "Pro methods"
+      },
+      "zbll": {
+        "title": "ZBLL – la la la"
+      }
+    }
+  },
+
+  "m_3x3x3_oll_oh": "OH OLL – One Handed OLL",
+  "m_3x3x3_pll_oh": "OH PLL – One Handed PLL",
+  "m_3x3x3_coll_oh": "OH COLL – One Handed COLL",
+
+  "m_3x3x3_vls": "VLS – Valk Last Slot",
+  "m_3x3x3_wv": "WV – Winter Variation",
+
+
+  "m_zbll_sune": "ZBLL Sune pattern",
+  "m_zbll_antisune": "ZBLL Anti Sune pattern"
+}

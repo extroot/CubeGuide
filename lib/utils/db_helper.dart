@@ -68,63 +68,40 @@ class DBHelper {
     return Cube.fromMap(maps[0]);
   }
 
-  static Future<List<Method>> getMethodsByCube(Cube cube) async {
-    final db = await database;
-    final List<Map<String, dynamic>> maps = await db.query(
-      'methods',
-      where: 'cube_id = ?',
-      whereArgs: [cube.id],
-    );
-
-    return List.generate(maps.length, (i) {
-      return Method.fromMap(maps[i]);
-    });
-  }
-
   static Future<List<Cube>> getCubes() async {
     final db = await database;
-    final List<Map<String, dynamic>> maps = await db.query('cubes');
+    final List<Map<String, dynamic>> maps = await db.query('cube');
 
     return List.generate(maps.length, (i) {
       return Cube.fromMap(maps[i]);
     });
   }
 
-  static Future<Method> getMethodById(int id) async {
+  static Future<List<MethodGroup>> getMethodGroups(Cube cube) async {
     final db = await database;
     final List<Map<String, dynamic>> maps = await db.query(
-      'methods',
-      where: 'id = ?',
-      whereArgs: [id],
+      'method_group',
+      where: 'cube_id = ?',
+      whereArgs: [cube.id],
     );
 
-    return Method.fromMap(maps[0]);
+    List<MethodGroup> groups = [];
+    for (var map in maps) {
+      groups.add(await MethodGroup.fromMap(map, cube));
+    }
+    return groups;
   }
 
-  static Future<List<Alg>> getAlgsByMethod(Method method) async {
-    return getAlgs(method.id);
-  }
-
-  static Future<List<Alg>> getAlgs(int method_id) async {
+  static Future<List<Method>> getMethodsByGroupId(int group_id) async {
     final db = await database;
     final List<Map<String, dynamic>> maps = await db.query(
-      'algs',
-      where: 'method_id = ?',
-      whereArgs: [method_id],
+      'method',
+      where: 'method_group_id = ?',
+      whereArgs: [group_id],
     );
 
     return List.generate(maps.length, (i) {
-      return Alg.fromMap(maps[i]);
+      return Method.fromMap(maps[i]);
     });
-  }
-
-  static Future<void> updateMethodAlg(int id, String newFormula) async {
-    final db = await database;
-    await db.update(
-      'algs',
-      {'alg': newFormula},
-      where: 'id = ?',
-      whereArgs: [id],
-    );
   }
 }

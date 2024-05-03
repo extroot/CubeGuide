@@ -53,11 +53,11 @@ class _MenuPageState extends State<MenuPage> {
               Container(
                 margin: const EdgeInsets.all(10),
                 child: Text(
-                  cube.title,
+                  cube.prefix,
                   style: const TextStyle(fontSize: 20),
                 ),
               ),
-              CubeSvg.cubeSvg(cube.title, cube.solved_state)
+              CubeSvg.cubeSvg(cube.prefix, cube.menu_state)
             ],
           ),
           onTap: () {

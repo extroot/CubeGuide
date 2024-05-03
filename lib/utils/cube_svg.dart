@@ -46,7 +46,7 @@ class CubeSvg {
   }
 
   static Widget cubeCardSolved(Cube cube) {
-    return cubeCard(cube.title, cube.solved_state);
+    return cubeCard(cube.prefix, cube.menu_state);
   }
 
   static Widget cubeSvg(String title, String notation, [double? height]) {
