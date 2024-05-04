@@ -29,12 +29,17 @@ class _CubePageState extends State<CubePage> {
     String cubePrefix = widget.cube.prefix;
     return FutureBuilder(
       future: DBHelper.getMethodGroups(widget.cube),
-      builder: (BuildContext context, AsyncSnapshot<List<MethodGroup>> snapshot) {
+      builder:
+          (BuildContext context, AsyncSnapshot<List<MethodGroup>> snapshot) {
         if (snapshot.hasData) {
+          print(snapshot.data![0]);
+          print(snapshot.data![0].methods);
+          print(snapshot.data![0].methods.length);
           return ListView.builder(
               itemCount: snapshot.data!.length,
               itemBuilder: (context, index) {
                 MethodGroup group = snapshot.data![index];
+                int counter = 0;
                 return StickyHeader(
                   header: Container(
                     height: 50.0,
@@ -46,23 +51,31 @@ class _CubePageState extends State<CubePage> {
                       style: const TextStyle(color: Colors.white),
                     ),
                   ),
-                  content: GridView.count(
-                    primary: false,
-                    crossAxisCount: 2,
-                    shrinkWrap: true,
-                    children: group.methods.map((method) {
-                      return methodCard(method, group.prefix);
-                    }).toList(),
-                  ),
+                  content: ListView.builder(
+                      itemCount: group.methods.length + 1,
+                      primary: false,
+                      scrollDirection: Axis.vertical,
+                      shrinkWrap: true,
+                      itemBuilder: (context, index) {
+                        if (index == 0) {
+                          if (!group.has_description) return Container();
+                          return Container(
+                            margin: const EdgeInsets.all(10),
+                            child: Text(
+                              '${cubePrefix}.groups.${group.prefix}.description'
+                                  .tr(),
+                              style: const TextStyle(fontSize: 16),
+                            ),
+                          );
+                        }
+                        return methodCard(
+                            group.methods[index - 1],
+                            group.prefix,
+                            index % 2 == 1
+                        );
+                      }),
                 );
               });
-
-          // return GridView.count(
-          //   crossAxisCount: 2,
-          //   children: snapshot.data!.map((method) {
-          //     return methodCard(method);
-          //   }).toList(),
-          // );
         } else {
           return CircularProgressIndicator();
         }
@@ -77,33 +90,70 @@ class _CubePageState extends State<CubePage> {
         title: Text(widget.cube.prefix),
       ),
       body: page(),
-      // bottomNavigationBar: BottomNavigationBar(
-      //   items: <BottomNavigationBarItem>[
-      //     BottomNavigationBarItem(
-      //       icon: CubeSvg.cubeSvg('3x3x3', 'B' * 9 + 'Y' * 9 + 'R' * 9, 35),
-      //       label: '3x3x3',
-      //       backgroundColor: Colors.red,
-      //     ),
-      //     BottomNavigationBarItem(
-      //       icon: CubeSvg.cubeSvg('2x2x2', 'B' * 4 + 'Y' * 4 + 'R' * 4, 35),
-      //       label: '2x2x2',
-      //       backgroundColor: Colors.green,
-      //     ),
-      //     BottomNavigationBarItem(
-      //       icon: CubeSvg.cubeSvg('Square-1', 'B' * 7 + 'Y' * 8 + 'R' * 8, 35),
-      //       label: 'Other',
-      //       backgroundColor: Colors.purple,
-      //     ),
-      //   ],
-      //   currentIndex: 0,
-      //   selectedItemColor: Colors.amber[800],
-      // ),
     );
   }
 
-  Widget methodCard(Method method, String groupPrefix) {
+  Widget methodCard(Method method, String groupPrefix, bool isOnLeftSide) {
+    print(
+        "Method Card for ${method.prefix} of ${groupPrefix} with ${isOnLeftSide}");
     String assetName = "assets/methods/";
     String cubePrefix = widget.cube.prefix;
+
+    Widget image = SvgPicture.asset(
+      '${assetName}${method.prefix}/${method.prefix}0.svg', // TODO: TEST CASE
+      // "${assetName}f2l/f2l0.svg",
+      // height: 125,
+      width: 120,
+      placeholderBuilder: (BuildContext context) => Container(
+          padding: const EdgeInsets.all(30.0),
+          child: const CircularProgressIndicator()),
+    );
+    Widget column = Expanded(
+      child: Column(children: <Widget>[
+        Container(
+          margin: const EdgeInsets.all(10),
+          child: Text(
+            '${cubePrefix}.groups.${groupPrefix}.methods.${method.prefix}.title'
+                .tr(),
+            style: const TextStyle(fontSize: 20),
+          ),
+        ),
+        if (method.has_description)
+          Container(
+            margin: const EdgeInsets.all(10),
+            child: Text(
+              '${cubePrefix}.groups.${groupPrefix}.methods.${method.prefix}.description'
+                  .tr(),
+              maxLines: 3,
+              overflow: TextOverflow.ellipsis,
+              style: const TextStyle(fontSize: 16),
+            ),
+          )
+      ]),
+    );
+
+    List<Widget> rowChildren = [image, column];
+
+    // if (!isOnLeftSide) {
+    //   rowChildren = rowChildren.reversed.toList();
+    // }
+
+    return Container(
+      margin: const EdgeInsets.all(10),
+      child: Card(
+        child: InkWell(
+          splashColor: Colors.blue.withAlpha(30),
+          child: Container(
+            padding: const EdgeInsets.all(10),
+            child: Row(
+              children: rowChildren,
+            ),
+          ),
+        ),
+      ),
+    );
+
+    // return Container(margin: const EdgeInsets.all(10), child: Row());
     return Container(
       margin: const EdgeInsets.all(10),
       child: Card(
@@ -114,7 +164,8 @@ class _CubePageState extends State<CubePage> {
               Container(
                 margin: const EdgeInsets.all(10),
                 child: Text(
-                  '${cubePrefix}.groups.${groupPrefix}.methods.${method.prefix}.title'.tr(),
+                  '${cubePrefix}.groups.${groupPrefix}.methods.${method.prefix}.title'
+                      .tr(),
                   style: const TextStyle(fontSize: 20),
                 ),
               ),

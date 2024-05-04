@@ -18,15 +18,17 @@
       },
       "cfop": {
         "title": "CFOP (Cross F2L OLL PLL)",
+        "description": "It is the most popular method for speedsolving the Rubik's Cube. It is the method used by all 3x3 world record holders in the last decade.",
         "methods": {
           "f2l": {
-            "title": "F2L – First 2 Layers"
+            "title": "F2L – First Two Layers",
+            "description": " F2L or First Two Layers is the second step of the CFOP method, which aims to solve the first two bottom layers of a 3x3. Each algorithm solves a pair (an edge and a corner) into their designated location.\n\nEach case is recognized by the position and orientation of the two pieces in relation to the target slot. Since there are four possible target slots, each case has four variants to avoid rotations.\n\nThe basic 41 cases deal with all permutations where the two pair pieces are on the U layer and/or in the target slot. "
           },
           "oll": {
             "title": "OLL – Orientation of the Last Layer"
           },
           "pll": {
-            "title": "PLL – Permutatuin of the Last Layer"
+            "title": "PLL – Permutation of the Last Layer"
           }
         }
       },
@@ -40,16 +42,5 @@
         "title": "ZBLL – la la la"
       }
     }
-  },
-
-  "m_3x3x3_oll_oh": "OH OLL – One Handed OLL",
-  "m_3x3x3_pll_oh": "OH PLL – One Handed PLL",
-  "m_3x3x3_coll_oh": "OH COLL – One Handed COLL",
-
-  "m_3x3x3_vls": "VLS – Valk Last Slot",
-  "m_3x3x3_wv": "WV – Winter Variation",
-
-
-  "m_zbll_sune": "ZBLL Sune pattern",
-  "m_zbll_antisune": "ZBLL Anti Sune pattern"
+  }
 }

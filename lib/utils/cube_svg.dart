@@ -14,18 +14,9 @@ class CubeSvg {
     'assets/svg_templates/3x3x3.svg',
     'assets/svg_templates/4x4x4.svg',
     'assets/svg_templates/5x5x5.svg',
-    'assets/svg_templates/Pyraminx.svg',
-    'assets/svg_templates/Square-1.svg',
+    'assets/svg_templates/pyraminx.svg',
+    'assets/svg_templates/square-1.svg',
   ];
-
-  static final Map<String, String> svgSolved = {
-    '2x2x2': 'B' * 4 + 'Y' * 4 + 'R' * 4,
-    '3x3x3': 'B' * 9 + 'Y' * 9 + 'R' * 9,
-    '4x4x4': 'B' * 16 + 'Y' * 16 + 'R' * 16,
-    '5x5x5': 'B' * 25 + 'Y' * 25 + 'R' * 25,
-    'Pyraminx': 'Y' * 9 + 'R' * 9,
-    'Square-1': 'G' * 7 + 'W' * 8 + 'R' * 8,
-  };
 
   static var colors = {
     'W': '#ffffff',
@@ -50,6 +41,11 @@ class CubeSvg {
   }
 
   static Widget cubeSvg(String title, String notation, [double? height]) {
+    title = switch (title) {
+      "cube_3x3x3" => "3x3x3",
+      "f2l" => "3x3x3",
+      _ => title
+    };
     var svg = svgData[title];
     if (svg == null) {
       return Text('Error: SVG not found: $title');

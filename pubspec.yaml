@@ -95,6 +95,7 @@ flutter:
     - assets/methods/vls/
     - assets/methods/wv/
     - assets/methods/zbll/
+    - assets/methods/pll/
 
 
   fonts:
