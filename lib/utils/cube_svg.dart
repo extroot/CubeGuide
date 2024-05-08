@@ -16,6 +16,9 @@ class CubeSvg {
     'assets/svg_templates/5x5x5.svg',
     'assets/svg_templates/pyraminx.svg',
     'assets/svg_templates/square-1.svg',
+    'assets/svg_templates/2x2x2_oll.svg',
+    'assets/svg_templates/3x3x3_oll.svg',
+    'assets/svg_templates/3x3x3_pll.svg',
   ];
 
   static var colors = {
@@ -25,7 +28,9 @@ class CubeSvg {
     'O': '#ffa40d',
     'G': '#07a42e',
     'B': '#0025ff',
-    'X': '#9c9c9c'
+    'X': '#9c9c9c',
+    'T': '',
+    'F': 'none'
   };
 
   static Future<void> initCubeSvg() async {
@@ -36,14 +41,11 @@ class CubeSvg {
     }
   }
 
-  static Widget cubeCardSolved(Cube cube) {
-    return cubeCard(cube.prefix, cube.menu_state);
-  }
-
-  static Widget cubeSvg(String title, String notation, [double? height]) {
+  static Widget cubeSvg(String title, String notation, {double? width, double? height}) {
     title = switch (title) {
-      "cube_3x3x3" => "3x3x3",
-      "f2l" => "3x3x3",
+      "cube_3x3x3" || "f2l" || "coll" || "mw" || "olc" => "3x3x3",
+      "cll" || "eg1" || "eg2" => "2x2x2_oll",
+      "oll" || "ell" => "3x3x3_oll",
       _ => title
     };
     var svg = svgData[title];
@@ -57,30 +59,8 @@ class CubeSvg {
 
     return SvgPicture.string(
       out,
-      height: height ?? 125,
-    );
-  }
-
-  static Widget cubeCard(String title, String notation) {
-    return Container(
-      margin: const EdgeInsets.all(10),
-      child: Card(
-        child: InkWell(
-          splashColor: Colors.blue.withAlpha(30),
-          child: Column(
-            children: <Widget>[
-              Container(
-                margin: const EdgeInsets.all(10),
-                child: Text(
-                  title,
-                  style: const TextStyle(fontSize: 20),
-                ),
-              ),
-              cubeSvg(title, notation)
-            ],
-          ),
-        ),
-      ),
+      width: width,
+      height: height,
     );
   }
 }

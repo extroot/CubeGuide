@@ -1,20 +1,93 @@
+import 'package:cube_guide_flutter/utils/cube_svg.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../utils/db_helper.dart';
 import '../utils/method.dart';
 
-class TutorialPage extends StatelessWidget {
+class MethodPage extends StatefulWidget {
   final String title;
-  TutorialPage({required this.title});
+  final Method method;
+  final Cube cube;
+
+  MethodPage({required this.title, required this.method, required this.cube});
+
+  @override
+  _MethodPageState createState() => _MethodPageState();
+}
+
+
+class _MethodPageState extends State<MethodPage> {
+  final ScrollController _scrollController = ScrollController(initialScrollOffset: 0.0);
+
+  @override
+  void dispose() {
+    _scrollController.dispose();
+    super.dispose();
+  }
+
+  void resetScrollPosition() {
+    if (_scrollController.hasClients) {
+      _scrollController.animateTo(0.0, duration: Duration(milliseconds: 500), curve: Curves.easeOut);
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-    throw UnimplementedError();
+    // return back top bar
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(widget.title),
+      ),
+      body: _list(),
+    );
   }
-  
+
+  Widget _list() {
+    const String assetName = "assets/methods/";
+    const double height = 125;
+    return ListView.builder(
+      controller: _scrollController,
+      itemCount: widget.method.algGroups.length,
+      itemBuilder: (context, index) {
+        return Container(
+            margin: EdgeInsets.only(left:10, top: 15),
+            child: Row(
+                children: <Widget>[
+                  // Flexible containers with svg image and a text. Margin on the every side of an image is 10.
+                  Container(
+                    margin: EdgeInsets.only(right: 10),
+                    child: CubeSvg.cubeSvg(widget.method.picmode, widget.method.algGroups[index].pic_state, height: 125)
+                  ),
+                  Expanded(
+                    child: Container(
+                      margin: EdgeInsets.all(5),
+                      child: Text(
+                       getAlg(widget.method.algGroups[index].algs),
+                      ),
+                    ),
+                  ),
+                ]
+            )
+        );
+      },
+    );
+  }
+
+  String getAlg(List<Alg> algs) {
+    String alg = "";
+    for (int i = 0; i < algs.length; i++) {
+      alg += algs[i].text;
+      if (i < algs.length - 1) {
+        alg += "\n";
+      }
+    }
+    return alg;
+  }
+
 }
+
+
 //
 // class TutorialPage extends StatefulWidget {
 //   final String title;

@@ -57,7 +57,7 @@ class _MenuPageState extends State<MenuPage> {
                   style: const TextStyle(fontSize: 20),
                 ),
               ),
-              CubeSvg.cubeSvg(cube.prefix, cube.menu_state)
+              CubeSvg.cubeSvg(cube.prefix, cube.menu_state, height: 125)
             ],
           ),
           onTap: () {

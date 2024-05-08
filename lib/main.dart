@@ -16,10 +16,10 @@ void main() async {
   await DBHelper.initDB();
   await CubeSvg.initCubeSvg();
   runApp(EasyLocalization(
-      supportedLocales: [Locale('en', '')],
+      supportedLocales: const [Locale('en', '')],
       useOnlyLangCode: true,
       path: 'assets/translations', // <-- change the path of the translation files
-      fallbackLocale: Locale('en', ''),
+      fallbackLocale: const Locale('en', ''),
       child: RubiksCubeApp()
   ),);
 }
@@ -94,7 +94,6 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    final bool expanded = _currentScreen is TutorialPage && _currentTitle == 'F2L';
     return Scaffold(
       appBar: AppBar(
         title: Text(_currentTitle),

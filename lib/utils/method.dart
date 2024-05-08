@@ -31,6 +31,7 @@ class MethodGroup {
   MethodGroup({required this.id, required this.prefix, required this.has_description, required this.cube_id, required this.cube, required this.methods});
 
   static Future<MethodGroup> fromMap(Map<String, dynamic> map, Cube cube) async {
+    print("Getting methods for group ${map['id']}");
     List<Method> methods = await DBHelper.getMethodsByGroupId(map['id']);
     return MethodGroup(
       id: map['id'],
@@ -50,21 +51,76 @@ class Method {
   final String prefix;
   final int count;
   final String picmode;
+  final String menu_state;
   final int cube_id;
   final int method_group_id;
   final bool has_description;
 
-  Method({required this.id, required this.prefix, required this.count, required this.picmode, required this.cube_id, required this.method_group_id, required this.has_description});
+  final List<AlgGroup> algGroups;
 
-  static Method fromMap(Map<String, dynamic> map) {
+  Method({required this.id, required this.prefix, required this.count, required this.picmode, required this.menu_state, required this.cube_id, required this.method_group_id, required this.has_description, required this.algGroups});
+
+  static Future<Method> fromMap(Map<String, dynamic> map) async {
+
+    print("Getting alg groups for method ${map['id']}");
+    List<AlgGroup> algGroups = await DBHelper.getAlgGroupsByMethodId(map['id']);
+
     return Method(
       id: map['id'],
       prefix: map['prefix'],
       count: map['count'],
       picmode: map['picmode'],
+      menu_state: map['menu_state'],
       cube_id: map['cube_id'],
       method_group_id: map['method_group_id'],
       has_description: map['has_description'] == 1,
+      algGroups: algGroups,
+    );
+  }
+}
+
+
+class AlgGroup {
+  final int id;
+  final int my_order;
+  final int? category_id;
+  final String pic_state;
+  final int method_id;
+
+  final List<Alg> algs;
+
+  AlgGroup({required this.id, required this.my_order, required this.category_id, required this.pic_state, required this.method_id, required this.algs});
+
+  static Future<AlgGroup> fromMap(Map<String, dynamic> map) async {
+    print("Creating AlgGroup from map: ${map}");
+    List<Alg> algs = await DBHelper.getAlgsByGroupId(map['id']);
+    return AlgGroup(
+      id: map['id'],
+      my_order: map['my_order'],
+      category_id: map['category_id'],
+      pic_state: map['pic_state'],
+      method_id: map['method_id'],
+      algs: algs,
+    );
+  }
+}
+
+class Alg {
+  final int id;
+  final int my_order;
+  final String text;
+  final int alg_group_id;
+  final bool is_custom;
+
+  Alg({required this.id, required this.my_order, required this.text, required this.alg_group_id, required this.is_custom});
+
+  static Alg fromMap(Map<String, dynamic> map) {
+    return Alg(
+      id: map['id'],
+      my_order: map['my_order'],
+      text: map['text'],
+      alg_group_id: map['alg_group_id'],
+      is_custom: map['is_custom'] == 1,
     );
   }
 }
