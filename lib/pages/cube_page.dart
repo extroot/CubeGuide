@@ -100,8 +100,8 @@ class _CubePageState extends State<CubePage> {
     String assetName = "assets/methods/";
     String cubePrefix = widget.cube.prefix;
     Widget image;
-    if (method.algGroups.isNotEmpty) {
-      image = CubeSvg.cubeSvg(method.picmode, method.algGroups[0].pic_state, width: 125);
+    if (method.menu_state != '') {
+      image = CubeSvg.cubeSvg(method.picmode, method.menu_state, width: 125);
     } else {
       image = SvgPicture.asset(
         '${assetName}olc/olc0.svg', // TODO: TEST CASE

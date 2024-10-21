@@ -56,14 +56,10 @@ class Method {
   final int method_group_id;
   final bool has_description;
 
-  final List<AlgGroup> algGroups;
 
-  Method({required this.id, required this.prefix, required this.count, required this.picmode, required this.menu_state, required this.cube_id, required this.method_group_id, required this.has_description, required this.algGroups});
+  Method({required this.id, required this.prefix, required this.count, required this.picmode, required this.menu_state, required this.cube_id, required this.method_group_id, required this.has_description});
 
   static Future<Method> fromMap(Map<String, dynamic> map) async {
-
-    print("Getting alg groups for method ${map['id']}");
-    List<AlgGroup> algGroups = await DBHelper.getAlgGroupsByMethodId(map['id']);
 
     return Method(
       id: map['id'],
@@ -74,7 +70,6 @@ class Method {
       cube_id: map['cube_id'],
       method_group_id: map['method_group_id'],
       has_description: map['has_description'] == 1,
-      algGroups: algGroups,
     );
   }
 }

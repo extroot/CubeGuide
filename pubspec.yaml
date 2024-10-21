@@ -73,29 +73,10 @@ flutter:
 
   assets:
     - assets/test.db
-    - assets/f2l0.svg
-    - assets/3x3x3.svg
     - assets/logo.png
     - assets/translations/
     - assets/methods/
     - assets/svg_templates/
-    - assets/methods/cll/
-    - assets/methods/coll/
-    - assets/methods/ell/
-    - assets/methods/f2l/
-    - assets/methods/mw/
-    - assets/methods/olc/
-    - assets/methods/ole/
-    - assets/methods/oll/
-    - assets/methods/op/
-    - assets/methods/pll_sc/
-    - assets/methods/sv/
-    - assets/methods/tcllp/
-    - assets/methods/uz/
-    - assets/methods/vls/
-    - assets/methods/wv/
-    - assets/methods/zbll/
-    - assets/methods/pll/
 
 
   fonts:

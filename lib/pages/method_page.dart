@@ -46,33 +46,44 @@ class _MethodPageState extends State<MethodPage> {
   Widget _list() {
     const String assetName = "assets/methods/";
     const double height = 125;
-    return ListView.builder(
-      controller: _scrollController,
-      itemCount: widget.method.algGroups.length,
-      itemBuilder: (context, index) {
-        return Container(
-            margin: EdgeInsets.only(left:10, top: 15),
-            child: Row(
-                children: <Widget>[
-                  // Flexible containers with svg image and a text. Margin on the every side of an image is 10.
-                  Container(
-                    margin: EdgeInsets.only(right: 10),
-                    child: CubeSvg.cubeSvg(widget.method.picmode, widget.method.algGroups[index].pic_state, height: 125)
-                  ),
-                  Expanded(
-                    child: Container(
-                      margin: EdgeInsets.all(5),
-                      child: Text(
-                       getAlg(widget.method.algGroups[index].algs),
-                      ),
-                    ),
-                  ),
-                ]
-            )
-        );
+
+    return FutureBuilder(
+      future: DBHelper.getAlgGroupsByMethodId(widget.method.id),
+      builder: (context, snapshot) {
+        if (snapshot.hasData) {
+          return ListView.builder(
+            controller: _scrollController,
+            itemCount: snapshot.data!.length,
+            itemBuilder: (context, index) {
+              AlgGroup group = snapshot.data![index];
+              return Container(
+                  margin: EdgeInsets.only(left: 10, top: 15),
+                  child: Row(
+                      children: <Widget>[
+                        Container(
+                            margin: EdgeInsets.only(right: 10),
+                            child: CubeSvg.cubeSvg(widget.method.picmode, group.pic_state, height: 125)
+                        ),
+                        Expanded(
+                          child: Container(
+                            margin: EdgeInsets.all(5),
+                            child: Text(
+                              getAlg(group.algs),
+                            ),
+                          ),
+                        ),
+                      ]
+                  )
+              );
+            },
+          );
+        } else {
+          return Center(child: CircularProgressIndicator());
+        }
       },
     );
   }
+
 
   String getAlg(List<Alg> algs) {
     String alg = "";
