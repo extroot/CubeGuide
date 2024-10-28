@@ -2,7 +2,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:format/format.dart';
-import '../utils/method.dart';
+import '../utils/models.dart';
 import '../utils/db_helper.dart';
 import '../utils/cube_svg.dart';
 import 'cube_page.dart';

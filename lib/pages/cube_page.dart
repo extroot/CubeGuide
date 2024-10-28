@@ -5,7 +5,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:format/format.dart';
 import 'package:sticky_headers/sticky_headers.dart';
 import '../utils/cube_svg.dart';
-import '../utils/method.dart';
+import '../utils/models.dart';
 import '../utils/db_helper.dart';
 import '../utils/cube_svg.dart';
 
@@ -13,8 +13,6 @@ class CubePage extends StatefulWidget {
   final Cube cube;
 
   CubePage({required this.cube}) : super();
-
-  // init
 
   @override
   _CubePageState createState() => _CubePageState();
@@ -28,7 +26,7 @@ class _CubePageState extends State<CubePage> {
 
   Widget page() {
     String cubePrefix = widget.cube.prefix;
-    print("Cube Page for ${cubePrefix}");
+    print("Cube Page for $cubePrefix");
     return FutureBuilder(
       future: DBHelper.getMethodGroups(widget.cube),
       builder:
@@ -45,10 +43,10 @@ class _CubePageState extends State<CubePage> {
                   header: Container(
                     height: 50.0,
                     color: Colors.blue[700],
-                    padding: EdgeInsets.symmetric(horizontal: 16.0),
+                    padding: const EdgeInsets.symmetric(horizontal: 16.0),
                     alignment: Alignment.centerLeft,
                     child: Text(
-                      '${cubePrefix}.groups.${group.prefix}.title'.tr(),
+                      '$cubePrefix.groups.${group.prefix}.title'.tr(),
                       style: const TextStyle(color: Colors.white),
                     ),
                   ),
@@ -63,7 +61,7 @@ class _CubePageState extends State<CubePage> {
                           return Container(
                             margin: const EdgeInsets.all(10),
                             child: Text(
-                              '${cubePrefix}.groups.${group.prefix}.description'
+                              '$cubePrefix.groups.${group.prefix}.description'
                                   .tr(),
                               style: const TextStyle(fontSize: 16),
                             ),
@@ -78,7 +76,7 @@ class _CubePageState extends State<CubePage> {
                 );
               });
         } else {
-          return CircularProgressIndicator();
+          return const CircularProgressIndicator();
         }
       },
     );
@@ -95,8 +93,7 @@ class _CubePageState extends State<CubePage> {
   }
 
   Widget methodCard(Method method, String groupPrefix, bool isOnLeftSide) {
-    print(
-        "Method Card for ${method.prefix} of ${groupPrefix} with ${isOnLeftSide}");
+    print("Method Card for ${method.prefix} of $groupPrefix with $isOnLeftSide");
     String assetName = "assets/methods/";
     String cubePrefix = widget.cube.prefix;
     Widget image;
@@ -119,7 +116,7 @@ class _CubePageState extends State<CubePage> {
         Container(
           margin: const EdgeInsets.all(10),
           child: Text(
-            '${cubePrefix}.groups.${groupPrefix}.methods.${method.prefix}.title'
+            '$cubePrefix.groups.$groupPrefix.methods.${method.prefix}.title'
                 .tr(),
             style: const TextStyle(fontSize: 20),
           ),
@@ -128,7 +125,7 @@ class _CubePageState extends State<CubePage> {
           Container(
             margin: const EdgeInsets.all(10),
             child: Text(
-              '${cubePrefix}.groups.${groupPrefix}.methods.${method.prefix}.description'
+              '$cubePrefix.groups.$groupPrefix.methods.${method.prefix}.description'
                   .tr(),
               maxLines: 3,
               overflow: TextOverflow.ellipsis,

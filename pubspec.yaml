@@ -75,7 +75,6 @@ flutter:
     - assets/test.db
     - assets/logo.png
     - assets/translations/
-    - assets/methods/
     - assets/svg_templates/
 
 

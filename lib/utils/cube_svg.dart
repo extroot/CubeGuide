@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'dart:async';
 
-import 'method.dart';
+import 'models.dart';
 
 class CubeSvg {
   static final Map<String, String> svgData = {};
@@ -52,6 +52,7 @@ class CubeSvg {
     if (svg == null) {
       return Text('Error: SVG not found: $title');
     }
+    print("Creating svg for $title with notation: $notation");
 
     // array of colors (map every char in notation to color
     var colorsArray = notation.split('').map((e) => colors[e]).toList();

@@ -5,7 +5,7 @@ import 'pages/menu_page.dart';
 import 'pages/method_page.dart';
 import 'pages/settings_page.dart';
 import 'utils/db_helper.dart';
-import 'utils/method.dart';
+import 'utils/models.dart';
 import 'utils/cube_svg.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:easy_localization/easy_localization.dart';

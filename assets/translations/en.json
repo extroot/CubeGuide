@@ -11,7 +11,7 @@
             "title": "Text-based method for begginers",
             "description": "Большой текстовый метод с инструкциями как собирать кубик рубика для новичков"
           },
-          "howto": {
+          "notation": {
             "title": "Notation explanation"
           }
         }
@@ -35,9 +35,18 @@
       "oh": {
         "title": "Methods, optimized for one hand"
       },
-      "pro": {
-        "title": "Pro methods"
+      "ls_ll": {
+        "title": "Last Layer + Last Slot"
       },
+      "ll": {
+        "title": "Last Layer",
+        "methods": {
+          "oellcp": {
+            "title": "OELLCP",
+            "description": "Orientation of the Edges of the Last Layer and Corner Permutation\nOELLCP involves orienting the LL edges while permuting the LL corners."
+          }
+        }
+        },
       "zbll": {
         "title": "ZBLL – la la la"
       }

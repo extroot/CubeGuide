@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../utils/db_helper.dart';
-import '../utils/method.dart';
+import '../utils/models.dart';
 
 class MethodPage extends StatefulWidget {
   final String title;

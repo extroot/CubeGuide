@@ -4,7 +4,7 @@ import 'dart:typed_data';
 import 'dart:io';
 import 'package:flutter/services.dart';
 
-import 'method.dart';
+import 'models.dart';
 
 class DBHelper {
   static Database? _database;
