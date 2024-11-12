@@ -8,10 +8,11 @@ import '../utils/cube_svg.dart';
 import 'cube_page.dart';
 
 class MenuPage extends StatefulWidget {
+  final MenuEntry menuEntry;
   // list of Cube objects
 
   // constructor
-  MenuPage({Key? key}) : super(key: key);
+  const MenuPage({super.key, required this.menuEntry});
 
   @override
   _MenuPageState createState() => _MenuPageState();
@@ -26,8 +27,8 @@ class _MenuPageState extends State<MenuPage> {
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(
-      future: DBHelper.getCubes(),
-      builder: (BuildContext context, AsyncSnapshot<List<Cube>> snapshot) {
+      future: DBHelper.getMenuGroupsByEntryId(widget.menuEntry),
+      builder: (BuildContext context, AsyncSnapshot<List<MenuGroup>> snapshot) {
         if (snapshot.hasData) {
           return GridView.count(
             crossAxisCount: 2,
@@ -45,7 +46,7 @@ class _MenuPageState extends State<MenuPage> {
     );
   }
 
-  Widget cubeCard(Cube cube) {
+  Widget cubeCard(MenuEntry menuEntry) {
     return Card(
         elevation: 3,
         child: InkWell(
@@ -55,21 +56,22 @@ class _MenuPageState extends State<MenuPage> {
                 Container(
                   margin: const EdgeInsets.only(top: 7, bottom: 3),
                   child: Text(
-                    '${cube.prefix}.title'.tr(),
+                    '${menuEntry.prefix}.title'.tr(),
                     style: const TextStyle(fontSize: 18),
                   )
                 ),
-                CubeSvg.cubeSvg(cube.prefix, cube.menu_state, height: 125)
+                CubeSvg.cubeSvg(menuEntry.prefix, menuEntry.menu_state, height: 125)
               ],
             ),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => CubePage(cube: cube),
-                ),
-              );
-            }));
+            // onTap: () {
+            //   Navigator.push(
+            //     context,
+            //     MaterialPageRoute(
+            //       builder: (context) => CubePage(cube: cube),
+            //     ),
+            //   );
+            // }
+            ));
   }
 }
 

@@ -34,7 +34,7 @@ class DBHelper {
       // Copy from asset
       ByteData data = await rootBundle.load(url.join("assets", "test.db"));
       List<int> bytes =
-          data.buffer.asUint8List(data.offsetInBytes, data.lengthInBytes);
+      data.buffer.asUint8List(data.offsetInBytes, data.lengthInBytes);
 
       // Write and flush the bytes written
       await File(path).writeAsBytes(bytes, flush: true);
@@ -43,67 +43,127 @@ class DBHelper {
     }
 
     _database = await openDatabase(
-        path,
-        version: 1,
+      path,
+      version: 1,
     );
   }
 
-  static Future<Cube> getCubeById(int id) async {
+  // static Future<Cube> getCubeById(int id) async {
+  //   final db = await database;
+  //   final List<Map<String, dynamic>> maps = await db.query(
+  //     'cubes',
+  //     where: 'id = ?',
+  //     whereArgs: [id],
+  //   );
+  //
+  //   return Cube.fromMap(maps[0]);
+  // }
+  //
+  // static Future<List<Cube>> getCubes() async {
+  //   final db = await database;
+  //   final List<Map<String, dynamic>> maps = await db.query('cube');
+  //
+  //   return List.generate(maps.length, (i) {
+  //     return Cube.fromMap(maps[i]);
+  //   });
+  // }
+  //
+  // static Future<List<MethodGroup>> getMethodGroups(Cube cube) async {
+  //   final db = await database;
+  //   print("Getting method groups for cube ${cube.id} ${cube.prefix}");
+  //   final List<Map<String, dynamic>> maps = await db.query(
+  //     'method_group',
+  //     where: 'cube_id = ?',
+  //     whereArgs: [cube.id],
+  //   );
+  //   print("Got ${maps.length} groups for cube ${cube.id} ${cube.prefix}");
+  //
+  //   List<MethodGroup> groups = [];
+  //   for (var map in maps) {
+  //     groups.add(await MethodGroup.fromMap(map, cube));
+  //   }
+  //   print("Returning ${groups.length} groups for cube ${cube.id} ${cube.prefix}");
+  //   return groups;
+  // }
+  // static Future<List<Method>> getMethodsByGroupId(int group_id) async {
+  //   final db = await database;
+  //   print("Getting methods for group ${group_id}");
+  //   final List<Map<String, dynamic>> maps = await db.query(
+  //     'method',
+  //     where: 'method_group_id = ?',
+  //     whereArgs: [group_id],
+  //   );
+  //   print("Got ${maps.length} methods for group ${group_id}");
+  //
+  //   List<Method> methods = [];
+  //   for (var map in maps) {
+  //     methods.add(await Method.fromMap(map));
+  //   }
+  //   return methods;
+  //   // return List.generate(maps.length, (i) {
+  //   //   return Method.fromMap(maps[i]);
+  //   // });
+  // }
+
+  static Future<MenuEntry> getMainMenuEntry() async {
+    final db = await database;
+    print("Getting main menu entry");
+    final List<Map<String, dynamic>> maps = await db.query(
+      'menu_entry',
+      where: 'id = 0',
+    );
+    print("Got ${maps.length} main menu entries");
+    MenuEntry entry = await MenuEntry.fromMap(maps[0]);
+    return entry;
+  }
+
+  // getMethodById
+  static Future<Method> getMethodById(int id) async {
     final db = await database;
     final List<Map<String, dynamic>> maps = await db.query(
-      'cubes',
+      'method',
       where: 'id = ?',
       whereArgs: [id],
     );
 
-    return Cube.fromMap(maps[0]);
+    return Method.fromMap(maps[0]);
   }
 
-  static Future<List<Cube>> getCubes() async {
+  // getMenuGroupsByEntryId
+  static Future<List<MenuGroup>> getMenuGroupsByEntryId(int entry_id) async {
     final db = await database;
-    final List<Map<String, dynamic>> maps = await db.query('cube');
-
-    return List.generate(maps.length, (i) {
-      return Cube.fromMap(maps[i]);
-    });
-  }
-
-  static Future<List<MethodGroup>> getMethodGroups(Cube cube) async {
-    final db = await database;
-    print("Getting method groups for cube ${cube.id} ${cube.prefix}");
+    print("Getting menu groups for entry ${entry_id}");
     final List<Map<String, dynamic>> maps = await db.query(
-      'method_group',
-      where: 'cube_id = ?',
-      whereArgs: [cube.id],
+      'menu_group',
+      where: 'parent_menu_entry = ?',
+      whereArgs: [entry_id],
     );
-    print("Got ${maps.length} groups for cube ${cube.id} ${cube.prefix}");
+    print("Got ${maps.length} menu groups for entry ${entry_id}");
 
-    List<MethodGroup> groups = [];
+    List<MenuGroup> groups = [];
     for (var map in maps) {
-      groups.add(await MethodGroup.fromMap(map, cube));
+      MenuGroup group = await MenuGroup.fromMap(map);
+      groups.add(group);
     }
-    print("Returning ${groups.length} groups for cube ${cube.id} ${cube.prefix}");
     return groups;
   }
 
-  static Future<List<Method>> getMethodsByGroupId(int group_id) async {
+  static Future<List<MenuEntry>> getMenuEntriesByGroupId(int group_id) async {
     final db = await database;
-    print("Getting methods for group ${group_id}");
+    print("Getting menu entries for group ${group_id}");
     final List<Map<String, dynamic>> maps = await db.query(
-      'method',
-      where: 'method_group_id = ?',
+      'menu_entry',
+      where: 'parent_menu_group = ?',
       whereArgs: [group_id],
     );
-    print("Got ${maps.length} methods for group ${group_id}");
+    print("Got ${maps.length} menu entries for group ${group_id}");
 
-    List<Method> methods = [];
+    List<MenuEntry> entries = [];
     for (var map in maps) {
-      methods.add(await Method.fromMap(map));
+      MenuEntry entry = await MenuEntry.fromMap(map);
+      entries.add(entry);
     }
-    return methods;
-    // return List.generate(maps.length, (i) {
-    //   return Method.fromMap(maps[i]);
-    // });
+    return entries;
   }
 
   static Future<List<AlgGroup>> getAlgGroupsByMethodId(int method_id) async {
