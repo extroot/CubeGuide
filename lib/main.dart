@@ -36,7 +36,18 @@ class RubiksCubeApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         fontFamily: 'Lato'
       ),
-      home: HomePage(),
+      home: FutureBuilder(
+          future: DBHelper.getMainMenuEntry(),
+          builder: (BuildContext context, AsyncSnapshot<MenuEntry> snapshot) {
+            if (snapshot.hasData) {
+              MenuEntry mainMenuEntry = snapshot.data!;
+              return MenuPage(menuEntry: mainMenuEntry);
+            } else {
+              return const Center(
+                  child: CircularProgressIndicator()
+              );
+            }})
+
     );
   }
 }
@@ -47,8 +58,34 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  String _currentTitle = 'title'.tr();
+  Widget? _currentScreen = null;
+  String _currentTitle = 'Menu Page';
   final InAppReview inAppReview = InAppReview.instance;
+
+  void _navigateTo(String title) async {
+    List<Alg> algs = [];
+    Method method;
+    switch (title) {
+      case 'Menu':
+        MenuEntry menuEntry = await DBHelper.getMainMenuEntry();
+        _currentScreen = MenuPage(menuEntry: menuEntry);
+        break;
+      case 'Settings':
+        _currentScreen = SettingsPage();
+        break;
+      default:
+        MenuEntry menuEntry = await DBHelper.getMainMenuEntry();
+        _currentScreen = MenuPage(menuEntry: menuEntry);
+        break;
+    }
+    // if (_currentScreen is TutorialPage) {
+    //   (_currentScreen as TutorialPage).resetScrollPosition();
+    // }
+    setState(() {
+      _currentTitle = title;
+      Navigator.pop(context);
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -56,7 +93,35 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: Text(_currentTitle),
       ),
-      body: MenuPage(),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: <Widget>[
+            const DrawerHeader(
+              decoration: BoxDecoration(color: Colors.blue),
+              child: Text('Rubik\'s Cube Tutorials',
+                  style: TextStyle(color: Colors.white)),
+            ),
+            ListTile(
+              title: Text('Menu'),
+              onTap: () => _navigateTo('Menu'),
+            ),
+            ListTile(
+              title: Text('Rate this app'),
+              onTap: () async {
+                if (await inAppReview.isAvailable()) {
+                  inAppReview.requestReview();
+                }
+              },
+            ),
+            ListTile(
+              title: Text('Settings'),
+              onTap: () => _navigateTo('Settings'),
+            ),
+          ],
+        ),
+      ),
+      body: _currentScreen,
     );
   }
 }

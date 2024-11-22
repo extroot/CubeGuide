@@ -1,55 +1,82 @@
 {
   "title": "Menu page",
-
+  "main_menu": {
+    "title": "Menu",
+    "groups": {
+      "wca_cubes": {
+        "title": "Official WCA puzzles"
+      },
+      "non_wca_cubes": {
+        "title": "Non-WCA puzzles",
+        "description": "Puzzles that are not officially recognized by the WCA.\nComing soon."
+      }
+    }
+  },
   "cube_3x3x3": {
     "title": "3x3x3",
     "groups": {
       "beginner": {
-        "title": "3x3x3 for beginners",
-        "methods": {
-          "beginner": {
-            "title": "Text-based method for begginers",
-            "description": "Большой текстовый метод с инструкциями как собирать кубик рубика для новичков"
-          },
-          "notation": {
-            "title": "Notation explanation"
-          }
-        }
+        "title": "For beginners"
       },
-      "cfop": {
-        "title": "CFOP (Cross F2L OLL PLL)",
-        "description": "It is the most popular method for speedsolving the Rubik's Cube. It is the method used by all 3x3 world record holders in the last decade.",
-        "methods": {
-          "f2l": {
-            "title": "F2L – First Two Layers",
-            "description": " F2L or First Two Layers is the second step of the CFOP method, which aims to solve the first two bottom layers of a 3x3. Each algorithm solves a pair (an edge and a corner) into their designated location.\n\nEach case is recognized by the position and orientation of the two pieces in relation to the target slot. Since there are four possible target slots, each case has four variants to avoid rotations.\n\nThe basic 41 cases deal with all permutations where the two pair pieces are on the U layer and/or in the target slot. "
-          },
-          "oll": {
-            "title": "OLL – Orientation of the Last Layer"
-          },
-          "pll": {
-            "title": "PLL – Permutation of the Last Layer"
-          }
-        }
-      },
-      "oh": {
-        "title": "Methods, optimized for one hand"
-      },
-      "ls_ll": {
-        "title": "Last Layer + Last Slot"
-      },
-      "ll": {
-        "title": "Last Layer",
-        "methods": {
-          "oellcp": {
-            "title": "OELLCP",
-            "description": "Orientation of the Edges of the Last Layer and Corner Permutation\nOELLCP involves orienting the LL edges while permuting the LL corners."
-          }
-        }
-        },
-      "zbll": {
-        "title": "ZBLL – la la la"
+      "popular": {
+        "title": "Popular methods",
+        "description": "The most popular methods for solving the Rubik's Cube."
       }
     }
+  },
+  "beginner": {
+    "title": "Text-based method for begginers",
+    "description": "A large text-based method with instructions on how to solve the Rubik's Cube for beginners."
+  },
+  "notation": {
+    "title": "Notation explanation"
+  },
+  "uz": {
+    "title": "Pretty patterns",
+    "description": "A collection of pretty patterns that can be made on the Rubik's Cube."
+  },
+
+  "cfop": {
+    "title": "CFOP (Cross F2L OLL PLL)",
+    "description": "It is the most popular method for speedsolving the Rubik's Cube. It is the method used by all 3x3 world record holders in the last decade.",
+    "groups": {
+      "oh": {
+        "title": "OH – One-handed",
+        "description": "Methods optimized for one-handed solving."
+      }
+    }
+  },
+  "roux": {
+    "title": "Roux",
+    "description": "Roux is a 3x3 speedsolving method developed by Gilles Roux. It is known for its block-building approach and its low move count."
+  },
+
+  "f2l": {
+    "title": "F2L – First Two Layers",
+    "description": " F2L or First Two Layers is the second step of the CFOP method, which aims to solve the first two bottom layers of a 3x3. Each algorithm solves a pair (an edge and a corner) into their designated location.\n\nEach case is recognized by the position and orientation of the two pieces in relation to the target slot. Since there are four possible target slots, each case has four variants to avoid rotations.\n\nThe basic 41 cases deal with all permutations where the two pair pieces are on the U layer and/or in the target slot. "
+  },
+  "oll": {
+    "title": "OLL – Orientation of the Last Layer"
+  },
+  "pll": {
+    "title": "PLL – Permutation of the Last Layer"
+  },
+  "cube_2x2x2": {
+    "title": "2x2x2"
+  },
+  "cube_4x4x4": {
+    "title": "4x4x4"
+  },
+  "cube_5x5x5": {
+    "title": "5x5x5"
+  },
+  "cube_pyraminx": {
+    "title": "Pyraminx"
+  },
+  "cube_square-1": {
+    "title": "Square-1"
+  },
+  "cube_megaminx": {
+    "title": "Megaminx"
   }
 }

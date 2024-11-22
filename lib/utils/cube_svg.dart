@@ -34,6 +34,7 @@ class CubeSvg {
   };
 
   static Future<void> initCubeSvg() async {
+    print("Loading SVGs");
     for (var path in svgPaths) {
       var data = await rootBundle.loadString(path);
       String filename = path.split('/').last.split('.').first;
@@ -50,7 +51,13 @@ class CubeSvg {
     };
     var svg = svgData[title];
     if (svg == null) {
-      return Text('Error: SVG not found: $title');
+      // Center by vertical and horizontal axis
+      return const SizedBox(
+        width: 125,
+        height: 125,
+        child: CircularProgressIndicator(),
+      );
+      // return const CircularProgressIndicator();
     }
     print("Creating svg for $title with notation: $notation");
 
