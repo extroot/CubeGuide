@@ -64,7 +64,6 @@ class _HomePageState extends State<HomePage> {
 
   void _navigateTo(String title) async {
     List<Alg> algs = [];
-    Method method;
     switch (title) {
       case 'Menu':
         MenuEntry menuEntry = await DBHelper.getMainMenuEntry();

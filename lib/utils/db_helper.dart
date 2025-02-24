@@ -32,8 +32,7 @@ class DBHelper {
 
       // Copy from asset
       ByteData data = await rootBundle.load(url.join("assets", "test.db"));
-      List<int> bytes =
-      data.buffer.asUint8List(data.offsetInBytes, data.lengthInBytes);
+      List<int> bytes = data.buffer.asUint8List(data.offsetInBytes, data.lengthInBytes);
 
       // Write and flush the bytes written
       await File(path).writeAsBytes(bytes, flush: true);
@@ -55,28 +54,6 @@ class DBHelper {
     );
     MenuEntry entry = await MenuEntry.fromMap(maps[0]);
     return entry;
-  }
-
-  // getMethodById
-  static Future<Method> getMethodById(int id) async {
-    final db = await database;
-    final List<Map<String, dynamic>> maps = await db.query(
-      'method',
-      where: 'id = ?',
-      whereArgs: [id],
-    );
-
-    return Method.fromMap(maps[0]);
-  }
-
-  static Future<Method> getMethodByMenuEntry(MenuEntry entry) async {
-    final db = await database;
-    final List<Map<String, dynamic>> maps = await db.query(
-      'method',
-      where: 'id = ?',
-      whereArgs: [entry.method_id],
-    );
-    return Method.fromMap(maps[0]);
   }
 
   // getMenuGroupsByEntryId
@@ -112,36 +89,41 @@ class DBHelper {
     return entries;
   }
 
-  static Future<List<AlgGroup>> getAlgGroupsByMethodId(int method_id) async {
+  static Future<List<Item>> getItemsByEntryId(int entry_id) async {
     final db = await database;
+    print("Getting items for entry_id: $entry_id");
 
     final List<Map<String, dynamic>> maps = await db.query(
-      'alg_group',
-      where: 'method_id = ?',
-      whereArgs: [method_id],
+      'item',
+      where: 'menu_entry_id = ?',
+      whereArgs: [entry_id],
       orderBy: 'my_order',
     );
+    print("Got ${maps.length} items");
 
-    List<AlgGroup> groups = [];
+    List<Item> items = [];
     for (var map in maps) {
-      AlgGroup group = await AlgGroup.fromMap(map);
-      groups.add(group);
+      Item it = await Item.fromMap(map);
+      items.add(it);
     }
-    return groups;
+    print("Returning ${items.length} items");
+    return items;
   }
 
-  static Future<List<Alg>> getAlgsByGroupId(int group_id) async {
+  static Future<List<Alg>> getAlgsByItemId(int item_id) async {
     final db = await database;
+    print("Getting algs for item_id: $item_id");
     final List<Map<String, dynamic>> maps = await db.query(
       'alg',
       where: 'alg_group_id = ?',
-      whereArgs: [group_id],
+      whereArgs: [item_id],
     );
 
     List<Alg> algs = [];
     for (var map in maps) {
       algs.add(Alg.fromMap(map));
     }
+    print("Returning ${algs.length} algs");
     return algs;
   }
 }

@@ -39,12 +39,12 @@ class _MenuPageState extends State<MenuPage> {
           builder: (BuildContext context, AsyncSnapshot<List<MenuGroup>> snapshot) {
             if (snapshot.hasData) {
               return ListView.builder(
-                  itemCount: snapshot.data!.length + (widget.menuEntry.has_description ? 1 : 0),
+                  itemCount: snapshot.data!.length + (widget.menuEntry.show_description ? 1 : 0),
                   // primary: true,
                   // scrollDirection: Axis.vertical,
                   // shrinkWrap: true,
                   itemBuilder: (context, index) {
-                    if (widget.menuEntry.has_description && index == 0) {
+                    if (widget.menuEntry.show_description && index == 0) {
                       return Container(
                         margin: const EdgeInsets.all(10),
                         child: Text(
@@ -53,7 +53,7 @@ class _MenuPageState extends State<MenuPage> {
                         ),
                       );
                     }
-                    MenuGroup group = snapshot.data![index - (widget.menuEntry.has_description ? 1 : 0)];
+                    MenuGroup group = snapshot.data![index - (widget.menuEntry.show_description ? 1 : 0)];
                     return menuGroup(group);
                   });
             } else {
@@ -86,7 +86,7 @@ class _MenuPageState extends State<MenuPage> {
   Widget menuGroupInside(MenuGroup menuGroup) {
     return Column(
       children: <Widget>[
-        if (menuGroup.has_description)
+        if (menuGroup.show_description)
           Container(
             margin: const EdgeInsets.all(10),
             child: Text(
@@ -131,7 +131,7 @@ class _MenuPageState extends State<MenuPage> {
 
     Widget image;
     if (menuEntry.menu_state != '') {
-      image = CubeSvg.cubeSvg(menuEntry.picmode, menuEntry.menu_state, width: 125);
+      image = CubeSvg.cubeSvg(menuEntry.menu_picmode, menuEntry.menu_state, width: 125);
     } else {
       image = SvgPicture.asset(
         '${assetName}olc/olc0.svg', // TODO: TEST CASE
@@ -153,7 +153,7 @@ class _MenuPageState extends State<MenuPage> {
             textAlign: TextAlign.left,
           ),
         ),
-        if (menuEntry.has_description)
+        if (menuEntry.show_description)
           Container(
             margin: const EdgeInsets.only(left: 10, right: 10, bottom: 10),
             width: double.infinity,
@@ -205,7 +205,7 @@ class _MenuPageState extends State<MenuPage> {
                       '${menuEntry.prefix}.title'.tr(),
                       style: const TextStyle(fontSize: 20),
                     )),
-                CubeSvg.cubeSvg(menuEntry.picmode, menuEntry.menu_state, height: 125)
+                CubeSvg.cubeSvg(menuEntry.menu_picmode, menuEntry.menu_state, height: 125)
               ],
             ),
             onTap: () {
@@ -220,7 +220,7 @@ void onTapMenuEntry(context, MenuEntry menuEntry, MenuGroup parentGroup) {
     context,
     MaterialPageRoute(
       builder: (context) {
-        if (menuEntry.method_id != null) {
+        if (menuEntry.is_method) {
           print("MethodPage for ${menuEntry.prefix} of ${parentGroup.prefix}");
           return MethodPage(menuEntry: menuEntry);
         } else {
@@ -230,24 +230,3 @@ void onTapMenuEntry(context, MenuEntry menuEntry, MenuGroup parentGroup) {
     ),
   );
 }
-
-// method to get data for GridView
-
-// class MenuPage extends StatelessWidget {
-//   const MenuPage({super.key});
-//
-//   @override
-//   Widget build(BuildContext context) {
-//     return GridView.count(
-//       crossAxisCount: 2,
-//       children: <Widget>[
-//         CubeSvg.cubeCardSolved('3x3x3'),
-//         CubeSvg.cubeCardSolved('2x2x2'),
-//         CubeSvg.cubeCardSolved('4x4x4'),
-//         CubeSvg.cubeCardSolved('5x5x5'),
-//         CubeSvg.cubeCardSolved('Pyraminx'),
-//         CubeSvg.cubeCardSolved('Square-1'),
-//       ],
-//     );
-//   }
-// }

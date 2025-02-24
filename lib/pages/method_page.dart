@@ -14,10 +14,8 @@ class MethodPage extends StatefulWidget {
   _MethodPageState createState() => _MethodPageState();
 }
 
-
 class _MethodPageState extends State<MethodPage> {
   final ScrollController _scrollController = ScrollController(initialScrollOffset: 0.0);
-  late Method method;
 
   @override
   void dispose() {
@@ -33,17 +31,6 @@ class _MethodPageState extends State<MethodPage> {
 
   @override
   Widget build(BuildContext context) {
-    return FutureBuilder(future: DBHelper.getMethodByMenuEntry(widget.menuEntry), builder: (context, snapshot) {
-      if (snapshot.hasData) {
-        method = snapshot.data as Method;
-        return _buildMethodPage();
-      } else {
-        return const Center(child: CircularProgressIndicator());
-      }
-    });
-  }
-
-  Widget _buildMethodPage() {
     return Scaffold(
       appBar: AppBar(
         title: Text("${widget.menuEntry.prefix}.title".tr()),
@@ -54,34 +41,22 @@ class _MethodPageState extends State<MethodPage> {
 
   Widget _list() {
     return FutureBuilder(
-      future: DBHelper.getAlgGroupsByMethodId(method.id),
+      future: DBHelper.getItemsByEntryId(widget.menuEntry.id),
       builder: (context, snapshot) {
+        print(snapshot.hasData);
         if (snapshot.hasData) {
           return ListView.builder(
             controller: _scrollController,
             itemCount: snapshot.data!.length,
             itemBuilder: (context, index) {
-              AlgGroup group = snapshot.data![index];
-              return Container(
-                  margin: const EdgeInsets.only(left: 10, top: 15),
-                  child: Row(
-                      children: <Widget>[
-                        Container(
-                            margin: const EdgeInsets.only(right: 10),
-                            child: CubeSvg.cubeSvg(method.picmode, group.pic_state, height: 125)
-                        ),
-                        Expanded(
-                          child: Container(
-                            margin: const EdgeInsets.all(5),
-                            child: Text(
-                              getAlg(group.algs),
-
-                            ),
-                          ),
-                        ),
-                      ]
-                  )
-              );
+              Item item = snapshot.data![index];
+              if (item.type == 'formula') return formulaRow(item);
+              if (item.type == 'text') return textRow(item);
+              if (item.type == 'header') return headerRow(item);
+              if (item.type == 'single_cube') return singleCubeRow(item);
+              if (item.type == 'single_cube_alg') return verticalFormula(item);
+              // print("Wrong type of item: " + item.type);
+              return null;
             },
           );
         } else {
@@ -91,6 +66,71 @@ class _MethodPageState extends State<MethodPage> {
     );
   }
 
+  Widget verticalFormula(Item item) {
+    return Container(
+        margin: const EdgeInsets.only(left: 10, top: 15),
+        child: Column(children: <Widget>[
+          Container(
+              margin: const EdgeInsets.only(right: 10),
+              child: CubeSvg.cubeSvg(item.picmode, item.pic_state, height: 125)),
+          Expanded(
+            child: Container(
+              margin: const EdgeInsets.all(5),
+              child: Text(
+                getAlg(item.algs),
+              ),
+            ),
+          ),
+        ]));
+  }
+
+  Widget singleCubeRow(Item item) {
+    return Container(
+      margin: const EdgeInsets.all(10),
+      child: CubeSvg.cubeSvg(item.picmode, item.pic_state, height: 125),
+    );
+  }
+
+  Widget headerRow(Item item) {
+    int item_s = int.parse(item.pic_state);
+    double size = 18 + 5 - item_s.toDouble();
+    return Container(
+        margin: const EdgeInsets.all(10),
+        child: Center(
+          child: Text(
+            "${widget.menuEntry.prefix}.items.${item.prefix}".tr(),
+            style: TextStyle(fontSize: size),
+          ),
+        ));
+  }
+
+  Widget textRow(Item item) {
+    return Container(
+      margin: const EdgeInsets.all(10),
+      child: Text(
+        "${widget.menuEntry.prefix}.items.${item.prefix}".tr(),
+        style: const TextStyle(fontSize: 18),
+      ),
+    );
+  }
+
+  Widget formulaRow(Item item) {
+    return Container(
+        margin: const EdgeInsets.only(left: 10, top: 15),
+        child: Row(children: <Widget>[
+          Container(
+              margin: const EdgeInsets.only(right: 10),
+              child: CubeSvg.cubeSvg(item.picmode, item.pic_state, height: 125)),
+          Expanded(
+            child: Container(
+              margin: const EdgeInsets.all(5),
+              child: Text(
+                getAlg(item.algs),
+              ),
+            ),
+          ),
+        ]));
+  }
 
   String getAlg(List<Alg> algs) {
     String alg = "";
@@ -102,9 +142,7 @@ class _MethodPageState extends State<MethodPage> {
     }
     return alg;
   }
-
 }
-
 
 //
 // class TutorialPage extends StatefulWidget {

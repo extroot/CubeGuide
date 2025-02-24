@@ -26,7 +26,15 @@
   },
   "beginner": {
     "title": "Text-based method for begginers",
-    "description": "A large text-based method with instructions on how to solve the Rubik's Cube for beginners."
+    "description": "A large text-based method with instructions on how to solve the Rubik's Cube for beginners.",
+
+    "items": {
+      "test1": "Тестовый текст 123\nСледующая строка\nСтарт строки\n\t\t\tТабуляция\nПоследняя строка!",
+      "test2": "Следующий текстовый элемент",
+      "hed1": "Тестовый заголовок (#1)",
+      "hed2": "Тестовый заголовок (#2)",
+      "hed3": "Тестовый заголовок (#3)"
+    }
   },
   "notation": {
     "title": "Notation explanation"

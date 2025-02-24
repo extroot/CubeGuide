@@ -3,28 +3,27 @@ import 'package:cube_guide_flutter/utils/db_helper.dart';
 class MenuEntry {
   final int id;
   final String prefix;
-  final String picmode;
+  final String menu_picmode;
   final String menu_state;
-  final bool has_description;
-  final int? method_id;
+  final bool show_description;
+  final bool is_method;
 
   MenuEntry(
       {required this.id,
       required this.prefix,
-      required this.picmode,
+      required this.menu_picmode,
       required this.menu_state,
-      required this.has_description,
-      required this.method_id
-      });
+      required this.show_description,
+      required this.is_method});
 
   static Future<MenuEntry> fromMap(Map<String, dynamic> map) async {
     return MenuEntry(
       id: map['id'],
       menu_state: map['menu_state'],
       prefix: map['prefix'],
-      picmode: map['picmode'],
-      has_description: map['has_description'] == 1,
-      method_id: map['method_id'],
+      menu_picmode: map['menu_picmode'],
+      show_description: map['show_description'] == 1,
+      is_method: map['is_method'] == 1,
     );
   }
 }
@@ -32,7 +31,7 @@ class MenuEntry {
 class MenuGroup {
   final int id;
   final String prefix;
-  final bool has_description;
+  final bool show_description;
   final bool show_title;
   final bool show_grid;
   final List<MenuEntry> menu_entries;
@@ -40,7 +39,7 @@ class MenuGroup {
   MenuGroup({
     required this.id,
     required this.prefix,
-    required this.has_description,
+    required this.show_description,
     required this.menu_entries,
     required this.show_title,
     required this.show_grid,
@@ -51,7 +50,7 @@ class MenuGroup {
     return MenuGroup(
       id: map['id'],
       prefix: map['prefix'],
-      has_description: map['has_description'] == 1,
+      show_description: map['show_description'] == 1,
       menu_entries: menuEntries,
       show_title: map['show_title'] == 1,
       show_grid: map['show_grid'] == 1,
@@ -59,51 +58,42 @@ class MenuGroup {
   }
 }
 
-class Method {
-  final int id;
-  final String prefix;
-  final String picmode;
-  final List<AlgGroup> alg_groups;
-
-  Method(
-      {required this.id,
-      required this.prefix,
-      required this.picmode,
-      required this.alg_groups});
-
-  static Future<Method> fromMap(Map<String, dynamic> map) async {
-    List<AlgGroup> algGroups = await DBHelper.getAlgGroupsByMethodId(map['id']);
-    return Method(
-      id: map['id'],
-      prefix: map['prefix'],
-      picmode: map['picmode'],
-      alg_groups: algGroups,
-    );
-  }
-}
-
-class AlgGroup {
+class Item {
   final int id;
   final int my_order;
-  final int? category_id;
   final String pic_state;
-  final int method_id;
-  final String? picmode;
+  final String picmode;
+  final String? prefix;
+  final int menu_entry_id;
+  final bool has_title;
+  final String type;
   final List<Alg> algs;
 
-  AlgGroup(
-      {required this.id, required this.my_order, required this.pic_state, required this.method_id, required this.algs})
-      : category_id = null,
-        picmode = null;
+  Item({
+    required this.id,
+    required this.my_order,
+    required this.pic_state,
+    required this.picmode,
+    required this.menu_entry_id,
+    required this.has_title,
+    required this.type,
+    required this.prefix,
+    required this.algs
+  });
 
-  static Future<AlgGroup> fromMap(Map<String, dynamic> map) async {
-    List<Alg> algs = await DBHelper.getAlgsByGroupId(map['id']);
-    return AlgGroup(
+  static Future<Item> fromMap(Map<String, dynamic> map) async {
+    List<Alg> algs = await DBHelper.getAlgsByItemId(map['id']);
+    print("Got ${algs.length} algs for item ${map['id']}");
+    print("map: $map");
+    return Item(
       id: map['id'],
       my_order: map['my_order'],
-      // category_id: map['category_id'],
       pic_state: map['pic_state'],
-      method_id: map['method_id'],
+      picmode: map['picmode'],
+      menu_entry_id: map['menu_entry_id'],
+      has_title: map['has_title'] == 1,
+      type: map['type'],
+      prefix: map['prefix'],
       algs: algs,
     );
   }

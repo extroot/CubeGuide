@@ -49,3 +49,5 @@ web/s
 
 # Gradle directoriess
 .gradle/
+
+*.db
