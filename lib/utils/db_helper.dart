@@ -50,7 +50,7 @@ class DBHelper {
     final db = await database;
     final List<Map<String, dynamic>> maps = await db.query(
       'menu_entry',
-      where: 'id = 2', // TODO: FIX IN PROD TO 1
+      where: 'id = 1', // TODO: FIX IN PROD TO 1
     );
     MenuEntry entry = await MenuEntry.fromMap(maps[0]);
     return entry;

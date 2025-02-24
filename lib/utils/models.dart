@@ -1,4 +1,4 @@
-import 'package:cube_guide_flutter/utils/db_helper.dart';
+import 'package:cube_guide/utils/db_helper.dart';
 
 class MenuEntry {
   final int id;
