@@ -1,5 +1,13 @@
 {
   "title": "Menu page",
+
+  "intro": {
+    "page1": {
+      "title": "Greetings!",
+      "body": "Some app description here."
+    }
+  },
+
   "main_menu": {
     "title": "Menu",
     "groups": {

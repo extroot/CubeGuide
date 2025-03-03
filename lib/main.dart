@@ -1,4 +1,6 @@
+import 'package:cube_guide/pages/splash_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:in_app_review/in_app_review.dart';
 import 'pages/beginners_page.dart';
 import 'pages/menu_page.dart';
@@ -25,9 +27,11 @@ void main() async {
 }
 
 class RubiksCubeApp extends StatelessWidget {
+  const RubiksCubeApp({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       title: 'Rubik\'s Cube Tutorials',
       localizationsDelegates: context.localizationDelegates,
       supportedLocales: context.supportedLocales,
@@ -36,17 +40,7 @@ class RubiksCubeApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         fontFamily: 'Lato'
       ),
-      home: FutureBuilder(
-          future: DBHelper.getMainMenuEntry(),
-          builder: (BuildContext context, AsyncSnapshot<MenuEntry> snapshot) {
-            if (snapshot.hasData) {
-              MenuEntry mainMenuEntry = snapshot.data!;
-              return MenuPage(menuEntry: mainMenuEntry);
-            } else {
-              return const Center(
-                  child: CircularProgressIndicator()
-              );
-            }})
+      home: SplashScreen(),
 
     );
   }

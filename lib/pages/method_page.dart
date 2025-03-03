@@ -8,7 +8,7 @@ import '../utils/models.dart';
 class MethodPage extends StatefulWidget {
   final MenuEntry menuEntry;
 
-  const MethodPage({super.key, required this.menuEntry});
+  const MethodPage({Key? key, required this.menuEntry}) : super(key: key);
 
   @override
   _MethodPageState createState() => _MethodPageState();
@@ -16,6 +16,8 @@ class MethodPage extends StatefulWidget {
 
 class _MethodPageState extends State<MethodPage> {
   final ScrollController _scrollController = ScrollController(initialScrollOffset: 0.0);
+  final bool showSingleFormula = true; // TODO: settings
+  late final bool isTextMethod;
 
   @override
   void dispose() {
@@ -31,32 +33,34 @@ class _MethodPageState extends State<MethodPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("${widget.menuEntry.prefix}.title".tr()),
-      ),
-      body: _list(),
-    );
+    isTextMethod = widget.menuEntry.is_method;
+    return Scaffold(appBar: AppBar(title: Text("${widget.menuEntry.prefix}.title".tr())), body: _list());
   }
 
   Widget _list() {
     return FutureBuilder(
       future: DBHelper.getItemsByEntryId(widget.menuEntry.id),
       builder: (context, snapshot) {
-        print(snapshot.hasData);
-        if (snapshot.hasData) {
+        if (snapshot.connectionState == ConnectionState.waiting) {
+          return const Center(child: CircularProgressIndicator());
+        } else if (snapshot.hasError) {
+          return Center(child: Text('Error: ${snapshot.error}'));
+        } else if (snapshot.hasData) {
           return ListView.builder(
             controller: _scrollController,
             itemCount: snapshot.data!.length,
             itemBuilder: (context, index) {
               Item item = snapshot.data![index];
+              print("Item ${index} type: ${item.type}");
+
               if (item.type == 'formula') return formulaRow(item);
               if (item.type == 'text') return textRow(item);
               if (item.type == 'header') return headerRow(item);
               if (item.type == 'single_cube') return singleCubeRow(item);
-              if (item.type == 'single_cube_alg') return verticalFormula(item);
-              // print("Wrong type of item: " + item.type);
-              return null;
+              if (item.type == 'single_cube_alg') return formulaColumn(item);
+              if (item.type == 'double_cube_alg') return Text("double_cube_alg");
+              print("Wrong type of item: " + item.type);
+              return Text("Wrong type of item: " + item.type);
             },
           );
         } else {
@@ -64,24 +68,6 @@ class _MethodPageState extends State<MethodPage> {
         }
       },
     );
-  }
-
-  Widget verticalFormula(Item item) {
-    return Container(
-        margin: const EdgeInsets.only(left: 10, top: 15),
-        child: Column(children: <Widget>[
-          Container(
-              margin: const EdgeInsets.only(right: 10),
-              child: CubeSvg.cubeSvg(item.picmode, item.pic_state, height: 125)),
-          Expanded(
-            child: Container(
-              margin: const EdgeInsets.all(5),
-              child: Text(
-                getAlg(item.algs),
-              ),
-            ),
-          ),
-        ]));
   }
 
   Widget singleCubeRow(Item item) {
@@ -95,44 +81,105 @@ class _MethodPageState extends State<MethodPage> {
     int item_s = int.parse(item.pic_state);
     double size = 18 + 5 - item_s.toDouble();
     return Container(
-        margin: const EdgeInsets.all(10),
-        child: Center(
-          child: Text(
-            "${widget.menuEntry.prefix}.items.${item.prefix}".tr(),
-            style: TextStyle(fontSize: size),
-          ),
-        ));
+      margin: const EdgeInsets.all(10),
+      child: Center(
+        child: Text("${widget.menuEntry.prefix}.items.${item.prefix}".tr(), style: TextStyle(fontSize: size)),
+      ),
+    );
   }
 
   Widget textRow(Item item) {
     return Container(
       margin: const EdgeInsets.all(10),
-      child: Text(
-        "${widget.menuEntry.prefix}.items.${item.prefix}".tr(),
-        style: const TextStyle(fontSize: 18),
+      child: Text("${widget.menuEntry.prefix}.items.${item.prefix}".tr(), style: const TextStyle(fontSize: 18)),
+    );
+  }
+
+  Widget formulaColumn(Item item) {
+    print("Vertical formula for item: ${item.type} picmode ${item.picmode} pic_state ${item.pic_state}");
+    return Container(
+      margin: const EdgeInsets.only(left: 10, top: 15),
+      child: Column(
+        children: <Widget>[
+          Container(
+            margin: const EdgeInsets.only(right: 10),
+            child: CubeSvg.cubeSvg(item.picmode, item.pic_state, height: 125),
+          ),
+          Container(child: Container(margin: const EdgeInsets.all(5), child: Text(getAlg(item.algs)))),
+        ],
       ),
     );
   }
 
   Widget formulaRow(Item item) {
     return Container(
-        margin: const EdgeInsets.only(left: 10, top: 15),
-        child: Row(children: <Widget>[
-          Container(
+      margin: const EdgeInsets.only(left: 10, top: 15),
+      child: InkWell(
+        child: Row(
+          children: <Widget>[
+            Container(
               margin: const EdgeInsets.only(right: 10),
-              child: CubeSvg.cubeSvg(item.picmode, item.pic_state, height: 125)),
-          Expanded(
-            child: Container(
-              margin: const EdgeInsets.all(5),
-              child: Text(
-                getAlg(item.algs),
-              ),
+              child: CubeSvg.cubeSvg(item.picmode, item.pic_state, height: 125),
+            ),
+            Expanded(child: Container(margin: const EdgeInsets.all(5), child: Text(getAlg(item.algs)))),
+          ],
+        ),
+        onTap: () => _dialogBuilder(context, item),
+      ),
+    );
+  }
+
+  Future<void> _dialogBuilder(BuildContext context, Item item) {
+    return showDialog<void>(
+      context: context,
+      builder: (BuildContext context) {
+        return Dialog(
+          child: Container(
+            margin: const EdgeInsets.all(10),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                // Top row, like appbar with title and small close button at the right.
+                // Title should be centered.
+                Stack(
+                  children: [
+                    Column(
+                      children: [
+                        Center(
+                          child: Text(
+                            "${widget.menuEntry.prefix}${item.my_order.toString()}",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(fontSize: 20),
+                          ),
+                        ),
+                      ],
+                    ),
+                    Positioned(
+                      right: 0,
+                      top: 0,
+                      child: IconButton(icon: const Icon(Icons.close), onPressed: () => Navigator.of(context).pop()),
+                    ),
+                  ],
+                ),
+                const Divider(),
+                Container(
+                  margin: const EdgeInsets.all(10),
+                  child: CubeSvg.cubeSvg(item.picmode, item.pic_state, height: 200),
+                ),
+                for (Alg alg in item.algs) Container(margin: const EdgeInsets.all(5), child: Text(alg.text)),
+              ],
             ),
           ),
-        ]));
+        );
+      },
+    );
   }
 
   String getAlg(List<Alg> algs) {
+    if (showSingleFormula && algs.isNotEmpty) {
+      return algs[0].text;
+    }
+
     String alg = "";
     for (int i = 0; i < algs.length; i++) {
       alg += algs[i].text;
@@ -140,114 +187,7 @@ class _MethodPageState extends State<MethodPage> {
         alg += "\n";
       }
     }
+
     return alg;
   }
 }
-
-//
-// class TutorialPage extends StatefulWidget {
-//   final String title;
-//   final List<Alg> algs;
-//   final Method method;
-//
-//   TutorialPage({required this.title, required this.algs, required this.method});
-//
-//   @override
-//   _TutorialPageState createState() => _TutorialPageState();
-// }
-//
-// class _TutorialPageState extends State<TutorialPage> {
-//   final ScrollController _scrollController = ScrollController(initialScrollOffset: 0.0);
-//
-//
-//   @override
-//   void dispose() {
-//     _scrollController.dispose();
-//     super.dispose();
-//   }
-//
-//   void resetScrollPosition() {
-//     if (_scrollController.hasClients) {
-//       _scrollController.animateTo(0.0, duration: Duration(milliseconds: 500), curve: Curves.easeOut);
-//     }
-//   }
-//
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       primary: true,
-//       body: _list(),
-//     );
-//   }
-//
-//   Widget _list() {
-//     const String assetName = "assets/methods/";
-//     const double height = 125;
-//     return ListView.builder(
-//       controller: _scrollController,
-//       itemCount: widget.algs.length,
-//       itemBuilder: (context, index) {
-//         if (index == 0) {
-//           return Container(
-//             margin: EdgeInsets.all(10),
-//             child: Text("Test",
-//               style: TextStyle(fontSize: 20),
-//             ),
-//           );
-//         }
-//         return Container(
-//             margin: EdgeInsets.only(left:10, top: 15),
-//             child: Row(
-//                 children: <Widget>[
-//                   // Flexible containers with svg image and a text. Margin on the every side of an image is 10.
-//                   Container(
-//                     margin: EdgeInsets.only(right: 10),
-//                     child: SvgPicture.asset(
-//                       assetName + widget.method.picmode + "/" + widget.method.picmode + index.toString() + ".svg",
-//                       height: height,
-//                       placeholderBuilder: (BuildContext context) => Container(
-//                           padding: const EdgeInsets.all(30.0),
-//                           child: const CircularProgressIndicator()),
-//                     ),
-//                   ),
-//                   Expanded(
-//                     child: Container(
-//                       margin: EdgeInsets.all(5),
-//                       child: Text(
-//                         widget.algs[index].alg,
-//                       ),
-//                     ),
-//                   ),
-//                 ]
-//             )
-//         );
-//       },
-//     );
-//   }
-//
-//   void _showEditDialog(BuildContext context, Alg tutorial) {
-//     TextEditingController _controller =
-//         TextEditingController(text: tutorial.alg);
-//     showDialog(
-//       context: context,
-//       builder: (context) {
-//         return AlertDialog(
-//           title: Text('Edit Formula'),
-//           content: TextField(
-//             controller: _controller,
-//           ),
-//           actions: <Widget>[
-//             TextButton(
-//               child: Text('Save'),
-//               onPressed: () {
-//                 DBHelper.updateMethodAlg(tutorial.id, _controller.text);
-//                 setState(() {});
-//                 Navigator.of(context).pop();
-//               },
-//             ),
-//           ],
-//         );
-//       },
-//     );
-//   }
-// }

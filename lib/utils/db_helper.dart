@@ -104,6 +104,7 @@ class DBHelper {
     List<Item> items = [];
     for (var map in maps) {
       Item it = await Item.fromMap(map);
+      print("Got item from db: ${it.type}");
       items.add(it);
     }
     print("Returning ${items.length} items");
