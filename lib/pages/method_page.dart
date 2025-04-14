@@ -1,9 +1,11 @@
+import 'package:cube_guide/utils/app_controller.dart';
 import 'package:cube_guide/utils/cube_svg.dart';
+import 'package:cube_guide/utils/db_helper.dart';
+import 'package:cube_guide/utils/models.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
-import '../utils/db_helper.dart';
-import '../utils/models.dart';
 
 class MethodPage extends StatefulWidget {
   final MenuEntry menuEntry;
@@ -20,6 +22,14 @@ class _MethodPageState extends State<MethodPage> {
   late final bool isTextMethod;
 
   @override
+  void initState() {
+    setState(() {
+      isTextMethod = widget.menuEntry.is_method;
+    });
+    super.initState();
+  }
+
+  @override
   void dispose() {
     _scrollController.dispose();
     super.dispose();
@@ -33,8 +43,21 @@ class _MethodPageState extends State<MethodPage> {
 
   @override
   Widget build(BuildContext context) {
-    isTextMethod = widget.menuEntry.is_method;
-    return Scaffold(appBar: AppBar(title: Text("${widget.menuEntry.prefix}.title".tr())), body: _list());
+    return Scaffold(
+        appBar: AppBar(
+            title: Text(context.tr("${widget.menuEntry.prefix}.title"))
+        ),
+        body: GetX<AppController>(
+          builder: (controller) {
+            if (controller.isGrid.value) return Text("Grid");
+            return _list();
+          }
+        )
+    );
+  }
+
+  Widget _grid() {
+    return Text("Grid");
   }
 
   Widget _list() {
@@ -83,7 +106,7 @@ class _MethodPageState extends State<MethodPage> {
     return Container(
       margin: const EdgeInsets.all(10),
       child: Center(
-        child: Text("${widget.menuEntry.prefix}.items.${item.prefix}".tr(), style: TextStyle(fontSize: size)),
+        child: Text(context.tr("${widget.menuEntry.prefix}.items.${item.prefix}"), style: TextStyle(fontSize: size)),
       ),
     );
   }
@@ -91,7 +114,7 @@ class _MethodPageState extends State<MethodPage> {
   Widget textRow(Item item) {
     return Container(
       margin: const EdgeInsets.all(10),
-      child: Text("${widget.menuEntry.prefix}.items.${item.prefix}".tr(), style: const TextStyle(fontSize: 18)),
+      child: Text(context.tr("${widget.menuEntry.prefix}.items.${item.prefix}"), style: const TextStyle(fontSize: 18)),
     );
   }
 
@@ -157,7 +180,7 @@ class _MethodPageState extends State<MethodPage> {
                     Positioned(
                       right: 0,
                       top: 0,
-                      child: IconButton(icon: const Icon(Icons.close), onPressed: () => Navigator.of(context).pop()),
+                      child: IconButton(icon: const Icon(Icons.close), onPressed: () => Get.back()),
                     ),
                   ],
                 ),

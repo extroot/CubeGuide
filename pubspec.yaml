@@ -27,6 +27,7 @@ dependencies:
     sdk: flutter
 
   get: 4.7.2
+  get_storage: 2.1.1
   sqflite: ^2.0.0+3
   path: ^1.8.3
   path_provider: ^2.0.2
@@ -40,6 +41,7 @@ dependencies:
   easy_localization: ^3.0.7+1
   introduction_screen: ^3.1.17
   cupertino_icons: ^1.0.8
+  settings_ui: ^2.0.2
 
 dev_dependencies:
   flutter_test:

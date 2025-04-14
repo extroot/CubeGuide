@@ -37,6 +37,7 @@ class DBHelper {
       // Write and flush the bytes written
       await File(path).writeAsBytes(bytes, flush: true);
     } else {
+      // Copy all user created data to the new database
       print("Opening existing database");
     }
 

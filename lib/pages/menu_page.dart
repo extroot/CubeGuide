@@ -1,12 +1,14 @@
 import 'package:cube_guide/pages/settings_page.dart';
+import 'package:cube_guide/utils/app_controller.dart';
+import 'package:cube_guide/utils/cube_svg.dart';
+import 'package:cube_guide/utils/db_helper.dart';
+import 'package:cube_guide/utils/models.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:format/format.dart';
+import 'package:get/get.dart';
 import 'package:sticky_headers/sticky_headers.dart';
-import '../utils/models.dart';
-import '../utils/db_helper.dart';
-import '../utils/cube_svg.dart';
 import 'method_page.dart';
 
 class MenuPage extends StatefulWidget {
@@ -31,16 +33,20 @@ class _MenuPageState extends State<MenuPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('${widget.menuEntry.prefix}.title'.tr()),
+        title: Text(context.tr('${widget.menuEntry.prefix}.title')),
         actions: <Widget>[
           IconButton(
             icon: const Icon(Icons.settings),
             tooltip: 'Open settings',
             onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => SettingsPage()),
-              );
+              // TODO: Remove (test for the obs on cubeSvg)
+              // var c = Get.find<AppController>();
+              // if (c.colors['W'] == '#ffffff') {
+              //   c.setColor('W', '#000000');
+              // } else {
+              //   c.setColor('W', '#ffffff');
+              // }
+              Get.to(() => SettingsPage());
             },
           ),
         ],
@@ -58,7 +64,10 @@ class _MenuPageState extends State<MenuPage> {
                 if (widget.menuEntry.show_description && index == 0) {
                   return Container(
                     margin: const EdgeInsets.all(10),
-                    child: Text('${widget.menuEntry.prefix}.description'.tr(), style: const TextStyle(fontSize: 16)),
+                    child: Text(
+                      context.tr('${widget.menuEntry.prefix}.description'),
+                      style: const TextStyle(fontSize: 16),
+                    ),
                   );
                 }
                 MenuGroup group = snapshot.data![index - (widget.menuEntry.show_description ? 1 : 0)];
@@ -82,7 +91,7 @@ class _MenuPageState extends State<MenuPage> {
           padding: const EdgeInsets.symmetric(horizontal: 16.0),
           alignment: Alignment.centerLeft,
           child: Text(
-            '${widget.menuEntry.prefix}.groups.${group.prefix}.title'.tr(),
+            context.tr('${widget.menuEntry.prefix}.groups.${group.prefix}.title'),
             style: const TextStyle(color: Colors.white),
           ),
         ),
@@ -100,18 +109,13 @@ class _MenuPageState extends State<MenuPage> {
           Container(
             margin: const EdgeInsets.all(10),
             child: Text(
-              '${widget.menuEntry.prefix}.groups.${menuGroup.prefix}.description'.tr(),
+              context.tr('${widget.menuEntry.prefix}.groups.${menuGroup.prefix}.description'),
               style: const TextStyle(fontSize: 16),
             ),
           ),
         if (menuGroup.show_grid) menuGroupGrid(menuGroup) else menuGroupList(menuGroup),
       ],
     );
-    if (menuGroup.show_grid) {
-      return menuGroupGrid(menuGroup);
-    } else {
-      return menuGroupList(menuGroup);
-    }
   }
 
   Widget menuGroupGrid(MenuGroup menuGroup) {
@@ -161,7 +165,7 @@ class _MenuPageState extends State<MenuPage> {
             margin: const EdgeInsets.only(left: 10, right: 10, top: 10, bottom: 5),
             width: double.infinity,
             child: Text(
-              '${menuEntry.prefix}.title'.tr(),
+              context.tr('${menuEntry.prefix}.title'),
               style: const TextStyle(fontSize: 20),
               textAlign: TextAlign.left,
             ),
@@ -171,7 +175,7 @@ class _MenuPageState extends State<MenuPage> {
               margin: const EdgeInsets.only(left: 10, right: 10, bottom: 10),
               width: double.infinity,
               child: Text(
-                '${menuEntry.prefix}.description'.tr(),
+                context.tr('${menuEntry.prefix}.description'),
                 maxLines: 3,
                 overflow: TextOverflow.ellipsis,
                 style: const TextStyle(fontSize: 16),
@@ -210,7 +214,7 @@ class _MenuPageState extends State<MenuPage> {
           children: <Widget>[
             Container(
               margin: const EdgeInsets.only(top: 7, bottom: 3),
-              child: Text('${menuEntry.prefix}.title'.tr(), style: const TextStyle(fontSize: 20)),
+              child: Text(context.tr('${menuEntry.prefix}.title'), style: const TextStyle(fontSize: 20)),
             ),
             CubeSvg.cubeSvg(menuEntry.menu_picmode, menuEntry.menu_state, height: 125),
           ],
@@ -225,17 +229,10 @@ class _MenuPageState extends State<MenuPage> {
 
 void onTapMenuEntry(context, MenuEntry menuEntry, MenuGroup parentGroup) {
   // Start MethodPage
-  Navigator.push(
-    context,
-    MaterialPageRoute(
-      builder: (context) {
-        if (menuEntry.is_method) {
-          print("MethodPage for ${menuEntry.prefix} of ${parentGroup.prefix}");
-          return MethodPage(menuEntry: menuEntry);
-        } else {
-          return MenuPage(menuEntry: menuEntry);
-        }
-      },
-    ),
-  );
+  if (menuEntry.is_method) {
+    Get.to(() => MethodPage(menuEntry: menuEntry));
+  } else {
+    print("Menu Entry ${menuEntry.prefix} is not a method");
+    Get.to(preventDuplicates: false, () => MenuPage(menuEntry: menuEntry));
+  }
 }

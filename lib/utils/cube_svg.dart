@@ -1,13 +1,16 @@
+import 'package:cube_guide/utils/app_controller.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:format/format.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart' show rootBundle;
+import 'package:get/get.dart';
+import 'package:flutter/services.dart';
 import 'dart:async';
 
 import 'models.dart';
 
 class CubeSvg {
   static final Map<String, String> svgData = {};
+  static late AppController c;
 
   static final List<String> svgPaths = [
     'assets/svg_templates/2x2x2.svg',
@@ -21,19 +24,20 @@ class CubeSvg {
     'assets/svg_templates/3x3x3_pll.svg',
   ];
 
-  static var colors = {
-    'W': '#ffffff',
-    'Y': '#fff144',
-    'R': '#ea0600',
-    'O': '#ffa40d',
-    'G': '#07a42e',
-    'B': '#0025ff',
-    'X': '#9c9c9c',
-    'T': '',
-    'F': 'none'
-  };
+  // static var colors = {
+  //   'W': '#ffffff',
+  //   'Y': '#fff144',
+  //   'R': '#ea0600',
+  //   'O': '#ffa40d',
+  //   'G': '#07a42e',
+  //   'B': '#0025ff',
+  //   'X': '#9c9c9c',
+  //   'T': '',
+  //   'F': 'none'
+  // };
 
-  static Future<void> initCubeSvg() async {
+  static Future<void> initCubeSvg(AppController controller) async {
+    c = controller;
     print("Loading SVGs");
     for (var path in svgPaths) {
       var data = await rootBundle.loadString(path);
@@ -61,14 +65,15 @@ class CubeSvg {
     }
     print("Creating svg for $title with notation: $notation");
 
-    // array of colors (map every char in notation to color
-    var colorsArray = notation.split('').map((e) => colors[e]).toList();
-    var out = svg.format(colorsArray);
+    return Obx(() {
+      var colorsArray = notation.split('').map((e) => c.colors[e]).toList();
+      var out = svg.format(colorsArray);
 
-    return SvgPicture.string(
-      out,
-      width: width,
-      height: height,
-    );
+      return SvgPicture.string(
+        out,
+        width: width,
+        height: height,
+      );
+    });
   }
 }

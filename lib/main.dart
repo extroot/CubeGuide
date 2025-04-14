@@ -1,22 +1,20 @@
 import 'package:cube_guide/pages/splash_screen.dart';
+import 'package:cube_guide/utils/app_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:in_app_review/in_app_review.dart';
-import 'pages/beginners_page.dart';
-import 'pages/menu_page.dart';
-import 'pages/method_page.dart';
-import 'pages/settings_page.dart';
 import 'utils/db_helper.dart';
-import 'utils/models.dart';
 import 'utils/cube_svg.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:easy_localization/easy_localization.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
   await DBHelper.initDB();
-  await CubeSvg.initCubeSvg();
+
+  final AppController c = Get.put(AppController());
+  await CubeSvg.initCubeSvg(c);
+
   runApp(EasyLocalization(
       supportedLocales: const [Locale('en', '')],
       useOnlyLangCode: true,
