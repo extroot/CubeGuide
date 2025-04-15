@@ -7,14 +7,17 @@ class MenuEntry {
   final String menu_state;
   final bool show_description;
   final bool is_method;
+  final bool is_text_method;
 
-  MenuEntry(
-      {required this.id,
-      required this.prefix,
-      required this.menu_picmode,
-      required this.menu_state,
-      required this.show_description,
-      required this.is_method});
+  MenuEntry({
+    required this.id,
+    required this.prefix,
+    required this.menu_picmode,
+    required this.menu_state,
+    required this.show_description,
+    required this.is_method,
+    required this.is_text_method,
+  });
 
   static Future<MenuEntry> fromMap(Map<String, dynamic> map) async {
     return MenuEntry(
@@ -24,6 +27,7 @@ class MenuEntry {
       menu_picmode: map['menu_picmode'],
       show_description: map['show_description'] == 1,
       is_method: map['is_method'] == 1,
+      is_text_method: map['is_text_method'] == 1,
     );
   }
 }
@@ -67,6 +71,7 @@ class Item {
   final int menu_entry_id;
   final bool has_title;
   final String type;
+  int selected_alg_order;
   final List<Alg> algs;
 
   Item({
@@ -78,7 +83,8 @@ class Item {
     required this.has_title,
     required this.type,
     required this.prefix,
-    required this.algs
+    required this.algs,
+    required this.selected_alg_order,
   });
 
   static Future<Item> fromMap(Map<String, dynamic> map) async {
@@ -94,8 +100,35 @@ class Item {
       has_title: map['has_title'] == 1,
       type: map['type'],
       prefix: map['prefix'],
+      selected_alg_order: map['selected_alg_order'],
       algs: algs,
     );
+  }
+
+  Map<String, dynamic> toMap() {
+    return {
+      'id': id,
+      'my_order': my_order,
+      'pic_state': pic_state,
+      'picmode': picmode,
+      'menu_entry_id': menu_entry_id,
+      'has_title': has_title ? 1 : 0,
+      'type': type,
+      'prefix': prefix,
+      'selected_alg_order': selected_alg_order,
+    };
+  }
+
+  String getAlg() {
+    String alg = "";
+    for (int i = 0; i < algs.length; i++) {
+      alg += algs[i].text;
+      if (i < algs.length - 1) {
+        alg += "\n";
+      }
+    }
+
+    return alg;
   }
 }
 
@@ -106,12 +139,13 @@ class Alg {
   final int alg_group_id;
   final bool is_custom;
 
-  Alg(
-      {required this.id,
-      required this.my_order,
-      required this.text,
-      required this.alg_group_id,
-      required this.is_custom});
+  Alg({
+    required this.id,
+    required this.my_order,
+    required this.text,
+    required this.alg_group_id,
+    required this.is_custom,
+  });
 
   static Alg fromMap(Map<String, dynamic> map) {
     return Alg(

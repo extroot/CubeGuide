@@ -32,8 +32,10 @@
       }
     }
   },
+
   "beginner": {
     "title": "Text-based method for begginers",
+    "small_title": "Beginner's 3x3x3",
     "description": "A large text-based method with instructions on how to solve the Rubik's Cube for beginners.",
 
     "items": {

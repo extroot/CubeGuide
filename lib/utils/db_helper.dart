@@ -128,4 +128,25 @@ class DBHelper {
     print("Returning ${algs.length} algs");
     return algs;
   }
+
+  // Save Item to DB
+  static Future<void> saveItem(Item item) async {
+    final db = await database;
+    await db.insert(
+      'item',
+      item.toMap(),
+      conflictAlgorithm: ConflictAlgorithm.replace,
+    );
+  }
+
+  static Future<void> updateSelectedAlgItem(Item item, int newSelectedAlgOrder) async {
+    final db = await database;
+    await db.update(
+      'item',
+      {'selected_alg_order': newSelectedAlgOrder},
+      where: 'id = ?',
+      whereArgs: [item.id],
+    );
+    item.selected_alg_order = newSelectedAlgOrder;
+  }
 }

@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:cube_guide/pages/intro_screen.dart';
 import 'package:cube_guide/pages/menu_page.dart';
-import 'package:cube_guide/utils/cube_svg.dart';
+import 'package:cube_guide/widgets/cube_svg.dart';
 import 'package:cube_guide/utils/db_helper.dart';
 import 'package:cube_guide/utils/models.dart';
 import 'package:flutter/material.dart';

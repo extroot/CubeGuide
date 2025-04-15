@@ -6,7 +6,7 @@ import 'package:get/get.dart';
 import 'package:flutter/services.dart';
 import 'dart:async';
 
-import 'models.dart';
+import '../utils/models.dart';
 
 class CubeSvg {
   static final Map<String, String> svgData = {};
@@ -63,7 +63,6 @@ class CubeSvg {
       );
       // return const CircularProgressIndicator();
     }
-    print("Creating svg for $title with notation: $notation");
 
     return Obx(() {
       var colorsArray = notation.split('').map((e) => c.colors[e]).toList();

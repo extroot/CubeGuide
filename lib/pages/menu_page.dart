@@ -1,6 +1,7 @@
 import 'package:cube_guide/pages/settings_page.dart';
 import 'package:cube_guide/utils/app_controller.dart';
-import 'package:cube_guide/utils/cube_svg.dart';
+import 'package:cube_guide/widgets/cards.dart';
+import 'package:cube_guide/widgets/cube_svg.dart';
 import 'package:cube_guide/utils/db_helper.dart';
 import 'package:cube_guide/utils/models.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -39,13 +40,6 @@ class _MenuPageState extends State<MenuPage> {
             icon: const Icon(Icons.settings),
             tooltip: 'Open settings',
             onPressed: () {
-              // TODO: Remove (test for the obs on cubeSvg)
-              // var c = Get.find<AppController>();
-              // if (c.colors['W'] == '#ffffff') {
-              //   c.setColor('W', '#000000');
-              // } else {
-              //   c.setColor('W', '#ffffff');
-              // }
               Get.to(() => SettingsPage());
             },
           ),
@@ -57,9 +51,6 @@ class _MenuPageState extends State<MenuPage> {
           if (snapshot.hasData) {
             return ListView.builder(
               itemCount: snapshot.data!.length + (widget.menuEntry.show_description ? 1 : 0),
-              // primary: true,
-              // scrollDirection: Axis.vertical,
-              // shrinkWrap: true,
               itemBuilder: (context, index) {
                 if (widget.menuEntry.show_description && index == 0) {
                   return Container(
@@ -124,7 +115,16 @@ class _MenuPageState extends State<MenuPage> {
       primary: false,
       scrollDirection: Axis.vertical,
       shrinkWrap: true,
-      children: menuGroup.menu_entries.map((menuEntry) => menuEntryCard(menuEntry, menuGroup)).toList(),
+      // children: menuGroup.menu_entries.map((menuEntry) => menuEntryCard(menuEntry, menuGroup)).toList(),
+      children:
+          menuGroup.menu_entries.map(
+                (menuEntry) => CubeCard(
+                  title: '${menuEntry.prefix}.title',
+                  image: CubeSvg.cubeSvg(menuEntry.menu_picmode, menuEntry.menu_state, height: 125),
+                  onTap: () => onTapMenuEntry(context, menuEntry, menuGroup),
+                ),
+              )
+              .toList(),
     );
   }
 
@@ -135,7 +135,20 @@ class _MenuPageState extends State<MenuPage> {
       scrollDirection: Axis.vertical,
       shrinkWrap: true,
       itemBuilder: (context, index) {
-        return menuEntryRow(menuGroup.menu_entries[index], menuGroup);
+        // return menuEntryRow(menuGroup.menu_entries[index], menuGroup);
+        return CubeRowCard(
+          title: '${menuGroup.menu_entries[index].prefix}.title',
+          description:
+              (menuGroup.menu_entries[index].show_description)
+                  ? '${menuGroup.menu_entries[index].prefix}.description'
+                  : null,
+          image: CubeSvg.cubeSvg(
+            menuGroup.menu_entries[index].menu_picmode,
+            menuGroup.menu_entries[index].menu_state,
+            height: 125,
+          ),
+          onTap: () => onTapMenuEntry(context, menuGroup.menu_entries[index], menuGroup),
+        );
       },
     );
   }
@@ -201,27 +214,6 @@ class _MenuPageState extends State<MenuPage> {
             onTapMenuEntry(context, menuEntry, parentGroup);
           },
         ),
-      ),
-    );
-  }
-
-  Widget menuEntryCard(MenuEntry menuEntry, MenuGroup parentGroup) {
-    return Card(
-      elevation: 3,
-      child: InkWell(
-        splashColor: Colors.blue.withAlpha(30),
-        child: Column(
-          children: <Widget>[
-            Container(
-              margin: const EdgeInsets.only(top: 7, bottom: 3),
-              child: Text(context.tr('${menuEntry.prefix}.title'), style: const TextStyle(fontSize: 20)),
-            ),
-            CubeSvg.cubeSvg(menuEntry.menu_picmode, menuEntry.menu_state, height: 125),
-          ],
-        ),
-        onTap: () {
-          onTapMenuEntry(context, menuEntry, parentGroup);
-        },
       ),
     );
   }

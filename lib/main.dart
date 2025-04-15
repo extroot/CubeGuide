@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:in_app_review/in_app_review.dart';
 import 'utils/db_helper.dart';
-import 'utils/cube_svg.dart';
+import 'widgets/cube_svg.dart';
 import 'package:easy_localization/easy_localization.dart';
 
 void main() async {
