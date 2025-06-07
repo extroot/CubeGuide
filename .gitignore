@@ -95,3 +95,4 @@ web/s
 .gradle/
 
 *.db
+assets/*.db
