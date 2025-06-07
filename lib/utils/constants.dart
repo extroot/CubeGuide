@@ -15,3 +15,13 @@ const String prefsColorBlueKey = 'color_blue';
 const String prefsColorGreyKey = 'color_grey';
 const String prefsFrontSideKey = 'front_side';
 const String prefsTopSideKey = 'top_side';
+
+/// Map of cube colors to their opposite sides.
+const Map<String, String> oppositeSides = {
+  'W': 'Y',
+  'Y': 'W',
+  'B': 'G',
+  'G': 'B',
+  'R': 'O',
+  'O': 'R',
+};

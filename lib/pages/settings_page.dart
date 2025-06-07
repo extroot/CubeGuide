@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:settings_ui/settings_ui.dart';
 import 'package:flutter_colorpicker/flutter_colorpicker.dart';
+import 'package:cube_guide/utils/constants.dart';
 
 class SettingsPage extends StatefulWidget {
   const SettingsPage({Key? key}) : super(key: key);
@@ -50,7 +51,16 @@ class _SettingsPageState extends State<SettingsPage> {
                   SettingsTile.navigation(
                     leading: const Icon(Icons.filter_center_focus),
                     title: const Text('Front side'),
-                    value: Text(controller.frontSide.value),
+                    valueWidget: Container(
+                      width: 24,
+                      height: 24,
+                      decoration: BoxDecoration(
+                        color: _hexToColor(
+                          controller.colors[controller.frontSide.value]!,
+                        ),
+                        border: Border.all(color: Colors.black26),
+                      ),
+                    ),
                     onPressed: (context) {
                       _showSidePicker(context, true, controller);
                     },
@@ -58,7 +68,16 @@ class _SettingsPageState extends State<SettingsPage> {
                   SettingsTile.navigation(
                     leading: const Icon(Icons.height),
                     title: const Text('Top side'),
-                    value: Text(controller.topSide.value),
+                    valueWidget: Container(
+                      width: 24,
+                      height: 24,
+                      decoration: BoxDecoration(
+                        color: _hexToColor(
+                          controller.colors[controller.topSide.value]!,
+                        ),
+                        border: Border.all(color: Colors.black26),
+                      ),
+                    ),
                     onPressed: (context) {
                       _showSidePicker(context, false, controller);
                     },
@@ -159,7 +178,12 @@ class _SettingsPageState extends State<SettingsPage> {
 
   void _showSidePicker(
       BuildContext context, bool isFront, AppController controller) {
-    String selected = isFront ? controller.frontSide.value : controller.topSide.value;
+    String selected =
+        isFront ? controller.frontSide.value : controller.topSide.value;
+    final other = isFront ? controller.topSide.value : controller.frontSide.value;
+    final banned = {other, oppositeSides[other]};
+    final choices =
+        ['W', 'Y', 'R', 'O', 'G', 'B'].where((c) => !banned.contains(c)).toList();
     showDialog(
       context: context,
       builder: (context) {
@@ -169,12 +193,26 @@ class _SettingsPageState extends State<SettingsPage> {
               title: Text(isFront ? 'Select front side' : 'Select top side'),
               content: Column(
                 mainAxisSize: MainAxisSize.min,
-                children: ['W', 'Y', 'R', 'O', 'G', 'B']
+                children: choices
                     .map(
                       (side) => RadioListTile<String>(
-                        title: Text(side),
                         value: side,
                         groupValue: selected,
+                        title: Row(
+                          children: [
+                            Container(
+                              width: 20,
+                              height: 20,
+                              decoration: BoxDecoration(
+                                color: _hexToColor(controller.colors[side]!),
+                                shape: BoxShape.circle,
+                                border: Border.all(color: Colors.black26),
+                              ),
+                            ),
+                            const SizedBox(width: 8),
+                            Text(side),
+                          ],
+                        ),
                         onChanged: (value) {
                           setState(() {
                             selected = value!;
