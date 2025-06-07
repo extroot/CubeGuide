@@ -49,26 +49,9 @@ class _SettingsPageState extends State<SettingsPage> {
                 title: const Text('Cube orientation'),
                 tiles: <SettingsTile>[
                   SettingsTile.navigation(
-                    leading: const Icon(Icons.filter_center_focus),
-                    title: const Text('Front side'),
-                    valueWidget: Container(
-                      width: 24,
-                      height: 24,
-                      decoration: BoxDecoration(
-                        color: _hexToColor(
-                          controller.colors[controller.frontSide.value]!,
-                        ),
-                        border: Border.all(color: Colors.black26),
-                      ),
-                    ),
-                    onPressed: (context) {
-                      _showSidePicker(context, true, controller);
-                    },
-                  ),
-                  SettingsTile.navigation(
                     leading: const Icon(Icons.height),
                     title: const Text('Top side'),
-                    valueWidget: Container(
+                    value: Container(
                       width: 24,
                       height: 24,
                       decoration: BoxDecoration(
@@ -80,6 +63,23 @@ class _SettingsPageState extends State<SettingsPage> {
                     ),
                     onPressed: (context) {
                       _showSidePicker(context, false, controller);
+                    },
+                  ),
+                  SettingsTile.navigation(
+                    leading: const Icon(Icons.filter_center_focus),
+                    title: const Text('Front side'),
+                    value: Container(
+                      width: 24,
+                      height: 24,
+                      decoration: BoxDecoration(
+                        color: _hexToColor(
+                          controller.colors[controller.frontSide.value]!,
+                        ),
+                        border: Border.all(color: Colors.black26),
+                      ),
+                    ),
+                    onPressed: (context) {
+                      _showSidePicker(context, true, controller);
                     },
                   ),
                 ],
