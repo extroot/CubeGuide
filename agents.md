@@ -97,6 +97,14 @@ Agents should map Dart model classes to these tables and run migrations in `db_h
 
 ## Testing Requirements for AI Agents
 
+Before testing or merging code, ensure:
+Correct environment setup with Flutter SDK.
+Environment could be set up using:
+
+```bash
+$ ./codex_setup.sh
+```
+
 Agents should run tests using:
 
 ```bash
