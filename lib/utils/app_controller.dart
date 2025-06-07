@@ -7,6 +7,8 @@ class AppController extends GetxController {
 
   var isGrid = false.obs;
   var numberOfFormulas = 1.obs;
+  var frontSide = 'B'.obs;
+  var topSide = 'Y'.obs;
 
   var colors =
       <String, String>{
@@ -28,6 +30,8 @@ class AppController extends GetxController {
     super.onInit();
     isGrid.value = box.read(prefsIsGridKey) ?? false;
     numberOfFormulas.value = box.read(prefsNumberOfFormulasKey) ?? 1;
+    frontSide.value = box.read(prefsFrontSideKey) ?? 'B';
+    topSide.value = box.read(prefsTopSideKey) ?? 'Y';
 
     colors.value = {
       'W': box.read(prefsColorWhiteKey) ?? '#ffffff',
@@ -55,6 +59,16 @@ class AppController extends GetxController {
   void setNumberOfFormulas(int value) {
     numberOfFormulas.value = value;
     box.write(prefsNumberOfFormulasKey, numberOfFormulas.value);
+  }
+
+  void setFrontSide(String value) {
+    frontSide.value = value;
+    box.write(prefsFrontSideKey, value);
+  }
+
+  void setTopSide(String value) {
+    topSide.value = value;
+    box.write(prefsTopSideKey, value);
   }
 
   void setColor(String key, String value) {
