@@ -2,6 +2,7 @@ import 'package:cube_guide/utils/app_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:settings_ui/settings_ui.dart';
+import 'package:flutter_colorpicker/flutter_colorpicker.dart';
 
 class SettingsPage extends StatefulWidget {
   const SettingsPage({Key? key}) : super(key: key);
@@ -20,90 +21,195 @@ class _SettingsPageState extends State<SettingsPage> {
           return SettingsList(
             sections: [
               SettingsSection(
-                title: Text('Common2'),
+                title: const Text('Appearance'),
                 tiles: <SettingsTile>[
-                  SettingsTile.navigation(leading: Icon(Icons.language), title: Text('Language'), value: Text('English')),
                   SettingsTile.switchTile(
-                    onToggle: (value) {},
-                    initialValue: true,
-                    leading: Icon(Icons.format_paint),
-                    title: Text('Enable custom theme'),
+                    onToggle: (value) {
+                      controller.setGrid(value);
+                    },
+                    initialValue: controller.isGrid.value,
+                    leading: const Icon(Icons.apps),
+                    title: const Text('Grid or list view'),
                   ),
                 ],
               ),
               SettingsSection(
-                  title: Text('Appearance'),
-                  tiles: <SettingsTile>[
-                    SettingsTile.switchTile(
-                      onToggle: (value) {
-                        controller.setGrid(value);
-                      },
-                      initialValue: controller.isGrid.value,
-                      leading: Icon(Icons.apps),
-                      title: Text('Grid or list view'),
-                    )
-                  ]
+                title: const Text('Cube colors'),
+                tiles: <SettingsTile>[
+                  _colorTile('W', controller),
+                  _colorTile('Y', controller),
+                  _colorTile('R', controller),
+                  _colorTile('O', controller),
+                  _colorTile('G', controller),
+                  _colorTile('B', controller),
+                ],
+              ),
+              SettingsSection(
+                title: const Text('Cube orientation'),
+                tiles: <SettingsTile>[
+                  SettingsTile.navigation(
+                    leading: const Icon(Icons.filter_center_focus),
+                    title: const Text('Front side'),
+                    value: Text(controller.frontSide.value),
+                    onPressed: (context) {
+                      _showSidePicker(context, true, controller);
+                    },
+                  ),
+                  SettingsTile.navigation(
+                    leading: const Icon(Icons.height),
+                    title: const Text('Top side'),
+                    value: Text(controller.topSide.value),
+                    onPressed: (context) {
+                      _showSidePicker(context, false, controller);
+                    },
+                  ),
+                ],
               )
             ],
           );
         }
       )
     );
+  }
 
-    // return Scaffold
-    //   appBar: AppBar(
-    //     title: const Text('Settings'),
-    //   ),
-    //   body: ListView(
-    //     children: <Widget>[
-    //       ListTile(
-    //         title: const Text('Language'),
-    //         subtitle: const Text('English'),
-    //         onTap: () {
-    //           // Open language selection dialog
-    //         },
-    //       ),
-    //       ListTile(
-    //         title: const Text('Grid?'),
-    //         subtitle: const Text('No/Yes'),
-    //         onTap: () {
-    //           // Open theme selection dialog
-    //         },
-    //       ),
-    //       ListTile(
-    //         title: const Text('Show one/2/all formulas'),
-    //         subtitle: const Text('Number input'),
-    //         onTap: () {
-    //           // Open theme selection dialog
-    //         },
-    //       ),
-    //       ListTile(
-    //         title: const Text('Top and front colors'),
-    //         subtitle: const Text('Somehow color input'),
-    //         onTap: () {
-    //           // Open theme selection dialog
-    //         },
-    //       ),
-    //       ListTile(
-    //         title: const Text('Rate the app'),
-    //         onTap: () {
-    //           // Open the app store
-    //         },
-    //       ),
-    //       ListTile(
-    //         title: const Text('Privacy Policy'),
-    //         onTap: () {
-    //           // Open the privacy policy page
-    //         },
-    //       ),
-    //       ListTile(
-    //         title: const Text('Terms of Service'),
-    //         onTap: () {
-    //           // Open the terms of service page
-    //         },
-    //       ),
-    //     ],
-    //   ),
-    // );
+  SettingsTile _colorTile(String key, AppController controller) {
+    return SettingsTile.navigation(
+      leading: Container(
+        width: 24,
+        height: 24,
+        decoration: BoxDecoration(
+          color: _hexToColor(controller.colors[key]!),
+          border: Border.all(color: Colors.black26),
+        ),
+      ),
+      title: Text('$key color'),
+      onPressed: (context) {
+        _showColorPicker(context, key, controller);
+      },
+    );
+  }
+
+  void _showColorPicker(
+      BuildContext context, String key, AppController controller) {
+    Color startColor = _hexToColor(controller.colors[key]!);
+    Color pickedColor = startColor;
+    showDialog(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          title: Text('Select $key color'),
+          content: SingleChildScrollView(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                BlockPicker(
+                  pickerColor: startColor,
+                  onColorChanged: (color) {
+                    pickedColor = color;
+                  },
+                ),
+                const SizedBox(height: 10),
+                ElevatedButton(
+                  onPressed: () async {
+                    await showDialog(
+                      context: context,
+                      builder: (context) {
+                        return AlertDialog(
+                          content: ColorPicker(
+                            pickerColor: pickedColor,
+                            onColorChanged: (color) {
+                              pickedColor = color;
+                            },
+                          ),
+                          actions: [
+                            TextButton(
+                              onPressed: () => Navigator.of(context).pop(),
+                              child: const Text('Done'),
+                            ),
+                          ],
+                        );
+                      },
+                    );
+                    setState(() {});
+                  },
+                  child: const Text('Custom color'),
+                ),
+              ],
+            ),
+          ),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.of(context).pop(),
+              child: const Text('Cancel'),
+            ),
+            TextButton(
+              onPressed: () {
+                String value =
+                    '#${pickedColor.value.toRadixString(16).substring(2)}';
+                controller.setColor(key, value);
+                Navigator.of(context).pop();
+              },
+              child: const Text('OK'),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
+  void _showSidePicker(
+      BuildContext context, bool isFront, AppController controller) {
+    String selected = isFront ? controller.frontSide.value : controller.topSide.value;
+    showDialog(
+      context: context,
+      builder: (context) {
+        return StatefulBuilder(
+          builder: (context, setState) {
+            return AlertDialog(
+              title: Text(isFront ? 'Select front side' : 'Select top side'),
+              content: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: ['W', 'Y', 'R', 'O', 'G', 'B']
+                    .map(
+                      (side) => RadioListTile<String>(
+                        title: Text(side),
+                        value: side,
+                        groupValue: selected,
+                        onChanged: (value) {
+                          setState(() {
+                            selected = value!;
+                          });
+                        },
+                      ),
+                    )
+                    .toList(),
+              ),
+              actions: [
+                TextButton(
+                  onPressed: () => Navigator.of(context).pop(),
+                  child: const Text('Cancel'),
+                ),
+                TextButton(
+                  onPressed: () {
+                    if (isFront) {
+                      controller.setFrontSide(selected);
+                    } else {
+                      controller.setTopSide(selected);
+                    }
+                    Navigator.of(context).pop();
+                  },
+                  child: const Text('OK'),
+                ),
+              ],
+            );
+          },
+        );
+      },
+    );
+  }
+
+  Color _hexToColor(String hex) {
+    hex = hex.replaceFirst('#', '');
+    return Color(int.parse('ff$hex', radix: 16));
   }
 }

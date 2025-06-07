@@ -13,3 +13,5 @@ const String prefsColorOrangeKey = 'color_orange';
 const String prefsColorGreenKey = 'color_green';
 const String prefsColorBlueKey = 'color_blue';
 const String prefsColorGreyKey = 'color_grey';
+const String prefsFrontSideKey = 'front_side';
+const String prefsTopSideKey = 'top_side';
