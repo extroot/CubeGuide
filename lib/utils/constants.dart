@@ -25,3 +25,13 @@ const Map<String, String> oppositeSides = {
   'R': 'O',
   'O': 'R',
 };
+
+/// 3D vectors representing cube sides used for orientation math.
+const Map<String, List<int>> colorVectors = {
+  'Y': [0, 1, 0],
+  'W': [0, -1, 0],
+  'B': [0, 0, 1],
+  'G': [0, 0, -1],
+  'R': [1, 0, 0],
+  'O': [-1, 0, 0],
+};

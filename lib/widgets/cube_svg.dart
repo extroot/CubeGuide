@@ -65,7 +65,8 @@ class CubeSvg {
     }
 
     return Obx(() {
-      var colorsArray = notation.split('').map((e) => c.colors[e]).toList();
+      var colorsArray =
+          notation.split('').map((e) => c.rotatedColors[e]).toList();
       var out = svg.format(colorsArray);
 
       return SvgPicture.string(

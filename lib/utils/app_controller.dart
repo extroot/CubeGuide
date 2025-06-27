@@ -23,7 +23,53 @@ class AppController extends GetxController {
         'F': 'none',
       }.obs;
 
-  // TODO: Color shift by choosing top and front sides of the cube
+  /// Colors adjusted for the current cube orientation.
+  final rotatedColors = <String, String>{}.obs;
+
+  /// Recompute [rotatedColors] according to [frontSide] and [topSide].
+  void _updateRotatedColors() {
+    final up = colorVectors[topSide.value]!;
+    final front = colorVectors[frontSide.value]!;
+    final right = _cross(up, front);
+
+    String fromVector(List<int> v) {
+      for (final entry in colorVectors.entries) {
+        final vec = entry.value;
+        if (vec[0] == v[0] && vec[1] == v[1] && vec[2] == v[2]) {
+          return entry.key;
+        }
+      }
+      return 'X';
+    }
+
+    final map = <String, String>{
+      'Y': topSide.value,
+      'W': fromVector([-up[0], -up[1], -up[2]]),
+      'B': frontSide.value,
+      'G': fromVector([-front[0], -front[1], -front[2]]),
+      'R': fromVector(right),
+      'O': fromVector([-right[0], -right[1], -right[2]]),
+    };
+
+    rotatedColors.value = {
+      for (final entry in colors.entries)
+        entry.key: map.containsKey(entry.key)
+            ? colors[map[entry.key]]!
+            : entry.value,
+    };
+  }
+
+  /// Cross product of two 3D vectors with integer values.
+  List<int> _cross(List<int> a, List<int> b) {
+    return [
+      a[1] * b[2] - a[2] * b[1],
+      a[2] * b[0] - a[0] * b[2],
+      a[0] * b[1] - a[1] * b[0],
+    ];
+  }
+
+  // Handles persisted settings and computes rotated colors based on
+  // user-selected cube orientation.
 
   @override
   void onInit() {
@@ -44,6 +90,7 @@ class AppController extends GetxController {
       'T': '',
       'F': 'none',
     };
+    _updateRotatedColors();
   }
 
   void toggleGrid() {
@@ -64,11 +111,13 @@ class AppController extends GetxController {
   void setFrontSide(String value) {
     frontSide.value = value;
     box.write(prefsFrontSideKey, value);
+    _updateRotatedColors();
   }
 
   void setTopSide(String value) {
     topSide.value = value;
     box.write(prefsTopSideKey, value);
+    _updateRotatedColors();
   }
 
   void setColor(String key, String value) {
@@ -97,6 +146,7 @@ class AppController extends GetxController {
         box.write(prefsColorGreyKey, value);
         break;
     }
+    _updateRotatedColors();
   }
 
   void setColors(Map<String, String> value) {
@@ -111,5 +161,6 @@ class AppController extends GetxController {
     box.write(prefsColorGreenKey, value['G']);
     box.write(prefsColorBlueKey, value['B']);
     box.write(prefsColorGreyKey, value['X']);
+    _updateRotatedColors();
   }
 }
