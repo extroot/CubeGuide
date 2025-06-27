@@ -114,6 +114,14 @@ class AppController extends GetxController {
     _updateRotatedColors();
   }
 
+  /// Rotate the front side clockwise around the cube's vertical axis.
+  void rotateFrontSide() {
+    const order = ['B', 'R', 'G', 'O'];
+    final current = order.indexOf(frontSide.value);
+    final next = current == -1 ? 0 : (current + 1) % order.length;
+    setFrontSide(order[next]);
+  }
+
   void setTopSide(String value) {
     topSide.value = value;
     box.write(prefsTopSideKey, value);

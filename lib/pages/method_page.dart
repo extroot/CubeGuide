@@ -212,60 +212,78 @@ class _MethodPageState extends State<MethodPage> {
               children: <Widget>[
                 // Top row, like appbar with title and small close button at the right.
                 // Title should be centered.
-                Stack(
-                  children: [
-                    Column(
-                      children: [
-                        Center(
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 4),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: Center(
                           child: Text(
-                            "${widget.menuEntry.prefix}${item.my_order.toString()}",
+                            "${widget.menuEntry.prefix}${item.my_order}",
                             textAlign: TextAlign.center,
-                            style: TextStyle(fontSize: 20),
+                            style: const TextStyle(fontSize: 20),
                           ),
                         ),
-                      ],
-                    ),
-                    Positioned(
-                      right: 0,
-                      top: 0,
-                      child: IconButton(icon: const Icon(Icons.close), onPressed: () => Get.back()),
-                    ),
-                  ],
+                      ),
+                      IconButton(
+                        icon: const Icon(Icons.close),
+                        onPressed: () => Get.back(),
+                      ),
+                    ],
+                  ),
                 ),
                 const Divider(),
                 Container(
                   margin: const EdgeInsets.all(10),
-                  child: CubeSvg.cubeSvg(item.picmode, item.pic_state, height: 200),
+                  child: Stack(
+                    children: [
+                      Center(
+                        child: CubeSvg.cubeSvg(item.picmode, item.pic_state, height: 200),
+                      ),
+                      Positioned(
+                        right: 0,
+                        bottom: 0,
+                        child: IconButton(
+                          icon: const Icon(Icons.rotate_right),
+                          onPressed: () {
+                            Get.find<AppController>().rotateFrontSide();
+                          },
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
                 ObxValue<RxInt>((RxInt selectedAlg) {
                   return Column(
                     children: [
                       for (Alg alg in item.algs)
-                        Row(
-                          children: [
-                            Expanded(
-                              child: Container(
-                                margin: const EdgeInsets.all(5),
+                        Container(
+                          margin: const EdgeInsets.symmetric(vertical: 2),
+                          padding: const EdgeInsets.all(5),
+                          decoration: BoxDecoration(
+                            color: Colors.black.withOpacity(0.05),
+                            borderRadius: BorderRadius.circular(4),
+                          ),
+                          child: Row(
+                            children: [
+                              Expanded(
                                 child: Text(alg.text, style: const TextStyle(fontSize: 18)),
                               ),
-                            ),
-                            Center(
-                              child: Checkbox(
-                                value: selectedAlg.value == alg.my_order,
-                                onChanged: (bool? value) {
-                                  if (value == true) {
-                                    // item.selected_alg_order = alg.my_order;
-                                    // DBHelper.saveItem(item);
-                                    // selectedAlg.value = alg.id;
-                                    // print("Saved item ${item.id} with selected alg ${item.selected_alg_order}");
-                                    DBHelper.updateSelectedAlgItem(item, alg.my_order);
-                                    selectedAlg.value = alg.my_order;
-                                    initItems();
-                                  }
+                              IconButton(
+                                icon: Icon(
+                                  selectedAlg.value == alg.my_order
+                                      ? Icons.star
+                                      : Icons.star_border,
+                                  color: Colors.amber,
+                                ),
+                                onPressed: () {
+                                  DBHelper.updateSelectedAlgItem(item, alg.my_order);
+                                  selectedAlg.value = alg.my_order;
+                                  initItems();
                                 },
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                     ],
                   );
