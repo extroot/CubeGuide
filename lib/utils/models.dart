@@ -8,6 +8,7 @@ class MenuEntry {
   final bool show_description;
   final bool is_method;
   final bool is_text_method;
+  final bool is_rotatable;
 
   MenuEntry({
     required this.id,
@@ -17,6 +18,7 @@ class MenuEntry {
     required this.show_description,
     required this.is_method,
     required this.is_text_method,
+    required this.is_rotatable
   });
 
   static Future<MenuEntry> fromMap(Map<String, dynamic> map) async {
@@ -28,6 +30,7 @@ class MenuEntry {
       show_description: map['show_description'] == 1,
       is_method: map['is_method'] == 1,
       is_text_method: map['is_text_method'] == 1,
+      is_rotatable: map['is_rotatable'] == 1
     );
   }
 }

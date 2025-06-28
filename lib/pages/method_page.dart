@@ -21,7 +21,6 @@ class _MethodPageState extends State<MethodPage> {
   final ScrollController _scrollController = ScrollController(initialScrollOffset: 0.0);
   List<Item> items = [];
 
-
   void initItems() async {
     print("Init items for entry ${widget.menuEntry.id}");
     List<Item> it = await DBHelper.getItemsByEntryId(widget.menuEntry.id);
@@ -60,29 +59,30 @@ class _MethodPageState extends State<MethodPage> {
             title: Text(context.tr("${widget.menuEntry.prefix}.small_title")),
             actions: <Widget>[
               IconButton(
-                icon: const Icon(Icons.settings),
+                // Workaround for controller to in text-based mode (if's below won't use any observable values)
+                // FIXME
+                icon: controller.isGrid.value ? const Icon(Icons.settings) : const Icon(Icons.settings),
                 tooltip: 'Open settings',
                 onPressed: () {
                   Get.to(() => SettingsPage());
                 },
               ),
-              IconButton(
-                icon: const Icon(Icons.wifi_protected_setup),
-                tooltip: 'Rotate cube',
-                onPressed: () {
-                  Get.find<AppController>().rotateFrontSide();
-                },
-              ),
-              IconButton(
-                icon: controller.isGrid.value ? const Icon(Icons.table_rows) : const Icon(Icons.grid_view),
-                tooltip: 'Change layout',
-                onPressed:
-                    (!widget.menuEntry.is_text_method)
-                        ? () {
-                          controller.toggleGrid();
-                        }
-                        : null,
-              ),
+              if (widget.menuEntry.is_rotatable && !widget.menuEntry.is_text_method)
+                IconButton(
+                  icon: const Icon(Icons.wifi_protected_setup),
+                  tooltip: 'Rotate cube',
+                  onPressed: () {
+                    controller.rotateFrontSide();
+                  },
+                ),
+              if (!widget.menuEntry.is_text_method)
+                IconButton(
+                  icon: controller.isGrid.value ? const Icon(Icons.table_rows) : const Icon(Icons.grid_view),
+                  tooltip: 'Change layout',
+                  onPressed: () {
+                    controller.toggleGrid();
+                  },
+                ),
             ],
             // actionsIconTheme: (widget.menuEntry.is_text_method) ? IconThemeData(opacity: 0) : null,
           ),
@@ -97,9 +97,7 @@ class _MethodPageState extends State<MethodPage> {
       return const Center(child: CircularProgressIndicator());
     }
     return Obx(() {
-      return (controller.isGrid.value)
-          ? _grid()
-          : _list();
+      return (controller.isGrid.value && !widget.menuEntry.is_text_method) ? _grid() : _list();
     });
   }
 
@@ -130,21 +128,21 @@ class _MethodPageState extends State<MethodPage> {
       itemCount: items.length,
       itemBuilder: (context, index) {
         Item item = items[index];
-        print("Item ${index} type: ${item.type}");
 
         if (item.type == 'formula') return formulaRow(item);
         if (item.type == 'text') return textRow(item);
         if (item.type == 'header') return headerRow(item);
-        if (item.type == 'single_cube') return singleCubeRow(item);
-        if (item.type == 'single_cube_alg') return formulaColumn(item);
-        if (item.type == 'double_cube_alg') return Text("double_cube_alg");
-        print("Wrong type of item: " + item.type);
+        if (item.type == 'single_cube') return singleCubeNoTextRow(item);
+        if (item.type == 'single_cube_alg') return singleCubeRow(item, true);
+        if (item.type == 'single_cube_text') return singleCubeRow(item, false);
+        if (item.type == 'double_cube_alg') return doubleCubeRow(item, true);
+        if (item.type == 'double_cube_text') return doubleCubeRow(item, false);
         return Text("Wrong type of item: " + item.type);
       },
     );
   }
 
-  Widget singleCubeRow(Item item) {
+  Widget singleCubeNoTextRow(Item item) {
     return Container(
       margin: const EdgeInsets.all(10),
       child: CubeSvg.cubeSvg(item.picmode, item.pic_state, height: 125),
@@ -169,8 +167,7 @@ class _MethodPageState extends State<MethodPage> {
     );
   }
 
-  Widget formulaColumn(Item item) {
-    print("Vertical formula for item: ${item.type} picmode ${item.picmode} pic_state ${item.pic_state}");
+  Widget singleCubeRow(Item item, bool isAlg) {
     return Container(
       margin: const EdgeInsets.only(left: 10, top: 15),
       child: Column(
@@ -180,7 +177,78 @@ class _MethodPageState extends State<MethodPage> {
             child: CubeSvg.cubeSvg(item.picmode, item.pic_state, height: 125),
           ),
           Container(
-            child: Container(margin: const EdgeInsets.all(5), child: Text(item.algs[item.selected_alg_order].text)),
+            child: Container(
+              margin: const EdgeInsets.all(5),
+              child:
+                  isAlg
+                      ? Text(item.algs[0].text)
+                      : Text(
+                        context.tr("${widget.menuEntry.prefix}.items.${item.prefix}"),
+                        style: TextStyle(fontSize: 18),
+                        softWrap: true,
+                      ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget doubleCubeRow(Item item, bool isAlg) {
+    var state1 = item.pic_state.substring(0, item.pic_state.length ~/ 2);
+    var state2 = item.pic_state.substring(item.pic_state.length ~/ 2, item.pic_state.length);
+
+    return Container(
+      margin: const EdgeInsets.only(left: 10, top: 15),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        mainAxisSize: MainAxisSize.max,
+        children: <Widget>[
+          Flexible(
+            child: Column(
+              children: <Widget>[
+                Container(
+                  margin: const EdgeInsets.only(right: 10),
+                  child: CubeSvg.cubeSvg(item.picmode, state1, height: 125),
+                ),
+                Container(
+                  child: Container(
+                    margin: const EdgeInsets.all(5),
+                    child:
+                        isAlg
+                            ? Text(item.algs[0].text)
+                            : Text(
+                              context.tr("${widget.menuEntry.prefix}.items.${item.prefix}.0"),
+                              style: TextStyle(fontSize: 18),
+                              softWrap: true,
+                            ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Flexible(
+            child: Column(
+              children: <Widget>[
+                Container(
+                  margin: const EdgeInsets.only(right: 10),
+                  child: CubeSvg.cubeSvg(item.picmode, state2, height: 125),
+                ),
+                Container(
+                  child: Container(
+                    margin: const EdgeInsets.all(5),
+                    child:
+                        isAlg
+                            ? Text(item.algs[1].text)
+                            : Text(
+                              context.tr("${widget.menuEntry.prefix}.items.${item.prefix}.1"),
+                              style: TextStyle(fontSize: 18),
+                              softWrap: true,
+                            ),
+                  ),
+                ),
+              ],
+            ),
           ),
         ],
       ),
@@ -238,10 +306,7 @@ class _MethodPageState extends State<MethodPage> {
                         ),
                         Positioned(
                           right: 0,
-                          child: IconButton(
-                            icon: const Icon(Icons.close),
-                            onPressed: () => Get.back(),
-                          ),
+                          child: IconButton(icon: const Icon(Icons.close), onPressed: () => Get.back()),
                         ),
                       ],
                     ),
@@ -253,13 +318,15 @@ class _MethodPageState extends State<MethodPage> {
                   child: Stack(
                     children: [
                       Center(
-                        child: Obx(() => CubeSvg.cubeSvg(
-                              item.picmode,
-                              item.pic_state,
-                              height: 200,
-                              frontSide: localFront.value,
-                              topSide: controller.topSide.value,
-                            )),
+                        child: Obx(
+                          () => CubeSvg.cubeSvg(
+                            item.picmode,
+                            item.pic_state,
+                            height: 200,
+                            frontSide: localFront.value,
+                            topSide: controller.topSide.value,
+                          ),
+                        ),
                       ),
                       Positioned(
                         right: 0,
@@ -267,10 +334,7 @@ class _MethodPageState extends State<MethodPage> {
                         child: IconButton(
                           icon: const Icon(Icons.wifi_protected_setup),
                           onPressed: () {
-                            localFront.value = AppController.nextFrontSide(
-                              localFront.value,
-                              controller.topSide.value,
-                            );
+                            localFront.value = AppController.nextFrontSide(localFront.value, controller.topSide.value);
                           },
                         ),
                       ),
@@ -290,14 +354,10 @@ class _MethodPageState extends State<MethodPage> {
                           ),
                           child: Row(
                             children: [
-                              Expanded(
-                                child: Text(alg.text, style: const TextStyle(fontSize: 18)),
-                              ),
+                              Expanded(child: Text(alg.text, style: const TextStyle(fontSize: 18))),
                               IconButton(
                                 icon: Icon(
-                                  selectedAlg.value == alg.my_order
-                                      ? Icons.star
-                                      : Icons.star_border,
+                                  selectedAlg.value == alg.my_order ? Icons.star : Icons.star_border,
                                   color: Colors.amber,
                                 ),
                                 onPressed: () {
