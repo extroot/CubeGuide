@@ -67,7 +67,7 @@ class _MethodPageState extends State<MethodPage> {
                 },
               ),
               IconButton(
-                icon: const Icon(Icons.rotate_right),
+                icon: const Icon(Icons.wifi_protected_setup),
                 tooltip: 'Rotate cube',
                 onPressed: () {
                   Get.find<AppController>().rotateFrontSide();
@@ -265,7 +265,7 @@ class _MethodPageState extends State<MethodPage> {
                         right: 0,
                         bottom: 0,
                         child: IconButton(
-                          icon: const Icon(Icons.rotate_right),
+                          icon: const Icon(Icons.wifi_protected_setup),
                           onPressed: () {
                             localFront.value = AppController.nextFrontSide(
                               localFront.value,
