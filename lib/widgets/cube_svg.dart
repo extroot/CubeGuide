@@ -46,7 +46,14 @@ class CubeSvg {
     }
   }
 
-  static Widget cubeSvg(String title, String notation, {double? width, double? height}) {
+  static Widget cubeSvg(
+    String title,
+    String notation, {
+    double? width,
+    double? height,
+    String? frontSide,
+    String? topSide,
+  }) {
     title = switch (title) {
       "cube_3x3x3" || "f2l" || "coll" || "mw" || "olc" => "3x3x3",
       "cll" || "eg1" || "eg2" => "2x2x2_oll",
@@ -65,8 +72,11 @@ class CubeSvg {
     }
 
     return Obx(() {
-      var colorsArray =
-          notation.split('').map((e) => c.rotatedColors[e]).toList();
+      final map = (frontSide != null && topSide != null)
+          ? _rotatedColors(frontSide!, topSide!)
+          : c.rotatedColors;
+
+      var colorsArray = notation.split('').map((e) => map[e]).toList();
       var out = svg.format(colorsArray);
 
       return SvgPicture.string(
@@ -75,5 +85,46 @@ class CubeSvg {
         height: height,
       );
     });
+  }
+
+  /// Compute rotated colors for a cube with [front] and [top] sides.
+  static Map<String, String> _rotatedColors(String front, String top) {
+    final up = colorVectors[top]!;
+    final frontVec = colorVectors[front]!;
+    final right = _cross(up, frontVec);
+
+    String fromVector(List<int> v) {
+      for (final entry in colorVectors.entries) {
+        final vec = entry.value;
+        if (vec[0] == v[0] && vec[1] == v[1] && vec[2] == v[2]) {
+          return entry.key;
+        }
+      }
+      return 'X';
+    }
+
+    final map = <String, String>{
+      'Y': top,
+      'W': fromVector([-up[0], -up[1], -up[2]]),
+      'B': front,
+      'G': fromVector([-frontVec[0], -frontVec[1], -frontVec[2]]),
+      'R': fromVector(right),
+      'O': fromVector([-right[0], -right[1], -right[2]]),
+    };
+
+    return {
+      for (final entry in c.colors.entries)
+        entry.key: map.containsKey(entry.key)
+            ? c.colors[map[entry.key]]!
+            : entry.value,
+    };
+  }
+
+  static List<int> _cross(List<int> a, List<int> b) {
+    return [
+      a[1] * b[2] - a[2] * b[1],
+      a[2] * b[0] - a[0] * b[2],
+      a[0] * b[1] - a[1] * b[0],
+    ];
   }
 }

@@ -67,6 +67,13 @@ class _MethodPageState extends State<MethodPage> {
                 },
               ),
               IconButton(
+                icon: const Icon(Icons.rotate_right),
+                tooltip: 'Rotate cube',
+                onPressed: () {
+                  Get.find<AppController>().rotateFrontSide();
+                },
+              ),
+              IconButton(
                 icon: controller.isGrid.value ? const Icon(Icons.table_rows) : const Icon(Icons.grid_view),
                 tooltip: 'Change layout',
                 onPressed:
@@ -201,6 +208,8 @@ class _MethodPageState extends State<MethodPage> {
   }
 
   Future<void> _dialogBuilder(BuildContext context, Item item) {
+    final controller = Get.find<AppController>();
+    final RxString localFront = controller.frontSide.value.obs;
     return showDialog<void>(
       context: context,
       builder: (BuildContext context) {
@@ -244,7 +253,13 @@ class _MethodPageState extends State<MethodPage> {
                   child: Stack(
                     children: [
                       Center(
-                        child: CubeSvg.cubeSvg(item.picmode, item.pic_state, height: 200),
+                        child: Obx(() => CubeSvg.cubeSvg(
+                              item.picmode,
+                              item.pic_state,
+                              height: 200,
+                              frontSide: localFront.value,
+                              topSide: controller.topSide.value,
+                            )),
                       ),
                       Positioned(
                         right: 0,
@@ -252,7 +267,10 @@ class _MethodPageState extends State<MethodPage> {
                         child: IconButton(
                           icon: const Icon(Icons.rotate_right),
                           onPressed: () {
-                            Get.find<AppController>().rotateFrontSide();
+                            const order = ['B', 'R', 'G', 'O'];
+                            final current = order.indexOf(localFront.value);
+                            final next = current == -1 ? 0 : (current + 1) % order.length;
+                            localFront.value = order[next];
                           },
                         ),
                       ),
