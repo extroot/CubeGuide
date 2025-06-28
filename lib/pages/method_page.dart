@@ -214,25 +214,28 @@ class _MethodPageState extends State<MethodPage> {
                 // Title should be centered.
                 Padding(
                   padding: const EdgeInsets.only(bottom: 4),
-                  child: Stack(
-                    alignment: Alignment.center,
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 40),
-                        child: Text(
-                          "${widget.menuEntry.prefix}${item.my_order}",
-                          textAlign: TextAlign.center,
-                          style: const TextStyle(fontSize: 24),
+                  child: SizedBox(
+                    width: double.infinity,
+                    child: Stack(
+                      alignment: Alignment.center,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 40),
+                          child: Text(
+                            "${widget.menuEntry.prefix}${item.my_order}",
+                            textAlign: TextAlign.center,
+                            style: const TextStyle(fontSize: 24),
+                          ),
                         ),
-                      ),
-                      Positioned(
-                        right: 0,
-                        child: IconButton(
-                          icon: const Icon(Icons.close),
-                          onPressed: () => Get.back(),
+                        Positioned(
+                          right: 0,
+                          child: IconButton(
+                            icon: const Icon(Icons.close),
+                            onPressed: () => Get.back(),
+                          ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
                 const Divider(),
