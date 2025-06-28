@@ -267,10 +267,10 @@ class _MethodPageState extends State<MethodPage> {
                         child: IconButton(
                           icon: const Icon(Icons.rotate_right),
                           onPressed: () {
-                            const order = ['B', 'R', 'G', 'O'];
-                            final current = order.indexOf(localFront.value);
-                            final next = current == -1 ? 0 : (current + 1) % order.length;
-                            localFront.value = order[next];
+                            localFront.value = AppController.nextFrontSide(
+                              localFront.value,
+                              controller.topSide.value,
+                            );
                           },
                         ),
                       ),
