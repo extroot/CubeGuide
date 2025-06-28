@@ -1,4 +1,5 @@
 import 'package:cube_guide/utils/app_controller.dart';
+import 'package:cube_guide/utils/constants.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:format/format.dart';
 import 'package:flutter/material.dart';
@@ -46,7 +47,14 @@ class CubeSvg {
     }
   }
 
-  static Widget cubeSvg(String title, String notation, {double? width, double? height}) {
+  static Widget cubeSvg(
+    String title,
+    String notation, {
+    double? width,
+    double? height,
+    String? frontSide,
+    String? topSide,
+  }) {
     title = switch (title) {
       "cube_3x3x3" || "f2l" || "coll" || "mw" || "olc" => "3x3x3",
       "cll" || "eg1" || "eg2" => "2x2x2_oll",
@@ -65,8 +73,11 @@ class CubeSvg {
     }
 
     return Obx(() {
-      var colorsArray =
-          notation.split('').map((e) => c.rotatedColors[e]).toList();
+      final map = (frontSide != null && topSide != null)
+          ? _rotatedColors(frontSide!, topSide!)
+          : c.rotatedColors;
+
+      var colorsArray = notation.split('').map((e) => map[e]).toList();
       var out = svg.format(colorsArray);
 
       return SvgPicture.string(
@@ -76,4 +87,28 @@ class CubeSvg {
       );
     });
   }
+
+  /// Compute rotated colors for a cube with [front] and [top] sides.
+  static Map<String, String> _rotatedColors(String front, String top) {
+    final up = colorVectors[top]!;
+    final frontVec = colorVectors[front]!;
+    final right = AppController.crossVectors(up, frontVec);
+
+    final map = <String, String>{
+      'Y': top,
+      'W': AppController.vectorToSide([-up[0], -up[1], -up[2]]),
+      'B': front,
+      'G': AppController.vectorToSide([-frontVec[0], -frontVec[1], -frontVec[2]]),
+      'R': AppController.vectorToSide(right),
+      'O': AppController.vectorToSide([-right[0], -right[1], -right[2]]),
+    };
+
+    return {
+      for (final entry in c.colors.entries)
+        entry.key: map.containsKey(entry.key)
+            ? c.colors[map[entry.key]]!
+            : entry.value,
+    };
+  }
+
 }

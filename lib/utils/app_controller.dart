@@ -30,25 +30,15 @@ class AppController extends GetxController {
   void _updateRotatedColors() {
     final up = colorVectors[topSide.value]!;
     final front = colorVectors[frontSide.value]!;
-    final right = _cross(up, front);
-
-    String fromVector(List<int> v) {
-      for (final entry in colorVectors.entries) {
-        final vec = entry.value;
-        if (vec[0] == v[0] && vec[1] == v[1] && vec[2] == v[2]) {
-          return entry.key;
-        }
-      }
-      return 'X';
-    }
+    final right = crossVectors(up, front);
 
     final map = <String, String>{
       'Y': topSide.value,
-      'W': fromVector([-up[0], -up[1], -up[2]]),
+      'W': vectorToSide([-up[0], -up[1], -up[2]]),
       'B': frontSide.value,
-      'G': fromVector([-front[0], -front[1], -front[2]]),
-      'R': fromVector(right),
-      'O': fromVector([-right[0], -right[1], -right[2]]),
+      'G': vectorToSide([-front[0], -front[1], -front[2]]),
+      'R': vectorToSide(right),
+      'O': vectorToSide([-right[0], -right[1], -right[2]]),
     };
 
     rotatedColors.value = {
@@ -60,12 +50,31 @@ class AppController extends GetxController {
   }
 
   /// Cross product of two 3D vectors with integer values.
-  List<int> _cross(List<int> a, List<int> b) {
+  static List<int> crossVectors(List<int> a, List<int> b) {
     return [
       a[1] * b[2] - a[2] * b[1],
       a[2] * b[0] - a[0] * b[2],
       a[0] * b[1] - a[1] * b[0],
     ];
+  }
+
+  /// Convert a 3D vector back to its cube side label.
+  static String vectorToSide(List<int> v) {
+    for (final entry in colorVectors.entries) {
+      final vec = entry.value;
+      if (vec[0] == v[0] && vec[1] == v[1] && vec[2] == v[2]) {
+        return entry.key;
+      }
+    }
+    return 'X';
+  }
+
+  /// Compute the next front side given the current [front] and [top] sides.
+  static String nextFrontSide(String front, String top) {
+    final up = colorVectors[top]!;
+    final frontVec = colorVectors[front]!;
+    final right = crossVectors(up, frontVec);
+    return vectorToSide(right);
   }
 
   // Handles persisted settings and computes rotated colors based on
@@ -112,6 +121,12 @@ class AppController extends GetxController {
     frontSide.value = value;
     box.write(prefsFrontSideKey, value);
     _updateRotatedColors();
+  }
+
+  /// Rotate the front side clockwise around the cube's vertical axis.
+  void rotateFrontSide() {
+    final next = nextFrontSide(frontSide.value, topSide.value);
+    setFrontSide(next);
   }
 
   void setTopSide(String value) {
